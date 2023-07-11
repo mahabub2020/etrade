@@ -7,10 +7,27 @@ const rename = require('gulp-rename');
         .pipe(dest('./assets/webfonts/'));
 }*/
 
+
+// Fonts
+function vendorcss() {
+    return src('./src/css/vendor/*.css')
+    .pipe(concat('vendor.min.css'))
+    .pipe(dest('./assets/'))
+
+}
+
+// Fonts
+function vendorjs() {
+    return src('./src/js/vendor/*.js')
+    .pipe(concat('vendor.min.js'))
+    .pipe(dest('./assets/'))
+
+}
+
 // Fonts
 function fonts() {
-    return src('./assets/src/fonts/*')
-        .pipe(dest('./assets/fonts/'));
+    return src('./src/fonts/*')
+        .pipe(dest('./assets/'));
 }
 
 // Styles
@@ -18,39 +35,33 @@ const scss = require('gulp-sass')(require('sass'));
 const autoPrefixer = require('gulp-autoprefixer');
 const cssMinify = require('gulp-clean-css');
 
-function styles() {
-    return src('./assets/src/scss/**/*.scss')
+function mainstyles() {
+    return src('./src/scss/style.scss')
         .pipe(scss())
         .pipe(autoPrefixer('last 2 versions'))
         .pipe(cssMinify())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(dest('./assets/css/'))
+        .pipe(dest('./assets/'))
 }
 
 // Scripts
 const concat = require('gulp-concat');
 const jsMinify = require('gulp-terser');
 
-function scripts() {
-    return src([
-        './assets/src/vendors/bootstrap/dist/js/bootstrap.bundle.js',
-        './assets/src/vendors/jquery-modal-video/jquery-modal-video.min.js',
-        './assets/src/vendors/isotop/isotope.pkgd.min.js',
-        './assets/src/vendors/slick/slick.min.js',
-        './assets/src/js/**/*.js'])
-        .pipe(jsMinify())
-        .pipe(concat('ncc.min.js'))
-        .pipe(dest('./assets/js/'))
+function mainscripts() {
+    return src([ 
+        './src/js/main.js'])
+        .pipe(jsMinify()) 
+        .pipe(dest('./assets/'))
 }
 
 function watchTask() {
     watch(
         [
-            './assets/src/scss/**/*.scss',
-            './assets/src/js/**/*.js'
+            './src/scss/**/*.scss',
+           
         ],
-        series(fonts, styles, scripts)
+        series(fonts, mainstyles, mainscripts)
     )
 }
 
-exports.default = series(fonts, styles, scripts, watchTask);
+exports.default = series(vendorcss, vendorjs, watchTask);

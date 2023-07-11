@@ -12,8 +12,12 @@
 {% include 'ets_cf_assets' %}
     <!-- Header hook for plugins -->
     {{ 'application.css' | asset_url | stylesheet_tag }}
-    {{ 'application.js' | asset_url | script_tag }}
+    {{ 'vendor.min.css' | asset_url | stylesheet_tag }}
+    {{ 'style.css' | asset_url | stylesheet_tag }}
 
+    {{ 'application.js' | asset_url | script_tag }}
+    {{ 'vendor.min.js' | asset_url | script_tag }}
+    {{ 'main.js' | asset_url | script_tag }}
 
   </head>
   <body class="text-xl">
