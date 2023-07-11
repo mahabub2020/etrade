@@ -23,6 +23,12 @@ function vendorjs() {
     .pipe(dest('./assets/'))
 
 }
+// Fonts
+function vendorJqjs() {
+    return src('./src/jquery.js')
+    .pipe(dest('./assets/'))
+
+}
 
 // Fonts
 function fonts() {
@@ -39,7 +45,7 @@ function mainstyles() {
     return src('./src/scss/style.scss')
         .pipe(scss())
         .pipe(autoPrefixer('last 2 versions'))
-        .pipe(cssMinify())
+       // .pipe(cssMinify())
         .pipe(dest('./assets/'))
 }
 
@@ -50,7 +56,7 @@ const jsMinify = require('gulp-terser');
 function mainscripts() {
     return src([ 
         './src/js/main.js'])
-        .pipe(jsMinify()) 
+        //.pipe(jsMinify()) 
         .pipe(dest('./assets/'))
 }
 
@@ -64,4 +70,4 @@ function watchTask() {
     )
 }
 
-exports.default = series(vendorcss, vendorjs, watchTask);
+exports.default = series(vendorcss, vendorjs, vendorJqjs, watchTask);

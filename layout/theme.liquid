@@ -9,21 +9,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 
     {{ content_for_header }}
-{% include 'ets_cf_assets' %}
+
+    {% include 'ets_cf_assets' %}
+   
     <!-- Header hook for plugins -->
     {{ 'application.css' | asset_url | stylesheet_tag }}
     {{ 'vendor.min.css' | asset_url | stylesheet_tag }}
     {{ 'style.css' | asset_url | stylesheet_tag }}
 
+    {{ 'jquery.js' | asset_url | script_tag }}
     {{ 'application.js' | asset_url | script_tag }}
     {{ 'vendor.min.js' | asset_url | script_tag }}
     {{ 'main.js' | asset_url | script_tag }}
 
   </head>
-  <body class="text-xl">
+  <body class="sticky-header">
     {% section 'header'  %}
     <main role="main">
       {{ content_for_layout }}
     </main>
+    {% section 'footer'  %}
   </body>
 </html>
