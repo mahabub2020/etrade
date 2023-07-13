@@ -1,5 +1,22 @@
 <h1>ddd d d{{ article.title}}</h1>
 <small>{{ article.author}}</small>
-<time datatime="{{ article.published_at | date: '%Y-%m-%d'  }}"></time>
 
-<h1>Conditional tenses are used to speculate about what could happ</h1>
+{% schema %}
+  {
+    "name": "Template Article",
+    "settings": [ 
+        {
+            "type": "checkbox",
+            "id": "enable_author",
+            "defoult": true,
+            "label": "Display Author Name", 
+        },
+        {
+            "type": "checkbox",
+            "id": "enable_published_date",
+            "defoult": true,
+            "label": "Display published Date Name", 
+        }
+	]
+  }
+{% endschema %}
