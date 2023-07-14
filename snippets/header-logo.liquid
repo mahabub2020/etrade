@@ -1,0 +1,14 @@
+{%- if section.settings.logo -%}
+<a href="/" class="logo logo-dark">
+   
+  <figure class="logo--transparency">
+    <img src="{{ section.settings.logo | img_url: '300x300' }}" alt="{{ section.settings.logo.alt | default: shop.name }}">
+  </figure>
+  
+</a>
+{%- else -%}
+<a href="/" class="logo-text logo-dark">
+  {{ shop.name }}
+</a>
+{%- endif -%}
+ 
