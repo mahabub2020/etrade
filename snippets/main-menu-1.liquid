@@ -14,7 +14,7 @@
           <span class="mm-text">{{ l.title }}</span>
         </a>
   
-        <ul class="megamenu">
+        <ul class="megamenu mainmenu">
   
           {% if settings.mega_col1_linklist != "" %}
           {% assign list = linklists[settings.mega_col1_linklist] %}
@@ -171,7 +171,7 @@
         <a href="{{ l.url }}" class="mainmenu__link">
           <span class="mm-text">{{ l.title }}</span>
         </a>
-        <ul class="sub-menu">
+        <ul class="axil-submenu sub-menu">
           {% for l in linklists[submenu].links %}
           {% include 'navigation-sub-links' with forloop.index %}
           {% endfor %}
