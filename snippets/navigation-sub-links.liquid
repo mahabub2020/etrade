@@ -1,0 +1,24 @@
+
+
+{% assign submenu = l.title | handleize %}
+{% if linklists[submenu].links.size > 0 %}
+
+
+<li class="menu-item-has-children has-children">
+  <a href="{{ l.url }}">
+    <span class="mm-text">{{ l.title }}</span>
+  </a>
+  <ul class="sub-menu">
+    {% for l in linklists[submenu].links %}
+    {% include 'navigation-sub-links' %}
+    {% endfor %}
+
+  </ul>
+</li>
+{% else %}
+<li>
+  <a href="{{ l.url }}">
+    <span class="mm-text">{{ l.title }}</span>
+  </a>
+</li>
+{% endif %}

@@ -1,0 +1,191 @@
+
+
+<!-- Main Navigation Start Here -->
+<nav class="main-navigation">
+    <ul class="mainmenu mainmenu--centered">
+  
+      {% for l in linklists.main-menu.links %}
+      {% assign submenu = l.title | handleize %}
+  
+      {% if settings.mega_title == l.title %}
+  
+      <li class="mainmenu__item menu-item-has-children megamenu-holder">
+        <a href="{{ l.url }}" class="mainmenu__link">
+          <span class="mm-text">{{ l.title }}</span>
+        </a>
+  
+        <ul class="megamenu">
+  
+          {% if settings.mega_col1_linklist != "" %}
+          {% assign list = linklists[settings.mega_col1_linklist] %}
+          <li  class="mega-menu-tree">
+            <a class="megamenu-title" href="{{ list.url }}">
+              <span class="mm-text">{{ list.title }}</span>
+            </a>
+            <ul>
+              {% for link in list.links %}
+              <li>
+                <a href="{{ link.url }}">
+                  <span class="mm-text">{{ link.title }}</span>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% endif %}
+  
+          {% if settings.mega_col2_linklist != "" %}
+          {% assign list = linklists[settings.mega_col2_linklist] %}
+          <li  class="mega-menu-tree">
+            <a class="megamenu-title" href="{{ list.url }}">
+              <span class="mm-text">{{ list.title }}</span>
+            </a>
+            <ul>
+              {% for link in list.links %}
+              <li>
+                <a href="{{ link.url }}">
+                  <span class="mm-text">{{ link.title }}</span>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% endif %}
+  
+          {% if settings.mega_col3_linklist != "" %}
+          {% assign list = linklists[settings.mega_col3_linklist] %}
+          <li  class="mega-menu-tree">
+            <a class="megamenu-title" href="{{ list.url }}">
+              <span class="mm-text">{{ list.title }}</span>
+            </a>
+            <ul>
+              {% for link in list.links %}
+              <li>
+                <a href="{{ link.url }}">
+                  <span class="mm-text">{{ link.title }}</span>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% endif %}
+  
+          {% if settings.mega_col4_linklist != "" %}
+          {% assign list = linklists[settings.mega_col4_linklist] %}
+          <li  class="mega-menu-tree">
+            <a class="megamenu-title" href="{{ list.url }}">
+              <span class="mm-text">{{ list.title }}</span>
+            </a>
+            <ul>
+              {% for link in list.links %}
+              <li>
+                <a href="{{ link.url }}">
+                  <span class="mm-text">{{ link.title }}</span>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% endif %}
+  
+  
+        </ul>
+      </li>
+  
+      {% elsif settings.mega_title_2 == l.title %}
+  
+      <li class="mainmenu__item menu-item-has-children megamenu-holder">
+        <a href="{{ l.url }}" class="mainmenu__link">
+          <span class="mm-text">{{ l.title }}</span>
+        </a>
+  
+        <ul class="megamenu">
+  
+          {% if settings.mega_col5_linklist != "" %}
+          {% assign list = linklists[settings.mega_col5_linklist] %}
+          <li  class="mega-menu-tree">
+            <a class="megamenu-title" href="{{ list.url }}">
+              <span class="mm-text">{{ list.title }}</span>
+            </a>
+            <ul>
+              {% for link in list.links %}
+              <li>
+                <a href="{{ link.url }}">
+                  <span class="mm-text">{{ link.title }}</span>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% endif %}
+  
+          {% if settings.mega_col6_linklist != "" %}
+          {% assign list = linklists[settings.mega_col6_linklist] %}
+          <li  class="mega-menu-tree">
+            <a class="megamenu-title" href="{{ list.url }}">
+              <span class="mm-text">{{ list.title }}</span>
+            </a>
+            <ul>
+              {% for link in list.links %}
+              <li>
+                <a href="{{ link.url }}">
+                  <span class="mm-text">{{ link.title }}</span>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% endif %}
+  
+          {% if settings.mega_col7_linklist != "" %}
+          {% assign list = linklists[settings.mega_col7_linklist] %}
+          <li  class="mega-menu-tree">
+            <a class="megamenu-title" href="{{ list.url }}">
+              <span class="mm-text">{{ list.title }}</span>
+            </a>
+            <ul>
+              {% for link in list.links %}
+              <li>
+                <a href="{{ link.url }}">
+                  <span class="mm-text">{{ link.title }}</span>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% endif %}
+  
+          {% if settings.mega_col8_linklist != "" %}
+          {% assign list = linklists[settings.mega_col8_linklist] %}
+          <li  class="mega-menu-tree image">
+            <a href="{{ settings.banner_img_url }}"><img src="{% if settings.banner_img %}{{ settings.banner_img | img_url: 'master' }}{% endif %}"></a>
+          </li>
+          {% endif %}
+  
+  
+        </ul>
+      </li>
+  
+      {% elsif linklists[submenu].links.size > 0 %}
+      <li class="mainmenu__item menu-item-has-children has-children top-hover-2">
+        <a href="{{ l.url }}" class="mainmenu__link">
+          <span class="mm-text">{{ l.title }}</span>
+        </a>
+        <ul class="sub-menu">
+          {% for l in linklists[submenu].links %}
+          {% include 'navigation-sub-links' with forloop.index %}
+          {% endfor %}
+        </ul>
+      </li>
+      {% else %}
+      <li class="mainmenu__item">
+        <a href="{{ l.url }}" class="mainmenu__link">
+          <span class="mm-text">{{ l.title }}</span>
+        </a>
+      </li>
+      {% endif %}
+      {% endfor %} 
+  
+    </ul>
+  </nav>
+  <!-- Main Navigation End Here -->
