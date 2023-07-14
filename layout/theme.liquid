@@ -11,8 +11,8 @@
 
    <!-- Header hook for plugins -->
    {{ 'application.css' | asset_url | stylesheet_tag }}
-   {{ 'vendor.min.css' | asset_url | stylesheet_tag }}
-   {{ 'style.css' | asset_url | stylesheet_tag }}
+   {{ 'theme-default-vendor.css' | asset_url | stylesheet_tag }}
+   {{ 'theme-default.css' | asset_url | stylesheet_tag }}
 
    {{ 'jquery.js' | asset_url | script_tag }}
    {{ 'application.js' | asset_url | script_tag }}
@@ -32,7 +32,7 @@
   <main role="main">
     {{ content_for_layout }}
   </main>
-  
+
   {% section 'footer' %}
 </body>
 </html>
