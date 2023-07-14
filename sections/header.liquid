@@ -1,12 +1,5 @@
 <header class="header axil-header header-style-1">
-  <div class="header-top-campaign">
-      <div class="container position-relative">
-          <div class="campaign-content">
-              <p>Open Doors To A World Of Fashion <a href="#">Discover More</a></p>
-          </div>
-      </div>
-      <button class="remove-campaign"><i class="fal fa-times"></i></button>
-  </div>
+  {% include 'header-top' %}
   {% include 'header-mid' %}
   <!-- Start Mainmenu Area  -->
   <div id="axil-sticky-placeholder"></div>
@@ -121,9 +114,16 @@
 
            "default": "header_style_1"
         },
-		{
+	  	{
           "type": "header",
           "content": "Header Top"
+        },
+
+        {
+          "type": "text",
+          "id": "header_top_center",
+          "label": "Header Top Cente ",
+          "default": "CHRISTMAS SALE - 25% OFF <span>added at the checkout</span>"
         },
         {
           "type": "header",
