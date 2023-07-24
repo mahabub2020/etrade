@@ -2,41 +2,9 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-sm-6">
-                <div class="header-top-dropdown">
-
-                    {% form 'currency' %}
-                        <select name="currency">
-                          {% for currency in shop.enabled_currencies %}
-                            {% if currency == cart.currency %}
-                              <option selected="true">{{currency.iso_code}}</option>
-                            {% else %}
-                              <option>{{currency.iso_code}}</option>
-                            {% endif %}
-                          {% endfor %}
-                        </select>
-                        <button type="submit">Submit</button>
-                      {% endform %}
-                      
-                    <div class="dropdown">
-                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            English
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">English</a></li>
-                            <li><a class="dropdown-item" href="#">Arabic</a></li>
-                            <li><a class="dropdown-item" href="#">Spanish</a></li>
-                        </ul>
-                    </div>
-                    <div class="dropdown">
-                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            USD
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">USD</a></li>
-                            <li><a class="dropdown-item" href="#">AUD</a></li>
-                            <li><a class="dropdown-item" href="#">EUR</a></li>
-                        </ul>
-                    </div>
+                <div class="header-top-dropdown"> 
+                    {% include 'languages' %}
+                    {% include 'currency' %}
                 </div>
             </div>
             <div class="col-sm-6">
