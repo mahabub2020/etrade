@@ -2,9 +2,13 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-sm-6">
-                <div class="header-top-dropdown"> 
-                    {% include 'languages' %}
-                    {% include 'currency' %}
+                <div class="header-top-dropdown">  
+                    {% if section.settings.header_languages_enable %} 
+                        {% include 'languages' %}
+                    {% endif %}
+                    {% if section.settings.header_languages_enable %} 
+                        {% include 'currency' %}
+                    {% endif %}
                 </div>
             </div>
             <div class="col-sm-6">
