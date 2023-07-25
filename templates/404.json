@@ -4,7 +4,7 @@
       "type": "template-404",
       "settings": {
         "title": "404sssss",
-        "subtext_title": "The page that you're looking for is not found",
+        "subtext_title": "Page not Found",
         "short_details": "<p>It seems like we dont find what you searched. The page you were looking for doesn't exist, isn't available loading incorrectly.s<\/p>",
         "img_404": "shopify:\/\/shop_images\/404.png",
         "button_label": "Back to homepage",
