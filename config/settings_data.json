@@ -5,6 +5,7 @@
         "type": "header",
         "settings": {
           "header_style": "header_style_1",
+          "header_top_menu": "header-top-menu",
           "header_top_center": "CHRISTMAS SALE - 25% OFF <span>added at the checkout<\/span>",
           "section_padding_top_1": "2",
           "section_padding_bottom_1": "2",
@@ -32,7 +33,6 @@
           "location_space": "United Kingdom",
           "signin_title": "Login",
           "signout_title": "Logout",
-          "header_top_menu": "header-top-menu",
           "mini_cart_enable": true,
           "cart_title": "Shopping Cart",
           "view_cart_title": "View Cart",
