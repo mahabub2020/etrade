@@ -110,7 +110,7 @@
           "8e9393a6-e78d-40d2-9c66-9cd867c9e7d8": {
             "type": "contact_about",
             "settings": {
-              "footer_about_coloum": "3",
+              "footer_about_coloum": "6",
               "address_descrption": "Integer ut ligula quis lectus fringilla elementum porttitor sed est. Duis fringilla efficitur ligula sed lobortis.",
               "social_icon_1": "twitter",
               "social_icon_1_url": "",
@@ -126,10 +126,36 @@
               "icon_color": "#ffffff",
               "icon_hover_color": "#ffffff"
             }
+          },
+          "18cd0cfe-15c8-4385-bec3-10015247fae4": {
+            "type": "footer_menu",
+            "settings": {
+              "footer_menu_coloum": "3",
+              "footer_menu_title": "Company",
+              "footer_menu_handle": "",
+              "title_color": "#ffffff",
+              "title_border_color": "#cf987e",
+              "menu_color": "#8a8a8a",
+              "menu_hover_color": "#cf987e"
+            }
+          },
+          "010b0fdb-a0e7-4f6a-9bf9-a54f7d8bac93": {
+            "type": "footer_menu",
+            "settings": {
+              "footer_menu_coloum": "2",
+              "footer_menu_title": "Company",
+              "footer_menu_handle": "",
+              "title_color": "#ffffff",
+              "title_border_color": "#cf987e",
+              "menu_color": "#8a8a8a",
+              "menu_hover_color": "#cf987e"
+            }
           }
         },
         "block_order": [
-          "8e9393a6-e78d-40d2-9c66-9cd867c9e7d8"
+          "8e9393a6-e78d-40d2-9c66-9cd867c9e7d8",
+          "18cd0cfe-15c8-4385-bec3-10015247fae4",
+          "010b0fdb-a0e7-4f6a-9bf9-a54f7d8bac93"
         ],
         "settings": {
           "footer_enable": true,
