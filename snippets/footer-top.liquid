@@ -8,20 +8,21 @@
                 {% case  block.type %} 
                 {% when 'contact_about' %} 
                 <div class="col-lg-{{ block.settings.footer_about_coloum }} col-md-{{ block.settings.footer_about_coloum_mobile }}" id="block-{{ block.id }}">
-                   
                         <div class="axil-footer-widget"> 
                             {% if block.settings.footer_about_title != '' %}
                                 <h3 class="widget-title">{{ block.settings.footer_about_title }}</h3>
-                            {% endif %}
-                             
+                            {% endif %} 
                             <div class="inner">
                                 {% if block.settings.footer_about_title != '' %}
                                     <p>{{ block.settings.address_descrption }}</p>
                                 {% endif %}
                                 <ul class="support-list-item">
-                                    <li><a href="mailto:example@domain.com"><i class="fal fa-envelope-open"></i> example@domain.com</a></li>
-                                    <li><a href="tel:(+01)850-315-5862"><i class="fal fa-phone-alt"></i> (+01) 850-315-5862</a></li>
-                                   
+                                    {% if block.settings.about_email != '' %}
+                                        <li><a href="mailto:{{ block.settings.about_email }}"><i class="fal fa-envelope-open"></i>{{ block.settings.about_email }}</a></li>
+                                    {% endif %}
+                                    {% if block.settings.about_phone != '' %}
+                                        <li><a href="tel:{{ block.settings.about_phone }}"><i class="fal fa-phone-alt"></i>{{ block.settings.about_phone }}</a></li>
+                                    {% endif %}
                                 </ul>
                             </div>
                         </div>
