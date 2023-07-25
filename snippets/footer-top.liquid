@@ -45,7 +45,7 @@
                             </div>
                         </div> 
                     <!-- End Single Widget  -->
-                    {% when 'contact_information' %}    
+                    {% when 'footer_menu' %}    
                         <!-- Start Single Widget  -->
                         <div class="col-lg-3 col-sm-6">
                             <div class="axil-footer-widget">
@@ -62,17 +62,24 @@
                             </div>
                         </div>
                         <!-- End Single Widget  -->
-                    {% when 'contact_information' %}    
+                    {% when 'download_app' %}    
                         <!-- Start Single Widget  -->
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="axil-footer-widget">
-                                <h5 class="widget-title">Download App</h5>
+                        <div class="col-lg-{{ block.settings.footer_app_coloum }} col-sm-{{ block.settings.footer_app_coloum }}">
+                            <div class="axil-footer-widget"> 
+                                {% if block.settings.app_title != '' %}
+                                    <h3 class="widget-title">{{ block.settings.app_title }}</h3>
+                                {% endif %}  
                                 <div class="inner">
-                                    <span>Save $3 With App & New User only</span>
-                                    <div class="download-btn-group">
-                                        <div class="qr-code">
-                                            <img src="assets/images/others/qr.png" alt="Axilthemes">
-                                        </div>
+                                    {% if block.settings.app_descrption != '' %}
+                                        <span>{{ block.settings.app_descrption }}</span>
+                                    {% endif %} 
+                                    <div class="download-btn-group">  
+                                        {%- if block.settings.qr_code_img -%}   
+                                            <div class="qr-code">
+                                                <img src="{{ block.settings.qr_code_img | img_url: '300x300' }}" alt="{{ block.settings.qr_code_img.alt | default: shop.name }}">
+                                            </div> 
+                                        {%- endif -%}
+
                                         <div class="app-link">
                                             <a href="#">
                                                 <img src="assets/images/others/app-store.png" alt="App Store">
