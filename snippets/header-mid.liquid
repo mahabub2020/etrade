@@ -14,10 +14,7 @@
             <div class="col-sm-6">
                 <div class="header-top-link">
                     <ul class="quick-link"> 
-                
-
-                    {% for link in linklists[header_top_menu_handle].links %}
-                    
+                    {%- for link in linklists.header-top-menu.links -%} 
                             <li>
                                 <a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>
                                 {{ link.title }}</a>
