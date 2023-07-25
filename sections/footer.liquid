@@ -1,349 +1,241 @@
- 
-  <footer class="axil-footer-area footer-style-2"  id="section-{{ section.id }}">
-    {% include 'footer-top' %}
-    {% include 'footer-bottom' %}
-  </footer>
-    
-    
-    
-    {% schema %}
-      {
-        "name": "Footer",
-        "settings": [
-            {
-              "type": "checkbox",
-              "id": "footer_enable",
-              "label": "Footer Enable",
-              "default": true
-            },
-            {
-                "type": "radio",
-                "id": "footer_style",
-                "label": "Footer Style",
-                "options":[
-                  {
-                      "value":"footer_style_1",
-                      "label": "Style 1"
-                  },
-                  {
-                      "value":"footer_style_2",
-                      "label": "Style 2"
-                  },
-                  {
-                      "value":"footer_style_3",
-                      "label": "Style 3"
-                  },
-                  {
-                      "value":"footer_style_4",
-                      "label": "Style 4"
-                  },
-                  {
-                      "value":"footer_style_5",
-                      "label": "Style 5"
-                  },
-                  {
-                      "value":"footer_style_6",
-                      "label": "Style 6"
-                  }
-                ],
-    
-               "default": "footer_style_1"
-            },
-            {
-              "type": "header",
-              "content": "Footer Top"
-            },
-            {
-              "type": "checkbox",
-              "id": "footer_top_enable",
-              "label": "Footer Top Enable",
-              "default": true
-            }
-             
-        ],
-        "blocks":[
-           {
-              "type": "contact_about",
-              "name": "Contact About",
-              "settings": [
-                     {
-                        "type": "text",
-                        "id": "footer_about_coloum",
-                        "label": "Footer About Column Control",
-                        "default": "3",
-                        "info": "Follow Bootstrap Column"
-                     },
-                     {
-                        "type": "header",
-                        "content": "Footer Logo"
-                     },
-                     {
-                        "type": "image_picker",
-                        "id": "footer_logo",
-                        "label": "Logo"
-                     },
-                     {
-                          "type": "textarea",
-                          "id": "address_descrption",
-                          "label": "Address Description",
-                          "default": "Integer ut ligula quis lectus fringilla elementum porttitor sed est. Duis fringilla efficitur ligula sed lobortis."
-                     },
-                     {
-                        "type": "header",
-                        "content": "Social Area"
-                     },
-                     {
-                        "type": "header",
-                        "content": "Social 1"
-                     },
-                     {
-                        "type": "text",
-                        "id": "social_icon_1",
-                        "label": "Icon",
-                        "default": "twitter",
-                          "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
-                     },
-                     {
-                        "type": "url",
-                        "id": "social_icon_1_url",
-                        "label": "URL"
-                     },
-                     {
-                        "type": "header",
-                        "content": "Social 2"
-                     },
-                     {
-                        "type": "text",
-                        "id": "social_icon_2",
-                        "label": "Icon",
-                        "default": "google-plus",
-                          "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
-                     },
-                     {
-                        "type": "url",
-                        "id": "social_icon_2_url",
-                        "label": "URL"
-                     },
-                     {
-                        "type": "header",
-                        "content": "Social 3"
-                     },
-                     {
-                        "type": "text",
-                        "id": "social_icon_3",
-                        "label": "Icon",
-                        "default": "facebook",
-                          "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
-                     },
-                     {
-                        "type": "url",
-                        "id": "social_icon_3_url",
-                        "label": "URL"
-                     },
-                     {
-                        "type": "header",
-                        "content": "Social 4"
-                     },
-                     {
-                        "type": "text",
-                        "id": "social_icon_4",
-                        "label": "Icon",
-                        "default": "youtube",
-                          "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
-                     },
-                     {
-                        "type": "url",
-                        "id": "social_icon_4_url",
-                        "label": "URL"
-                     },
-                     {
-                        "type": "header",
-                        "content": "Social 5"
-                     },
-                     {
-                        "type": "text",
-                        "id": "social_icon_5",
-                        "label": "Icon",
-                        "default": "instagram",
-                          "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
-                     },
-                     {
-                        "type": "url",
-                        "id": "social_icon_5_url",
-                        "label": "URL"
-                     },
-                     {
-                        "type": "header",
-                        "content": "Color"
-                     }, 
-                     {
-                        "type": "color",
-                        "id": "content_color",
-                        "label": "Description Color",
-                        "default": "#8a8a8a"
-                     }, 
-                     {
-                        "type": "color",
-                        "id": "icon_color",
-                        "label": "Social Icon Color",
-                        "default": "#ffffff"
-                     }, 
-                     {
-                        "type": "color",
-                        "id": "icon_hover_color",
-                        "label": "Social Icon Hover Color",
-                        "default": "#ffffff"
-                     }
-                     
-                ]
-           },
-           {
-                "type": "footer_menu",
-                "name": "Menu",
-                "settings": [
-                      {
-                        "type": "text",
-                        "id": "footer_menu_coloum",
-                        "label": "Menu Column Control",
-                        "default": "2",
-                        "info": "Follow Bootstrap Column"
-                      },
-                      {
-                          "type": "text",
-                          "id": "footer_menu_title",
-                          "label": "Menu Title",
-                          "default": "Company"
-                      },
-                      {
-                          "type": "link_list",
-                          "id": "footer_menu_handle",
-                          "label": "Select Menu"
-                      },
-                      {
-                         "type": "color",
-                         "id": "title_color",
-                         "label": "Title Color",
-                         "default": "#ffffff"
-                      }, 
-                      {
-                         "type": "color",
-                         "id": "title_border_color",
-                         "label": "Title Border Color",
-                         "default": "#cf987e"
-                      }, 
-                      {
-                         "type": "color",
-                         "id": "menu_color",
-                         "label": "Menu Color",
-                         "default": "#8a8a8a"
-                      }, 
-                      {
-                         "type": "color",
-                         "id": "menu_hover_color",
-                         "label": "Menu Hover Color",
-                         "default": "#cf987e"
-                      }
-                    ]
-           },
-           {
-              "type": "contact_information",
-              "name": "Information",
-              "settings": [
-                     {
-                        "type": "text",
-                        "id": "contact_information_coloum",
-                        "label": "Footer Info Column Control",
-                        "default": "4",
-                        "info": "Follow Bootstrap Column"
-                     },
-                     {
-                          "type": "text",
-                          "id": "footer_contact_title",
-                          "label": "Contact Title",
-                          "default": "CONTACT INFO"
-                     },
-                     {
-                        "type": "header",
-                        "content": "Contact Address"
-                     },
-                     {
-                          "type": "text",
-                          "id": "icon_title_1",
-                          "label": "Icon",
-                          "default": "fa-phone",
-                          "info": "[See More Icon](https:\/\/fontawsome.com\/)"
-                     },
-                     {
-                          "type": "textarea",
-                          "id": "phone_number",
-                          "label": "Phone Number",
-                          "default": "(+612) 2531 5600"
-                     },
-                     {
-                          "type": "text",
-                          "id": "icon_title_2",
-                          "label": "Icon",
-                          "default": "fa-envelope",
-                          "info": "[See More Icon](https:\/\/fontawsome.com\/)"
-                     },
-                     {
-                          "type": "textarea",
-                          "id": "email_address",
-                          "label": "Email",
-                          "default": "info@la-studioweb.com"
-                     },
-                     {
-                          "type": "text",
-                          "id": "icon_title_3",
-                          "label": "Icon",
-                          "default": "fa-map-marker",
-                          "info": "[See More Icon](https:\/\/fontawsome.com\/)"
-                     },
-                     {
-                          "type": "textarea",
-                          "id": "address",
-                          "label": "Address",
-                          "default": "PO Box 1622 Colins Street West Victoria 8077 Australia"
-                     },
-                     {
-                        "type": "header",
-                        "content": "Payment Icon"
-                     },
-                     {
-                          "type": "image_picker",
-                          "id": "payment_logo",
-                          "label": "Payment Logo",
-                          "info": "Recommended Size: 470 x 33px"
-                     },
-                     {
-                         "type": "color",
-                         "id": "title_color",
-                         "label": "Title Color",
-                         "default": "#ffffff"
-                     }, 
-                     {
-                         "type": "color",
-                         "id": "title_border_color",
-                         "label": "Title Border Color",
-                         "default": "#cf987e"
-                     },
-                     {
-                         "type": "color",
-                         "id": "icon_2_color",
-                         "label": "Content Icon Color",
-                         "default": "#8a8a8a"
-                     }, 
-                     {
-                         "type": "color",
-                         "id": "content_2_color",
-                         "label": "Content Text Color",
-                         "default": "#8a8a8a"
-                     }
-                     
-                ]
-           }
-           
-        ]
-      }
-    {% endschema %}
-  
+<footer class="axil-footer-area footer-style-2" id="section-{{ section.id }}">
+  {% include 'footer-top' %}
+  {% include 'footer-bottom' %}
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "footer_enable",
+      "label": "Footer Enable",
+      "default": true
+    },
+    {
+      "type": "radio",
+      "id": "footer_style",
+      "label": "Footer Style",
+      "options": [
+        {
+          "value": "footer_style_1",
+          "label": "Style 1"
+        },
+        {
+          "value": "footer_style_2",
+          "label": "Style 2"
+        },
+        {
+          "value": "footer_style_3",
+          "label": "Style 3"
+        },
+        {
+          "value": "footer_style_4",
+          "label": "Style 4"
+        },
+        {
+          "value": "footer_style_5",
+          "label": "Style 5"
+        },
+        {
+          "value": "footer_style_6",
+          "label": "Style 6"
+        }
+      ],
+
+      "default": "footer_style_1"
+    },
+    {
+      "type": "header",
+      "content": "Footer Top"
+    },
+    {
+      "type": "checkbox",
+      "id": "footer_top_enable",
+      "label": "Footer Top Enable",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "contact_about",
+      "name": "Contact About",
+      "settings": [
+        {
+          "type": "text",
+          "id": "footer_about_title",
+          "label": "About Title",
+          "default": "Company"
+        },
+        {
+          "type": "textarea",
+          "id": "address_descrption",
+          "label": "Address Description",
+          "default": "685 Market Street, Las Vegas, LA 95820, United States."
+        },
+        {
+          "type": "text",
+          "id": "footer_about_coloum",
+          "label": "Footer About Column Control",
+          "default": "3",
+          "info": "Follow Bootstrap Column"
+        },
+        {
+          "type": "text",
+          "id": "footer_about_coloum_mobile",
+          "label": "Footer About Column Contro Mobile",
+          "default": "6",
+          "info": "Follow Bootstrap Column"
+        },
+        {
+          "type": "text",
+          "id": "about_phone",
+          "label": "Phone",
+          "default": "(+01) 850-315-5862"
+        },
+        {
+          "type": "text",
+          "id": "about_email",
+          "label": "Email",
+          "default": "example@domain.com"
+        }
+      ]
+    },
+    {
+      "type": "footer_menu",
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "footer_menu_coloum",
+          "label": "Menu Column Control",
+          "default": "2",
+          "info": "Follow Bootstrap Column"
+        },
+        {
+          "type": "text",
+          "id": "footer_menu_title",
+          "label": "Menu Title",
+          "default": "Company"
+        },
+        {
+          "type": "link_list",
+          "id": "footer_menu_handle",
+          "label": "Select Menu"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "title_border_color",
+          "label": "Title Border Color",
+          "default": "#cf987e"
+        },
+        {
+          "type": "color",
+          "id": "menu_color",
+          "label": "Menu Color",
+          "default": "#8a8a8a"
+        },
+        {
+          "type": "color",
+          "id": "menu_hover_color",
+          "label": "Menu Hover Color",
+          "default": "#cf987e"
+        }
+      ]
+    },
+    {
+      "type": "download_app",
+      "name": "DownloadApp",
+      "settings": [
+        {
+          "type": "text",
+          "id": "app_title",
+          "label": "Download App Title",
+          "default": "Download App"
+        },
+        {
+          "type": "textarea",
+          "id": "app_descrption",
+          "label": "App Description",
+          "default": "Save $3 With App & New User only"
+        },
+        {
+          "type": "text",
+          "id": "footer_about_coloum",
+          "label": "Footer About Column Control",
+          "default": "3",
+          "info": "Follow Bootstrap Column"
+        },
+        {
+          "type": "text",
+          "id": "footer_about_coloum_mobile",
+          "label": "Footer About Column Contro Mobile",
+          "default": "6",
+          "info": "Follow Bootstrap Column"
+        }, 
+        {
+          "type": "header",
+          "content": "App Store"
+        },
+        {
+          "type": "image_picker",
+          "id": "qr_code_img",
+          "label": "QR Code"
+        },
+        {
+          "type": "image_picker",
+          "id": "app_store1",
+          "label": "App Store 1"
+        },
+        {
+          "type": "url",
+          "id": "app_url1",
+          "label": "App URL"
+        },
+        {
+          "type": "image_picker",
+          "id": "app_store2",
+          "label": "App Store 2"
+        },
+        {
+          "type": "url",
+          "id": "app_url2",
+          "label": "App URL"
+        },
+
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "title_border_color",
+          "label": "Title Border Color",
+          "default": "#cf987e"
+        },
+        {
+          "type": "color",
+          "id": "icon_2_color",
+          "label": "Content Icon Color",
+          "default": "#8a8a8a"
+        },
+        {
+          "type": "color",
+          "id": "content_2_color",
+          "label": "Content Text Color",
+          "default": "#8a8a8a"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
