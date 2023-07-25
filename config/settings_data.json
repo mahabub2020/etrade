@@ -118,18 +118,6 @@
               "about_email": "example@domain.com"
             }
           },
-          "18cd0cfe-15c8-4385-bec3-10015247fae4": {
-            "type": "footer_menu",
-            "settings": {
-              "footer_menu_coloum": "3",
-              "footer_menu_title": "Company",
-              "footer_menu_handle": "",
-              "title_color": "#ffffff",
-              "title_border_color": "#cf987e",
-              "menu_color": "#8a8a8a",
-              "menu_hover_color": "#cf987e"
-            }
-          },
           "010b0fdb-a0e7-4f6a-9bf9-a54f7d8bac93": {
             "type": "footer_menu",
             "settings": {
@@ -162,7 +150,6 @@
         },
         "block_order": [
           "8e9393a6-e78d-40d2-9c66-9cd867c9e7d8",
-          "18cd0cfe-15c8-4385-bec3-10015247fae4",
           "010b0fdb-a0e7-4f6a-9bf9-a54f7d8bac93",
           "5b052ad1-8bad-496c-9f5c-20611ccac34d"
         ],
