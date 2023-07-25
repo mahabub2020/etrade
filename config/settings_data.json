@@ -110,21 +110,12 @@
           "8e9393a6-e78d-40d2-9c66-9cd867c9e7d8": {
             "type": "contact_about",
             "settings": {
-              "footer_about_coloum": "6",
+              "footer_about_title": "Company",
               "address_descrption": "Integer ut ligula quis lectus fringilla elementum porttitor sed est. Duis fringilla efficitur ligula sed lobortis.",
-              "social_icon_1": "twitter",
-              "social_icon_1_url": "",
-              "social_icon_2": "google-plus",
-              "social_icon_2_url": "",
-              "social_icon_3": "facebook",
-              "social_icon_3_url": "",
-              "social_icon_4": "youtube",
-              "social_icon_4_url": "",
-              "social_icon_5": "instagram",
-              "social_icon_5_url": "",
-              "content_color": "#8a8a8a",
-              "icon_color": "#ffffff",
-              "icon_hover_color": "#ffffff"
+              "footer_about_coloum": "6",
+              "footer_about_coloum_mobile": "6",
+              "about_phone": "(+01) 850-315-5862",
+              "about_email": "example@domain.com"
             }
           },
           "18cd0cfe-15c8-4385-bec3-10015247fae4": {
@@ -150,12 +141,30 @@
               "menu_color": "#8a8a8a",
               "menu_hover_color": "#cf987e"
             }
+          },
+          "5b052ad1-8bad-496c-9f5c-20611ccac34d": {
+            "type": "download_app",
+            "settings": {
+              "app_title": "Download App",
+              "app_descrption": "Save $3 With App & New User only",
+              "footer_app_coloum": "3",
+              "footer_app_coloum_mobile": "6",
+              "qr_code_img": "shopify:\/\/shop_images\/qr.png",
+              "app_store1": "shopify:\/\/shop_images\/app-store.png",
+              "app_url1": "#",
+              "app_url2": "",
+              "title_color": "#ffffff",
+              "title_border_color": "#cf987e",
+              "icon_2_color": "#8a8a8a",
+              "content_2_color": "#8a8a8a"
+            }
           }
         },
         "block_order": [
           "8e9393a6-e78d-40d2-9c66-9cd867c9e7d8",
           "18cd0cfe-15c8-4385-bec3-10015247fae4",
-          "010b0fdb-a0e7-4f6a-9bf9-a54f7d8bac93"
+          "010b0fdb-a0e7-4f6a-9bf9-a54f7d8bac93",
+          "5b052ad1-8bad-496c-9f5c-20611ccac34d"
         ],
         "settings": {
           "footer_enable": true,
