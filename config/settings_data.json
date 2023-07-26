@@ -112,13 +112,25 @@
             "settings": {
               "footer_about_title": "Company",
               "address_descrption": "Integer ut ligula quis lectus fringilla elementum porttitor sed est. Duis fringilla efficitur ligula sed lobortis.",
-              "footer_about_coloum": "6",
+              "footer_about_coloum": "3",
               "footer_about_coloum_mobile": "6",
               "about_phone": "(+01) 850-315-5862",
               "about_email": "example@domain.com"
             }
           },
           "010b0fdb-a0e7-4f6a-9bf9-a54f7d8bac93": {
+            "type": "footer_menu",
+            "settings": {
+              "footer_menu_coloum": "2",
+              "footer_menu_title": "Company",
+              "footer_menu_handle": "",
+              "title_color": "#ffffff",
+              "title_border_color": "#cf987e",
+              "menu_color": "#8a8a8a",
+              "menu_hover_color": "#cf987e"
+            }
+          },
+          "df9acf9a-08f3-493c-844c-5a4e384e0c53": {
             "type": "footer_menu",
             "settings": {
               "footer_menu_coloum": "2",
@@ -151,6 +163,7 @@
         "block_order": [
           "8e9393a6-e78d-40d2-9c66-9cd867c9e7d8",
           "010b0fdb-a0e7-4f6a-9bf9-a54f7d8bac93",
+          "df9acf9a-08f3-493c-844c-5a4e384e0c53",
           "5b052ad1-8bad-496c-9f5c-20611ccac34d"
         ],
         "settings": {
