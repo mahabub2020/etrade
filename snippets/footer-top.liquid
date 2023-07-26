@@ -42,21 +42,21 @@
             {% when 'footer_menu' %}
               <!-- Start Single Widget -->
 
-              <div class="col-lg-{{ block.settings.footer_menu_coloum }} col-md-4" id="block-{{ block.id }}">
+              <div class="col-lg-{{ block.settings.footer_menu_coloum }} col-sm-6" id="block-{{ block.id }}">
                 <div class="footer-widget">
                   {% if block.settings.footer_menu_title != '' %}
-                  <h3 class="widget-title">{{ block.settings.footer_menu_title }}</h3>
+                    <h5 class="widget-title">{{ block.settings.footer_menu_title }}</h3>
                   {% endif %}
-                  <ul class="widget-menu">
-                    {% assign footer_menu = block.settings.footer_menu_handle %}
-                    {% for link in linklists[footer_menu].links %}
-                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                    {% endfor %}
-                  </ul>
+                    <div class="inner">
+                      <ul class="widget-menu">
+                        {% assign footer_menu = block.settings.footer_menu_handle %}
+                        {% for link in linklists[footer_menu].links %}
+                          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                        {% endfor %}
+                      </ul>
+                  </div>
                 </div>
-              </div>
-
-              
+              </div> 
             
             {% when 'download_app' %}
               <!-- Start Single Widget -->
