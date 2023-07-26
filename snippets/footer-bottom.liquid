@@ -4,33 +4,35 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-4"> 
+            {% if section.settings.footer_social_enable %} 
                 <div class="social-share"> 
-                        {% if section.settings.social_icon_1 %}
-                            <a href="{{ section.settings.social_icon_1_url }}" class="social__link">
-                                <i class="fab fa-{{ section.settings.social_icon_1 }}"></i>
-                            </a>
-                        {% endif %}
-                        {% if section.settings.social_icon_2 %}
-                            <a href="{{ section.settings.social_icon_2_url }}" class="social__link">
-                                <i class="fab fa-{{ section.settings.social_icon_2 }}"></i>
-                            </a>
-                        {% endif %}
-                        {% if section.settings.social_icon_3 %}
-                            <a href="{{ section.settings.social_icon_3_url }}" class="social__link">
-                                <i class="fab fa-{{ section.settings.social_icon_3 }}"></i>
-                            </a>
-                        {% endif %}
-                        {% if section.settings.social_icon_4 %}
-                            <a href="{{ section.settings.social_icon_4_url }}" class="social__link">
-                                <i class="fab fa-{{ section.settings.social_icon_4 }}"></i>
-                            </a>
-                        {% endif %}
-                        {% if section.settings.social_icon_5 %}
-                            <a href="{{ section.settings.social_icon_5_url }}" class="social__link">
-                                <i class="fab fa-{{ section.settings.social_icon_5 }}"></i>
-                            </a>
-                        {% endif %}  
+                    {% if section.settings.social_icon_1 %}
+                        <a href="{{ section.settings.social_icon_1_url }}" class="social__link">
+                            <i class="fab fa-{{ section.settings.social_icon_1 }}"></i>
+                        </a>
+                    {% endif %}
+                    {% if section.settings.social_icon_2 %}
+                        <a href="{{ section.settings.social_icon_2_url }}" class="social__link">
+                            <i class="fab fa-{{ section.settings.social_icon_2 }}"></i>
+                        </a>
+                    {% endif %}
+                    {% if section.settings.social_icon_3 %}
+                        <a href="{{ section.settings.social_icon_3_url }}" class="social__link">
+                            <i class="fab fa-{{ section.settings.social_icon_3 }}"></i>
+                        </a>
+                    {% endif %}
+                    {% if section.settings.social_icon_4 %}
+                        <a href="{{ section.settings.social_icon_4_url }}" class="social__link">
+                            <i class="fab fa-{{ section.settings.social_icon_4 }}"></i>
+                        </a>
+                    {% endif %}
+                    {% if section.settings.social_icon_5 %}
+                        <a href="{{ section.settings.social_icon_5_url }}" class="social__link">
+                            <i class="fab fa-{{ section.settings.social_icon_5 }}"></i>
+                        </a>
+                    {% endif %}  
                 </div>  
+            {% endif %}
             </div>
             <div class="col-xl-4 col-lg-12">
                 <div class="copyright-left d-flex flex-wrap justify-content-center">
