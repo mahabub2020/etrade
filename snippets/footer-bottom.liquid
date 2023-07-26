@@ -4,33 +4,32 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-4"> 
-                <div class="social-share">   
-                        {% if section.settings.social_icon_1_name != '' %} 
-                          <a href="{{ section.settings.socila_icon_1_link }}" class="social__link">
-                            <i class="fa fa-{{ section.settings.social_icon_1_name }}"></i>
-                          </a> 
+                <div class="social-share"> 
+                        {% if section.settings.social_icon_1 %}
+                            <a href="{{ section.settings.social_icon_1_url }}" class="social__link">
+                                <i class="fab fa-{{ section.settings.social_icon_1 }}"></i>
+                            </a>
                         {% endif %}
-                        {% if section.settings.social_icon_2_name != '' %} 
-                          <a href="{{ section.settings.socila_icon_2_link }}" class="social__link">
-                            <i class="fa fa-{{ section.settings.social_icon_2_name }}"></i>
-                          </a> 
+                        {% if section.settings.social_icon_2 %}
+                            <a href="{{ section.settings.social_icon_2_url }}" class="social__link">
+                                <i class="fab fa-{{ section.settings.social_icon_2 }}"></i>
+                            </a>
                         {% endif %}
-                        {% if section.settings.social_icon_3_name != '' %}
-                          <a href="{{ section.settings.socila_icon_3_link }}" class="social__link">
-                            <i class="fa fa-{{ section.settings.social_icon_3_name }}"></i>
-                          </a>
+                        {% if section.settings.social_icon_3 %}
+                            <a href="{{ section.settings.social_icon_3_url }}" class="social__link">
+                                <i class="fab fa-{{ section.settings.social_icon_3 }}"></i>
+                            </a>
                         {% endif %}
-                        {% if section.settings.social_icon_4_name != '' %} 
-                          <a href="{{ section.settings.socila_icon_4_link }}" class="social__link">
-                            <i class="fa fa-{{ section.settings.social_icon_4_name }}"></i>
-                          </a>
+                        {% if section.settings.social_icon_4 %}
+                            <a href="{{ section.settings.social_icon_4_url }}" class="social__link">
+                                <i class="fab fa-{{ section.settings.social_icon_4 }}"></i>
+                            </a>
                         {% endif %}
-                        {% if section.settings.social_icon_5_name != '' %}  
-                        <li class="social__item">
-                          <a href="{{ section.settings.socila_icon_5_link }}" class="social__link">
-                            <i class="fa fa-{{ section.settings.social_icon_5_name }}"></i>
-                          </a>
-                        {% endif %}
+                        {% if section.settings.social_icon_5 %}
+                            <a href="{{ section.settings.social_icon_5_url }}" class="social__link">
+                                <i class="fab fa-{{ section.settings.social_icon_5 }}"></i>
+                            </a>
+                        {% endif %}  
                 </div>  
             </div>
             <div class="col-xl-4 col-lg-12">
