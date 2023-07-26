@@ -170,7 +170,18 @@
         "settings": {
           "footer_enable": true,
           "footer_style": "footer_style_1",
-          "footer_top_enable": true
+          "footer_top_enable": true,
+          "footer_bottom_enable": true,
+          "social_icon_1": "twitter",
+          "social_icon_1_url": "",
+          "social_icon_2": "google-plus",
+          "social_icon_2_url": "",
+          "social_icon_3": "facebook",
+          "social_icon_3_url": "",
+          "social_icon_4": "youtube",
+          "social_icon_4_url": "",
+          "social_icon_5": "instagram",
+          "social_icon_5_url": "https:\/\/www.facebook.com\/"
         }
       }
     },
