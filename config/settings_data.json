@@ -121,7 +121,7 @@
           "010b0fdb-a0e7-4f6a-9bf9-a54f7d8bac93": {
             "type": "footer_menu",
             "settings": {
-              "footer_menu_coloum": "2",
+              "footer_menu_coloum": "3",
               "footer_menu_title": "Companysssdaadd",
               "footer_menu_handle": "main-menu",
               "title_color": "#ffffff",
@@ -133,7 +133,7 @@
           "df9acf9a-08f3-493c-844c-5a4e384e0c53": {
             "type": "footer_menu",
             "settings": {
-              "footer_menu_coloum": "2",
+              "footer_menu_coloum": "3",
               "footer_menu_title": "Company",
               "footer_menu_handle": "footer",
               "title_color": "#ffffff",
