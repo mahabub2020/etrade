@@ -41,21 +41,22 @@
               <!-- End Single Widget -->
             {% when 'footer_menu' %}
               <!-- Start Single Widget -->
-              <div class="col-lg-3 col-sm-6">
-                <div class="axil-footer-widget">
-                  <h5 class="widget-title">Account</h5>
-                  <div class="inner">
-                    <ul>
-                      <li><a href="my-account.html">My Account</a></li>
-                      <li><a href="sign-up.html">Login / Register</a></li>
-                      <li><a href="cart.html">Cart</a></li>
-                      <li><a href="wishlist.html">Wishlist</a></li>
-                      <li><a href="shop.html">Shop</a></li>
-                    </ul>
-                  </div>
+
+              <div class="col-lg-{{ block.settings.footer_menu_coloum }} col-md-4" id="block-{{ block.id }}">
+                <div class="footer-widget">
+                  {% if block.settings.footer_menu_title != '' %}
+                  <h3 class="widget-title">{{ block.settings.footer_menu_title }}</h3>
+                  {% endif %}
+                  <ul class="widget-menu">
+                    {% assign footer_menu = block.settings.footer_menu_handle %}
+                    {% for link in linklists[footer_menu].links %}
+                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                    {% endfor %}
+                  </ul>
                 </div>
               </div>
-              <!-- End Single Widget -->
+
+              
             
             {% when 'download_app' %}
               <!-- Start Single Widget -->
@@ -81,7 +82,7 @@
                       <div class="app-link">
                         {%- if block.settings.app_store1 -%}
                           <a href="{{ block.settings.app_descrption }}">
-                            <img src="{{ block.settings.app_store1 | img_url: '140x42' }}" alt="{{ block.settings.app_store1.alt | default: shop.name }}">
+                            <img loading="eager" src="{{ block.settings.app_store1 | img_url: '140x42' }}" alt="{{ block.settings.app_store1.alt | default: shop.name }}">
                           </a>
                         {%- endif -%}
                         {%- if block.settings.app_store2 -%}
