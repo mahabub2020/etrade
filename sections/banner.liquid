@@ -15,9 +15,15 @@
                         </div>
                     </div>
                     <div class="col-md-6">
+
+                        {%- if section.settings.banner_img -%}   
+
                         <div class="slide-thumb-area">
                             <div class="main-thumb">
-                                <img src="assets/images/banner/women_sunglass.png" alt="Women's Product">
+                               <img
+                                src="{{ section.settings.banner_img | img_url: '830x550' }}"
+                                alt="{{ section.settings.banner_img.alt | default: shop.name }}"
+                            >
                             </div>
                             <div class="banner-product">
                                 <div class="product-details">
@@ -38,6 +44,7 @@
                                     <i class="far fa-plus"></i>
                                 </div>
                             </div>
+                        {%- endif -%}
                             <ul class="shape-group">
                                 <li class="shape-1">
                                     <svg width="717" height="569" viewBox="0 0 717 569" fill="none" xmlns="http://www.w3.org/2000/svg">
