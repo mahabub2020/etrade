@@ -7,6 +7,18 @@
     },
     "1533261a-8db3-4e69-ab1a-bf9afdd28691": {
       "type": "banner",
+      "blocks": {
+        "fe1a03e9-395b-4d49-9729-baeac4d8fcd7": {
+          "type": "banner",
+          "settings": {
+            "featured_product_handle": "banner-popup",
+            "featured_product_limit_handle": 8
+          }
+        }
+      },
+      "block_order": [
+        "fe1a03e9-395b-4d49-9729-baeac4d8fcd7"
+      ],
       "settings": {
         "header_style": "header_style_1",
         "banner_title": "Life is More Than Sunglasses and Hit Movies.",
