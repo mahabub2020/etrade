@@ -13,10 +13,19 @@
         "featured_collection": "",
         "number_of_products_to_show": 4
       }
+    },
+    "994958bd-1ebc-4cee-9314-6bd1a1687c94": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Collection",
+        "featured_collection": "",
+        "number_of_products_to_show": 4
+      }
     }
   },
   "order": [
     "template",
-    "0ac0bf45-df48-4216-a3c5-9d9a5023b8d0"
+    "0ac0bf45-df48-4216-a3c5-9d9a5023b8d0",
+    "994958bd-1ebc-4cee-9314-6bd1a1687c94"
   ]
 }
