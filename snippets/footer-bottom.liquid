@@ -44,14 +44,19 @@
             {% endif %}
             </div>
             <div class="col-xl-4 col-lg-12">
+                {%- if section.settings.payment_icon_img -%}  
                 <div class="copyright-right d-flex flex-wrap justify-content-xl-end justify-content-center align-items-center">
-                    <span class="card-text">Accept For</span>
+                    {% if section.settings.copy_ritht_text != '' %}
+                        <span class="card-text">{{ section.settings.payment_title }}</span>
+                    {% endif %} 
                     <ul class="payment-icons-bottom quick-link">
-                        <li><img src="assets/images/icons/cart/cart-1.png" alt="paypal cart"></li>
-                        <li><img src="assets/images/icons/cart/cart-2.png" alt="paypal cart"></li>
-                        <li><img src="assets/images/icons/cart/cart-5.png" alt="paypal cart"></li>
+                        <li> <img
+                            src="{{ section.settings.payment_icon_img | img_url: '320x50' }}"
+                            alt="{{ section.settings.payment_icon_img.alt | default: shop.name }}"
+                          ></li> 
                     </ul>
-                </div>
+                </div> 
+            {%- endif -%}
             </div>
         </div>
     </div>
