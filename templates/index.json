@@ -5,7 +5,13 @@
             "settings": {
                 "featured_collection": "all"
             }
+        },
+        "product-collection": {
+            "type": "product-collection",
+            "settings": {
+                "product_collection": "all"
+            }
         }
     },
-    "order": ["featured-collection"]
+    "order": ["featured-collection", "product-collection"]
 }

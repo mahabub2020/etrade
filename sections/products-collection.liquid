@@ -3,7 +3,7 @@
 
   <div class="max-w-6xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-      {% for product in section.settings.featured_collection.products limit: section.settings.number_of_products_to_show %}
+      {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
         {% render 'product-card', product_product: product %}
       {% endfor %}
     </div>
@@ -36,7 +36,7 @@
 </div>
 <div class="product-area pb--20 border-off style-8">
   <div class="row row--15">
-    {% for product in section.settings.featured_collection.products limit: section.settings.number_of_products_to_show %}
+    {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
       <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
 
         <div class="axil-product product-style-eight  has-color-pick has-gallery-image">
