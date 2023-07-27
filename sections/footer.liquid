@@ -65,7 +65,13 @@
       "id": "footer_bottom_enable",
       "label": "Footer bottom Enable",
       "default": true
-    }, 
+    },
+    {
+      "type": "richtext",
+      "id": "copy_ritht_text",
+      "label": "CopyRight Text",
+      "default": "<p>© 2023. All rights reserved by <a href='#' target='_blank' rel='noopener'>Your Company.</a></p>"
+    },
     {
       "type": "header",
       "content": "Footer Social"
@@ -75,6 +81,21 @@
       "id": "footer_social_enable",
       "label": "Footer Social Enable",
       "default": true
+    },
+    {
+      "type": "header",
+      "content": "Payment Icons"
+    },
+    {
+      "type": "text",
+      "id": "payment_title",
+      "label": "Icon",
+      "default": "google-plus"
+    },
+    {
+      "type": "image_picker",
+      "id": "payment_icon_img",
+      "label": "Payment Image"
     },
     {
       "type": "header",
@@ -161,7 +182,7 @@
       "label": "URL"
     }
   ],
-  
+
   "blocks": [
     {
       "type": "contact_about",
@@ -207,7 +228,7 @@
         }
       ]
     },
-    
+
     {
       "type": "footer_menu",
       "name": "Menu",
@@ -219,7 +240,7 @@
           "default": "3",
           "info": "Follow Bootstrap Column"
         },
-        
+
         {
           "type": "text",
           "id": "footer_menu_title",
@@ -286,7 +307,7 @@
           "label": "Footer App Column Contro Mobile",
           "default": "6",
           "info": "Follow Bootstrap Column"
-        }, 
+        },
         {
           "type": "header",
           "content": "App Store"

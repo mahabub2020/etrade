@@ -35,11 +35,13 @@
             {% endif %}
             </div>
             <div class="col-xl-4 col-lg-12">
+                {% if section.settings.copy_ritht_text != '' %}
                 <div class="copyright-left d-flex flex-wrap justify-content-center">
                     <ul class="quick-link">
-                        <li>© 2023. All rights reserved by <a target="_blank" href="https://axilthemes.com/">Axilthemes</a>.</li>
+                        <li>{{ section.settings.copy_ritht_text }}</li>
                     </ul>
                 </div>
+            {% endif %}
             </div>
             <div class="col-xl-4 col-lg-12">
                 <div class="copyright-right d-flex flex-wrap justify-content-xl-end justify-content-center align-items-center">
