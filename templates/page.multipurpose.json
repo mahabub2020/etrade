@@ -5,9 +5,10 @@
       "settings": {
       }
     },
-    "994958bd-1ebc-4cee-9314-6bd1a1687c94": {
-      "type": "featured-collection",
+    "1533261a-8db3-4e69-ab1a-bf9afdd28691": {
+      "type": "banner",
       "settings": {
+        "header_style": "header_style_1",
         "title": "Featured Collection",
         "featured_collection": "",
         "number_of_products_to_show": 4
@@ -16,6 +17,6 @@
   },
   "order": [
     "template",
-    "994958bd-1ebc-4cee-9314-6bd1a1687c94"
+    "1533261a-8db3-4e69-ab1a-bf9afdd28691"
   ]
 }
