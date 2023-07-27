@@ -11,7 +11,9 @@
         "fe1a03e9-395b-4d49-9729-baeac4d8fcd7": {
           "type": "banner",
           "settings": {
-            "featured_product_handle": "banner-popup",
+            "collection_list": [
+              "banner-popup"
+            ],
             "featured_product_limit_handle": 8
           }
         }
