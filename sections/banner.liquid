@@ -141,43 +141,26 @@
     "blocks":[
         {
             "type": "banner",
-            "name": "Banner",
+            "name": "Product Collection",
             "settings": [
-               {
-                   "type": "image_picker",
-                   "id": "banner_img",
-                   "label": "Image",
-                   "info": "Recommended Size: 550 x 480px"
-               },
-               {
-                   "type": "text",
-                   "id": "banner_subtitle",
-                   "label": "Banner Subtitle",
-                   "default": "NEW MAN"
-               },
-               {
-                   "type": "text",
-                   "id": "banner_title",
-                   "label": "Banner Title",
-                   "default": "Women <strong>2019</strong>",
-                   "info": "Use of <strong>"
-               },
-               {
-                 "type": "header",
-                 "content": "Color"
-               },  
-               {
-                  "type": "color",
-                  "id": "sub_title_color",
-                  "label": "Sub Title Color",
-                  "default": "#ffffff"
-               }, 
-               {
-                  "type": "color",
-                  "id": "title_color",
-                  "label": "Title Color",
-                  "default": "#ffffff"
-               }
+                {
+                    "type": "header",
+                          "content": "Product"
+                      },
+                    {
+                    "type": "collection",
+                          "id": "featured_product_handle",
+                          "label": "Select Collection"
+                      },
+                    {
+                          "type": "range",
+                          "id": "featured_product_limit_handle",
+                          "min": 2,
+                          "max": 20,
+                          "step": 1,
+                          "label": "Limit",
+                          "default": 8
+                      }
             ]
         },
         {
