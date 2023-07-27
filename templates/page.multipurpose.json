@@ -1,8 +1,22 @@
 {
-    "sections": {
-        "template": {
-            "type": "template-multipurpose"
-        }
+  "sections": {
+    "template": {
+      "type": "template-multipurpose",
+      "settings": {
+      }
     },
-    "order": ["template"]
+    "0ac0bf45-df48-4216-a3c5-9d9a5023b8d0": {
+      "type": "banner",
+      "settings": {
+        "header_style": "header_style_1",
+        "title": "Featured Collection",
+        "featured_collection": "",
+        "number_of_products_to_show": 4
+      }
+    }
+  },
+  "order": [
+    "template",
+    "0ac0bf45-df48-4216-a3c5-9d9a5023b8d0"
+  ]
 }
