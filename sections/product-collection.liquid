@@ -1,19 +1,9 @@
-<div class="flex flex-col items-center my-8">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-      {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
-        {% render 'product-card', product_product: product %}
-      {% endfor %}
-    </div>
-  </div>
-</div>
-
 <div class="section-title-wrapper section-title-border">
   {% if section.settings.title != blank %}
     <h2 class="title">{{ section.settings.title }}<img
         width="32"
         height="33"
-        src="{{ request.host }}/../images/title-icon.png"
+        src="{{ request.host }}/images/title-icon.png"
         class="attachment-full size-full wp-image-234"
         alt=""
         decoding="async"
