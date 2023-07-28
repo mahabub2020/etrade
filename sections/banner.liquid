@@ -171,68 +171,24 @@
     ],
 
 
-
     "blocks":[
-      {
-      "type":"Collection",
-      "name":"Tabbed Collection",
-        "settings":	[
-              {
-                  "type": "collection",
-                  "id": "feature_collection",
-                  "label": "Featured Collection"
-              }
-            ]
-      }
-  ],
+            {
+            "type":"Banner",
+            "name":"Tabbed Collection",
+              "settings":	[
+                        {
+                            "type": "collection",
+                            "id": "feature_collection",
+                            "label": "Featured Collection"
+                        }
+                        
 
-        "blocks":[
-        {
-            "type": "banner",
-            "name": "Banner Product",
-            
-            "settings": [
-                {
-                    "type": "header",
-                          "content": "Product"
-                      },
-                      {
-                        "type": "collection_list",
-                        "id": "popup_product_list_handle",
-                        "label": "Collections",
-                        "limit": 1
-                      },
-                    {
-                          "type": "range",
-                          "id": "featured_product_limit_handle",
-                          "min": 2,
-                          "max": 20,
-                          "step": 1,
-                          "label": "Limit",
-                          "default": 8
-                      }
-            ]
-        },
-       
-        {
-           "type": "section_background",
-           "name": "Section Background",
-           "limit": 1,
-           "settings": [
-             {
-               "type": "image_picker",
-               "id": "section_bg_image",
-               "label": "BG Image"
-             },
-             {
-               "type": "color",
-               "id": "section_bg_color",
-               "label": "BG Color",
-               "default": "#ffffff"
-             }
-           ]
-        }
-     ],
+
+                          ]
+            }
+        ],
+
+
     "presets": [
         {
           "category":"Custom Content",
@@ -241,3 +197,4 @@
     ]
 }
 {% endschema %}
+ 
