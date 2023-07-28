@@ -4,7 +4,7 @@
       "type": "product-collection",
       "settings": {
         "title": "Product Collection",
-        "btn-label": "View Al",
+        "btn-label": "View All",
         "product_collection": "all",
         "number_of_products_to_show": 4
       }
