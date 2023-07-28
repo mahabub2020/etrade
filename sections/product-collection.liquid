@@ -40,19 +40,22 @@
                 <div class="product-hover-action">
                   <ul class="cart-action">
                     <li class="add-to-cart select-option">
-                      {% assign current_variant = product.selected_or_first_available_variant %}
+                      {% comment %} {% assign current_variant = product.selected_or_first_available_variant %}
                       <a
-                        rel="nofollow"
-                        data-tips="Select options"
-                        title="Select options"
-                        href="{{ product.url }}/"
-                        data-quantity="1"
-                        data-product_id="{{ product.id }}"
-                        data-product_sku="{{ current_variant.sku }}"
-                        class="cart-btn button non-wooc-toltp product_type_variable add_to_cart_button">
-                        <i class="fal fa-shopping-cart"></i>
-                        <span>Select options</span>
-                      </a>
+                      rel="nofollow"
+                      data-tips="Select options"
+                      title="Select options"
+                      href="{{ product.url }}/"
+                      data-quantity="1"
+                      data-product_id="{{ product.id }}"
+                      data-product_sku="{{ current_variant.sku }}"
+                      class="cart-btn button non-wooc-toltp product_type_variable add_to_cart_button">
+                      <i class="fal fa-shopping-cart"></i>
+                      <span>Select options</span>
+                      </a> {% endcomment %}
+                      <form action="/cart/add" method="post">
+                        <input type="submit" value="Add to Cart">
+                      </form>
                     </li>
                   </ul>
                 </div>
