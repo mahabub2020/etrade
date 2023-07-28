@@ -53,9 +53,9 @@
                       <i class="fal fa-shopping-cart"></i>
                       <span>Select options</span>
                       </a> {% endcomment %}
-                      <form action="/cart/add" method="post">
+                      {% form 'product', product %}
                         <input type="submit" value="Add to Cart">
-                      </form>
+                      {% endform %}
                     </li>
                   </ul>
                 </div>
