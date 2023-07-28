@@ -3,7 +3,7 @@
     <h2 class="title">{{ section.settings.title }}<img
         width="32"
         height="33"
-        src="{{ '../images/title-icon.png' | asset_url }}"
+        src="{{ 'images/title-icon.png' | asset_url }}"
         class="attachment-full size-full wp-image-234"
         alt=""
         decoding="async"
@@ -45,8 +45,8 @@
                       title="Select options"
                       href="{{ product.url }}/"
                       data-quantity="1"
-                      data-product_id="1474"
-                      data-product_sku="{{ product.sku }}"
+                      data-product_id="{{ product.id }}"
+                      data-product_sku="RWC2"
                       class="cart-btn button non-wooc-toltp product_type_variable add_to_cart_button">
                       <i class="fal fa-shopping-cart"></i>
                       <span>Select options</span>
