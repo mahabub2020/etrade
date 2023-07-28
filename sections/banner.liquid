@@ -113,6 +113,8 @@
         <!-- End Slider Area -->
 
 
+
+
 {% schema %}
 {
     "name": "Banner Collection",
@@ -170,31 +172,41 @@
 
     ],
 
+    "blocks": [
+      {
+        "type": "advert",
+        "name": "Product Block",
+        "settings": [
+          {
+            "type": "product",
+          "id": "product",
+          "label": "Product-Handle"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Treat Yourself"
+          },
+          {
+            "type": "text",
+            "id": "subtext",
+            "label": "Sub Title"
+          },
+          {
+            "type": "text",
+            "id": "description",
+            "label": "Description"
+          }
+        ]
+      }
+    ],
 
-    "blocks":[
-            {
-            "type":"Banner",
-            "name":"Tabbed Collection",
-              "settings":	[
-                        {
-                            "type": "collection",
-                            "id": "feature_collection",
-                            "label": "Featured Collection"
-                        }
-                        
-
-
-                          ]
-            }
-        ],
-
-
-    "presets": [
-        {
-          "category":"Custom Content",
-          "name":"tabbed collection"
-        }
-    ]
+        "presets": [
+          {
+            "category": "Text",
+            "name": "Product Hero"
+        }]
 }
 {% endschema %}
  
