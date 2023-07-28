@@ -169,7 +169,27 @@
 
 
     ],
+
+
     "blocks":[
+            {
+            "type":"Collection",
+            "name":"Tabbed Collection",
+              "settings":	[
+                        {
+                            "type": "collection",
+                            "id": "feature_collection",
+                            "label": "Featured Collection"
+                        }
+                        
+
+
+                          ]
+            }
+        ],
+
+
+        "blocks":[
         {
             "type": "banner",
             "name": "Banner Product",
@@ -197,7 +217,6 @@
             ]
         },
        
-       
         {
            "type": "section_background",
            "name": "Section Background",
@@ -219,8 +238,16 @@
      ],
     "presets": [
         {
-            "name": "Banner Collection"
+          "category":"Custom Content",
+          "name":"tabbed collection"
         }
     ]
 }
 {% endschema %}
+
+
+"presets":[{
+  "category":"Custom Content",
+  "name":"tabbed collection"
+
+}]
