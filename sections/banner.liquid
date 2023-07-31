@@ -28,7 +28,7 @@
 
                           {% for block in section.blocks %}  
                           {% case block.type %}
-                          {% when 'product' %}
+                          {% when 'banner' %}
                               {%- assign product = all_products[block.settings.popup_product] -%}
 
                               <div class="banner-product">
@@ -158,7 +158,7 @@
 
     "blocks": [
       {
-        "type": "Banner",
+        "type": "banner",
         "name": "Product Block",
         "settings": [
           {
