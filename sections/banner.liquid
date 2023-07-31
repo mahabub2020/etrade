@@ -1,30 +1,3 @@
-        
-       
-         {% for block in section.blocks %}
-          {%- assign collection = collections[block.settings.collection] -%}
-      
-          <a href="{{ collection.url | default: "#" }}" class="collection-list-item" {{ block.shopify_attributes }}>
-            {% if collection.image != blank or collection.products.first != blank %}
-              {%- assign image_object = collection.image | default: collection.products.first.featured_image -%}
-              <div class="collection-list__image">
-                {% include 'responsive-image' with
-                  image: image_object,
-                  max_width: 480,
-                  max_height: 480
-                %}
-              </div>
-            {% elsif collection == empty %}
-              {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
-              {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg placeholder-svg--small' }}
-            {% endif %}
-      
-            {%- assign default_label = 'homepage.onboarding.collection_title' | t -%}
-            <p>{{ collection.title | default: default_label }}</p>
-          </a>
-        {% endfor %}
-
-
-        
         <!-- Start Slider Area -->
         <div class="axil-main-slider-area main-slider-style-4">
             <div class="container">
@@ -53,27 +26,27 @@
                             >
                             </div>
 
-
-                            <div class="banner-product">
-                                <div class="product-details">
-                                    <h4 class="title"><a href="single-product-8.html">Ladies Stylish Sunglasses</a></h4>
-                                    <div class="price">$15.22 - $15.22</div>
-                                    <div class="product-rating">
-                                        <span class="icon">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </span>
-                                        <span class="rating-number">6,400</span>
-                                    </div>
-                                </div>
-                                <div class="plus-icon">
-                                    <i class="far fa-plus"></i>
-                                </div>
-                            </div>
-
+                            {% for block in section.blocks %}
+                              <div class="banner-product">
+                                  <div class="product-details">
+                                      <h4 class="title"><a href="single-product-8.html">Ladies Stylish Sunglasses</a></h4>
+                                      <div class="price">$15.22 - $15.22</div>
+                                      <div class="product-rating">
+                                          <span class="icon">
+                                              <i class="fas fa-star"></i>
+                                              <i class="fas fa-star"></i>
+                                              <i class="fas fa-star"></i>
+                                              <i class="fas fa-star"></i>
+                                              <i class="fas fa-star"></i>
+                                          </span>
+                                          <span class="rating-number">6,400</span>
+                                      </div>
+                                  </div>
+                                  <div class="plus-icon">
+                                      <i class="far fa-plus"></i>
+                                  </div>
+                              </div>
+                          {% endfor %}
 
                         {%- endif -%}
                             <ul class="shape-group">
@@ -179,37 +152,76 @@
 
     "blocks": [
       {
-        "type": "jkbjkjk",
+        "type": "Banner",
         "name": "Product Block",
         "settings": [
           {
-            "type": "product",
+          "type": "product",
           "id": "product",
           "label": "Product-Handle"
+          }, 
+          {
+            "type": "select",
+            "id": "pos_x_type",
+            "label": "Horizontal Position",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
           },
           {
-            "type": "text",
-            "id": "title",
-            "label": "Title",
-            "default": "Treat Yourself"
+            "type": "range",
+            "id": "pos_x",
+            "min": 1,
+            "max": 100,
+            "step": 1,
+            "label": "Spacing",
+            "unit": "px",
+            "default": 1
           },
           {
-            "type": "text",
-            "id": "subtext",
-            "label": "Sub Title"
+            "type": "select",
+            "id": "pos_y_type",
+            "label": "Horizontal Position",
+            "default": "top",
+            "options": [
+              {
+                "value": "top",
+                "label": "Top"
+              },
+              {
+                "value": "bottom",
+                "label": "Bottom"
+              }
+            ]
           },
           {
-            "type": "text",
-            "id": "description",
-            "label": "Description"
+            "type": "range",
+            "id": "pos_y",
+            "min": 1,
+            "max": 100,
+            "step": 1,
+            "label": "Spacing",
+            "unit": "px",
+            "default": 1
           }
+
+
+          
         ]
       }
     ],
 
         "presets": [
           {
-            "category": "Text",
+            "category": "Banner",
             "name": "Product Hero"
         }]
 }
