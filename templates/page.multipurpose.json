@@ -8,18 +8,18 @@
     "1533261a-8db3-4e69-ab1a-bf9afdd28691": {
       "type": "banner",
       "blocks": {
-        "e06b6faa-04e6-4e73-8158-5ac72742a71e": {
-          "type": "Banner",
+        "d391feb0-bd3f-4a45-aa90-0feeba5bf376": {
+          "type": "banner",
           "settings": {
-            "popup_product": "kalrez®-spectrum™-6375",
+            "popup_product": "product-and-any-variants-malrez®-spectrum",
             "pos_x_type": "left",
             "pos_x": 1,
             "pos_y_type": "top",
             "pos_y": 1
           }
         },
-        "cce9ecc5-3db2-4e87-a3bb-1aaa41004248": {
-          "type": "Banner",
+        "2e9ebb0d-a1ea-4e7b-a85c-aa319dd83175": {
+          "type": "banner",
           "settings": {
             "popup_product": "kalrez®-spectrum™-6376",
             "pos_x_type": "left",
@@ -30,8 +30,8 @@
         }
       },
       "block_order": [
-        "e06b6faa-04e6-4e73-8158-5ac72742a71e",
-        "cce9ecc5-3db2-4e87-a3bb-1aaa41004248"
+        "d391feb0-bd3f-4a45-aa90-0feeba5bf376",
+        "2e9ebb0d-a1ea-4e7b-a85c-aa319dd83175"
       ],
       "settings": {
         "header_style": "header_style_1",
