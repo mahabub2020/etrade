@@ -26,8 +26,11 @@
                             >
                             </div>
 
-                            {% for block in section.blocks %}
+                          {% for block in section.blocks %}  
+                          {% case block.type %}
+                          {% when 'product' %}
                               {%- assign product = all_products[block.settings.popup_product] -%}
+
                               <div class="banner-product">
                                   <div class="product-details">
                                       <h4 class="title"><a href="single-product-8.html">{{ product.title }}</a></h4>
@@ -47,8 +50,9 @@
                                       <i class="far fa-plus"></i>
                                   </div>
                               </div>
-                          {% endfor %}
-                          
+                      
+                        {% endcase %} 
+                      {% endfor %}
 
                         {%- endif -%}
                             <ul class="shape-group">
