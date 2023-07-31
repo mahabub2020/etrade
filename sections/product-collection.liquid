@@ -53,13 +53,12 @@
                       <i class="fal fa-shopping-cart"></i>
                       <span>Select options</span>
                       </a> {% endcomment %}
-                      {% form 'product', product %}
-                        <select name="id">
-                          {% for variant in product.variants %}
-                            <option value="{{ variant.id }}">{{ variant.title }}</option>
-                          {% endfor %}
-                        </select>
-                        <button type="submit">Add to Cart</button>
+                      {% form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' %}
+                        <input
+                          type="hidden"
+                          name="id"
+                          value="{{ product.selected_or_first_available_variant.id }}">
+                        <input type="submit" value="Add to Cart">
                       {% endform %}
                     </li>
                   </ul>
