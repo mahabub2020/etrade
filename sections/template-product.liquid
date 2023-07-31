@@ -90,6 +90,11 @@
             </div>
 
             {% form 'product', product %}
+              <select name="id">
+                {% for variant in product.varinats %}
+                  <option value="{{ variant.id }}">{{ variant.title }}</option>
+                {% endfor %}
+              </select>
               <button type="submit">Add to Cart</button>
             {% endform %}
 
