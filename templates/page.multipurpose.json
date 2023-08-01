@@ -14,9 +14,9 @@
             "popup_product": "product-and-any-variants-malrez®-spectrum",
             "plus_icon_active": true,
             "pos_x_type": "right",
-            "pos_x": 26,
+            "pos_x": 55,
             "pos_y_type": "bottom",
-            "pos_y": 1
+            "pos_y": 46
           }
         },
         "2e9ebb0d-a1ea-4e7b-a85c-aa319dd83175": {
@@ -25,9 +25,9 @@
             "popup_product": "kalrez®-spectrum™-6376",
             "plus_icon_active": false,
             "pos_x_type": "left",
-            "pos_x": 1,
+            "pos_x": 25,
             "pos_y_type": "top",
-            "pos_y": 1
+            "pos_y": 54
           }
         }
       },
