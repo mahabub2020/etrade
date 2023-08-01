@@ -1,70 +1,92 @@
+<div class="wooc-mini-cart-container cart-dropdown open">
+  <div class="cart-content-wrap">
+    <div class="cart-header">
+      <h2 class="header-title">Cart review.</h2>
+      <button class="close cart-close sidebar-close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="cart-body-wrp" id="etrade-content-cart-template">
+      <div class="return-to-shop text-center pt--80">
+        <h5 class="woocommerce-mini-cart__empty-message">No products in the cart.</h5>
+        <a href="https://dev.axilthemes.com/themes/etrade/shop/" class="axil-btn checkout-btn">Return to shop</a>
+      </div>
+
+    </div>
+  </div>
+</div>
 <header class="header axil-header header-style-1">
   {% comment %} {% include 'header-top' %} {% endcomment %}
   {% include 'header-mid' %}
   <!-- Start Mainmenu Area  -->
   <div id="axil-sticky-placeholder"></div>
   <div class="axil-mainmenu">
-      <div class="container">
-          <div class="header-navbar">
-              <div class="header-brand">
-                {% include 'header-logo' %}
+    <div class="container">
+      <div class="header-navbar">
+        <div class="header-brand">
+          {% include 'header-logo' %}
+        </div>
+        <div class="header-main-nav">
+          {% include 'main-menu-1' %}
+        </div>
+        <div class="header-action">
+          <ul class="action-list">
+            <li class="axil-search">
+              <a
+                href="javascript:void(0)"
+                class="header-search-icon"
+                title="Search">
+                <i class="fal fa-search"></i>
+              </a>
+            </li>
+            <li class="wishlist">
+              <a href="wishlist.html">
+                <i class="fal fa-heart"></i>
+              </a>
+            </li>
+            <li class="shopping-cart">
+              <a href="#" class="cart-dropdown-btn">
+                <span class="cart-count">3</span>
+                <i class="fal fa-shopping-cart"></i>
+              </a>
+            </li>
+            <li class="my-account">
+              <a href="javascript:void(0)">
+                <i class="flaticon-person"></i>
+              </a>
+              <div class="my-account-dropdown">
+                <span class="title">QUICKLINKS</span>
+                <ul>
+                  <li>
+                    <a href="my-account.html">My Account</a>
+                  </li>
+                  <li>
+                    <a href="#">Initiate return</a>
+                  </li>
+                  <li>
+                    <a href="#">Support</a>
+                  </li>
+                  <li>
+                    <a href="#">Language</a>
+                  </li>
+                </ul>
+                <div class="login-btn">
+                  <a href="sign-in.html" class="axil-btn btn-bg-primary">Login</a>
+                </div>
+                <div class="reg-footer text-center">No account yet?
+                  <a href="sign-up.html" class="btn-link">REGISTER HERE.</a>
+                </div>
               </div>
-              <div class="header-main-nav">
-                {% include 'main-menu-1' %}
-              </div>
-              <div class="header-action">
-                  <ul class="action-list">
-                      <li class="axil-search">
-                          <a href="javascript:void(0)" class="header-search-icon" title="Search">
-                            <i class="fal fa-search"></i>
-                          </a>
-                      </li>
-                      <li class="wishlist">
-                          <a href="wishlist.html">
-                            <i class="fal fa-heart"></i> 
-                          </a>
-                      </li>
-                      <li class="shopping-cart">
-                          <a href="#" class="cart-dropdown-btn">
-                              <span class="cart-count">3</span>
-                              <i class="fal fa-shopping-cart"></i>
-                          </a>
-                      </li>
-                      <li class="my-account">
-                          <a href="javascript:void(0)">
-                              <i class="flaticon-person"></i>
-                          </a>
-                          <div class="my-account-dropdown">
-                              <span class="title">QUICKLINKS</span>
-                              <ul>
-                                  <li>
-                                      <a href="my-account.html">My Account</a>
-                                  </li>
-                                  <li>
-                                      <a href="#">Initiate return</a>
-                                  </li>
-                                  <li>
-                                      <a href="#">Support</a>
-                                  </li>
-                                  <li>
-                                      <a href="#">Language</a>
-                                  </li>
-                              </ul>
-                              <div class="login-btn">
-                                  <a href="sign-in.html" class="axil-btn btn-bg-primary">Login</a>
-                              </div>
-                              <div class="reg-footer text-center">No account yet? <a href="sign-up.html" class="btn-link">REGISTER HERE.</a></div>
-                          </div>
-                      </li>
-                      <li class="axil-mobile-toggle">
-                          <button class="menu-btn mobile-nav-toggler">
-                              <i class="flaticon-menu-2"></i>
-                          </button>
-                      </li>
-                  </ul>
-              </div>
-          </div>
+            </li>
+            <li class="axil-mobile-toggle">
+              <button class="menu-btn mobile-nav-toggler">
+                <i class="flaticon-menu-2"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
+    </div>
   </div>
   <!-- End Mainmenu Area -->
 </header>
@@ -73,811 +95,669 @@
   {
     "name": "Header",
     "settings": [
-		{
-          "type": "header",
-          "content": "Header Style"
-        },
-        {
-            "type": "radio",
-            "id": "header_style",
-            "label": "Header Style",
-            "options":[
-              {
-                  "value":"header_style_1",
-                  "label": "Style 1"
-              },
-              {
-                  "value":"header_style_2",
-                  "label": "Style 2"
-              },
-              {
-                  "value":"header_style_3",
-                  "label": "Style 3"
-              },
-              {
-                  "value":"header_style_4",
-                  "label": "Style 4"
-              },
-              {
-                  "value":"header_style_5",
-                  "label": "Style 5"
-              },
-              {
-                  "value":"header_style_6",
-                  "label": "Style 6"
-              },
-              {
-                  "value":"header_style_8",
-                  "label": "Black Firday Landing"
-              }
-            ],
+      {
+        "type": "header",
+        "content": "Header Style"
+      },
+      {
+        "type": "radio",
+        "id": "header_style",
+        "label": "Header Style",
+        "options": [
+          {
+            "value": "header_style_1",
+            "label": "Style 1"
+          },
+          {
+            "value": "header_style_2",
+            "label": "Style 2"
+          },
+          {
+            "value": "header_style_3",
+            "label": "Style 3"
+          },
+          {
+            "value": "header_style_4",
+            "label": "Style 4"
+          }, {
+            "value": "header_style_5",
+            "label": "Style 5"
+          }, {
+            "value": "header_style_6",
+            "label": "Style 6"
+          }, {
+            "value": "header_style_8",
+            "label": "Black Firday Landing"
+          }
+        ],
 
-           "default": "header_style_1"
-        },
+        "default": "header_style_1"
+      },
 
-        {
-          "type": "checkbox",
-          "id": "header_languages_enable",
-          "label": "Languages Enable",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "header_currency_enable",
-          "label": "Currency Enable",
-          "default": true
-        },
-
-        {
-          "type": "link_list",
-          "id": "header_top_menu",
-          "label": "Select Menu"
-        },
-
-	  	{
-          "type": "header",
-          "content": "Header Top"
-        },
-
-        {
-          "type": "text",
-          "id": "header_top_center",
-          "label": "Header Top Cente ",
-          "default": "CHRISTMAS SALE - 25% OFF <span>added at the checkout</span>"
-        },
-        {
-          "type": "header",
-          "content": "Section Padding"
-        },
-		{
-          "type": "header",
-          "content": "Large/Desktop Device"
-		},
-        {
-          "type": "text",
-          "id": "section_padding_top_1",
-          "label": "Section Padding Top",
-          "default": "2" ,
-          "info": "Defined in rem. Do not add the 'pixels' unit."
-        },
-        {
-          "type": "text",
-          "id": "section_padding_bottom_1",
-          "label": "Section Padding Bottom",
-          "default": "2" ,
-          "info": "Defined in rem. Do not add the 'pixels' unit."
-        },
-        {
-          "type": "header",
-          "content": "Tablet Device"
-        },
-        {
-          "type": "text",
-          "id": "section_padding_top_md_1",
-          "label": "Section Padding Top",
-          "default": "2" ,
-          "info": "Defined in rem. Do not add the 'pixels' unit."
-        },
-        {
-          "type": "text",
-          "id": "section_padding_bottom_md_1",
-          "label": "Section Padding Bottom",
-          "default": "2" ,
-          "info": "Defined in rem. Do not add the 'pixels' unit."
-        },
-        {
-          "type": "header",
-          "content": "Mobile Device"
-        },
-        {
-          "type": "text",
-          "id": "section_padding_top_xs_1",
-          "label": "Section Padding Top",
-          "default": "2" ,
-          "info": "Defined in rem. Do not add the 'pixels' unit."
-        },
-        {
-          "type": "text",
-          "id": "section_padding_bottom_xs_1",
-          "label": "Section Padding Bottom",
-          "default": "2" ,
-          "info": "Defined in rem. Do not add the 'pixels' unit."
-        },
-		{
-          "type": "header",
-          "content": "Sticky Header"
-        },
-        {
-          "type": "header",
-          "content": "Section Padding"
-        },
-		{
-          "type": "header",
-          "content": "Large/Desktop Device"
-		},
-        {
-          "type": "text",
-          "id": "section_padding_top_4",
-          "label": "Section Padding Top",
-          "default": "2" ,
-          "info": "Defined in rem. Do not add the 'pixels' unit."
-        },
-        {
-          "type": "text",
-          "id": "section_padding_bottom_4",
-          "label": "Section Padding Bottom",
-          "default": "2" ,
-          "info": "Defined in rem. Do not add the 'pixels' unit."
-        },
-        {
-          "type": "header",
-          "content": "Tablet Device"
-        },
-        {
-          "type": "text",
-          "id": "section_padding_top_md_4",
-          "label": "Section Padding Top",
-          "default": "2" ,
-          "info": "Defined in rem. Do not add the 'pixels' unit."
-        },
-        {
-          "type": "text",
-          "id": "section_padding_bottom_md_4",
-          "label": "Section Padding Bottom",
-          "default": "2" ,
-          "info": "Defined in rem. Do not add the 'pixels' unit."
-        },
-        {
-          "type": "header",
-          "content": "Mobile Device"
-        },
-        {
-          "type": "text",
-          "id": "section_padding_top_xs_4",
-          "label": "Section Padding Top",
-          "default": "2" ,
-          "info": "Defined in rem. Do not add the 'pixels' unit."
-        },
-        {
-          "type": "text",
-          "id": "section_padding_bottom_xs_4",
-          "label": "Section Padding Bottom",
-          "default": "2" ,
-          "info": "Defined in rem. Do not add the 'pixels' unit."
-        },
-		{
-          "type": "header",
-          "content": "Wellcome Text"
-        },
-		    {
-          "type": "checkbox",
-          "id": "welcome_text_enable",
-          "label": "Welcome Text Enable",
-          "default": true
-        },
-		{
-          "type": "text",
-          "id": "wellcome_customer",
-          "label": "Wellcome Cuntomer Text Title",
-          "default": "Welcome to Store"
-        },
-        {
-          "type": "text",
-          "id": "wellcome_content",
-          "label": "Wellcome Text Title",
-          "default": "Welcome to Store!"
-        },
-		{
-          "type": "header",
-          "content": "Currency"
-        },
-        {
-          "type": "text",
-          "id": "currency_title",
-          "label": "Currency Title",
-          "default": "Currency:"
-        },
-		{
-          "type": "header",
-          "content": "Contact"
-        },
-		{
-          "type": "checkbox",
-          "id": "header_contact_enable",
-          "label": "Contact Enable",
-          "default": true
-        },
-		{
-          "type": "header",
-          "content": "Logo"
-        },
-		{
-          "type": "image_picker",
-          "id": "logo",
-          "label": "Logo"
-        },
-		{
-          "type": "header",
-          "content": "Sticky Logo"
-        },
-		{
-          "type": "image_picker",
-          "id": "logo_sticky",
-          "label": "Logo"
-        },
-		{
-          "type": "range",
-          "id": "logo_width",
-          "label": "Custom logo width",
-          "min": 50,
-          "max": 300,
-          "step": 5,
-          "unit": "px",
-          "default": 150
-        },
-		{
-          "type": "header",
-          "content": "Account"
-        },
-		{
-          "type": "checkbox",
-          "id": "account_enable",
-          "label": "Account Enable",
-          "default": true
-        },
-		{
-          "type": "header",
-          "content": "Contact 1"
-        },
-		{
-          "type": "text",
-          "id": "hotline_title",
-          "label": "Hotline Title",
-		  "default": "24/7 HOTLINE"
-        },
-		{
-          "type": "text",
-          "id": "contact_number",
-          "label": "Contact Number",
-		  "default": "(+85) 246 888 9889"
-        },
-		{
-          "type": "header",
-          "content": "Contact 2"
-        },
-		{
-          "type": "text",
-          "id": "location_title",
-          "label": "Location Title",
-		  "default": "LOCATION"
-        },
-		{
-          "type": "text",
-          "id": "location_space",
-          "label": "Location Namer",
-		  "default": "United Kingdom"
-        },
-		{
-          "type": "header",
-          "content": "Log in/Log out Title"
-        },
-  		{
-          "type": "text",
-          "id": "signin_title",
-          "label": "Log In Title",
-          "default": "Login"
-        },
-  		{
-          "type": "text",
-          "id": "signout_title",
-          "label": "Log Out Title",
-          "default": "Logout"
-        },
-        {
-          "type": "link_list",
-          "id": "qwe_header_top_menu",
-          "label": "Select Menu"
-        },
-		{
-          "type": "header",
-          "content": "Mini Cart"
-        },
-		{
-          "type": "checkbox",
-          "id": "mini_cart_enable",
-          "label": "Mini Cart Enable",
-          "default": true
-        },
-		{
-          "type": "text",
-          "id": "cart_title",
-          "label": "Item Title",
-		  "default": "Shopping Cart"
-        },
-		{
-          "type": "text",
-          "id": "view_cart_title",
-          "label": "View Cart Title",
-		  "default": "View Cart"
-        },
-		{
-          "type": "text",
-          "id": "checkout_title",
-          "label": "Checkout Title",
-		  "default": "Checkout"
-        },
-		{
-          "type": "header",
-          "content": "Search"
-        },
-		{
-          "type": "checkbox",
-          "id": "search_enable",
-          "label": "Search Enable",
-          "default": true
-        },
-		{
-          "type": "text",
-          "id": "search_title",
-          "label": "Search Title",
-		  "default": "Start typing and press Enter to search"
-        },
-		{
-          "type": "header",
-          "content": "Search 2"
-        },
-		{
-          "type": "checkbox",
-          "id": "search_enable_2",
-          "label": "Search Enable",
-          "default": true
-        },
-		{
-          "type": "header",
-          "content": "Sidebar Menu"
-        },
-		{
-          "type": "checkbox",
-          "id": "side_menu_enable",
-          "label": "Side Menu Enable",
-          "default": true
-        },
-		{
-          "type": "header",
-          "content": "Menu"
-        },
-		{
-          "type": "checkbox",
-          "id": "sideber_nemu_enable",
-          "label": "Menu Enable",
-          "default": true
-        },
-        {
-          "type": "link_list",
-          "id": "sidebar_menu",
-          "label": "Select Menu"
-        },
-		{
-          "type": "header",
-          "content": "Payment"
-        },
-		{
-          "type": "checkbox",
-          "id": "payment_enable",
-          "label": "Payment Enable",
-          "default": true
-        },
-        {
-          "type": "image_picker",
-          "id": "payment_logo",
-          "label": "Payment Logo",
-          "info": "Recommended Size: 470 x 33px"
-        },
-		{
-          "type": "text",
-          "id": "payment_description",
-          "label": "Payment Description",
-		  "default": "Pellentesque mollis nec orci id tincidunt. Sed mollis risus eu nisi aliquet, sit amet fermentum justo dapibus."
-        },
-		{
-          "type": "header",
-          "content": "Contact"
-        },
-		{
-          "type": "checkbox",
-          "id": "contact_enable",
-          "label": "Contact Enable",
-          "default": true
-        },
-		{
-          "type": "header",
-          "content": "Phone Number"
-        },
-		{
-          "type": "text",
-          "id": "phone_number",
-          "label": "Phone Number",
-		  "default": "(+612) 2531 5600"
-        },
-		{
-          "type": "header",
-          "content": "Email"
-        },
-		{
-          "type": "text",
-          "id": "email_id",
-          "label": "Email Id",
-		  "default": "info@la-studioweb.com"
-        },
-		{
-          "type": "header",
-          "content": "Address"
-        },
-		{
-          "type": "text",
-          "id": "address",
-          "label": "Address",
-		  "default": "PO Box 1622 Colins Street West"
-        },
-		{
-          "type": "header",
-          "content": "Google Map"
-        },
-		{
-          "type": "checkbox",
-          "id": "google_map_enable",
-          "label": "Google Map Enable",
-          "default": true
-        },
-		{
-          "type": "text",
-          "id": "google_map_title",
-          "label": "Title",
-		  "default": "Google Maps"
-        },
-		{
-          "type": "url",
-          "id": "google_map_url",
-          "label": "URL"
-        },
-		{
-          "type": "header",
-          "content": "Social Icon"
-        },
-		{
-          "type": "checkbox",
-          "id": "social_icon_enable",
-          "label": "Social Icon Enable",
-          "default": true
-        },
-		{
-          "type": "header",
-          "content": "Icon With Link"
-        },
-        {
-          "type": "text",
-          "id": "social_icon_1_name",
-          "label": "Social Icon Name",
-          "default": "twitter",
-          "info": "Fontawesome Icon [See Icon](https:\/\/fontawesome.com\/v4.7.0\/icons\/)"
-        },
-        {
-          "type": "url",
-          "id": "social_icon_1_url",
-          "label": "Link"
-        },
-        {
-          "type": "header",
-          "content": "Icon With Link"
-        },
-        {
-          "type": "text",
-          "id": "social_icon_2_name",
-          "label": "Social Icon Name",
-          "default": "google-plus",
-          "info": "Fontawesome Icon [See Icon](https:\/\/fontawesome.com\/v4.7.0\/icons\/)"
-        },
-        {
-          "type": "url",
-          "id": "social_icon_2_url",
-          "label": "Link"
-        },
-        {
-          "type": "header",
-          "content": "Icon With Link"
-        },
-        {
-          "type": "text",
-          "id": "social_icon_3_name",
-          "label": "Social Icon Name",
-          "default": "facebook",
-          "info": "Fontawesome Icon [See Icon](https:\/\/fontawesome.com\/v4.7.0\/icons\/)"
-        },
-        {
-          "type": "url",
-          "id": "social_icon_3_url",
-          "label": "Link"
-        },
-        {
-          "type": "header",
-          "content": "Icon With Link"
-        },
-        {
-          "type": "text",
-          "id": "social_icon_4_name",
-          "label": "Social Icon Name",
-          "default": "youtube",
-          "info": "Fontawesome Icon [See Icon](https:\/\/fontawesome.com\/v4.7.0\/icons\/)"
-        },
-        {
-          "type": "url",
-          "id": "social_icon_4_url",
-          "label": "Link"
-        },
-        {
-          "type": "header",
-          "content": "Icon With Link"
-        },
-        {
-          "type": "text",
-          "id": "social_icon_5_name",
-          "label": "Social Icon Name",
-          "default": "instagram",
-          "info": "Fontawesome Icon [See Icon](https:\/\/fontawesome.com\/v4.7.0\/icons\/)"
-        },
-        {
-          "type": "url",
-          "id": "social_icon_5_url",
-          "label": "Link"
-        },
-        {
-          "type": "header",
-          "content": "Copy Right Area"
-        },
-		{
-          "type": "checkbox",
-          "id": "copy_right_header_enable",
-          "label": "Copyright Enable",
-          "default": true
-        },
-		{
-          "type": "richtext",
-          "id": "copy_ritht_text_header",
-          "label": "CopyRight Text",
-		  "default": "<p>Copyright © 99 Shopify All Right Reserved.</p>"
-		},
-        {
-           "type": "header",
-           "content": "Color"
-        }, 
-        {
-           "type": "color",
-           "id": "header_bg_color",
-           "label": "Header BG Color",
-           "default": "#fff"
-        }, 
-        {
-           "type": "color",
-           "id": "header_bg_color_2",
-           "label": "Header Sticky BG Color",
-           "default": "#fff"
-        },
-        {
-           "type": "color",
-           "id": "transparent_header_color",
-           "label": "Transparent Menu Color",
-           "default": "#fff"
-        },
-        {
-           "type": "color",
-           "id": "transparent_header_hover_color",
-           "label": "Transparent Menu Hover Color",
-           "default": "#cf987e"
-        },
-        {
-           "type": "color",
-           "id": "transparent_icon_color",
-           "label": "Transparent Icon Color",
-           "default": "#fff"
-        },
-        {
-           "type": "color",
-           "id": "transparent_icon_hover_color",
-           "label": "Transparent Icon Hover Color",
-           "default": "#cf987e"
-        },
-        {
-           "type": "color",
-           "id": "sticky_header_color",
-           "label": "Sticky Menu Color",
-           "default": "#282828"
-        },
-        {
-           "type": "color",
-           "id": "sticky_header_hover_color",
-           "label": "Sticky Menu Hover Color",
-           "default": "#cf987e"
-        },
-        {
-           "type": "color",
-           "id": "sticky_icon_color",
-           "label": "Sticky Icon Color",
-           "default": "#282828"
-        },
-        {
-           "type": "color",
-           "id": "sticky_icon_hover_color",
-           "label": "Sticky Icon Hover Color",
-           "default": "#cf987e"
-        },
-        {
-           "type": "color",
-           "id": "menu_color",
-           "label": "Menu Color",
-           "default": "#282828"
-        },
-        {
-           "type": "color",
-           "id": "menu_hover_color",
-           "label": "Menu Hover Color",
-           "default": "#cf987e"
-        },
-        {
-           "type": "color",
-           "id": "sub_menu_color",
-           "label": "Sub Menu Color",
-           "default": "#8a8a8a"
-        },
-        {
-           "type": "color",
-           "id": "sub_menu_hover_color",
-           "label": "Sub Menu Hover Color",
-           "default": "#cf987e"
-        },
-        {
-           "type": "color",
-           "id": "mega_menu_title_color",
-           "label": "Mega Menu Title Color",
-           "default": "#282828"
-        },
-        {
-           "type": "color",
-           "id": "mega_menu_title_hover_color",
-           "label": "Mega Menu Title Hover Color",
-           "default": "#cf987e"
-        },
-        {
-           "type": "color",
-           "id": "mega_menu_color",
-           "label": "Mega Menu Color",
-           "default": "#8a8a8a"
-        },
-        {
-           "type": "color",
-           "id": "mega_menu_hover_color",
-           "label": "Mega Menu Hover Color",
-           "default": "#cf987e"
-        },
-        {
-           "type": "color",
-           "id": "icon_color",
-           "label": "Icon Color",
-           "default": "#282828"
-        },
-        {
-           "type": "color",
-           "id": "icon_hover_color",
-           "label": "Icon Hover Color",
-           "default": "#cf987e"
-        },
-        {
-           "type": "color",
-           "id": "social_icon_color",
-           "label": "Social Icon Color",
-           "default": "#282828"
-        },
-        {
-           "type": "color",
-           "id": "social_icon_hover_color",
-           "label": "Social Icon Hover Color",
-           "default": "#cf987e"
-        },
-        {
-           "type": "color",
-           "id": "contact_title_color",
-           "label": "Contact Title Color",
-           "default": "#8a8a8a"
-        },
-        {
-           "type": "color",
-           "id": "contact_description_color",
-           "label": "Contact Description Color",
-           "default": "#282828"
-        },
-        {
-           "type": "color",
-           "id": "wellcome_text_color",
-           "label": "Wellcome Text Color",
-           "default": "#8a8a8a"
-        },
-        {
-           "type": "color",
-           "id": "button_search_color",
-           "label": "Button Search Color",
-           "default": "#000"
-        },
-        {
-           "type": "color",
-           "id": "button_search_hover_color",
-           "label": "Button Search Hover Color",
-           "default": "#cf987e"
-        },
-        {
-           "type": "color",
-           "id": "currency_title_color",
-           "label": "Currency Color",
-           "default": "#8a8a8a"
-        },
-        {
-           "type": "color",
-           "id": "currency_submenu_color",
-           "label": "Currency Submenu Color",
-           "default": "#8a8a8a"
-        },
-        {
-           "type": "color",
-           "id": "copy_right_color",
-           "label": "Copy Right Color",
-           "default": "#8a8a8a"
-        },
-        {
-           "type": "header",
-           "content": "Mobile Menu Color"
-        },
-        {
-           "type": "color",
-           "id": "mobile_icon_color",
-           "label": "Mobile Icon Color",
-           "default": "#8a8a8a"
-        },
-        {
-           "type": "color",
-           "id": "mobile_icon_hover_color",
-           "label": "Mobile Icon Hover Color",
-           "default": "#cf987e"
-        },
-        {
-           "type": "color",
-           "id": "mobile_menu_color",
-           "label": "Mobile Menu Color",
-           "default": "#282828"
-        },
-        {
-           "type": "color",
-           "id": "mobile_menu_hover_color",
-           "label": "Mobile Menu Hover Color",
-           "default": "#cf987e"
-        }
-	]
+      {
+        "type": "checkbox",
+        "id": "header_languages_enable",
+        "label": "Languages Enable",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "header_currency_enable",
+        "label": "Currency Enable",
+        "default": true
+      }, {
+        "type": "link_list",
+        "id": "header_top_menu",
+        "label": "Select Menu"
+      }, {
+        "type": "header",
+        "content": "Header Top"
+      }, {
+        "type": "text",
+        "id": "header_top_center",
+        "label": "Header Top Cente ",
+        "default": "CHRISTMAS SALE - 25% OFF <span>added at the checkout</span>"
+      }, {
+        "type": "header",
+        "content": "Section Padding"
+      }, {
+        "type": "header",
+        "content": "Large/Desktop Device"
+      }, {
+        "type": "text",
+        "id": "section_padding_top_1",
+        "label": "Section Padding Top",
+        "default": "2",
+        "info": "Defined in rem. Do not add the 'pixels' unit."
+      }, {
+        "type": "text",
+        "id": "section_padding_bottom_1",
+        "label": "Section Padding Bottom",
+        "default": "2",
+        "info": "Defined in rem. Do not add the 'pixels' unit."
+      }, {
+        "type": "header",
+        "content": "Tablet Device"
+      }, {
+        "type": "text",
+        "id": "section_padding_top_md_1",
+        "label": "Section Padding Top",
+        "default": "2",
+        "info": "Defined in rem. Do not add the 'pixels' unit."
+      }, {
+        "type": "text",
+        "id": "section_padding_bottom_md_1",
+        "label": "Section Padding Bottom",
+        "default": "2",
+        "info": "Defined in rem. Do not add the 'pixels' unit."
+      }, {
+        "type": "header",
+        "content": "Mobile Device"
+      }, {
+        "type": "text",
+        "id": "section_padding_top_xs_1",
+        "label": "Section Padding Top",
+        "default": "2",
+        "info": "Defined in rem. Do not add the 'pixels' unit."
+      }, {
+        "type": "text",
+        "id": "section_padding_bottom_xs_1",
+        "label": "Section Padding Bottom",
+        "default": "2",
+        "info": "Defined in rem. Do not add the 'pixels' unit."
+      }, {
+        "type": "header",
+        "content": "Sticky Header"
+      }, {
+        "type": "header",
+        "content": "Section Padding"
+      }, {
+        "type": "header",
+        "content": "Large/Desktop Device"
+      }, {
+        "type": "text",
+        "id": "section_padding_top_4",
+        "label": "Section Padding Top",
+        "default": "2",
+        "info": "Defined in rem. Do not add the 'pixels' unit."
+      }, {
+        "type": "text",
+        "id": "section_padding_bottom_4",
+        "label": "Section Padding Bottom",
+        "default": "2",
+        "info": "Defined in rem. Do not add the 'pixels' unit."
+      }, {
+        "type": "header",
+        "content": "Tablet Device"
+      }, {
+        "type": "text",
+        "id": "section_padding_top_md_4",
+        "label": "Section Padding Top",
+        "default": "2",
+        "info": "Defined in rem. Do not add the 'pixels' unit."
+      }, {
+        "type": "text",
+        "id": "section_padding_bottom_md_4",
+        "label": "Section Padding Bottom",
+        "default": "2",
+        "info": "Defined in rem. Do not add the 'pixels' unit."
+      }, {
+        "type": "header",
+        "content": "Mobile Device"
+      }, {
+        "type": "text",
+        "id": "section_padding_top_xs_4",
+        "label": "Section Padding Top",
+        "default": "2",
+        "info": "Defined in rem. Do not add the 'pixels' unit."
+      }, {
+        "type": "text",
+        "id": "section_padding_bottom_xs_4",
+        "label": "Section Padding Bottom",
+        "default": "2",
+        "info": "Defined in rem. Do not add the 'pixels' unit."
+      }, {
+        "type": "header",
+        "content": "Wellcome Text"
+      }, {
+        "type": "checkbox",
+        "id": "welcome_text_enable",
+        "label": "Welcome Text Enable",
+        "default": true
+      }, {
+        "type": "text",
+        "id": "wellcome_customer",
+        "label": "Wellcome Cuntomer Text Title",
+        "default": "Welcome to Store"
+      }, {
+        "type": "text",
+        "id": "wellcome_content",
+        "label": "Wellcome Text Title",
+        "default": "Welcome to Store!"
+      }, {
+        "type": "header",
+        "content": "Currency"
+      }, {
+        "type": "text",
+        "id": "currency_title",
+        "label": "Currency Title",
+        "default": "Currency:"
+      }, {
+        "type": "header",
+        "content": "Contact"
+      }, {
+        "type": "checkbox",
+        "id": "header_contact_enable",
+        "label": "Contact Enable",
+        "default": true
+      }, {
+        "type": "header",
+        "content": "Logo"
+      }, {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      }, {
+        "type": "header",
+        "content": "Sticky Logo"
+      }, {
+        "type": "image_picker",
+        "id": "logo_sticky",
+        "label": "Logo"
+      }, {
+        "type": "range",
+        "id": "logo_width",
+        "label": "Custom logo width",
+        "min": 50,
+        "max": 300,
+        "step": 5,
+        "unit": "px",
+        "default": 150
+      }, {
+        "type": "header",
+        "content": "Account"
+      }, {
+        "type": "checkbox",
+        "id": "account_enable",
+        "label": "Account Enable",
+        "default": true
+      }, {
+        "type": "header",
+        "content": "Contact 1"
+      }, {
+        "type": "text",
+        "id": "hotline_title",
+        "label": "Hotline Title",
+        "default": "24/7 HOTLINE"
+      }, {
+        "type": "text",
+        "id": "contact_number",
+        "label": "Contact Number",
+        "default": "(+85) 246 888 9889"
+      }, {
+        "type": "header",
+        "content": "Contact 2"
+      }, {
+        "type": "text",
+        "id": "location_title",
+        "label": "Location Title",
+        "default": "LOCATION"
+      }, {
+        "type": "text",
+        "id": "location_space",
+        "label": "Location Namer",
+        "default": "United Kingdom"
+      }, {
+        "type": "header",
+        "content": "Log in/Log out Title"
+      }, {
+        "type": "text",
+        "id": "signin_title",
+        "label": "Log In Title",
+        "default": "Login"
+      }, {
+        "type": "text",
+        "id": "signout_title",
+        "label": "Log Out Title",
+        "default": "Logout"
+      }, {
+        "type": "link_list",
+        "id": "qwe_header_top_menu",
+        "label": "Select Menu"
+      }, {
+        "type": "header",
+        "content": "Mini Cart"
+      }, {
+        "type": "checkbox",
+        "id": "mini_cart_enable",
+        "label": "Mini Cart Enable",
+        "default": true
+      }, {
+        "type": "text",
+        "id": "cart_title",
+        "label": "Item Title",
+        "default": "Shopping Cart"
+      }, {
+        "type": "text",
+        "id": "view_cart_title",
+        "label": "View Cart Title",
+        "default": "View Cart"
+      }, {
+        "type": "text",
+        "id": "checkout_title",
+        "label": "Checkout Title",
+        "default": "Checkout"
+      }, {
+        "type": "header",
+        "content": "Search"
+      }, {
+        "type": "checkbox",
+        "id": "search_enable",
+        "label": "Search Enable",
+        "default": true
+      }, {
+        "type": "text",
+        "id": "search_title",
+        "label": "Search Title",
+        "default": "Start typing and press Enter to search"
+      }, {
+        "type": "header",
+        "content": "Search 2"
+      }, {
+        "type": "checkbox",
+        "id": "search_enable_2",
+        "label": "Search Enable",
+        "default": true
+      }, {
+        "type": "header",
+        "content": "Sidebar Menu"
+      }, {
+        "type": "checkbox",
+        "id": "side_menu_enable",
+        "label": "Side Menu Enable",
+        "default": true
+      }, {
+        "type": "header",
+        "content": "Menu"
+      }, {
+        "type": "checkbox",
+        "id": "sideber_nemu_enable",
+        "label": "Menu Enable",
+        "default": true
+      }, {
+        "type": "link_list",
+        "id": "sidebar_menu",
+        "label": "Select Menu"
+      }, {
+        "type": "header",
+        "content": "Payment"
+      }, {
+        "type": "checkbox",
+        "id": "payment_enable",
+        "label": "Payment Enable",
+        "default": true
+      }, {
+        "type": "image_picker",
+        "id": "payment_logo",
+        "label": "Payment Logo",
+        "info": "Recommended Size: 470 x 33px"
+      }, {
+        "type": "text",
+        "id": "payment_description",
+        "label": "Payment Description",
+        "default": "Pellentesque mollis nec orci id tincidunt. Sed mollis risus eu nisi aliquet, sit amet fermentum justo dapibus."
+      }, {
+        "type": "header",
+        "content": "Contact"
+      }, {
+        "type": "checkbox",
+        "id": "contact_enable",
+        "label": "Contact Enable",
+        "default": true
+      }, {
+        "type": "header",
+        "content": "Phone Number"
+      }, {
+        "type": "text",
+        "id": "phone_number",
+        "label": "Phone Number",
+        "default": "(+612) 2531 5600"
+      }, {
+        "type": "header",
+        "content": "Email"
+      }, {
+        "type": "text",
+        "id": "email_id",
+        "label": "Email Id",
+        "default": "info@la-studioweb.com"
+      }, {
+        "type": "header",
+        "content": "Address"
+      }, {
+        "type": "text",
+        "id": "address",
+        "label": "Address",
+        "default": "PO Box 1622 Colins Street West"
+      }, {
+        "type": "header",
+        "content": "Google Map"
+      }, {
+        "type": "checkbox",
+        "id": "google_map_enable",
+        "label": "Google Map Enable",
+        "default": true
+      }, {
+        "type": "text",
+        "id": "google_map_title",
+        "label": "Title",
+        "default": "Google Maps"
+      }, {
+        "type": "url",
+        "id": "google_map_url",
+        "label": "URL"
+      }, {
+        "type": "header",
+        "content": "Social Icon"
+      }, {
+        "type": "checkbox",
+        "id": "social_icon_enable",
+        "label": "Social Icon Enable",
+        "default": true
+      }, {
+        "type": "header",
+        "content": "Icon With Link"
+      }, {
+        "type": "text",
+        "id": "social_icon_1_name",
+        "label": "Social Icon Name",
+        "default": "twitter",
+        "info": "Fontawesome Icon [See Icon](https:\/\/fontawesome.com\/v4.7.0\/icons\/)"
+      }, {
+        "type": "url",
+        "id": "social_icon_1_url",
+        "label": "Link"
+      }, {
+        "type": "header",
+        "content": "Icon With Link"
+      }, {
+        "type": "text",
+        "id": "social_icon_2_name",
+        "label": "Social Icon Name",
+        "default": "google-plus",
+        "info": "Fontawesome Icon [See Icon](https:\/\/fontawesome.com\/v4.7.0\/icons\/)"
+      }, {
+        "type": "url",
+        "id": "social_icon_2_url",
+        "label": "Link"
+      }, {
+        "type": "header",
+        "content": "Icon With Link"
+      }, {
+        "type": "text",
+        "id": "social_icon_3_name",
+        "label": "Social Icon Name",
+        "default": "facebook",
+        "info": "Fontawesome Icon [See Icon](https:\/\/fontawesome.com\/v4.7.0\/icons\/)"
+      }, {
+        "type": "url",
+        "id": "social_icon_3_url",
+        "label": "Link"
+      }, {
+        "type": "header",
+        "content": "Icon With Link"
+      }, {
+        "type": "text",
+        "id": "social_icon_4_name",
+        "label": "Social Icon Name",
+        "default": "youtube",
+        "info": "Fontawesome Icon [See Icon](https:\/\/fontawesome.com\/v4.7.0\/icons\/)"
+      }, {
+        "type": "url",
+        "id": "social_icon_4_url",
+        "label": "Link"
+      }, {
+        "type": "header",
+        "content": "Icon With Link"
+      }, {
+        "type": "text",
+        "id": "social_icon_5_name",
+        "label": "Social Icon Name",
+        "default": "instagram",
+        "info": "Fontawesome Icon [See Icon](https:\/\/fontawesome.com\/v4.7.0\/icons\/)"
+      }, {
+        "type": "url",
+        "id": "social_icon_5_url",
+        "label": "Link"
+      }, {
+        "type": "header",
+        "content": "Copy Right Area"
+      }, {
+        "type": "checkbox",
+        "id": "copy_right_header_enable",
+        "label": "Copyright Enable",
+        "default": true
+      }, {
+        "type": "richtext",
+        "id": "copy_ritht_text_header",
+        "label": "CopyRight Text",
+        "default": "<p>Copyright © 99 Shopify All Right Reserved.</p>"
+      }, {
+        "type": "header",
+        "content": "Color"
+      }, {
+        "type": "color",
+        "id": "header_bg_color",
+        "label": "Header BG Color",
+        "default": "#fff"
+      }, {
+        "type": "color",
+        "id": "header_bg_color_2",
+        "label": "Header Sticky BG Color",
+        "default": "#fff"
+      }, {
+        "type": "color",
+        "id": "transparent_header_color",
+        "label": "Transparent Menu Color",
+        "default": "#fff"
+      }, {
+        "type": "color",
+        "id": "transparent_header_hover_color",
+        "label": "Transparent Menu Hover Color",
+        "default": "#cf987e"
+      }, {
+        "type": "color",
+        "id": "transparent_icon_color",
+        "label": "Transparent Icon Color",
+        "default": "#fff"
+      }, {
+        "type": "color",
+        "id": "transparent_icon_hover_color",
+        "label": "Transparent Icon Hover Color",
+        "default": "#cf987e"
+      }, {
+        "type": "color",
+        "id": "sticky_header_color",
+        "label": "Sticky Menu Color",
+        "default": "#282828"
+      }, {
+        "type": "color",
+        "id": "sticky_header_hover_color",
+        "label": "Sticky Menu Hover Color",
+        "default": "#cf987e"
+      }, {
+        "type": "color",
+        "id": "sticky_icon_color",
+        "label": "Sticky Icon Color",
+        "default": "#282828"
+      }, {
+        "type": "color",
+        "id": "sticky_icon_hover_color",
+        "label": "Sticky Icon Hover Color",
+        "default": "#cf987e"
+      }, {
+        "type": "color",
+        "id": "menu_color",
+        "label": "Menu Color",
+        "default": "#282828"
+      }, {
+        "type": "color",
+        "id": "menu_hover_color",
+        "label": "Menu Hover Color",
+        "default": "#cf987e"
+      }, {
+        "type": "color",
+        "id": "sub_menu_color",
+        "label": "Sub Menu Color",
+        "default": "#8a8a8a"
+      }, {
+        "type": "color",
+        "id": "sub_menu_hover_color",
+        "label": "Sub Menu Hover Color",
+        "default": "#cf987e"
+      }, {
+        "type": "color",
+        "id": "mega_menu_title_color",
+        "label": "Mega Menu Title Color",
+        "default": "#282828"
+      }, {
+        "type": "color",
+        "id": "mega_menu_title_hover_color",
+        "label": "Mega Menu Title Hover Color",
+        "default": "#cf987e"
+      }, {
+        "type": "color",
+        "id": "mega_menu_color",
+        "label": "Mega Menu Color",
+        "default": "#8a8a8a"
+      }, {
+        "type": "color",
+        "id": "mega_menu_hover_color",
+        "label": "Mega Menu Hover Color",
+        "default": "#cf987e"
+      }, {
+        "type": "color",
+        "id": "icon_color",
+        "label": "Icon Color",
+        "default": "#282828"
+      }, {
+        "type": "color",
+        "id": "icon_hover_color",
+        "label": "Icon Hover Color",
+        "default": "#cf987e"
+      }, {
+        "type": "color",
+        "id": "social_icon_color",
+        "label": "Social Icon Color",
+        "default": "#282828"
+      }, {
+        "type": "color",
+        "id": "social_icon_hover_color",
+        "label": "Social Icon Hover Color",
+        "default": "#cf987e"
+      }, {
+        "type": "color",
+        "id": "contact_title_color",
+        "label": "Contact Title Color",
+        "default": "#8a8a8a"
+      }, {
+        "type": "color",
+        "id": "contact_description_color",
+        "label": "Contact Description Color",
+        "default": "#282828"
+      }, {
+        "type": "color",
+        "id": "wellcome_text_color",
+        "label": "Wellcome Text Color",
+        "default": "#8a8a8a"
+      }, {
+        "type": "color",
+        "id": "button_search_color",
+        "label": "Button Search Color",
+        "default": "#000"
+      }, {
+        "type": "color",
+        "id": "button_search_hover_color",
+        "label": "Button Search Hover Color",
+        "default": "#cf987e"
+      }, {
+        "type": "color",
+        "id": "currency_title_color",
+        "label": "Currency Color",
+        "default": "#8a8a8a"
+      }, {
+        "type": "color",
+        "id": "currency_submenu_color",
+        "label": "Currency Submenu Color",
+        "default": "#8a8a8a"
+      }, {
+        "type": "color",
+        "id": "copy_right_color",
+        "label": "Copy Right Color",
+        "default": "#8a8a8a"
+      }, {
+        "type": "header",
+        "content": "Mobile Menu Color"
+      }, {
+        "type": "color",
+        "id": "mobile_icon_color",
+        "label": "Mobile Icon Color",
+        "default": "#8a8a8a"
+      }, {
+        "type": "color",
+        "id": "mobile_icon_hover_color",
+        "label": "Mobile Icon Hover Color",
+        "default": "#cf987e"
+      }, {
+        "type": "color",
+        "id": "mobile_menu_color",
+        "label": "Mobile Menu Color",
+        "default": "#282828"
+      }, {
+        "type": "color",
+        "id": "mobile_menu_hover_color",
+        "label": "Mobile Menu Hover Color",
+        "default": "#cf987e"
+      }
+    ]
   }
 {% endschema %}
