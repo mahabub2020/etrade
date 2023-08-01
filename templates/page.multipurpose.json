@@ -4,9 +4,20 @@
       "type": "template-multipurpose",
       "settings": {
       }
+    },
+    "96a34184-394f-421e-ac79-3f2660c2aa80": {
+      "type": "banner",
+      "settings": {
+        "header_style": "header_style_1",
+        "banner_title": "Life is More Than Sunglasses and Hit Movies.",
+        "banner_btn_txt": "View All Products",
+        "banner_btn_url": "",
+        "banner_img": "shopify:\/\/shop_images\/women_sunglass.png"
+      }
     }
   },
   "order": [
-    "template"
+    "template",
+    "96a34184-394f-421e-ac79-3f2660c2aa80"
   ]
 }
