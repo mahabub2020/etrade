@@ -4,48 +4,9 @@
       "type": "template-multipurpose",
       "settings": {
       }
-    },
-    "1533261a-8db3-4e69-ab1a-bf9afdd28691": {
-      "type": "banner",
-      "blocks": {
-        "d391feb0-bd3f-4a45-aa90-0feeba5bf376": {
-          "type": "banner",
-          "settings": {
-            "popup_product": "product-and-any-variants-malrez®-spectrum",
-            "plus_icon_active": true,
-            "pos_x_type": "right",
-            "pos_x": 55,
-            "pos_y_type": "bottom",
-            "pos_y": 46
-          }
-        },
-        "2e9ebb0d-a1ea-4e7b-a85c-aa319dd83175": {
-          "type": "banner",
-          "settings": {
-            "popup_product": "kalrez®-spectrum™-6376",
-            "plus_icon_active": false,
-            "pos_x_type": "left",
-            "pos_x": 25,
-            "pos_y_type": "top",
-            "pos_y": 54
-          }
-        }
-      },
-      "block_order": [
-        "d391feb0-bd3f-4a45-aa90-0feeba5bf376",
-        "2e9ebb0d-a1ea-4e7b-a85c-aa319dd83175"
-      ],
-      "settings": {
-        "header_style": "header_style_1",
-        "banner_title": "Life is More Than Sunglasses and Hit Movies.",
-        "banner_btn_txt": "View All Products",
-        "banner_btn_url": "shopify:\/\/collections\/all",
-        "banner_img": "shopify:\/\/shop_images\/women_sunglass.png"
-      }
     }
   },
   "order": [
-    "template",
-    "1533261a-8db3-4e69-ab1a-bf9afdd28691"
+    "template"
   ]
 }
