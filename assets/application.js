@@ -6,6 +6,7 @@
     });
 
     $('.cart-close').on('click', function() {
+        console.log('clicked');
         $('.cart-dropdown').removeClass('open');
     });
 })(jQuery);
