@@ -32,7 +32,7 @@
                           {%- assign product = all_products[block.settings.popup_product] -%}
 
 
-                              <div class="banner-product plus-hover-items elementor-repeater-item-{{ block.id }} {% if block.settings.plus_icon_active %}icon-active{% endif %} axil-pos-{{ block.settings.pos_x_type }} axil-pos-{{ block.settings.pos_y_type }}"> 
+                              <div class="banner-product plus-hover-items block-repeater-item-{{ block.id }} {% if block.settings.plus_icon_active %}icon-active{% endif %} axil-pos-{{ block.settings.pos_x_type }} axil-pos-{{ block.settings.pos_y_type }}"> 
                           
                                   <div class="product-details">
                                       <h4 class="title"><a href="single-product-8.html">{{ product.title }}</a></h4>
@@ -100,17 +100,26 @@
 
         {% for block in section.blocks %}
         {% case block.type %}
-        {% when 'banner' %}
-  
-          #block-{{ block.id }} .banner-info--inner .color--white {
-              color: {{ block.settings.title_color }}!important;
-          }
-          #block-{{ block.id }} .banner-box.banner-hover-7:hover .banner-image:after {
-              background-color: {{ block.settings.image_hover_after_color }};
-          }
-  
-  
-        {% endcase %}
+          {% when 'banner' %}
+    
+
+            .block-repeater-item-{{ block.id }}.banner-product.axil-pos-left{
+              left: {{ block.settings.pos_x }}
+            }     
+            .block-repeater-item-{{ block.id }}.banner-product.axil-pos-right{
+              right: {{ block.settings.pos_x }}
+            }
+
+            .block-repeater-item-{{ block.id }}.banner-product.axil-pos-top{
+              top: {{ block.settings.pos_y }}
+            }     
+            .block-repeater-item-{{ block.id }}.banner-product.axil-pos-bottom{
+              bottom: {{ block.settings.pos_y }}
+            }
+
+    
+    
+          {% endcase %}
         {% endfor %}
   
   
