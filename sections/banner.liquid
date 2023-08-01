@@ -29,9 +29,11 @@
                           {% for block in section.blocks %}  
                           {% case block.type %}
                           {% when 'banner' %}
-                              {%- assign product = all_products[block.settings.popup_product] -%}
+                          {%- assign product = all_products[block.settings.popup_product] -%}
 
-                              <div class="banner-product">
+
+                              <div class="banner-product plus-hover-items elementor-repeater-item-{{ block.id }} {% if block.settings.plus_icon_active %}icon-active{% endif %} axil-pos-{{ block.settings.pos_x_type }} axil-pos-{{ block.settings.pos_y_type }}"> 
+                          
                                   <div class="product-details">
                                       <h4 class="title"><a href="single-product-8.html">{{ product.title }}</a></h4>
                                       <div class="price">{{ product.price }}</div>
@@ -93,6 +95,28 @@
 
 
 
+        {%- style -%}
+
+
+        {% for block in section.blocks %}
+        {% case block.type %}
+        {% when 'banner' %}
+  
+          #block-{{ block.id }} .banner-info--inner .color--white {
+              color: {{ block.settings.title_color }}!important;
+          }
+          #block-{{ block.id }} .banner-box.banner-hover-7:hover .banner-image:after {
+              background-color: {{ block.settings.image_hover_after_color }};
+          }
+  
+  
+        {% endcase %}
+        {% endfor %}
+  
+  
+  
+  
+  {%- endstyle -%}
 
 {% schema %}
 {
@@ -124,11 +148,7 @@
   
              "default": "header_style_1"
           },
-          {
-            "type": "product",
-            "id": "featured_product",
-            "label": "Product"
-          },
+          
         {
             "type": "text",
             "id": "banner_title",
@@ -165,7 +185,13 @@
           "type": "product",
           "id": "popup_product",
           "label": "Product-Handle"
-          }, 
+          },  
+          {
+            "type": "checkbox",
+            "id": "plus_icon_active",
+            "label": "Plus Icon Active",
+            "default": false
+          },
           {
             "type": "select",
             "id": "pos_x_type",
@@ -227,7 +253,7 @@
 
         "presets": [
           {
-            "category": "Banner",
+            "category": "banner",
             "name": "Product Hero"
         }]
 }
