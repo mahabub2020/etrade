@@ -1,5 +1,4 @@
-(function ($) {
-    "use strict";
+$(document).ready(function(){
 
     $('.cart-dropdown-btn').on('click', function() {
         $('.cart-dropdown').addClass('open');
@@ -9,4 +8,5 @@
         console.log('clicked');
         $('.cart-dropdown').removeClass('open');
     });
-})(jQuery);
+    
+});
