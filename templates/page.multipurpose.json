@@ -12,9 +12,10 @@
           "type": "banner",
           "settings": {
             "popup_product": "product-and-any-variants-malrez®-spectrum",
-            "pos_x_type": "left",
-            "pos_x": 1,
-            "pos_y_type": "top",
+            "plus_icon_active": true,
+            "pos_x_type": "right",
+            "pos_x": 26,
+            "pos_y_type": "bottom",
             "pos_y": 1
           }
         },
@@ -22,6 +23,7 @@
           "type": "banner",
           "settings": {
             "popup_product": "kalrez®-spectrum™-6376",
+            "plus_icon_active": false,
             "pos_x_type": "left",
             "pos_x": 1,
             "pos_y_type": "top",
@@ -35,7 +37,6 @@
       ],
       "settings": {
         "header_style": "header_style_1",
-        "featured_product": "",
         "banner_title": "Life is More Than Sunglasses and Hit Movies.",
         "banner_btn_txt": "View All Products",
         "banner_btn_url": "shopify:\/\/collections\/all",
