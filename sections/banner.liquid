@@ -56,7 +56,7 @@
                         {% endcase %} 
                       {% endfor %}
 
-                        {%- endif -%}
+                      
                             <ul class="shape-group">
                                 <li class="shape-1">
                                     <svg width="717" height="569" viewBox="0 0 717 569" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -86,6 +86,7 @@
                                     </svg>
                                 </li>
                             </ul>
+                          {%- endif -%}
                         </div>
                     </div>
                 </div>
@@ -114,9 +115,11 @@
 
             .block-repeater-item-{{ block.id }}.banner-product.axil-pos-top{
               top: {{ block.settings.pos_y }}px;
+              bottom: inherit;
             }     
             .block-repeater-item-{{ block.id }}.banner-product.axil-pos-bottom{
               bottom: {{ block.settings.pos_y }}px;
+              top: inherit;
             }
 
   
