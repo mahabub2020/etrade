@@ -7,6 +7,22 @@
     },
     "96a34184-394f-421e-ac79-3f2660c2aa80": {
       "type": "banner",
+      "blocks": {
+        "a43197f4-7ecc-4387-915c-d58beca5a0e6": {
+          "type": "banner",
+          "settings": {
+            "popup_product": "malrez®-spectrum™-6375",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 124,
+            "pos_y_type": "bottom",
+            "pos_y": 296
+          }
+        }
+      },
+      "block_order": [
+        "a43197f4-7ecc-4387-915c-d58beca5a0e6"
+      ],
       "settings": {
         "header_style": "header_style_1",
         "banner_title": "Life is More Than Sunglasses and Hit Movies.",
