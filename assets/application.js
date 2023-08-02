@@ -8,9 +8,16 @@ $(document).ready(function(){
         $('.cart-dropdown').removeClass('open');
     });
 
-    $('form[action="/cart/add"]').on('submit', function(e) {
+    $('form[action="/cart/add"]').on('submit', async function(e) {
         e.preventDefault();
-        console.log('submitted');
+        
+        await fetch("cart/add", {
+            method: "post",
+            body: new FormData(form),
+        });
+        const res = await fetch("/cart.json");
+        const cart = res.json();
+        console.log(cart);
     })
 
 });
