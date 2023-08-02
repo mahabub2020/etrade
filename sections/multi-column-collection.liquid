@@ -6,38 +6,22 @@
         <div class="categrie-product-activation-4 slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
             <div class="slick-single-layout">
                 <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2">
-                    {% for collection in featured_cat_collection %}
+                    {% for collection in collections %}
                         {% if collection.all_products_count > 0 %}
-                            <div class="w-full py-6 px-3">
-                                <div class="border bg-white overflow-hidden">
-                                    <a href="{{ collection.url }}">
-                                        <div class="h-80 overflow-hidden">
 
-                                            {%- if collection.image -%}
-                                                {%- assign collection_image = collection.image -%}
-                                              {%- elsif collection.products.first and collection.products.first.images != empty -%}
-                                                {%- assign collection_image = collection.products.first.featured_image -%}
-                                              {%- else -%}
-                                                {%- assign collection_image = blank -%}
-                                              {%- endif -%}
-
-                                              
-
-                                            {% if collection.featured_image != blank %}
-                                                {% assign collection_image = collection.featured_image %}
-                                            {% else %}
-                                                {% assign collection_image = collection.products.first.image %}
-                                            {% endif %}
-        
-                                            <img class="w-full h-full object-cover transition duration-1000 ease-in-out transform hover:scale-105" src="{{ collection_image | img_url: 'medium' }}" alt="{{ collection.title | escape }}">
-                                        </div>
-                                    </a>
-        
-                                    <div class="p-4 bg-gray-100">
-                                        <h1 class="text-xl">{{ collection.title }}</h1>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="categrie-product categrie-product-4">
+                                <a href="{{ collection.url }}" class="cate-thumb">
+                                    {%- if collection.image -%}
+                                        {%- assign collection_image = collection.image -%}
+                                      {%- elsif collection.products.first and collection.products.first.images != empty -%}
+                                        {%- assign collection_image = collection.products.first.featured_image -%}
+                                      {%- else -%}
+                                        {%- assign collection_image = blank -%}
+                                      {%- endif -%}
+                                    <img src="{{ collection_image | img_url: 'medium' }}" alt="{{ collection.title | escape }}">
+                                    <h5 class="cat-title">{{ collection.title }}</h5>
+                                </a>
+                            </div> 
                         {% endif %}
                     {% endfor %}
                        
