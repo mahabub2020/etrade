@@ -55,10 +55,10 @@
         "banner_img": "shopify:\/\/shop_images\/women_sunglass.png"
       }
     },
-    "fd6ce9eb-2694-480a-9e81-a465a802afc7": {
-      "type": "featured-collection",
+    "073c0303-e328-46b3-89b6-4c497a5dca2d": {
+      "type": "multi-column-collection",
       "settings": {
-        "title": "Featured Collection",
+        "title": "Multi Collection",
         "featured_collection": "",
         "number_of_products_to_show": 4
       }
@@ -67,6 +67,6 @@
   "order": [
     "template",
     "96a34184-394f-421e-ac79-3f2660c2aa80",
-    "fd6ce9eb-2694-480a-9e81-a465a802afc7"
+    "073c0303-e328-46b3-89b6-4c497a5dca2d"
   ]
 }
