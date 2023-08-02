@@ -42,6 +42,7 @@
             axilInit.wishlist_icon();
             axilInit.minimize_icon();
             axilInit.headerIconToggleSelect();
+            axilInit.multicategrieslider();
         },
         w: function (e) {
             this._window.on('load', axilInit.l).on('scroll', axilInit.scrl).on('resize', axilInit.res)
@@ -74,6 +75,20 @@
             });
         },
 
+        multicategrieslider: function() {
+
+        $('.categrie-product-activation-4').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            autoplay: false,
+            speed: 1000,
+            prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-angle-left"></i></button>',
+            nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-angle-right"></i></button>',
+        });
+    },
 
         headerIconToggle: function() {
 
