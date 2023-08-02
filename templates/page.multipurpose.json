@@ -61,8 +61,11 @@
         "title": "Multi Collection",
         "featured_cat_collection": [
           "baby",
-          "banner-popup",
-          "beauty"
+          "beauty",
+          "garden",
+          "kids",
+          "mens",
+          "womens"
         ],
         "number_of_products_to_show": 4
       }
