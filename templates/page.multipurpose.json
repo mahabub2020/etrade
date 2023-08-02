@@ -59,14 +59,10 @@
       "type": "multi-column-collection",
       "settings": {
         "title": "Multi Collection",
-        "featured_collection": [
+        "featured_cat_collection": [
+          "baby",
           "banner-popup",
-          "beauty",
-          "garden",
-          "frontpage",
-          "kids",
-          "mens",
-          "womens"
+          "beauty"
         ],
         "number_of_products_to_show": 4
       }
