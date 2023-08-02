@@ -19,15 +19,21 @@ $(document).ready(function(){
         const cart = await res.json();
         $('.cart-count').html(cart.item_count);
         $('.cart-dropdown').addClass('open');
-        const sidecart = fetch("/?view=cart");
-        console.log(sidecart.json());
-        $.ajax({
-            url: "/?view=cart",
-            type: 'POST',
-            success: function success(data) {
-                console.log(data);
-            }
-        });
+        const sidecart = await fetch("/?view=cart");
+        if (sidecart.status === 200) {
+            console.log("ok");
+            console.log(sidecart);
+          } else {
+            console.log("error");
+          }
+        // console.log(sidecart.json());
+        // $.ajax({
+        //     url: "/?view=cart",
+        //     type: 'POST',
+        //     success: function success(data) {
+        //         console.log(data);
+        //     }
+        // });
     })
 
 });
