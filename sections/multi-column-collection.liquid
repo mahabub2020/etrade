@@ -6,7 +6,11 @@
         <div class="categrie-product-activation-4 slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
             <div class="slick-single-layout">
                 <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2">
-                    {% for collection in settings.featured_cat_collection %}
+
+            
+
+
+                    {% for collection in section.settings.featured_cat_collection %}
                         {% if collection.all_products_count > 0 %}
 
                             <div class="categrie-product categrie-product-4">
