@@ -16,7 +16,7 @@ $(document).ready(function(){
             body: new FormData(this),
         });
         const res = await fetch("/cart.json");
-        const cart = res.json();
+        const cart = await res.json();
         $('.cart-count').html(cart.item_count);
         console.log(cart.item_count);
     })
