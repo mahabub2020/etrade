@@ -16,11 +16,11 @@ $(document).ready(function(){
             body: new FormData(this),
         });
         const res = await fetch("/cart.json");
-        const cart = await res;
+        const cart = await res.json();
         $('.cart-count').html(cart.item_count);
         $('.cart-dropdown').addClass('open');
-        const sidecart = fetch("/?view=cart").json();
-        console.log(sidecart);
+        const sidecart = fetch("/?view=cart");
+        console.log(sidecart.json());
         $.ajax({
             url: "/?view=cart",
             type: 'POST',
