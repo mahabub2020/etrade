@@ -27,6 +27,26 @@
                         {% endif %}
                     </div>
                     {% endfor %}  
+                </div>   <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2">  
+                    {% for collection in section.settings.featured_cat_collection %}
+                        <div class="col">
+                        {% if collection.all_products_count > 0 %} 
+                            <div class="categrie-product categrie-product-4">
+                                <a href="{{ collection.url }}" class="cate-thumb">
+                                    {%- if collection.image -%}
+                                        {%- assign collection_image = collection.image -%}
+                                      {%- elsif collection.products.first and collection.products.first.images != empty -%}
+                                        {%- assign collection_image = collection.products.first.featured_image -%}
+                                      {%- else -%}
+                                        {%- assign collection_image = blank -%}
+                                      {%- endif -%}
+                                    <img src="{{ collection_image | img_url: 'medium' }}" alt="{{ collection.title | escape }}">
+                                    <h5 class="cat-title">{{ collection.title }}</h5>
+                                </a>
+                            </div> 
+                        {% endif %}
+                    </div>
+                    {% endfor %}  
                 </div>
             </div>
           
