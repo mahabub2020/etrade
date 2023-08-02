@@ -5,33 +5,68 @@
       "settings": {
       }
     },
-    "1533261a-8db3-4e69-ab1a-bf9afdd28691": {
+    "96a34184-394f-421e-ac79-3f2660c2aa80": {
       "type": "banner",
       "blocks": {
-        "fe1a03e9-395b-4d49-9729-baeac4d8fcd7": {
+        "a43197f4-7ecc-4387-915c-d58beca5a0e6": {
           "type": "banner",
           "settings": {
-            "collection_list": [
-              "banner-popup"
-            ],
-            "featured_product_limit_handle": 8
+            "popup_product": "malrez®-spectrum™-6375",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 104,
+            "pos_y_type": "bottom",
+            "pos_y": 244
+          }
+        },
+        "f1ec8215-8343-48fc-af2a-abdd02f41757": {
+          "type": "banner",
+          "settings": {
+            "popup_product": "kalrez®-spectrum™-6375",
+            "plus_icon_active": false,
+            "pos_x_type": "right",
+            "pos_x": 332,
+            "pos_y_type": "top",
+            "pos_y": 208
+          }
+        },
+        "7387fe5a-5846-493c-a220-d38f5d0e2134": {
+          "type": "banner",
+          "settings": {
+            "popup_product": "kalrez®-spectrum™-6376",
+            "plus_icon_active": false,
+            "pos_x_type": "right",
+            "pos_x": 192,
+            "pos_y_type": "bottom",
+            "pos_y": 172
           }
         }
       },
       "block_order": [
-        "fe1a03e9-395b-4d49-9729-baeac4d8fcd7"
+        "a43197f4-7ecc-4387-915c-d58beca5a0e6",
+        "f1ec8215-8343-48fc-af2a-abdd02f41757",
+        "7387fe5a-5846-493c-a220-d38f5d0e2134"
       ],
       "settings": {
         "header_style": "header_style_1",
         "banner_title": "Life is More Than Sunglasses and Hit Movies.",
         "banner_btn_txt": "View All Products",
-        "banner_btn_url": "shopify:\/\/collections\/all",
+        "banner_btn_url": "shopify:\/\/collections",
         "banner_img": "shopify:\/\/shop_images\/women_sunglass.png"
+      }
+    },
+    "073c0303-e328-46b3-89b6-4c497a5dca2d": {
+      "type": "multi-column-collection",
+      "settings": {
+        "title": "Multi Collection",
+        "featured_collection": "",
+        "number_of_products_to_show": 4
       }
     }
   },
   "order": [
     "template",
-    "1533261a-8db3-4e69-ab1a-bf9afdd28691"
+    "96a34184-394f-421e-ac79-3f2660c2aa80",
+    "073c0303-e328-46b3-89b6-4c497a5dca2d"
   ]
 }
