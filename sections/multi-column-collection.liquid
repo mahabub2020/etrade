@@ -6,12 +6,23 @@
         <div class="categrie-product-activation-4 slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
             <div class="slick-single-layout">
                 <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2">
-                    {% for collection in featured_collection %}
+                    {% for collection in featured_cat_collection %}
                         {% if collection.all_products_count > 0 %}
                             <div class="w-full py-6 px-3">
                                 <div class="border bg-white overflow-hidden">
                                     <a href="{{ collection.url }}">
                                         <div class="h-80 overflow-hidden">
+
+                                            {%- if collection.image -%}
+                                                {%- assign collection_image = collection.image -%}
+                                              {%- elsif collection.products.first and collection.products.first.images != empty -%}
+                                                {%- assign collection_image = collection.products.first.featured_image -%}
+                                              {%- else -%}
+                                                {%- assign collection_image = blank -%}
+                                              {%- endif -%}
+
+                                              
+
                                             {% if collection.featured_image != blank %}
                                                 {% assign collection_image = collection.featured_image %}
                                             {% else %}
@@ -55,7 +66,7 @@
         },
         {
             "type": "collection_list",
-            "id": "featured_collection",
+            "id": "featured_cat_collection",
             "label": "Collection"
         },
         {
