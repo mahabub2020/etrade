@@ -58,7 +58,7 @@
     "073c0303-e328-46b3-89b6-4c497a5dca2d": {
       "type": "multi-column-collection",
       "settings": {
-        "title": "Multi Collection",
+        "section_title": "Featured Categories",
         "featured_cat_collection": [
           "baby",
           "beauty",
@@ -66,7 +66,15 @@
           "kids",
           "mens",
           "womens"
-        ],
+        ]
+      }
+    },
+    "7a04f983-4a56-49e2-adea-3dc12febc95d": {
+      "type": "product-collection",
+      "settings": {
+        "title": "Product Collection",
+        "btn-label": "",
+        "product_collection": "banner-popup",
         "number_of_products_to_show": 4
       }
     }
@@ -74,6 +82,7 @@
   "order": [
     "template",
     "96a34184-394f-421e-ac79-3f2660c2aa80",
-    "073c0303-e328-46b3-89b6-4c497a5dca2d"
+    "073c0303-e328-46b3-89b6-4c497a5dca2d",
+    "7a04f983-4a56-49e2-adea-3dc12febc95d"
   ]
 }
