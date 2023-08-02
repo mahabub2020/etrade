@@ -8,4 +8,9 @@ $(document).ready(function(){
         $('.cart-dropdown').removeClass('open');
     });
 
+    $('form[action="/cart/add"]').on('submit', function(e) {
+        e.preventdefault();
+        console.log('submitted');
+    })
+
 });
