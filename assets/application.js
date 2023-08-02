@@ -13,7 +13,7 @@ $(document).ready(function(){
         
         await fetch("cart/add", {
             method: "post",
-            body: new FormData(form),
+            body: new FormData(this),
         });
         const res = await fetch("/cart.json");
         const cart = res.json();
