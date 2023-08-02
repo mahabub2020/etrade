@@ -15,11 +15,12 @@ $(document).ready(function(){
         //     method: "post",
         //     body: new FormData(this),
         // });
-        const res = await fetch("/?view=cart");
+        const res = await fetch("/cart.json");
         const cart = await res.json();
-        console.log(cart);
-        // $('.cart-count').html(cart.item_count);
-        // $('.cart-dropdown').addClass('open');
+        $('.cart-count').html(cart.item_count);
+        $('.cart-dropdown').addClass('open');
+        const sidecart = await fetch("/?view=cart");
+        console.log(sidecart);
     })
 
 });
