@@ -11,14 +11,15 @@ $(document).ready(function(){
     $('form[action="/cart/add"]').on('submit', async function(e) {
         e.preventDefault();
         
-        await fetch("cart/add", {
-            method: "post",
-            body: new FormData(this),
-        });
-        const res = await fetch("/cart.json");
+        // await fetch("cart/add", {
+        //     method: "post",
+        //     body: new FormData(this),
+        // });
+        const res = await fetch("/?view=cart");
         const cart = await res.json();
-        $('.cart-count').html(cart.item_count);
-        $('.cart-dropdown').addClass('open');
+        console.log(cart);
+        // $('.cart-count').html(cart.item_count);
+        // $('.cart-dropdown').addClass('open');
     })
 
 });
