@@ -9,7 +9,7 @@ $(document).ready(function(){
     });
 
     $('form[action="/cart/add"]').on('submit', function(e) {
-        e.preventdefault();
+        e.preventDefault();
         console.log('submitted');
     })
 
