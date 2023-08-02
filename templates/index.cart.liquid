@@ -1,81 +1,69 @@
-<div class="wooc-mini-cart-container cart-dropdown">
-  <div class="cart-content-wrap">
-    <div class="cart-header">
-      <h2 class="header-title">Cart review.</h2>
-      <button class="close cart-close sidebar-close">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-    <div class="cart-body-wrp" id="etrade-content-cart-template">
-      {% if cart.item_count > 0 %}
-        <form
-          action="{{ routes.cart_url }}"
-          method="POST"
-          novalidate>
-          <div class="cart-body">
-            <ul class="cart-item-list woocommerce-mini-cart cart_list product_list_widget">
-              {% for item in cart.items %}
-                <li class="cart-item woocommerce-mini-cart-item mini_cart_item">
-                  <div class="thumb-wrapper item-img">
-                    {% if item.image %}
-                      <img
-                        src="{{ item.image | img_url: '100x100' }}"
-                        alt="{{ item.title | escape }}"
-                        loading="lazy">
-                    {% else %}
-                      {{ 'image' | placeholder_svg_tag }}
-                    {% endif %}
+{% layout none %}
+{% if cart.item_count > 0 %}
+  <form
+    action="{{ routes.cart_url }}"
+    method="POST"
+    novalidate>
+    <div class="cart-body">
+      <ul class="cart-item-list woocommerce-mini-cart cart_list product_list_widget">
+        {% for item in cart.items %}
+          <li class="cart-item woocommerce-mini-cart-item mini_cart_item">
+            <div class="thumb-wrapper item-img">
+              {% if item.image %}
+                <img
+                  src="{{ item.image | img_url: '100x100' }}"
+                  alt="{{ item.title | escape }}"
+                  loading="lazy">
+              {% else %}
+                {{ 'image' | placeholder_svg_tag }}
+              {% endif %}
 
-                    <div class="remove-wrapper">
-                      <a
-                        href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0"
-                        class="close-btn remove remove_from_cart_button"
-                        aria-label="Remove this item">
-                        <i class="fas fa-times"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="item-content">
-                    <h3 class="item-title">
-                      {{ item.product.title | truncatewords: 4 }}
-                    </h3>
-                    <div class="pro-qty item-quantity"></div>
-                    <div class="item-price">
-                      <span class="quantity">{{ item.quantity }}
-                        <i class="fas fa-times"></i>
-                        <span class="woocommerce-Price-amount amount">{{ item.line_price | money }}</span>
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              {% endfor %}
-            </ul>
-          </div>
-          <div class="cart-footer">
-            <div class="woocommerce-mini-cart__total total">
-              <h3 class="cart-subtotal">
-                <strong>Subtotal:</strong>
-                <span class="woocommerce-Price-amount amount">{{ cart.total_price | money }}</span>
+              <div class="remove-wrapper">
+                <a
+                  href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0"
+                  class="close-btn remove remove_from_cart_button"
+                  aria-label="Remove this item">
+                  <i class="fas fa-times"></i>
+                </a>
+              </div>
+            </div>
+            <div class="item-content">
+              <h3 class="item-title">
+                {{ item.product.title | truncatewords: 4 }}
               </h3>
+              <div class="pro-qty item-quantity"></div>
+              <div class="item-price">
+                <span class="quantity">{{ item.quantity }}
+                  <i class="fas fa-times"></i>
+                  <span class="woocommerce-Price-amount amount">{{ item.line_price | money }}</span>
+                </span>
+              </div>
             </div>
-            <p class="woocommerce-mini-cart__buttons buttons"></p>
-            <div class="group-btn">
-              <a href="{{ routes.cart_url }}" class="axil-btn btn-bg-primary viewcart-btn">View cart</a>
-              <button
-                type="submit"
-                name="checkout"
-                class="axil-btn btn-bg-secondary checkout-btn">Checkout</button>
-            </div>
-            <p></p>
-          </div>
-        </form>
-      {% else %}
-        <div class="return-to-shop text-center pt--80">
-          <h5 class="woocommerce-mini-cart__empty-message">No products in the cart.</h5>
-          <a href="{{ routes.all_products_collection_url }}" class="axil-btn checkout-btn">Return to shop</a>
-        </div>
-      {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
     </div>
+    <div class="cart-footer">
+      <div class="woocommerce-mini-cart__total total">
+        <h3 class="cart-subtotal">
+          <strong>Subtotal:</strong>
+          <span class="woocommerce-Price-amount amount">{{ cart.total_price | money }}</span>
+        </h3>
+      </div>
+      <p class="woocommerce-mini-cart__buttons buttons"></p>
+      <div class="group-btn">
+        <a href="{{ routes.cart_url }}" class="axil-btn btn-bg-primary viewcart-btn">View cart</a>
+        <button
+          type="submit"
+          name="checkout"
+          class="axil-btn btn-bg-secondary checkout-btn">Checkout</button>
+      </div>
+      <p></p>
+    </div>
+  </form>
+{% else %}
+  <div class="return-to-shop text-center pt--80">
+    <h5 class="woocommerce-mini-cart__empty-message">No products in the cart.</h5>
+    <a href="{{ routes.all_products_collection_url }}" class="axil-btn checkout-btn">Return to shop</a>
   </div>
-</div>
-<div class="wooc-overlay-cart"></div>
+{% endif %}
