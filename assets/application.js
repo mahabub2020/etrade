@@ -17,7 +17,7 @@ $(document).ready(function(){
         });
         const res = await fetch("/cart.json");
         const cart = res.json();
-        console.log(cart);
+        $('.cart-count').text(cart.item_count);
     })
 
 });
