@@ -7,7 +7,12 @@
       </button>
     </div>
     <div class="cart-body-wrp" id="etrade-content-cart-template">
-      {% if cart.item_count > 0 %}
+      {% if cart.empty? %}
+        <div class="return-to-shop text-center pt--80">
+          <h5 class="woocommerce-mini-cart__empty-message">No products in the cart.</h5>
+          <a href="{{ routes.all_products_collection_url }}" class="axil-btn checkout-btn">Return to shop</a>
+        </div>
+      {% else %}
         <form
           action="{{ routes.cart_url }}"
           method="POST"
@@ -66,11 +71,6 @@
             <p></p>
           </div>
         </form>
-      {% else %}
-        <div class="return-to-shop text-center pt--80">
-          <h5 class="woocommerce-mini-cart__empty-message">No products in the cart.</h5>
-          <a href="{{ routes.all_products_collection_url }}" class="axil-btn checkout-btn">Return to shop</a>
-        </div>
       {% endif %}
     </div>
   </div>
