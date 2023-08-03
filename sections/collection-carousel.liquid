@@ -74,7 +74,34 @@
 </div>
 <!-- End Categorie Area  -->
 {% else %}
-<h1>dfaelsif</h1>
+     <!-- Start Categorie Area  -->
+     <div class="axil-categorie-area pt--30 bg-color-white">
+      <div class="container">
+          <div class="categrie-product-activation-2 categorie-product-two slick-layout-wrapper--15">
+            {% for collection in section.settings.featured_cat_collection %}
+              {% if collection.all_products_count > 0 %} 
+
+                <div class="slick-single-layout slick-slide">
+                  <div class="categrie-product-2">
+                    <a href="{{ collection.url | escape }}">
+                      {%- if collection.image -%}
+                          {%- assign collection_image = collection.image -%}
+                        {%- elsif collection.products.first and collection.products.first.images != empty -%}
+                          {%- assign collection_image = collection.products.first.featured_image -%}
+                        {%- else -%}
+                          {%- assign collection_image = blank -%}
+                        {%- endif -%}
+                      <img src="{{ collection_image | img_url: '164x108' }}" alt="{{ collection.title | escape }}">
+                      <h5 class="cat-title">{{ collection.title | escape }}</h5> 
+                  </a>  
+                  </div> 
+              </div> 
+            {% endif %} 
+          {% endfor %} 
+          </div>
+      </div>
+  </div>
+  <!-- End Categorie Area  -->
 
 {% endif %}
 
