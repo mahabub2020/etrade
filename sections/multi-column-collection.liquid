@@ -5,11 +5,22 @@
                 <h2 class="title">{{ section.settings.section_title }}</h2>
             </div> 
         {% endif%}  
+
         <div class="categrie-product-activation-4 slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
-            <div class="slick-single-layout">
-                <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2">  
-                    {% for collection in section.settings.featured_cat_collection %}
-                        <div class="col">
+            
+            {%- liquid 
+            assign count = 1  
+            assign totalitems = section.settings.list_per_slider
+            assign loopcount = 0
+             -%} 
+            {% for collection in section.settings.featured_cat_collection %}
+                {% assign loopcount = loopcount | plus: 1 %} 
+                {% if count == 1 %}
+                    <div class="slick-single-layout">
+                    <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2">  
+                {% endif %}
+
+                    <div class="col">
                         {% if collection.all_products_count > 0 %} 
                             <div class="categrie-product categrie-product-4">
                                 <a href="{{ collection.url }}" class="cate-thumb">
@@ -22,35 +33,22 @@
                                       {%- endif -%}
                                     <img src="{{ collection_image | img_url: 'medium' }}" alt="{{ collection.title | escape }}">
                                     <h5 class="cat-title">{{ collection.title }}</h5>
+ 
                                 </a>
                             </div> 
                         {% endif %}
                     </div>
-                    {% endfor %}  
-                </div>
-            </div> <div class="slick-single-layout">
-                <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2">  
-                    {% for collection in section.settings.featured_cat_collection %}
-                        <div class="col">
-                        {% if collection.all_products_count > 0 %} 
-                            <div class="categrie-product categrie-product-4">
-                                <a href="{{ collection.url }}" class="cate-thumb">
-                                    {%- if collection.image -%}
-                                        {%- assign collection_image = collection.image -%}
-                                      {%- elsif collection.products.first and collection.products.first.images != empty -%}
-                                        {%- assign collection_image = collection.products.first.featured_image -%}
-                                      {%- else -%}
-                                        {%- assign collection_image = blank -%}
-                                      {%- endif -%}
-                                    <img src="{{ collection_image | img_url: 'medium' }}" alt="{{ collection.title | escape }}">
-                                    <h5 class="cat-title">{{ collection.title }}</h5>
-                                </a>
-                            </div> 
+                        {% if count == totalitems %}
+                            </div></div> 
+                            {% assign count = 1 %}  
+                        {% elsif forloop.length == loopcount %}
+                            </div></div>
+                            {% assign count = count | plus: 1 %} 
+                        {% else %}
+                            {% assign count = count | plus: 1 %}
                         {% endif %}
-                    </div>
+
                     {% endfor %}  
-                </div>
-            </div>
           
         </div>
     </div>
@@ -72,7 +70,16 @@
             "type": "collection_list",
             "id": "featured_cat_collection",
             "label": "Collection"
-        }
+        },
+        {
+            "type": "range",
+            "id": "list_per_slider",
+            "min": 4,
+            "max": 12,
+            "step": 1,
+            "default": 4,
+            "label": "Iteam Per Slider"
+          }
     ],
     "presets": [
         {
