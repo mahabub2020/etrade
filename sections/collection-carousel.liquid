@@ -6,10 +6,12 @@
         <div class="slider-section-title section-title-border">
         {% if section.settings.sub_title != '' %}
             <span class="title-highlighter highlighter-secondary"> {{ section.settings.sub_title_icon }} {{ section.settings.sub_title }}</span>
-        {% endif%}  
+        {% endif %}  
+
         {% if section.settings.section_title != '' %}
           <h2 class="title">{{ section.settings.section_title }}</h2>
-        {% endif%}   
+        {% endif %}   
+
         </div> 
       </div>
 
@@ -45,7 +47,7 @@
     "settings": [ 
 
         {
-            "type": "text",
+            "type": "inline_richtext",
             "id": "sub_title_icon",
             "default": "<i class='fas fa-tags'></i>",
             "label": "Before Icon"
