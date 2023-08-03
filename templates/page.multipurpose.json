@@ -86,9 +86,12 @@
           "beauty",
           "frontpage",
           "kids",
+          "baby",
+          "garden",
+          "accessories",
+          "banner-popup",
           "mens",
-          "womens",
-          "baby"
+          "womens"
         ],
         "list_per_slider": 10
       }
