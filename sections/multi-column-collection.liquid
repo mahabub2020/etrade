@@ -5,14 +5,25 @@
                 <h2 class="title">{{ section.settings.section_title }}</h2>
             </div> 
         {% endif%}  
+
         <div class="categrie-product-activation-4 slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
-            <div class="slick-single-layout">
-                <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2">  
-                    {% for collection in section.settings.featured_cat_collection %}
-                        <div class="col">
+            
+            {%- liquid 
+            assign count = 1  
+            assign totalitems = section.settings.list_per_slider
+            assign loopcount = 0
+             -%} 
+            {% for collection in section.settings.featured_cat_collection %}
+                {% assign loopcount = loopcount | plus: 1 %} 
+                {% if count == 1 %}
+                    <div class="slick-single-layout">
+                    <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
+                {% endif %}
+
+                    <div class="col">
                         {% if collection.all_products_count > 0 %} 
                             <div class="categrie-product categrie-product-4">
-                                <a href="{{ collection.url }}" class="cate-thumb">
+                                <a href="{{ collection.url | escape }}" class="cate-thumb">
                                     {%- if collection.image -%}
                                         {%- assign collection_image = collection.image -%}
                                       {%- elsif collection.products.first and collection.products.first.images != empty -%}
@@ -20,37 +31,24 @@
                                       {%- else -%}
                                         {%- assign collection_image = blank -%}
                                       {%- endif -%}
-                                    <img src="{{ collection_image | img_url: 'medium' }}" alt="{{ collection.title | escape }}">
-                                    <h5 class="cat-title">{{ collection.title }}</h5>
+                                    <img src="{{ collection_image | img_url: '190x246' }}" alt="{{ collection.title | escape }}">
+                                    <h5 class="cat-title">{{ collection.title | escape  }}</h5>
+ 
                                 </a>
                             </div> 
                         {% endif %}
                     </div>
-                    {% endfor %}  
-                </div>
-            </div> <div class="slick-single-layout">
-                <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2">  
-                    {% for collection in section.settings.featured_cat_collection %}
-                        <div class="col">
-                        {% if collection.all_products_count > 0 %} 
-                            <div class="categrie-product categrie-product-4">
-                                <a href="{{ collection.url }}" class="cate-thumb">
-                                    {%- if collection.image -%}
-                                        {%- assign collection_image = collection.image -%}
-                                      {%- elsif collection.products.first and collection.products.first.images != empty -%}
-                                        {%- assign collection_image = collection.products.first.featured_image -%}
-                                      {%- else -%}
-                                        {%- assign collection_image = blank -%}
-                                      {%- endif -%}
-                                    <img src="{{ collection_image | img_url: 'medium' }}" alt="{{ collection.title | escape }}">
-                                    <h5 class="cat-title">{{ collection.title }}</h5>
-                                </a>
-                            </div> 
+                        {% if count == totalitems %}
+                            </div></div> 
+                            {% assign count = 1 %}  
+                        {% elsif forloop.length == loopcount %}
+                            </div></div>
+                            {% assign count = count | plus: 1 %} 
+                        {% else %}
+                            {% assign count = count | plus: 1 %}
                         {% endif %}
-                    </div>
+
                     {% endfor %}  
-                </div>
-            </div>
           
         </div>
     </div>
@@ -72,7 +70,72 @@
             "type": "collection_list",
             "id": "featured_cat_collection",
             "label": "Collection"
-        }
+        },
+        {
+            "type": "range",
+            "id": "list_per_slider",
+            "min": 1,
+            "max": 10,
+            "step": 1,
+            "default":10,
+            "label": "Iteam Per Slider"
+          }, 
+          {
+            "type": "header",
+            "content": "Large/Desktop Device"
+          },
+          {
+            "type": "range",
+            "id": "col_xl",
+            "min": 1,
+            "max": 12,
+            "step": 1,
+            "label": "Responsive Columns",
+            "unit": "px",
+            "default": 5
+          },
+          {
+            "type": "header",
+            "content": "Laptop/Desktop Device"
+          },
+          {
+            "type": "range",
+            "id": "col_lg",
+            "min": 1,
+            "max": 12,
+            "step": 1,
+            "label": "Responsive Columns",
+            "unit": "px",
+            "default": 5
+          },
+          {
+            "type": "header",
+            "content": "Tablet Device"
+          },
+          {
+            "type": "range",
+            "id": "col_md",
+            "min": 1,
+            "max": 12,
+            "step": 1,
+            "label": "Responsive Columns",
+            "unit": "px",
+            "default": 3
+          },
+          {
+            "type": "header",
+            "content": "Mobile Device"
+          },
+          {
+            "type": "range",
+            "id": "col_sm",
+            "min": 1,
+            "max": 12,
+            "step": 1,
+            "label": "Responsive Columns",
+            "unit": "px",
+            "default": 2
+          }
     ],
     "presets": [
         {

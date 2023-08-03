@@ -58,22 +58,68 @@
     "073c0303-e328-46b3-89b6-4c497a5dca2d": {
       "type": "multi-column-collection",
       "settings": {
-        "title": "Multi Collection",
+        "section_title": "Featured Categories",
         "featured_cat_collection": [
           "baby",
           "beauty",
           "garden",
           "kids",
           "mens",
-          "womens"
+          "womens",
+          "banner-popup",
+          "frontpage"
         ],
+        "list_per_slider": 6,
+        "col_xl": 6,
+        "col_lg": 5,
+        "col_md": 3,
+        "col_sm": 2
+      }
+    },
+    "d63e8306-d128-4c5b-8fe8-fe046e913d44": {
+      "type": "collection-carousel",
+      "settings": {
+        "collection_style": "cat_style_3",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "sub_title": "Before Titlerrr",
+        "section_title": "Featured Categoriesrrr",
+        "featured_cat_collection": [
+          "beauty",
+          "frontpage",
+          "kids",
+          "baby",
+          "garden",
+          "accessories",
+          "banner-popup",
+          "womens",
+          "mens"
+        ]
+      }
+    },
+    "7a04f983-4a56-49e2-adea-3dc12febc95d": {
+      "type": "product-collection",
+      "settings": {
+        "title": "Product Collection",
+        "btn-label": "",
+        "product_collection": "banner-popup",
         "number_of_products_to_show": 4
+      }
+    },
+    "857ac431-475d-46e9-b24a-9d2b752c9eae": {
+      "type": "section-best-deals",
+      "settings": {
+        "section_title": "Life is More Than Sunglasses and Hit Movies.",
+        "section_btn_txt": "View All Deals",
+        "section_btn_url": ""
       }
     }
   },
   "order": [
     "template",
     "96a34184-394f-421e-ac79-3f2660c2aa80",
-    "073c0303-e328-46b3-89b6-4c497a5dca2d"
+    "073c0303-e328-46b3-89b6-4c497a5dca2d",
+    "d63e8306-d128-4c5b-8fe8-fe046e913d44",
+    "7a04f983-4a56-49e2-adea-3dc12febc95d",
+    "857ac431-475d-46e9-b24a-9d2b752c9eae"
   ]
 }
