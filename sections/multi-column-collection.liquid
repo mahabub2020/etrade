@@ -17,7 +17,7 @@
                 {% assign loopcount = loopcount | plus: 1 %} 
                 {% if count == 1 %}
                     <div class="slick-single-layout">
-                    <div class="row row-cols-lg-5 row-cols-sm-3 row-cols-2">  
+                    <div class="row row-cols-lg-{{ section.settings.col_xl }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
                 {% endif %}
 
                     <div class="col">
@@ -79,6 +79,49 @@
             "step": 1,
             "default":10,
             "label": "Iteam Per Slider"
+          },
+
+          {
+            "type": "header",
+            "content": "Large/Desktop Device"
+          },
+          {
+            "type": "range",
+            "id": "col_xl",
+            "min": 1,
+            "max": 12,
+            "step": 5,
+            "label": "Responsive Columns",
+            "unit": "px",
+            "default": 5
+          },
+          {
+            "type": "header",
+            "content": "Tablet Device"
+          },
+          {
+            "type": "range",
+            "id": "col_md",
+            "min": 1,
+            "max": 12,
+            "step": 1,
+            "label": "Responsive Columns",
+            "unit": "px",
+            "default": 3
+          },
+          {
+            "type": "header",
+            "content": "Mobile Device"
+          },
+          {
+            "type": "range",
+            "id": "col_sm",
+            "min": 1,
+            "max": 12,
+            "step": 1,
+            "label": "Responsive Columns",
+            "unit": "px",
+            "default": 2
           }
     ],
     "presets": [
