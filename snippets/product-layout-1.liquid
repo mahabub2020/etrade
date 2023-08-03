@@ -1,0 +1,9 @@
+<div class="product-area pb--20 border-off style-8">
+  <div class="row row--15">
+    {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
+      <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
+        {% render 'product', product: product %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -23,15 +23,11 @@
     {% endif %}
 
   </div>
-  <div class="product-area pb--20 border-off style-8">
-    <div class="row row--15">
-      {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
-        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
-          {% render 'product', product: product %}
-        </div>
-      {% endfor %}
-    </div>
-  </div>
+  {% if section.settings.product-layout == '1' %}
+    {% render 'prodcut-layout-1' %}
+  {% elsif section.settings.product-layout == '2' %}
+    {% render 'prodcut-layout-2' %}
+  {% endif %}
 </div>
 
 {% schema %}
@@ -43,15 +39,18 @@
         "id": "title",
         "default": "Product Collection",
         "label": "Title"
-      }, {
+      },
+      {
         "type": "text",
         "id": "btn-label",
         "label": "View All Button Text"
-      }, {
+      },
+      {
         "type": "collection",
         "id": "product_collection",
         "label": "Collection"
-      }, {
+      },
+      {
         "type": "range",
         "id": "number_of_products_to_show",
         "min": 4,
@@ -59,6 +58,19 @@
         "step": 1,
         "default": 4,
         "label": "Number of products to show"
+      }, {
+        "type": "select",
+        "id": "product-layout",
+        "label": "Product Collection Layout",
+        "options": [
+          {
+            "label": "Product Collection Layout 1",
+            "value": "1"
+          }, {
+            "label": "Product Collection Layout 2",
+            "value": "2"
+          }
+        ]
       }
     ],
     "presets": [
