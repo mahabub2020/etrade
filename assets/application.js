@@ -20,7 +20,7 @@ $(document).ready(function(){
         $('.cart-count').html(cart.item_count);
 
         const cartDrawer = await fetch("/?section_id=mini-cart");
-        const cartDrawerHTML = await cartDrawer.html();
+        const cartDrawerHTML = await cartDrawer.text();
         console.log(cartDrawerHTML);
         $('.cart-dropdown').addClass('open');
     })
