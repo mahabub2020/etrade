@@ -16,7 +16,7 @@
       <div class="view-btn">
         <a
           class="title-view-link"
-          href="##"
+          href="#"
           target="_self"
           rel="nofollow">{{ section.settings.btn-label }}</a>
       </div>
@@ -24,9 +24,9 @@
 
   </div>
   {% if section.settings.product-layout == '1' %}
-    {% render 'prodcut-layout-1' %}
+    {% include 'prodcut-layout-1' %}
   {% elsif section.settings.product-layout == '2' %}
-    {% render 'prodcut-layout-2' %}
+    {% include 'prodcut-layout-2' %}
   {% endif %}
 </div>
 
