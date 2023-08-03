@@ -27,10 +27,7 @@
                     {% endif %}
 
                     <div class="remove-wrapper">
-                      <a
-                        href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0"
-                        class="close-btn remove remove_from_cart_button"
-                        aria-label="Remove this item">
+                      <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0"class="close-btn remove remove_from_cart_button"aria-label="Remove this item">
                         <i class="fas fa-times"></i>
                       </a>
                     </div>
@@ -43,7 +40,7 @@
                     <div class="item-price">
                       <span class="quantity">{{ item.quantity }}
                         <i class="fas fa-times"></i>
-                        <span class="woocommerce-Price-amount amount">{{ item.line_price | money }}</span>
+                        <span class="woocommerce-Price-amount amount">{{ item.price | money }}</span>
                       </span>
                     </div>
                   </div>
