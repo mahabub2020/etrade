@@ -18,6 +18,10 @@ $(document).ready(function(){
         const res = await fetch("/cart.json");
         const cart = await res.json();
         $('.cart-count').html(cart.item_count);
+
+        const cartDrawer = await fetch("/?section_id=mini-cart");
+        const cartDrawerHTML = await cartDrawer.html();
+        console.log(cartDrawerHTML);
         $('.cart-dropdown').addClass('open');
     })
 
