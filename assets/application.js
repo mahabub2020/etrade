@@ -22,7 +22,7 @@ $(document).ready(function(){
 
         const cartDrawer = await fetch("/?section_id=mini-cart");
         const cartDrawerHTML = await cartDrawer.text();
-        $('.cart-dropdown').html(cartDrawerHTML);
+        $('.cart-body-wrp').html(cartDrawerHTML);
         $('.cart-dropdown').addClass('open');
     })
 
