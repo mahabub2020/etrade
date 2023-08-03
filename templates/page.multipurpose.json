@@ -65,8 +65,11 @@
           "garden",
           "kids",
           "mens",
-          "womens"
-        ]
+          "womens",
+          "banner-popup",
+          "frontpage"
+        ],
+        "list_per_slider": 4
       }
     },
     "7a04f983-4a56-49e2-adea-3dc12febc95d": {
