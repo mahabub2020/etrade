@@ -79,7 +79,7 @@
     "d63e8306-d128-4c5b-8fe8-fe046e913d44": {
       "type": "collection-carousel",
       "settings": {
-        "sub_title_icon": "",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "sub_title": "Before Title",
         "section_title": "Featured Categories",
         "featured_cat_collection": [
