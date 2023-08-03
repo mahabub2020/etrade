@@ -1,0 +1,88 @@
+
+<!-- Start Categorie Area  -->
+<div class="axil-categorie-area bg-color-white axil-section-gapcommon">
+  <div class="container">
+      <div class="section-title-wrapper">
+        <div class="slider-section-title section-title-border">
+        {% if section.settings.sub_title != '' %}
+            <span class="title-highlighter highlighter-secondary"> {{ section.settings.sub_title_icon }} {{ section.settings.sub_title }}</span>
+        {% endif%}  
+        {% if section.settings.section_title != '' %}
+          <h2 class="title">{{ section.settings.section_title }}</h2>
+        {% endif%}   
+        </div> 
+      </div>
+
+      <div class="categrie-product-activation slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide">
+        {% for collection in section.settings.featured_cat_collection %}
+          {% if collection.all_products_count > 0 %} 
+            <div class="slick-single-layout">
+                <div class="categrie-product"> 
+                  <a href="{{ collection.url }}">
+                    {%- if collection.image -%}
+                        {%- assign collection_image = collection.image -%}
+                      {%- elsif collection.products.first and collection.products.first.images != empty -%}
+                        {%- assign collection_image = collection.products.first.featured_image -%}
+                      {%- else -%}
+                        {%- assign collection_image = blank -%}
+                      {%- endif -%}
+                    <img src="{{ collection_image | img_url: 'medium' }}" alt="{{ collection.title | escape }}">
+                    <h5 class="cat-title">{{ collection.title }}</h5> 
+                </a> 
+                </div>
+                <!-- End .categrie-product -->
+            </div>
+            {% endif %} 
+          {% endfor %} 
+      </div>
+  </div>
+</div>
+<!-- End Categorie Area  -->  
+
+{% schema %}
+{
+    "name": "Collection Carousel",
+    "settings": [ 
+
+        {
+            "type": "text",
+            "id": "sub_title_icon",
+            "default": "<i class='fas fa-tags'></i>",
+            "label": "Before Icon"
+        }, 
+        {
+            "type": "text",
+            "id": "sub_title",
+            "default": "Before Title",
+            "label": "Before Title"
+        },
+        {
+            "type": "text",
+            "id": "section_title",
+            "default": "Featured Categories",
+            "label": "Title"
+        },
+        {
+            "type": "collection_list",
+            "id": "featured_cat_collection",
+            "label": "Collection"
+        },
+        {
+            "type": "range",
+            "id": "list_per_slider",
+            "min": 1,
+            "max": 10,
+            "step": 1,
+            "default":10,
+            "label": "Iteam Per Slider"
+          }
+         
+    ],
+    "presets": [
+        {
+            "name": "Collection Carousel"
+        }
+    ]
+}
+{% endschema %}
+ 
