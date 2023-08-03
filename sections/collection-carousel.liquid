@@ -15,7 +15,7 @@
           {% if collection.all_products_count > 0 %} 
             <div class="slick-single-layout">
                 <div class="categrie-product"> 
-                  <a href="{{ collection.url }}">
+                  <a href="{{ collection.url | escape }}">
                     {%- if collection.image -%}
                         {%- assign collection_image = collection.image -%}
                       {%- elsif collection.products.first and collection.products.first.images != empty -%}
@@ -23,8 +23,8 @@
                       {%- else -%}
                         {%- assign collection_image = blank -%}
                       {%- endif -%}
-                    <img src="{{ collection_image | img_url: 'medium' }}" alt="{{ collection.title | escape }}">
-                    <h5 class="cat-title">{{ collection.title }}</h5> 
+                    <img src="{{ collection_image | img_url: '64x64' }}" alt="{{ collection.title | escape }}">
+                    <h5 class="cat-title">{{ collection.title | escape }}</h5> 
                 </a> 
                 </div>
                 <!-- End .categrie-product -->
