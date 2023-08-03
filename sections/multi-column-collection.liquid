@@ -17,7 +17,7 @@
                 {% assign loopcount = loopcount | plus: 1 %} 
                 {% if count == 1 %}
                     <div class="slick-single-layout">
-                    <div class="row row-cols-lg-{{ section.settings.col_xl }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
+                    <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
                 {% endif %}
 
                     <div class="col">
@@ -87,6 +87,20 @@
           {
             "type": "range",
             "id": "col_xl",
+            "min": 1,
+            "max": 12,
+            "step": 1,
+            "label": "Responsive Columns",
+            "unit": "px",
+            "default": 5
+          },
+          {
+            "type": "header",
+            "content": "Laptop/Desktop Device"
+          },
+          {
+            "type": "range",
+            "id": "col_lg",
             "min": 1,
             "max": 12,
             "step": 1,
