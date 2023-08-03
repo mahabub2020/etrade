@@ -32,7 +32,7 @@
                     {% endif %}
 
                     <div class="remove-wrapper">
-                      <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0"class="close-btn remove remove_from_cart_button"aria-label="Remove this item">
+                      <a href="{{ item.url_to_remove }}"class="close-btn remove remove_from_cart_button"aria-label="Remove this item">
                         <i class="fas fa-times"></i>
                       </a>
                     </div>
