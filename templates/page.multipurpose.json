@@ -70,7 +70,8 @@
           "frontpage"
         ],
         "list_per_slider": 6,
-        "col_xl": 12,
+        "col_xl": 6,
+        "col_lg": 5,
         "col_md": 3,
         "col_sm": 2
       }
