@@ -3,6 +3,8 @@
         "template": {
             "type": "cart"
         }
-    },
-    "order": ["template"]
+      },
+  "order": [
+    "template"
+  ]
 }
