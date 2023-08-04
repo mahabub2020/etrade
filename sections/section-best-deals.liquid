@@ -31,20 +31,20 @@
                   <span class="price">{{ block.settings.box_prices }}</span>
                 {% endif %} 
               </div> 
-              {% if section.settings.section_btn_txt != '' %} 
+              {% if block.settings.section_btn_txt != '' %} 
                 <div class="shop-btn">
-                  <a href="{{ section.settings.block_btn_url | escape }}" class="axil-btn btn-bg-primary btn-size-md"
-                    ><i class="far fa-shopping-cart"></i> {{ section.settings.block_btn_txt | escape }}</a
+                  <a href="{{ block.settings.block_btn_url | escape }}" class="axil-btn btn-bg-primary btn-size-md"
+                    ><i class="far fa-shopping-cart"></i> {{ block.settings.block_btn_txt | escape }}</a
                   >
                 </div> 
               {% endif %} 
               
             </div>
-            {% if section.settings.box_img != '' %}   
+            {% if block.settings.box_img != '' %}   
             <div class="collection-thumbnail">
               <img
-                src="{{ section.settings.box_img | img_url: '830x550' }}"
-                alt="{{ section.settings.box_img.alt | default: shop.name }}">
+                src="{{ block.settings.box_img | img_url: '830x550' }}"
+                alt="{{ block.settings.box_img.alt | default: shop.name }}">
   
             </div> 
           {% endif %} 
