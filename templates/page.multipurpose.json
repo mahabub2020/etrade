@@ -102,11 +102,34 @@
         "title": "Product Collection",
         "btn-label": "",
         "product_collection": "banner-popup",
-        "number_of_products_to_show": 4
+        "number_of_products_to_show": 4,
+        "product-layout": "1"
       }
     },
     "857ac431-475d-46e9-b24a-9d2b752c9eae": {
       "type": "section-best-deals",
+      "blocks": {
+        "886b924e-74e1-4cdd-984d-42b5b4d4236f": {
+          "type": "dealslg",
+          "settings": {
+            "box_title": "Decorative Plant For Home",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "box_img": "shopify:\/\/shop_images\/collection_5.jpg",
+            "block_btn_txt": "View All Dealsw",
+            "block_btn_url": "shopify:\/\/products\/kalrez®-spectrum™-6376",
+            "popup_product": "",
+            "plus_icon_active": false,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4
+          }
+        }
+      },
+      "block_order": [
+        "886b924e-74e1-4cdd-984d-42b5b4d4236f"
+      ],
       "settings": {
         "section_title": "Life is More Than Sunglasses and Hit Movies.",
         "section_btn_txt": "View All Deals",
