@@ -131,7 +131,7 @@
   "max_blocks": 5,
   "blocks": [
     {
-      "type": "deals",
+      "type": "dealslg",
       "name": "Deals Block lg",
       "settings": [
         {
@@ -234,12 +234,9 @@
           "default": 4
         }
       ]
-    }
-  ],
-
-  "blocks": [
+    },
     {
-      "type": "deals",
+      "type": "dealssm",
       "name": "Deals Block SM",
       "settings": [
         {
@@ -266,6 +263,7 @@
           "id": "box_img",
           "label": "Box Image"
         },
+
         {
           "type": "text",
           "id": "section_btn_txt",
@@ -277,7 +275,6 @@
           "id": "section_btn_url",
           "label": "URL"
         },
-
         {
           "type": "product",
           "id": "popup_product",
@@ -344,15 +341,17 @@
       ]
     }
   ],
+
   "presets": [
     {
       "name": "Section Best Deals",
+     
       "blocks": [
         {
-          "type": "deals"
+          "type": "dealslg"
         },
         {
-          "type": "deals"
+          "type": "dealssm"
         }
       ]
     }
