@@ -129,74 +129,74 @@
                   </tbody>
                 </table>
               </div>
-            </form>
-            <div class="row">
-              <div class="col-xl-5 col-lg-7 offset-xl-7 offset-lg-5">
-                <div class="axil-order-summery mt--80">
-                  <div class="cart-collaterals">
-                    <div class="cart_totals ">
-                      <h5 class="title mb--20">Cart totals</h5>
-                      <div class="summery-table-wrap">
-                        <table class="table summery-table mb--30 shop_table shop_table_responsive">
-                          <tbody>
-                            <tr class="cart-subtotal">
-                              <th>Subtotal</th>
-                              <td data-title="Subtotal">
-                                <span class="woocommerce-Price-amount amount">{{ cart.total_price | money }}</span>
-                              </td>
-                            </tr>
-                            <tr class="woocommerce-shipping-totals shipping">
-                              <th>Shipping</th>
-                              <td data-title="Shipping">
-                                <ul id="shipping_method" class="woocommerce-shipping-methods">
-                                  <li>
-                                    <input
-                                      type="radio"
-                                      name="shipping_method[0]"
-                                      data-index="0"
-                                      id="shipping_method_0_flat_rate1"
-                                      value="flat_rate:1"
-                                      class="shipping_method"
-                                      checked="checked"><label for="shipping_method_0_flat_rate1">Flat rate</label>
-                                  </li>
-                                  <li>
-                                    <input
-                                      type="radio"
-                                      name="shipping_method[0]"
-                                      data-index="0"
-                                      id="shipping_method_0_free_shipping2"
-                                      value="free_shipping:2"
-                                      class="shipping_method"><label for="shipping_method_0_free_shipping2">Free shipping</label>
-                                  </li>
-                                </ul>
-                                <p class="woocommerce-shipping-destination">
-                                  Shipping to
-                                  <strong>Dhaka</strong>.
-                                </p>
-                              </td>
-                            </tr>
-                            <tr class="order-total">
-                              <th>Total</th>
-                              <td class="order-total-amount" data-title="Total">
-                                <strong>
+              <div class="row">
+                <div class="col-xl-5 col-lg-7 offset-xl-7 offset-lg-5">
+                  <div class="axil-order-summery mt--80">
+                    <div class="cart-collaterals">
+                      <div class="cart_totals ">
+                        <h5 class="title mb--20">Cart totals</h5>
+                        <div class="summery-table-wrap">
+                          <table class="table summery-table mb--30 shop_table shop_table_responsive">
+                            <tbody>
+                              <tr class="cart-subtotal">
+                                <th>Subtotal</th>
+                                <td data-title="Subtotal">
                                   <span class="woocommerce-Price-amount amount">{{ cart.total_price | money }}</span>
-                                </strong>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="wc-proceed-to-checkout">
-                        <button
-                          type="submit"
-                          name="checkout"
-                          class="axil-btn checkout-btn checkout-button button alt">Checkout</button>
+                                </td>
+                              </tr>
+                              <tr class="woocommerce-shipping-totals shipping">
+                                <th>Shipping</th>
+                                <td data-title="Shipping">
+                                  <ul id="shipping_method" class="woocommerce-shipping-methods">
+                                    <li>
+                                      <input
+                                        type="radio"
+                                        name="shipping_method[0]"
+                                        data-index="0"
+                                        id="shipping_method_0_flat_rate1"
+                                        value="flat_rate:1"
+                                        class="shipping_method"
+                                        checked="checked"><label for="shipping_method_0_flat_rate1">Flat rate</label>
+                                    </li>
+                                    <li>
+                                      <input
+                                        type="radio"
+                                        name="shipping_method[0]"
+                                        data-index="0"
+                                        id="shipping_method_0_free_shipping2"
+                                        value="free_shipping:2"
+                                        class="shipping_method"><label for="shipping_method_0_free_shipping2">Free shipping</label>
+                                    </li>
+                                  </ul>
+                                  <p class="woocommerce-shipping-destination">
+                                    Shipping to
+                                    <strong>Dhaka</strong>.
+                                  </p>
+                                </td>
+                              </tr>
+                              <tr class="order-total">
+                                <th>Total</th>
+                                <td class="order-total-amount" data-title="Total">
+                                  <strong>
+                                    <span class="woocommerce-Price-amount amount">{{ cart.total_price | money }}</span>
+                                  </strong>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="wc-proceed-to-checkout">
+                          <button
+                            type="submit"
+                            name="checkout"
+                            class="axil-btn checkout-btn checkout-button button alt">Checkout</button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
