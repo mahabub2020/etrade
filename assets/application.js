@@ -24,6 +24,15 @@ $(document).ready(function(){
         const cartDrawerHTML = await cartDrawer.text();
         $('.cart-body-wrp').html(cartDrawerHTML);
         $('.cart-dropdown').addClass('open');
-    })
+    });
+
+    // Cart item quantity change
+    $('.quantity-plus').on('click', function() {
+        $('.input-text.qty').trigger('stepUp').trigger('change');
+    });
+
+    $('.quantity-minus').on('click', function() {
+        $('.input-text.qty').trigger('stepDown').trigger('change');
+    });
 
 });

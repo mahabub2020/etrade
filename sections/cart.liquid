@@ -119,21 +119,10 @@
                           <div class="update-btn">
                             <button
                               type="submit"
-                              class="button axil-btn btn-outline"
-                              name="update_cart"
-                              value="Update cart"
-                              disabled="">Update cart</button>
+                              name="update"
+                              class="button axil-btn btn-outline">Update cart</button>
                           </div>
                         </div>
-
-                        <input
-                          type="hidden"
-                          id="woocommerce-cart-nonce"
-                          name="woocommerce-cart-nonce"
-                          value="d9f9bddbfd"><input
-                          type="hidden"
-                          name="_wp_http_referer"
-                          value="/themes/etrade/cart/">
                       </td>
                     </tr>
 
@@ -146,13 +135,9 @@
                 <div class="axil-order-summery mt--80">
                   <div class="cart-collaterals">
                     <div class="cart_totals ">
-
-
                       <h5 class="title mb--20">Cart totals</h5>
                       <div class="summery-table-wrap">
-
                         <table class="table summery-table mb--30 shop_table shop_table_responsive">
-
                           <tbody>
                             <tr class="cart-subtotal">
                               <th>Subtotal</th>
@@ -160,9 +145,6 @@
                                 <span class="woocommerce-Price-amount amount">{{ cart.total_price | money }}</span>
                               </td>
                             </tr>
-
-
-
                             <tr class="woocommerce-shipping-totals shipping">
                               <th>Shipping</th>
                               <td data-title="Shipping">
@@ -191,13 +173,8 @@
                                   Shipping to
                                   <strong>Dhaka</strong>.
                                 </p>
-
-
                               </td>
                             </tr>
-
-
-
                             <tr class="order-total">
                               <th>Total</th>
                               <td class="order-total-amount" data-title="Total">
@@ -206,8 +183,6 @@
                                 </strong>
                               </td>
                             </tr>
-
-
                           </tbody>
                         </table>
                       </div>
