@@ -86,7 +86,7 @@
                         </td>
 
                         <td class="product-subtotal" data-title="Subtotal">
-                          <span class="woocommerce-Price-amount amount">{{ item.line_price }}</span>
+                          <span class="woocommerce-Price-amount amount">{{ item.line_price | money }}</span>
                         </td>
                       </tr>
                     {% endfor %}
