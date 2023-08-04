@@ -11,32 +11,48 @@
       {% endif %}
     </div>
 
-    <div class="row">
-      <div class="col-xl-7">
-        <div class="product-collection product-collection-two">
-          <div class="collection-content">
-            <h3 class="title">
-              Decorative Plant <br>
-              For Home
-            </h3>
-            <div class="price-warp">
-              <span class="price-text">Starting From</span>
-              <span class="price">$35.00</span>
+      <div class="row">
+        {% for block in section.blocks %}  
+        {% case block.type %}
+        {% when 'dealslg' %}
+
+        <div class="col-xl-7">
+          <div class="product-collection product-collection-two">
+            <div class="collection-content"> 
+              {% if block.settings.box_title != '' %}
+                <h3 class="title">{{ block.settings.box_title }}</h3>
+              {% endif %} 
+
+              <div class="price-warp">
+                {% if block.settings.prices_label != '' %} 
+                  <span class="price-text">{{ block.settings.prices_label }}</span>
+                {% endif %}  
+                {% if block.settings.box_prices != '' %} 
+                  <span class="price">{{ block.settings.box_prices }}</span>
+                {% endif %} 
+              </div> 
+              {% if section.settings.section_btn_txt != '' %} 
+                <div class="shop-btn">
+                  <a href="{{ section.settings.block_btn_url | escape }}" class="axil-btn btn-bg-primary btn-size-md"
+                    ><i class="far fa-shopping-cart"></i> {{ section.settings.block_btn_txt | escape }}</a
+                  >
+                </div> 
+              {% endif %} 
+              
             </div>
-            <div class="shop-btn">
-              <a href="shop.html" class="axil-btn btn-bg-primary btn-size-md"
-                ><i class="far fa-shopping-cart"></i> View All Items</a
-              >
-            </div>
-            <div class="plus-btn">
-              <a href="#" class="plus-icon"><i class="far fa-plus"></i></a>
-            </div>
-          </div>
-          <div class="collection-thumbnail">
-            <img src="assets/images/product/collection_5.jpg" alt="Mega Collection">
+            {% if section.settings.box_img != '' %}   
+            <div class="collection-thumbnail">
+              <img
+                src="{{ section.settings.box_img | img_url: '830x550' }}"
+                alt="{{ section.settings.box_img.alt | default: shop.name }}">
+  
+            </div> 
+          {% endif %} 
           </div>
         </div>
-      </div>
+      {% endcase %} 
+    {% endfor %}
+
       <div class="col-xl-5">
         <div class="row">
           <div class="col-md-6">
@@ -161,13 +177,13 @@
 
         {
           "type": "text",
-          "id": "section_btn_txt",
+          "id": "block_btn_txt",
           "label": "Button Text",
           "default": "View All Deals"
         },
         {
           "type": "url",
-          "id": "section_btn_url",
+          "id": "block_btn_url",
           "label": "URL"
         },
         {
@@ -249,7 +265,7 @@
           "type": "text",
           "id": "prices_label",
           "default": "Starting From",
-          "label": "prices abel"
+          "label": "prices label"
         },
         {
           "type": "text",
