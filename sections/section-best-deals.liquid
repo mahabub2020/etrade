@@ -6,37 +6,51 @@
       {% endif %}
       {% if section.settings.section_btn_txt != '' %}
         <div class="view-btn">
-          <a href="{{ section.settings.section_btn_url | escape }}">{{ section.settings.section_title | escape }}</a>
+          <a href="{{ section.settings.section_btn_url | escape }}">{{ section.settings.section_btn_txt | escape }}</a>
         </div>
       {% endif %}
     </div>
 
-    <div class="row">
-      <div class="col-xl-7">
-        <div class="product-collection product-collection-two">
-          <div class="collection-content">
-            <h3 class="title">
-              Decorative Plant <br>
-              For Home
-            </h3>
-            <div class="price-warp">
-              <span class="price-text">Starting From</span>
-              <span class="price">$35.00</span>
+      <div class="row">
+        <div class="col-xl-7">
+        {% for block in section.blocks %}  
+          {% case block.type %}
+            {% when 'dealslg' %}   
+            <div class="product-collection product-collection-two">
+              <div class="collection-content"> 
+                {% if block.settings.box_title != '' %}
+                  <h3 class="title">{{ block.settings.box_title }}</h3>
+                {% endif %} 
+
+                <div class="price-warp">
+                  {% if block.settings.prices_label != '' %} 
+                    <span class="price-text">{{ block.settings.prices_label }}</span>
+                  {% endif %}  
+                  {% if block.settings.box_prices != '' %} 
+                    <span class="price">{{ block.settings.box_prices }}</span>
+                  {% endif %} 
+                </div> 
+                {% if block.settings.section_btn_txt != '' %} 
+                  <div class="shop-btn">
+                    <a href="{{ block.settings.block_btn_url | escape }}" class="axil-btn btn-bg-primary btn-size-md"
+                      ><i class="far fa-shopping-cart"></i> {{ block.settings.block_btn_txt | escape }}</a
+                    >
+                  </div> 
+                {% endif %}   
+              </div>
+              {% if block.settings.box_img != '' %}   
+              <div class="collection-thumbnail">
+                <img
+                  src="{{ block.settings.box_img | img_url: '740x400' }}"
+                  alt="{{ block.settings.box_img.alt | default: shop.name }}">
+    
+              </div> 
+            {% endif %} 
             </div>
-            <div class="shop-btn">
-              <a href="shop.html" class="axil-btn btn-bg-primary btn-size-md"
-                ><i class="far fa-shopping-cart"></i> View All Items</a
-              >
-            </div>
-            <div class="plus-btn">
-              <a href="#" class="plus-icon"><i class="far fa-plus"></i></a>
-            </div>
-          </div>
-          <div class="collection-thumbnail">
-            <img src="assets/images/product/collection_5.jpg" alt="Mega Collection">
-          </div>
-        </div>
-      </div>
+      
+        {% endcase %} 
+      {% endfor %}
+    </div>
       <div class="col-xl-5">
         <div class="row">
           <div class="col-md-6">
@@ -108,7 +122,7 @@
     {
       "type": "header",
       "content": "Section Title"
-    },
+    }, 
     {
       "type": "text",
       "id": "section_title",
@@ -121,7 +135,6 @@
       "label": "Button Text",
       "default": "View All Deals"
     },
-
     {
       "type": "url",
       "id": "section_btn_url",
@@ -129,9 +142,10 @@
     }
   ],
 
+  "max_blocks": 5,
   "blocks": [
     {
-      "type": "deals",
+      "type": "dealslg",
       "name": "Deals Block lg",
       "settings": [
         {
@@ -144,7 +158,7 @@
           "type": "text",
           "id": "prices_label",
           "default": "Starting From",
-          "label": "Prices Label"
+          "label": "prices abel"
         },
         {
           "type": "text",
@@ -161,13 +175,13 @@
 
         {
           "type": "text",
-          "id": "box_btn_txt",
+          "id": "block_btn_txt",
           "label": "Button Text",
           "default": "View All Deals"
         },
         {
           "type": "url",
-          "id": "box_btn_url",
+          "id": "block_btn_url",
           "label": "URL"
         },
         {
@@ -222,8 +236,7 @@
               "label": "Bottom"
             }
           ]
-        },
-
+        }, 
         {
           "type": "range",
           "id": "pos_y",
@@ -235,13 +248,10 @@
           "default": 4
         }
       ]
-    }
-  ],
-
-  "blocks": [
+    },
     {
-      "type": "deals",
-      "name": "Deals Block sm",
+      "type": "dealssm",
+      "name": "Deals Block SM",
       "settings": [
         {
           "type": "text",
@@ -253,7 +263,7 @@
           "type": "text",
           "id": "prices_label",
           "default": "Starting From",
-          "label": "Prices Label"
+          "label": "prices label"
         },
         {
           "type": "text",
@@ -270,13 +280,13 @@
 
         {
           "type": "text",
-          "id": "box_btn_txt",
+          "id": "section_btn_txt",
           "label": "Button Text",
           "default": "View All Deals"
         },
         {
           "type": "url",
-          "id": "box_btn_url",
+          "id": "section_btn_url",
           "label": "URL"
         },
         {
@@ -331,8 +341,7 @@
               "label": "Bottom"
             }
           ]
-        },
-
+        }, 
         {
           "type": "range",
           "id": "pos_y",
@@ -349,7 +358,16 @@
 
   "presets": [
     {
-      "name": "Section Best Deals"
+      "name": "Section Best Deals",
+     
+      "blocks": [
+        {
+          "type": "dealslg"
+        },
+        {
+          "type": "dealssm"
+        }
+      ]
     }
   ]
 }
