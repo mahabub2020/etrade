@@ -1,0 +1,230 @@
+<div class="axil-section-gap bg-color-white">
+  <div class="container">
+    <article id="post-8" class="post-8 page type-page status-publish hentry">
+      <div class="entry-content">
+        <div class="woocommerce">
+          <div class="axil-product-cart-wrap">
+            <div class="product-table-heading">
+              <h1 class="page-title h4 title">Cart</h1>
+              <a
+                href="/caer/clear"
+                class="cart-clear"
+                title="Clear Shoping Cart">Clear Shoping Cart</a>
+            </div>
+            <form
+              class="woocommerce-cart-form"
+              action="{{ routes.cart_url }}"
+              method="post"
+              novalidate>
+
+              <div class="table-responsive">
+                <table class="shop_table axil-product-table axil-cart-table shop_table_responsive cart woocommerce-cart-form__contents">
+                  <thead>
+                    <tr>
+                      <th class="product-remove">&nbsp;</th>
+                      <th class="product-thumbnail">&nbsp;</th>
+                      <th class="product-title">Product Title</th>
+                      <th class="product-price">Price</th>
+                      <th class="product-quantity">Quantity</th>
+                      <th class="product-subtotal">Subtotal</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for item in cart.items %}
+                      <tr class="woocommerce-cart-form__cart-item cart_item">
+                        <td class="product-remove">
+                          <a
+                            href="{{ item.url_to_remove }}"
+                            class="remove remove-wishlist"
+                            aria-label="Remove this item">
+                            <i class="fal fa-times"></i>
+                          </a>
+                        </td>
+
+                        <td class="product-thumbnail" data-title="Product">
+                          <a href="{{ item.url }}">
+                            {% if item.image %}
+                              <img
+                                src="{{ item.image | img_url: '300x300' }}"
+                                alt="{{ item.title | escape }}"
+                                decoding="async"
+                                loading="lazy">
+                            {% else %}
+                              {{ 'image' | placeholder_svg_tag }}
+                            {% endif %}
+                          </a>
+                        </td>
+
+                        <td class="product-title">
+                          <h6>
+                            <a href="{{ item.url }}">{{ item.title }}</a>
+                          </h6>
+                        </td>
+
+                        <td class="product-price" data-title="Price">
+                          <span class="woocommerce-Price-amount amount">{{ item.price }}</span>
+                        </td>
+
+                        <td class="product-quantity" data-title="Quantity">
+                          <div class="product-action-wrapper d-flex-center quantity">
+                            <div class="input-group-btn pro-qty mr--20">
+                              <span class="qtybtn quantity-btn quantity-plus">+</span>
+                              <input
+                                type="number"
+                                id="updates_{{ forloop.index }}"
+                                class="input-text qty text"
+                                step="1"
+                                min="0"
+                                max="999"
+                                name="updates[]"
+                                value="{{ item.quantity }}"
+                                title="Qty"
+                                inputmode="numeric">
+                              <span class=" qtybtn quantity-btn quantity-minus">-</span>
+                            </div>
+                          </div>
+                        </td>
+
+                        <td class="product-subtotal" data-title="Subtotal">
+                          <span class="woocommerce-Price-amount amount">{{ item.line_price }}</span>
+                        </td>
+                      </tr>
+                    {% endfor %}
+
+                    <tr class="cart-action">
+                      <td colspan="6" class="actions">
+                        <div class="cart-update-btn-area pt--40">
+                          <div class="input-group product-cupon coupon">
+                            <label class="d-none" for="coupon_code">Coupon:</label>
+                            <input
+                              type="text"
+                              name="coupon_code"
+                              class="input-text"
+                              id="coupon_code"
+                              value=""
+                              placeholder="Enter coupon code">
+
+                            <div class="product-cupon-btn">
+                              <button
+                                type="submit"
+                                class="button axil-btn btn-outline"
+                                name="apply_coupon"
+                                value="Apply coupon">
+                                Apply
+                              </button>
+                            </div>
+
+                          </div>
+
+                          <div class="update-btn">
+                            <button
+                              type="submit"
+                              class="button axil-btn btn-outline"
+                              name="update_cart"
+                              value="Update cart"
+                              disabled="">Update cart</button>
+                          </div>
+                        </div>
+
+                        <input
+                          type="hidden"
+                          id="woocommerce-cart-nonce"
+                          name="woocommerce-cart-nonce"
+                          value="d9f9bddbfd"><input
+                          type="hidden"
+                          name="_wp_http_referer"
+                          value="/themes/etrade/cart/">
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </form>
+            <div class="row">
+              <div class="col-xl-5 col-lg-7 offset-xl-7 offset-lg-5">
+                <div class="axil-order-summery mt--80">
+                  <div class="cart-collaterals">
+                    <div class="cart_totals ">
+
+
+                      <h5 class="title mb--20">Cart totals</h5>
+                      <div class="summery-table-wrap">
+
+                        <table class="table summery-table mb--30 shop_table shop_table_responsive">
+
+                          <tbody>
+                            <tr class="cart-subtotal">
+                              <th>Subtotal</th>
+                              <td data-title="Subtotal">
+                                <span class="woocommerce-Price-amount amount">{{ cart.total_price | money }}</span>
+                              </td>
+                            </tr>
+
+
+
+                            <tr class="woocommerce-shipping-totals shipping">
+                              <th>Shipping</th>
+                              <td data-title="Shipping">
+                                <ul id="shipping_method" class="woocommerce-shipping-methods">
+                                  <li>
+                                    <input
+                                      type="radio"
+                                      name="shipping_method[0]"
+                                      data-index="0"
+                                      id="shipping_method_0_flat_rate1"
+                                      value="flat_rate:1"
+                                      class="shipping_method"
+                                      checked="checked"><label for="shipping_method_0_flat_rate1">Flat rate</label>
+                                  </li>
+                                  <li>
+                                    <input
+                                      type="radio"
+                                      name="shipping_method[0]"
+                                      data-index="0"
+                                      id="shipping_method_0_free_shipping2"
+                                      value="free_shipping:2"
+                                      class="shipping_method"><label for="shipping_method_0_free_shipping2">Free shipping</label>
+                                  </li>
+                                </ul>
+                                <p class="woocommerce-shipping-destination">
+                                  Shipping to
+                                  <strong>Dhaka</strong>.
+                                </p>
+
+
+                              </td>
+                            </tr>
+
+
+
+                            <tr class="order-total">
+                              <th>Total</th>
+                              <td class="order-total-amount" data-title="Total">
+                                <strong>
+                                  <span class="woocommerce-Price-amount amount">{{ cart.total_price | money }}</span>
+                                </strong>
+                              </td>
+                            </tr>
+
+
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="wc-proceed-to-checkout">
+                        <button
+                          type="submit"
+                          name="checkout"
+                          class="axil-btn checkout-btn checkout-button button alt">Checkout</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
