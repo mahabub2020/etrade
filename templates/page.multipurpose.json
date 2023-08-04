@@ -126,26 +126,78 @@
             "pos_y": 4
           }
         },
-        "1498643b-8b37-40ed-86b4-b9766f0cf78f": {
-          "type": "dealslg",
+        "85bcf66d-14a9-4905-bf88-d435deec0c00": {
+          "type": "dealssm",
           "settings": {
-            "box_title": "Decorative Plant For Home",
-            "prices_label": "Starting From",
-            "box_prices": "$35.00",
-            "block_btn_txt": "View All Deals",
-            "block_btn_url": "",
-            "popup_product": "",
-            "plus_icon_active": false,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
+            "box_title_sm": "Decorative Plant For Home",
+            "prices_label_sm": "Starting From",
+            "box_prices_sm": "$35.00",
+            "box_img_sm": "shopify:\/\/shop_images\/collection_5.jpg",
+            "block_btn_txt_sm": "View All Deals",
+            "block_btn_url_sm": "",
+            "popup_product_sm": "",
+            "plus_icon_active_sm": false,
+            "pos_x_type_sm": "left",
+            "pos_x_sm": 4,
+            "pos_y_type_sm": "top",
+            "pos_y_sm": 4
+          }
+        },
+        "cf0d37af-b09e-4efd-8504-2d989d06ad67": {
+          "type": "dealssm",
+          "settings": {
+            "box_title_sm": "Decorative Plant For Home",
+            "prices_label_sm": "Starting From",
+            "box_prices_sm": "$35.00",
+            "block_btn_txt_sm": "View All Deals",
+            "block_btn_url_sm": "",
+            "popup_product_sm": "",
+            "plus_icon_active_sm": false,
+            "pos_x_type_sm": "left",
+            "pos_x_sm": 4,
+            "pos_y_type_sm": "top",
+            "pos_y_sm": 4
+          }
+        },
+        "db754547-1fe8-4d0d-b07b-59b186867cf6": {
+          "type": "dealssm",
+          "settings": {
+            "box_title_sm": "Decorative Plant For Home",
+            "prices_label_sm": "Starting From",
+            "box_prices_sm": "$35.00",
+            "block_btn_txt_sm": "View All Deals",
+            "block_btn_url_sm": "",
+            "popup_product_sm": "",
+            "plus_icon_active_sm": false,
+            "pos_x_type_sm": "left",
+            "pos_x_sm": 4,
+            "pos_y_type_sm": "top",
+            "pos_y_sm": 4
+          }
+        },
+        "fcf69a64-35e3-492f-b36b-e949e0570609": {
+          "type": "dealssm",
+          "settings": {
+            "box_title_sm": "Decorative Plant For Home",
+            "prices_label_sm": "Starting From",
+            "box_prices_sm": "$35.00",
+            "block_btn_txt_sm": "View All Deals",
+            "block_btn_url_sm": "",
+            "popup_product_sm": "",
+            "plus_icon_active_sm": false,
+            "pos_x_type_sm": "left",
+            "pos_x_sm": 4,
+            "pos_y_type_sm": "top",
+            "pos_y_sm": 4
           }
         }
       },
       "block_order": [
         "886b924e-74e1-4cdd-984d-42b5b4d4236f",
-        "1498643b-8b37-40ed-86b4-b9766f0cf78f"
+        "85bcf66d-14a9-4905-bf88-d435deec0c00",
+        "cf0d37af-b09e-4efd-8504-2d989d06ad67",
+        "db754547-1fe8-4d0d-b07b-59b186867cf6",
+        "fcf69a64-35e3-492f-b36b-e949e0570609"
       ],
       "settings": {
         "section_title": "Life is More Than Sunglasses and Hit Movies.",
