@@ -6,7 +6,7 @@
       {% endif %}
       {% if section.settings.section_btn_txt != '' %}
         <div class="view-btn">
-          <a href="{{ section.settings.section_btn_url | escape }}">{{ section.settings.section_title | escape }}</a>
+          <a href="{{ section.settings.section_btn_url | escape }}">{{ section.settings.section_btn_txt | escape }}</a>
         </div>
       {% endif %}
     </div>
@@ -108,7 +108,7 @@
     {
       "type": "header",
       "content": "Section Title"
-    },
+    }, 
     {
       "type": "text",
       "id": "section_title",
@@ -121,7 +121,6 @@
       "label": "Button Text",
       "default": "View All Deals"
     },
-
     {
       "type": "url",
       "id": "section_btn_url",
@@ -129,6 +128,7 @@
     }
   ],
 
+  "max_blocks": 5,
   "blocks": [
     {
       "type": "deals",
@@ -144,7 +144,7 @@
           "type": "text",
           "id": "prices_label",
           "default": "Starting From",
-          "label": "Prices Label"
+          "label": "prices abel"
         },
         {
           "type": "text",
@@ -161,13 +161,13 @@
 
         {
           "type": "text",
-          "id": "box_btn_txt",
+          "id": "section_btn_txt",
           "label": "Button Text",
           "default": "View All Deals"
         },
         {
           "type": "url",
-          "id": "box_btn_url",
+          "id": "section_btn_url",
           "label": "URL"
         },
         {
@@ -222,8 +222,7 @@
               "label": "Bottom"
             }
           ]
-        },
-
+        }, 
         {
           "type": "range",
           "id": "pos_y",
@@ -241,7 +240,7 @@
   "blocks": [
     {
       "type": "deals",
-      "name": "Deals Block sm",
+      "name": "Deals Block SM",
       "settings": [
         {
           "type": "text",
@@ -253,7 +252,7 @@
           "type": "text",
           "id": "prices_label",
           "default": "Starting From",
-          "label": "Prices Label"
+          "label": "prices abel"
         },
         {
           "type": "text",
@@ -267,18 +266,18 @@
           "id": "box_img",
           "label": "Box Image"
         },
-
         {
           "type": "text",
-          "id": "box_btn_txt",
+          "id": "section_btn_txt",
           "label": "Button Text",
           "default": "View All Deals"
         },
         {
           "type": "url",
-          "id": "box_btn_url",
+          "id": "section_btn_url",
           "label": "URL"
         },
+
         {
           "type": "product",
           "id": "popup_product",
@@ -331,8 +330,7 @@
               "label": "Bottom"
             }
           ]
-        },
-
+        }, 
         {
           "type": "range",
           "id": "pos_y",
@@ -346,10 +344,17 @@
       ]
     }
   ],
-
   "presets": [
     {
-      "name": "Section Best Deals"
+      "name": "Section Best Deals",
+      "blocks": [
+        {
+          "type": "deals"
+        },
+        {
+          "type": "deals"
+        }
+      ]
     }
   ]
 }
