@@ -12,47 +12,45 @@
     </div>
 
       <div class="row">
-        {% for block in section.blocks %}  
-        {% case block.type %}
-        {% when 'dealslg' %}
-
         <div class="col-xl-7">
-          <div class="product-collection product-collection-two">
-            <div class="collection-content"> 
-              {% if block.settings.box_title != '' %}
-                <h3 class="title">{{ block.settings.box_title }}</h3>
-              {% endif %} 
-
-              <div class="price-warp">
-                {% if block.settings.prices_label != '' %} 
-                  <span class="price-text">{{ block.settings.prices_label }}</span>
-                {% endif %}  
-                {% if block.settings.box_prices != '' %} 
-                  <span class="price">{{ block.settings.box_prices }}</span>
+        {% for block in section.blocks %}  
+          {% case block.type %}
+            {% when 'dealslg' %}   
+            <div class="product-collection product-collection-two">
+              <div class="collection-content"> 
+                {% if block.settings.box_title != '' %}
+                  <h3 class="title">{{ block.settings.box_title }}</h3>
                 {% endif %} 
-              </div> 
-              {% if block.settings.section_btn_txt != '' %} 
-                <div class="shop-btn">
-                  <a href="{{ block.settings.block_btn_url | escape }}" class="axil-btn btn-bg-primary btn-size-md"
-                    ><i class="far fa-shopping-cart"></i> {{ block.settings.block_btn_txt | escape }}</a
-                  >
-                </div> 
-              {% endif %} 
-              
-            </div>
-            {% if block.settings.box_img != '' %}   
-            <div class="collection-thumbnail">
-              <img
-                src="{{ block.settings.box_img | img_url: '830x550' }}"
-                alt="{{ block.settings.box_img.alt | default: shop.name }}">
-  
-            </div> 
-          {% endif %} 
-          </div>
-        </div>
-      {% endcase %} 
-    {% endfor %}
 
+                <div class="price-warp">
+                  {% if block.settings.prices_label != '' %} 
+                    <span class="price-text">{{ block.settings.prices_label }}</span>
+                  {% endif %}  
+                  {% if block.settings.box_prices != '' %} 
+                    <span class="price">{{ block.settings.box_prices }}</span>
+                  {% endif %} 
+                </div> 
+                {% if block.settings.section_btn_txt != '' %} 
+                  <div class="shop-btn">
+                    <a href="{{ block.settings.block_btn_url | escape }}" class="axil-btn btn-bg-primary btn-size-md"
+                      ><i class="far fa-shopping-cart"></i> {{ block.settings.block_btn_txt | escape }}</a
+                    >
+                  </div> 
+                {% endif %}   
+              </div>
+              {% if block.settings.box_img != '' %}   
+              <div class="collection-thumbnail">
+                <img
+                  src="{{ block.settings.box_img | img_url: '830x550' }}"
+                  alt="{{ block.settings.box_img.alt | default: shop.name }}">
+    
+              </div> 
+            {% endif %} 
+            </div>
+      
+        {% endcase %} 
+      {% endfor %}
+    </div>
       <div class="col-xl-5">
         <div class="row">
           <div class="col-md-6">
