@@ -36,7 +36,21 @@
                       ><i class="far fa-shopping-cart"></i> {{ block.settings.block_btn_txt | escape }}</a
                     >
                   </div> 
-                {% endif %}  
+                {% endif %} 
+                
+                {%- assign product = all_products[block.settings.popup_product] -%}
+
+                 <div class="plus-btn block-repeater-item-{{ block.id }} {% if block.settings.plus_icon_active %}icon-active{% endif %} axil-pos-{{ block.settings.pos_x_type }} axil-pos-{{ block.settings.pos_y_type }}">
+                     <a href="#" class="plus-icon"><i class="far fa-plus"></i></a> 
+                      
+                        <div class="plus-hover-product">   
+                          <div class="product-details">
+                              <h4 class="title"><a href="{{ product.url }}">{{ product.title }}</a></h4>
+                              <div class="price">{{ product.price }}</div>  
+                      </div>   
+                 </div>
+             </div> 
+              
                 
               </div>
               {% if block.settings.box_img %}   
@@ -164,7 +178,7 @@
         {
           "type": "product",
           "id": "popup_product",
-          "label": "Product-Handle"
+          "label": "Product Handle"
         },
         {
           "type": "checkbox",
