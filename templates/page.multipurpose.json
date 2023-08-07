@@ -120,9 +120,9 @@
             "block_btn_url": "shopify:\/\/products\/kalrez®-spectrum™-6376",
             "popup_product": "",
             "plus_icon_active": false,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
+            "pos_x_type": "right",
+            "pos_x": 100,
+            "pos_y_type": "bottom",
             "pos_y": 4
           }
         },
