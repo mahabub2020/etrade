@@ -103,7 +103,7 @@
         "btn-label": "",
         "product_collection": "banner-popup",
         "number_of_products_to_show": 4,
-        "product-layout": "1"
+        "product_layout": "1"
       }
     },
     "857ac431-475d-46e9-b24a-9d2b752c9eae": {
@@ -133,14 +133,7 @@
             "prices_label_sm": "Starting From",
             "box_prices_sm": "$35.00",
             "box_img_sm": "shopify:\/\/shop_images\/product-big-08.png",
-            "block_btn_txt_sm": "View All Deals",
-            "block_btn_url_sm": "",
-            "popup_product_sm": "",
-            "plus_icon_active_sm": false,
-            "pos_x_type_sm": "left",
-            "pos_x_sm": 4,
-            "pos_y_type_sm": "top",
-            "pos_y_sm": 4
+            "block_btn_url_sm": ""
           }
         },
         "cf0d37af-b09e-4efd-8504-2d989d06ad67": {
@@ -150,30 +143,17 @@
             "prices_label_sm": "Starting From",
             "box_prices_sm": "$35.00",
             "box_img_sm": "shopify:\/\/shop_images\/collection_5.png",
-            "block_btn_txt_sm": "View All Deals",
-            "block_btn_url_sm": "",
-            "popup_product_sm": "",
-            "plus_icon_active_sm": false,
-            "pos_x_type_sm": "left",
-            "pos_x_sm": 4,
-            "pos_y_type_sm": "top",
-            "pos_y_sm": 4
+            "block_btn_url_sm": ""
           }
         },
         "fcf69a64-35e3-492f-b36b-e949e0570609": {
           "type": "dealssm",
           "settings": {
-            "box_title_sm": "Decorative Plant For Home",
+            "box_title_sm": "Decorativeddd Plant For Homedwddsa",
             "prices_label_sm": "Starting From",
             "box_prices_sm": "$35.00",
-            "block_btn_txt_sm": "View All Deals",
-            "block_btn_url_sm": "",
-            "popup_product_sm": "",
-            "plus_icon_active_sm": false,
-            "pos_x_type_sm": "left",
-            "pos_x_sm": 4,
-            "pos_y_type_sm": "top",
-            "pos_y_sm": 4
+            "box_img_sm": "shopify:\/\/shop_images\/collection_5.png",
+            "block_btn_url_sm": "shopify:\/\/products\/malrez®-spectrum™-6375"
           }
         },
         "efde1dca-07fb-4082-9264-b368deb3cf7a": {
@@ -182,14 +162,8 @@
             "box_title_sm": "Decorative Plant For Home",
             "prices_label_sm": "Starting From",
             "box_prices_sm": "$35.00",
-            "block_btn_txt_sm": "View All Deals",
-            "block_btn_url_sm": "",
-            "popup_product_sm": "",
-            "plus_icon_active_sm": false,
-            "pos_x_type_sm": "left",
-            "pos_x_sm": 4,
-            "pos_y_type_sm": "top",
-            "pos_y_sm": 4
+            "box_img_sm": "shopify:\/\/shop_images\/collection_5.png",
+            "block_btn_url_sm": ""
           }
         }
       },
