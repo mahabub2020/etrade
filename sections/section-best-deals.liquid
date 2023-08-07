@@ -37,7 +37,7 @@
                     >
                   </div> 
                 {% endif %} 
-                
+                {% if block.settings.plus_icon_active %}
                 {%- assign product = all_products[block.settings.popup_product] -%}
 
                  <div class="plus-btn block-repeater-item-{{ block.id }} {% if block.settings.plus_icon_active %}icon-active{% endif %} axil-pos-{{ block.settings.pos_x_type }} axil-pos-{{ block.settings.pos_y_type }}">
@@ -50,7 +50,7 @@
                       </div>   
                  </div>
              </div> 
-              
+            {% endif %} 
                 
               </div>
               {% if block.settings.box_img %}   
