@@ -119,7 +119,7 @@
             "block_btn_txt": "View All Dealsw",
             "block_btn_url": "shopify:\/\/products\/kalrez®-spectrum™-6376",
             "popup_product": "kalrez®-spectrum™-6376",
-            "plus_icon_active": false,
+            "plus_icon_active": true,
             "pos_x_type": "right",
             "pos_x": 172,
             "pos_y_type": "bottom",
