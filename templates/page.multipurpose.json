@@ -112,7 +112,7 @@
         "886b924e-74e1-4cdd-984d-42b5b4d4236f": {
           "type": "dealslg",
           "settings": {
-            "box_title": "Decorative Plant <br>For Home",
+            "box_title": "Decorative <br>Plant For Home",
             "prices_label": "Starting From",
             "box_prices": "$35.00",
             "box_img": "shopify:\/\/shop_images\/collection_5.jpg",
@@ -121,7 +121,7 @@
             "popup_product": "kalrez®-spectrum™-6376",
             "plus_icon_active": true,
             "pos_x_type": "right",
-            "pos_x": 308,
+            "pos_x": 348,
             "pos_y_type": "bottom",
             "pos_y": 172
           }
