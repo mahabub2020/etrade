@@ -1,0 +1,60 @@
+<div class="axil-product product-style-five">
+  <div class="thumbnail">
+    <a href="{{ product.url }}">
+      {% if product.featured_image %}
+        <img
+          src="{{ product.featured_image | img_url: '300x300' }}"
+          class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+          alt="{{ item.title | escape }}"
+          loading="lazy">
+      {% else %}
+        {{ 'image' | placeholder_svg_tag }}
+      {% endif %}
+    </a>
+    <div class="label-block label-right">
+      <div class="product-badget">26% OFF</div>
+    </div>
+  </div>
+  <div class="product-content">
+    <div class="inner">
+      <div class="product-rating">
+        <div class="icon">
+          <div
+            class="star-rating"
+            role="img"
+            aria-label="Rated 5.00 out of 5">
+            <span style="width:100%">Rated
+              <strong class="rating">5.00</strong>
+              out of 5</span>
+          </div>
+        </div>
+        <span class="rating-number">
+          <span>
+            ( 1 )
+          </span>
+        </span>
+      </div>
+      <h5 class="title">
+        <a href="{{ product.url }}">{{ product.title }}</a>
+      </h5>
+
+      <div class="product-price-variant">
+        <div class="price">
+          <span class="woocommerce-Price-amount amount">{{ product.price | money }}</span>
+        </div>
+      </div>
+
+      <ul class="cart-action">
+        <li class="add-to-cart select-option">
+          {% form 'product', product %}
+            <input
+              type="hidden"
+              name="id"
+              value="{{ product.selected_or_first_available_variant.id }}">
+            <input type="submit" value="Add to Cart">
+          {% endform %}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

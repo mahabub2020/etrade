@@ -1,0 +1,55 @@
+<div class="axil-product product-style-seven">
+  <div class="product-content same-height-class" style="height: 196.609px;">
+    <div class="cart-btn">
+      {% form 'product', product %}
+        <input
+          type="hidden"
+          name="id"
+          value="{{ product.selected_or_first_available_variant.id }}">
+        <input type="submit"><i class="fal fa-shopping-cart"></i>
+      {% endform %}
+    </div>
+    <div class="inner">
+      <h5 class="title">
+        <a href="{{ product.url }}">{{ product.title }}</a>
+      </h5>
+
+      <div class="product-price-variant">
+        <div class="price current-price">
+          <span class="woocommerce-Price-amount amount">{{ product.price | money }}</span>
+        </div>
+      </div>
+      <div class="product-rating">
+        <div class="icon">
+          <div
+            class="star-rating"
+            role="img"
+            aria-label="Rated 5.00 out of 5">
+            <span style="width:100%">Rated
+              <strong class="rating">5.00</strong>
+              out of 5</span>
+          </div>
+        </div>
+        <span class="rating-number">
+          <span>
+            ( 1 )
+          </span>
+        </span>
+      </div>
+    </div>
+
+  </div>
+  <div class="thumbnail">
+    <a href="{{ product.url }}">
+      {% if product.featured_image %}
+        <img
+          src="{{ product.featured_image | img_url: '300x300' }}"
+          class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+          alt="{{ item.title | escape }}"
+          loading="lazy">
+      {% else %}
+        {{ 'image' | placeholder_svg_tag }}
+      {% endif %}
+    </a>
+  </div>
+</div>

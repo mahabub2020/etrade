@@ -1,0 +1,90 @@
+<div class="axil-product product-style-four  has-gallery-image">
+  <div class="thumbnail">
+    <a href="{{ product.url }}">
+      {% if product.featured_image %}
+        <img
+          src="{{ product.featured_image | img_url: '300x300' }}"
+          class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+          alt="{{ item.title | escape }}"
+          loading="lazy">
+      {% else %}
+        {{ 'image' | placeholder_svg_tag }}
+      {% endif %}
+    </a>
+    <div class="label-block label-right">
+      <div class="product-badget">41% OFF</div>
+    </div>
+
+    <div class="product-hover-action">
+      <ul class="cart-action">
+        <li class="quickview">
+          <a
+            href="#"
+            class="yith-wcqv-button"
+            data-product_id="1109"
+            title="QuickView"
+            tabindex="0">
+            <i class="far fa-eye"></i>
+          </a>
+        </li>
+        <li class="add-to-cart select-option">
+          {% form 'product', product %}
+            <input
+              type="hidden"
+              name="id"
+              value="{{ product.selected_or_first_available_variant.id }}">
+            <input type="submit" value="Add to Cart">
+          {% endform %}
+        </li>
+        <li class="wishlist">
+          <a
+            href="http://localhost/etrade/wishlist/"
+            rel="nofollow"
+            data-product-id="1109"
+            data-title-after="Added to Wishlist"
+            class="axil-wishlist-icon axil-add-to-wishlist"
+            data-nonce="c57051c0f5"
+            target="_blank"
+            tabindex="0">
+            <i class="wishlist-icon far fa-heart"></i>
+            <i class="fas fa-spinner ajax-loading"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="product-content">
+    <div class="inner">
+      <div class="product-rating">
+        <div class="icon">
+          <div
+            class="star-rating"
+            role="img"
+            aria-label="Rated 5.00 out of 5">
+            <span style="width:100%">Rated
+              <strong class="rating">5.00</strong>
+              out of 5</span>
+          </div>
+        </div>
+        <span class="rating-number">
+          <span>
+            ( 1 )
+          </span>
+        </span>
+      </div>
+
+      <h5 class="title">
+        <a href="{{ product.url }}">{{ product.title }}</a>
+      </h5>
+
+      <div class="product-price-variant">
+        <div class="price">
+          <span class="woocommerce-Price-amount amount">{{ product.price | money }}</span>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
