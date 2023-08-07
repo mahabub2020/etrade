@@ -6,7 +6,9 @@
           type="hidden"
           name="id"
           value="{{ product.selected_or_first_available_variant.id }}">
-        <input type="submit"><i class="fal fa-shopping-cart"></i>
+        <button type="submit">
+          <i class="fal fa-shopping-cart"></i>
+        </button>
       {% endform %}
     </div>
     <div class="inner">
