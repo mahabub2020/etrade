@@ -27,9 +27,11 @@
     <div class="row">
       {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
-          {% assign layout = section.settings.product_layout %}
-          {% render layout, product: product %}
-          <h4>{{ 'product-layout-' | append: layout }}</h4>
+          {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
+          {% capture include_snippet %}
+            {% include layout %}
+          {% endcapture %}
+          {{ include_snippet }}
         </div>
       {% endfor %}
     </div>
