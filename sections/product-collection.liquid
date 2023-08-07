@@ -27,11 +27,7 @@
     <div class="row">
       {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
-          {% if section.settings.product-layout == '1' %}
-            {% render 'product-layout-1', product: product %}
-          {% elsif section.settings.product-layout == '2' %}
-            {% render 'product-layout-2', product: product %}
-          {% endif %}
+          {% render 'product-layout-{{ section.settings.product-layout }}', product: product %}
         </div>
       {% endfor %}
     </div>
@@ -72,10 +68,10 @@
         "label": "Product Collection Layout",
         "options": [
           {
-            "label": "Product Collection Layout 1",
+            "label": "Layout 1",
             "value": "1"
           }, {
-            "label": "Product Collection Layout 2",
+            "label": "Layout 2",
             "value": "2"
           }
         ]
