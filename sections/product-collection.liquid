@@ -23,11 +23,19 @@
     {% endif %}
 
   </div>
-  {% if section.settings.product-layout == '1' %}
-    {% render 'product-layout-1' %}
-  {% elsif section.settings.product-layout == '2' %}
-    {% render 'product-layout-2' %}
-  {% endif %}
+  <div class="product-area pb--20">
+    <div class="row">
+      {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
+          {% if section.settings.product-layout == '1' %}
+            {% render 'product-layout-1', product: product %}
+          {% elsif section.settings.product-layout == '2' %}
+            {% render 'product-layout-2', product: product %}
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
 {% schema %}

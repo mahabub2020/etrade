@@ -1,9 +1,118 @@
-<div class="product-area pb--20 border-off style-8">
-  <div class="row row--15">
-    {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
-      <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
-        {% render 'product', product: product %}
+<div class="axil-product product-style-eight  has-color-pick has-gallery-image">
+  {% if product.featured_image %}
+    <div class="thumbnail">
+      <a href="{{ product.url }}">
+        {% if product.featured_image %}
+          <img
+            src="{{ item.image | img_url: '300x300' }}"
+            class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+            alt="{{ item.title | escape }}"
+            loading="lazy">
+        {% else %}
+          {{ 'image' | placeholder_svg_tag }}
+        {% endif %}
+      </a>
+      <div class="product-hover-action">
+        <ul class="cart-action">
+          <li class="add-to-cart select-option">
+            {% comment %} {% assign current_variant = product.selected_or_first_available_variant %}
+            <a
+            rel="nofollow"
+            data-tips="Select options"
+            title="Select options"
+            href="{{ product.url }}/"
+            data-quantity="1"
+            data-product_id="{{ product.id }}"
+            data-product_sku="{{ current_variant.sku }}"
+            class="cart-btn button non-wooc-toltp product_type_variable add_to_cart_button">
+            <i class="fal fa-shopping-cart"></i>
+            <span>Select options</span>
+            </a> {% endcomment %}
+            {% form 'product', product %}
+              <input
+                type="hidden"
+                name="id"
+                value="{{ product.selected_or_first_available_variant.id }}">
+              <input type="submit" value="Add to Cart">
+            {% endform %}
+          </li>
+        </ul>
       </div>
-    {% endfor %}
+    </div>
+  {% endif %}
+  <div class="product-content">
+    <div class="inner">
+      <div class="variations_form wooc-archive-variation-wrapper" current-image="">
+        <div class="color-variant-wrapper">
+          <ul class="color-variant wooc-color">
+            <li>
+              <a
+                class="wcvaswatchinput"
+                data-o-src="https://dev.axilthemes.com/themes/etrade/wp-content/uploads/2023/02/1305-300x300.jpg"
+                href="https://dev.axilthemes.com/themes/etrade/product/wooden-shoe-rack/?attribute_pa_colors=blossom-pink"
+                style="border-color: transparent;">
+                <span>
+                  <span style="background:#aae6f8" class="color wooc-pa-color wooc-pa-color-blossom-pink"></span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="wcvaswatchinput"
+                data-o-src="https://dev.axilthemes.com/themes/etrade/wp-content/uploads/2023/02/1303-300x300.jpg"
+                href="https://dev.axilthemes.com/themes/etrade/product/wooden-shoe-rack/?attribute_pa_colors=naples-yellow"
+                style="border-color: transparent;">
+                <span>
+                  <span style="background:#5f8af7" class="color wooc-pa-color wooc-pa-color-naples-yellow"></span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="wcvaswatchinput"
+                data-o-src="https://dev.axilthemes.com/themes/etrade/wp-content/uploads/2023/02/1304-300x300.jpg"
+                href="https://dev.axilthemes.com/themes/etrade/product/wooden-shoe-rack/?attribute_pa_colors=purple"
+                style="border-color: rgb(41, 41, 48);">
+                <span>
+                  <span style="background:#59c3c0" class="color wooc-pa-color wooc-pa-color-purple"></span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="wcvaswatchinput"
+                data-o-src="https://dev.axilthemes.com/themes/etrade/wp-content/uploads/2023/02/1305-300x300.jpg"
+                href="https://dev.axilthemes.com/themes/etrade/product/wooden-shoe-rack/?attribute_pa_colors=single-blue"
+                style="border-color: transparent;">
+                <span>
+                  <span style="background:#243c5a" class="color wooc-pa-color wooc-pa-color-single-blue"></span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="wcvaswatchinput"
+                data-o-src=""
+                href="https://dev.axilthemes.com/themes/etrade/product/wooden-shoe-rack/?attribute_pa_colors=venetian-red"
+                style="border-color: transparent;">
+                <span>
+                  <span style="background:#e6735c" class="color wooc-pa-color wooc-pa-color-venetian-red"></span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h5 class="title">
+        <a href="{{ product.url }}">{{ product.title }}</a>
+      </h5>
+
+      <div class="product-price-variant">
+        <div class="price">
+          <span class="woocommerce-Price-amount amount">{{ product.price | money }}</span>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
