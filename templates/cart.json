@@ -1,9 +1,11 @@
 {
-    "sections": {
-        "template": {
-            "type": "cart"
-        }
-      },
+  "sections": {
+    "template": {
+      "type": "cart",
+      "settings": {
+      }
+    }
+  },
   "order": [
     "template"
   ]
