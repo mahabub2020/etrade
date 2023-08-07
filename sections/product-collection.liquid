@@ -29,7 +29,7 @@
         <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
           {% assign layout = section.settings.product_layout %}
           {% render 'product-layout-' | append: layout, product: product %}
-          <h2>{{ 'product-layout-' | append: layout }}</h2>
+          <h4>{{ 'product-layout-' | append: layout }}</h4>
         </div>
       {% endfor %}
     </div>
