@@ -45,7 +45,7 @@ function mainstyles() {
     return src('./src/scss/style.scss')
         .pipe(scss())
         .pipe(autoPrefixer('last 2 versions'))
-       // .pipe(cssMinify())
+        .pipe(concat('theme-default.css'))
         .pipe(dest('./assets/'))
 }
 

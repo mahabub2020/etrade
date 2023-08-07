@@ -106,6 +106,45 @@
   </div>
 </div>
 
+
+
+{%- style -%}
+
+
+{% for block in section.blocks %}
+{% case block.type %}
+  {% when 'dealslg' %}
+
+
+    .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-left{
+      left: {{ block.settings.pos_x }}px;
+      right: inherit;
+    }     
+    .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-right{
+      right: {{ block.settings.pos_x }}px;
+      left: inherit;
+    }
+
+    .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-top{
+      top: {{ block.settings.pos_y }}px;
+      bottom: inherit;
+    }     
+    .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-bottom{
+      bottom: {{ block.settings.pos_y }}px;
+      top: inherit;
+    }
+
+
+
+  {% endcase %}
+{% endfor %}
+
+
+
+
+{%- endstyle -%}
+
+
 {% schema %}
 {
   "name": "Section Best Deals",
