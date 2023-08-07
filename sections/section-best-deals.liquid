@@ -36,14 +36,36 @@
                       ><i class="far fa-shopping-cart"></i> {{ block.settings.block_btn_txt | escape }}</a
                     >
                   </div> 
-                {% endif %}   
+                {% endif %} 
+                {% if block.settings.plus_icon_active %}
+                {%- assign product = all_products[block.settings.popup_product] -%}
+
+                 <div class="plus-btn block-repeater-item-{{ block.id }} {% if block.settings.plus_icon_active %}icon-active{% endif %} axil-pos-{{ block.settings.pos_x_type }} axil-pos-{{ block.settings.pos_y_type }}">
+                     <a href="#" class="plus-icon"><i class="far fa-plus"></i></a> 
+                      
+                        <div class="plus-hover-product">   
+                        <div class="thumbnail">
+                          <a href="{{ product.url }}">
+                            <img
+                              src="{{ product.featured_image | img_url: '150x150' }}"
+                              alt="{{ product.featured_image.alt }}"
+                              decoding="async"
+                              loading="lazy"></a>
+                            </div>
+                          <div class="product-details">
+                              <h5 class="title-popup m-0"><a href="{{ product.url }}">{{ product.title }}</a></h4>
+                              <div class="price">{{ product.price }}</div>  
+                      </div>   
+                 </div>
+             </div> 
+            {% endif %} 
+                
               </div>
-              {% if block.settings.box_img != '' %}   
+              {% if block.settings.box_img %}   
               <div class="collection-thumbnail">
                 <img
-                  src="{{ block.settings.box_img | img_url: '740x400' }}"
+                  src="{{ block.settings.box_img | img_url:  '740x400' }}"
                   alt="{{ block.settings.box_img.alt | default: shop.name }}">
-    
               </div> 
             {% endif %} 
             </div>
@@ -53,67 +75,83 @@
     </div>
       <div class="col-xl-5">
         <div class="row">
-          <div class="col-md-6">
-            <div class="product-collection-three">
-              <div class="collection-content">
-                <h6 class="title"><a href="shop.html">Ladies Short Sleeve Dress</a></h6>
-                <div class="price-warp">
-                  <span class="price-text">Starting From</span>
-                  <span class="price">$30.00</span>
-                </div>
-              </div>
-              <div class="collection-thumbnail">
-                <img src="assets/images/product/collection_5.png" alt="Product">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="product-collection-three">
-              <div class="collection-content">
-                <h6 class="title"><a href="shop.html">Oil Soap Wood Home Cleaner</a></h6>
-                <div class="price-warp">
-                  <span class="price-text">Starting From</span>
-                  <span class="price">$15.22</span>
-                </div>
-              </div>
-              <div class="collection-thumbnail">
-                <img src="assets/images/product/collection_6.png" alt="Product">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="product-collection-three">
-              <div class="collection-content">
-                <h6 class="title"><a href="shop.html">Large Pendant Light Ceiling </a></h6>
-                <div class="price-warp">
-                  <span class="price-text">Starting From</span>
-                  <span class="price">$11.70</span>
-                </div>
-              </div>
-              <div class="collection-thumbnail">
-                <img src="assets/images/product/collection_7.png" alt="Product">
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="product-collection-three">
-              <div class="collection-content">
-                <h6 class="title"><a href="shop.html">Iphone New Model</a></h6>
-                <div class="price-warp">
-                  <span class="price-text">Starting From</span>
-                  <span class="price">$499.00</span>
-                </div>
-              </div>
-              <div class="collection-thumbnail">
-                <img src="assets/images/product/collection_8.png" alt="Product">
-              </div>
-            </div>
-          </div>
+          {% for block in section.blocks %}  
+            {% case block.type %}
+              {% when 'dealssm' %} 
+
+                <div class="col-md-6">
+                  <div class="product-collection-three">
+                    <div class="collection-content">
+                      {% if block.settings.box_title_sm != '' %}
+                      <h6 class="title">
+                        <a href="{{ block.settings.block_btn_url_sm | escape }}">{{ block.settings.box_title_sm | escape }}</a>
+                      </h6>
+                    {% endif %} 
+                      <div class="price-warp">
+                        {% if block.settings.prices_label_sm != '' %} 
+                          <span class="price-text">{{ block.settings.prices_label_sm }}</span>
+                        {% endif %}  
+                        {% if block.settings.box_prices_sm != '' %} 
+                          <span class="price">{{ block.settings.box_prices_sm }}</span>
+                        {% endif %} 
+                      </div> 
+                    </div>
+                    {% if block.settings.box_img_sm %}   
+                      <div class="collection-thumbnail">
+                        <img
+                          src="{{ block.settings.box_img_sm | img_url:  '70x155' }}"
+                          alt="{{ block.settings.box_img_sm.alt | default: shop.name }}">
+                      </div> 
+                    {% endif %} 
+                  </div>
+                </div> 
+
+              {% endcase %} 
+            {% endfor %} 
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
+{%- style -%}
+
+
+{% for block in section.blocks %}
+{% case block.type %}
+  {% when 'dealslg' %}
+
+
+    .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-left{
+      left: {{ block.settings.pos_x }}px !important;
+      right: auto !important;
+    }     
+    .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-right{
+      right: {{ block.settings.pos_x }}px !important;
+      left: auto !important;
+    }
+
+    .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-top{
+      top: {{ block.settings.pos_y }}px !important;
+      bottom: auto !important;
+    }     
+    .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-bottom{
+      bottom: {{ block.settings.pos_y }}px !important;
+      top: auto !important;
+    }
+
+
+
+  {% endcase %}
+{% endfor %}
+
+
+
+
+{%- endstyle -%}
+
 
 {% schema %}
 {
@@ -187,13 +225,13 @@
         {
           "type": "product",
           "id": "popup_product",
-          "label": "Product-Handle"
+          "label": "Product Handle"
         },
         {
           "type": "checkbox",
           "id": "plus_icon_active",
           "label": "Plus Icon Active",
-          "default": false
+          "default": true
         },
         {
           "type": "select",
@@ -255,54 +293,54 @@
       "settings": [
         {
           "type": "text",
-          "id": "box_title",
+          "id": "box_title_sm",
           "default": "Decorative Plant For Home",
           "label": "Title"
         },
         {
           "type": "text",
-          "id": "prices_label",
+          "id": "prices_label_sm",
           "default": "Starting From",
           "label": "prices label"
         },
         {
           "type": "text",
-          "id": "box_prices",
+          "id": "box_prices_sm",
           "default": "$35.00",
           "label": "Prices"
         },
 
         {
           "type": "image_picker",
-          "id": "box_img",
+          "id": "box_img_sm",
           "label": "Box Image"
         },
 
         {
           "type": "text",
-          "id": "section_btn_txt",
+          "id": "block_btn_txt_sm",
           "label": "Button Text",
           "default": "View All Deals"
         },
         {
           "type": "url",
-          "id": "section_btn_url",
+          "id": "block_btn_url_sm",
           "label": "URL"
         },
         {
           "type": "product",
-          "id": "popup_product",
+          "id": "popup_product_sm",
           "label": "Product-Handle"
         },
         {
           "type": "checkbox",
-          "id": "plus_icon_active",
+          "id": "plus_icon_active_sm",
           "label": "Plus Icon Active",
           "default": false
         },
         {
           "type": "select",
-          "id": "pos_x_type",
+          "id": "pos_x_type_sm",
           "label": "Horizontal Position",
           "default": "left",
           "options": [
@@ -318,7 +356,7 @@
         },
         {
           "type": "range",
-          "id": "pos_x",
+          "id": "pos_x_sm",
           "min": 0,
           "max": 400,
           "step": 4,
@@ -328,7 +366,7 @@
         },
         {
           "type": "select",
-          "id": "pos_y_type",
+          "id": "pos_y_type_sm",
           "label": "Horizontal Position",
           "default": "top",
           "options": [
@@ -344,7 +382,7 @@
         }, 
         {
           "type": "range",
-          "id": "pos_y",
+          "id": "pos_y_sm",
           "min": 0,
           "max": 400,
           "step": 4,
