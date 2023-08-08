@@ -40,7 +40,7 @@
 
                   {% if block.settings.plus_icon_active %}
                     {%- assign product = all_products[block.settings.popup_product] -%}  
-                      {%- if product == empty -%}
+                      {%- if product != empty -%}
                         <div class="plus-btn block-repeater-item-{{ block.id }} {% if block.settings.plus_icon_active %}icon-active{% endif %} axil-pos-{{ block.settings.pos_x_type }} axil-pos-{{ block.settings.pos_y_type }}">
                           <a href="#" class="plus-icon"><i class="far fa-plus"></i></a>  
                             <div class="plus-hover-product">   
@@ -213,9 +213,10 @@
         {
           "type": "text",
           "id": "product_badget",
-          "default": "",
+          "default": "Badget",
           "label": "Product Badget"
         },
+        
         {
           "type": "checkbox",
           "id": "plus_icon_active",
