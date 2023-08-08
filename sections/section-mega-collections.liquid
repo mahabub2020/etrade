@@ -38,8 +38,12 @@
                     </div>
                   {% endif %}
 
-                  <div class="plus-btn axil-pos-top axil-pos-left">
+                 
+
+                 <div class="plus-btn block-repeater-item-{{ block.id }} {% if block.settings.plus_icon_active %}icon-active{% endif %} axil-pos-{{ block.settings.pos_x_type }} axil-pos-{{ block.settings.pos_y_type }}">
+
                     <a href="#" class="plus-icon"><i class="far fa-plus"></i></a>
+                    
                     <div class="plus-hover-product">
                       <div class="product-details">
                         <h4 class="title">
