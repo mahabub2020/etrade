@@ -40,26 +40,26 @@
 
                   {% if block.settings.plus_icon_active %}
                     {%- assign product = all_products[block.settings.popup_product] -%}  
-
-                    <div class="plus-btn block-repeater-item-{{ block.id }} {% if block.settings.plus_icon_active %}icon-active{% endif %} axil-pos-{{ block.settings.pos_x_type }} axil-pos-{{ block.settings.pos_y_type }}">
-                      <a href="#" class="plus-icon"><i class="far fa-plus"></i></a>  
-                        <div class="plus-hover-product">   
-                          <div class="thumbnail">
-                            <a href="{{ product.url }}">
-                              <img
-                                src="{{ product.featured_image | img_url: '150x150' }}"
-                                alt="{{ product.featured_image.alt }}"
-                                decoding="async"
-                                loading="lazy"></a>
-                              </div>
-                            <div class="product-details">
-                                <h5 class="title-popup m-0"><a href="{{ product.url }}">{{ product.title }}</a></h4>
-                                <div class="price">{{ product.price }}</div>  
-                              </div>   
-                        </div> 
-                      </div>
-
-                    {% endif %}
+                      {%- if product == empty -%}
+                        <div class="plus-btn block-repeater-item-{{ block.id }} {% if block.settings.plus_icon_active %}icon-active{% endif %} axil-pos-{{ block.settings.pos_x_type }} axil-pos-{{ block.settings.pos_y_type }}">
+                          <a href="#" class="plus-icon"><i class="far fa-plus"></i></a>  
+                            <div class="plus-hover-product">   
+                              <div class="thumbnail">
+                                <a href="{{ product.url }}">
+                                  <img
+                                    src="{{ product.featured_image | img_url: '150x150' }}"
+                                    alt="{{ product.featured_image.alt }}"
+                                    decoding="async"
+                                    loading="lazy"></a>
+                                  </div>
+                                <div class="product-details">
+                                    <h5 class="title-popup m-0"><a href="{{ product.url }}">{{ product.title }}</a></h4>
+                                    <div class="price">{{ product.price }}</div>  
+                                  </div>   
+                            </div> 
+                          </div>
+                        {% endif %}
+                      {% endif %}
                 </div> 
             
                 {% if block.settings.box_img %}
@@ -68,9 +68,12 @@
                       src="{{ block.settings.box_img | img_url:  block.settings.img_size }}"
                       alt="{{ block.settings.box_img.alt | default: shop.name }}"
                     >
-                    <div class="label-block label-right">
-                      <div class="product-badget">Sunglass</div>
-                    </div>
+                      {% if block.settings.product_badget != '' %} 
+                        <div class="label-block label-right">
+                          <div class="product-badget">{{ block.settings.product_badget }}</div>
+                        </div> 
+                    {% endif %}
+
                   </div>
                 {% endif %}
               </div>
@@ -159,7 +162,7 @@
           "type": "text",
           "id": "prices_label",
           "default": "Starting From",
-          "label": "prices abel"
+          "label": "prices Label"
         },
         {
           "type": "text",
@@ -189,7 +192,7 @@
           ],
           "default": "740x400"
         },
-        
+
 
         {
           "type": "text",
@@ -206,6 +209,12 @@
           "type": "product",
           "id": "popup_product",
           "label": "Product Handle"
+        },
+        {
+          "type": "text",
+          "id": "product_badget",
+          "default": "",
+          "label": "Product Badget"
         },
         {
           "type": "checkbox",
