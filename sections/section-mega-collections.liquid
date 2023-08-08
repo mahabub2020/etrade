@@ -18,7 +18,7 @@
         {% case block.type %}
           {% when 'megalg' %}   
 
-          <div class="col-xl-{{ section.settings.col_xl }} col-lg-{{ section.settings.col_lg }} col-sm-{{ section.settings.col_md }} col-{{ section.settings.col_sm }}">
+          <div class="col-xl-{{ block.settings.col_xl }} col-lg-{{ block.settings.col_lg }} col-sm-{{ block.settings.col_md }} col-{{ block.settings.col_sm }}">
           <div class="col-xl-7">
               <div class="product-collection">
                   <div class="collection-content">
@@ -339,7 +339,7 @@
           "label": "Responsive Columns",
           "unit": "px",
           "default": 12
-          
+
         }
       ]
     },
