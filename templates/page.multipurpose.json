@@ -198,11 +198,15 @@
             "pos_x_type": "left",
             "pos_x": 4,
             "pos_y_type": "top",
-            "pos_y": 4
+            "pos_y": 4,
+            "col_xl": 7,
+            "col_lg": 7,
+            "col_md": 12,
+            "col_sm": 12
           }
         },
-        "template--20230999834939__3c6c52bd-39ce-4a73-997d-f6a2b7a7feb3-megasm-1": {
-          "type": "megasm",
+        "2ecff90d-0608-44ca-bc94-277f5ae730d6": {
+          "type": "megalg",
           "settings": {
             "box_title": "Explore The Sunglass",
             "box_subtitle": "The Bouguessa FW21 collection is.",
@@ -216,50 +220,17 @@
             "pos_x_type": "left",
             "pos_x": 4,
             "pos_y_type": "top",
-            "pos_y": 4
-          }
-        },
-        "470a80ed-a77a-4608-b2ef-a232c322f449": {
-          "type": "megasm",
-          "settings": {
-            "box_title": "Explore The Sunglass",
-            "box_subtitle": "The Bouguessa FW21 collection is.",
-            "prices_label": "Starting From",
-            "box_prices": "$35.00",
-            "box_img": "shopify:\/\/shop_images\/collection_5.jpg",
-            "block_btn_txt": "View All Deals",
-            "block_btn_url": "",
-            "popup_product": "",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
-          }
-        },
-        "34adf0e4-b20f-4db9-aa0e-b8bab53c07e5": {
-          "type": "megalg",
-          "settings": {
-            "box_title": "Explore The Sunglass",
-            "box_subtitle": "The Bouguessa FW21 collection is.",
-            "prices_label": "Starting From",
-            "box_prices": "$35.00",
-            "block_btn_txt": "View All Deals",
-            "block_btn_url": "",
-            "popup_product": "",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
+            "pos_y": 4,
+            "col_xl": 5,
+            "col_lg": 5,
+            "col_md": 12,
+            "col_sm": 12
           }
         }
       },
       "block_order": [
         "template--20230999834939__3c6c52bd-39ce-4a73-997d-f6a2b7a7feb3-megalg-1",
-        "template--20230999834939__3c6c52bd-39ce-4a73-997d-f6a2b7a7feb3-megasm-1",
-        "470a80ed-a77a-4608-b2ef-a232c322f449",
-        "34adf0e4-b20f-4db9-aa0e-b8bab53c07e5"
+        "2ecff90d-0608-44ca-bc94-277f5ae730d6"
       ],
       "settings": {
         "section_title": "Today’s Best Deals 💥",
