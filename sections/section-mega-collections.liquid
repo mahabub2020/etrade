@@ -1,150 +1,108 @@
-
 <div class="product-collection-area bg-lighter axil-section-gapcommon">
-  <div class="container"> 
+  <div class="container">
+    <div class="section-title-border">
+      {% if section.settings.section_title != '' %}
+        <h2 class="title">{{ section.settings.section_title | escape }}</h2>
+      {% endif %}
+      {% if section.settings.section_btn_txt != '' %}
+        <div class="view-btn">
+          <a href="{{ section.settings.section_btn_url | escape }}">{{ section.settings.section_btn_txt | escape }}</a>
+        </div>
+      {% endif %}
+    </div>
 
-      <div class="section-title-border">
-        {% if section.settings.section_title != '' %}
-          <h2 class="title">{{ section.settings.section_title | escape }}</h2>
-        {% endif %}
-        {% if section.settings.section_btn_txt != '' %}
-          <div class="view-btn">
-            <a href="{{ section.settings.section_btn_url | escape }}">{{ section.settings.section_btn_txt | escape }}</a>
-          </div>
-        {% endif %} 
-      </div>
-
-      <div class="row">
-        {% for block in section.blocks %}  
+    <div class="row">
+      {% for block in section.blocks %}
         {% case block.type %}
-          {% when 'megalg' %}   
-
-          <div class="col-xl-{{ block.settings.col_xl }} col-lg-{{ block.settings.col_lg }} col-sm-{{ block.settings.col_md }} col-{{ block.settings.col_sm }}">
-        
+          {% when 'megalg' %}
+            <div class="col-xl-{{ block.settings.col_xl }} col-lg-{{ block.settings.col_lg }} col-sm-{{ block.settings.col_md }} col-{{ block.settings.col_sm }}">
               <div class="product-collection">
-                  <div class="collection-content">
-                    {% if block.settings.box_title != '' %}
-                      <h3 class="title">{{ block.settings.box_title }}</h3>
-                    {% endif %}  
-                    {% if block.settings.box_subtitle != '' %} 
-                      <p>{{ block.settings.box_subtitle }}</p>
-                    {% endif %} 
-                      {% if block.settings.box_prices != '' %}   
-                        <div class="price-warp">
-                            <span class="price-text">{{ block.settings.prices_label }}</span>
-                            <span class="price">{{ block.settings.box_prices }}</span>
-                        </div>
-                    {% endif %} 
-                    {% if block.settings.section_btn_txt != '' %} 
-                      <div class="shop-btn">
-                          <a href="{{ block.settings.block_btn_url | escape }}" class="axil-btn btn-bg-primary btn-size-md"><i class="far fa-shopping-cart"></i> {{ block.settings.block_btn_txt | escape }}</a>
-                      </div>
-                    {% endif %} 
-
-                      <div class="plus-btn">
-                          <a href="#" class="plus-icon"><i class="far fa-plus"></i></a>
-                      </div>
-                  </div>
-
-                  {% if block.settings.box_img %}   
-                    <div class="collection-thumbnail">
-                      <img
-                        src="{{ block.settings.box_img | img_url:  '735x397' }}"
-                        alt="{{ block.settings.box_img.alt | default: shop.name }}">
-                        <div class="label-block label-right">
-                          <div class="product-badget">Sunglass</div>
-                      </div>
-                    </div> 
-                  {% endif %}  
-
-              </div>
-          </div>
-        {% endcase %} 
-      {% endfor %}
-
-      {% for block in section.blocks %}  
-      {% case block.type %}
-        {% when 'megasm' %}
-          <div class="col-xl-5 col-lg-6">
-              <div class="product-collection">
-                  <div class="collection-content">
-                    {% if block.settings.box_title != '' %}
-                      <h3 class="title">{{ block.settings.box_title }}</h3>
-                    {% endif %}  
-                    {% if block.settings.box_subtitle != '' %} 
-                      <p>{{ block.settings.box_subtitle }}</p>
-                    {% endif %} 
-                      {% if block.settings.box_prices != '' %}   
-                        <div class="price-warp">
-                            <span class="price-text">{{ block.settings.prices_label }}</span>
-                            <span class="price">{{ block.settings.box_prices }}</span>
-                        </div>
-                    {% endif %}    
-                   {% if block.settings.section_btn_txt != '' %} 
-                    <div class="shop-btn">
-                        <a href="{{ block.settings.block_btn_url | escape }}" class="axil-btn btn-bg-primary btn-size-md"><i class="far fa-shopping-cart"></i> {{ block.settings.block_btn_txt | escape }}</a>
+                <div class="collection-content">
+                  {% if block.settings.box_title != '' %}
+                    <h3 class="title">{{ block.settings.box_title }}</h3>
+                  {% endif %}
+                  {% if block.settings.box_subtitle != '' %}
+                    <p>{{ block.settings.box_subtitle }}</p>
+                  {% endif %}
+                  {% if block.settings.box_prices != '' %}
+                    <div class="price-warp">
+                      <span class="price-text">{{ block.settings.prices_label }}</span>
+                      <span class="price">{{ block.settings.box_prices }}</span>
                     </div>
-                  {% endif %} 
+                  {% endif %}
+                  {% if block.settings.section_btn_txt != '' %}
+                    <div class="shop-btn">
+                      <a href="{{ block.settings.block_btn_url | escape }}" class="axil-btn btn-bg-primary btn-size-md"
+                        ><i class="far fa-shopping-cart"></i> {{ block.settings.block_btn_txt | escape -}}
+                      </a>
+                    </div>
+                  {% endif %}
 
+                  <div class="plus-btn axil-pos-top axil-pos-left">
+                    <a href="#" class="plus-icon"><i class="far fa-plus"></i></a>
+                    <div class="plus-hover-product">
+                      <div class="product-details">
+                        <h4 class="title">
+                          <a href="http://etrade.local/product/bored-ape-yacht-club/">Bored Ape Yacht Club</a>
+                        </h4>
+                        <div class="price">
+                          <span class="woocommerce-Price-amount amount">
+                            <span class="woocommerce-Price-currencySymbol">$</span>399.00</span
+                          >
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                </div>
 
-                  {% if block.settings.box_img %}   
+                {% if block.settings.box_img %}
                   <div class="collection-thumbnail">
                     <img
                       src="{{ block.settings.box_img | img_url:  '735x397' }}"
-                      alt="{{ block.settings.box_img.alt | default: shop.name }}">
-                      <div class="label-block label-right">
-                        <div class="product-badget">Sunglass</div>
+                      alt="{{ block.settings.box_img.alt | default: shop.name }}"
+                    >
+                    <div class="label-block label-right">
+                      <div class="product-badget">Sunglass</div>
                     </div>
-                  </div> 
-                {% endif %}   
-                
+                  </div>
+                {% endif %}
               </div>
-          </div>
-          
-        {% endcase %} 
+            </div>
+        {% endcase %}
       {% endfor %}
-
-      </div>
+    </div>
   </div>
 </div>
 
-
 {%- style -%}
+  {% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'megalg' %}
 
 
-{% for block in section.blocks %}
-{% case block.type %}
-  {% when 'megalg' %}
+      .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-left{
+        left: {{ block.settings.pos_x }}px !important;
+        right: auto !important;
+      }
+      .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-right{
+        right: {{ block.settings.pos_x }}px !important;
+        left: auto !important;
+      }
 
-
-    .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-left{
-      left: {{ block.settings.pos_x }}px !important;
-      right: auto !important;
-    }     
-    .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-right{
-      right: {{ block.settings.pos_x }}px !important;
-      left: auto !important;
-    }
-
-    .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-top{
-      top: {{ block.settings.pos_y }}px !important;
-      bottom: auto !important;
-    }     
-    .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-bottom{
-      bottom: {{ block.settings.pos_y }}px !important;
-      top: auto !important;
-    }
-
-
-
-  {% endcase %}
-{% endfor %}
+      .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-top{
+        top: {{ block.settings.pos_y }}px !important;
+        bottom: auto !important;
+      }
+      .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-bottom{
+        bottom: {{ block.settings.pos_y }}px !important;
+        top: auto !important;
+      }
 
 
 
-
+    {% endcase %}
+  {% endfor %}
 {%- endstyle -%}
-
 
 {% schema %}
 {
@@ -153,7 +111,7 @@
     {
       "type": "header",
       "content": "Section Title"
-    }, 
+    },
     {
       "type": "text",
       "id": "section_title",
@@ -173,11 +131,10 @@
     }
   ],
 
-  "max_blocks": 4,
   "blocks": [
     {
       "type": "megalg",
-      "name": "Mega Block lg",
+      "name": "Collections Block",
       "settings": [
         {
           "type": "text",
@@ -273,7 +230,7 @@
               "label": "Bottom"
             }
           ]
-        }, 
+        },
         {
           "type": "range",
           "id": "pos_y",
@@ -339,118 +296,6 @@
           "label": "Responsive Columns",
           "unit": "px",
           "default": 12
-
-        }
-      ]
-    },
-    {
-      "type": "megasm",
-      "name": "Mega Block SM",
-      "settings": [
-        {
-          "type": "text",
-          "id": "box_title",
-          "default": "Explore The Sunglass",
-          "label": "Title"
-        },
-        {
-          "type": "text",
-          "id": "box_subtitle",
-          "default": "The Bouguessa FW21 collection is.",
-          "label": "Sub Title"
-        },
-        {
-          "type": "text",
-          "id": "prices_label",
-          "default": "Starting From",
-          "label": "prices abel"
-        },
-        {
-          "type": "text",
-          "id": "box_prices",
-          "default": "$35.00",
-          "label": "Prices"
-        },
-
-        {
-          "type": "image_picker",
-          "id": "box_img",
-          "label": "Box Image"
-        },
-
-        {
-          "type": "text",
-          "id": "block_btn_txt",
-          "label": "Button Text",
-          "default": "View All Deals"
-        },
-        {
-          "type": "url",
-          "id": "block_btn_url",
-          "label": "URL"
-        },
-        {
-          "type": "product",
-          "id": "popup_product",
-          "label": "Product Handle"
-        },
-        {
-          "type": "checkbox",
-          "id": "plus_icon_active",
-          "label": "Plus Icon Active",
-          "default": true
-        },
-        {
-          "type": "select",
-          "id": "pos_x_type",
-          "label": "Horizontal Position",
-          "default": "left",
-          "options": [
-            {
-              "value": "left",
-              "label": "Left"
-            },
-            {
-              "value": "right",
-              "label": "Right"
-            }
-          ]
-        },
-        {
-          "type": "range",
-          "id": "pos_x",
-          "min": 0,
-          "max": 400,
-          "step": 4,
-          "label": "Spacing",
-          "unit": "px",
-          "default": 4
-        },
-        {
-          "type": "select",
-          "id": "pos_y_type",
-          "label": "Horizontal Position",
-          "default": "top",
-          "options": [
-            {
-              "value": "top",
-              "label": "Top"
-            },
-            {
-              "value": "bottom",
-              "label": "Bottom"
-            }
-          ]
-        }, 
-        {
-          "type": "range",
-          "id": "pos_y",
-          "min": 0,
-          "max": 400,
-          "step": 4,
-          "label": "Spacing",
-          "unit": "px",
-          "default": 4
         }
       ]
     }
@@ -459,13 +304,10 @@
   "presets": [
     {
       "name": "Section Mega Collections",
-     
+
       "blocks": [
         {
           "type": "megalg"
-        },
-        {
-          "type": "megasm"
         }
       ]
     }
