@@ -6,7 +6,7 @@
           <i class="fal fa-exclamation-circle"></i>
           {{ section.settings.title }}</span>
         <h1 class="title">{{ section.settings.subtext_title }}</h1>
-        <p>{{ section.settings.short_details }}</p>
+        {{ section.settings.short_details }}
 
         {% if section.settings.button_url == blank %}
           {% assign shop_url = shop.secure_url %}
@@ -52,7 +52,7 @@
         "type": "richtext",
         "id": "short_details",
         "label": "Short Details",
-        "default": "It seems like we dont find what you searched. The page you were looking for doesn't exist, isn't available loading incorrectly."
+        "default": "<p>It seems like we dont find what you searched. The page you were looking for doesn't exist, isn't available loading incorrectly.</p>"
       },
       {
         "type": "image_picker",
