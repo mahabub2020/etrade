@@ -18,6 +18,7 @@
         {% case block.type %}
           {% when 'megalg' %}   
 
+          <div class="col-xl-{{ section.settings.col_xl }} col-lg-{{ section.settings.col_lg }} col-sm-{{ section.settings.col_md }} col-{{ section.settings.col_sm }}">
           <div class="col-xl-7">
               <div class="product-collection">
                   <div class="collection-content">
@@ -295,7 +296,7 @@
           "step": 1,
           "label": "Responsive Columns",
           "unit": "px",
-          "default": 5
+          "default": 7
         },
         {
           "type": "header",
@@ -309,7 +310,7 @@
           "step": 1,
           "label": "Responsive Columns",
           "unit": "px",
-          "default": 5
+          "default": 7
         },
         {
           "type": "header",
@@ -323,7 +324,7 @@
           "step": 1,
           "label": "Responsive Columns",
           "unit": "px",
-          "default": 3
+          "default": 12
         },
         {
           "type": "header",
@@ -337,7 +338,8 @@
           "step": 1,
           "label": "Responsive Columns",
           "unit": "px",
-          "default": 2
+          "default": 12
+          
         }
       ]
     },
