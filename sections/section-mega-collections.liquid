@@ -36,33 +36,36 @@
                         ><i class="far fa-shopping-cart"></i> {{ block.settings.block_btn_txt | escape -}}
                       </a>
                     </div>
-                  {% endif %}
+                  {% endif %} 
 
-                 
+                  {% if block.settings.plus_icon_active %}
+                    {%- assign product = all_products[block.settings.popup_product] -%}  
 
-                 <div class="plus-btn block-repeater-item-{{ block.id }} {% if block.settings.plus_icon_active %}icon-active{% endif %} axil-pos-{{ block.settings.pos_x_type }} axil-pos-{{ block.settings.pos_y_type }}">
-
-                    <a href="#" class="plus-icon"><i class="far fa-plus"></i></a>
-                    
-                    <div class="plus-hover-product">
-                      <div class="product-details">
-                        <h4 class="title">
-                          <a href="http://etrade.local/product/bored-ape-yacht-club/">Bored Ape Yacht Club</a>
-                        </h4>
-                        <div class="price">
-                          <span class="woocommerce-Price-amount amount">
-                            <span class="woocommerce-Price-currencySymbol">$</span>399.00</span
-                          >
-                        </div>
+                    <div class="plus-btn block-repeater-item-{{ block.id }} {% if block.settings.plus_icon_active %}icon-active{% endif %} axil-pos-{{ block.settings.pos_x_type }} axil-pos-{{ block.settings.pos_y_type }}">
+                      <a href="#" class="plus-icon"><i class="far fa-plus"></i></a>  
+                        <div class="plus-hover-product">   
+                          <div class="thumbnail">
+                            <a href="{{ product.url }}">
+                              <img
+                                src="{{ product.featured_image | img_url: '150x150' }}"
+                                alt="{{ product.featured_image.alt }}"
+                                decoding="async"
+                                loading="lazy"></a>
+                              </div>
+                            <div class="product-details">
+                                <h5 class="title-popup m-0"><a href="{{ product.url }}">{{ product.title }}</a></h4>
+                                <div class="price">{{ product.price }}</div>  
+                              </div>   
+                        </div> 
                       </div>
-                    </div>
-                  </div>
-                </div>
 
+                    {% endif %}
+                </div> 
+            
                 {% if block.settings.box_img %}
                   <div class="collection-thumbnail">
                     <img
-                      src="{{ block.settings.box_img | img_url:  '735x397' }}"
+                      src="{{ block.settings.box_img | img_url:  block.settings.img_size }}"
                       alt="{{ block.settings.box_img.alt | default: shop.name }}"
                     >
                     <div class="label-block label-right">
@@ -170,6 +173,23 @@
           "id": "box_img",
           "label": "Box Image"
         },
+        {
+          "type": "select",
+          "id": "img_size",
+          "label": "Image Size",
+          "options": [
+            {
+              "value": "740x400",
+              "label": "Width:740 - Height:400"
+            },
+            {
+              "value": "520x400",
+              "label": "Width:520 - Height:400"
+            }
+          ],
+          "default": "740x400"
+        },
+        
 
         {
           "type": "text",
