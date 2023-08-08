@@ -226,11 +226,57 @@
             "col_md": 12,
             "col_sm": 12
           }
+        },
+        "4baeb52d-308c-4c34-ac15-8c84ed28f802": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "box_img": "shopify:\/\/shop_images\/product-big-10.png",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 5,
+            "col_lg": 5,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        },
+        "81b45a6b-a224-4607-92b1-815e0b4da033": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "box_img": "shopify:\/\/shop_images\/product-big-11.png",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "malrez®-spectrum™-6375",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 7,
+            "col_lg": 7,
+            "col_md": 12,
+            "col_sm": 12
+          }
         }
       },
       "block_order": [
         "template--20230999834939__3c6c52bd-39ce-4a73-997d-f6a2b7a7feb3-megalg-1",
-        "2ecff90d-0608-44ca-bc94-277f5ae730d6"
+        "2ecff90d-0608-44ca-bc94-277f5ae730d6",
+        "4baeb52d-308c-4c34-ac15-8c84ed28f802",
+        "81b45a6b-a224-4607-92b1-815e0b4da033"
       ],
       "settings": {
         "section_title": "Today’s Best Deals 💥",
