@@ -154,7 +154,8 @@
           "settings": {
             "badge": "Always free",
             "badge_title": "Order Pickup",
-            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store."
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_img": "shopify:\/\/shop_images\/WhatsApp_Image_2023-07-21_at_12.48.22_AM.jpg"
           }
         }
       },
