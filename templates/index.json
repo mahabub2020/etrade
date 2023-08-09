@@ -58,11 +58,59 @@
             "col_md": 12,
             "col_sm": 12
           }
+        },
+        "f7027c13-432a-497d-a87d-e3bc74a6aacc": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "img_size": "740x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 5,
+            "col_lg": 5,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        },
+        "ccc81f22-327b-45b6-b874-7cdc1c8b3970": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "img_size": "740x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 7,
+            "col_lg": 7,
+            "col_md": 12,
+            "col_sm": 12
+          }
         }
       },
       "block_order": [
         "template--20190269571387__402c70cf-782b-4cfc-96ed-78ddf5e848ce-megalg-1",
-        "a62edb17-f86c-4d0f-8c33-32eed105175f"
+        "a62edb17-f86c-4d0f-8c33-32eed105175f",
+        "f7027c13-432a-497d-a87d-e3bc74a6aacc",
+        "ccc81f22-327b-45b6-b874-7cdc1c8b3970"
       ],
       "settings": {
         "section_title": "Today’s Best Deals 💥",
