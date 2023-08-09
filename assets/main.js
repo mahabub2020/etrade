@@ -192,12 +192,14 @@
 
                 ]
             });
+
             magnificPopupActivation();
 
         });
 
-      function magnificPopupActivation() {
 
+
+      function magnificPopupActivation() {
             var yPopup = $('.popup-youtube');
             if (yPopup.length) {
                 yPopup.magnificPopup({
@@ -209,7 +211,6 @@
                     fixedContentPos: false
                 });
             }
-
             if ($('.zoom-gallery').length) {
                 $('.zoom-gallery').each(function() {
                     $(this).magnificPopup({
