@@ -4,7 +4,7 @@
         {% for block in section.blocks %}
           {% case block.type %}
             {% when 'cta' %}   
-              <div class="col-xl-6">
+              <div class="col-xl-6 col-lg-6">
                 <div class="delivery-poster pickup">
                     <div class="content">  
                       {% if block.settings.badge != '' %}   
@@ -37,6 +37,7 @@
       "content": "Section Delivery"
     }
   ],
+  
   "blocks": [
     {
       "type": "cta",
