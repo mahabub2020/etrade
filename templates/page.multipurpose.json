@@ -186,7 +186,6 @@
         "template--20230999834939__2070efc2-ee1d-4b43-9205-67934ac99e6f-review-1": {
           "type": "review",
           "settings": {
-            "box_title": "Explore The Sunglass",
             "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.",
             "author_name": "Wade Warren",
             "author_desg": "Head of Marketing"
@@ -195,7 +194,6 @@
         "2e07288b-a90c-4cd8-af28-d83c3dd52be8": {
           "type": "review",
           "settings": {
-            "box_title": "Explore The Sunglass",
             "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.",
             "author_name": "Wade Warren",
             "author_desg": "Head of Marketing"
@@ -204,7 +202,6 @@
         "fdc00737-9a31-4b51-93c2-93610d214b8d": {
           "type": "review",
           "settings": {
-            "box_title": "Explore The Sunglass",
             "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.zcz",
             "author_name": "Wade Warren",
             "author_desg": "Head of Marketing"
@@ -218,6 +215,7 @@
       ],
       "settings": {
         "section_title": "Our Users Feedback",
+        "video_img": "shopify:\/\/shop_images\/playful-father-and-daughter-having-fun-at-their-ne-2022-09-27-22-44-31-utc.jpg",
         "video_url": ""
       }
     },
