@@ -62,7 +62,7 @@
                       {% endif %}
                 </div> 
                   <div class="collection-thumbnail">
-                    <img src="{% if section.settings.box_img %}{{ section.settings.box_img | img_url: block.settings.img_size }}{% else %}http:\/\/via.placeholder.com\/740x400{% endif %}" alt="{{ section.settings.box_img.alt }}"> 
+                    <img src="{% if section.settings.box_img %}{{ section.settings.box_img | img_url: block.settings.img_size }}{% else %}http:\/\/via.placeholder.com\/{{ block.settings.img_size }}{% endif %}" alt="{{ section.settings.box_img.alt }}"> 
                       {% if block.settings.product_badget != '' %} 
                         <div class="label-block label-right">
                           <div class="product-badget">{{ block.settings.product_badget }}</div>
