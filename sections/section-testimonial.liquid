@@ -5,14 +5,11 @@
               <div class="col-lg-7">
 
                   <div class="testimonial-video-box">
-                    {% if section.settings.video_img %} 
+                    
                       <div class="thumbnail">
                         <img src="{% if section.settings.video_img %}{{ section.settings.video_img | img_url: '718x650' }}{% else %}http:\/\/via.placeholder.com\/718x650{% endif %}" alt="{{ section.settings.video_img.alt }}"> 
-                        
                        
-                      </div>
-                    {% endif %} 
-                  
+                      </div> 
                     {% if section.settings.video_url %} 
                       <div class="play-btn">
                           <a class="popup-youtube" href="{{ section.settings.video_url | escape }}"><i class="fas fa-play"></i></a>
