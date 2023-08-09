@@ -215,7 +215,7 @@
       ],
       "settings": {
         "section_title": "Our Users Feedbackddd",
-        "video_img": "shopify:\/\/shop_images\/image-4.png",
+        "video_img": "shopify:\/\/shop_images\/product-big-12.png",
         "video_url": "https:\/\/www.youtube.com\/watch?v=dfjie1Bg7X0"
       }
     },
@@ -330,6 +330,27 @@
         "section_btn_txt": "View All Deals",
         "section_btn_url": ""
       }
+    },
+    "412abb2d-3216-4e4d-b543-24816bf5cb82": {
+      "type": "section-testimonial",
+      "blocks": {
+        "template--20230999834939__412abb2d-3216-4e4d-b543-24816bf5cb82-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--20230999834939__412abb2d-3216-4e4d-b543-24816bf5cb82-review-1"
+      ],
+      "settings": {
+        "section_title": "Our Users Feedback",
+        "video_img": "shopify:\/\/shop_images\/image-4.png",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=Zlv2CS8LqG0&list=RDdfjie1Bg7X0"
+      }
     }
   },
   "order": [
@@ -340,6 +361,7 @@
     "7a04f983-4a56-49e2-adea-3dc12febc95d",
     "857ac431-475d-46e9-b24a-9d2b752c9eae",
     "2070efc2-ee1d-4b43-9205-67934ac99e6f",
-    "3c6c52bd-39ce-4a73-997d-f6a2b7a7feb3"
+    "3c6c52bd-39ce-4a73-997d-f6a2b7a7feb3",
+    "412abb2d-3216-4e4d-b543-24816bf5cb82"
   ]
 }
