@@ -18,8 +18,9 @@
                       {% endif %}   
                     </div> 
                     <div class="thumbnail">
-                         <img src="{% if section.settings.cta_img %}{{ section.settings.cta_img | img_url: '203x192' }}{% else %}http:\/\/via.placeholder.com\/203x192{% endif %}" alt="{{ section.settings.cta_img.alt }}"> 
+                         <img src="{% if block.settings.cta_img %}{{ block.settings.cta_img | img_url: '203x192' }}{% else %}http:\/\/via.placeholder.com\/203x192{% endif %}" alt="{{ block.settings.cta_img.alt }}"> 
                     </div>
+
                 </div>
             </div>
           {% endcase %}
@@ -37,7 +38,7 @@
       "content": "Section Delivery"
     }
   ],
-  
+
   "blocks": [
     {
       "type": "cta",
