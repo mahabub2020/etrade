@@ -49,7 +49,8 @@
                                     src="{{ product.featured_image | img_url: '150x150' }}"
                                     alt="{{ product.featured_image.alt }}"
                                     decoding="async"
-                                    loading="lazy"></a>
+                                    loading="lazy">
+                                  </a>
                                   </div>
                                 <div class="product-details">
                                     <h5 class="title-popup m-0"><a href="{{ product.url }}">{{ product.title }}</a></h5>
@@ -62,13 +63,12 @@
                 </div> 
                   <div class="collection-thumbnail">
                     <img src="{% if section.settings.box_img %}{{ section.settings.box_img | img_url: block.settings.img_size }}{% else %}http:\/\/via.placeholder.com\/740x400{% endif %}" alt="{{ section.settings.box_img.alt }}"> 
-                  
                       {% if block.settings.product_badget != '' %} 
                         <div class="label-block label-right">
                           <div class="product-badget">{{ block.settings.product_badget }}</div>
-                        </div>    
-                  </div>
+                        </div>  
                 {% endif %}
+              </div>
               </div>
             </div>
         {% endcase %}
