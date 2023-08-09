@@ -4,6 +4,33 @@
      
         $(document).ready(function(){
 
+            var $slideStatus = $('.slick-slide-count');
+            
+            $('.testimonial-slick-activation-three').on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+                var i = (currentSlide ? currentSlide : 0) + 1;
+                $slideStatus.text(i + '/' + slick.slideCount);
+            });
+
+            $('.testimonial-slick-activation-three').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                speed: 500,
+                draggable: true,
+                prevArrow: $('.prev-custom-nav'),
+                nextArrow: $('.next-custom-nav'),
+                responsive: [{
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+            
+
 
             $('.categrie-product-activation-2').slick({
                 infinite: true,
