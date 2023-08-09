@@ -4,12 +4,20 @@
           <div class="row">
               <div class="col-lg-7">
                   <div class="testimonial-video-box">
+                    {% if section.settings.video_img %} 
                       <div class="thumbnail">
-                          <img src="assets/images/testimonial/image-4.png" alt="Image">
+                        <img
+                          src="{{ section.settings.video_img | img_url:  section.settings.video_img }}"
+                          alt="{{ section.settings.video_img.alt | default: shop.name }}"
+                        >
                       </div>
+                    {% endif %} 
+                    {% if section.settings.video_url %} 
                       <div class="play-btn">
-                          <a class="popup-youtube" href="https://www.youtube.com/watch?v=1iIZeIy7TqM"><i class="fas fa-play"></i></a>
+                          <a class="popup-youtube" href="{{ section.settings.video_url | escape }}"><i class="fas fa-play"></i></a>
                       </div>
+                    {% endif %}
+
                   </div>
               </div>
 
@@ -25,6 +33,7 @@
                          {% for block in section.blocks %}
                           {% case block.type %}
                             {% when 'review' %} 
+
                             <div class="slick-single-layout testimonial-style-three"> 
                               {% if blocks.settings.review_content != '' %}   
                                     <p class="author-review">{{ blocks.settings.review_content | escape }}</p>
@@ -98,7 +107,7 @@
       "settings": [
         {
           "type": "text",
-          "id": "box_title",
+          "id": "review_title",
           "default": "Explore The Sunglass",
           "label": "Title"
         },
