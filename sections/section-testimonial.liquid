@@ -3,6 +3,7 @@
       <div class="testimonial-container-box">
           <div class="row">
               <div class="col-lg-7">
+
                   <div class="testimonial-video-box">
                     {% if section.settings.video_img %} 
                       <div class="thumbnail">
@@ -12,6 +13,7 @@
                         >
                       </div>
                     {% endif %} 
+                  
                     {% if section.settings.video_url %} 
                       <div class="play-btn">
                           <a class="popup-youtube" href="{{ section.settings.video_url | escape }}"><i class="fas fa-play"></i></a>
@@ -32,19 +34,19 @@
                       <div class="testimonial-slick-activation-three">
                          {% for block in section.blocks %}
                           {% case block.type %}
-                            {% when 'review' %} 
+                            {% when 'review' %}  
 
                             <div class="slick-single-layout testimonial-style-three"> 
-                              {% if blocks.settings.review_content != '' %}   
-                                    <p class="author-review">{{ blocks.settings.review_content | escape }}</p>
+                              {% if block.settings.review_content != '' %}   
+                                    <p class="author-review">{{ block.settings.review_content | escape }}</p>
                                {% endif %}  
 
                                 <div class="author-info">  
-                                    {% if blocks.settings.author_name != '' %}   
-                                    <h6 class="author-name">{{ blocks.settings.author_name | escape }}</h6>
+                                    {% if block.settings.author_name != '' %}   
+                                    <h6 class="author-name">{{ block.settings.author_name | escape }}</h6>
                                     {% endif %}  
-                                    {% if blocks.settings.author_desg != '' %}   
-                                      <span class="author-desg">{{ blocks.settings.author_desg | escape }}</span>
+                                    {% if block.settings.author_desg != '' %}   
+                                      <span class="author-desg">{{ block.settings.author_desg | escape }}</span>
                                     {% endif %} 
                                   
                                 </div>
@@ -105,12 +107,7 @@
       "type": "review",
       "name": "Review Content",
       "settings": [
-        {
-          "type": "text",
-          "id": "review_title",
-          "default": "Explore The Sunglass",
-          "label": "Title"
-        },
+        
         {
           "type": "textarea",
           "id": "review_content",
@@ -132,8 +129,6 @@
       ]
     }
   ],
-
-
   "presets": [
     {
       "name": "Section Testimoial",
