@@ -62,7 +62,18 @@
                       {% endif %}
                 </div> 
                   <div class="collection-thumbnail">
-                    <img src="{% if section.settings.box_img %}{{ section.settings.box_img | img_url: block.settings.img_size }}{% else %}http:\/\/via.placeholder.com\/{{ block.settings.img_size }}{% endif %}" alt="{{ section.settings.box_img.alt }}"> 
+
+                    {% if section.settings.box_img %}
+                      <img
+                        src="{{ section.settings.box_img | img_url: '100x100' }}"
+                        alt="{{ section.settings.box_img.alt | escape }}"
+                        loading="lazy">
+                    {% else %}
+                      {{ 'image' | placeholder_svg_tag }}
+                    {% endif %}
+
+                    
+                    
                       {% if block.settings.product_badget != '' %} 
                         <div class="label-block label-right">
                           <div class="product-badget">{{ block.settings.product_badget }}</div>
