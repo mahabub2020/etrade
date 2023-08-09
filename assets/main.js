@@ -192,9 +192,36 @@
 
                 ]
             });
-
+            magnificPopupActivation();
 
         });
+
+      function magnificPopupActivation() {
+
+            var yPopup = $('.popup-youtube');
+            if (yPopup.length) {
+                yPopup.magnificPopup({
+                    disableOn: 300,
+                    type: 'iframe',
+                    mainClass: 'mfp-fade',
+                    removalDelay: 160,
+                    preloader: false,
+                    fixedContentPos: false
+                });
+            }
+
+            if ($('.zoom-gallery').length) {
+                $('.zoom-gallery').each(function() {
+                    $(this).magnificPopup({
+                        delegate: 'a.popup-zoom',
+                        type: 'image',
+                        gallery: {
+                            enabled: true
+                        }
+                    });
+                });
+            }
+        }
 
 
 
