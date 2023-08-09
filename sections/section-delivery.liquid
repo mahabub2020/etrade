@@ -1,0 +1,83 @@
+<div class="delivery-poster-area">
+  <div class="container">
+      <div class="row">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'cta' %}   
+              <div class="col-xl-6">
+                <div class="delivery-poster pickup">
+                    <div class="content">  
+                      {% if block.settings.badge != '' %}   
+                        <span class="badge">{{ block.settings.badge | escape }}</span>
+                      {% endif %}   
+                      {% if block.settings.badge_title != '' %}   
+                        <h4 class="title">{{ block.settings.badge_title | escape }}</h4> 
+                      {% endif %}  
+                      {% if block.settings.badge_content != '' %}   
+                        <p>{{ block.settings.badge_content | escape }}</p> 
+                      {% endif %}   
+                    </div> 
+                    <div class="thumbnail">
+                         <img src="{% if section.settings.cta_img %}{{ section.settings.cta_img | img_url: '203x192' }}{% else %}http:\/\/via.placeholder.com\/203x192{% endif %}" alt="{{ section.settings.cta_img.alt }}"> 
+                    </div>
+                </div>
+            </div>
+          {% endcase %}
+        {% endfor %} 
+      </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Section CTA",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Delivery"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "cta",
+      "name": "CTA Content",
+      "settings": [ 
+        {
+          "type": "text",
+          "id": "badge",
+          "default": "Always free",
+          "label": "Dadge"
+        },
+        {
+          "type": "text",
+          "id": "badge_title",
+          "default": "Order Pickup",
+          "label": "Dadge Title"
+        },
+        {
+          "type": "textarea",
+          "id": "badge_content",
+          "default": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+          "label": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "cta_img",
+          "label": "Image",
+          "info": "Recommended Size: 203px X 192px"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Section CTA",
+      "blocks": [
+        {
+          "type": "cta"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 
