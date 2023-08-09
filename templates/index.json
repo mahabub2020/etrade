@@ -137,11 +137,39 @@
         "section_title": "Our Users Feedback",
         "video_url": "shopify:\/\/pages\/contact"
       }
+    },
+    "67dc5faa-8491-4e00-a1dd-c0f7795de620": {
+      "type": "section-delivery",
+      "blocks": {
+        "template--20190269571387__67dc5faa-8491-4e00-a1dd-c0f7795de620-cta-1": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "Order Pickup",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store."
+          }
+        },
+        "8274d64e-9d9f-42c6-80f7-db718a0be588": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "Order Pickup",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store."
+          }
+        }
+      },
+      "block_order": [
+        "template--20190269571387__67dc5faa-8491-4e00-a1dd-c0f7795de620-cta-1",
+        "8274d64e-9d9f-42c6-80f7-db718a0be588"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "product-collection",
     "402c70cf-782b-4cfc-96ed-78ddf5e848ce",
-    "1a30defc-d9f5-41d2-bb84-0a9d8ba90cc8"
+    "1a30defc-d9f5-41d2-bb84-0a9d8ba90cc8",
+    "67dc5faa-8491-4e00-a1dd-c0f7795de620"
   ]
 }
