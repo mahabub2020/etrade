@@ -321,3 +321,28 @@
     </div>
   </div>
 </div>
+
+{% schema %}
+    {
+        "name": "Shop",
+        "settings": [
+            {
+                "type": "select",
+                "id": "shop_layout",
+                "label": "Shop Layout",
+                "options": [
+                    {
+                        "label": "Left Sidebar",
+                        "value": "left"
+                    }, {
+                        "label": "Right Sidebar",
+                        "value": "right"
+                    }, {
+                        "label": "No Sidebar",
+                        "value": "no"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}
