@@ -235,12 +235,13 @@
                   <a href="{{ product.url }}">
                     {% if product.featured_image %}
                     <img
-                      src="{{ item.image | img_url: '300x300' }}"
+                      src="{{ product.featured_image | img_url: '300x300' }}"
                       class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                      alt="{{ item.title | escape }}"
+                      alt="{{ product.title | escape }}"
                       loading="lazy">
                       {% else %}
                         {{ 'image' | placeholder_svg_tag }}
+                    {% endif %}
                       </a>
                   <div class="label-block label-right">
                     <div class="product-badget">34% OFF</div>
