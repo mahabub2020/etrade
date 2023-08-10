@@ -355,9 +355,8 @@
     "cc358753-68db-477d-ba77-5cea2aa2ece4": {
       "type": "section-multicolumn-product-carousel",
       "settings": {
-        "title": "Product Collection",
+        "title": "Product Collectionjj",
         "product_collection": [
-          "accessories",
           "banner-popup",
           "beauty",
           "garden",
@@ -365,10 +364,11 @@
           "baby",
           "kids",
           "mens",
-          "womens"
+          "womens",
+          "accessories"
         ],
-        "list_per_slider": 10,
-        "number_of_products_to_show": 4,
+        "list_per_slider": 6,
+        "number_of_products_to_show": 8,
         "product_layout": "1"
       }
     }
