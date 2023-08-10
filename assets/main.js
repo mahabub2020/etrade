@@ -4,9 +4,18 @@
      
         $(document).ready(function(){
 
+
+            $('.popular-product-activation').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-angle-left"></i></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-angle-right"></i></button>',
+                
+            });
             
-
-
             $('.categrie-product-activation-2').slick({
                 infinite: true,
                 slidesToShow: 7,
