@@ -1,44 +1,5 @@
  
   
-  <div class="container">
-    <div class="section-title-wrapper section-title-border">
-      {% if section.settings.title != blank %}
-        <h2 class="title">{{ section.settings.title }}<img
-            width="32"
-            height="33"
-            src="{{ 'title-icon.png' | asset_url }}"
-            class="attachment-full size-full wp-image-234"
-            alt=""
-            decoding="async"
-            loading="lazy">
-        </h2>
-      {% endif %}
-  
-      {% if section.settings.btn-label != blank %}
-        <div class="view-btn">
-          <a
-            class="title-view-link"
-            href="#"
-            target="_self"
-            rel="nofollow">{{ section.settings.btn-label }}</a>
-        </div>
-      {% endif %}
-  
-    </div>
-    <div class="product-area pb--20">
-      <div class="row">
-        {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
-          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
-            {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
-            {% capture include_snippet %}
-              {% include layout %}
-            {% endcapture %}
-            {{ include_snippet }}
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
   <div class="axil-product-area bg-color-white axil-section-gapcommon">
     <div class="container">
         <div class="section-title-border slider-section-title">
@@ -63,10 +24,9 @@
                     assign totalitems = section.settings.list_per_slider
                     assign loopcount = 0
                      -%} 
-
                      
-                  {% for product in section.settings.collections[product_collection].products limit: section.settings.number_of_products_to_show %}
-                   
+
+                    {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
                     {% assign loopcount = loopcount | plus: 1 %} 
                     {% if count == 1 %}
                       <div class="slick-single-layout">
@@ -119,7 +79,7 @@
       },
     
       {
-        "type": "collection_list",
+        "type": "collection",
         "id": "product_collection",
         "label": "Collection"
       },
