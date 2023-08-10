@@ -21,16 +21,16 @@
                     assign totalitems = section.settings.list_per_slider
                     assign loopcount = 0
                      -%} 
-
-                {% for collection in section.settings.product_collection %}
-                  {% for product in collection.products limit: section.settings.number_of_products_to_show %}
-                  
-                    {% assign loopcount = loopcount | plus: 1 %} 
-                    {% if count == 1 %}
-                      <div class="slick-single-layout">
-                        <div class="row">
-                    {% endif %}
-                   
+                     
+                     {% for collection in section.settings.product_collection %}
+                        {% for product in collection.products limit: section.settings.number_of_products_to_show %}
+                          
+                          {% assign loopcount = loopcount | plus: 1 %} 
+                          {% if count == 1 %}
+                            <div class="slick-single-layout">
+                              <div class="row">
+                          {% endif %}
+                        
                    
                     <div class="col-md-6 col-12">
                       {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
@@ -51,14 +51,9 @@
                     {% assign count = count | plus: 1 %}
                     {% endif %}
 
-<<<<<<< HEAD
                     {% endfor %}  
                   {% endfor %}  
            
-=======
-                  {% endfor %}  
-                {% endfor %}  
->>>>>>> 7f6f1e6b90456fb542e6ef0ae3d52f506f143564
 
                 </div>
             </div>
