@@ -356,16 +356,7 @@
       "type": "section-multicolumn-product-carousel",
       "settings": {
         "title": "Product Collectionjj",
-        "product_collection": [
-          "banner-popup",
-          "beauty",
-          "garden",
-          "frontpage",
-          "baby",
-          "kids",
-          "mens",
-          "womens"
-        ],
+        "product_collection": "banner-popup",
         "list_per_slider": 7,
         "number_of_products_to_show": 9,
         "product_layout": "3"
