@@ -367,9 +367,9 @@
           "womens",
           "accessories"
         ],
-        "list_per_slider": 6,
-        "number_of_products_to_show": 8,
-        "product_layout": "1"
+        "list_per_slider": 7,
+        "number_of_products_to_show": 9,
+        "product_layout": "3"
       }
     }
   },
