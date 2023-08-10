@@ -5,6 +5,17 @@
         $(document).ready(function(){
 
 
+            $('.popular-product-activation').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-angle-left"></i></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-angle-right"></i></button>',
+                
+            });
+            
             $('.categrie-product-activation-2').slick({
                 infinite: true,
                 slidesToShow: 7,
@@ -166,8 +177,65 @@
                 ]
             });
 
+            magnificPopupActivation();
+            testimonialActivation();
 
         });
+
+
+
+      function testimonialActivation() {
+
+        var $slideStatus = $('.slick-slide-count');
+            
+        $('.testimonial-slick-activation-three').on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $slideStatus.text(i + '/' + slick.slideCount);
+        });
+
+        $('.testimonial-slick-activation-three').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            speed: 500,
+            draggable: true,
+            prevArrow: $('.prev-custom-nav'),
+            nextArrow: $('.next-custom-nav'),
+            responsive: [{
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        });
+      }
+      function magnificPopupActivation() {
+            var yPopup = $('.popup-youtube');
+            if (yPopup.length) {
+                yPopup.magnificPopup({
+                    disableOn: 300,
+                    type: 'iframe',
+                    mainClass: 'mfp-fade',
+                    removalDelay: 160,
+                    preloader: false,
+                    fixedContentPos: false
+                });
+            }
+            if ($('.zoom-gallery').length) {
+                $('.zoom-gallery').each(function() {
+                    $(this).magnificPopup({
+                        delegate: 'a.popup-zoom',
+                        type: 'image',
+                        gallery: {
+                            enabled: true
+                        }
+                    });
+                });
+            }
+        }
 
 
 

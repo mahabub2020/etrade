@@ -112,10 +112,10 @@
         "886b924e-74e1-4cdd-984d-42b5b4d4236f": {
           "type": "dealslg",
           "settings": {
-            "box_title": "Decorative <br>Plant For Home",
+            "box_title": "Decorative Plant For Home",
             "prices_label": "Starting From",
             "box_prices": "$35.00",
-            "box_img": "shopify:\/\/shop_images\/collection_5.jpg",
+            "box_img": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
             "block_btn_txt": "View All Dealsw",
             "block_btn_url": "shopify:\/\/products\/kalrez®-spectrum™-6376",
             "popup_product": "kalrez®-spectrum™-6376",
@@ -179,6 +179,193 @@
         "section_btn_txt": "View All Deals",
         "section_btn_url": ""
       }
+    },
+    "2070efc2-ee1d-4b43-9205-67934ac99e6f": {
+      "type": "section-testimonial",
+      "blocks": {
+        "template--20230999834939__2070efc2-ee1d-4b43-9205-67934ac99e6f-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "2e07288b-a90c-4cd8-af28-d83c3dd52be8": {
+          "type": "review",
+          "settings": {
+            "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "fdc00737-9a31-4b51-93c2-93610d214b8d": {
+          "type": "review",
+          "settings": {
+            "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.zcz",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--20230999834939__2070efc2-ee1d-4b43-9205-67934ac99e6f-review-1",
+        "2e07288b-a90c-4cd8-af28-d83c3dd52be8",
+        "fdc00737-9a31-4b51-93c2-93610d214b8d"
+      ],
+      "settings": {
+        "section_title": "Our Users Feedbackddd",
+        "video_img": "shopify:\/\/shop_images\/product-big-12.png",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=dfjie1Bg7X0"
+      }
+    },
+    "3c6c52bd-39ce-4a73-997d-f6a2b7a7feb3": {
+      "type": "section-mega-collections",
+      "blocks": {
+        "template--20230999834939__3c6c52bd-39ce-4a73-997d-f6a2b7a7feb3-megalg-1": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "box_img": "shopify:\/\/shop_images\/playful-father-and-daughter-having-fun-at-their-ne-2022-09-27-22-44-31-utc.jpg",
+            "img_size": "740x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "kalrez®-spectrum™-6376",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 7,
+            "col_lg": 7,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        },
+        "2ecff90d-0608-44ca-bc94-277f5ae730d6": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "box_img": "shopify:\/\/shop_images\/playful-father-and-daughter-having-fun-at-their-ne-2022-09-27-22-44-31-utc.jpg",
+            "img_size": "520x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 5,
+            "col_lg": 5,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        },
+        "4baeb52d-308c-4c34-ac15-8c84ed28f802": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "box_img": "shopify:\/\/shop_images\/product-big-10.png",
+            "img_size": "740x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 5,
+            "col_lg": 5,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        },
+        "81b45a6b-a224-4607-92b1-815e0b4da033": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "box_img": "shopify:\/\/shop_images\/product-big-11.png",
+            "img_size": "740x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "malrez®-spectrum™-6375",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 7,
+            "col_lg": 7,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        }
+      },
+      "block_order": [
+        "template--20230999834939__3c6c52bd-39ce-4a73-997d-f6a2b7a7feb3-megalg-1",
+        "2ecff90d-0608-44ca-bc94-277f5ae730d6",
+        "4baeb52d-308c-4c34-ac15-8c84ed28f802",
+        "81b45a6b-a224-4607-92b1-815e0b4da033"
+      ],
+      "settings": {
+        "section_title": "Today’s Best Deals 💥",
+        "section_btn_txt": "View All Deals",
+        "section_btn_url": ""
+      }
+    },
+    "412abb2d-3216-4e4d-b543-24816bf5cb82": {
+      "type": "section-testimonial",
+      "blocks": {
+        "template--20230999834939__412abb2d-3216-4e4d-b543-24816bf5cb82-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--20230999834939__412abb2d-3216-4e4d-b543-24816bf5cb82-review-1"
+      ],
+      "settings": {
+        "section_title": "Our Users Feedback",
+        "video_img": "shopify:\/\/shop_images\/image-4.png",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=Zlv2CS8LqG0&list=RDdfjie1Bg7X0"
+      }
+    },
+    "cc358753-68db-477d-ba77-5cea2aa2ece4": {
+      "type": "section-multicolumn-product-carousel",
+      "settings": {
+        "title": "Product Collectionjj",
+        "product_collection": [
+          "banner-popup",
+          "beauty",
+          "mens",
+          "kids"
+        ],
+        "list_per_slider": 7,
+        "number_of_products_to_show": 9,
+        "product_layout": "3"
+      }
     }
   },
   "order": [
@@ -187,6 +374,10 @@
     "073c0303-e328-46b3-89b6-4c497a5dca2d",
     "d63e8306-d128-4c5b-8fe8-fe046e913d44",
     "7a04f983-4a56-49e2-adea-3dc12febc95d",
-    "857ac431-475d-46e9-b24a-9d2b752c9eae"
+    "857ac431-475d-46e9-b24a-9d2b752c9eae",
+    "2070efc2-ee1d-4b43-9205-67934ac99e6f",
+    "3c6c52bd-39ce-4a73-997d-f6a2b7a7feb3",
+    "412abb2d-3216-4e4d-b543-24816bf5cb82",
+    "cc358753-68db-477d-ba77-5cea2aa2ece4"
   ]
 }

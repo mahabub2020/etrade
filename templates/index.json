@@ -5,13 +5,179 @@
       "settings": {
         "title": "Product Collection",
         "btn-label": "View All",
+<<<<<<< HEAD
         "product_collection": "etrade-products",
         "number_of_products_to_show": 4,
         "product_layout": "1"
+=======
+        "product_collection": "automated-collection",
+        "number_of_products_to_show": 4,
+        "product_layout": "1"
+      }
+    },
+    "402c70cf-782b-4cfc-96ed-78ddf5e848ce": {
+      "type": "section-mega-collections",
+      "blocks": {
+        "template--20190269571387__402c70cf-782b-4cfc-96ed-78ddf5e848ce-megalg-1": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "img_size": "740x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 7,
+            "col_lg": 7,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        },
+        "a62edb17-f86c-4d0f-8c33-32eed105175f": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "img_size": "520x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 5,
+            "col_lg": 5,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        },
+        "f7027c13-432a-497d-a87d-e3bc74a6aacc": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "img_size": "520x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 5,
+            "col_lg": 5,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        },
+        "ccc81f22-327b-45b6-b874-7cdc1c8b3970": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "img_size": "740x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 7,
+            "col_lg": 7,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        }
+      },
+      "block_order": [
+        "template--20190269571387__402c70cf-782b-4cfc-96ed-78ddf5e848ce-megalg-1",
+        "a62edb17-f86c-4d0f-8c33-32eed105175f",
+        "f7027c13-432a-497d-a87d-e3bc74a6aacc",
+        "ccc81f22-327b-45b6-b874-7cdc1c8b3970"
+      ],
+      "settings": {
+        "section_title": "Today’s Best Deals 💥",
+        "section_btn_txt": "View All Deals",
+        "section_btn_url": ""
+      }
+    },
+    "1a30defc-d9f5-41d2-bb84-0a9d8ba90cc8": {
+      "type": "section-testimonial",
+      "blocks": {
+        "template--20190269571387__1a30defc-d9f5-41d2-bb84-0a9d8ba90cc8-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--20190269571387__1a30defc-d9f5-41d2-bb84-0a9d8ba90cc8-review-1"
+      ],
+      "settings": {
+        "section_title": "Our Users Feedback",
+        "video_url": "shopify:\/\/pages\/contact"
+      }
+    },
+    "67dc5faa-8491-4e00-a1dd-c0f7795de620": {
+      "type": "section-delivery",
+      "blocks": {
+        "template--20190269571387__67dc5faa-8491-4e00-a1dd-c0f7795de620-cta-1": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "Order Pickup",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_img": "shopify:\/\/shop_images\/image-4.png"
+          }
+        },
+        "8274d64e-9d9f-42c6-80f7-db718a0be588": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "Order Pickup",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_img": "shopify:\/\/shop_images\/WhatsApp_Image_2023-07-21_at_12.48.22_AM.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "template--20190269571387__67dc5faa-8491-4e00-a1dd-c0f7795de620-cta-1",
+        "8274d64e-9d9f-42c6-80f7-db718a0be588"
+      ],
+      "settings": {
+>>>>>>> 396b6d008964624ed7c734a175d85cc351faf46f
       }
     }
   },
   "order": [
-    "product-collection"
+    "product-collection",
+    "402c70cf-782b-4cfc-96ed-78ddf5e848ce",
+    "1a30defc-d9f5-41d2-bb84-0a9d8ba90cc8",
+    "67dc5faa-8491-4e00-a1dd-c0f7795de620"
   ]
 }

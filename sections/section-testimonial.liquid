@@ -1,0 +1,138 @@
+<div class="axil-testimoial-area-two axil-section-gapBottom">
+  <div class="container">
+      <div class="testimonial-container-box">
+          <div class="row">
+              <div class="col-lg-7"> 
+                  <div class="testimonial-video-box"> 
+                      <div class="thumbnail">
+                        <img src="{% if section.settings.video_img %}{{ section.settings.video_img | img_url: '718x650' }}{% else %}http:\/\/via.placeholder.com\/718x650{% endif %}" alt="{{ section.settings.video_img.alt }}"> 
+                       
+                      </div> 
+                    {% if section.settings.video_url %} 
+                      <div class="play-btn">
+                          <a class="popup-youtube" href="{{ section.settings.video_url | escape }}"><i class="fas fa-play"></i></a>
+                      </div>
+                    {% endif %}
+
+                  </div>
+              </div>
+
+              <div class="col-lg-5">
+                  <div class="testimonial-style-three-wrapper"> 
+                      {% if section.settings.section_title != '' %}  
+                        <div class="heading-title">
+                          <h2 class="title">{{ section.settings.section_title | escape }}</h2>
+                      </div>
+                      {% endif %}
+                    
+                      <div class="testimonial-slick-activation-three">
+                         {% for block in section.blocks %}
+                          {% case block.type %}
+                            {% when 'review' %}  
+
+                            <div class="slick-single-layout testimonial-style-three"> 
+                              {% if block.settings.review_content != '' %}   
+                                    <p class="author-review">{{ block.settings.review_content | escape }}</p>
+                               {% endif %}  
+
+                                <div class="author-info">  
+                                    {% if block.settings.author_name != '' %}   
+                                    <h6 class="author-name">{{ block.settings.author_name | escape }}</h6>
+                                    {% endif %}  
+                                    {% if block.settings.author_desg != '' %}   
+                                      <span class="author-desg">{{ block.settings.author_desg | escape }}</span>
+                                    {% endif %} 
+                                  
+                                </div>
+                            </div>
+                        {% endcase %}
+                      {% endfor %}
+
+                      </div>
+                      <div class="testimonial-custom-nav">
+                          <div class="row align-items-center">
+                              <div class="col-6">
+                                  <div class="slick-slide-count"></div>
+                              </div>
+                              <div class="col-6">
+                                  <div class="slide-custom-nav">
+                                      <button class="prev-custom-nav"><i class="fal fa-angle-left"></i>Prev</button>
+                                      <button class="next-custom-nav">Next <i class="fal fa-angle-right"></i></button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+ 
+{% schema %}
+{
+  "name": "Section Testimoial",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "default": "Our Users Feedback",
+      "label": "Title"
+    }, 
+    {
+      "type": "image_picker",
+      "id": "video_img",
+      "label": "Testimoial Video Overlayer",
+      "info": "Recommended Size: 570 x 270px"
+    }, 
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Video URL"
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review Content",
+      "settings": [
+        
+        {
+          "type": "textarea",
+          "id": "review_content",
+          "default": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "author_name",
+          "default": "Wade Warren",
+          "label": "Author Name"
+        },
+        {
+          "type": "text",
+          "id": "author_desg",
+          "default": "Head of Marketing",
+          "label": "Author Desg"
+        } 
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Section Testimoial",
+      "blocks": [
+        {
+          "type": "review"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

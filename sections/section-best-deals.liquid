@@ -1,5 +1,6 @@
 <div class="product-collection-area bg-lighter axil-section-gapcommon">
   <div class="container">
+    
     <div class="section-title-border">
       {% if section.settings.section_title != '' %}
         <h2 class="title">{{ section.settings.section_title | escape }}</h2>
@@ -115,14 +116,11 @@
 </div>
 
 
-
 {%- style -%}
-
 
 {% for block in section.blocks %}
 {% case block.type %}
   {% when 'dealslg' %}
-
 
     .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-left{
       left: {{ block.settings.pos_x }}px !important;
@@ -132,7 +130,6 @@
       right: {{ block.settings.pos_x }}px !important;
       left: auto !important;
     }
-
     .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-top{
       top: {{ block.settings.pos_y }}px !important;
       bottom: auto !important;
@@ -142,16 +139,11 @@
       top: auto !important;
     }
 
-
-
   {% endcase %}
 {% endfor %}
 
 
-
-
 {%- endstyle -%}
-
 
 {% schema %}
 {
