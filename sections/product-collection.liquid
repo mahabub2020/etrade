@@ -25,16 +25,14 @@
   </div>
   <div class="product-area pb--20">
     <div class="row">
-      {% for collection in section.settings.collection_list %}
-        {% for product in collection.products limit: section.settings.number_of_products_to_show %}
-          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
-            {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
-            {% capture include_snippet %}
-              {% include layout %}
-            {% endcapture %}
-            {{ include_snippet }}
-          </div>
-        {% endfor %}
+      {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
+        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
+          {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
+          {% capture include_snippet %}
+            {% include layout %}
+          {% endcapture %}
+          {{ include_snippet }}
+        </div>
       {% endfor %}
     </div>
   </div>
@@ -61,11 +59,6 @@
         "label": "Collection"
       },
       {
-        "type": "collection_list",
-        "id": "collection_list",
-        "label": "Collections",
-        "limit": 2
-      }, {
         "type": "range",
         "id": "number_of_products_to_show",
         "min": 4,
