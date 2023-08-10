@@ -25,8 +25,8 @@
                     assign loopcount = 0
                      -%} 
                      
-
-                    {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
+                  {% for product in section.settings.collections['product_collection'].products limit: section.settings.number_of_products_to_show %}
+                  
                     {% assign loopcount = loopcount | plus: 1 %} 
                     {% if count == 1 %}
                       <div class="slick-single-layout">
