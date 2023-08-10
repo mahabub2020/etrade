@@ -1,6 +1,4 @@
- 
-  
-  <div class="axil-product-area bg-color-white axil-section-gapcommon">
+<div class="axil-product-area bg-color-white axil-section-gapcommon">
     <div class="container">
         <div class="section-title-border slider-section-title">
           {% if section.settings.title != blank %}
@@ -17,15 +15,15 @@
       
         </div>
         <div class="popular-product-activation slick-layout-wrapper slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
-           
-    
+              
                   {%- liquid 
                     assign count = 1  
                     assign totalitems = section.settings.list_per_slider
                     assign loopcount = 0
                      -%} 
-                     
-                  {% for product in section.settings.collection.products limit: section.settings.number_of_products_to_show %}
+
+                {% for collection in section.settings.product_collection %}
+                  {% for product in collection.products limit: section.settings.number_of_products_to_show %}
                   
                     {% assign loopcount = loopcount | plus: 1 %} 
                     {% if count == 1 %}
@@ -43,17 +41,18 @@
                     </div>
                    
 
-                  {% if count == totalitems %}
-                  </div></div> 
-                  {% assign count = 1 %}  
-              {% elsif forloop.length == loopcount %}
-                  </div></div>
-                  {% assign count = count | plus: 1 %} 
-              {% else %}
-                  {% assign count = count | plus: 1 %}
-              {% endif %}
+                    {% if count == totalitems %}
+                    </div></div> 
+                    {% assign count = 1 %}  
+                    {% elsif forloop.length == loopcount %}
+                    </div></div>
+                    {% assign count = count | plus: 1 %} 
+                    {% else %}
+                    {% assign count = count | plus: 1 %}
+                    {% endif %}
 
-          {% endfor %}  
+                  {% endfor %}  
+                {% endfor %}  
 
                 </div>
             </div>
