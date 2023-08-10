@@ -25,7 +25,7 @@
                     assign loopcount = 0
                      -%} 
                      
-                  {% for product in section.settings.collections['product_collection'].products limit: section.settings.number_of_products_to_show %}
+                  {% for product in section.settings.collections.products limit: 4 %}
                   
                     {% assign loopcount = loopcount | plus: 1 %} 
                     {% if count == 1 %}
