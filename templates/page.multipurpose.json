@@ -102,9 +102,6 @@
         "title": "Product Collection",
         "btn-label": "",
         "product_collection": "banner-popup",
-        "collection_list": [
-
-        ],
         "number_of_products_to_show": 4,
         "product_layout": "1"
       }
@@ -360,13 +357,10 @@
       "settings": {
         "title": "Product Collectionjj",
         "product_collection": [
-          "banner-popup",
-          "beauty",
-          "mens",
-          "kids"
+          "baby"
         ],
-        "list_per_slider": 4,
-        "number_of_products_to_show": 4,
+        "list_per_slider": 2,
+        "number_of_products_to_show": 6,
         "product_layout": "1"
       }
     }
