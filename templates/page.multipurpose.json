@@ -357,10 +357,12 @@
       "settings": {
         "title": "Product Collectionjj",
         "product_collection": [
-          "baby"
+          "baby",
+          "garden",
+          "kids"
         ],
-        "list_per_slider": 2,
-        "number_of_products_to_show": 6,
+        "list_per_slider": 4,
+        "number_of_products_to_show": 8,
         "product_layout": "1"
       }
     }
