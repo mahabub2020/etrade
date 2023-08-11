@@ -31,14 +31,14 @@
                               <div class="row">
                           {% endif %}
                         
-                   
-                    <div class="col-md-6 col-12">
-                      {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
-                      {% capture include_snippet %}
-                        {% include layout %}
-                      {% endcapture %}
-                      {{ include_snippet }}
-                    </div>
+                
+                      <div class="col-md-6 col-12">
+                        {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
+                        {% capture include_snippet %}
+                          {% include layout %}
+                        {% endcapture %}
+                        {{ include_snippet }}
+                     </div>
                    
 
                     {% if count == totalitems %}
@@ -63,9 +63,6 @@
     </div>
 </div>
 <!-- End Expolre Product Area  -->
-
-
-
 
 {% schema %}
   {
@@ -92,7 +89,6 @@
         "default":10,
         "label": "Iteam Per Slider"
       }, 
-
       {
         "type": "range",
         "id": "number_of_products_to_show",
@@ -101,7 +97,8 @@
         "step": 1,
         "default": 4,
         "label": "Number of products to show"
-      }, {
+      }, 
+      {
         "type": "select",
         "id": "product_layout",
         "label": "Product Collection Layout",
