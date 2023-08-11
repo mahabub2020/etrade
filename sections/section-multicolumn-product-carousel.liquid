@@ -13,10 +13,11 @@
           </h2>
         {% endif %}
       </div>
+
       <div class="popular-product-activation slick-layout-wrapper slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
                 {%- liquid 
                   assign count = 1  
-                  assign totalitems = section.settings.number_of_products_to_show
+                  assign totalitems = section.settings.list_per_slider
                   assign loopcount = 0
                    -%} 
           
