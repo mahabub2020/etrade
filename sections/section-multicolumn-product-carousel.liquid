@@ -1,122 +1,135 @@
 <div class="axil-product-area bg-color-white axil-section-gapcommon">
-    <div class="container">
-        <div class="section-title-border slider-section-title">
-          {% if section.settings.title != blank %}
-            <h2 class="title">{{ section.settings.title }}<img
-                width="32"
-                height="33"
-                src="{{ 'title-icon.png' | asset_url }}"
-                class="attachment-full size-full wp-image-234"
-                alt=""
-                decoding="async"
-                loading="lazy">
-            </h2>
-          {% endif %}
-        </div>
-        <div class="popular-product-activation slick-layout-wrapper slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
+  <div class="container">
+      <div class="section-title-border slider-section-title">
+        {% if section.settings.title != blank %}
+          <h2 class="title">{{ section.settings.title }}<img
+              width="32"
+              height="33"
+              src="{{ 'title-icon.png' | asset_url }}"
+              class="attachment-full size-full wp-image-234"
+              alt=""
+              decoding="async"
+              loading="lazy">
+          </h2>
+        {% endif %}
+      </div>
+      <div class="popular-product-activation slick-layout-wrapper slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
+                {%- liquid 
+                  assign count = 1  
+                  assign totalitems = section.settings.number_of_products_to_show
+                  assign loopcount = 1
+                   -%} 
+          
+                   {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
+                       
+                    {% assign loopcount = loopcount | plus: 1 %} 
+                        {% if count == 1 %}
+                          <div class="slick-single-layout">
+                            <div class="row">
+                        {% endif %}
+                      
+              
+                    <div class="col-md-6 col-12">
+                      {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
+                      {% capture include_snippet %}
+                        {% include layout %}
+                      {% endcapture %}
+                      {{ include_snippet }}
+                   </div>
                  
-          <div class="slick-single-layout">
-            <div class="row">
-                     {% for collection in section.settings.product_collection %}
-                        {% for product in collection.products limit: section.settings.number_of_products_to_show %}
-                           
-                
-                      <div class="col-md-6 col-12">
-                        {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
-                        {% capture include_snippet %}
-                          {% include layout %}
-                        {% endcapture %}
-                        {{ include_snippet }}
-                     </div>
-                    
 
-                    {% endfor %}  
-                  {% endfor %}  
-           
+                  {% if count == totalitems %}
+                    </div></div> 
+                  {% assign count = 1 %}  
+                  {% elsif totalitems  == loopcount %}
+                    </div></div>
+                  {% assign count = count | plus: 1 %} 
+                  {% else %}
+                   {% assign count = count | plus: 1 %}
+                  {% endif %}
 
-                </div>
-            </div>
-            
-            
-        </div>
-    </div>
+                  {% endfor %} 
+                  
+          
+      </div>
+  </div>
 </div>
 <!-- End Expolre Product Area  -->
 
 {% schema %}
-  {
-    "name": "MC Product Carousel",
-    "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "default": "Product Collection",
-        "label": "Title"
-      },
-    
-      {
-        "type": "collection_list",
-        "id": "product_collection", 
-        "label": "Collection"
-      },
-      {
-        "type": "range",
-        "id": "list_per_slider",
-        "min": 1,
-        "max": 10,
-        "step": 1,
-        "default":10,
-        "label": "Iteam Per Slider"
-      }, 
-      {
-        "type": "range",
-        "id": "number_of_products_to_show",
-        "min": 4,
-        "max": 12,
-        "step": 1,
-        "default": 4,
-        "label": "Number of products to show"
-      }, 
-      {
-        "type": "select",
-        "id": "product_layout",
-        "label": "Product Collection Layout",
-        "options": [
-          {
-            "label": "Layout 1",
-            "value": "1"
-          },
-          {
-            "label": "Layout 2",
-            "value": "2"
-          },
-          {
-            "label": "Layout 3",
-            "value": "3"
-          },
-          {
-            "label": "Layout 4",
-            "value": "4"
-          }, {
-            "label": "Layout 5",
-            "value": "5"
-          }, {
-            "label": "Layout 6",
-            "value": "6"
-          }, {
-            "label": "Layout 7",
-            "value": "7"
-          }, {
-            "label": "Layout 8",
-            "value": "8"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "MC Product Carousel"
-      }
-    ]
-  }
+{
+  "name": "MC Product Carousel",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Product Collection",
+      "label": "Title"
+    },
+  
+    {
+      "type": "collection",
+      "id": "product_collection", 
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "list_per_slider",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default":10,
+      "label": "Iteam Per Slider"
+    }, 
+    {
+      "type": "range",
+      "id": "number_of_products_to_show",
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "default": 4,
+      "label": "Number of products to show"
+    }, 
+    {
+      "type": "select",
+      "id": "product_layout",
+      "label": "Product Collection Layout",
+      "options": [
+        {
+          "label": "Layout 1",
+          "value": "1"
+        },
+        {
+          "label": "Layout 2",
+          "value": "2"
+        },
+        {
+          "label": "Layout 3",
+          "value": "3"
+        },
+        {
+          "label": "Layout 4",
+          "value": "4"
+        }, {
+          "label": "Layout 5",
+          "value": "5"
+        }, {
+          "label": "Layout 6",
+          "value": "6"
+        }, {
+          "label": "Layout 7",
+          "value": "7"
+        }, {
+          "label": "Layout 8",
+          "value": "8"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "MC Product Carousel"
+    }
+  ]
+}
 {% endschema %}
