@@ -12,16 +12,14 @@
                 loading="lazy">
             </h2>
           {% endif %}
-      
         </div>
         <div class="popular-product-activation slick-layout-wrapper slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
-              
                   {%- liquid 
                     assign count = 1  
                     assign totalitems = 4
                     assign loopcount = 1
                      -%} 
-                     
+            
                      {% for collection in section.settings.product_collection %}
                         {% for product in collection.products limit: section.settings.number_of_products_to_show %}
                           
