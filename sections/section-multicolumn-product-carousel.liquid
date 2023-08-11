@@ -17,7 +17,7 @@
                 {%- liquid 
                   assign count = 1  
                   assign totalitems = section.settings.number_of_products_to_show
-                  assign loopcount = 1
+                  assign loopcount = 0
                    -%} 
           
                    {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
@@ -41,7 +41,7 @@
                   {% if count == totalitems %}
                     </div></div> 
                   {% assign count = 1 %}  
-                  {% elsif totalitems  == loopcount %}
+                  {% elsif forloop.length  == loopcount %}
                     </div></div>
                   {% assign count = count | plus: 1 %} 
                   {% else %}
@@ -81,7 +81,7 @@
       "default":10,
       "label": "Iteam Per Slider"
     }, 
-    
+
     {
       "type": "range",
       "id": "number_of_products_to_show",
