@@ -14,21 +14,12 @@
           {% endif %}
         </div>
         <div class="popular-product-activation slick-layout-wrapper slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
-                  {%- liquid 
-                    assign count = 1  
-                    assign totalitems = 4
-                    assign loopcount = 1
-                     -%} 
-            
+                 
+          <div class="slick-single-layout">
+            <div class="row">
                      {% for collection in section.settings.product_collection %}
                         {% for product in collection.products limit: section.settings.number_of_products_to_show %}
-                          
-                          {% assign loopcount = loopcount | plus: 1 %} 
-                          {% if count == 1 %}
-                            <div class="slick-single-layout">
-                              <div class="row">
-                          {% endif %}
-                        
+                           
                 
                       <div class="col-md-6 col-12">
                         {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
@@ -37,17 +28,7 @@
                         {% endcapture %}
                         {{ include_snippet }}
                      </div>
-                   
-
-                    {% if count == totalitems %}
-                    </div></div> 
-                    {% assign count = 1 %}  
-                    {% elsif section.settings.number_of_products_to_show  == loopcount %}
-                    </div></div>
-                    {% assign count = count | plus: 1 %} 
-                    {% else %}
-                    {% assign count = count | plus: 1 %}
-                    {% endif %}
+                    
 
                     {% endfor %}  
                   {% endfor %}  
