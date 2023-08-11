@@ -18,8 +18,8 @@
               
                   {%- liquid 
                     assign count = 1  
-                    assign totalitems = section.settings.list_per_slider
-                    assign loopcount = 0
+                    assign totalitems = 4
+                    assign loopcount = 1
                      -%} 
                      
                      {% for collection in section.settings.product_collection %}
@@ -44,7 +44,7 @@
                     {% if count == totalitems %}
                     </div></div> 
                     {% assign count = 1 %}  
-                    {% elsif forloop.length == loopcount %}
+                    {% elsif section.settings.number_of_products_to_show  == loopcount %}
                     </div></div>
                     {% assign count = count | plus: 1 %} 
                     {% else %}
