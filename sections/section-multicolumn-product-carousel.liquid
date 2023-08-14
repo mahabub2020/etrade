@@ -2,52 +2,47 @@
   <div class="container">
       <div class="section-title-border slider-section-title">
         {% if section.settings.title != blank %}
-          <h2 class="title">{{ section.settings.title }}<img
-              width="32"
-              height="33"
-              src="{{ 'title-icon.png' | asset_url }}"
-              class="attachment-full size-full wp-image-234"
-              alt=""
-              decoding="async"
-              loading="lazy">
+          <h2 class="title">{{ section.settings.title }}
+
+          {% if block.settings.title_icon %}  
+           <img src="{{ block.settings.title_icon | img_url:  '70x155' }}"
+            alt="{{ block.settings.title_icon.alt | default: shop.name }}"  decoding="async"
+            loading="lazy">
+          {% endif %}  
           </h2>
         {% endif %}
       </div>
-
       <div class="popular-product-activation slick-layout-wrapper slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
-                {%- liquid 
-                  assign count = 1  
-                  assign totalitems = section.settings.list_per_slider
-                  assign loopcount = 0
-                   -%} 
-          
-                   {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
+          {%- liquid 
+            assign count = 1  
+            assign totalitems = section.settings.list_per_slider
+            assign loopcount = 0
+              -%} 
+              {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
                        
-                    {% assign loopcount = loopcount | plus: 1 %} 
-                        {% if count == 1 %}
-                          <div class="slick-single-layout">
-                            <div class="row">
-                        {% endif %}
-                      
+                {% assign loopcount = loopcount | plus: 1 %} 
+                    {% if count == 1 %}
+                      <div class="slick-single-layout">
+                        <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
+                    {% endif %}
               
-                    <div class="col-md-6 col-12">
-                      {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
-                      {% capture include_snippet %}
-                        {% include layout %}
-                      {% endcapture %}
-                      {{ include_snippet }}
-                   </div>
-                 
+                      <div class="col">
+                        {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
+                        {% capture include_snippet %}
+                          {% include layout %}
+                        {% endcapture %}
+                        {{ include_snippet }}
+                    </div> 
 
-                  {% if count == totalitems %}
-                    </div></div> 
-                  {% assign count = 1 %}  
-                  {% elsif forloop.length  == loopcount %}
-                    </div></div>
-                  {% assign count = count | plus: 1 %} 
-                  {% else %}
-                   {% assign count = count | plus: 1 %}
-                  {% endif %}
+                    {% if count == totalitems %}
+                        </div></div> 
+                      {% assign count = 1 %}  
+                    {% elsif forloop.length  == loopcount %}
+                        </div></div>
+                      {% assign count = count | plus: 1 %} 
+                    {% else %}
+                        {% assign count = count | plus: 1 %}
+                    {% endif %}
 
                   {% endfor %} 
 
@@ -67,7 +62,11 @@
       "default": "Product Collection",
       "label": "Title"
     },
-  
+    {
+      "type": "image_picker",
+      "id": "title_icon",
+      "label": "Title Icon"
+    },
     {
       "type": "collection",
       "id": "product_collection", 
@@ -79,7 +78,7 @@
       "min": 1,
       "max": 10,
       "step": 1,
-      "default":10,
+      "default":4,
       "label": "Iteam Per Slider"
     }, 
 
@@ -89,7 +88,7 @@
       "min": 1,
       "max": 12,
       "step": 1,
-      "default": 1,
+      "default": 8,
       "label": "Number of products to show"
     }, 
     {
@@ -126,6 +125,48 @@
           "value": "8"
         }
       ]
+    },
+    {
+      "type": "header",
+      "content": "Laptop/Desktop Device"
+    },
+    {
+      "type": "range",
+      "id": "col_lg",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Responsive Columns",
+      "unit": "px",
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "Tablet Device"
+    },
+    {
+      "type": "range",
+      "id": "col_md",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Responsive Columns",
+      "unit": "px",
+      "default": 3
+    },
+    {
+      "type": "header",
+      "content": "Mobile Device"
+    },
+    {
+      "type": "range",
+      "id": "col_sm",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Responsive Columns",
+      "unit": "px",
+      "default": 2
     }
   ],
   "presets": [
