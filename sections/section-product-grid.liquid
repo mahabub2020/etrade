@@ -28,7 +28,7 @@
                 {% endif %}
               {% endfor %} 
               {% if ex == 0 %}
-          <div class="col-xl-{{ section.settings.col_xl }} col-lg-{{ section.settings.col_lg }} col-md-{{ section.settings.col_md }} col-{{ section.settings.col_sm }}">
+          <div class="col-xl-{{ section.settings.col_xl }} col-lg-{{ section.settings.col_lg }} col-md-{{ section.settings.col_md }} col-sm-{{ section.settings.col_sm }} col-{{ section.settings.col_mobile }}">
             {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
             {% capture include_snippet %}
               {% include layout %}
@@ -74,6 +74,11 @@
       "type": "collection",
       "id": "product_collection", 
       "label": "Collection"
+    },
+    {
+      "type": "number",
+      "id": "offset_product",
+      "label": "Offset"
     },
     {
       "type": "product_list",
@@ -125,60 +130,144 @@
       ]
     },
     {
-      "type": "header",
-      "content": "Desktop Device"
-    },
-    {
-      "type": "range",
+      "type": "select",
       "id": "col_xl",
-      "min": 1,
-      "max": 12,
-      "step": 1,
-      "label": "Responsive Columns",
-      "unit": "px",
-      "default": 3
+      "label": "Desktops: > 1199px",
+      "default": "3",
+      "options": [
+        {
+          "label": "1 Col",
+          "value": "1"
+        },
+        {
+          "label": "2 Col",
+          "value": "6"
+        },
+        {
+          "label": "3 Col",
+          "value": "4"
+        },
+        {
+          "label": "4 Col",
+          "value": "3"
+        },
+        {
+          "label": "6 Col",
+          "value": "2"
+        }
+      ]
     },
     {
-      "type": "header",
-      "content": "Laptop/Desktop Device"
-    },
-    {
-      "type": "range",
+      "type": "select",
       "id": "col_lg",
-      "min": 1,
-      "max": 12,
-      "step": 1,
-      "label": "Responsive Columns",
-      "unit": "px",
-      "default": 4
+      "default": "4",
+      "label": "Desktops: > 991px",
+      "options": [
+        {
+          "label": "1 Col",
+          "value": "1"
+        },
+        {
+          "label": "2 Col",
+          "value": "6"
+        },
+        {
+          "label": "3 Col",
+          "value": "4"
+        },
+        {
+          "label": "4 Col",
+          "value": "3"
+        },
+        {
+          "label": "6 Col",
+          "value": "2"
+        }
+      ]
     },
     {
-      "type": "header",
-      "content": "Tablet Device"
-    },
-    {
-      "type": "range",
+      "type": "select",
       "id": "col_md",
-      "min": 1,
-      "max": 12,
-      "step": 1,
-      "label": "Responsive Columns",
-      "unit": "px",
-      "default": 3
+      "default": "2",
+      "label": "Desktops: > 767px",
+      "options": [
+        {
+          "label": "1 Col",
+          "value": "1"
+        },
+        {
+          "label": "2 Col",
+          "value": "6"
+        },
+        {
+          "label": "3 Col",
+          "value": "4"
+        },
+        {
+          "label": "4 Col",
+          "value": "3"
+        },
+        {
+          "label": "6 Col",
+          "value": "2"
+        }
+      ]
     },
     {
-      "type": "header",
-      "content": "Mobile Device"
-    },
-    {
-      "type": "range",
+      "type": "select",
       "id": "col_sm",
-      "min": 1,
-      "max": 12,
-      "step": 1,
-      "label": "Responsive Columns",
-      "unit": "px",
-      "default": 6
+      "default": "2",
+      "label": "Phones: >575px",
+      "options": [
+        {
+          "label": "1 Col",
+          "value": "1"
+        },
+        {
+          "label": "2 Col",
+          "value": "6"
+        },
+        {
+          "label": "3 Col",
+          "value": "4"
+        },
+        {
+          "label": "4 Col",
+          "value": "3"
+        },
+        {
+          "label": "6 Col",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "col_mobile",
+      "default": "1",
+      "label": "Small Phones: <576px",
+      "options": [
+        {
+          "label": "1 Col",
+          "value": "1"
+        },
+        {
+          "label": "2 Col",
+          "value": "6"
+        },
+        {
+          "label": "3 Col",
+          "value": "4"
+        },
+        {
+          "label": "4 Col",
+          "value": "3"
+        },
+        {
+          "label": "6 Col",
+          "value": "2"
+        }
+      ]
     }
   ],
   "presets": [
