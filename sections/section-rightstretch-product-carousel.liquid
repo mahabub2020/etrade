@@ -14,7 +14,7 @@
       {% endif %}
         <div class="recently-viwed-activation slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
           {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
-             
+
             <div class="slick-single-layout">
               {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
               {% capture include_snippet %}

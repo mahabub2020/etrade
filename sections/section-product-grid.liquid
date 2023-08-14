@@ -1,0 +1,190 @@
+   <!-- Start Expolre Product Area  -->
+   <div class="axil-product-area bg-color-white section-gap-80-35">
+    <div class="container">
+        <div class="section-title-border">
+          {% if section.settings.title != blank %}
+            <h2 class="title">{{ section.settings.title }} 
+            {% if section.settings.title_icon %}  
+             <img src="{{ section.settings.title_icon | img_url:  '60x60' }}"
+              alt="{{ section.settings.title_icon.alt | default: shop.name }}"  decoding="async"
+              loading="lazy">
+            {% endif %} 
+          </h2>
+          {% endif %}  
+          {% if section.settings.section_btn_txt != '' %}
+            <div class="view-btn">
+              <a href="{{ section.settings.section_btn_url | escape }}">{{ section.settings.section_btn_txt | escape }}</a>
+            </div>
+          {% endif %}
+        </div>
+        <div class="row">
+
+          {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
+ 
+            {% assign ex = 0 %}
+              {% for ex_product in section.settings.excluded_products %}
+                {% if product.id == ex_product.id %}
+                  {% assign ex = 1 %}
+                {% endif %}
+              {% endfor %} 
+              {% if ex == 0 %}
+          <div class="col-xl-{{ section.settings.col_xl }} col-lg-{{ section.settings.col_lg }} col-md-{{ section.settings.col_md }} col-{{ section.settings.col_sm }}">
+            {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
+            {% capture include_snippet %}
+              {% include layout %}
+            {% endcapture %}
+            {{ include_snippet }}
+            </div>
+          {% endif %}
+          {% endfor %} 
+       
+
+        </div>
+    </div>
+</div>
+ 
+{% schema %}
+{
+  "name": "Product Grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Recently Viewed",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "title_icon",
+      "label": "Title Icon",
+      "info": "Recommended Size: 60 x 60px"
+    }, 
+    {
+      "type": "text",
+      "id": "section_btn_txt",
+      "label": "Button Text",
+      "default": "View All Deals"
+    },
+    {
+      "type": "url",
+      "id": "section_btn_url",
+      "label": "URL"
+    },
+    {
+      "type": "collection",
+      "id": "product_collection", 
+      "label": "Collection"
+    },
+    {
+      "type": "product_list",
+      "id": "excluded_products",
+      "label": "Product To Exclude"
+    },
+    {
+      "type": "range",
+      "id": "number_of_products_to_show",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 8,
+      "label": "Number of products to show"
+    }, 
+    {
+      "type": "select",
+      "id": "product_layout",
+      "label": "Product Collection Layout",
+      "options": [
+        {
+          "label": "Layout 1",
+          "value": "1"
+        },
+        {
+          "label": "Layout 2",
+          "value": "2"
+        },
+        {
+          "label": "Layout 3",
+          "value": "3"
+        },
+        {
+          "label": "Layout 4",
+          "value": "4"
+        }, {
+          "label": "Layout 5",
+          "value": "5"
+        }, {
+          "label": "Layout 6",
+          "value": "6"
+        }, {
+          "label": "Layout 7",
+          "value": "7"
+        }, {
+          "label": "Layout 8",
+          "value": "8"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Desktop Device"
+    },
+    {
+      "type": "range",
+      "id": "col_xl",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Responsive Columns",
+      "unit": "px",
+      "default": 3
+    },
+    {
+      "type": "header",
+      "content": "Laptop/Desktop Device"
+    },
+    {
+      "type": "range",
+      "id": "col_lg",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Responsive Columns",
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Tablet Device"
+    },
+    {
+      "type": "range",
+      "id": "col_md",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Responsive Columns",
+      "unit": "px",
+      "default": 3
+    },
+    {
+      "type": "header",
+      "content": "Mobile Device"
+    },
+    {
+      "type": "range",
+      "id": "col_sm",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Responsive Columns",
+      "unit": "px",
+      "default": 6
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Grid"
+    }
+  ]
+}
+{% endschema %}
