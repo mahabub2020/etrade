@@ -26,16 +26,17 @@
   <div class="product-area pb--20">
     <div class="row">
       {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
-        {% for product in section.settings.excluded_products.products %}
-          <div>product</div>
+        {% for ex_product in section.settings.excluded_products %}
+          {% if product.id != ex_product.id %}
+            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
+              {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
+              {% capture include_snippet %}
+                {% include layout %}
+              {% endcapture %}
+              {{ include_snippet }}
+            </div>
+          {% endif %}
         {% endfor %}
-        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
-          {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
-          {% capture include_snippet %}
-            {% include layout %}
-          {% endcapture %}
-          {{ include_snippet }}
-        </div>
       {% endfor %}
     </div>
   </div>
