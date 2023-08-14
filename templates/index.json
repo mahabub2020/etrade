@@ -15,7 +15,7 @@
       "settings": {
         "title": "Product Collection",
         "product_collection": "womens",
-        "list_per_slider": 10,
+        "list_per_slider": 4,
         "number_of_products_to_show": 8,
         "product_layout": "1"
       }
