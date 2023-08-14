@@ -17,6 +17,7 @@
       "type": "section-multicolumn-product-carousel",
       "settings": {
         "title": "Product Collection",
+        "title_icon": "shopify:\/\/shop_images\/d9bf63ce7049903d00cc516d39b91639.jpg",
         "product_collection": "womens",
         "list_per_slider": 4,
         "number_of_products_to_show": 8,
