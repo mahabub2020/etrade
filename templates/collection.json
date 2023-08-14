@@ -3,7 +3,7 @@
     "template": {
       "type": "collection",
       "settings": {
-        "shop_layout": "full"
+        "shop_layout": "left"
       }
     }
   },
