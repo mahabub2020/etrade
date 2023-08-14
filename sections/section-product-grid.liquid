@@ -17,98 +17,32 @@
             </div>
           {% endif %}
         </div>
-
-        <div class="col-xl-{{ section.settings.col_xl }} col-lg-{{ section.settings.col_lg }} col-md-{{ section.settings.col_md }} col-{{ section.settings.col_sm }}">
         <div class="row">
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="axil-product product-style-eight">
-                    <div class="thumbnail">
-                        <a href="single-product-8.html">
-                            <img data-sal="zoom-out" data-sal-delay="100" data-sal-duration="800" loading="lazy" class="main-img" src="assets/images/product/fashion/product-26.png" alt="Product Images">
-                        </a>
-                        <div class="label-block label-left">
-                            <div class="product-badget sale">Sale</div>
-                        </div>
-                        <div class="product-hover-action">
-                            <ul class="cart-action">
-                                <li class="select-option">
-                                    <a href="single-product-8.html">
-                                        <i class="far fa-shopping-cart"></i> Add to Cart
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product-content">
-                        <div class="inner">
-                            <div class="color-variant-wrapper">
-                                <ul class="color-variant">
-                                    <li class="color-extra-01 active"><span><span class="color"></span></span>
-                                    </li>
-                                    <li class="color-extra-02"><span><span class="color"></span></span>
-                                    </li>
-                                    <li class="color-extra-03"><span><span class="color"></span></span>
-                                    </li>
-                                    <li class="color-extra-04"><span><span class="color"></span></span>
-                                    </li>
-                                    <li class="color-extra-04"><span><span class="color"></span></span>
-                                    </li>
-                                    <li class="color-extra-05"><span><span class="color"></span></span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <h5 class="title"><a href="single-product-8.html">Kalrez® Spectrum™ 6375</a></h5>
-                            <div class="product-rating">
-                                <span class="icon">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </span>
-                                <span class="rating-number">6,400</span>
-                            </div>
-                            <div class="product-price-variant">
-                                <span class="price old-price">$30.00</span>
-                                <span class="price current-price">$17.84</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-           
-        </div>
-    </div>
-</div>
-<!-- End Expolre Product Area  -->
-   <div class="axil-new-arrivals-product-area fullwidth-container flash-sale-area section-gap-80-35">
-    <div class="container ml--xxl-0">
-      {% if section.settings.title != blank %}
-        <div class="section-title-border slider-section-title">
-            <h2 class="title">{{ section.settings.title }} 
-            {% if section.settings.title_icon %}  
-             <img src="{{ section.settings.title_icon | img_url:  '60x60' }}"
-              alt="{{ section.settings.title_icon.alt | default: shop.name }}"  decoding="async"
-              loading="lazy">
-            {% endif %}  
-            </h2> 
-        </div>
-      {% endif %}
-        <div class="recently-viwed-activation slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
-          {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
 
-            <div class="slick-single-layout">
-              {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
-              {% capture include_snippet %}
-                {% include layout %}
-              {% endcapture %}
-              {{ include_snippet }}
+          {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
+ 
+            {% assign ex = 0 %}
+              {% for ex_product in section.settings.excluded_products %}
+                {% if product.id == ex_product.id %}
+                  {% assign ex = 1 %}
+                {% endif %}
+              {% endfor %} 
+              {% if ex == 0 %}
+          <div class="col-xl-{{ section.settings.col_xl }} col-lg-{{ section.settings.col_lg }} col-md-{{ section.settings.col_md }} col-{{ section.settings.col_sm }}">
+            {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
+            {% capture include_snippet %}
+              {% include layout %}
+            {% endcapture %}
+            {{ include_snippet }}
             </div>
+          {% endif %}
           {% endfor %} 
+       
+
         </div>
     </div>
 </div>
-<!-- End Expolre Product Area  -->
+ 
 {% schema %}
 {
   "name": "Product Grid",
@@ -140,6 +74,11 @@
       "type": "collection",
       "id": "product_collection", 
       "label": "Collection"
+    },
+    {
+      "type": "product_list",
+      "id": "excluded_products",
+      "label": "Product To Exclude"
     },
     {
       "type": "range",
@@ -241,7 +180,6 @@
       "unit": "px",
       "default": 6
     }
-    
   ],
   "presets": [
     {
