@@ -2,11 +2,10 @@
   <div class="container">
       <div class="section-title-border slider-section-title">
         {% if section.settings.title != blank %}
-          <h2 class="title">{{ section.settings.title }}
-
-          {% if block.settings.title_icon %}  
-           <img src="{{ block.settings.title_icon | img_url:  '70x155' }}"
-            alt="{{ block.settings.title_icon.alt | default: shop.name }}"  decoding="async"
+          <h2 class="title">{{ section.settings.title }} 
+          {% if section.settings.title_icon %}  
+           <img src="{{ section.settings.title_icon | img_url:  '60x60' }}"
+            alt="{{ section.settings.title_icon.alt | default: shop.name }}"  decoding="async"
             loading="lazy">
           {% endif %}  
           </h2>
@@ -65,7 +64,8 @@
     {
       "type": "image_picker",
       "id": "title_icon",
-      "label": "Title Icon"
+      "label": "Title Icon",
+      "info": "Recommended Size: 60 x 60px"
     },
     {
       "type": "collection",
@@ -138,7 +138,7 @@
       "step": 1,
       "label": "Responsive Columns",
       "unit": "px",
-      "default": 5
+      "default": 2
     },
     {
       "type": "header",
@@ -152,7 +152,7 @@
       "step": 1,
       "label": "Responsive Columns",
       "unit": "px",
-      "default": 3
+      "default": 2
     },
     {
       "type": "header",
