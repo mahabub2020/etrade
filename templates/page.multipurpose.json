@@ -375,6 +375,7 @@
       "type": "section-product-grid",
       "settings": {
         "title": "Recently Viewed",
+        "title_icon": "shopify:\/\/shop_images\/d9bf63ce7049903d00cc516d39b91639.jpg",
         "section_btn_txt": "View All Deals",
         "section_btn_url": "",
         "product_collection": "womens",
