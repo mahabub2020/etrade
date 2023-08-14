@@ -356,14 +356,10 @@
       "type": "section-multicolumn-product-carousel",
       "settings": {
         "title": "Product Collectionjj",
-        "product_collection": [
-          "baby",
-          "garden",
-          "kids"
-        ],
+        "product_collection": "baby",
         "list_per_slider": 4,
         "number_of_products_to_show": 6,
-        "product_layout": "2"
+        "product_layout": "8"
       }
     }
   },

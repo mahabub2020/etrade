@@ -1,0 +1,104 @@
+   <!-- Start Expolre Product Area  -->
+   <div class="axil-new-arrivals-product-area fullwidth-container flash-sale-area section-gap-80-35">
+    <div class="container ml--xxl-0">
+      {% if section.settings.title != blank %}
+        <div class="section-title-border slider-section-title">
+            <h2 class="title">{{ section.settings.title }} 
+            {% if section.settings.title_icon %}  
+             <img src="{{ section.settings.title_icon | img_url:  '60x60' }}"
+              alt="{{ section.settings.title_icon.alt | default: shop.name }}"  decoding="async"
+              loading="lazy">
+            {% endif %}  
+            </h2> 
+        </div>
+      {% endif %}
+        <div class="recently-viwed-activation slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
+          {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
+             
+            <div class="slick-single-layout">
+              {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
+              {% capture include_snippet %}
+                {% include layout %}
+              {% endcapture %}
+              {{ include_snippet }}
+            </div>
+          {% endfor %} 
+        </div>
+    </div>
+</div>
+<!-- End Expolre Product Area  -->
+{% schema %}
+{
+  "name": "RS Product Carousel",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Recently Viewed",
+      "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "title_icon",
+      "label": "Title Icon",
+      "info": "Recommended Size: 60 x 60px"
+    },
+    {
+      "type": "collection",
+      "id": "product_collection", 
+      "label": "Collection"
+    },
+    
+    {
+      "type": "range",
+      "id": "number_of_products_to_show",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 8,
+      "label": "Number of products to show"
+    }, 
+    {
+      "type": "select",
+      "id": "product_layout",
+      "label": "Product Collection Layout",
+      "options": [
+        {
+          "label": "Layout 1",
+          "value": "1"
+        },
+        {
+          "label": "Layout 2",
+          "value": "2"
+        },
+        {
+          "label": "Layout 3",
+          "value": "3"
+        },
+        {
+          "label": "Layout 4",
+          "value": "4"
+        }, {
+          "label": "Layout 5",
+          "value": "5"
+        }, {
+          "label": "Layout 6",
+          "value": "6"
+        }, {
+          "label": "Layout 7",
+          "value": "7"
+        }, {
+          "label": "Layout 8",
+          "value": "8"
+        }
+      ]
+    }
+    
+  ],
+  "presets": [
+    {
+      "name": "RS Product Carousel"
+    }
+  ]
+}
+{% endschema %}

@@ -7,15 +7,40 @@
         "btn-label": "View All",
         "product_collection": "etrade-products",
         "collection_list": [
-          "frontpage",
-          "etrade-products"
+
         ],
         "number_of_products_to_show": 7,
         "product_layout": "1"
       }
+    },
+    "50664463-b955-4b1c-89f9-e7b47c0be4f3": {
+      "type": "section-multicolumn-product-carousel",
+      "settings": {
+        "title": "Product Collection",
+        "title_icon": "shopify:\/\/shop_images\/d9bf63ce7049903d00cc516d39b91639.jpg",
+        "product_collection": "womens",
+        "list_per_slider": 4,
+        "number_of_products_to_show": 8,
+        "product_layout": "8",
+        "col_lg": 2,
+        "col_md": 3,
+        "col_sm": 2
+      }
+    },
+    "888b9210-e701-4c99-8572-b5829cf6cbc1": {
+      "type": "section-rightstretch-product-carousel",
+      "settings": {
+        "title": "Recently Viewed",
+        "title_icon": "shopify:\/\/shop_images\/d9bf63ce7049903d00cc516d39b91639.jpg",
+        "product_collection": "womens",
+        "number_of_products_to_show": 5,
+        "product_layout": "5"
+      }
     }
   },
   "order": [
-    "product-collection"
+    "product-collection",
+    "50664463-b955-4b1c-89f9-e7b47c0be4f3",
+    "888b9210-e701-4c99-8572-b5829cf6cbc1"
   ]
 }
