@@ -25,7 +25,7 @@
   </div>
   <div class="product-area pb--20">
     <div class="row">
-      {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show Offset: section.settings.offset_product %}
+      {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show offset: section.settings.offset_product %}
         {% assign ex = 0 %}
         {% for ex_product in section.settings.excluded_products %}
           {% if product.id == ex_product.id %}
