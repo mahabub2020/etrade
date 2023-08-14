@@ -332,7 +332,7 @@
         </div>
         {% endfor %}
     </div>
-    <div class="nav-links">
+    {% comment %} <div class="nav-links">
       <ul class="clearfix page-numbers">
         <li class="pagi pagi-previous disabled">
           <span>
@@ -360,7 +360,8 @@
           </a>
         </li>
       </ul>
-    </div>
+    </div> {% endcomment %}
+    {% render 'pagination', pagination: paginate %}
   {% endpaginate %}
   </div>
 </div>

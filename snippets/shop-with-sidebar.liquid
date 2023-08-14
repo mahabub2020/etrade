@@ -115,6 +115,7 @@
               </div>
               {% endfor %}
             </div>
+            {% render 'pagination', pagination: paginate %}
             {% endpaginate %}
             {% comment %} <div
               class="axiltheme-loadmore-data"
