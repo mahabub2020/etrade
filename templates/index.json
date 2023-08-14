@@ -26,10 +26,21 @@
         "col_md": 3,
         "col_sm": 2
       }
+    },
+    "888b9210-e701-4c99-8572-b5829cf6cbc1": {
+      "type": "section-rightstretch-product-carousel",
+      "settings": {
+        "title": "Recently Viewed",
+        "title_icon": "shopify:\/\/shop_images\/d9bf63ce7049903d00cc516d39b91639.jpg",
+        "product_collection": "womens",
+        "number_of_products_to_show": 8,
+        "product_layout": "1"
+      }
     }
   },
   "order": [
     "product-collection",
-    "50664463-b955-4b1c-89f9-e7b47c0be4f3"
+    "50664463-b955-4b1c-89f9-e7b47c0be4f3",
+    "888b9210-e701-4c99-8572-b5829cf6cbc1"
   ]
 }
