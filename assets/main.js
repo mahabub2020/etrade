@@ -29,8 +29,8 @@
             threshold: 0.3,
             once: true
         });
-
-        $('.slider-thumb-activation-one').slick({
+        
+        $(".slider-thumb-activation-one").not('.slick-initialized').slick({
             infinite: true,
             slidesToShow: 2,
             slidesToScroll: 1,
@@ -51,8 +51,7 @@
             ]
 
         });
-
-        $('.slider-content-activation-one').slick({
+        $(".slider-content-activation-one").not('.slick-initialized').slick({
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
