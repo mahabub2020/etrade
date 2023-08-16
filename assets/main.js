@@ -10,7 +10,18 @@
 
         });
 
-
+        $(window).on('load', function () {
+            readyActivation();
+            magnificPopupActivation();
+            testimonialActivation();
+        });
+    
+        $(window).on('load resize', function () {
+            readyActivation();
+            magnificPopupActivation();
+            testimonialActivation();
+        });
+    
 
       function readyActivation() {
 
