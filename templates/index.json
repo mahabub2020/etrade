@@ -39,30 +39,20 @@
     "66b7d80c-5c64-4632-8d17-76f42ecbe313": {
       "type": "banner-slider",
       "blocks": {
-        "1a18e586-658e-456c-a0d9-275a322eff96": {
-          "type": "header",
+        "88de8f33-016a-4052-a74e-941deef00666": {
+          "type": "banner",
           "settings": {
             "subtitle": "Hot Deal In This Week",
             "title": "Smart Digital Watch",
             "banner_btn_txt": "Shop Now",
             "banner_btn_url": "",
+            "banner_img": "shopify:\/\/shop_images\/collection_5.jpg",
             "price_label": "From",
             "price": "$49.00"
           }
         },
-        "c4a33fbd-aa74-4523-a4e1-c6ffcc7e2740": {
-          "type": "header",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "price_label": "From",
-            "price": "$49.00"
-          }
-        },
-        "4a285237-df4c-416e-903c-94075d379980": {
-          "type": "header",
+        "fb771562-4767-45e6-b2bb-b4ba79fd5bae": {
+          "type": "banner",
           "settings": {
             "subtitle": "Hot Deal In This Week",
             "title": "Smart Digital Watch",
@@ -74,9 +64,8 @@
         }
       },
       "block_order": [
-        "1a18e586-658e-456c-a0d9-275a322eff96",
-        "c4a33fbd-aa74-4523-a4e1-c6ffcc7e2740",
-        "4a285237-df4c-416e-903c-94075d379980"
+        "88de8f33-016a-4052-a74e-941deef00666",
+        "fb771562-4767-45e6-b2bb-b4ba79fd5bae"
       ],
       "settings": {
         "banner_style": "banner_style_1"
