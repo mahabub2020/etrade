@@ -35,10 +35,30 @@
           "accessories"
         ]
       }
+    },
+    "66b7d80c-5c64-4632-8d17-76f42ecbe313": {
+      "type": "banner-slider",
+      "blocks": {
+        "8d4b3d31-0d03-43b6-af31-9d94716a14c5": {
+          "type": "featured_collection",
+          "settings": {
+            "title": "Crispiest",
+            "subheading": "Crust",
+            "reverse-titles": true
+          }
+        }
+      },
+      "block_order": [
+        "8d4b3d31-0d03-43b6-af31-9d94716a14c5"
+      ],
+      "settings": {
+        "banner_style": "banner_style_1"
+      }
     }
   },
   "order": [
     "product-collection",
-    "6cebc72f-2dc5-4ef9-9ac7-0f0ddcaa2712"
+    "6cebc72f-2dc5-4ef9-9ac7-0f0ddcaa2712",
+    "66b7d80c-5c64-4632-8d17-76f42ecbe313"
   ]
 }
