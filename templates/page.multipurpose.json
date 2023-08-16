@@ -444,7 +444,7 @@
     "18745e10-f961-4068-a449-df1812f7e932": {
       "type": "collection-carousel",
       "settings": {
-        "collection_style": "cat_style_2",
+        "collection_style": "cat_style_3",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "sub_title": "Before Title",
         "section_title": "Featured Categories",

@@ -10,61 +10,35 @@
 
         ],
         "number_of_products_to_show": 7,
-        "product_layout": "1",
+        "product_layout": "2",
         "excluded_products": [
 
         ]
       }
     },
-    "50664463-b955-4b1c-89f9-e7b47c0be4f3": {
-      "type": "section-multicolumn-product-carousel",
+    "6cebc72f-2dc5-4ef9-9ac7-0f0ddcaa2712": {
+      "type": "collection-carousel",
       "settings": {
-        "title": "Product Collection",
-        "title_icon": "shopify:\/\/shop_images\/d9bf63ce7049903d00cc516d39b91639.jpg",
-        "product_collection": "womens",
-        "list_per_slider": 4,
-        "number_of_products_to_show": 8,
-        "product_layout": "8",
-        "col_lg": 2,
-        "col_md": 3,
-        "col_sm": 2
-      }
-    },
-    "888b9210-e701-4c99-8572-b5829cf6cbc1": {
-      "type": "section-rightstretch-product-carousel",
-      "settings": {
-        "title": "Recently Viewed",
-        "title_icon": "shopify:\/\/shop_images\/d9bf63ce7049903d00cc516d39b91639.jpg",
-        "product_collection": "womens",
-        "number_of_products_to_show": 5,
-        "product_layout": "5"
-      }
-    },
-    "a592b247-41b8-4a79-a957-e95056d3457a": {
-      "type": "section-testimonial-carousel",
-      "blocks": {
-        "template--20190269571387__a592b247-41b8-4a79-a957-e95056d3457a-review-1": {
-          "type": "review",
-          "settings": {
-            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
-            "author_name": "Wade Warren",
-            "author_desg": "Head of Marketing"
-          }
-        }
-      },
-      "block_order": [
-        "template--20190269571387__a592b247-41b8-4a79-a957-e95056d3457a-review-1"
-      ],
-      "settings": {
-        "section_title": "Our Users Feedback",
-        "section_sub_title": "Testimonials"
+        "collection_style": "cat_style_1",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "sub_title": "Before Title",
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+          "baby",
+          "banner-popup",
+          "beauty",
+          "garden",
+          "frontpage",
+          "kids",
+          "mens",
+          "womens",
+          "accessories"
+        ]
       }
     }
   },
   "order": [
     "product-collection",
-    "50664463-b955-4b1c-89f9-e7b47c0be4f3",
-    "888b9210-e701-4c99-8572-b5829cf6cbc1",
-    "a592b247-41b8-4a79-a957-e95056d3457a"
+    "6cebc72f-2dc5-4ef9-9ac7-0f0ddcaa2712"
   ]
 }
