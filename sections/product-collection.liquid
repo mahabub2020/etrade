@@ -25,9 +25,9 @@
   </div>
   <div class="product-area pb--20">
     <div class="row">
-      {% assign orderby = section.settings.orderby %}
+      {% assign order_by = section.settings.order_by %}
       {% assign sort_by = section.settings.sort_by %}
-      {% assign collection = section.settings.product_collection.products | sort: section.settings.sort_by | orderby %}
+      {% assign collection = section.settings.product_collection.products | sort: sort_by | order_by %}
       {% for product in collection limit: section.settings.number_of_products_to_show offset: section.settings.offset_product %}
         {% assign ex = 0 %}
         {% for ex_product in section.settings.excluded_products %}
@@ -143,12 +143,12 @@
         "default": "title"
       }, {
         "type": "select",
-        "id": "orderby",
+        "id": "order_by",
         "label": "Order By",
         "options": [
           {
             "label": "Ascending Order",
-            "value": "1"
+            "value": ""
           }, {
             "label": "Descending Order",
             "value": "reverse"
