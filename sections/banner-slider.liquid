@@ -4,38 +4,33 @@
           <div class="col-lg-5 col-sm-6">
               <div class="main-slider-content">
                   <div class="slider-content-activation-one">
-                     
-                    <div class="single-slide slick-slide" data-sal="slide-up" data-sal-delay="400" data-sal-duration="800">
-                          <span class="subtitle"><i class="fas fa-fire"></i> Hot Deal In This Week</span>
-                          <h1 class="title">Roco Wireless Headphone</h1>
-                          <div class="slide-action">
+                    {% for block in section.blocks %}  
+                    {% case block.type %}
+                    {% when 'banner' %}
+
+                    <div class="single-slide slick-slide" data-sal="slide-up" data-sal-delay="400" data-sal-duration="800"> 
+                         
+                        {% if block.settings.subtitle != '' %}
+                            <span class="subtitle"><i class="fas fa-fire"></i> {{ block.settings.subtitle }}</span>
+                        {% endif %} 
+
+                        {% if block.settings.banner_title != '' %}
+                            <h1 class="title">{{ block.settings.banner_title }}</h1>
+                        {% endif %} 
+
+                        {% if block.settings.banner_btn_url %} 
+                            <div class="slide-action">
                               <div class="shop-btn">
-                                  <a href="shop.html" class="axil-btn btn-bg-white"><i class="fal fa-shopping-cart"></i>Shop Now</a>
-                              </div>
-                              <div class="item-rating">
-                                  <div class="thumb">
-                                      <ul>
-                                          <li><img src="assets/images/others/author1.png" alt="Author"></li>
-                                          <li><img src="assets/images/others/author2.png" alt="Author"></li>
-                                          <li><img src="assets/images/others/author3.png" alt="Author"></li>
-                                          <li><img src="assets/images/others/author4.png" alt="Author"></li>
-                                      </ul>
-                                  </div>
-                                  <div class="content">
-                                      <span class="rating-icon">
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fal fa-star"></i>
-                              </span>
-                                      <span class="review-text">
-                                  <span>100+</span> Reviews
-                                      </span>
-                                  </div>
-                              </div>
-                          </div>
+                                <a href="{{ block.settings.banner_btn_url }}" class="axil-btn btn-bg-primary"><i class="far fa-shopping-cart"></i> {{ block.settings.banner_btn_txt }}</a>
+                              </div>  
+                            </div>  
+                        {% endif %}  
+
                       </div>
+
+                    {% endcase %} 
+                  {% endfor %}
+                      
                       
                   </div>
               </div>
@@ -43,15 +38,25 @@
           <div class="col-lg-7 col-sm-6">
               <div class="main-slider-large-thumb">
                   <div class="slider-thumb-activation-one axil-slick-dots">
-                    
+                    {% for block in section.blocks %}  
+                    {% case block.type %}
+                    {% when 'banner' %}
                     <div class="single-slide slick-slide" data-sal="slide-up" data-sal-delay="600" data-sal-duration="1500">
-                          <img src="assets/images/product/product-38.png" alt="Product">
+                           
+                          <img src="{% if block.settings.banner_img %}{{ block.settings.banner_img | img_url: '672x541' }}{% else %}http:\/\/via.placeholder.com\/672x541{% endif %}" alt="{{ block.settings.banner_img.alt }}"> 
+                       
                           <div class="product-price">
-                              <span class="text">From</span>
-                              <span class="price-amount">$49.00</span>
+                            {% if block.settings.price_label != '' %}
+                              <span class="text">{{ block.settings.price_label }}</span>
+                          {% endif %}  
+                            {% if block.settings.price != '' %}
+                              <span class="price-amount">{{ block.settings.price }}</span>
+                            {% endif %} 
                           </div>
+
                       </div>
-                      
+                    {% endcase %} 
+                  {% endfor %}
                   </div>
               </div>
           </div>
@@ -68,14 +73,15 @@
 {
     "name": "Banner Slider",
     "settings": [
-        {
+          {
             "type": "header",
-            "content": "Banner Slider Layout"
+            "content": "Banner Layout"
+           
           },
           {
               "type": "radio",
               "id": "banner_style",
-              "label": "Banner Style",
+              "label": "Banner Layout",
               "options":[
                 {
                     "value":"banner_style_1",
@@ -98,7 +104,7 @@
 
     "blocks": [
       {
-        "type": "header",
+        "type": "banner",
         "name": {
           "en": "Banner Block"
         },
