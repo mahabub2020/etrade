@@ -6,8 +6,10 @@
 
         $(document).ready(function(){
 
+            slider_slick_activation_two();
             slider_slick_activation_one();
             slider_thumb_activation_one();
+            
             readyActivation();
             magnificPopupActivation();
             testimonialActivation();
@@ -26,6 +28,34 @@
         //     testimonialActivation();
         // });
     
+
+         function slider_slick_activation_two() {
+
+			var SlickCarousel = $('.main-slider-style-5');
+			if (SlickCarousel.length) {
+				try {
+					if (SlickCarousel.find('.slider-activation-two').hasClass('slick-initialized')) {
+						SlickCarousel.find('.slider-activation-two').slick('unslick');
+					}
+				} catch (e) { }
+
+				SlickCarousel.find('.slider-activation-two').slick({
+					infinite: true,
+					autoplay: true,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					dots: true,
+					fade: true,
+					rtl: rtltrue,
+					adaptiveHeight: true,
+					cssEase: 'linear',
+					speed: 400
+
+				});
+			}
+
+		}
 
 
       function slider_slick_activation_one() {
