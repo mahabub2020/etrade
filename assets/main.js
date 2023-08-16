@@ -4,6 +4,11 @@
      
         $(document).ready(function(){
 
+            sal({
+                threshold: 0.3,
+                once: true
+            });
+
             $('.slider-thumb-activation-one').slick({
                 infinite: true,
                 slidesToShow: 2,
