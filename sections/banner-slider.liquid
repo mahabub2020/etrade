@@ -44,13 +44,14 @@
                     <div class="single-slide slick-slide" data-sal="slide-up" data-sal-delay="600" data-sal-duration="1500">
                            
                           <img src="{% if block.settings.banner_img %}{{ block.settings.banner_img | img_url: '672x541' }}{% else %}http:\/\/via.placeholder.com\/672x541{% endif %}" alt="{{ block.settings.banner_img.alt }}"> 
-                       
-                          <div class="product-price">
+                         
+                          <div class="product-price block-repeater-item-{{ block.id }} {% if block.settings.plus_icon_active %}icon-active{% endif %} axil-pos-{{ block.settings.pos_x_type }} axil-pos-{{ block.settings.pos_y_type }}">
+                        
                             {% if block.settings.price_label != '' %}
-                              <span class="text">{{ block.settings.price_label }}</span>
-                          {% endif %}  
-                            {% if block.settings.price != '' %}
-                              <span class="price-amount">{{ block.settings.price }}</span>
+                                <span class="text">{{ block.settings.price_label }}</span>
+                            {% endif %}  
+                              {% if block.settings.price != '' %}
+                                <span class="price-amount">{{ block.settings.price }}</span>
                             {% endif %} 
                           </div>
 
@@ -165,6 +166,64 @@
             "default": {
               "en": "$49.00"
             }
+          },
+          {
+            "type": "checkbox",
+            "id": "plus_icon_active",
+            "label": "Price Active",
+            "default": true
+          },
+          {
+            "type": "select",
+            "id": "pos_x_type",
+            "label": "Horizontal Position",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          },
+          {
+            "type": "range",
+            "id": "pos_x",
+            "min": 0,
+            "max": 400,
+            "step": 4,
+            "label": "Spacing",
+            "unit": "px",
+            "default": 4
+          },
+          {
+            "type": "select",
+            "id": "pos_y_type",
+            "label": "Horizontal Position",
+            "default": "top",
+            "options": [
+              {
+                "value": "top",
+                "label": "Top"
+              },
+              {
+                "value": "bottom",
+                "label": "Bottom"
+              }
+            ]
+          }, 
+          {
+            "type": "range",
+            "id": "pos_y",
+            "min": 0,
+            "max": 400,
+            "step": 4,
+            "label": "Spacing",
+            "unit": "px",
+            "default": 4
           }
           
         ]
@@ -178,3 +237,33 @@
 }
 {% endschema %}
  
+
+
+{%- style -%}
+
+{% for block in section.blocks %}
+{% case block.type %}
+  {% when 'banner' %}
+
+    .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-left{
+      left: {{ block.settings.pos_x }}px !important;
+      right: auto !important;
+    }     
+    .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-right{
+      right: {{ block.settings.pos_x }}px !important;
+      left: auto !important;
+    }
+    .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-top{
+      top: {{ block.settings.pos_y }}px !important;
+      bottom: auto !important;
+    }     
+    .block-repeater-item-{{ block.id }}.plus-btn.axil-pos-bottom{
+      bottom: {{ block.settings.pos_y }}px !important;
+      top: auto !important;
+    }
+
+  {% endcase %}
+{% endfor %}
+
+
+{%- endstyle -%}
