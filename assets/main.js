@@ -4,6 +4,25 @@
      
         $(document).ready(function(){
 
+            $('.testimonial-slick-activation').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                speed: 500,
+                draggable: true,
+                prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-long-arrow-left"></i></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-long-arrow-right"></i></button>',
+                responsive: [{
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+            
             $('.recently-viwed-activation').slick({
                 infinite: true,
                 slidesToShow: 4,
