@@ -58,6 +58,31 @@
             "title": "Smart Digital Watch",
             "banner_btn_txt": "Shop Now",
             "banner_btn_url": "",
+            "banner_img": "shopify:\/\/shop_images\/product-big-10_e079e2b0-d697-4370-877a-0fc3a67e7401.png",
+            "price_label": "From",
+            "price": "$49.00"
+          }
+        },
+        "ea1e0393-6bb9-4c2b-bc28-dc400b51b4a5": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": "",
+            "banner_img": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
+            "price_label": "From",
+            "price": "$49.00"
+          }
+        },
+        "81694fd4-2659-427b-a7c4-0c644f2f15dd": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": "shopify:\/\/pages\/contact",
+            "banner_img": "shopify:\/\/shop_images\/16-4.jpg",
             "price_label": "From",
             "price": "$49.00"
           }
@@ -65,7 +90,9 @@
       },
       "block_order": [
         "88de8f33-016a-4052-a74e-941deef00666",
-        "fb771562-4767-45e6-b2bb-b4ba79fd5bae"
+        "fb771562-4767-45e6-b2bb-b4ba79fd5bae",
+        "ea1e0393-6bb9-4c2b-bc28-dc400b51b4a5",
+        "81694fd4-2659-427b-a7c4-0c644f2f15dd"
       ],
       "settings": {
         "banner_style": "banner_style_1"
