@@ -27,8 +27,7 @@
     <div class="row">
       {% assign orderby = section.settings.orderby %}
       {% assign sort_by = section.settings.sort_by %}
-      {{ orderby }}
-      {% assign collection = section.settings.product_collection.products | sort: sort_by | reverse %}
+      {% assign collection = section.settings.product_collection.products | sort: section.settings.sort_by | orderby %}
       {% for product in collection limit: section.settings.number_of_products_to_show offset: section.settings.offset_product %}
         {% assign ex = 0 %}
         {% for ex_product in section.settings.excluded_products %}
