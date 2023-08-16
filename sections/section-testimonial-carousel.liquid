@@ -1,126 +1,54 @@
-<div class="axil-testimoial-area-two axil-section-gapBottom">
-  <div class="container">
-      <div class="testimonial-container-box">
-          <div class="row">
-              <div class="col-lg-7"> 
-                  <div class="testimonial-video-box"> 
-                      <div class="thumbnail">
-                        <img src="{% if section.settings.video_img %}{{ section.settings.video_img | img_url: '718x650' }}{% else %}http:\/\/via.placeholder.com\/718x650{% endif %}" alt="{{ section.settings.video_img.alt }}"> 
-                       
-                      </div> 
-                    {% if section.settings.video_url %} 
-                      <div class="play-btn">
-                          <a class="popup-youtube" href="{{ section.settings.video_url | escape }}"><i class="fas fa-play"></i></a>
-                      </div>
-                    {% endif %}
+<div class="axil-testimoial-area axil-section-gap bg-vista-white">
+    <div class="container">
+        <div class="section-title-wrapper"> 
+            {% if section.settings.section_sub_title != '' %}  
+              <span class="title-highlighter highlighter-secondary"> <i class="fal fa-quote-left"></i>{{ section.settings.section_sub_title | escape }}</span>
+            {% endif %} 
+            {% if section.settings.section_title != '' %}  
+              <div class="heading-title">
+                <h2 class="title">{{ section.settings.section_title | escape }}</h2>
+              </div>  
+            {% endif %}  
+        </div>
+        <!-- End .section-title -->
+        <div class="testimonial-slick-activation testimonial-style-one-wrapper slick-layout-wrapper--20 axil-slick-arrow arrow-top-slide">
+            
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'review' %}   
 
-                  </div>
-              </div>
+              <div class="slick-single-layout testimonial-style-one"> 
+                {% if block.settings.review_content != '' %}   
+                <div class="review-speech">
+                        <p>“{{ block.settings.review_content | escape }}“</p>
+                    </div>
+                  {% endif %} 
 
-              <div class="col-lg-5">
-                  <div class="testimonial-style-three-wrapper"> 
-                      {% if section.settings.section_title != '' %}  
-                        <div class="heading-title">
-                          <h2 class="title">{{ section.settings.section_title | escape }}</h2>
-                      </div>
-                      {% endif %}
-                    
-                      <div class="testimonial-slick-activation-three">
-                         {% for block in section.blocks %}
-                          {% case block.type %}
-                            {% when 'review' %}  
-
-                            <div class="slick-single-layout testimonial-style-three"> 
-                              {% if block.settings.review_content != '' %}   
-                                    <p class="author-review">{{ block.settings.review_content | escape }}</p>
-                               {% endif %}  
-
-                                <div class="author-info">  
-                                    {% if block.settings.author_name != '' %}   
-                                    <h6 class="author-name">{{ block.settings.author_name | escape }}</h6>
-                                    {% endif %}  
-                                    {% if block.settings.author_desg != '' %}   
-                                      <span class="author-desg">{{ block.settings.author_desg | escape }}</span>
-                                    {% endif %} 
-                                  
-                                </div>
-                            </div>
-                        {% endcase %}
-                      {% endfor %}
-
-                      </div>
-                      <div class="testimonial-custom-nav">
-                          <div class="row align-items-center">
-                              <div class="col-6">
-                                  <div class="slick-slide-count"></div>
-                              </div>
-                              <div class="col-6">
-                                  <div class="slide-custom-nav">
-                                      <button class="prev-custom-nav"><i class="fal fa-angle-left"></i>Prev</button>
-                                      <button class="next-custom-nav">Next <i class="fal fa-angle-right"></i></button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-    <!-- Start Testimonila Area  -->
-    <div class="axil-testimoial-area axil-section-gap bg-vista-white">
-      <div class="container">
-          <div class="section-title-wrapper"> 
-              {% if section.settings.section_sub_title != '' %}  
-                <span class="title-highlighter highlighter-secondary"> <i class="fal fa-quote-left"></i>{{ section.settings.section_sub_title | escape }}</span>
-              {% endif %} 
-              {% if section.settings.section_title != '' %}  
-                <div class="heading-title">
-                  <h2 class="title">{{ section.settings.section_title | escape }}</h2>
-                </div>  
-              {% endif %}  
-          </div>
-          <!-- End .section-title -->
-          <div class="testimonial-slick-activation testimonial-style-one-wrapper slick-layout-wrapper--20 axil-slick-arrow arrow-top-slide">
+                    <div class="media">
+                        <div class="thumbnail">
+                          <img src="{% if block.settings.tsm_img %}{{ block.settings.tsm_img | img_url: '60x60' }}{% else %}http:\/\/via.placeholder.com\/60x60{% endif %}" alt="{{ block.settings.tsm_img.alt }}"> 
+                        </div>
+                        <div class="media-body"> 
+                          {% if block.settings.author_desg != '' %}   
+                            <span class="designation">{{ block.settings.author_desg | escape }}</span>
+                          {% endif %}   
+                          {% if block.settings.author_name != '' %}   
+                            <h6 class="title">{{ block.settings.author_name | escape }}</h6>
+                          {% endif %}   
+                        </div>
+                    </div>
+                    <!-- End .thumbnail -->
+                </div> 
               
-            {% for block in section.blocks %}
-              {% case block.type %}
-                {% when 'review' %}   
-
-                <div class="slick-single-layout testimonial-style-one"> 
-                  {% if block.settings.review_content != '' %}   
-                  <div class="review-speech">
-                          <p>“{{ block.settings.review_content | escape }}“</p>
-                      </div>
-                    {% endif %} 
-
-                      <div class="media">
-                          <div class="thumbnail">
-                            <img src="{% if block.settings.tsm_img %}{{ block.settings.tsm_img | img_url: '60x60' }}{% else %}http:\/\/via.placeholder.com\/60x60{% endif %}" alt="{{ block.settings.tsm_img.alt }}"> 
-                          </div>
-                          <div class="media-body"> 
-                            {% if block.settings.author_desg != '' %}   
-                              <span class="designation">{{ block.settings.author_desg | escape }}</span>
-                            {% endif %}   
-                            {% if block.settings.author_name != '' %}   
-                              <h6 class="title">{{ block.settings.author_name | escape }}</h6>
-                            {% endif %}   
-                          </div>
-                      </div>
-                      <!-- End .thumbnail -->
-                  </div> 
-                
-            {% endcase %}
-          {% endfor %}
+          {% endcase %}
+        {% endfor %}
 
 
-          </div>
-      </div>
-  </div>
-  <!-- End Testimonila Area  -->
- 
+        </div>
+    </div>
+</div>
+<!-- End Testimonila Area  -->
+
 {% schema %}
 {
   "name": "Testimoial Carousel",
@@ -178,7 +106,7 @@
   ],
   "presets": [
     {
-      "name": "SecTestimoial Carousel",
+      "name": "Testimoial Carousel",
       "blocks": [
         {
           "type": "review"
