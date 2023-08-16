@@ -25,7 +25,8 @@
   </div>
   <div class="product-area pb--20">
     <div class="row">
-      {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show offset: section.settings.offset_product %}
+      {% assign collection = section.settings.product_collection.products | sort: section.settings.sort_by | section.settings.order_by %}
+      {% for product in collection limit: section.settings.number_of_products_to_show offset: section.settings.offset_product %}
         {% assign ex = 0 %}
         {% for ex_product in section.settings.excluded_products %}
           {% if product.id == ex_product.id %}
@@ -121,6 +122,37 @@
         "type": "number",
         "id": "offset_product",
         "label": "Offset"
+      }, {
+        "type": "select",
+        "id": "sort_by",
+        "label": "Sort By",
+        "options": [
+          {
+            "label": "Name",
+            "value": "title"
+          }, {
+            "label": "Price",
+            "value": "price"
+          }, {
+            "label": "Date",
+            "value": "published_at"
+          }
+        ],
+        "default": "title"
+      }, {
+        "type": "select",
+        "id": "order_by",
+        "label": "Order By",
+        "options": [
+          {
+            "label": "Ascending Order",
+            "value": "ascending"
+          }, {
+            "label": "Descending Order",
+            "value": "descending"
+          }
+        ],
+        "default": "ascending"
       }
     ],
     "presets": [
