@@ -1,41 +1,5 @@
 {
   "sections": {
-    "product-collection": {
-      "type": "product-collection",
-      "settings": {
-        "title": "Product Collection",
-        "btn-label": "View All",
-        "product_collection": "etrade-products",
-        "collection_list": [
-
-        ],
-        "number_of_products_to_show": 7,
-        "product_layout": "2",
-        "excluded_products": [
-
-        ]
-      }
-    },
-    "6cebc72f-2dc5-4ef9-9ac7-0f0ddcaa2712": {
-      "type": "collection-carousel",
-      "settings": {
-        "collection_style": "cat_style_3",
-        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
-        "sub_title": "Before Title",
-        "section_title": "Featured Categories",
-        "featured_cat_collection": [
-          "baby",
-          "banner-popup",
-          "beauty",
-          "garden",
-          "frontpage",
-          "kids",
-          "mens",
-          "womens",
-          "accessories"
-        ]
-      }
-    },
     "66b7d80c-5c64-4632-8d17-76f42ecbe313": {
       "type": "banner-slider",
       "blocks": {
@@ -120,8 +84,6 @@
     }
   },
   "order": [
-    "product-collection",
-    "6cebc72f-2dc5-4ef9-9ac7-0f0ddcaa2712",
     "66b7d80c-5c64-4632-8d17-76f42ecbe313"
   ]
 }
