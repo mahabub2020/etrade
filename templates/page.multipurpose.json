@@ -79,7 +79,7 @@
     "d63e8306-d128-4c5b-8fe8-fe046e913d44": {
       "type": "collection-carousel",
       "settings": {
-        "collection_style": "cat_style_3",
+        "collection_style": "cat_style_2",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "sub_title": "Before Titlerrr",
         "section_title": "Featured Categoriesrrr",
@@ -398,7 +398,8 @@
         "template--20230999834939__6e0f6712-348c-4534-9e79-125ff410990e-review-1": {
           "type": "review",
           "settings": {
-            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.nnn",
+            "tsm_img": "shopify:\/\/shop_images\/product-big-11_42af840a-5c08-4758-b2cc-7f60494ae80d.png",
             "author_name": "Wade Warren",
             "author_desg": "Head of Marketing"
           }
@@ -436,8 +437,28 @@
         "2be54709-04ce-4ac5-abe7-0d16dfa27ed4"
       ],
       "settings": {
-        "section_title": "Our Users Feedback",
-        "section_sub_title": "Testimonials"
+        "section_title": "Our Users Feedbackbhbb",
+        "section_sub_title": "Testimonialsbbb"
+      }
+    },
+    "18745e10-f961-4068-a449-df1812f7e932": {
+      "type": "collection-carousel",
+      "settings": {
+        "collection_style": "cat_style_2",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "sub_title": "Before Title",
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+          "beauty",
+          "banner-popup",
+          "baby",
+          "accessories",
+          "garden",
+          "frontpage",
+          "kids",
+          "mens",
+          "womens"
+        ]
       }
     }
   },
@@ -453,6 +474,7 @@
     "412abb2d-3216-4e4d-b543-24816bf5cb82",
     "cc358753-68db-477d-ba77-5cea2aa2ece4",
     "1eb621b1-05b1-4036-a688-c8c1d60cc96c",
-    "6e0f6712-348c-4534-9e79-125ff410990e"
+    "6e0f6712-348c-4534-9e79-125ff410990e",
+    "18745e10-f961-4068-a449-df1812f7e932"
   ]
 }
