@@ -2,6 +2,18 @@
  
     'use strict';
      
+
+    var $ = jQuery;
+	var rtltrue;
+		if (etradeObj.rtl == 'yes') { 
+			rtltrue = true;
+			
+		}else{
+			rtltrue = false;
+		}
+
+
+        
         $(document).ready(function(){
 
             slider_thumb_activation_one();
