@@ -31,6 +31,19 @@
 
             });
 
+            $('.slider-content-activation-one').slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: false,
+                focusOnSelect: false,
+                speed: 500,
+                fade: true,
+                autoplay: false,
+                asNavFor: '.slider-thumb-activation-one',
+            });
+
             $('.slider-thumb-activation-two').slick({
                 infinite: true,
                 slidesToShow: 3,
