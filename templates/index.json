@@ -69,7 +69,7 @@
             "plus_icon_active": true,
             "pos_x_type": "right",
             "pos_x": 192,
-            "pos_y_type": "top",
+            "pos_y_type": "bottom",
             "pos_y": 4
           }
         },
