@@ -4,6 +4,46 @@
      
         $(document).ready(function(){
 
+            $('.slider-thumb-activation-one').slick({
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true,
+                focusOnSelect: false,
+                speed: 1000,
+                autoplay: false,
+                asNavFor: '.slider-content-activation-one',
+                prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-long-arrow-left"></i></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-long-arrow-right"></i></button>',
+                responsive: [{
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+
+            });
+
+            $('.slider-thumb-activation-two').slick({
+                infinite: true,
+                slidesToShow: 3,
+                centerPadding: '0',
+                arrows: false,
+                dots: true,
+                speed: 1500,
+                autoplay: false,
+                centerMode: true,
+                responsive: [{
+                        breakpoint: 575,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+
             $('.testimonial-slick-activation').slick({
                 infinite: true,
                 slidesToShow: 3,
@@ -22,7 +62,7 @@
                     }
                 ]
             });
-            
+
             $('.recently-viwed-activation').slick({
                 infinite: true,
                 slidesToShow: 4,
