@@ -79,7 +79,7 @@
     "d63e8306-d128-4c5b-8fe8-fe046e913d44": {
       "type": "collection-carousel",
       "settings": {
-        "collection_style": "cat_style_3",
+        "collection_style": "cat_style_2",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "sub_title": "Before Titlerrr",
         "section_title": "Featured Categoriesrrr",
@@ -102,8 +102,14 @@
         "title": "Product Collection",
         "btn-label": "",
         "product_collection": "banner-popup",
+        "collection_list": [
+
+        ],
         "number_of_products_to_show": 4,
-        "product_layout": "1"
+        "product_layout": "1",
+        "excluded_products": [
+
+        ]
       }
     },
     "857ac431-475d-46e9-b24a-9d2b752c9eae": {
@@ -359,7 +365,100 @@
         "product_collection": "baby",
         "list_per_slider": 4,
         "number_of_products_to_show": 6,
-        "product_layout": "8"
+        "product_layout": "8",
+        "col_lg": 2,
+        "col_md": 2,
+        "col_sm": 2
+      }
+    },
+    "1eb621b1-05b1-4036-a688-c8c1d60cc96c": {
+      "type": "section-product-grid",
+      "settings": {
+        "title": "Recently Viewed",
+        "title_icon": "shopify:\/\/shop_images\/d9bf63ce7049903d00cc516d39b91639.jpg",
+        "section_btn_txt": "View All Deals",
+        "section_btn_url": "",
+        "product_collection": "womens",
+        "offset_product": 0,
+        "excluded_products": [
+
+        ],
+        "number_of_products_to_show": 10,
+        "product_layout": "1",
+        "col_xl": "2",
+        "col_lg": "6",
+        "col_md": "3",
+        "col_sm": "4",
+        "col_mobile": "1"
+      }
+    },
+    "6e0f6712-348c-4534-9e79-125ff410990e": {
+      "type": "section-testimonial-carousel",
+      "blocks": {
+        "template--20230999834939__6e0f6712-348c-4534-9e79-125ff410990e-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.nnn",
+            "tsm_img": "shopify:\/\/shop_images\/product-big-11_42af840a-5c08-4758-b2cc-7f60494ae80d.png",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "196025bd-59ce-494a-ad19-954a6925bb79": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "652d0430-3305-433e-a51e-e0337760db48": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "2be54709-04ce-4ac5-abe7-0d16dfa27ed4": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/product-big-08_9e8f0ff4-892f-46c4-9321-e713b99c46eb.png",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--20230999834939__6e0f6712-348c-4534-9e79-125ff410990e-review-1",
+        "196025bd-59ce-494a-ad19-954a6925bb79",
+        "652d0430-3305-433e-a51e-e0337760db48",
+        "2be54709-04ce-4ac5-abe7-0d16dfa27ed4"
+      ],
+      "settings": {
+        "section_title": "Our Users Feedbackbhbb",
+        "section_sub_title": "Testimonialsbbb"
+      }
+    },
+    "18745e10-f961-4068-a449-df1812f7e932": {
+      "type": "collection-carousel",
+      "settings": {
+        "collection_style": "cat_style_3",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "sub_title": "Before Title",
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+          "beauty",
+          "banner-popup",
+          "baby",
+          "accessories",
+          "garden",
+          "frontpage",
+          "kids",
+          "mens",
+          "womens"
+        ]
       }
     }
   },
@@ -373,6 +472,9 @@
     "2070efc2-ee1d-4b43-9205-67934ac99e6f",
     "3c6c52bd-39ce-4a73-997d-f6a2b7a7feb3",
     "412abb2d-3216-4e4d-b543-24816bf5cb82",
-    "cc358753-68db-477d-ba77-5cea2aa2ece4"
+    "cc358753-68db-477d-ba77-5cea2aa2ece4",
+    "1eb621b1-05b1-4036-a688-c8c1d60cc96c",
+    "6e0f6712-348c-4534-9e79-125ff410990e",
+    "18745e10-f961-4068-a449-df1812f7e932"
   ]
 }

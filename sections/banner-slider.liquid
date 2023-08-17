@@ -1,0 +1,357 @@
+{% if section.settings.banner_style == 'banner_style_1' %}
+<div id="section-{{ section.id }}" class="axil-main-slider-area main-slider-style-1">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-lg-5 col-sm-6">
+              <div class="main-slider-content">
+                  <div class="slider-content-activation-one">
+                    {% for block in section.blocks %}  
+                    {% case block.type %}
+                    {% when 'banner' %}
+                    <div class="single-slide slick-slide" data-sal="slide-up" data-sal-delay="400" data-sal-duration="800"> 
+                        {% if block.settings.subtitle != '' %}
+                            <span class="subtitle"><i class="fas fa-fire"></i> {{ block.settings.subtitle }}</span>
+                        {% endif %} 
+
+                        {% if block.settings.banner_title != '' %}
+                            <h1 class="title">{{ block.settings.banner_title }}</h1>
+                        {% endif %} 
+
+                        {% if block.settings.banner_btn_url %} 
+                            <div class="slide-action">
+                              <div class="shop-btn">
+                                <a href="{{ block.settings.banner_btn_url }}" class="axil-btn btn-bg-primary"><i class="far fa-shopping-cart"></i> {{ block.settings.banner_btn_txt }}</a>
+                              </div>  
+                            </div>  
+                        {% endif %}  
+
+                      </div>
+
+                    {% endcase %} 
+                  {% endfor %}
+                      
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-7 col-sm-6">
+              <div class="main-slider-large-thumb">
+                  <div class="slider-thumb-activation-one axil-slick-dots">
+                    {% for block in section.blocks %}  
+                    {% case block.type %}
+                    {% when 'banner' %}
+                    <div class="single-slide slick-slide" data-sal="slide-up" data-sal-delay="600" data-sal-duration="1500">
+                           
+                          <img src="{% if block.settings.banner_img %}{{ block.settings.banner_img | img_url: '672x541' }}{% else %}http:\/\/via.placeholder.com\/672x541{% endif %}" alt="{{ block.settings.banner_img.alt }}"> 
+                         
+                          <div class="product-price block-repeater-item-{{ block.id }} {% if block.settings.plus_icon_active %}icon-active{% endif %} axil-pos-{{ block.settings.pos_x_type }} axil-pos-{{ block.settings.pos_y_type }}">
+                        
+                            {% if block.settings.price_label != '' %}
+                                <span class="text">{{ block.settings.price_label }}</span>
+                            {% endif %}  
+                              {% if block.settings.price != '' %}
+                                <span class="price-amount">{{ block.settings.price }}</span>
+                            {% endif %} 
+                          </div>
+
+                      </div>
+                    {% endcase %} 
+                  {% endfor %}
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <ul class="shape-group">
+      <li class="shape-1"><img src="{{ "shape-1.png" | asset_url }}" alt="Shape"></li>
+      <li class="shape-2"><img src="{{ "shape-2.png" | asset_url }}" alt="Shape"></li>
+  </ul>
+</div>
+{% elsif section.settings.banner_style == 'banner_style_2' %}  <!-- Start Slider Area -->
+<div id="section-{{ section.id }}" class="axil-main-slider-area main-slider-style-2">
+  <div class="container">
+    <div class="slider-offset-left">
+        <div class="row row--20">
+            <div class="col-lg-9">
+                <div class="slider-box-wrap">
+                    <div class="slider-activation-one axil-slick-dots"> 
+                    {% for block in section.blocks %}  
+                    {% case block.type %}
+                      {% when 'banner' %}
+                        <div class="single-slide slick-slide">
+                            <div class="main-slider-content"> 
+                              {% if block.settings.subtitle != '' %}
+                                  <span class="subtitle"><i class="fas fa-watch"></i> {{ block.settings.subtitle }}</span>
+                              {% endif %} 
+                                {% if block.settings.banner_title != '' %}
+                                  <h1 class="title">{{ block.settings.banner_title }}</h1>
+                                {% endif %} 
+                                {% if block.settings.banner_btn_url %}  
+                                  <div class="shop-btn">
+                                    <a href="{{ block.settings.banner_btn_url }}" class="axil-btn">{{ block.settings.banner_btn_txt }} <i class="fal fa-long-arrow-right"></i></a>
+                                  </div>   
+                                {% endif %}   
+                            </div>
+                            <div class="main-slider-thumb">
+                              <img src="{% if block.settings.banner_img %}{{ block.settings.banner_img | img_url: '240x292' }}{% else %}http:\/\/via.placeholder.com\/240x292{% endif %}" alt="{{ block.settings.banner_img.alt }}"> 
+                            </div>
+                        </div>
+                      {% endcase %} 
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="slider-product-box">
+                    <div class="product-thumb">
+                        <a href="single-product.html">
+                            <img src="assets/images/product/product-41.png" alt="Product">
+                        </a>
+                    </div>
+                    <h6 class="title"><a href="single-product.html">Yantiti Leather Bags</a></h6>
+                    <span class="price">$29.99</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- End Slider Area -->
+{% else %}
+  <!-- Start Slider Area -->
+  <div class="axil-main-slider-area main-slider-style-5">
+    <div class="container">
+        <div class="slider-box-wrap">
+            <div class="slider-activation-two axil-slick-dots">
+              {% for block in section.blocks %}  
+              {% case block.type %}
+                {% when 'banner' %}
+                  
+                <div class="single-slide slick-slide">
+                    <div class="main-slider-content">
+                        {% if block.settings.subtitle != '' %}
+                          <span class="subtitle"><i class="fas fa-fire"></i> {{ block.settings.subtitle }}</span>
+                        {% endif %} 
+                        {% if block.settings.banner_title != '' %}
+                          <h1 class="title">{{ block.settings.banner_title }}</h1>
+                        {% endif %}  
+                        {% if block.settings.banner_btn_url %}  
+                          <div class="shop-btn">
+                            <a href="{{ block.settings.banner_btn_url }}" class="axil-btn btn-bg-primary"><i class="far fa-shopping-cart"></i> {{ block.settings.banner_btn_txt }}</a>
+                          </div>   
+                        {% endif %}   
+                    </div>
+
+                    <div class="main-slider-thumb">
+                      <img src="{% if block.settings.banner_img %}{{ block.settings.banner_img | img_url: '530x460' }}{% else %}http:\/\/via.placeholder.com\/530x460{% endif %}" alt="{{ block.settings.banner_img.alt }}"> 
+                    </div>
+
+                </div>
+              {% endcase %} 
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Slider Area -->
+
+{% endif %}
+
+
+{% schema %}
+{
+    "name": "Banner Slider",
+    "settings": [
+          {
+            "type": "header",
+            "content": "Banner Layout"
+           
+          },
+          {
+              "type": "radio",
+              "id": "banner_style",
+              "label": "Banner Layout",
+              "options":[
+                {
+                    "value":"banner_style_1",
+                    "label": "Style 1"
+                },
+                {
+                    "value":"banner_style_2",
+                    "label": "Style 2"
+                },
+                {
+                    "value":"banner_style_3",
+                    "label": "Style 3"
+                }
+               
+              ],
+             "default": "banner_style_1"
+          }
+    ],
+
+
+    "blocks": [
+      {
+        "type": "banner",
+        "name": {
+          "en": "Banner Block"
+        },
+        "settings": [
+          {
+            "type": "text",
+            "id": "subtitle",
+            "label": {
+              "en": "Slider Sub Title"
+            },
+            "default": {
+              "en": " Hot Deal In This Week"
+            }
+          },
+          {
+            "type": "text",
+            "id": "banner_title",
+            "label": {
+              "en": "Title"
+            },
+            "default": {
+              "en": "Smart Digital Watch"
+            }
+          },
+          {
+            "type": "text",
+            "id": "banner_btn_txt",
+            "label": "Button Text",
+            "default": "Shop Now"
+            
+          },
+          {
+            "type": "url",
+            "id": "banner_btn_url",
+            "label": "URL"
+          },
+          {
+            "type": "image_picker",
+            "id": "banner_img",
+            "label": "Banner Image"
+          },
+          {
+            "type": "text",
+            "id": "price_label",
+            "label": {
+              "en": "Price Label"
+            },
+            "default": {
+              "en": " From"
+            }
+          },
+          {
+            "type": "text",
+            "id": "price",
+            "label": {
+              "en": "Price"
+            },
+            "default": {
+              "en": "$49.00"
+            }
+          },
+          {
+            "type": "checkbox",
+            "id": "plus_icon_active",
+            "label": "Price Active",
+            "default": true
+          },
+          {
+            "type": "select",
+            "id": "pos_x_type",
+            "label": "Horizontal Position",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          },
+          {
+            "type": "range",
+            "id": "pos_x",
+            "min": 0,
+            "max": 400,
+            "step": 4,
+            "label": "Spacing",
+            "unit": "px",
+            "default": 4
+          },
+          {
+            "type": "select",
+            "id": "pos_y_type",
+            "label": "Horizontal Position",
+            "default": "top",
+            "options": [
+              {
+                "value": "top",
+                "label": "Top"
+              },
+              {
+                "value": "bottom",
+                "label": "Bottom"
+              }
+            ]
+          }, 
+          {
+            "type": "range",
+            "id": "pos_y",
+            "min": 0,
+            "max": 400,
+            "step": 4,
+            "label": "Spacing",
+            "unit": "px",
+            "default": 4
+          }
+          
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "category": "banner",
+        "name": "Banner Slider"
+    }]
+}
+{% endschema %}
+ 
+
+
+{%- style -%}
+
+{% for block in section.blocks %}
+{% case block.type %}
+  {% when 'banner' %}
+
+    .block-repeater-item-{{ block.id }}.product-price.axil-pos-left{
+      left: {{ block.settings.pos_x }}px !important;
+      right: auto !important;
+    }     
+    .block-repeater-item-{{ block.id }}.product-price.axil-pos-right{
+      right: {{ block.settings.pos_x }}px !important;
+      left: auto !important;
+    }
+    .block-repeater-item-{{ block.id }}.product-price.axil-pos-top{
+      top: {{ block.settings.pos_y }}px !important;
+      bottom: auto !important;
+    }     
+    .block-repeater-item-{{ block.id }}.product-price.axil-pos-bottom{
+      bottom: {{ block.settings.pos_y }}px !important;
+      top: auto !important;
+    }
+
+  {% endcase %}
+{% endfor %}
+
+
+{%- endstyle -%}

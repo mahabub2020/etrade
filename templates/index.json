@@ -1,46 +1,89 @@
 {
   "sections": {
-    "product-collection": {
-      "type": "product-collection",
+    "66b7d80c-5c64-4632-8d17-76f42ecbe313": {
+      "type": "banner-slider",
+      "blocks": {
+        "88de8f33-016a-4052-a74e-941deef00666": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Weekffff",
+            "banner_title": "Smart Digital Watchff",
+            "banner_btn_txt": "Shop Nowff",
+            "banner_btn_url": "",
+            "banner_img": "shopify:\/\/shop_images\/collection_5.jpg",
+            "price_label": "From",
+            "price": "$49.00",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4
+          }
+        },
+        "fb771562-4767-45e6-b2bb-b4ba79fd5bae": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Weekcgfnfgn",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": "",
+            "banner_img": "shopify:\/\/shop_images\/product-big-10_e079e2b0-d697-4370-877a-0fc3a67e7401.png",
+            "price_label": "From",
+            "price": "$49.00",
+            "plus_icon_active": true,
+            "pos_x_type": "right",
+            "pos_x": 192,
+            "pos_y_type": "top",
+            "pos_y": 4
+          }
+        },
+        "ea1e0393-6bb9-4c2b-bc28-dc400b51b4a5": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": "",
+            "banner_img": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
+            "price_label": "From",
+            "price": "$49.00",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4
+          }
+        },
+        "81694fd4-2659-427b-a7c4-0c644f2f15dd": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": "shopify:\/\/pages\/contact",
+            "banner_img": "shopify:\/\/shop_images\/16-4.jpg",
+            "price_label": "From",
+            "price": "$49.00",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4
+          }
+        }
+      },
+      "block_order": [
+        "88de8f33-016a-4052-a74e-941deef00666",
+        "fb771562-4767-45e6-b2bb-b4ba79fd5bae",
+        "ea1e0393-6bb9-4c2b-bc28-dc400b51b4a5",
+        "81694fd4-2659-427b-a7c4-0c644f2f15dd"
+      ],
       "settings": {
-        "title": "Product Collection",
-        "btn-label": "View All",
-        "product_collection": "etrade-products",
-        "collection_list": [
-
-        ],
-        "number_of_products_to_show": 7,
-        "product_layout": "1"
-      }
-    },
-    "50664463-b955-4b1c-89f9-e7b47c0be4f3": {
-      "type": "section-multicolumn-product-carousel",
-      "settings": {
-        "title": "Product Collection",
-        "title_icon": "shopify:\/\/shop_images\/d9bf63ce7049903d00cc516d39b91639.jpg",
-        "product_collection": "womens",
-        "list_per_slider": 4,
-        "number_of_products_to_show": 8,
-        "product_layout": "8",
-        "col_lg": 2,
-        "col_md": 3,
-        "col_sm": 2
-      }
-    },
-    "888b9210-e701-4c99-8572-b5829cf6cbc1": {
-      "type": "section-rightstretch-product-carousel",
-      "settings": {
-        "title": "Recently Viewed",
-        "title_icon": "shopify:\/\/shop_images\/d9bf63ce7049903d00cc516d39b91639.jpg",
-        "product_collection": "womens",
-        "number_of_products_to_show": 5,
-        "product_layout": "5"
+        "banner_style": "banner_style_3"
       }
     }
   },
   "order": [
-    "product-collection",
-    "50664463-b955-4b1c-89f9-e7b47c0be4f3",
-    "888b9210-e701-4c99-8572-b5829cf6cbc1"
+    "66b7d80c-5c64-4632-8d17-76f42ecbe313"
   ]
 }

@@ -1,0 +1,118 @@
+<div class="axil-testimoial-area axil-section-gap bg-vista-white">
+    <div class="container">
+        <div class="section-title-wrapper"> 
+            {% if section.settings.section_sub_title != '' %}  
+              <span class="title-highlighter highlighter-secondary"> <i class="fal fa-quote-left"></i>{{ section.settings.section_sub_title | escape }}</span>
+            {% endif %} 
+            {% if section.settings.section_title != '' %}  
+              <div class="heading-title">
+                <h2 class="title">{{ section.settings.section_title | escape }}</h2>
+              </div>  
+            {% endif %}  
+        </div>
+        <!-- End .section-title -->
+        <div class="testimonial-slick-activation testimonial-style-one-wrapper slick-layout-wrapper--20 axil-slick-arrow arrow-top-slide">
+            
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'review' %}   
+
+              <div class="slick-single-layout testimonial-style-one"> 
+                {% if block.settings.review_content != '' %}   
+                <div class="review-speech">
+                        <p>“{{ block.settings.review_content | escape }}“</p>
+                    </div>
+                  {% endif %} 
+
+                    <div class="media">
+                        <div class="thumbnail">
+                          <img src="{% if block.settings.tsm_img %}{{ block.settings.tsm_img | img_url: '60x60' }}{% else %}http:\/\/via.placeholder.com\/60x60{% endif %}" alt="{{ block.settings.tsm_img.alt }}"> 
+                        </div>
+                        <div class="media-body"> 
+                          {% if block.settings.author_desg != '' %}   
+                            <span class="designation">{{ block.settings.author_desg | escape }}</span>
+                          {% endif %}   
+                          {% if block.settings.author_name != '' %}   
+                            <h6 class="title">{{ block.settings.author_name | escape }}</h6>
+                          {% endif %}   
+                        </div>
+                    </div>
+                    <!-- End .thumbnail -->
+                </div> 
+              
+          {% endcase %}
+        {% endfor %}
+
+
+        </div>
+    </div>
+</div>
+<!-- End Testimonila Area  -->
+
+{% schema %}
+{
+  "name": "Testimoial Carousel",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "default": "Our Users Feedback",
+      "label": "Title"
+    }, 
+    {
+      "type": "text",
+      "id": "section_sub_title",
+      "default": "Testimonials",
+      "label": "Sub Title"
+    }
+
+  ],
+
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review Content",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "review_content",
+          "default": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+          "label": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "tsm_img",
+          "label": "Testimoial Image",
+          "info": "Recommended Size: 60 x 60px"
+        }, 
+        {
+          "type": "text",
+          "id": "author_name",
+          "default": "Wade Warren",
+          "label": "Author Name"
+        },
+        {
+          "type": "text",
+          "id": "author_desg",
+          "default": "Head of Marketing",
+          "label": "Author Desg"
+        } 
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimoial Carousel",
+      "blocks": [
+        {
+          "type": "review"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
