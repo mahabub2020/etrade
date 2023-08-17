@@ -49,10 +49,35 @@
 </div>
 </div>
  
+
+<style>
+  #section-{{ section.id }}.main-slider-style-2 .slider-offset-left {
+    margin-left: {{ section.settings.left_offset }}px; 
+}
+
+</style>
+
+
 {% schema %}
 {
     "name": "Fashion Banner",
     "settings": [
+          {
+            "type": "header",
+            "content": "Banner Left offset"
+           
+          },
+          {
+            "type": "range",
+            "id": "left_offset",
+            "min": 0,
+            "max": 500,
+            "step": 5,
+            "label": "offset",
+            "unit": "px",
+            "default": 300
+          },
+
           {
             "type": "header",
             "content": "Banner Right"
