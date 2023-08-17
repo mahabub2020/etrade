@@ -31,17 +31,19 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-3">
                 <div class="slider-product-box">
                     <div class="product-thumb">
                         <a href="single-product.html">
-                            <img src="assets/images/product/product-41.png" alt="Product">
+                          <img src="{% if section.settings.product_img %}{{ section.settings.product_img | img_url: '125x200' }}{% else %}http:\/\/via.placeholder.com\/125x200{% endif %}" alt="{{ block.settings.product_img.alt }}"> 
                         </a>
                     </div>
-                    <h6 class="title"><a href="single-product.html">Yantiti Leather Bags</a></h6>
-                    <span class="price">$29.99</span>
+                    <h6 class="title"><a href="{{ section.settings.product_url }}">{{ section.settings.product_title }}</a></h6>
+                    <span class="price">{{ section.settings.product_prices }}</span>
                 </div>
             </div>
+            
         </div>
     </div>
 </div>
@@ -70,7 +72,7 @@
           },
           {
             "type": "url",
-            "id": "pproduct_url",
+            "id": "product_url",
             "label": "URL"
           },
           {
