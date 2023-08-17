@@ -81,9 +81,42 @@
       "settings": {
         "banner_style": "banner_style_2"
       }
+    },
+    "43154aec-c1cc-4c83-aee7-cc8485715d1c": {
+      "type": "fashion-banner-slider",
+      "blocks": {
+        "3a497dce-7530-425a-bac3-bbccf6bc8413": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": ""
+          }
+        },
+        "86a1f0b3-cdec-4797-8bb6-5357c25fff23": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "3a497dce-7530-425a-bac3-bbccf6bc8413",
+        "86a1f0b3-cdec-4797-8bb6-5357c25fff23"
+      ],
+      "settings": {
+        "product_title": "Yantiti Leather Bags",
+        "product_prices": "$29.99",
+        "pproduct_url": ""
+      }
     }
   },
   "order": [
-    "66b7d80c-5c64-4632-8d17-76f42ecbe313"
+    "66b7d80c-5c64-4632-8d17-76f42ecbe313",
+    "43154aec-c1cc-4c83-aee7-cc8485715d1c"
   ]
 }
