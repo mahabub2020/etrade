@@ -127,10 +127,50 @@
         "product_url": "shopify:\/\/products\/kalrez®-spectrum™-6376",
         "product_img": "shopify:\/\/shop_images\/collection_5.png"
       }
+    },
+    "1b5294ab-1593-4b10-9b97-b3a144424c6d": {
+      "type": "furniture-banner-slider",
+      "blocks": {
+        "7783b87c-33eb-47a3-896a-7d5ed395f08c": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": ""
+          }
+        },
+        "b0a8024c-c80f-4883-a77a-e215441ed134": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": ""
+          }
+        },
+        "fa95f559-1f29-45e9-9e93-a125d7bc7715": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "7783b87c-33eb-47a3-896a-7d5ed395f08c",
+        "b0a8024c-c80f-4883-a77a-e215441ed134",
+        "fa95f559-1f29-45e9-9e93-a125d7bc7715"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "66b7d80c-5c64-4632-8d17-76f42ecbe313",
-    "43154aec-c1cc-4c83-aee7-cc8485715d1c"
+    "43154aec-c1cc-4c83-aee7-cc8485715d1c",
+    "1b5294ab-1593-4b10-9b97-b3a144424c6d"
   ]
 }
