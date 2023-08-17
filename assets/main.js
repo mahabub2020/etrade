@@ -47,7 +47,7 @@
 					arrows: false,
 					dots: true,
 					fade: true,
-					rtl: rtltrue,
+					 
 					adaptiveHeight: true,
 					cssEase: 'linear',
 					speed: 400
