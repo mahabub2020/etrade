@@ -25,9 +25,9 @@
   </div>
   <div class="product-area pb--20">
     <div class="row">
-      {% assign order_by = "reverse" %}
+      {% assign order_by = Reverse %}
       {% assign sort_by = section.settings.sort_by %}
-      {% assign collection = section.settings.product_collection.products | sort: sort_by | reverse %}
+      {% assign collection = section.settings.product_collection.products | sort: sort_by | order_by %}
       {% for product in collection limit: section.settings.number_of_products_to_show offset: section.settings.offset_product %}
         {% assign ex = 0 %}
         {% for ex_product in section.settings.excluded_products %}
