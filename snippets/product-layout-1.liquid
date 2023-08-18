@@ -51,8 +51,7 @@
             title="QuickView"
             data-bs-toggle="modal"
             data-bs-target="#yith-quick-view-modal"
-            onclick="quickview({{ product }})"
-            >
+            onclick="quickview('{{ product | json }}')">
             <i class="far fa-eye"></i>
           </a>
         </li>
