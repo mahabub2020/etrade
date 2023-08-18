@@ -470,7 +470,7 @@
           "type": "cta",
           "settings": {
             "badge": "Collections",
-            "badge_title": "Rich sound, for less.",
+            "badge_title": "Rich sound,<br> for less.",
             "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
             "cta_url": "shopify:\/\/products\/kalrez®-spectrum™-6376",
             "cta_img": "shopify:\/\/shop_images\/poster-01.png",
