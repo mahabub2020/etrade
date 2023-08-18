@@ -212,3 +212,16 @@
     </div>
   </div>
 </div>
+
+<script>
+  jQuery(function($) {
+    quickview = function(product_handle) {
+      Shopify.getProduct(product_handle);
+    }
+    Shopify.getProduct = function(product) {
+      $('#yith-quick-view-modal .venobox').attr('href', product.featured_image);
+      $('#yith-quick-view-modal .venobox img').attr('src', product.featured_image);
+      $('#yith-quick-view-modal .product-title').text(product.title);
+    }
+  });
+</script>
