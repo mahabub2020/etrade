@@ -1,0 +1,302 @@
+<!-- Start Most Sold Product Area  -->
+<div class="axil-most-sold-product axil-section-gap">
+  <div class="container">
+      <div class="product-area pb--50">
+          <div class="section-title-wrapper section-title-center">
+              {% if section.settings.subtitle != blank %}
+                <span class="title-highlighter highlighter-primary">
+                  <i class="fas fa-star"></i> 
+                  {{ section.settings.subtitle }}  
+              </span>
+              {% endif %}     
+              {% if section.settings.title != blank %}
+                <h2 class="title">{{ section.settings.title }}  
+              </h2>
+              {% endif %}    
+          </div> 
+          
+            <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
+           
+            {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show offset: section.settings.offset_product  %}
+              {% assign ex = 0 %}
+                {% for ex_product in section.settings.excluded_products %}
+                  {% if product.id == ex_product.id %}
+                    {% assign ex = 1 %}
+                  {% endif %}
+                {% endfor %} 
+                {% if ex == 0 %}
+                  
+              <div class="col">
+                  <div class="axil-product-list">
+                      <div class="thumbnail"> 
+                        <a href="{{ product.url }}">
+                          {% if product.featured_image %}
+                            <img
+                              src="{{ product.featured_image | img_url: '300x300' }}"
+                              class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                              alt="{{ item.title | escape }}"
+                              data-sal="zoom-in" data-sal-delay="100" data-sal-duration="1500"
+                              loading="lazy">
+                          {% else %}
+                            {{ 'image' | placeholder_svg_tag }}
+                          {% endif %}
+                        </a> 
+                      </div>
+
+                      <div class="product-content">
+                          <div class="product-rating">
+                              <span class="rating-icon">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fal fa-star"></i>
+                      </span>
+                              <span class="rating-number"><span>100+</span> Reviews</span>
+                          </div>
+                          <h6 class="product-title"><a href="single-product.html">Media Remote</a></h6>
+                          <div class="product-price-variant">
+                              <span class="price current-price">$29.99</span>
+                              <span class="price old-price">$49.99</span>
+                          </div>
+                          <div class="product-cart">
+                              <a href="cart.html" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
+                              <a href="wishlist.html" class="cart-btn"><i class="fal fa-heart"></i></a>
+                          </div>
+                      </div>
+
+                      
+                  </div>
+              </div>
+            {% endif %}
+          {% endfor %} 
+          </div>
+      </div>
+  </div>
+</div>
+<!-- End Most Sold Product Area  -->
+
+
+{% schema %}
+{
+  "name": "Product List",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Recently Viewed",
+      "label": "Title"
+    },  
+    {
+      "type": "text",
+      "id": "subtitle",
+      "default": "Recently Viewed",
+      "label": "Sub Title"
+    }, 
+    {
+      "type": "collection",
+      "id": "product_collection", 
+      "label": "Collection"
+    },
+    {
+      "type": "number",
+      "id": "offset_product",
+      "label": "Offset"
+    },
+    {
+      "type": "product_list",
+      "id": "excluded_products",
+      "label": "Product To Exclude"
+    },
+    {
+      "type": "range",
+      "id": "number_of_products_to_show",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 8,
+      "label": "Number of products to show"
+    }, 
+    {
+      "type": "select",
+      "id": "product_layout",
+      "label": "Product Collection Layout",
+      "options": [
+        {
+          "label": "Layout 1",
+          "value": "1"
+        },
+        {
+          "label": "Layout 2",
+          "value": "2"
+        },
+        {
+          "label": "Layout 3",
+          "value": "3"
+        },
+        {
+          "label": "Layout 4",
+          "value": "4"
+        }, {
+          "label": "Layout 5",
+          "value": "5"
+        }, {
+          "label": "Layout 6",
+          "value": "6"
+        }, {
+          "label": "Layout 7",
+          "value": "7"
+        }, {
+          "label": "Layout 8",
+          "value": "8"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "col_xl",
+      "label": "Desktops: > 1199px",
+      "default": "3",
+      "options": [
+        {
+          "label": "1 Col",
+          "value": "1"
+        },
+        {
+          "label": "2 Col",
+          "value": "6"
+        },
+        {
+          "label": "3 Col",
+          "value": "4"
+        },
+        {
+          "label": "4 Col",
+          "value": "3"
+        },
+        {
+          "label": "6 Col",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "col_lg",
+      "default": "4",
+      "label": "Desktops: > 991px",
+      "options": [
+        {
+          "label": "1 Col",
+          "value": "1"
+        },
+        {
+          "label": "2 Col",
+          "value": "6"
+        },
+        {
+          "label": "3 Col",
+          "value": "4"
+        },
+        {
+          "label": "4 Col",
+          "value": "3"
+        },
+        {
+          "label": "6 Col",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "col_md",
+      "default": "2",
+      "label": "Desktops: > 767px",
+      "options": [
+        {
+          "label": "1 Col",
+          "value": "1"
+        },
+        {
+          "label": "2 Col",
+          "value": "6"
+        },
+        {
+          "label": "3 Col",
+          "value": "4"
+        },
+        {
+          "label": "4 Col",
+          "value": "3"
+        },
+        {
+          "label": "6 Col",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "col_sm",
+      "default": "2",
+      "label": "Phones: >575px",
+      "options": [
+        {
+          "label": "1 Col",
+          "value": "1"
+        },
+        {
+          "label": "2 Col",
+          "value": "6"
+        },
+        {
+          "label": "3 Col",
+          "value": "4"
+        },
+        {
+          "label": "4 Col",
+          "value": "3"
+        },
+        {
+          "label": "6 Col",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "col_mobile",
+      "default": "1",
+      "label": "Small Phones: <576px",
+      "options": [
+        {
+          "label": "1 Col",
+          "value": "1"
+        },
+        {
+          "label": "2 Col",
+          "value": "6"
+        },
+        {
+          "label": "3 Col",
+          "value": "4"
+        },
+        {
+          "label": "4 Col",
+          "value": "3"
+        },
+        {
+          "label": "6 Col",
+          "value": "2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product List"
+    }
+  ]
+}
+{% endschema %}
