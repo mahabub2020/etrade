@@ -1,3 +1,5 @@
+
+{% if section.settings.header_style == 'cta1' %}
 <div class="delivery-poster-area">
   <div class="container">
       <div class="row">
@@ -28,6 +30,66 @@
       </div>
   </div>
 </div>
+{% else %}
+<div class="axil-poster">
+  <div class="container">
+      <div class="row">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'cta' %}   
+            <div class="col-lg-6 mb--30">
+
+              {% if section.settings.reverse_order == true %}
+                <div class="single-poster">
+                    <a href="{{ block.settings.cta_url | escape }}">
+                      <img src="{% if block.settings.cta_img %}{{ block.settings.cta_img | img_url: '630x246' }}{% else %}http:\/\/via.placeholder.com\/630x246{% endif %}" alt="{{ block.settings.cta_img.alt }}"> 
+                        <div class="poster-content">
+                            <div class="inner">
+                              {% if block.settings.badge_title != '' %}   
+                              <h3 class="title">{{ block.settings.badge_title | escape }}</h3> 
+                            {% endif %}   
+                            {% if block.settings.badge != '' %}   
+                              <span class="sub-title">{{ block.settings.badge | escape }} <i class="fal fa-long-arrow-right"></i></span>
+                            {% endif %}    
+                            </div>
+                        </div>
+                        <!-- End .poster-content -->
+                    </a>
+                </div>
+                {% else %}
+                 
+                  <div class="single-poster">
+                      <a href="{{ block.settings.cta_url | escape }}">
+                        <img src="{% if block.settings.cta_img %}{{ block.settings.cta_img | img_url: '630x246' }}{% else %}http:\/\/via.placeholder.com\/630x246{% endif %}" alt="{{ block.settings.cta_img.alt }}"> 
+
+                          <div class="poster-content content-left">
+                              <div class="inner">
+                               
+                              {% if block.settings.badge != '' %}   
+                                  <span class="sub-title">{{ block.settings.badge | escape }}</span>
+                              {% endif %}  
+                                 
+                            {% if block.settings.badge_title != '' %}   
+                              <h3 class="title">{{ block.settings.badge_title | escape }}</h3> 
+                            {% endif %}   
+
+                              </div>
+                          </div>
+                          <!-- End .poster-content -->
+                      </a>
+                  </div> 
+          
+              {% endif %}
+ 
+              <!-- End .single-poster -->
+          </div>
+        {% endcase %}
+      {% endfor %} 
+      </div>
+  </div>
+</div>
+{% endif %}
+
 
 {% schema %}
 {
@@ -36,7 +98,28 @@
     {
       "type": "header",
       "content": "Section Delivery"
+    },
+    {
+      "type": "select",
+      "id": "ctalayout",
+      "default": "cta1",
+      "label": "CTA Layout",
+      "options": [
+        {
+          "label": "Layout 1",
+          "value": "cta1"
+        },
+        {
+          "label": "Layout 2",
+          "value": "cta2"
+        },
+        {
+          "label": "Layout 3",
+          "value": "cta3"
+        }
+      ]
     }
+
   ],
 
   "blocks": [
@@ -48,7 +131,7 @@
           "type": "text",
           "id": "badge",
           "default": "Always free",
-          "label": "Dadge"
+          "label": "Dadge/Sub Title"
         },
         {
           "type": "text",
@@ -63,10 +146,20 @@
           "label": "Content"
         },
         {
+          "type": "url",
+          "id": "cta_url",
+          "label": "URL"
+        },
+        {
           "type": "image_picker",
           "id": "cta_img",
           "label": "Image",
           "info": "Recommended Size: 203px X 192px"
+        },
+        {
+          "type": "checkbox",
+          "id": "reverse_order",
+          "label": "Reverse Order"
         }
       ]
     }
