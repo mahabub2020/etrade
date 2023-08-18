@@ -7,6 +7,13 @@
           class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
           alt="{{ item.title | escape }}"
           loading="lazy">
+        {% if section.settings.hover_img == true %}
+          <img
+            decoding="async"
+            class="hover-img"
+            src="{{ product.images[1] | img_url: '300x300' }}"
+            alt="{{ product.images[1].alt }}">
+        {% endif %}
       {% else %}
         {{ 'image' | placeholder_svg_tag }}
       {% endif %}
