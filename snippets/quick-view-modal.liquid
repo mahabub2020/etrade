@@ -217,7 +217,7 @@
   jQuery(function($) {
     quickview = function(product) {
       Shopify.getProduct(product);
-      console.log(product.title);
+      console.log(product | json);
     }
     Shopify.getProduct = function(product) {
       $('#yith-quick-view-modal .venobox').attr('href', product.featured_image);
