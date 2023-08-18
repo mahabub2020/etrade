@@ -473,7 +473,8 @@
             "badge_title": "Order Pickup",
             "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
             "cta_url": "",
-            "cta_img": "shopify:\/\/shop_images\/image-4.png"
+            "cta_img": "shopify:\/\/shop_images\/image-4.png",
+            "reverse_order": false
           }
         },
         "c506554f-3a9c-4367-b2ac-036fc68df177": {
@@ -482,7 +483,8 @@
             "badge": "Always free",
             "badge_title": "Order Pickup",
             "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
-            "cta_url": ""
+            "cta_url": "",
+            "reverse_order": true
           }
         }
       },
