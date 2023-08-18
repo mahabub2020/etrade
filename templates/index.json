@@ -1,89 +1,26 @@
 {
   "sections": {
-    "66b7d80c-5c64-4632-8d17-76f42ecbe313": {
-      "type": "banner-slider",
-      "blocks": {
-        "88de8f33-016a-4052-a74e-941deef00666": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Weekffff",
-            "banner_title": "Smart Digital Watchff",
-            "banner_btn_txt": "Shop Nowff",
-            "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/collection_5.jpg",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
-          }
-        },
-        "fb771562-4767-45e6-b2bb-b4ba79fd5bae": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Weekcgfnfgn",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/product-big-10_e079e2b0-d697-4370-877a-0fc3a67e7401.png",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "right",
-            "pos_x": 192,
-            "pos_y_type": "top",
-            "pos_y": 4
-          }
-        },
-        "ea1e0393-6bb9-4c2b-bc28-dc400b51b4a5": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
-          }
-        },
-        "81694fd4-2659-427b-a7c4-0c644f2f15dd": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "shopify:\/\/pages\/contact",
-            "banner_img": "shopify:\/\/shop_images\/16-4.jpg",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
-          }
-        }
-      },
-      "block_order": [
-        "88de8f33-016a-4052-a74e-941deef00666",
-        "fb771562-4767-45e6-b2bb-b4ba79fd5bae",
-        "ea1e0393-6bb9-4c2b-bc28-dc400b51b4a5",
-        "81694fd4-2659-427b-a7c4-0c644f2f15dd"
-      ],
+    "17405413-6b41-4e23-b0f4-3aaf1e79ffb7": {
+      "type": "product-collection",
       "settings": {
-        "banner_style": "banner_style_3"
+        "title": "Product Collection",
+        "btn-label": "",
+        "product_collection": "etrade-products",
+        "collection_list": [
+
+        ],
+        "number_of_products_to_show": 5,
+        "product_layout": "1",
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "hover_img": true
       }
     }
   },
   "order": [
-    "66b7d80c-5c64-4632-8d17-76f42ecbe313"
+    "17405413-6b41-4e23-b0f4-3aaf1e79ffb7"
   ]
 }
