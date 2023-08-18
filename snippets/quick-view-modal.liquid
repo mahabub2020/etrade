@@ -40,9 +40,7 @@
                                       class="attachment-shop_single size-shop_single wp-post-image"
                                       alt=""
                                       decoding="async"
-                                      loading="lazy"
-                                      srcset="https://dev.axilthemes.com/themes/etrade/wp-content/uploads/2023/02/phone.jpg 630w, https://dev.axilthemes.com/themes/etrade/wp-content/uploads/2023/02/phone-150x150.jpg 150w, https://dev.axilthemes.com/themes/etrade/wp-content/uploads/2023/02/phone-300x300.jpg 300w, https://dev.axilthemes.com/themes/etrade/wp-content/uploads/2023/02/phone-60x60.jpg 60w, https://dev.axilthemes.com/themes/etrade/wp-content/uploads/2023/02/phone-600x600.jpg 600w, https://dev.axilthemes.com/themes/etrade/wp-content/uploads/2023/02/phone-100x100.jpg 100w"
-                                      sizes="(max-width: 630px) 100vw, 630px"></a>
+                                      loading="lazy"></a>
                                 </div>
                               </div>
                             </div>
@@ -53,7 +51,7 @@
                     <div class="col-lg-6 mb--40">
                       <div class="single-product-content">
                         <div class="inner">
-                          <h2 class=" product-title product_title entry-title">Smart Mobile</h2>
+                          <h2 class="product-title product_title entry-title">Smart Mobile</h2>
                           <div class="woocommerce-product-rating product-rating">
                             <div class="axiltheme-star-rating">
                               <div
@@ -214,3 +212,16 @@
     </div>
   </div>
 </div>
+
+<script>
+  jQuery(function($) {
+    quickview = function(product_handle) {
+      Shopify.getProduct(product_handle);
+    }
+    Shopify.onProduct = function(product) {
+      $('#yith-quick-view-modal .venobox').attr('href', product.featured_image);
+      $('#yith-quick-view-modal .venobox img').attr('src', product.featured_image);
+      $('#yith-quick-view-modal .product-title').text(product.title);
+    }
+  });
+</script>

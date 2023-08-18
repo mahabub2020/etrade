@@ -47,12 +47,11 @@
         <li class="quickview">
           <a
             href="#"
-            class="yith-wcqv-button"
-            data-product_id="1087"
+            data-product_id="{{ product.id }}"
             title="QuickView"
-            tabindex="0"
             data-bs-toggle="modal"
-            data-bs-target="#yith-quick-view-modal">
+            data-bs-target="#yith-quick-view-modal"
+            onclick="quickview('{{ product.handle | handleize }}')">
             <i class="far fa-eye"></i>
           </a>
         </li>
