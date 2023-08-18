@@ -1,171 +1,5 @@
 {
   "sections": {
-    "66b7d80c-5c64-4632-8d17-76f42ecbe313": {
-      "type": "banner-slider",
-      "blocks": {
-        "88de8f33-016a-4052-a74e-941deef00666": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Weekffff",
-            "banner_title": "Smart Digital Watchff",
-            "banner_btn_txt": "Shop Nowff",
-            "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/collection_5.jpg",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
-          }
-        },
-        "fb771562-4767-45e6-b2bb-b4ba79fd5bae": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Weekcgfnfgn",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/product-big-10_e079e2b0-d697-4370-877a-0fc3a67e7401.png",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "right",
-            "pos_x": 192,
-            "pos_y_type": "top",
-            "pos_y": 4
-          }
-        },
-        "ea1e0393-6bb9-4c2b-bc28-dc400b51b4a5": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
-          }
-        },
-        "81694fd4-2659-427b-a7c4-0c644f2f15dd": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "shopify:\/\/pages\/contact",
-            "banner_img": "shopify:\/\/shop_images\/16-4.jpg",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
-          }
-        }
-      },
-      "block_order": [
-        "88de8f33-016a-4052-a74e-941deef00666",
-        "fb771562-4767-45e6-b2bb-b4ba79fd5bae",
-        "ea1e0393-6bb9-4c2b-bc28-dc400b51b4a5",
-        "81694fd4-2659-427b-a7c4-0c644f2f15dd"
-      ],
-      "settings": {
-      }
-    },
-    "43154aec-c1cc-4c83-aee7-cc8485715d1c": {
-      "type": "fashion-banner-slider",
-      "blocks": {
-        "3a497dce-7530-425a-bac3-bbccf6bc8413": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/product-41.png"
-          }
-        },
-        "86a1f0b3-cdec-4797-8bb6-5357c25fff23": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": ""
-          }
-        },
-        "6713c6f2-1c6a-4190-90ee-01908dcea8f3": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/product-big-08_9e8f0ff4-892f-46c4-9321-e713b99c46eb.png"
-          }
-        }
-      },
-      "block_order": [
-        "3a497dce-7530-425a-bac3-bbccf6bc8413",
-        "86a1f0b3-cdec-4797-8bb6-5357c25fff23",
-        "6713c6f2-1c6a-4190-90ee-01908dcea8f3"
-      ],
-      "settings": {
-        "left_offset": 50,
-        "product_title": "Yantiti Leather Bags",
-        "product_prices": "$29.99",
-        "product_url": "shopify:\/\/products\/kalrez®-spectrum™-6376",
-        "product_img": "shopify:\/\/shop_images\/collection_5.png"
-      }
-    },
-    "1b5294ab-1593-4b10-9b97-b3a144424c6d": {
-      "type": "furniture-banner-slider",
-      "blocks": {
-        "7783b87c-33eb-47a3-896a-7d5ed395f08c": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": ""
-          }
-        },
-        "b0a8024c-c80f-4883-a77a-e215441ed134": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": ""
-          }
-        },
-        "fa95f559-1f29-45e9-9e93-a125d7bc7715": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "7783b87c-33eb-47a3-896a-7d5ed395f08c",
-        "b0a8024c-c80f-4883-a77a-e215441ed134",
-        "fa95f559-1f29-45e9-9e93-a125d7bc7715"
-      ],
-      "settings": {
-      }
-    },
     "698bc866-c7a5-41f2-8423-f83058b732d0": {
       "type": "section-product-list",
       "settings": {
@@ -182,12 +16,75 @@
         "col_sm": "1",
         "col_mobile": "1"
       }
+    },
+    "50eac3de-24fe-4411-8def-7651212e96b3": {
+      "type": "section-delivery",
+      "blocks": {
+        "template--20190269571387__50eac3de-24fe-4411-8def-7651212e96b3-cta-1": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "Order Pickup",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "",
+            "reverse_order": true
+          }
+        },
+        "d2e32ef1-7931-4f95-b688-7e810c50790e": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "Order Pickup",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "",
+            "reverse_order": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20190269571387__50eac3de-24fe-4411-8def-7651212e96b3-cta-1",
+        "d2e32ef1-7931-4f95-b688-7e810c50790e"
+      ],
+      "settings": {
+        "ctalayout": "cta2"
+      }
+    },
+    "4cdd8db3-68a2-4413-a9dc-da16a312fbdc": {
+      "type": "section-delivery",
+      "blocks": {
+        "template--20190269571387__4cdd8db3-68a2-4413-a9dc-da16a312fbdc-cta-1": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "Order Pickup",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "",
+            "reverse_order": false
+          }
+        },
+        "c9d514c9-2963-417f-94dc-820113e6dda7": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "Order Pickup",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "",
+            "reverse_order": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20190269571387__4cdd8db3-68a2-4413-a9dc-da16a312fbdc-cta-1",
+        "c9d514c9-2963-417f-94dc-820113e6dda7"
+      ],
+      "settings": {
+        "ctalayout": "cta1"
+      }
     }
   },
   "order": [
-    "66b7d80c-5c64-4632-8d17-76f42ecbe313",
-    "43154aec-c1cc-4c83-aee7-cc8485715d1c",
-    "1b5294ab-1593-4b10-9b97-b3a144424c6d",
-    "698bc866-c7a5-41f2-8423-f83058b732d0"
+    "698bc866-c7a5-41f2-8423-f83058b732d0",
+    "50eac3de-24fe-4411-8def-7651212e96b3",
+    "4cdd8db3-68a2-4413-a9dc-da16a312fbdc"
   ]
 }
