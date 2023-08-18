@@ -79,7 +79,6 @@
         "81694fd4-2659-427b-a7c4-0c644f2f15dd"
       ],
       "settings": {
-        "banner_style": "banner_style_2"
       }
     },
     "43154aec-c1cc-4c83-aee7-cc8485715d1c": {
@@ -155,7 +154,7 @@
             "subtitle": "Hot Deal In This Week",
             "banner_title": "Smart Digital Watch",
             "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "shopify:\/\/products\/copy-of-kalrez®-spectrum™-6375"
+            "banner_btn_url": ""
           }
         }
       },
@@ -166,11 +165,30 @@
       ],
       "settings": {
       }
+    },
+    "698bc866-c7a5-41f2-8423-f83058b732d0": {
+      "type": "section-product-list",
+      "settings": {
+        "title": "Recently Viewed",
+        "subtitle": "Recently Viewed",
+        "product_collection": "womens",
+        "excluded_products": [
+
+        ],
+        "number_of_products_to_show": 8,
+        "product_layout": "1",
+        "col_xl": "2",
+        "col_lg": "4",
+        "col_md": "2",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
     }
   },
   "order": [
     "66b7d80c-5c64-4632-8d17-76f42ecbe313",
     "43154aec-c1cc-4c83-aee7-cc8485715d1c",
-    "1b5294ab-1593-4b10-9b97-b3a144424c6d"
+    "1b5294ab-1593-4b10-9b97-b3a144424c6d",
+    "698bc866-c7a5-41f2-8423-f83058b732d0"
   ]
 }
