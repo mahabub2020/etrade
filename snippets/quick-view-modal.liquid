@@ -215,9 +215,10 @@
 
 <script>
   jQuery(function($) {
-      console.log({{product | json}});
+    var pro = {{ product | json}}
     quickview = function(product) {
       Shopify.getProduct(product);
+      console.log(pro);
     }
     Shopify.getProduct = function(product) {
       $('#yith-quick-view-modal .venobox').attr('href', product.featured_image);
