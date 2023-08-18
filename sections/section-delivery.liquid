@@ -40,7 +40,7 @@
             {% when 'cta' %}   
             <div class="col-lg-6 mb--30">
 
-              {% if section.settings.reverse_order == true %}
+              {% if block.settings.reverse_order == true %}
 
                 <div class="single-poster">
                     <a href="{{ block.settings.cta_url | escape }}">
@@ -58,8 +58,7 @@
                         <!-- End .poster-content -->
                     </a>
                 </div>
-                {% else %}
-                 
+                {% else %} 
                   <div class="single-poster">
                       <a href="{{ block.settings.cta_url | escape }}">
                         <img src="{% if block.settings.cta_img %}{{ block.settings.cta_img | img_url: '630x246' }}{% else %}http:\/\/via.placeholder.com\/630x246{% endif %}" alt="{{ block.settings.cta_img.alt }}"> 
@@ -120,11 +119,6 @@
           "value": "cta3"
         }
       ]
-    },
-    {
-      "type": "checkbox",
-      "id": "reverse_order",
-      "label": "Reverse Order"
     }
 
   ],
@@ -162,6 +156,11 @@
           "id": "cta_img",
           "label": "Image",
           "info": "Recommended Size: 203px X 192px"
+        },
+        {
+          "type": "checkbox",
+          "id": "reverse_order",
+          "label": "Reverse Order"
         }
       ]
     }
