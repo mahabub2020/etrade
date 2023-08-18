@@ -176,8 +176,7 @@
 
         ],
         "number_of_products_to_show": 8,
-        "product_layout": "1",
-        "col_xl": "2",
+        "col_xl": "6",
         "col_lg": "4",
         "col_md": "2",
         "col_sm": "2",
