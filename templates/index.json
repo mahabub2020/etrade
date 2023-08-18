@@ -24,7 +24,7 @@
           "type": "cta",
           "settings": {
             "badge": "Always free",
-            "badge_title": "Order Pickup",
+            "badge_title": "<p>Order Pickup<\/p>",
             "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
             "cta_url": "",
             "reverse_order": true
@@ -34,7 +34,7 @@
           "type": "cta",
           "settings": {
             "badge": "Always free",
-            "badge_title": "Order Pickup",
+            "badge_title": "<p>Order Pickup<\/p>",
             "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
             "cta_url": "",
             "reverse_order": false
@@ -56,7 +56,7 @@
           "type": "cta",
           "settings": {
             "badge": "Always free",
-            "badge_title": "Order Pickup",
+            "badge_title": "<p>Order Pickup<\/p>",
             "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
             "cta_url": "",
             "reverse_order": false
@@ -66,7 +66,7 @@
           "type": "cta",
           "settings": {
             "badge": "Always free",
-            "badge_title": "Order Pickup",
+            "badge_title": "<p>Order Pickup<\/p>",
             "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
             "cta_url": "",
             "reverse_order": false
@@ -80,11 +80,38 @@
       "settings": {
         "ctalayout": "cta1"
       }
+    },
+    "b45302bf-7b1d-4852-b350-537090c0443d": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--20190269571387__b45302bf-7b1d-4852-b350-537090c0443d-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>caca<\/p>",
+            "wscontent": "CZzxczxc",
+            "ws_img": "shopify:\/\/shop_images\/service9.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--20190269571387__b45302bf-7b1d-4852-b350-537090c0443d-whyus-1"
+      ],
+      "settings": {
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout1",
+        "col_xl": "5",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
     }
   },
   "order": [
     "698bc866-c7a5-41f2-8423-f83058b732d0",
     "50eac3de-24fe-4411-8def-7651212e96b3",
-    "4cdd8db3-68a2-4413-a9dc-da16a312fbdc"
+    "4cdd8db3-68a2-4413-a9dc-da16a312fbdc",
+    "b45302bf-7b1d-4852-b350-537090c0443d"
   ]
 }
