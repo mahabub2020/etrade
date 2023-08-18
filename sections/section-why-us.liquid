@@ -9,6 +9,7 @@
           <h2 class="title">{{ section.settings.section_title | escape }}</h2>
         </div>  
       {% endif %}  
+      
       </div>
         <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }} row--20">     
         {% for block in section.blocks %}
@@ -25,6 +26,7 @@
                         </div>  
                       {% endif %}  
                   </div>
+
               </div>
             {% endcase %}
           {% endfor %}
