@@ -41,7 +41,7 @@
           <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
             {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
             {% capture include_snippet %}
-              {% include layout, section.settings.hover_img %}
+              {% include layout %}
             {% endcapture %}
             {{ include_snippet }}
           </div>
