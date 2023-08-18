@@ -10,7 +10,7 @@
                 <div class="delivery-poster pickup">
                     <div class="content">  
                       {% if block.settings.badge != '' %}   
-                        <span class="badge">{{ block.settings.badge | escape }}</span>
+                        <span class="badge">{{ block.settings.badge }}</span>
                       {% endif %}   
                       {% if block.settings.badge_title != '' %}   
                         <h4 class="title">{{ block.settings.badge_title | escape }}</h4> 
@@ -48,7 +48,7 @@
                         <div class="poster-content">
                             <div class="inner">
                               {% if block.settings.badge_title != '' %}   
-                              <h3 class="title">{{ block.settings.badge_title | escape }}</h3> 
+                              <h3 class="title">{{ block.settings.badge_title }}</h3> 
                             {% endif %}   
                             {% if block.settings.badge != '' %}   
                               <span class="sub-title">{{ block.settings.badge | escape }} <i class="fal fa-long-arrow-right"></i></span>
@@ -71,7 +71,7 @@
                               {% endif %}  
                                  
                             {% if block.settings.badge_title != '' %}   
-                              <h3 class="title">{{ block.settings.badge_title | escape }}</h3> 
+                              <h3 class="title">{{ block.settings.badge_title }}</h3> 
                             {% endif %}   
 
                               </div>
@@ -138,7 +138,7 @@
           "type": "richtext",
           "id": "badge_title",
           "default": "Order Pickup",
-          "label": "Dadge Title"
+          "label": "CTA Title"
         },
         {
           "type": "textarea",
