@@ -35,7 +35,7 @@
   </div>
 </div>
 {% elsif section.settings.ctalayout == 'layout2' %}
-<div class="service-area">
+<div id="section-{{ section.id }}" class="service-area">
   <div class="container"> 
         <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }} row--20">     
         {% for block in section.blocks %}
@@ -55,7 +55,7 @@
   </div>
 </div>
 {% else %}
-<div class="how-to-sell-area axil-section-gap">
+<div id="section-{{ section.id }}" class="how-to-sell-area axil-section-gap">
   <div class="container">
       <div class="product-area pb--50">
           <div class="section-title-wrapper section-title-center">
