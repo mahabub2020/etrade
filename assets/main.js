@@ -13,6 +13,7 @@
             readyActivation();
             magnificPopupActivation();
             testimonialActivation();
+            countdown();
 
         });
 
@@ -28,6 +29,50 @@
         //     testimonialActivation();
         // });
     
+
+        function countdown() {
+			if (typeof $.fn.countdown == 'function') {
+				try {
+					var day = etradeObj.day == 'Day' ? 'Day%!D' : etradeObj.day,
+						hour = etradeObj.hour == 'Hour' ? 'Hour%!D' : etradeObj.hour,
+						minute = etradeObj.minute == 'Minute' ? 'Minute%!D' : etradeObj.minute,
+						second = etradeObj.second == 'Second' ? 'Second%!D' : etradeObj.second;
+
+					$('.axilcoutdown').each(function () {
+						var $CountdownSelector = $(this).find('.countdown');
+						var eventCountdownTime = $CountdownSelector.data('time');
+						$CountdownSelector.countdown(eventCountdownTime).on('update.countdown', function (event) {
+							$(this).html(event.strftime('' + '<div class="countdown-section"><div><div class="countdown-number">%D</div><div class="countdown-unit">' + day + '</div></div></div>' + '<div class="countdown-section"><div><div class="countdown-number">%H</div><div class="countdown-unit">' + hour + '</div></div></div>' + '<div class="countdown-section"><div><div class="countdown-number">%M</div><div class="countdown-unit">' + minute + '</div></div></div>' + '<div class="countdown-section"><div><div class="countdown-number">%S</div><div class="countdown-unit">' + second + '</div></div></div>'));
+						}).on('finish.countdown', function (event) {
+							$(this).html(event.strftime(''));
+						});
+					});
+					$('.axilcoutdown2').each(function () {
+						var $CountdownSelector = $(this).find('.countdown');
+						var eventCountdownTime = $CountdownSelector.data('time');
+						$CountdownSelector.countdown(eventCountdownTime).on('update.countdown', function (event) {
+							$(this).html(event.strftime('' + '<div class="countdown-section"><div><div class="countdown-number">%D</div><div class="countdown-unit">' + day + '</div></div></div>' + '<div class="countdown-section"><div><div class="countdown-number">%H</div><div class="countdown-unit">' + hour + '</div></div></div>' + '<div class="countdown-section"><div><div class="countdown-number">%M</div><div class="countdown-unit">' + minute + '</div></div></div>' + '<div class="countdown-section"><div><div class="countdown-number">%S</div><div class="countdown-unit">' + second + '</div></div></div>'));
+						}).on('finish.countdown', function (event) {
+							$(this).html(event.strftime(''));
+						});
+					});
+					$('.header-top-campaign').each(function () {
+						var $CountdownSelector = $(this).find('.campaign-countdown');
+						var eventCountdownTime = $CountdownSelector.data('time');
+						$CountdownSelector.countdown(eventCountdownTime).on('update.countdown', function (event) {
+							$(this).html(event.strftime('' + '<div class="countdown-section"><div><div class="countdown-number">%-D</div> <div class="countdown-unit">D</div> </div></div><div class="countdown-section"><div><div class="countdown-number">%H</div> <div class="countdown-unit">H</div> </div></div><div class="countdown-section"><div><div class="countdown-number">%M</div> <div class="countdown-unit">M</div> </div></div><div class="countdown-section"><div><div class="countdown-number">%S</div> <div class="countdown-unit">S</div> </div></div>'));
+						}).on('finish.countdown', function (event) {
+							$(this).html(event.strftime(''));
+						});
+					});
+
+
+				} catch (err) {
+					console.log('Countdown : ' + err.message);
+				}
+			}
+		}
+
 
          function slider_slick_activation_two() {
 
