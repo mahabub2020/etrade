@@ -51,14 +51,14 @@
             title="QuickView"
             data-bs-toggle="modal"
             data-bs-target="#yith-quick-view-modal"
-            onclick="quickview('{{ product.handle | handleize }}')">
+            onclick="quickview('{{ product | json }}')">
             <i class="far fa-eye"></i>
           </a>
         </li>
       </ul>
     </div>
   </div>
-  <div class="handler">{{ product.handle }}</div>
+  <div class="handler">{{ product.handle | handleize }}</div>
   <div class="product-content">
     <div class="inner">
       <div class="product-rating">
