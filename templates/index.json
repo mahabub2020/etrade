@@ -87,19 +87,59 @@
         "template--20190269571387__b45302bf-7b1d-4852-b350-537090c0443d-whyus-1": {
           "type": "whyus",
           "settings": {
-            "wstitle": "<p><strong>Fast & Secure Delivery<\/strong><\/p>",
-            "wscontent": "CZzxczxc",
+            "wstitle": "<p><strong>Fast & Secure Deliveryvczcvsv<\/strong><\/p>",
+            "wscontent": "CZzxczx sdvzdczvc zdxvz xvzvz xvzxvb xvx",
             "ws_img": "shopify:\/\/shop_images\/service9.png"
+          }
+        },
+        "4946a966-8aa3-47c4-8622-a3384aaa72f9": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "",
+            "wscontent": ""
+          }
+        },
+        "6bbc268f-c046-4d9f-9d9b-93fdbcefbe63": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "",
+            "wscontent": ""
+          }
+        },
+        "56d5ecf9-acd1-485f-9275-b661f48d6167": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "",
+            "wscontent": ""
+          }
+        },
+        "97a69be5-0742-4995-b1cd-fc39441c3497": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "",
+            "wscontent": ""
+          }
+        },
+        "3a787495-9bce-42e8-b1f4-feb14f27331f": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "",
+            "wscontent": ""
           }
         }
       },
       "block_order": [
-        "template--20190269571387__b45302bf-7b1d-4852-b350-537090c0443d-whyus-1"
+        "template--20190269571387__b45302bf-7b1d-4852-b350-537090c0443d-whyus-1",
+        "4946a966-8aa3-47c4-8622-a3384aaa72f9",
+        "6bbc268f-c046-4d9f-9d9b-93fdbcefbe63",
+        "56d5ecf9-acd1-485f-9275-b661f48d6167",
+        "97a69be5-0742-4995-b1cd-fc39441c3497",
+        "3a787495-9bce-42e8-b1f4-feb14f27331f"
       ],
       "settings": {
         "section_title": "Why People Choose Us",
         "section_sub_title": "Why Us",
-        "wulayout": "layout1",
+        "wulayout": "layout3",
         "col_xl": "5",
         "col_lg": "4",
         "col_md": "3",
