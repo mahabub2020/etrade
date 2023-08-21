@@ -146,12 +146,24 @@
         "col_sm": "2",
         "col_mobile": "1"
       }
+    },
+    "104cece6-b515-47fb-a34a-47062de5e68f": {
+      "type": "section-countdown",
+      "settings": {
+        "cd_title": "Enhance Your Music Experience",
+        "cd_sub_title": "Don't Miss!!",
+        "end_time": "30\/05\/2023 23:00:00",
+        "cd_btn_txt": "Check it Out!",
+        "cd_btn_url": "",
+        "cd_img": "shopify:\/\/shop_images\/product-big-08_9e8f0ff4-892f-46c4-9321-e713b99c46eb.png"
+      }
     }
   },
   "order": [
     "698bc866-c7a5-41f2-8423-f83058b732d0",
     "50eac3de-24fe-4411-8def-7651212e96b3",
     "4cdd8db3-68a2-4413-a9dc-da16a312fbdc",
-    "b45302bf-7b1d-4852-b350-537090c0443d"
+    "b45302bf-7b1d-4852-b350-537090c0443d",
+    "104cece6-b515-47fb-a34a-47062de5e68f"
   ]
 }
