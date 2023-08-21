@@ -217,7 +217,9 @@
   jQuery(function($) {
     quickview = function(product_handle) {
       jQuery.getJSON(window.Shopify.routes.root + 'products/' + product_handle + '.js', function(product) {
-        alert('The title of this product is ' + product.title);
+        $('#yith-quick-view-modal .venobox').attr('href', product.featured_image);
+        $('#yith-quick-view-modal .venobox img').attr('src', product.featured_image);
+        $('#yith-quick-view-modal .product-title').text(product.title);
       });
     }
 
