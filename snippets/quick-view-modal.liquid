@@ -216,7 +216,7 @@
 <script>
   jQuery(function($) {
     quickview = function(product_handle) {
-      jQuery.getJSON(window.Shopify.routes.root + product_handle + '.js', function(product) {
+      jQuery.getJSON(window.Shopify.routes.root + 'products/' + product_handle + '.js', function(product) {
         alert('The title of this product is ' + product.title);
       });
     }
