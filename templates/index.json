@@ -150,11 +150,12 @@
     "d44281cc-c7e2-4a58-9526-b72b1d592c53": {
       "type": "section-countdown",
       "settings": {
-        "cd_title": "Enhance Your Music Experience",
-        "cd_sub_title": "Don't Miss!!",
+        "cd_title": "Enhance Your Music Experienceddd",
+        "cd_sub_title": "Don't Miss!!ddd",
         "end_time": "2024-05-22",
-        "cd_btn_txt": "Check it Out!",
-        "cd_btn_url": ""
+        "cd_btn_txt": "Check it Out!dd",
+        "cd_btn_url": "shopify:\/\/blogs\/news\/lorem-ipsum-is-simply-dummy",
+        "cd_img": "shopify:\/\/shop_images\/poster-03.png"
       }
     }
   },
