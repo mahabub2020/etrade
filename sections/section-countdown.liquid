@@ -20,7 +20,7 @@
                 <div class="col-xl-7 col-lg-6">
                     <div class="poster-countdown-thumbnail">
                       <img src="{% if section.settings.cd_img %}{{ section.settings.cd_img | img_url: '452x502' }}{% else %}http:\/\/via.placeholder.com\/452x502{% endif %}" alt="{{ section.settings.cd_img.alt }}"> 
-                     
+                      {% if section.settings.is_animations == true %}
                         <div class="music-singnal">
                             <div class="item-circle circle-1"></div>
                             <div class="item-circle circle-2"></div>
@@ -28,7 +28,10 @@
                             <div class="item-circle circle-4"></div>
                             <div class="item-circle circle-5"></div>
                         </div>
+                      {% endif %}
+
                     </div>
+
                 </div>
             </div>
         </div>
@@ -80,6 +83,11 @@
       "type": "image_picker",
       "id": "cd_img",
       "label": "Box Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_animations",
+      "label": "Disable animations"
     }
    
   ],
