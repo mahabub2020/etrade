@@ -29,7 +29,7 @@
 
 {%- style -%}
 
-#section-{{ section.id }} .bg_image--8  {
+#section-{{ section.id }}.bg_image--8  {
   background-image: url({% if section.settings.hero_img %}{{ section.settings.hero_img | img_url: '1920x780' }}{% else %}http:\/\/via.placeholder.com\/1920x780{% endif %});
     
 }
