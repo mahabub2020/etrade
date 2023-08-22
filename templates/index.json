@@ -227,8 +227,9 @@
       "settings": {
         "section_title": "About Us",
         "section_sub_title": "Who we are",
-        "section_title_color": "#2d1717",
-        "section_subtitle_color": "#cf987e"
+        "section_title_color": "#dd1d1d",
+        "section_subtitle_color": "#dd1d1d",
+        "section_subtitle_colorsssss": "#ffffff"
       }
     }
   },
