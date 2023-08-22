@@ -60,11 +60,14 @@
 
 {%- style -%}
 
-#section-{{ section.id }}  {
-    color: {{ section.settings.section_title_color }}!important;
+#section-{{ section.id }} .section-title-wrapper .title  {
+    color: {{ section.settings.section_title_color }};
 }
 #section-{{ section.id }} .title-highlighter.highlighter-primary2 {
-    color: {{ section.settings.section_subtitle_color }}!important;
+    color: {{ section.settings.section_subtitle_color }};
+}
+#section-{{ section.id }} .title-highlighter.highlighter-primary2 i {
+    background: {{ section.settings.section_subtitle_color }};
 }
 
 {%- endstyle -%}
