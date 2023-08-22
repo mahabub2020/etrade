@@ -19,14 +19,14 @@
                   {% when 'about_features' %}   
                     <div class="col-sm-6">
                         <div class="about-features">
-                          {% if section.settings.box_number != '' %}
-                            <div class="spam sl-number">{{ section.settings.box_number | escape }}</div>
+                          {% if block.settings.box_number != '' %}
+                            <div class="spam sl-number">{{ block.settings.box_number | escape }}</div>
                           {% endif %}
-                            {% if section.settings.box_title != '' %}
-                            <h4 class="title">{{ section.settings.box_title | escape }}</h4>
+                            {% if block.settings.box_title != '' %}
+                            <h4 class="title">{{ block.settings.box_title | escape }}</h4>
                           {% endif %}
-                            {% if section.settings.box_content != '' %}
-                            <p>{{ section.settings.box_content | escape }}</p>
+                            {% if block.settings.box_content != '' %}
+                            <p>{{ block.settings.box_content | escape }}</p>
                           {% endif %}
                         </div>
                     </div>
