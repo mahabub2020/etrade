@@ -207,7 +207,7 @@
             "box_number": "1",
             "box_title": "Who We Are",
             "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
-            "features_number_color": "#C4C4C4",
+            "features_number_color": "#c4c4c4",
             "features_title_color": "#292930",
             "features_content_color": "#777777"
           }
@@ -218,7 +218,7 @@
             "box_number": "1",
             "box_title": "Who We Are",
             "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
-            "features_number_color": "#C4C4C4",
+            "features_number_color": "#c4c4c4",
             "features_title_color": "#292930",
             "features_content_color": "#777777"
           }
@@ -261,6 +261,21 @@
         "number_of_products_to_show": 8,
         "product_layout": "1"
       }
+    },
+    "7da8125b-a49c-4f53-8819-c80fb6c3871b": {
+      "type": "section-product-carousel",
+      "settings": {
+        "title": "New Arrivalscc",
+        "sub_title": "cccRecently Viewed",
+        "product_collection": "womens",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1"
+      }
     }
   },
   "order": [
@@ -271,6 +286,7 @@
     "d44281cc-c7e2-4a58-9526-b72b1d592c53",
     "fb90f602-5428-49b8-b243-243f92139155",
     "9cdf8066-38ba-4fe6-b720-1f6e1d7ac474",
-    "6ee98add-0d70-4586-9635-77b7d688c24e"
+    "6ee98add-0d70-4586-9635-77b7d688c24e",
+    "7da8125b-a49c-4f53-8819-c80fb6c3871b"
   ]
 }
