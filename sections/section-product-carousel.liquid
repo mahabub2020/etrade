@@ -1,11 +1,10 @@
- 
-<div class="axil-new-arrivals-product-area axil-new-arrivals-activation bg-color-white axil-section-gap pb--50 pb_sm--30">
+<div id="section-{{ section.id }}" class="axil-new-arrivals-product-area axil-new-arrivals-activation bg-color-white axil-section-gap pb--50 pb_sm--30">
   <div class="container">
       <div class="section-title-wrapper">
           <span class="title-highlighter highlighter-primary"><i class="far fa-shopping-basket"></i> {{ section.settings.sub_title }} </span>
           <h2 class="title">{{ section.settings.title }} </h2>
       </div>
-      <div class="new-arrivals-product-activation slick-layout-wrapper--30 axil-slick-arrow  arrow-top-slide">
+      <div class="new-arrivals-product-activation slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide">
           
             {% if section.settings.reverse_order == true %}
               {% assign collection = section.settings.product_collection.products | sort: section.settings.sort_by | reverse %}
