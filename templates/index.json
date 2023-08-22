@@ -193,6 +193,26 @@
         "col_md": 2,
         "col_sm": 2
       }
+    },
+    "e2747cc7-3f19-4155-b7fb-5e5f11625881": {
+      "type": "banner",
+      "settings": {
+        "header_style": "header_style_1",
+        "banner_title": "Life is More Than Sunglasses and Hit Movies.",
+        "banner_btn_txt": "View All Products",
+        "banner_btn_url": ""
+      }
+    },
+    "d9af01bc-1a81-4c5a-9e2a-84793e03ef45": {
+      "type": "section-hero",
+      "settings": {
+        "hero_title": "Exclusive Design Collection",
+        "hero_sub_title": "Hot Deal In Diamond",
+        "hero_content": "Casual line with short design in 100% suede Diamond",
+        "hero_btn_txt": "Check it Out!",
+        "hero_btn_url": "",
+        "hero_img": "shopify:\/\/shop_images\/woman-looking-through-black-shirts_23-2148302783.jpg"
+      }
     }
   },
   "order": [
@@ -201,6 +221,8 @@
     "37d81aec-4a3a-4f35-8428-a7fdfb3bbf53",
     "13eeeb71-940a-4354-a11b-e021834cfcb4",
     "25634f18-f38c-4504-a3fc-b386b79576ce",
-    "1cad9c99-380a-4e22-93ae-c667bb31b364"
+    "1cad9c99-380a-4e22-93ae-c667bb31b364",
+    "e2747cc7-3f19-4155-b7fb-5e5f11625881",
+    "d9af01bc-1a81-4c5a-9e2a-84793e03ef45"
   ]
 }
