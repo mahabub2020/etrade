@@ -272,8 +272,9 @@
         "excluded_products": [
 
         ],
-        "sort_by": "title",
-        "reverse_order": false,
+        "offset_product": 2,
+        "sort_by": "price",
+        "reverse_order": true,
         "product_layout": "3"
       }
     }
