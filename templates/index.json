@@ -28,10 +28,97 @@
         "reverse_order": false,
         "product_layout": "1"
       }
+    },
+    "37d81aec-4a3a-4f35-8428-a7fdfb3bbf53": {
+      "type": "section-testimonial",
+      "blocks": {
+        "template--20190269571387__37d81aec-4a3a-4f35-8428-a7fdfb3bbf53-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "857bec60-c30b-4c3e-9261-c65da518011e": {
+          "type": "review",
+          "settings": {
+            "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--20190269571387__37d81aec-4a3a-4f35-8428-a7fdfb3bbf53-review-1",
+        "857bec60-c30b-4c3e-9261-c65da518011e"
+      ],
+      "settings": {
+        "section_title": "Our Users Feedback",
+        "video_url": ""
+      }
+    },
+    "13eeeb71-940a-4354-a11b-e021834cfcb4": {
+      "type": "section-testimonial-carousel",
+      "blocks": {
+        "template--20190269571387__13eeeb71-940a-4354-a11b-e021834cfcb4-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "a8a4f7ea-8854-4026-a3fe-fc893235696d": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "552534b3-9454-43bc-8a77-fe24aff2136e": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "309a860f-b5d2-43b3-9d40-d94b70ab906a": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "80ba7803-cb55-43b5-af3c-ed89a0540705": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--20190269571387__13eeeb71-940a-4354-a11b-e021834cfcb4-review-1",
+        "a8a4f7ea-8854-4026-a3fe-fc893235696d",
+        "552534b3-9454-43bc-8a77-fe24aff2136e",
+        "309a860f-b5d2-43b3-9d40-d94b70ab906a",
+        "80ba7803-cb55-43b5-af3c-ed89a0540705"
+      ],
+      "settings": {
+        "section_title": "Our Users Feedback",
+        "section_sub_title": "Testimonials"
+      }
     }
   },
   "order": [
     "9cdf8066-38ba-4fe6-b720-1f6e1d7ac474",
-    "0aeaa16e-ca65-4198-97e2-383611c28c51"
+    "0aeaa16e-ca65-4198-97e2-383611c28c51",
+    "37d81aec-4a3a-4f35-8428-a7fdfb3bbf53",
+    "13eeeb71-940a-4354-a11b-e021834cfcb4"
   ]
 }
