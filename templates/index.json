@@ -108,6 +108,30 @@
             "author_name": "Wade Warren",
             "author_desg": "Head of Marketing"
           }
+        },
+        "84cbdbee-cfed-46db-b423-b740a30c6de8": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "827cbd67-797b-409f-8cc2-b27e4abcf9f4": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "bd701574-0957-4c5d-abd6-1d5f9c56c7b6": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
         }
       },
       "block_order": [
@@ -116,7 +140,10 @@
         "552534b3-9454-43bc-8a77-fe24aff2136e",
         "309a860f-b5d2-43b3-9d40-d94b70ab906a",
         "80ba7803-cb55-43b5-af3c-ed89a0540705",
-        "5b732d80-63dc-4603-9884-3631335e57c9"
+        "5b732d80-63dc-4603-9884-3631335e57c9",
+        "84cbdbee-cfed-46db-b423-b740a30c6de8",
+        "827cbd67-797b-409f-8cc2-b27e4abcf9f4",
+        "bd701574-0957-4c5d-abd6-1d5f9c56c7b6"
       ],
       "settings": {
         "section_title": "Our Users Feedback",
@@ -213,6 +240,16 @@
         "hero_btn_url": "",
         "hero_img": "shopify:\/\/shop_images\/woman-looking-through-black-shirts_23-2148302783.jpg"
       }
+    },
+    "a8cc6432-a734-4573-8446-f5698680ee47": {
+      "type": "section-hero",
+      "settings": {
+        "hero_title": "Exclusive Design Collection",
+        "hero_sub_title": "Hot Deal In Diamond",
+        "hero_content": "Casual line with short design in 100% suede Diamond",
+        "hero_btn_txt": "Check it Out!",
+        "hero_btn_url": ""
+      }
     }
   },
   "order": [
@@ -223,6 +260,7 @@
     "25634f18-f38c-4504-a3fc-b386b79576ce",
     "1cad9c99-380a-4e22-93ae-c667bb31b364",
     "e2747cc7-3f19-4155-b7fb-5e5f11625881",
-    "d9af01bc-1a81-4c5a-9e2a-84793e03ef45"
+    "d9af01bc-1a81-4c5a-9e2a-84793e03ef45",
+    "a8cc6432-a734-4573-8446-f5698680ee47"
   ]
 }
