@@ -167,7 +167,10 @@
           "settings": {
             "box_number": "1zx zx",
             "box_title": "zcvzvWho We Are",
-            "box_content": "Lorem ipsum dolor sit amet consectetur adipizvzxvsicing elit. Asperiores, saepe."
+            "box_content": "Lorem ipsum dolor sit amet consectetur adipizvzxvsicing elit. Asperiores, saepe.",
+            "features_number_color": "#dd1d1d",
+            "features_title_color": "#cf987e",
+            "features_content_color": "#dd1d1d"
           }
         },
         "template--20190269571387__fb90f602-5428-49b8-b243-243f92139155-about_img-1": {
@@ -203,7 +206,10 @@
           "settings": {
             "box_number": "1",
             "box_title": "Who We Are",
-            "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
+            "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
+            "features_number_color": "#C4C4C4",
+            "features_title_color": "#292930",
+            "features_content_color": "#777777"
           }
         },
         "655f7e4d-5183-4861-9e07-63cfc54e9e30": {
@@ -211,7 +217,10 @@
           "settings": {
             "box_number": "1",
             "box_title": "Who We Are",
-            "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
+            "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
+            "features_number_color": "#C4C4C4",
+            "features_title_color": "#292930",
+            "features_content_color": "#777777"
           }
         }
       },
@@ -227,9 +236,8 @@
       "settings": {
         "section_title": "About Us",
         "section_sub_title": "Who we are",
-        "section_title_color": "#dd1d1d",
-        "section_subtitle_color": "#dd1d1d",
-        "section_subtitle_colorsssss": "#ffffff"
+        "section_title_color": "#2d1717",
+        "section_subtitle_color": "#cf987e"
       }
     }
   },
