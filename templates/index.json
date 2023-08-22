@@ -239,6 +239,28 @@
         "section_title_color": "#2d1717",
         "section_subtitle_color": "#cf987e"
       }
+    },
+    "9cdf8066-38ba-4fe6-b720-1f6e1d7ac474": {
+      "type": "section-multicolumn-product-carousel",
+      "settings": {
+        "title": "Product Collection",
+        "product_collection": "",
+        "list_per_slider": 4,
+        "number_of_products_to_show": 8,
+        "product_layout": "1",
+        "col_lg": 2,
+        "col_md": 2,
+        "col_sm": 2
+      }
+    },
+    "6ee98add-0d70-4586-9635-77b7d688c24e": {
+      "type": "section-rightstretch-product-carousel",
+      "settings": {
+        "title": "Recently Viewed",
+        "product_collection": "womens",
+        "number_of_products_to_show": 8,
+        "product_layout": "1"
+      }
     }
   },
   "order": [
@@ -247,6 +269,8 @@
     "4cdd8db3-68a2-4413-a9dc-da16a312fbdc",
     "b45302bf-7b1d-4852-b350-537090c0443d",
     "d44281cc-c7e2-4a58-9526-b72b1d592c53",
-    "fb90f602-5428-49b8-b243-243f92139155"
+    "fb90f602-5428-49b8-b243-243f92139155",
+    "9cdf8066-38ba-4fe6-b720-1f6e1d7ac474",
+    "6ee98add-0d70-4586-9635-77b7d688c24e"
   ]
 }
