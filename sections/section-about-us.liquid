@@ -18,7 +18,7 @@
                 {% case block.type %}
                   {% when 'about_features' %}   
                     <div class="col-sm-6">
-                        <div class="about-features">
+                        <div class="about-features block-{{ block.id }}">
                           {% if block.settings.box_number != '' %}
                             <div class="spam sl-number">{{ block.settings.box_number | escape }}</div>
                           {% endif %}
@@ -26,7 +26,7 @@
                             <h4 class="title">{{ block.settings.box_title | escape }}</h4>
                           {% endif %}
                             {% if block.settings.box_content != '' %}
-                            <p>{{ block.settings.box_content | escape }}</p>
+                            <p class="content">{{ block.settings.box_content | escape }}</p>
                           {% endif %}
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                     {% for block in section.blocks %}  
                       {% case block.type %}
                         {% when 'about_img' %} 
-                            <div class="col-6">
+                            <div class="col-6 ">
                                 <div class="thumbnail thumbnail-1">
                                   <img src="{% if block.settings.box_img1 %}{{ block.settings.box_img1 | img_url: block.settings.img_size1 }}{% else %}http:\/\/via.placeholder.com\/{{  block.settings.img_size1 }}{% endif %}" alt="{{ section.settings.box_img1.alt }}"> 
                                    
@@ -69,6 +69,23 @@
 #section-{{ section.id }} .title-highlighter.highlighter-primary2 i {
     background: {{ section.settings.section_subtitle_color }};
 }
+
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'about_features' %}
+
+      .block-{{ block.id }}.about-features .sl-number{
+        color: {{ block.settings.features_number_color }};
+      }  
+      .block-{{ block.id }}.about-features .title{
+        color: {{ block.settings.features_title_color }};
+      }  
+      .block-{{ block.id }}.about-features .content{
+        color: {{ block.settings.features_content_color }};
+      } 
+
+    {% endcase %}
+  {% endfor %}
 
 {%- endstyle -%}
 
@@ -107,12 +124,6 @@
        "id": "section_subtitle_color",
        "label": "Section Title Color",
        "default": "#3577f0"
-    },
-    {
-       "type": "color",
-       "id": "section_subtitle_colorsssss",
-       "label": "Section Title Color",
-       "default": "#ffffff"
     }
   ],
 
@@ -139,6 +150,28 @@
           "id": "box_content",
           "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
           "label": "Content"
+        },
+        {
+          "type": "header",
+          "content": "Color"
+        },
+        {
+           "type": "color",
+           "id": "features_number_color",
+           "label": "Number",
+           "default": "#C4C4C4"
+        },
+        {
+           "type": "color",
+           "id": "features_title_color",
+           "label": "Title Color",
+           "default": "#292930"
+        },
+        {
+           "type": "color",
+           "id": "features_content_color",
+           "label": "Content Color",
+           "default": "#777777"
         }
       ]
     },
