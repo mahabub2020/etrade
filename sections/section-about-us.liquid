@@ -1,4 +1,4 @@
-<div class="axil-about-area about-style-3">
+<div id="#section-{{ section.id }}" class="axil-about-area about-style-3">
   <div class="container">
       <div class="row align-items-center">
           <div class="col-lg-7"> 
@@ -58,7 +58,17 @@
   </div>
 </div>
 
+{%- style -%}
 
+#section-{{ section.id }}.about-style-3 .section-title-wrapper .title {
+    color: {{ section.settings.sub_title_color }}!important;
+}
+#section-{{ section.id }} .title-highlighter.highlighter-primary2 {
+    color: {{ section.settings.sub_title_color }}!important;
+}
+
+
+{%- endstyle -%}
 
 {% schema %}
 {
