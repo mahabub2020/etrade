@@ -1,0 +1,90 @@
+ 
+  <div id="section-{{ section.id }}" class="axil-main-slider-area main-slider-style-7 bg_image--8">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-sm-8">
+                <div class="main-slider-content">
+                  {% if section.settings.hero_sub_title != blank %}
+                    <span class="subtitle"><i class="fas fa-fire"></i>{{ section.settings.hero_sub_title }}</span>
+                  {% endif %}
+                  {% if section.settings.hero_title != blank %}
+                    <h1 class="title">{{ section.settings.hero_title }}</h1>
+                  {% endif %}
+                  {% if section.settings.hero_content != blank %}
+                    <p>{{ section.settings.hero_content }}</p>
+                  {% endif %}
+
+                    {% if section.settings.hero_btn_txt != blank %}
+                      <div class="shop-btn"> 
+                      <a href="{{ section.settings.hero_btn_url }}" class="axil-btn btn-bg-primary">{{ section.settings.hero_btn_txt }}</a>
+                    </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Slider Area -->
+
+{%- style -%}
+
+#section-{{ section.id }} .bg_image--8  {
+  background-image: url({% if section.settings.hero_img %}{{ section.settings.hero_img | img_url: '1920x780' }}{% else %}http:\/\/via.placeholder.com\/1920x780{% endif %});
+    
+}
+ 
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Section Hero",
+
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "default": "Exclusive Design Collection",
+      "label": "Title"
+    }, 
+    {
+      "type": "text",
+      "id": "hero_sub_title",
+      "default": "Hot Deal In Diamond",
+      "label": "Sub Title"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_content",
+      "default": "Casual line with short design in 100% suede Diamond",
+      "label": "Content"
+    },
+    {
+      "type": "text",
+      "id": "hero_btn_txt",
+      "default": "Check it Out!",
+      "label": "Button Text"
+    }, 
+    {
+      "type": "url",
+      "id": "hero_btn_url",
+      "label": "URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_img",
+      "label": "Banner Image"
+    }
+   
+  ],
+  "presets": [
+    {
+      "name": "Section Hero"
+    }
+  ]
+}
+{% endschema %} 
