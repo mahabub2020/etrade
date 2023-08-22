@@ -100,6 +100,14 @@
             "author_name": "Wade Warren",
             "author_desg": "Head of Marketing"
           }
+        },
+        "5b732d80-63dc-4603-9884-3631335e57c9": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
         }
       },
       "block_order": [
@@ -107,11 +115,83 @@
         "a8a4f7ea-8854-4026-a3fe-fc893235696d",
         "552534b3-9454-43bc-8a77-fe24aff2136e",
         "309a860f-b5d2-43b3-9d40-d94b70ab906a",
-        "80ba7803-cb55-43b5-af3c-ed89a0540705"
+        "80ba7803-cb55-43b5-af3c-ed89a0540705",
+        "5b732d80-63dc-4603-9884-3631335e57c9"
       ],
       "settings": {
         "section_title": "Our Users Feedback",
         "section_sub_title": "Testimonials"
+      }
+    },
+    "25634f18-f38c-4504-a3fc-b386b79576ce": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--20190269571387__25634f18-f38c-4504-a3fc-b386b79576ce-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "",
+            "wscontent": ""
+          }
+        },
+        "7610288b-54bf-441c-81df-3717366406a6": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "",
+            "wscontent": ""
+          }
+        },
+        "23308b70-9f91-4786-8424-ff076b99f558": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "",
+            "wscontent": ""
+          }
+        },
+        "7c8ff4e9-bfab-41ae-b9b3-4c292d3f0130": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "",
+            "wscontent": ""
+          }
+        },
+        "ba0d2245-b2e0-4b1e-bb94-284098689190": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<h3>sfvsfsfsfsfsfsf<\/h3>",
+            "wscontent": "afsdfsfsfdsdfsf",
+            "ws_img": "shopify:\/\/shop_images\/service9.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--20190269571387__25634f18-f38c-4504-a3fc-b386b79576ce-whyus-1",
+        "7610288b-54bf-441c-81df-3717366406a6",
+        "23308b70-9f91-4786-8424-ff076b99f558",
+        "7c8ff4e9-bfab-41ae-b9b3-4c292d3f0130",
+        "ba0d2245-b2e0-4b1e-bb94-284098689190"
+      ],
+      "settings": {
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout3",
+        "col_xl": "5",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
+    },
+    "1cad9c99-380a-4e22-93ae-c667bb31b364": {
+      "type": "section-multicolumn-product-carousel",
+      "settings": {
+        "title": "Product Collection",
+        "product_collection": "womens",
+        "list_per_slider": 4,
+        "number_of_products_to_show": 8,
+        "product_layout": "1",
+        "col_lg": 2,
+        "col_md": 2,
+        "col_sm": 2
       }
     }
   },
@@ -119,6 +199,8 @@
     "9cdf8066-38ba-4fe6-b720-1f6e1d7ac474",
     "0aeaa16e-ca65-4198-97e2-383611c28c51",
     "37d81aec-4a3a-4f35-8428-a7fdfb3bbf53",
-    "13eeeb71-940a-4354-a11b-e021834cfcb4"
+    "13eeeb71-940a-4354-a11b-e021834cfcb4",
+    "25634f18-f38c-4504-a3fc-b386b79576ce",
+    "1cad9c99-380a-4e22-93ae-c667bb31b364"
   ]
 }
