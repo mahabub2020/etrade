@@ -60,7 +60,7 @@
 
 {%- style -%}
 
-#section-{{ section.id }} .section-title-wrapper .title {
+#section-{{ section.id }}  {
     color: {{ section.settings.section_title_color }}!important;
 }
 #section-{{ section.id }} .title-highlighter.highlighter-primary2 {
@@ -104,6 +104,12 @@
        "id": "section_subtitle_color",
        "label": "Section Title Color",
        "default": "#3577f0"
+    },
+    {
+       "type": "color",
+       "id": "section_subtitle_colorsssss",
+       "label": "Section Title Color",
+       "default": "#ffffff"
     }
   ],
 
@@ -216,3 +222,15 @@
   ]
 }
 {% endschema %}
+
+
+{%- style -%}
+
+#section-{{ section.id }}  {
+    color: {{ section.settings.section_title_color }}!important;
+}
+#section-{{ section.id }} .title-highlighter.highlighter-primary2 {
+    color: {{ section.settings.section_subtitle_color }}!important;
+}
+
+{%- endstyle -%}
