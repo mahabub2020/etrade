@@ -264,13 +264,17 @@
     },
     "7da8125b-a49c-4f53-8819-c80fb6c3871b": {
       "type": "section-product-carousel",
+      "custom_css": [
+
+      ],
       "settings": {
         "title": "New Arrivalscc",
         "sub_title": "cccRecently Viewed",
         "product_collection": "womens",
         "number_of_products_to_show": 8,
         "excluded_products": [
-
+          "copy-of-malrez®-spectrum™-6376",
+          "malrez®-spectrum™-6375"
         ],
         "offset_product": 2,
         "sort_by": "price",
