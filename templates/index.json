@@ -13,9 +13,25 @@
         "col_md": 2,
         "col_sm": 2
       }
+    },
+    "0aeaa16e-ca65-4198-97e2-383611c28c51": {
+      "type": "section-product-carousel",
+      "settings": {
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "product_collection": "womens",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1"
+      }
     }
   },
   "order": [
-    "9cdf8066-38ba-4fe6-b720-1f6e1d7ac474"
+    "9cdf8066-38ba-4fe6-b720-1f6e1d7ac474",
+    "0aeaa16e-ca65-4198-97e2-383611c28c51"
   ]
 }
