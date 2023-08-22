@@ -1,0 +1,149 @@
+ 
+<div class="axil-new-arrivals-product-area bg-color-white axil-section-gap pb--50 pb_sm--30">
+  <div class="container">
+      <div class="section-title-wrapper">
+          <span class="title-highlighter highlighter-primary"><i class="far fa-shopping-basket"></i> {{ section.settings.sub_title }} </span>
+          <h2 class="title">{{ section.settings.title }} </h2>
+      </div>
+      <div class="new-arrivals-product-activation slick-layout-wrapper--30 axil-slick-arrow  arrow-top-slide">
+          
+            {% if section.settings.reverse_order == true %}
+              {% assign collection = section.settings.product_collection.products | sort: section.settings.sort_by | reverse %}
+            {% else %}
+              {% assign collection = section.settings.product_collection.products | sort: section.settings.sort_by %}
+            {% endif %}
+            {% for product in collection limit: section.settings.number_of_products_to_show offset: section.settings.offset_product %}
+              {% assign ex = 0 %}
+              {% for ex_product in section.settings.excluded_products %}
+                {% if product.id == ex_product.id %}
+                  {% assign ex = 1 %}
+                {% endif %}
+              {% endfor %}
+              {% if ex == 0 %}
+                <div class="slick-single-layout">
+                  {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
+                  {% capture include_snippet %}
+                    {% include layout %}
+                  {% endcapture %}
+                  {{ include_snippet }}
+                </div>
+              {% endif %}
+            {% endfor %} 
+
+        </div> 
+        <!-- End .slick-single-layout -->
+    </div>
+</div>
+</div>
+<!-- End New Arrivals Product Area  -->
+
+
+
+{% schema %}
+{
+  "name": "Product Carousel",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "New Arrivals",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "default": "Recently Viewed",
+      "label": "Sub Title"
+    },
+    {
+      "type": "collection",
+      "id": "product_collection", 
+      "label": "Collection"
+    },
+    
+    {
+      "type": "range",
+      "id": "number_of_products_to_show",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 8,
+      "label": "Number of products to show"
+    }, 
+    {
+      "type": "product_list",
+      "id": "excluded_products",
+      "label": "Product To Exclude"
+    }, 
+    {
+      "type": "number",
+      "id": "offset_product",
+      "label": "Offset"
+    }, 
+    {
+      "type": "select",
+      "id": "sort_by",
+      "label": "Sort By",
+      "options": [
+        {
+          "label": "Name",
+          "value": "title"
+        }, {
+          "label": "Price",
+          "value": "price"
+        }, {
+          "label": "Date",
+          "value": "published_at"
+        }
+      ],
+      "default": "title"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "reverse_order",
+      "label": "Reverse Order"
+    },
+    {
+      "type": "select",
+      "id": "product_layout",
+      "label": "Product Collection Layout",
+      "options": [
+        {
+          "label": "Layout 1",
+          "value": "1"
+        },
+        {
+          "label": "Layout 2",
+          "value": "2"
+        },
+        {
+          "label": "Layout 3",
+          "value": "3"
+        },
+        {
+          "label": "Layout 4",
+          "value": "4"
+        }, {
+          "label": "Layout 5",
+          "value": "5"
+        }, {
+          "label": "Layout 6",
+          "value": "6"
+        }, {
+          "label": "Layout 7",
+          "value": "7"
+        }, {
+          "label": "Layout 8",
+          "value": "8"
+        }
+      ]
+    }
+    
+  ],
+  "presets": [
+    {
+      "name": "Product Carousel"
+    }
+  ]
+}
+{% endschema %}
