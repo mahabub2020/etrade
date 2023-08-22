@@ -275,7 +275,7 @@
         "offset_product": 2,
         "sort_by": "price",
         "reverse_order": true,
-        "product_layout": "3"
+        "product_layout": "4"
       }
     }
   },
