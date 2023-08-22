@@ -48,7 +48,7 @@
 					slidesToScroll: 4,
 					arrows: true,
 					dots: false,
-					rtl: rtltrue,
+					
 					prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-long-arrow-left"></i></button>',
 					nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-long-arrow-right"></i></button>',
 					responsive: [{
