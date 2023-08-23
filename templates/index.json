@@ -90,6 +90,16 @@
             "cta_url": "",
             "reverse_order": false
           }
+        },
+        "035f9813-1f73-49c1-bd4b-a440aa745726": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "",
+            "reverse_order": false
+          }
         }
       },
       "block_order": [
@@ -99,7 +109,8 @@
         "aa5a50ff-ac5a-41b1-ab6f-52a656e54463",
         "ef70e098-fc36-450b-b369-65f58ab52f69",
         "0f66c4f0-3e4f-4996-ae94-849450cf231e",
-        "5bb2f1a8-1730-4261-a993-027a22f019e4"
+        "5bb2f1a8-1730-4261-a993-027a22f019e4",
+        "035f9813-1f73-49c1-bd4b-a440aa745726"
       ],
       "settings": {
         "ctalayout": "cta2"
@@ -107,6 +118,41 @@
     },
     "cdddd5bc-a57f-4e94-8d6e-a4c436b2456f": {
       "type": "product-collection",
+      "blocks": {
+        "127efc62-33fe-48b3-8cc1-9f6b3da5c125": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 95,
+            "section_padding_bottom": 40,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        },
+        "abe3a37e-3d7f-43c2-9e7c-37ce14ceb2c8": {
+          "type": "section_margin",
+          "settings": {
+            "section_margin_top": 85,
+            "section_margin_bottom": 0,
+            "section_margin_top_md": 0,
+            "section_margin_bottom_md": 0,
+            "section_margin_top_xs": 0,
+            "section_margin_bottom_xs": 0
+          }
+        },
+        "88c82c89-a4be-4d4d-a00f-654c56132b34": {
+          "type": "section_background",
+          "settings": {
+            "section_bg_color": "#542f2f"
+          }
+        }
+      },
+      "block_order": [
+        "127efc62-33fe-48b3-8cc1-9f6b3da5c125",
+        "abe3a37e-3d7f-43c2-9e7c-37ce14ceb2c8",
+        "88c82c89-a4be-4d4d-a00f-654c56132b34"
+      ],
       "settings": {
         "title": "Product Collection",
         "btn-label": "",
@@ -122,11 +168,27 @@
         "sort_by": "title",
         "reverse_order": false
       }
+    },
+    "486b5313-1c99-4ff9-a435-2b7b5c2f55f0": {
+      "type": "section-product-carousel",
+      "settings": {
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "product_collection": "womens",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1"
+      }
     }
   },
   "order": [
     "d9af01bc-1a81-4c5a-9e2a-84793e03ef45",
     "0b565f19-51b0-433c-9e4d-20a8f3aa8595",
-    "cdddd5bc-a57f-4e94-8d6e-a4c436b2456f"
+    "cdddd5bc-a57f-4e94-8d6e-a4c436b2456f",
+    "486b5313-1c99-4ff9-a435-2b7b5c2f55f0"
   ]
 }
