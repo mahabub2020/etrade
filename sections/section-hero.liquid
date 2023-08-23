@@ -30,11 +30,14 @@
 {%- style -%}
 
 #section-{{ section.id }}.bg_image--8  {
-  background-image: url({% if section.settings.hero_img %}{{ section.settings.hero_img | img_url: '1920x780' }}{% else %}http:\/\/via.placeholder.com\/1920x780{% endif %});
-    
+  background-image: url({% if section.settings.hero_img %}{{ section.settings.hero_img | img_url: '1920x780' }}{% else %}http:\/\/via.placeholder.com\/1920x780{% endif %});  
 }
  
+
+ 
 {%- endstyle -%}
+
+
 
 {% schema %}
 {
@@ -78,6 +81,29 @@
       "type": "image_picker",
       "id": "hero_img",
       "label": "Banner Image"
+    },
+
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+       "type": "color",
+       "id": "hero_title_color",
+       "label": "Title Color",
+       "default": "#292930"
+    },
+    {
+       "type": "color",
+       "id": "hero_subtitle_color",
+       "label": "Section Title Color",
+       "default": "#3577f0"
+    },
+    {
+       "type": "color",
+       "id": "hero_content_color",
+       "label": "Section Title Color",
+       "default": "#3577f0"
     }
    
   ],
