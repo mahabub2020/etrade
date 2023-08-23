@@ -45,10 +45,12 @@
 #section-{{ section.id }} a.axil-btn {
     background-color: {{ section.settings.hero_btn_bg_color }};
     color: {{ section.settings.hero_btn_color }};
-    
 }
 #section-{{ section.id }} a.axil-btn.btn-bg-white:before {
     background-color:  {{ section.settings.hero_btn_bg_color }};
+}
+#section-{{ section.id }}  a.axil-btn i {
+  color: {{ section.settings.hero_btn_color }};
 }
 {%- endstyle -%}
 
