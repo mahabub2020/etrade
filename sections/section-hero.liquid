@@ -1,26 +1,23 @@
- 
-  <div id="section-{{ section.id }}" class="axil-main-slider-area main-slider-style-7 bg_image--8">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-sm-8">
-                <div class="main-slider-content">
-                  {% if section.settings.hero_sub_title != blank %}
-                    <span class="subtitle"><i class="fas fa-fire"></i>{{ section.settings.hero_sub_title }}</span>
-                  {% endif %}
-                  {% if section.settings.hero_title != blank %}
-                    <h1 class="title">{{ section.settings.hero_title }}</h1>
-                  {% endif %}
-                  {% if section.settings.hero_content != blank %}
-                    <p>{{ section.settings.hero_content }}</p>
-                  {% endif %}
-
-                    {% if section.settings.hero_btn_txt != blank %}
-                      <div class="shop-btn"> 
-                      <a href="{{ section.settings.hero_btn_url }}" class="axil-btn btn-bg-primary">{{ section.settings.hero_btn_txt }}</a>
+ <div id="section-{{ section.id }}" class="axil-main-slider-area main-slider-style-7 bg_image--8">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-sm-8">
+              <div class="main-slider-content">
+                {% if section.settings.hero_sub_title != blank %}
+                  <span class="subtitle"><i class="fas fa-fire"></i>{{ section.settings.hero_sub_title }}</span>
+                {% endif %}
+                {% if section.settings.hero_title != blank %}
+                  <h1 class="title">{{ section.settings.hero_title }}</h1>
+                {% endif %}
+                {% if section.settings.hero_content != blank %}
+                  <p>{{ section.settings.hero_content }}</p>
+                {% endif %} 
+                {% if section.settings.hero_btn_txt != blank %}
+                    <div class="shop-btn">  
+                      <a class="axil-btn btn-bg-white" href="{{ section.settings.hero_btn_url }}" target="_self" rel="nofollow"><i class="fal fa-shopping-cart"></i>{{ section.settings.hero_btn_txt }}</a>
                     </div>
-                    {% endif %}
-
-                </div>
+                {% endif %} 
+              </div>
             </div>
         </div>
     </div>
@@ -32,11 +29,20 @@
 #section-{{ section.id }}.bg_image--8  {
   background-image: url({% if section.settings.hero_img %}{{ section.settings.hero_img | img_url: '1920x780' }}{% else %}http:\/\/via.placeholder.com\/1920x780{% endif %});  
 }
- 
+ #section-{{ section.id }} .main-slider-content .subtitle  {
+  color: {{ section.settings.hero_subtitle_color }};
+}
+#section-{{ section.id }}  .main-slider-content .title {
+  color: {{ section.settings.hero_title_color }};
+}
 
- 
+#section-{{ section.id }}  .main-slider-style-7 .main-slider-content p {
+  color: {{ section.settings.hero_content_color }};
+}
+#section-{{ section.id }} .main-slider-content .subtitle i {
+    background: {{ section.settings.hero_subtitle_color }};
+}
 {%- endstyle -%}
-
 
 
 {% schema %}
@@ -97,13 +103,25 @@
        "type": "color",
        "id": "hero_subtitle_color",
        "label": "Section Title Color",
-       "default": "#3577f0"
+       "default": "#8c71db"
     },
     {
        "type": "color",
        "id": "hero_content_color",
        "label": "Section Title Color",
-       "default": "#3577f0"
+       "default": "#777777"
+    },
+    {
+       "type": "color",
+       "id": "hero_btn_color",
+       "label": "Button Color",
+       "default": "#292930"
+    },
+    {
+       "type": "color",
+       "id": "hero_btn_bg_color",
+       "label": "Background Color",
+       "default": "#ffffff"
     }
    
   ],
