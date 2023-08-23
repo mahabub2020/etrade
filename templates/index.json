@@ -1,5 +1,6 @@
 {
   "sections": {
+<<<<<<< HEAD
     "17405413-6b41-4e23-b0f4-3aaf1e79ffb7": {
       "type": "product-collection",
       "settings": {
@@ -10,17 +11,208 @@
 
         ],
         "number_of_products_to_show": 5,
+=======
+    "d9af01bc-1a81-4c5a-9e2a-84793e03ef45": {
+      "type": "section-hero",
+      "settings": {
+        "hero_title": "Exclusive Design Collection",
+        "hero_sub_title": "Hot Deal In Diamond",
+        "hero_content": "Casual line with short design in 100% suede Diamond",
+        "hero_btn_txt": "Check it Out!",
+        "hero_btn_url": "",
+        "hero_img": "shopify:\/\/shop_images\/woman-looking-through-black-shirts_23-2148302783.jpg",
+        "hero_title_color": "#f5f5f5",
+        "hero_subtitle_color": "#ffffff",
+        "hero_subtitle_icon_color": "#f5f5f5",
+        "hero_subtitle_icon_bg_color": "#8c71db",
+        "hero_content_color": "#dd1d1d",
+        "hero_btn_color": "#1773b0",
+        "hero_btn_bg_color": "#dd1d1d"
+      }
+    },
+    "0b565f19-51b0-433c-9e4d-20a8f3aa8595": {
+      "type": "section-delivery",
+      "blocks": {
+        "template--20190269571387__0b565f19-51b0-433c-9e4d-20a8f3aa8595-cta-1": {
+          "type": "cta",
+          "settings": {
+            "badge": "Scscsd acads",
+            "badge_title": "<p>Rich sound, <br\/> for less.<\/p>",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "shopify:\/\/products\/malrez®-spectrum™-6375",
+            "cta_img": "shopify:\/\/shop_images\/poster-08.png",
+            "reverse_order": true
+          }
+        },
+        "67a58a92-78d5-470d-9241-b1b619833d1f": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "",
+            "reverse_order": false
+          }
+        },
+        "2e81029f-e944-437d-ad72-67c104cefee1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 105,
+            "section_padding_bottom": 70,
+            "section_padding_top_md": 45,
+            "section_padding_bottom_md": 60,
+            "section_padding_top_xs": 60,
+            "section_padding_bottom_xs": 25
+          }
+        },
+        "aa5a50ff-ac5a-41b1-ab6f-52a656e54463": {
+          "type": "section_margin",
+          "settings": {
+            "section_margin_top": 70,
+            "section_margin_bottom": 0,
+            "section_margin_top_md": 0,
+            "section_margin_bottom_md": 30,
+            "section_margin_top_xs": 40,
+            "section_margin_bottom_xs": 50
+          }
+        },
+        "ef70e098-fc36-450b-b369-65f58ab52f69": {
+          "type": "section_background",
+          "settings": {
+            "section_bg_image": "shopify:\/\/shop_images\/d9bf63ce7049903d00cc516d39b91639.jpg",
+            "section_bg_color": "#b93232"
+          }
+        },
+        "0f66c4f0-3e4f-4996-ae94-849450cf231e": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "",
+            "reverse_order": false
+          }
+        },
+        "5bb2f1a8-1730-4261-a993-027a22f019e4": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "",
+            "reverse_order": false
+          }
+        },
+        "035f9813-1f73-49c1-bd4b-a440aa745726": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "",
+            "reverse_order": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20190269571387__0b565f19-51b0-433c-9e4d-20a8f3aa8595-cta-1",
+        "67a58a92-78d5-470d-9241-b1b619833d1f",
+        "2e81029f-e944-437d-ad72-67c104cefee1",
+        "aa5a50ff-ac5a-41b1-ab6f-52a656e54463",
+        "ef70e098-fc36-450b-b369-65f58ab52f69",
+        "0f66c4f0-3e4f-4996-ae94-849450cf231e",
+        "5bb2f1a8-1730-4261-a993-027a22f019e4",
+        "035f9813-1f73-49c1-bd4b-a440aa745726"
+      ],
+      "settings": {
+        "ctalayout": "cta2"
+      }
+    },
+    "cdddd5bc-a57f-4e94-8d6e-a4c436b2456f": {
+      "type": "product-collection",
+      "blocks": {
+        "127efc62-33fe-48b3-8cc1-9f6b3da5c125": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 95,
+            "section_padding_bottom": 40,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        },
+        "abe3a37e-3d7f-43c2-9e7c-37ce14ceb2c8": {
+          "type": "section_margin",
+          "settings": {
+            "section_margin_top": 85,
+            "section_margin_bottom": 0,
+            "section_margin_top_md": 0,
+            "section_margin_bottom_md": 0,
+            "section_margin_top_xs": 0,
+            "section_margin_bottom_xs": 0
+          }
+        },
+        "88c82c89-a4be-4d4d-a00f-654c56132b34": {
+          "type": "section_background",
+          "settings": {
+            "section_bg_color": "#542f2f"
+          }
+        }
+      },
+      "block_order": [
+        "127efc62-33fe-48b3-8cc1-9f6b3da5c125",
+        "abe3a37e-3d7f-43c2-9e7c-37ce14ceb2c8",
+        "88c82c89-a4be-4d4d-a00f-654c56132b34"
+      ],
+      "settings": {
+        "title": "Product Collection",
+        "btn-label": "",
+        "product_collection": "womens",
+        "collection_list": [
+          "womens"
+        ],
+        "number_of_products_to_show": 4,
+>>>>>>> 77c569d02c76d82ac0d2021818313c85c58072ed
         "product_layout": "1",
         "excluded_products": [
 
         ],
         "sort_by": "title",
+<<<<<<< HEAD
         "reverse_order": false,
         "hover_img": true
+=======
+        "reverse_order": false
+      }
+    },
+    "486b5313-1c99-4ff9-a435-2b7b5c2f55f0": {
+      "type": "section-product-carousel",
+      "settings": {
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "is_countdown": false,
+        "end_time": "2023-09-12",
+        "product_collection": "womens",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1"
+>>>>>>> 77c569d02c76d82ac0d2021818313c85c58072ed
       }
     }
   },
   "order": [
+<<<<<<< HEAD
     "17405413-6b41-4e23-b0f4-3aaf1e79ffb7"
+=======
+    "d9af01bc-1a81-4c5a-9e2a-84793e03ef45",
+    "0b565f19-51b0-433c-9e4d-20a8f3aa8595",
+    "cdddd5bc-a57f-4e94-8d6e-a4c436b2456f",
+    "486b5313-1c99-4ff9-a435-2b7b5c2f55f0"
+>>>>>>> 77c569d02c76d82ac0d2021818313c85c58072ed
   ]
 }

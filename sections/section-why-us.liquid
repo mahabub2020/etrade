@@ -1,0 +1,328 @@
+ 
+{% if section.settings.wulayout == 'layout1' %}
+ <div  id="section-{{ section.id }}" class="axil-why-choose-area axil-section-gap pb--50 pb_sm--30">
+  <div class="container"> 
+    <div class="section-title-wrapper section-title-center"> 
+      {% if section.settings.section_sub_title != '' %}  
+      <span class="title-highlighter highlighter-secondary"> <i class="fal fa-thumbs-up"></i>{{ section.settings.section_sub_title | escape }}</span>
+      {% endif %} 
+      {% if section.settings.section_title != '' %}  
+        <div class="heading-title">
+          <h2 class="title">{{ section.settings.section_title | escape }}</h2>
+        </div>  
+      {% endif %}  
+      </div>
+        <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }} row--20">     
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'whyus' %}   
+              <div class="col">
+                  <div class="service-box">
+                      <div class="icon">
+                        <img src="{% if block.settings.ws_img %}{{ block.settings.ws_img | img_url: '60x60' }}{% else %}http:\/\/via.placeholder.com\/60x60{% endif %}" alt="{{ block.settings.ws_img.alt }}"> 
+                      </div> 
+                      {% if block.settings.wstitle != '' %}  
+                        <div class="heading-title">
+                          <h6 class="title">{{ block.settings.wstitle }}</h6>
+                        </div>  
+                      {% endif %}  
+                  </div>
+
+              </div>
+            {% endcase %}
+          {% endfor %}
+      </div>
+  </div>
+</div>
+{% elsif section.settings.wulayout == 'layout2' %}
+<div id="section-{{ section.id }}" class="service-area">
+  <div class="container"> 
+        <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }} row--20">     
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'whyus' %}   
+            <div class="col">
+              <div class="service-box">
+                  <div class="icon">
+                    <img decoding="async" loading="lazy" src="{% if block.settings.ws_img %}{{ block.settings.ws_img | img_url: '60x60' }}{% else %}http:\/\/via.placeholder.com\/60x60{% endif %}" alt="{{ block.settings.ws_img.alt }}"> 
+                   </div>
+                  <h6 class="title">{{ block.settings.wstitle }}</h6> 
+              </div>
+            </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+  </div>
+</div>
+{% else %}
+<div id="section-{{ section.id }}" class="how-to-sell-area axil-section-gap">
+  <div class="container">
+      <div class="product-area pb--50">
+          <div class="section-title-wrapper section-title-center">
+            {% if section.settings.section_sub_title != '' %}  
+            <span class="title-highlighter highlighter-secondary"> <i class="fal fa-thumbs-up"></i>{{ section.settings.section_sub_title | escape }}</span>
+            {% endif %} 
+            {% if section.settings.section_title != '' %}  
+              <div class="heading-title">
+                <h2 class="title">{{ section.settings.section_title | escape }}</h2>
+              </div>  
+            {% endif %}  
+          </div> 
+            <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }} row--20">     
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'whyus' %}   
+                <div class="col">
+                  <div class="service-box how-to-sell">
+                      <div class="icon">
+                        <img decoding="async" loading="lazy" src="{% if block.settings.ws_img %}{{ block.settings.ws_img | img_url: '60x60' }}{% else %}http:\/\/via.placeholder.com\/60x60{% endif %}" alt="{{ block.settings.ws_img.alt }}"> 
+                       </div>
+                      <h6 class="title">{{ block.settings.wstitle }}</h6>
+                      <p>{{ block.settings.wscontent }}</p>
+                  </div>
+                </div>
+              {% endcase %}
+            {% endfor %}
+          </div>
+      </div>
+  </div>
+</div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Section Why Us",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Why Us"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "default": "Why People Choose Us",
+      "label": "Section Title"
+    }, 
+    {
+      "type": "text",
+      "id": "section_sub_title",
+      "default": "Why Us",
+      "label": "Sub Title"
+    },
+    {
+      "type": "select",
+      "id": "wulayout",
+      "default": "layout1",
+      "label": "CTA Layout",
+      "options": [
+        {
+          "label": "Layout 1",
+          "value": "layout1"
+        },
+        {
+          "label": "Layout 2",
+          "value": "layout2"
+        },
+        {
+          "label": "Layout 3",
+          "value": "layout3"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "col_xl",
+      "label": "Desktops: > 1199px",
+      "default": "5",
+      "options": [
+        {
+          "label": "1 Col",
+          "value": "1"
+        },
+        {
+          "label": "2 Col",
+          "value": "2"
+        },
+        {
+          "label": "3 Col",
+          "value": "3"
+        },
+        {
+          "label": "4 Col",
+          "value": "4"
+        }, 
+        {
+          "label": "5 Col",
+          "value": "5"
+        },
+        {
+          "label": "6 Col",
+          "value": "6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "col_lg",
+      "default": "4",
+      "label": "Desktops: > 991px",
+      "options": [
+        {
+          "label": "1 Col",
+          "value": "1"
+        },
+        {
+          "label": "2 Col",
+          "value": "2"
+        },
+        {
+          "label": "3 Col",
+          "value": "3"
+        },
+        {
+          "label": "4 Col",
+          "value": "4"
+        }, 
+        {
+          "label": "5 Col",
+          "value": "5"
+        },
+        {
+          "label": "6 Col",
+          "value": "6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "col_md",
+      "default": "3",
+      "label": "Desktops: > 767px",
+      "options": [
+        {
+          "label": "1 Col",
+          "value": "1"
+        },
+        {
+          "label": "2 Col",
+          "value": "2"
+        },
+        {
+          "label": "3 Col",
+          "value": "3"
+        },
+        {
+          "label": "4 Col",
+          "value": "4"
+        }, 
+        {
+          "label": "5 Col",
+          "value": "5"
+        },
+        {
+          "label": "6 Col",
+          "value": "6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "col_sm",
+      "default": "2",
+      "label": "Phones: >575px",
+      "options": [
+        {
+          "label": "1 Col",
+          "value": "1"
+        },
+        {
+          "label": "2 Col",
+          "value": "2"
+        },
+        {
+          "label": "3 Col",
+          "value": "3"
+        },
+        {
+          "label": "4 Col",
+          "value": "4"
+        }, 
+        {
+          "label": "5 Col",
+          "value": "5"
+        },
+        {
+          "label": "6 Col",
+          "value": "6"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "col_mobile",
+      "default": "1",
+      "label": "Small Phones: <576px",
+      "options": [
+        {
+          "label": "1 Col",
+          "value": "1"
+        },
+        {
+          "label": "2 Col",
+          "value": "2"
+        },
+        {
+          "label": "3 Col",
+          "value": "3"
+        },
+        {
+          "label": "4 Col",
+          "value": "4"
+        }, 
+        {
+          "label": "5 Col",
+          "value": "5"
+        },
+        {
+          "label": "6 Col",
+          "value": "6"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "whyus",
+      "name": "Why Us Block",
+      "settings": [ 
+        {
+          "type": "richtext",
+          "id": "wstitle", 
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "wscontent", 
+          "label": "Content"
+        },
+        {
+          "type": "image_picker",
+          "id": "ws_img",
+          "label": "Image",
+          "info": "Recommended Size: 60px X 60px"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Section Why Us",
+      "blocks": [
+        {
+          "type": "whyus"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 

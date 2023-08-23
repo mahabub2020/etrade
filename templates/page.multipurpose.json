@@ -109,7 +109,9 @@
         "product_layout": "1",
         "excluded_products": [
 
-        ]
+        ],
+        "sort_by": "title",
+        "reverse_order": false
       }
     },
     "857ac431-475d-46e9-b24a-9d2b752c9eae": {
@@ -460,6 +462,40 @@
           "womens"
         ]
       }
+    },
+    "a518ebc3-bb20-4899-a22d-1f93578396c7": {
+      "type": "section-delivery",
+      "blocks": {
+        "template--20230999834939__a518ebc3-bb20-4899-a22d-1f93578396c7-cta-1": {
+          "type": "cta",
+          "settings": {
+            "badge": "Collections",
+            "badge_title": "Rich sound,<br> for less.",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "shopify:\/\/products\/kalrez®-spectrum™-6376",
+            "cta_img": "shopify:\/\/shop_images\/poster-01.png",
+            "reverse_order": true
+          }
+        },
+        "c506554f-3a9c-4367-b2ac-036fc68df177": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "Order Pickup",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "",
+            "cta_img": "shopify:\/\/shop_images\/poster-02.png",
+            "reverse_order": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20230999834939__a518ebc3-bb20-4899-a22d-1f93578396c7-cta-1",
+        "c506554f-3a9c-4367-b2ac-036fc68df177"
+      ],
+      "settings": {
+        "ctalayout": "cta2"
+      }
     }
   },
   "order": [
@@ -475,6 +511,7 @@
     "cc358753-68db-477d-ba77-5cea2aa2ece4",
     "1eb621b1-05b1-4036-a688-c8c1d60cc96c",
     "6e0f6712-348c-4534-9e79-125ff410990e",
-    "18745e10-f961-4068-a449-df1812f7e932"
+    "18745e10-f961-4068-a449-df1812f7e932",
+    "a518ebc3-bb20-4899-a22d-1f93578396c7"
   ]
 }

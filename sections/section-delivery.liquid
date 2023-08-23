@@ -1,4 +1,6 @@
-<div class="delivery-poster-area">
+
+{% if section.settings.ctalayout == 'cta1' %}
+<div id="section-{{ section.id }}" class="delivery-poster-area">
   <div class="container">
       <div class="row">
         {% for block in section.blocks %}
@@ -8,7 +10,7 @@
                 <div class="delivery-poster pickup">
                     <div class="content">  
                       {% if block.settings.badge != '' %}   
-                        <span class="badge">{{ block.settings.badge | escape }}</span>
+                        <span class="badge">{{ block.settings.badge }}</span>
                       {% endif %}   
                       {% if block.settings.badge_title != '' %}   
                         <h4 class="title">{{ block.settings.badge_title | escape }}</h4> 
@@ -28,6 +30,124 @@
       </div>
   </div>
 </div>
+{% else %}
+
+<div id="section-{{ section.id }}" class="axil-poster">
+  <div class="container">
+      <div class="row">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'cta' %}   
+            <div class="col-lg-6 mb--30">
+
+              {% if block.settings.reverse_order == true %}
+
+                <div class="single-poster">
+                    <a href="{{ block.settings.cta_url | escape }}">
+                      <img src="{% if block.settings.cta_img %}{{ block.settings.cta_img | img_url: '630x246' }}{% else %}http:\/\/via.placeholder.com\/630x246{% endif %}" alt="{{ block.settings.cta_img.alt }}"> 
+                        <div class="poster-content">
+                            <div class="inner">
+                              {% if block.settings.badge_title != '' %}   
+                              <h3 class="title">{{ block.settings.badge_title }}</h3> 
+                            {% endif %}   
+                            {% if block.settings.badge != '' %}   
+                              <span class="sub-title">{{ block.settings.badge | escape }} <i class="fal fa-long-arrow-right"></i></span>
+                            {% endif %}    
+                            </div>
+                        </div>
+                        <!-- End .poster-content -->
+                    </a>
+                </div>
+                {% else %} 
+                  <div class="single-poster">
+                      <a href="{{ block.settings.cta_url | escape }}">
+                        <img src="{% if block.settings.cta_img %}{{ block.settings.cta_img | img_url: '630x246' }}{% else %}http:\/\/via.placeholder.com\/630x246{% endif %}" alt="{{ block.settings.cta_img.alt }}"> 
+
+                          <div class="poster-content content-left">
+                              <div class="inner">
+                               
+                              {% if block.settings.badge != '' %}   
+                                  <span class="sub-title">{{ block.settings.badge | escape }}</span>
+                              {% endif %}  
+                                 
+                            {% if block.settings.badge_title != '' %}   
+                              <h3 class="title">{{ block.settings.badge_title }}</h3> 
+                            {% endif %}   
+
+                              </div>
+                          </div>
+                          <!-- End .poster-content -->
+                      </a>
+                  </div> 
+          
+              {% endif %}
+ 
+              <!-- End .single-poster -->
+          </div>
+        {% endcase %}
+      {% endfor %} 
+      </div>
+  </div>
+</div>
+{% endif %}
+
+
+
+{%- style -%}
+
+
+  #section-{{ section.id }}{
+    {%- for block in section.blocks -%}
+    {%- case block.type -%}
+    {%- when 'section_margin' -%}
+    margin-top: {{ block.settings.section_margin_top }}px;
+    margin-bottom: {{ block.settings.section_margin_bottom }}px;
+    {%- when 'section_padding' -%}
+    padding-top: {{ block.settings.section_padding_top }}px;
+    padding-bottom: {{ block.settings.section_padding_bottom }}px;
+    {%- when 'section_background' -%}    
+    background: {{ block.settings.section_bg_color }} 
+      {%- if block.settings.section_bg_image -%}url("{{ block.settings.section_bg_image | img_url: 'master' }}"){%- endif -%} no-repeat scroll center center / cover;
+    {%- endcase -%}
+    {%- endfor -%}
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {% case block.type %}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_md }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_md }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_md }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_md }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+
+  @media (max-width: 767px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {%- case block.type -%}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_xs }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_xs }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_xs }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_xs }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+ 
+
+{%- endstyle -%}
+
+
+
+
 
 {% schema %}
 {
@@ -36,7 +156,28 @@
     {
       "type": "header",
       "content": "Section Delivery"
+    },
+    {
+      "type": "select",
+      "id": "ctalayout",
+      "default": "cta1",
+      "label": "CTA Layout",
+      "options": [
+        {
+          "label": "Layout 1",
+          "value": "cta1"
+        },
+        {
+          "label": "Layout 2",
+          "value": "cta2"
+        },
+        {
+          "label": "Layout 3",
+          "value": "cta3"
+        }
+      ]
     }
+
   ],
 
   "blocks": [
@@ -48,13 +189,13 @@
           "type": "text",
           "id": "badge",
           "default": "Always free",
-          "label": "Dadge"
+          "label": "Dadge/Sub Title"
         },
         {
-          "type": "text",
+          "type": "richtext",
           "id": "badge_title",
-          "default": "Order Pickup",
-          "label": "Dadge Title"
+          
+          "label": "CTA Title"
         },
         {
           "type": "textarea",
@@ -63,14 +204,201 @@
           "label": "Content"
         },
         {
+          "type": "url",
+          "id": "cta_url",
+          "label": "URL"
+        },
+        {
           "type": "image_picker",
           "id": "cta_img",
           "label": "Image",
           "info": "Recommended Size: 203px X 192px"
+        },
+        {
+          "type": "checkbox",
+          "id": "reverse_order",
+          "label": "Reverse Order"
         }
       ]
-    }
-  ],
+    },
+
+    {
+         "type": "section_padding",
+         "name": "Section Padding",
+     "limit": 1,
+         "settings": [
+           {
+       "type": "header",
+       "content": "Large/Desktop Device"
+     },
+     {
+       "type": "range",
+       "id": "section_padding_top",
+       "min": 0,
+       "max": 150,
+       "step": 5,
+       "label": "Padding Top",
+       "unit": "px",
+       "default": 0
+     },
+     {
+       "type": "range",
+       "id": "section_padding_bottom",
+       "min": 0,
+       "max": 150,
+       "step": 5,
+       "label": "Padding Bottom",
+       "unit": "px",
+       "default": 100
+     },
+     {
+       "type": "header",
+       "content": "Tablet Device"
+     },
+     {
+       "type": "range",
+       "id": "section_padding_top_md",
+       "min": 0,
+       "max": 150,
+       "step": 5,
+       "label": "Padding Top",
+       "unit": "px",
+       "default": 0
+     },
+     {
+       "type": "range",
+       "id": "section_padding_bottom_md",
+       "min": 0,
+       "max": 150,
+       "step": 5,
+       "label": "Padding Bottom",
+       "unit": "px",
+       "default": 80
+     },
+     {
+       "type": "header",
+       "content": "Mobile Device"
+     },
+     {
+       "type": "range",
+       "id": "section_padding_top_xs",
+       "min": 0,
+       "max": 150,
+       "step": 5,
+       "label": "Padding Top",
+       "unit": "px",
+       "default": 0
+     },
+     {
+       "type": "range",
+       "id": "section_padding_bottom_xs",
+       "min": 0,
+       "max": 150,
+       "step": 5,
+       "label": "Padding Bottom",
+       "unit": "px",
+       "default": 60
+     }
+         ]
+      },
+    {
+         "type": "section_margin",
+         "name": "Section Margin",
+     "limit": 1,
+         "settings": [
+           {
+       "type": "header",
+       "content": "Large/Desktop Device"
+     },
+     {
+       "type": "range",
+       "id": "section_margin_top",
+       "min": 0,
+       "max": 150,
+       "step": 5,
+       "label": "Margin Top",
+       "unit": "px",
+       "default": 0
+     },
+     {
+       "type": "range",
+       "id": "section_margin_bottom",
+       "min": 0,
+       "max": 150,
+       "step": 5,
+       "label": "Margin Bottom",
+       "unit": "px",
+       "default": 0
+     },
+     {
+       "type": "header",
+       "content": "Tablet Device"
+     },
+     {
+       "type": "range",
+       "id": "section_margin_top_md",
+       "min": 0,
+       "max": 150,
+       "step": 5,
+       "label": "Margin Top",
+       "unit": "px",
+       "default": 0
+     },
+     {
+       "type": "range",
+       "id": "section_margin_bottom_md",
+       "min": 0,
+       "max": 150,
+       "step": 5,
+       "label": "Margin Bottom",
+       "unit": "px",
+       "default": 0
+     },
+     {
+       "type": "header",
+       "content": "Mobile Device"
+     },
+     {
+       "type": "range",
+       "id": "section_margin_top_xs",
+       "min": 0,
+       "max": 150,
+       "step": 5,
+       "label": "Margin Top",
+       "unit": "px",
+       "default": 0
+     },
+     {
+       "type": "range",
+       "id": "section_margin_bottom_xs",
+       "min": 0,
+       "max": 150,
+       "step": 5,
+       "label": "Margin Bottom",
+       "unit": "px",
+       "default": 0
+     }
+         ]
+      },
+    {
+         "type": "section_background",
+         "name": "Section Background",
+     "limit": 1,
+         "settings": [
+           {
+       "type": "image_picker",
+       "id": "section_bg_image",
+       "label": "BG Image"
+     },
+     {
+       "type": "color",
+       "id": "section_bg_color",
+       "label": "BG Color",
+       "default": "#ffffff"
+     }
+         ]
+      }
+ ],
   "presets": [
     {
       "name": "Section CTA",
@@ -83,3 +411,9 @@
   ]
 }
 {% endschema %} 
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

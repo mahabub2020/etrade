@@ -13,6 +13,8 @@
             readyActivation();
             magnificPopupActivation();
             testimonialActivation();
+            countdown();
+            new_arrivals_product_activation();
 
         });
 
@@ -28,6 +30,98 @@
         //     testimonialActivation();
         // });
     
+
+
+		function new_arrivals_product_activation() {
+
+			var SlickCarousel = $('.axil-new-arrivals-activation');
+			if (SlickCarousel.length) {
+				try {
+					if (SlickCarousel.find('.new-arrivals-product-activation').hasClass('slick-initialized')) {
+						SlickCarousel.find('.new-arrivals-product-activation').slick('unslick');
+					}
+				} catch (e) { }
+
+				SlickCarousel.find('.new-arrivals-product-activation').slick({
+					infinite: true,
+					slidesToShow: 4,
+					slidesToScroll: 4,
+					arrows: true,
+					dots: false,
+					
+					prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-long-arrow-left"></i></button>',
+					nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-long-arrow-right"></i></button>',
+					responsive: [{
+						breakpoint: 1199,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 3
+						}
+					},
+					{
+						breakpoint: 991,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 3
+						}
+					},
+					{
+						breakpoint: 767,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 2
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+					]
+
+				});
+			}
+
+		}
+
+
+
+
+        function countdown() {
+			if (typeof $.fn.countdown == 'function') {
+				try {
+					var day = 'Day',
+						hour = 'Hour',
+						minute = 'Minute',
+						second = 'Second' ;
+
+					$('.axilcoutdown').each(function () {
+						var $CountdownSelector = $(this).find('.countdown');
+						var eventCountdownTime = $CountdownSelector.data('time');
+						$CountdownSelector.countdown(eventCountdownTime).on('update.countdown', function (event) {
+							$(this).html(event.strftime('' + '<div class="countdown-section"><div><div class="countdown-number">%D</div><div class="countdown-unit">' + day + '</div></div></div>' + '<div class="countdown-section"><div><div class="countdown-number">%H</div><div class="countdown-unit">' + hour + '</div></div></div>' + '<div class="countdown-section"><div><div class="countdown-number">%M</div><div class="countdown-unit">' + minute + '</div></div></div>' + '<div class="countdown-section"><div><div class="countdown-number">%S</div><div class="countdown-unit">' + second + '</div></div></div>'));
+						}).on('finish.countdown', function (event) {
+							$(this).html(event.strftime(''));
+						});
+					});
+					$('.axilcoutdown2').each(function () {
+						var $CountdownSelector = $(this).find('.countdown');
+						var eventCountdownTime = $CountdownSelector.data('time');
+						$CountdownSelector.countdown(eventCountdownTime).on('update.countdown', function (event) {
+							$(this).html(event.strftime('' + '<div class="countdown-section"><div><div class="countdown-number">%D</div><div class="countdown-unit">' + day + '</div></div></div>' + '<div class="countdown-section"><div><div class="countdown-number">%H</div><div class="countdown-unit">' + hour + '</div></div></div>' + '<div class="countdown-section"><div><div class="countdown-number">%M</div><div class="countdown-unit">' + minute + '</div></div></div>' + '<div class="countdown-section"><div><div class="countdown-number">%S</div><div class="countdown-unit">' + second + '</div></div></div>'));
+						}).on('finish.countdown', function (event) {
+							$(this).html(event.strftime(''));
+						});
+					});
+
+				} catch (err) {
+					console.log('Countdown : ' + err.message);
+				}
+			}
+		}
+
 
          function slider_slick_activation_two() {
 
@@ -47,7 +141,7 @@
 					arrows: false,
 					dots: true,
 					fade: true,
-					rtl: rtltrue,
+					 
 					adaptiveHeight: true,
 					cssEase: 'linear',
 					speed: 400

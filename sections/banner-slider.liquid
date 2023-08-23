@@ -1,4 +1,4 @@
-{% if section.settings.banner_style == 'banner_style_1' %}
+
 <div id="section-{{ section.id }}" class="axil-main-slider-area main-slider-style-1">
   <div class="container">
       <div class="row align-items-center">
@@ -67,130 +67,12 @@
       <li class="shape-2"><img src="{{ "shape-2.png" | asset_url }}" alt="Shape"></li>
   </ul>
 </div>
-{% elsif section.settings.banner_style == 'banner_style_2' %}  <!-- Start Slider Area -->
-<div id="section-{{ section.id }}" class="axil-main-slider-area main-slider-style-2">
-  <div class="container">
-    <div class="slider-offset-left">
-        <div class="row row--20">
-            <div class="col-lg-9">
-                <div class="slider-box-wrap">
-                    <div class="slider-activation-one axil-slick-dots"> 
-                    {% for block in section.blocks %}  
-                    {% case block.type %}
-                      {% when 'banner' %}
-                        <div class="single-slide slick-slide">
-                            <div class="main-slider-content"> 
-                              {% if block.settings.subtitle != '' %}
-                                  <span class="subtitle"><i class="fas fa-watch"></i> {{ block.settings.subtitle }}</span>
-                              {% endif %} 
-                                {% if block.settings.banner_title != '' %}
-                                  <h1 class="title">{{ block.settings.banner_title }}</h1>
-                                {% endif %} 
-                                {% if block.settings.banner_btn_url %}  
-                                  <div class="shop-btn">
-                                    <a href="{{ block.settings.banner_btn_url }}" class="axil-btn">{{ block.settings.banner_btn_txt }} <i class="fal fa-long-arrow-right"></i></a>
-                                  </div>   
-                                {% endif %}   
-                            </div>
-                            <div class="main-slider-thumb">
-                              <img src="{% if block.settings.banner_img %}{{ block.settings.banner_img | img_url: '240x292' }}{% else %}http:\/\/via.placeholder.com\/240x292{% endif %}" alt="{{ block.settings.banner_img.alt }}"> 
-                            </div>
-                        </div>
-                      {% endcase %} 
-                    {% endfor %}
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="slider-product-box">
-                    <div class="product-thumb">
-                        <a href="single-product.html">
-                            <img src="assets/images/product/product-41.png" alt="Product">
-                        </a>
-                    </div>
-                    <h6 class="title"><a href="single-product.html">Yantiti Leather Bags</a></h6>
-                    <span class="price">$29.99</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<!-- End Slider Area -->
-{% else %}
-  <!-- Start Slider Area -->
-  <div class="axil-main-slider-area main-slider-style-5">
-    <div class="container">
-        <div class="slider-box-wrap">
-            <div class="slider-activation-two axil-slick-dots">
-              {% for block in section.blocks %}  
-              {% case block.type %}
-                {% when 'banner' %}
-                  
-                <div class="single-slide slick-slide">
-                    <div class="main-slider-content">
-                        {% if block.settings.subtitle != '' %}
-                          <span class="subtitle"><i class="fas fa-fire"></i> {{ block.settings.subtitle }}</span>
-                        {% endif %} 
-                        {% if block.settings.banner_title != '' %}
-                          <h1 class="title">{{ block.settings.banner_title }}</h1>
-                        {% endif %}  
-                        {% if block.settings.banner_btn_url %}  
-                          <div class="shop-btn">
-                            <a href="{{ block.settings.banner_btn_url }}" class="axil-btn btn-bg-primary"><i class="far fa-shopping-cart"></i> {{ block.settings.banner_btn_txt }}</a>
-                          </div>   
-                        {% endif %}   
-                    </div>
-
-                    <div class="main-slider-thumb">
-                      <img src="{% if block.settings.banner_img %}{{ block.settings.banner_img | img_url: '530x460' }}{% else %}http:\/\/via.placeholder.com\/530x460{% endif %}" alt="{{ block.settings.banner_img.alt }}"> 
-                    </div>
-
-                </div>
-              {% endcase %} 
-            {% endfor %}
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Slider Area -->
-
-{% endif %}
 
 
 {% schema %}
 {
     "name": "Banner Slider",
-    "settings": [
-          {
-            "type": "header",
-            "content": "Banner Layout"
-           
-          },
-          {
-              "type": "radio",
-              "id": "banner_style",
-              "label": "Banner Layout",
-              "options":[
-                {
-                    "value":"banner_style_1",
-                    "label": "Style 1"
-                },
-                {
-                    "value":"banner_style_2",
-                    "label": "Style 2"
-                },
-                {
-                    "value":"banner_style_3",
-                    "label": "Style 3"
-                }
-               
-              ],
-             "default": "banner_style_1"
-          }
-    ],
-
-
+    
     "blocks": [
       {
         "type": "banner",

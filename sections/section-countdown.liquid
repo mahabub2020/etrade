@@ -1,0 +1,100 @@
+ 
+  <!-- Poster Countdown Area  -->
+  <div class="axil-poster-countdown axilcoutdown">
+    <div class="container">
+        <div class="poster-countdown-wrap bg-lighter">
+            <div class="row">
+                <div class="col-xl-5 col-lg-6">
+                    <div class="poster-countdown-content">
+                        <div class="section-title-wrapper">
+                            <span class="title-highlighter highlighter-secondary"> <i class="fal fa-headphones-alt"></i>{{ section.settings.cd_sub_title }}</span>
+                            <h2 class="title">{{ section.settings.cd_title }}</h2>
+                        </div> 
+                        <div data-time="{{ section.settings.end_time }}" class="poster-countdown countdown mb--40"></div>
+                        {% if section.settings.cd_btn_txt != blank %}
+                          <a href="{{ section.settings.cd_btn_url }}" class="axil-btn btn-bg-primary">{{ section.settings.cd_btn_txt }}</a>
+                        {% endif %}
+                      </div>
+
+                </div>
+                <div class="col-xl-7 col-lg-6">
+                    <div class="poster-countdown-thumbnail">
+                      <img src="{% if section.settings.cd_img %}{{ section.settings.cd_img | img_url: '661x502' }}{% else %}http:\/\/via.placeholder.com\/661x502{% endif %}" alt="{{ section.settings.cd_img.alt }}"> 
+                      {% if section.settings.is_animations == true %}
+                        <div class="music-singnal">
+                            <div class="item-circle circle-1"></div>
+                            <div class="item-circle circle-2"></div>
+                            <div class="item-circle circle-3"></div>
+                            <div class="item-circle circle-4"></div>
+                            <div class="item-circle circle-5"></div>
+                        </div>
+                      {% endif %}
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Poster Countdown Area  -->
+
+
+{% schema %}
+{
+  "name": "Section CountDown",
+
+  "settings": [
+    {
+      "type": "header",
+      "content": "CountDown"
+    },
+    {
+      "type": "text",
+      "id": "cd_title",
+      "default": "Enhance Your Music Experience",
+      "label": "Title"
+    }, 
+    {
+      "type": "text",
+      "id": "cd_sub_title",
+      "default": "Don't Miss!!",
+      "label": "Sub Title"
+    },
+    {
+      "type": "text",
+      "id": "end_time",
+      "label": "End date and time",
+      "default": "2024-05-22",
+      "info": "Format: yyyy-mm-dd"
+    },
+    {
+      "type": "text",
+      "id": "cd_btn_txt",
+      "default": "Check it Out!",
+      "label": "Button Text"
+    }, 
+    {
+      "type": "url",
+      "id": "cd_btn_url",
+      "label": "URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "cd_img",
+      "label": "Box Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_animations",
+      "label": "Disable animations"
+    }
+   
+  ],
+  "presets": [
+    {
+      "name": "Section CountDown"
+    }
+  ]
+}
+{% endschema %} 

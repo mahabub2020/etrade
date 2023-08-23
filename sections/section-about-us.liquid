@@ -1,0 +1,260 @@
+<div id="section-{{ section.id }}" class="axil-about-area about-style-3">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-lg-7"> 
+            <div class="section-title-wrapper"> 
+
+              {% if section.settings.section_sub_title != '' %}
+                <span class="title-highlighter highlighter-primary2"><i class="fal fa-star"></i>{{ section.settings.section_sub_title | escape }}</span>
+              {% endif %}
+
+              {% if section.settings.section_title != '' %}
+                <h2 class="title">{{ section.settings.section_title | escape }}</h2>
+              {% endif %}
+               
+            </div>
+              <div class="row">
+                {% for block in section.blocks %}  
+                {% case block.type %}
+                  {% when 'about_features' %}   
+                    <div class="col-sm-6">
+                        <div class="about-features block-{{ block.id }}">
+                          {% if block.settings.box_number != '' %}
+                            <div class="spam sl-number">{{ block.settings.box_number | escape }}</div>
+                          {% endif %}
+                            {% if block.settings.box_title != '' %}
+                            <h4 class="title">{{ block.settings.box_title | escape }}</h4>
+                          {% endif %}
+                            {% if block.settings.box_content != '' %}
+                            <p class="content">{{ block.settings.box_content | escape }}</p>
+                          {% endif %}
+                        </div>
+                    </div>
+                  {% endcase %} 
+                {% endfor %} 
+              </div>
+          </div>
+          <div class="col-lg-5">
+              <div class="about-gallery">
+                  <div class="row row--10">
+                    {% for block in section.blocks %}  
+                      {% case block.type %}
+                        {% when 'about_img' %} 
+                            <div class="col-6 ">
+                                <div class="thumbnail thumbnail-1">
+                                  <img src="{% if block.settings.box_img1 %}{{ block.settings.box_img1 | img_url: block.settings.img_size1 }}{% else %}http:\/\/via.placeholder.com\/{{  block.settings.img_size1 }}{% endif %}" alt="{{ section.settings.box_img1.alt }}"> 
+                                   
+                                </div>
+                                <div class="thumbnail thumbnail-2">
+                                  <img src="{% if block.settings.box_img2 %}{{ block.settings.box_img2 | img_url: block.settings.img_size2 }}{% else %}http:\/\/via.placeholder.com\/{{  block.settings.img_size2 }}{% endif %}" alt="{{ section.settings.box_img2.alt }}"> 
+                                </div>
+                            </div>
+                          {% endcase %} 
+                        {% endfor %}  
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+{%- style -%}
+
+#section-{{ section.id }} .section-title-wrapper .title  {
+    color: {{ section.settings.section_title_color }};
+}
+#section-{{ section.id }} .title-highlighter.highlighter-primary2 {
+    color: {{ section.settings.section_subtitle_color }};
+}
+#section-{{ section.id }} .title-highlighter.highlighter-primary2 i {
+    background: {{ section.settings.section_subtitle_color }};
+}
+
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'about_features' %}
+
+      .block-{{ block.id }}.about-features .sl-number{
+        color: {{ block.settings.features_number_color }};
+      }  
+      .block-{{ block.id }}.about-features .title{
+        color: {{ block.settings.features_title_color }};
+      }  
+      .block-{{ block.id }}.about-features .content{
+        color: {{ block.settings.features_content_color }};
+      } 
+
+    {% endcase %}
+  {% endfor %}
+
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Section About Us",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Title"
+    }, 
+    {
+      "type": "text",
+      "id": "section_title",
+      "default": "About Us",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "section_sub_title",
+      "label": "Sub Title",
+      "default": "Who we are"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+       "type": "color",
+       "id": "section_title_color",
+       "label": "Title Color",
+       "default": "#292930"
+    },
+    {
+       "type": "color",
+       "id": "section_subtitle_color",
+       "label": "Section Title Color",
+       "default": "#3577f0"
+    }
+  ],
+
+  
+  "blocks": [
+    {
+      "type": "about_features",
+      "name": "About Features",
+      "settings": [
+        {
+          "type": "text",
+          "id": "box_number",
+          "default": "1",
+          "label": "Number Text"
+        },
+        {
+          "type": "text",
+          "id": "box_title",
+          "default": "Who We Are",
+          "label": "Box Title"
+        },
+        {
+          "type": "textarea",
+          "id": "box_content",
+          "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
+          "label": "Content"
+        },
+        {
+          "type": "header",
+          "content": "Color"
+        },
+        {
+           "type": "color",
+           "id": "features_number_color",
+           "label": "Number",
+           "default": "#C4C4C4"
+        },
+        {
+           "type": "color",
+           "id": "features_title_color",
+           "label": "Title Color",
+           "default": "#292930"
+        },
+        {
+           "type": "color",
+           "id": "features_content_color",
+           "label": "Content Color",
+           "default": "#777777"
+        }
+      ]
+    },
+    {
+      "type": "about_img",
+      "name": "About Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "box_img1",
+          "label": "Box Image 1"
+        },
+        {
+          "type": "select",
+          "id": "img_size1",
+          "label": "Image Size 1",
+          "options": [
+            {
+              "value": "250x238",
+              "label": "Width:250 - Height:238"
+            },
+            {
+              "value": "250x362",
+              "label": "Width:250 - Height:362"
+            },
+            {
+              "value": "250x336",
+              "label": "Width:250 - Height:336"
+            },
+            {
+              "value": "250x214",
+              "label": "Width:250 - Height:214"
+            }
+          ],
+          "default": "250x238"
+        },
+        {
+          "type": "image_picker",
+          "id": "box_img2",
+          "label": "Box Image 2"
+        },
+        {
+          "type": "select",
+          "id": "img_size2",
+          "label": "Image Size 2",
+          "options": [
+            {
+              "value": "250x238",
+              "label": "Width:250 - Height:238"
+            },
+            {
+              "value": "250x362",
+              "label": "Width:250 - Height:362"
+            },
+            {
+              "value": "250x336",
+              "label": "Width:250 - Height:336"
+            },
+            {
+              "value": "250x214",
+              "label": "Width:250 - Height:214"
+            }
+          ],
+          "default": "250x238"
+        }
+        
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Section About Us",
+     
+      "blocks": [
+        {
+          "type": "about_features"
+        },
+        {
+          "type": "about_img"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
