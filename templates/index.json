@@ -11,13 +11,49 @@
         "hero_img": "shopify:\/\/shop_images\/woman-looking-through-black-shirts_23-2148302783.jpg",
         "hero_title_color": "#f5f5f5",
         "hero_subtitle_color": "#ffffff",
+        "hero_subtitle_icon_color": "#f5f5f5",
+        "hero_subtitle_icon_bg_color": "#8c71db",
         "hero_content_color": "#dd1d1d",
         "hero_btn_color": "#1773b0",
         "hero_btn_bg_color": "#dd1d1d"
       }
+    },
+    "0b565f19-51b0-433c-9e4d-20a8f3aa8595": {
+      "type": "section-delivery",
+      "blocks": {
+        "template--20190269571387__0b565f19-51b0-433c-9e4d-20a8f3aa8595-cta-1": {
+          "type": "cta",
+          "settings": {
+            "badge": "Scscsd acads",
+            "badge_title": "<p>Rich sound, <br\/> for less.<\/p>",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "shopify:\/\/products\/malrez®-spectrum™-6375",
+            "cta_img": "shopify:\/\/shop_images\/poster-08.png",
+            "reverse_order": true
+          }
+        },
+        "67a58a92-78d5-470d-9241-b1b619833d1f": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "",
+            "reverse_order": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20190269571387__0b565f19-51b0-433c-9e4d-20a8f3aa8595-cta-1",
+        "67a58a92-78d5-470d-9241-b1b619833d1f"
+      ],
+      "settings": {
+        "ctalayout": "cta2"
+      }
     }
   },
   "order": [
-    "d9af01bc-1a81-4c5a-9e2a-84793e03ef45"
+    "d9af01bc-1a81-4c5a-9e2a-84793e03ef45",
+    "0b565f19-51b0-433c-9e4d-20a8f3aa8595"
   ]
 }
