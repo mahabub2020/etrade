@@ -1,14 +1,24 @@
 <div id="section-{{ section.id }}" class="axil-new-arrivals-product-area axil-new-arrivals-activation bg-color-white axil-section-gap pb--50 pb_sm--30">
   <div class="container">
 
-    <div class="d-md-flex align-items-end flash-sale-section axilcoutdown2">
+
+    {% if section.settings.is_countdown == true %}
+      {% assign is_coutdown_start = '<div class="d-md-flex align-items-end flash-sale-section axilcoutdown2">' %}
+      {% assign is_coutdown_end = '</div>' %}
+    {% else %}
+      {% assign is_coutdown_start = '' %}
+      {% assign is_coutdown_end = '' %}
+    {% endif %}
+
+      {{ is_coutdown_start }}
         <div class="section-title-wrapper">
             <span class="title-highlighter highlighter-primary"><i class="far fa-shopping-basket"></i> {{ section.settings.sub_title }} </span>
             <h2 class="title">{{ section.settings.title }} </h2>
         </div>
-        
-        <div data-time="{{ section.settings.end_time }}" class="sale-countdown countdown"></div>
-      </div>
+          {% if section.settings.is_countdown == true %}
+              <div data-time="{{ section.settings.end_time }}" class="sale-countdown countdown"></div>
+          {% endif %}
+          {{ is_coutdown_end }}
 
       <div class="new-arrivals-product-activation slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide">
           

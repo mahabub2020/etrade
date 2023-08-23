@@ -91,10 +91,7 @@
 </div>
 {% endif %}
 
-
-
 {%- style -%}
-
 
   #section-{{ section.id }}{
     {%- for block in section.blocks -%}
@@ -111,7 +108,7 @@
     {%- endcase -%}
     {%- endfor -%}
   }
-  
+
   @media (min-width: 768px) and (max-width: 991px) {
     #section-{{ section.id }}{
       {%- for block in section.blocks -%}
@@ -142,12 +139,7 @@
     }
   }
  
-
 {%- endstyle -%}
-
-
-
-
 
 {% schema %}
 {
