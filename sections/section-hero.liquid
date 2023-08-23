@@ -47,6 +47,9 @@
     color: {{ section.settings.hero_btn_color }};
     
 }
+#section-{{ section.id }} a.axil-btn.btn-bg-white:before {
+    background-color:  {{ section.settings.hero_btn_bg_color }};
+}
 {%- endstyle -%}
 
 
@@ -101,19 +104,19 @@
     {
        "type": "color",
        "id": "hero_title_color",
-       "label": "Title Color",
+       "label": "Title",
        "default": "#292930"
     },
     {
        "type": "color",
        "id": "hero_subtitle_color",
-       "label": "Section Title Color",
+       "label": "Sub Title",
        "default": "#8c71db"
     },
     {
        "type": "color",
        "id": "hero_content_color",
-       "label": "Section Title Color",
+       "label": "Content Color",
        "default": "#777777"
     },
     {
