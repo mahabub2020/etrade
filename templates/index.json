@@ -174,7 +174,7 @@
       "settings": {
         "title": "New Arrivals",
         "sub_title": "Recently Viewed",
-        "is_countdown": false,
+        "is_countdown": true,
         "end_time": "2023-09-12",
         "product_collection": "womens",
         "number_of_products_to_show": 8,
