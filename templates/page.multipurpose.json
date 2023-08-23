@@ -472,9 +472,7 @@
             "badge": "Collections",
             "badge_title": "Rich sound,<br> for less.",
             "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
-            "cta_url": "shopify:\/\/products\/kalrez®-spectrum™-6376",
-            "cta_img": "shopify:\/\/shop_images\/poster-01.png",
-            "reverse_order": true
+            "cta_img": "shopify:\/\/shop_images\/poster-01.png"
           }
         },
         "c506554f-3a9c-4367-b2ac-036fc68df177": {
@@ -483,9 +481,7 @@
             "badge": "Always free",
             "badge_title": "Order Pickup",
             "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
-            "cta_url": "",
-            "cta_img": "shopify:\/\/shop_images\/poster-02.png",
-            "reverse_order": false
+            "cta_img": "shopify:\/\/shop_images\/poster-02.png"
           }
         }
       },
@@ -494,7 +490,6 @@
         "c506554f-3a9c-4367-b2ac-036fc68df177"
       ],
       "settings": {
-        "ctalayout": "cta2"
       }
     }
   },
