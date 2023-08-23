@@ -106,7 +106,15 @@
 							$(this).html(event.strftime(''));
 						});
 					});
-					
+					$('.axilcoutdown2').each(function () {
+						var $CountdownSelector = $(this).find('.countdown');
+						var eventCountdownTime = $CountdownSelector.data('time');
+						$CountdownSelector.countdown(eventCountdownTime).on('update.countdown', function (event) {
+							$(this).html(event.strftime('' + '<div class="countdown-section"><div><div class="countdown-number">%D</div><div class="countdown-unit">' + day + '</div></div></div>' + '<div class="countdown-section"><div><div class="countdown-number">%H</div><div class="countdown-unit">' + hour + '</div></div></div>' + '<div class="countdown-section"><div><div class="countdown-number">%M</div><div class="countdown-unit">' + minute + '</div></div></div>' + '<div class="countdown-section"><div><div class="countdown-number">%S</div><div class="countdown-unit">' + second + '</div></div></div>'));
+						}).on('finish.countdown', function (event) {
+							$(this).html(event.strftime(''));
+						});
+					});
 
 				} catch (err) {
 					console.log('Countdown : ' + err.message);

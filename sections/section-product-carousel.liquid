@@ -1,12 +1,14 @@
 <div id="section-{{ section.id }}" class="axil-new-arrivals-product-area axil-new-arrivals-activation bg-color-white axil-section-gap pb--50 pb_sm--30">
   <div class="container">
+
     <div class="d-md-flex align-items-end flash-sale-section axilcoutdown2">
-      <div class="section-title-wrapper">
-          <span class="title-highlighter highlighter-primary"><i class="far fa-shopping-basket"></i> {{ section.settings.sub_title }} </span>
-          <h2 class="title">{{ section.settings.title }} </h2>
+        <div class="section-title-wrapper">
+            <span class="title-highlighter highlighter-primary"><i class="far fa-shopping-basket"></i> {{ section.settings.sub_title }} </span>
+            <h2 class="title">{{ section.settings.title }} </h2>
+        </div>
+        
+        <div data-time="{{ section.settings.end_time }}" class="sale-countdown countdown"></div>
       </div>
-      <div class="sale-countdown countdown" data-time="">ssssssss</div>
-    </div>
 
       <div class="new-arrivals-product-activation slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide">
           
@@ -57,6 +59,18 @@
       "id": "sub_title",
       "default": "Recently Viewed",
       "label": "Sub Title"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_countdown",
+      "label": "Disable Countdown"
+    },
+    {
+      "type": "text",
+      "id": "end_time",
+      "label": "End date and time",
+      "default": "2024-05-22",
+      "info": "Format: yyyy-mm-dd"
     },
     {
       "type": "collection",
