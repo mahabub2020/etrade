@@ -52,6 +52,11 @@
 #section-{{ section.id }}  a.axil-btn i {
   color: {{ section.settings.hero_btn_color }};
 }
+#section-{{ section.id }}.axil-main-slider-area .main-slider-content .subtitle i {
+
+    background-color: {{ section.settings.hero_btn_color }};
+    color: {{ section.settings.hero_subtitle_icon_bg_color }};
+}
 {%- endstyle -%}
 
 
@@ -113,6 +118,18 @@
        "type": "color",
        "id": "hero_subtitle_color",
        "label": "Sub Title",
+       "default": "#8c71db"
+    },
+    {
+       "type": "color",
+       "id": "hero_subtitle_icon_color",
+       "label": "Sub Icon Title",
+       "default": "#8c71db"
+    },
+    {
+       "type": "color",
+       "id": "hero_subtitle_icon_bg_color",
+       "label": "Sub Icon Background",
        "default": "#8c71db"
     },
     {
