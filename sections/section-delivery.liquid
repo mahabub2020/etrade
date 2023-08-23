@@ -111,6 +111,7 @@
     {%- endcase -%}
     {%- endfor -%}
   }
+  
   @media (min-width: 768px) and (max-width: 991px) {
     #section-{{ section.id }}{
       {%- for block in section.blocks -%}
@@ -125,6 +126,7 @@
       {%- endfor -%}
     }
   }
+
   @media (max-width: 767px) {
     #section-{{ section.id }}{
       {%- for block in section.blocks -%}
