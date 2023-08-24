@@ -26,9 +26,9 @@
         "template--20190269571387__6496b74a-424e-412a-b993-fbb11de18a61-section_padding-1": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 0,
-            "section_padding_bottom": 100,
-            "section_padding_top_md": 0,
+            "section_padding_top": 75,
+            "section_padding_bottom": 145,
+            "section_padding_top_md": 40,
             "section_padding_bottom_md": 80,
             "section_padding_top_xs": 0,
             "section_padding_bottom_xs": 60
@@ -52,7 +52,7 @@
         "blog_title_color": "#cf987e",
         "blog_title_hover_color": "#cf987e",
         "blog_description_color": "#8a8a8a",
-        "dot_border_color": "#DFDFDF",
+        "dot_border_color": "#dfdfdf",
         "dot_border_active_color": "#cf987e",
         "dot_active_color": "#cf987e"
       }
