@@ -15,9 +15,11 @@
             <span class="title-highlighter highlighter-primary"><i class="far fa-shopping-basket"></i> {{ section.settings.sub_title }} </span>
             <h2 class="title">{{ section.settings.title }} </h2>
         </div>
+
           {% if section.settings.is_countdown == true %}
               <div data-time="{{ section.settings.end_time }}" class="sale-countdown countdown"></div>
           {% endif %}
+          
           {{ is_coutdown_end }}
 
       <div class="new-arrivals-product-activation slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide">

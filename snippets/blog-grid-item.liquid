@@ -1,0 +1,22 @@
+
+<article class="blog">
+  <div class="blog-media">
+    <div class="image">
+      <a href="{{ article.url }}">
+        <img src="{{ article | img_url : '370X250', crop: 'center' }}" alt="{{ article.alt }}">
+      </a>
+    </div>
+  </div>
+  <div class="blog-info">
+    <div class="blog-entry-meta">
+      <span class="blog-category">
+        <a href="{{ article.url }}">{{ article.title }}</a>
+      </span>
+    </div>
+    <div class="blog-footer-meta">
+      <span class="posted-on">{{ article.published_at | date: "%b, %d , %y" }}</span>
+      <span class="meta-separator">-</span>
+      <span class="posted-by">{{ article.author }}</span>
+    </div>
+  </div>
+</article>
