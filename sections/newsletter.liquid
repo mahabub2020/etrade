@@ -1,6 +1,6 @@
 <div id="section-{{ section.id }}">
   <div class="container">
-    <div class="etrade-newsletter-wrapper bg_image bg_image--5" style="background-image: url('{{ "bg-image-5.jpg" | asset_url }}');">
+    <div class="etrade-newsletter-wrapper bg_image">
       <link
         href="//cdn-images.mailchimp.com/embedcode/classic-061523.css"
         rel="stylesheet"
@@ -82,8 +82,16 @@
   </div>
 </div>
 
-{%- style -%}
-
+{% style %}
+#section-{{ section.id }} .bg_image {
+  background-image: url(
+    {% if section.settings.bg_img %}
+      {{ section.settings.bg_img }}
+    {% else %}
+      http:\/\/via.placeholder.com\/1920x780
+    {% endif %}
+    );  
+}
   #section-{{ section.id }}{
     {%- for block in section.blocks -%}
       {%- case block.type -%}
@@ -130,7 +138,7 @@
       {%- endfor -%}
     }
   }
-{%- endstyle -%}
+{% endstyle %}
 
 
 {% schema %}
