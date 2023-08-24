@@ -12,7 +12,7 @@
               {% assign blog = blogs[section.settings.blog_handle] %}
               {% assign blog_limit = section.settings.blog_limit_handle %}
               {% for article in blog.articles limit: blog_limit %}
-                <div class="col-lg-4">
+                <div class="col-xl-{{ section.settings.col_xl }} col-lg-{{ section.settings.col_lg }} col-md-{{ section.settings.col_md }} col-sm-{{ section.settings.col_sm }} col-{{ section.settings.col_mobile }}">
                   {% include 'blog-grid-item' %}
                 </div>
               {% endfor %} 
@@ -67,19 +67,21 @@
     }
   }
 
-#section-{{ section.id }} .heading-secondary {
+#section-{{ section.id }} .section-title-wrapper .title {
     color: {{ section.settings.section_title_color }};
 }
-
-#section-{{ section.id }} .separator {
-    border-color: {{ section.settings.section_border_color }};
+#section-{{ section.id }} .section-title-wrapper .title-highlighter {
+    color: {{ section.settings.section_subtitle_color }};
+}
+#section-{{ section.id }} .section-title-wrapper .title-highlighter i{
+    color: {{ section.settings.section_icon_color }};
+}
+#section-{{ section.id }} .section-title-wrapper .title-highlighter i{
+  background-color: {{ section.settings.section_icon_bg_color }};
 }
 
-#section-{{ section.id }} .heading-color {
-    color: {{ section.settings.section_description_color }}!important;
-}
 
-#section-{{ section.id }} .blog-entry-meta a{
+#section-{{ section.id }} .title-highlighter a{
     color: {{ section.settings.blog_title_color }};
 }
 #section-{{ section.id }} .blog-entry-meta a:hover{
@@ -177,7 +179,7 @@ border-color: {{ section.settings.dot_border_active_color }};
           "type": "select",
           "id": "col_xl",
           "label": "Desktops: > 1199px",
-          "default": "3",
+          "default": "4",
           "options": [
             {
               "label": "1 Col",
@@ -321,25 +323,25 @@ border-color: {{ section.settings.dot_border_active_color }};
            "type": "color",
            "id": "section_title_color",
            "label": "Section Title Color",
-           "default": "#282828"
+           "default": "#292930"
         }, 
         {
            "type": "color",
            "id": "section_icon_color",
-           "label": "Icon Color",
-           "default": "#cf987e"
+           "label": "Section Icon Color",
+           "default": "#ffffff"
         },  
         {
            "type": "color",
            "id": "section_icon_bg_color",
-           "label": "Icon Background Color",
-           "default": "#cf987e"
+           "label": "Section Icon Background Color",
+           "default": "#8c71db"
         }, 
         {
            "type": "color",
            "id": "section_subtitle_color",
            "label": "Section Sub Title Color",
-           "default": "#8a8a8a"
+           "default": "#8c71db"
         },  
 
 
