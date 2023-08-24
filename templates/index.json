@@ -2,6 +2,7 @@
   "sections": {
     "17405413-6b41-4e23-b0f4-3aaf1e79ffb7": {
       "type": "product-collection",
+      "disabled": true,
       "settings": {
         "title": "Product Collection",
         "btn-label": "",
@@ -16,17 +17,49 @@
         ],
         "sort_by": "title",
         "reverse_order": false,
-        "hover_img": true
+        "hover_img": false
       }
     },
-    "006b98e5-f543-41c3-ac5e-4cd8bc26ade3": {
-      "type": "newsletter",
+    "6496b74a-424e-412a-b993-fbb11de18a61": {
+      "type": "latest-blog",
+      "blocks": {
+        "template--20190269571387__6496b74a-424e-412a-b993-fbb11de18a61-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--20190269571387__6496b74a-424e-412a-b993-fbb11de18a61-section_padding-1"
+      ],
       "settings": {
+        "container_style": "style_1",
+        "section_title": "Latest News",
+        "blog_handle": "news",
+        "blog_limit_handle": 3,
+        "blog_column": 3,
+        "blog_column_md": 2,
+        "blog_column_sm": 1,
+        "section_title_color": "#282828",
+        "section_border_color": "#cf987e",
+        "section_description_color": "#8a8a8a",
+        "blog_title_color": "#cf987e",
+        "blog_title_hover_color": "#cf987e",
+        "blog_description_color": "#8a8a8a",
+        "dot_border_color": "#DFDFDF",
+        "dot_border_active_color": "#cf987e",
+        "dot_active_color": "#cf987e"
       }
     }
   },
   "order": [
     "17405413-6b41-4e23-b0f4-3aaf1e79ffb7",
-    "006b98e5-f543-41c3-ac5e-4cd8bc26ade3"
+    "6496b74a-424e-412a-b993-fbb11de18a61"
   ]
 }
