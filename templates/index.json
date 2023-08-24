@@ -33,10 +33,22 @@
             "section_padding_top_xs": 0,
             "section_padding_bottom_xs": 60
           }
+        },
+        "3cb41267-1b3d-402d-96ba-865dd918db41": {
+          "type": "section_margin",
+          "settings": {
+            "section_margin_top": 80,
+            "section_margin_bottom": 55,
+            "section_margin_top_md": 0,
+            "section_margin_bottom_md": 0,
+            "section_margin_top_xs": 0,
+            "section_margin_bottom_xs": 0
+          }
         }
       },
       "block_order": [
-        "5f93b855-a1ad-4006-8476-c583e69fd5e7"
+        "5f93b855-a1ad-4006-8476-c583e69fd5e7",
+        "3cb41267-1b3d-402d-96ba-865dd918db41"
       ],
       "settings": {
         "container_style": "style_1",
