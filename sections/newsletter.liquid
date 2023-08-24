@@ -1,83 +1,84 @@
-<div id="section-{{ section.id }}"></div>
-<div class="container">
-  <div class="etrade-newsletter-wrapper bg_image bg_image--5" style="background-image: url('{{ "bg-image-5.jpg" | asset_url }}');">
-    <link
-      href="//cdn-images.mailchimp.com/embedcode/classic-061523.css"
-      rel="stylesheet"
-      type="text/css">
-    <div class="newsletter-content">
-      <span class="title-highlighter highlighter-primary2">
-        <i class="{{ section.settings.before_title_icon }}"></i>
-        {{ section.settings.before_title_text }}</span>
-      <h2 class="title mb--40 mb_sm--30">{{ section.settings.title }}</h2>
+<div id="section-{{ section.id }}">
+  <div class="container">
+    <div class="etrade-newsletter-wrapper bg_image bg_image--5" style="background-image: url('{{ "bg-image-5.jpg" | asset_url }}');">
+      <link
+        href="//cdn-images.mailchimp.com/embedcode/classic-061523.css"
+        rel="stylesheet"
+        type="text/css">
+      <div class="newsletter-content">
+        <span class="title-highlighter highlighter-primary2">
+          <i class="{{ section.settings.before_title_icon }}"></i>
+          {{ section.settings.before_title_text }}</span>
+        <h2 class="title mb--40 mb_sm--30">{{ section.settings.title }}</h2>
 
-      <div
-        class="wpcf7 js"
-        id="wpcf7-f1515-p33-o1"
-        lang="en-US"
-        dir="ltr">
-        <div class="screen-reader-response">
-          <p
-            role="status"
-            aria-live="polite"
-            aria-atomic="true"></p>
-          <ul></ul>
-        </div>
-        <form
-          action="https://axilweb.us21.list-manage.com/subscribe/post?u=d2a79986af90d180038dc91c6&amp;id=e71e328c72&amp;f_id=0015dce6f0"
-          method="post"
-          id="mc-embedded-subscribe-form"
-          name="mc-embedded-subscribe-form"
-          class="validate"
-          target="_blank">
-          <div class="input-group newsletter-form">
-            <div class="position-relative newsletter-inner mb--15">
-              <input
-                size="40"
-                class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                aria-required="true"
-                aria-invalid="false"
-                placeholder="Your email address"
-                value=""
-                type="email"
-                name="EMAIL">
-            </div>
-            <div id="mce-responses" class="clear foot">
-              <div
-                class="response"
-                id="mce-error-response"
-                style="display: none;"></div>
-              <div
-                class="response"
-                id="mce-success-response"
-                style="display: none;"></div>
-            </div>
-            <div aria-hidden="true" style="position: absolute; left: -5000px;">
-              /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-              <input
-                type="text"
-                name="b_d2a79986af90d180038dc91c6_e71e328c72"
-                tabindex="-1"
-                value="">
-            </div>
-            <div class="optionalParent">
-              <div class="clear foot">
+        <div
+          class="wpcf7 js"
+          id="wpcf7-f1515-p33-o1"
+          lang="en-US"
+          dir="ltr">
+          <div class="screen-reader-response">
+            <p
+              role="status"
+              aria-live="polite"
+              aria-atomic="true"></p>
+            <ul></ul>
+          </div>
+          <form
+            action="https://axilweb.us21.list-manage.com/subscribe/post?u=d2a79986af90d180038dc91c6&amp;id=e71e328c72&amp;f_id=0015dce6f0"
+            method="post"
+            id="mc-embedded-subscribe-form"
+            name="mc-embedded-subscribe-form"
+            class="validate"
+            target="_blank">
+            <div class="input-group newsletter-form">
+              <div class="position-relative newsletter-inner mb--15">
                 <input
-                  type="submit"
-                  name="subscribe"
-                  class="wpcf7-submit has-spinner axil-btn"
-                  value="Subscribe"><span class="wpcf7-spinner"></span>
+                  size="40"
+                  class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
+                  aria-required="true"
+                  aria-invalid="false"
+                  placeholder="Your email address"
+                  value=""
+                  type="email"
+                  name="EMAIL">
+              </div>
+              <div id="mce-responses" class="clear foot">
+                <div
+                  class="response"
+                  id="mce-error-response"
+                  style="display: none;"></div>
+                <div
+                  class="response"
+                  id="mce-success-response"
+                  style="display: none;"></div>
+              </div>
+              <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
+                <input
+                  type="text"
+                  name="b_d2a79986af90d180038dc91c6_e71e328c72"
+                  tabindex="-1"
+                  value="">
+              </div>
+              <div class="optionalParent">
+                <div class="clear foot">
+                  <input
+                    type="submit"
+                    name="subscribe"
+                    class="wpcf7-submit has-spinner axil-btn"
+                    value="Subscribe"><span class="wpcf7-spinner"></span>
+                </div>
               </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
+        <!-- Chimpmatic extension by Renzo Johnson -->
       </div>
-      <!-- Chimpmatic extension by Renzo Johnson -->
+      <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+      <script type="text/javascript">
+        (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);
+      </script>
     </div>
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-    <script type="text/javascript">
-      (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);
-    </script>
   </div>
 </div>
 
