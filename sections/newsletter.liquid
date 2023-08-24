@@ -6,7 +6,7 @@
         rel="stylesheet"
         type="text/css">
       <div class="newsletter-content">
-        <span class="title-highlighter highlighter-primary2">
+        <span class="title-highlighter">
           <i class="{{ section.settings.before_title_icon }}"></i>
           {{ section.settings.before_title_text }}</span>
         <h2 class="title mb--40 mb_sm--30">{{ section.settings.title }}</h2>
@@ -92,6 +92,12 @@
       {% endif %}
       );  
   }
+  .title-highlighter {
+    color: {{ section.settings.before_title_color }};
+  }
+  .title-highlighter i {
+    background-color: {{ section.settings.before_title_color }};
+  }
   .newsletter-inner::before {
     background-image: url({{ 'send-mail.png' | asset_url }});
   }
@@ -159,6 +165,11 @@
         "id": "before_title_text",
         "label": "Before Title Text",
         "default": "Newsletter"
+      }, {
+        "type": "color",
+        "id": "before_title_color",
+        "label": "Before Title Color",
+        "default": "#3577f0"
       }, {
         "type": "text",
         "id": "title",
