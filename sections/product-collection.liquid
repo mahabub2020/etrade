@@ -1,106 +1,118 @@
 <div id="section-{{ section.id }}">
-<div class="container">
-  <div class="section-title-wrapper section-title-border">
-    {% if section.settings.title != blank %}
-      <h2 class="title">{{ section.settings.title }}<img
-          width="32"
-          height="33"
-          src="{{ 'title-icon.png' | asset_url }}"
-          class="attachment-full size-full wp-image-234"
-          alt=""
-          decoding="async"
-          loading="lazy">
-      </h2>
-    {% endif %}
-
-    {% if section.settings.btn-label != blank %}
-      <div class="view-btn">
-        <a
-          class="title-view-link"
-          href="{{ routes.all_products_collection_url }}"
-          target="_self"
-          rel="nofollow">{{ section.settings.btn-label }}</a>
-      </div>
-    {% endif %}
-
-  </div>
-  <div class="product-area pb--20">
-    <div class="row">
-      {% if section.settings.reverse_order == true %}
-        {% assign collection = section.settings.product_collection.products | sort: section.settings.sort_by | reverse %}
-      {% else %}
-        {% assign collection = section.settings.product_collection.products | sort: section.settings.sort_by %}
+  <div class="container">
+    <div class="section-title-wrapper section-title-border">
+      {% if section.settings.title != blank %}
+        <h2 class="title">{{ section.settings.title }}<img
+            width="32"
+            height="33"
+            src="{{ 'title-icon.png' | asset_url }}"
+            class="attachment-full size-full wp-image-234"
+            alt=""
+            decoding="async"
+            loading="lazy">
+        </h2>
       {% endif %}
-      {% for product in collection limit: section.settings.number_of_products_to_show offset: section.settings.offset_product %}
-        {% assign ex = 0 %}
-        {% for ex_product in section.settings.excluded_products %}
-          {% if product.id == ex_product.id %}
-            {% assign ex = 1 %}
+
+      {% if section.settings.btn-label != blank %}
+        <div class="view-btn">
+          <a
+            class="title-view-link"
+            href="{{ routes.all_products_collection_url }}"
+            target="_self"
+            rel="nofollow">{{ section.settings.btn-label }}</a>
+        </div>
+      {% endif %}
+
+    </div>
+    <div class="product-area pb--20">
+      <div class="row">
+        {% if section.settings.reverse_order == true %}
+          {% assign collection = section.settings.product_collection.products | sort: section.settings.sort_by | reverse %}
+        {% else %}
+          {% assign collection = section.settings.product_collection.products | sort: section.settings.sort_by %}
+        {% endif %}
+        {% for product in collection limit: section.settings.number_of_products_to_show offset: section.settings.offset_product %}
+          {% assign ex = 0 %}
+          {% for ex_product in section.settings.excluded_products %}
+            {% if product.id == ex_product.id %}
+              {% assign ex = 1 %}
+            {% endif %}
+          {% endfor %}
+          {% if ex == 0 %}
+            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
+              {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
+              {% capture include_snippet %}
+                {% include layout %}
+              {% endcapture %}
+              {{ include_snippet }}
+            </div>
           {% endif %}
         {% endfor %}
-        {% if ex == 0 %}
-          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12">
-            {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
-            {% capture include_snippet %}
-              {% include layout %}
-            {% endcapture %}
-            {{ include_snippet }}
-          </div>
-        {% endif %}
-      {% endfor %}
+      </div>
     </div>
   </div>
-</div>
 </div>
 
 {%- style -%}
 
   #section-{{ section.id }}{
     {%- for block in section.blocks -%}
-    {%- case block.type -%}
-    {%- when 'section_margin' -%}
-    margin-top: {{ block.settings.section_margin_top }}px;
-    margin-bottom: {{ block.settings.section_margin_bottom }}px;
-    {%- when 'section_padding' -%}
-    padding-top: {{ block.settings.section_padding_top }}px;
-    padding-bottom: {{ block.settings.section_padding_bottom }}px;
-    {%- when 'section_background' -%}    
-    background: {{ block.settings.section_bg_color }} 
-      {%- if block.settings.section_bg_image -%}url("{{ block.settings.section_bg_image | img_url: 'master' }}"){%- endif -%} no-repeat scroll center center / cover;
-    {%- endcase -%}
+      {%- case block.type -%}
+        {%- when 'section_margin' -%}
+        margin-top: {{ block.settings.section_margin_top }}
+        px;
+        margin-bottom: {{ block.settings.section_margin_bottom }}
+        px;
+        {%- when 'section_padding' -%}
+        padding-top: {{ block.settings.section_padding_top }}
+        px;
+        padding-bottom: {{ block.settings.section_padding_bottom }}
+        px;
+        {%- when 'section_background' -%}
+        background: {{ block.settings.section_bg_color }}
+        {%- if block.settings.section_bg_image -%}
+          url("{{ block.settings.section_bg_image | img_url: 'master' }}"){%- endif -%} no-repeat scroll center center / cover;
+      {%- endcase -%}
     {%- endfor -%}
   }
 
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media(min-width: 768px) and (max-width: 991px) {
     #section-{{ section.id }}{
       {%- for block in section.blocks -%}
-      {% case block.type %}
-      {%- when 'section_margin' -%}
-      margin-top: {{ block.settings.section_margin_top_md }}px;
-      margin-bottom: {{ block.settings.section_margin_bottom_md }}px;
-      {%- when 'section_padding' -%}
-      padding-top: {{ block.settings.section_padding_top_md }}px;
-      padding-bottom: {{ block.settings.section_padding_bottom_md }}px;
-      {%- endcase -%}
+        {% case block.type %}
+          {%- when 'section_margin' -%}
+          margin-top: {{ block.settings.section_margin_top_md }}
+          px;
+          margin-bottom: {{ block.settings.section_margin_bottom_md }}
+          px;
+          {%- when 'section_padding' -%}
+          padding-top: {{ block.settings.section_padding_top_md }}
+          px;
+          padding-bottom: {{ block.settings.section_padding_bottom_md }}
+          px;
+        {%- endcase -%}
       {%- endfor -%}
     }
   }
 
-  @media (max-width: 767px) {
+  @media(max-width: 767px) {
     #section-{{ section.id }}{
       {%- for block in section.blocks -%}
-      {%- case block.type -%}
-      {%- when 'section_margin' -%}
-      margin-top: {{ block.settings.section_margin_top_xs }}px;
-      margin-bottom: {{ block.settings.section_margin_bottom_xs }}px;
-      {%- when 'section_padding' -%}
-      padding-top: {{ block.settings.section_padding_top_xs }}px;
-      padding-bottom: {{ block.settings.section_padding_bottom_xs }}px;
-      {%- endcase -%}
+        {%- case block.type -%}
+          {%- when 'section_margin' -%}
+          margin-top: {{ block.settings.section_margin_top_xs }}
+          px;
+          margin-bottom: {{ block.settings.section_margin_bottom_xs }}
+          px;
+          {%- when 'section_padding' -%}
+          padding-top: {{ block.settings.section_padding_top_xs }}
+          px;
+          padding-bottom: {{ block.settings.section_padding_bottom_xs }}
+          px;
+        {%- endcase -%}
       {%- endfor -%}
     }
   }
- 
 {%- endstyle -%}
 
 
@@ -171,8 +183,7 @@
             "value": "8"
           }
         ]
-      }, 
-      {
+      }, {
         "type": "product_list",
         "id": "excluded_products",
         "label": "Product To Exclude"
@@ -208,188 +219,175 @@
       }
     ],
 
-  "blocks": [
-    {
+    "blocks": [
+      {
         "type": "section_padding",
         "name": "Section Padding",
         "limit": 1,
-         "settings": [
-           {
-       "type": "header",
-       "content": "Large/Desktop Device"
-     },
-     {
-       "type": "range",
-       "id": "section_padding_top",
-       "min": 0,
-       "max": 150,
-       "step": 5,
-       "label": "Padding Top",
-       "unit": "px",
-       "default": 0
-     },
-     {
-       "type": "range",
-       "id": "section_padding_bottom",
-       "min": 0,
-       "max": 150,
-       "step": 5,
-       "label": "Padding Bottom",
-       "unit": "px",
-       "default": 100
-     },
-     {
-       "type": "header",
-       "content": "Tablet Device"
-     },
-     {
-       "type": "range",
-       "id": "section_padding_top_md",
-       "min": 0,
-       "max": 150,
-       "step": 5,
-       "label": "Padding Top",
-       "unit": "px",
-       "default": 0
-     },
-     {
-       "type": "range",
-       "id": "section_padding_bottom_md",
-       "min": 0,
-       "max": 150,
-       "step": 5,
-       "label": "Padding Bottom",
-       "unit": "px",
-       "default": 80
-     },
-     {
-       "type": "header",
-       "content": "Mobile Device"
-     },
-     {
-       "type": "range",
-       "id": "section_padding_top_xs",
-       "min": 0,
-       "max": 150,
-       "step": 5,
-       "label": "Padding Top",
-       "unit": "px",
-       "default": 0
-     },
-     {
-       "type": "range",
-       "id": "section_padding_bottom_xs",
-       "min": 0,
-       "max": 150,
-       "step": 5,
-       "label": "Padding Bottom",
-       "unit": "px",
-       "default": 60
-     }
-         ]
-      },
-    {
-         "type": "section_margin",
-         "name": "Section Margin",
-     "limit": 1,
-         "settings": [
-           {
-       "type": "header",
-       "content": "Large/Desktop Device"
-     },
-     {
-       "type": "range",
-       "id": "section_margin_top",
-       "min": 0,
-       "max": 150,
-       "step": 5,
-       "label": "Margin Top",
-       "unit": "px",
-       "default": 0
-     },
-     {
-       "type": "range",
-       "id": "section_margin_bottom",
-       "min": 0,
-       "max": 150,
-       "step": 5,
-       "label": "Margin Bottom",
-       "unit": "px",
-       "default": 0
-     },
-     {
-       "type": "header",
-       "content": "Tablet Device"
-     },
-     {
-       "type": "range",
-       "id": "section_margin_top_md",
-       "min": 0,
-       "max": 150,
-       "step": 5,
-       "label": "Margin Top",
-       "unit": "px",
-       "default": 0
-     },
-     {
-       "type": "range",
-       "id": "section_margin_bottom_md",
-       "min": 0,
-       "max": 150,
-       "step": 5,
-       "label": "Margin Bottom",
-       "unit": "px",
-       "default": 0
-     },
-     {
-       "type": "header",
-       "content": "Mobile Device"
-     },
-     {
-       "type": "range",
-       "id": "section_margin_top_xs",
-       "min": 0,
-       "max": 150,
-       "step": 5,
-       "label": "Margin Top",
-       "unit": "px",
-       "default": 0
-     },
-     {
-       "type": "range",
-       "id": "section_margin_bottom_xs",
-       "min": 0,
-       "max": 150,
-       "step": 5,
-       "label": "Margin Bottom",
-       "unit": "px",
-       "default": 0
-     }
-         ]
-      },
-    {
-         "type": "section_background",
-         "name": "Section Background",
-     "limit": 1,
-         "settings": [
-           {
-       "type": "image_picker",
-       "id": "section_bg_image",
-       "label": "BG Image"
-     },
-     {
-       "type": "color",
-       "id": "section_bg_color",
-       "label": "BG Color",
-       "default": "#ffffff"
-     }
-         ]
+        "settings": [
+          {
+            "type": "header",
+            "content": "Large/Desktop Device"
+          },
+          {
+            "type": "range",
+            "id": "section_padding_top",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "label": "Padding Top",
+            "unit": "px",
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "section_padding_bottom",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "label": "Padding Bottom",
+            "unit": "px",
+            "default": 100
+          },
+          {
+            "type": "header",
+            "content": "Tablet Device"
+          }, {
+            "type": "range",
+            "id": "section_padding_top_md",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "label": "Padding Top",
+            "unit": "px",
+            "default": 0
+          }, {
+            "type": "range",
+            "id": "section_padding_bottom_md",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "label": "Padding Bottom",
+            "unit": "px",
+            "default": 80
+          }, {
+            "type": "header",
+            "content": "Mobile Device"
+          }, {
+            "type": "range",
+            "id": "section_padding_top_xs",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "label": "Padding Top",
+            "unit": "px",
+            "default": 0
+          }, {
+            "type": "range",
+            "id": "section_padding_bottom_xs",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "label": "Padding Bottom",
+            "unit": "px",
+            "default": 60
+          }
+        ]
+      }, {
+        "type": "section_margin",
+        "name": "Section Margin",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "header",
+            "content": "Large/Desktop Device"
+          },
+          {
+            "type": "range",
+            "id": "section_margin_top",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "label": "Margin Top",
+            "unit": "px",
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "section_margin_bottom",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "label": "Margin Bottom",
+            "unit": "px",
+            "default": 0
+          },
+          {
+            "type": "header",
+            "content": "Tablet Device"
+          }, {
+            "type": "range",
+            "id": "section_margin_top_md",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "label": "Margin Top",
+            "unit": "px",
+            "default": 0
+          }, {
+            "type": "range",
+            "id": "section_margin_bottom_md",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "label": "Margin Bottom",
+            "unit": "px",
+            "default": 0
+          }, {
+            "type": "header",
+            "content": "Mobile Device"
+          }, {
+            "type": "range",
+            "id": "section_margin_top_xs",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "label": "Margin Top",
+            "unit": "px",
+            "default": 0
+          }, {
+            "type": "range",
+            "id": "section_margin_bottom_xs",
+            "min": 0,
+            "max": 150,
+            "step": 5,
+            "label": "Margin Bottom",
+            "unit": "px",
+            "default": 0
+          }
+        ]
+      }, {
+        "type": "section_background",
+        "name": "Section Background",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "section_bg_image",
+            "label": "BG Image"
+          }, {
+            "type": "color",
+            "id": "section_bg_color",
+            "label": "BG Color",
+            "default": "#ffffff"
+          }
+        ]
       }
- ],
+    ],
     "presets": [
       {
         "name": "Product Collection",
-        "blocks":[
+        "blocks": [
           {
             "type": "section_padding"
           }
