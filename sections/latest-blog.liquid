@@ -103,7 +103,9 @@
 #section-{{ section.id }} .blog-grid .content .axil-btn:after{
   background-color: {{ section.settings.blog_rm_hover_color }};
 }
-
+#section-{{ section.id }} .blog-grid {
+    border: 1px solid {{ section.settings.blog_post_border_color }}; 
+}
 
 {%- endstyle -%}
 
@@ -379,6 +381,12 @@
           "id": "blog_rm_hover_color",
           "label": "Blog Read Hover Color",
           "default": "#3577f0"
+       },
+       {
+          "type": "color",
+          "id": "blog_post_border_color",
+          "label": "Blog Post Border Color",
+          "default": "#ffffff"
        }
     ],
 	"blocks":[
