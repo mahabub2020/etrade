@@ -1,94 +1,9 @@
 
 {% if section.settings.ctalayout == 'cta1' %}
-<div id="section-{{ section.id }}" class="delivery-poster-area">
-  <div class="container">
-      <div class="row">
-        {% for block in section.blocks %}
-          {% case block.type %}
-            {% when 'cta' %}   
-              <div class="col-xl-6 col-lg-6">
-                <div class="delivery-poster pickup">
-                    <div class="content">  
-                      {% if block.settings.badge != '' %}   
-                        <span class="badge">{{ block.settings.badge }}</span>
-                      {% endif %}   
-                      {% if block.settings.badge_title != '' %}   
-                        <h4 class="title">{{ block.settings.badge_title | escape }}</h4> 
-                      {% endif %}  
-                      {% if block.settings.badge_content != '' %}   
-                        <p>{{ block.settings.badge_content | escape }}</p> 
-                      {% endif %}   
-                    </div> 
-                    <div class="thumbnail">
-                         <img src="{% if block.settings.cta_img %}{{ block.settings.cta_img | img_url: '203x192' }}{% else %}http:\/\/via.placeholder.com\/203x192{% endif %}" alt="{{ block.settings.cta_img.alt }}"> 
-                    </div>
 
-                </div>
-            </div>
-          {% endcase %}
-        {% endfor %} 
-      </div>
-  </div>
-</div>
 {% else %}
 
-<div id="section-{{ section.id }}" class="axil-poster">
-  <div class="container">
-      <div class="row">
-        {% for block in section.blocks %}
-          {% case block.type %}
-            {% when 'cta' %}   
-            <div class="col-lg-6 mb--30">
 
-              {% if block.settings.reverse_order == true %}
-
-                <div class="single-poster">
-                    <a href="{{ block.settings.cta_url | escape }}">
-                      <img src="{% if block.settings.cta_img %}{{ block.settings.cta_img | img_url: '630x246' }}{% else %}http:\/\/via.placeholder.com\/630x246{% endif %}" alt="{{ block.settings.cta_img.alt }}"> 
-                        <div class="poster-content">
-                            <div class="inner">
-                              {% if block.settings.badge_title != '' %}   
-                              <h3 class="title">{{ block.settings.badge_title }}</h3> 
-                            {% endif %}   
-                            {% if block.settings.badge != '' %}   
-                              <span class="sub-title">{{ block.settings.badge | escape }} <i class="fal fa-long-arrow-right"></i></span>
-                            {% endif %}    
-                            </div>
-                        </div>
-                        <!-- End .poster-content -->
-                    </a>
-                </div>
-                {% else %} 
-                  <div class="single-poster">
-                      <a href="{{ block.settings.cta_url | escape }}">
-                        <img src="{% if block.settings.cta_img %}{{ block.settings.cta_img | img_url: '630x246' }}{% else %}http:\/\/via.placeholder.com\/630x246{% endif %}" alt="{{ block.settings.cta_img.alt }}"> 
-
-                          <div class="poster-content content-left">
-                              <div class="inner">
-                               
-                              {% if block.settings.badge != '' %}   
-                                  <span class="sub-title">{{ block.settings.badge | escape }}</span>
-                              {% endif %}  
-                                 
-                            {% if block.settings.badge_title != '' %}   
-                              <h3 class="title">{{ block.settings.badge_title }}</h3> 
-                            {% endif %}   
-
-                              </div>
-                          </div>
-                          <!-- End .poster-content -->
-                      </a>
-                  </div> 
-          
-              {% endif %}
- 
-              <!-- End .single-poster -->
-          </div>
-        {% endcase %}
-      {% endfor %} 
-      </div>
-  </div>
-</div>
 {% endif %}
 
 {%- style -%}
@@ -143,86 +58,45 @@
 
 {% schema %}
 {
-  "name": "Section CTA",
+  "name": "Section Blog",
   "settings": [
     {
       "type": "header",
-      "content": "Section Delivery"
+      "content": "Section Blog"
     },
     {
       "type": "select",
-      "id": "ctalayout",
-      "default": "cta1",
+      "id": "bloglayout",
+      "default": "blog1",
       "label": "CTA Layout",
       "options": [
         {
           "label": "Layout 1",
-          "value": "cta1"
+          "value": "blog1"
         },
         {
           "label": "Layout 2",
-          "value": "cta2"
+          "value": "blog2"
         },
         {
           "label": "Layout 3",
-          "value": "cta3"
+          "value": "blog3"
         }
       ]
     }
 
   ],
 
-  "blocks": [
+  "blocks": [ 
     {
-      "type": "cta",
-      "name": "CTA Content",
-      "settings": [ 
-        {
-          "type": "text",
-          "id": "badge",
-          "default": "Always free",
-          "label": "Dadge/Sub Title"
-        },
-        {
-          "type": "richtext",
-          "id": "badge_title",
-          
-          "label": "CTA Title"
-        },
-        {
-          "type": "textarea",
-          "id": "badge_content",
-          "default": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
-          "label": "Content"
-        },
-        {
-          "type": "url",
-          "id": "cta_url",
-          "label": "URL"
-        },
-        {
-          "type": "image_picker",
-          "id": "cta_img",
-          "label": "Image",
-          "info": "Recommended Size: 203px X 192px"
-        },
-        {
-          "type": "checkbox",
-          "id": "reverse_order",
-          "label": "Reverse Order"
-        }
-      ]
-    },
-
-    {
-         "type": "section_padding",
-         "name": "Section Padding",
-     "limit": 1,
+      "type": "section_padding",
+      "name": "Section Padding",
+      "limit": 1,
          "settings": [
-           {
-       "type": "header",
-       "content": "Large/Desktop Device"
-     },
+        {
+        "type": "header",
+        "content": "Large/Desktop Device"
+        },
      {
        "type": "range",
        "id": "section_padding_top",
@@ -393,10 +267,10 @@
  ],
   "presets": [
     {
-      "name": "Section CTA",
+      "name": "Section Blog",
       "blocks": [
         {
-          "type": "cta"
+          "type": "section_padding"
         }
       ]
     }

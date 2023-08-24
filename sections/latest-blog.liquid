@@ -1,0 +1,582 @@
+<div id="section-{{ section.id }}" data-section="LatestBlog" class="axil-section-gap">
+    <div class="{% if section.settings.container_style == 'style_1' %}container {% else %} container-fluid{% endif %}">
+      <div class="section-title-wrapper section-title-center">
+           {% if block.settings.section_sub_title != '' %}
+              <span class="title-highlighter highlighter-primary"><i class="fas fa-fire"></i> {{ section.settings.section_sub_title }}</span>
+            {% endif %}
+            {% if block.settings.section_title != '' %}
+              <h3 class="title">{{ section.settings.section_title }}</h3>
+            {% endif %}
+      </div>
+       <div class="row g-5"> 
+              {% assign blog = blogs[section.settings.blog_handle] %}
+              {% assign blog_limit = section.settings.blog_limit_handle %}
+              {% for article in blog.articles limit: blog_limit %}
+                <div class="col-xl-{{ section.settings.col_xl }} col-lg-{{ section.settings.col_lg }} col-md-{{ section.settings.col_md }} col-sm-{{ section.settings.col_sm }} col-{{ section.settings.col_mobile }}">
+                  {% include 'blog-grid-item' %}
+                </div>
+              {% endfor %} 
+            </div> 
+      </div>
+  </div>
+</div>
+ 
+ 
+{%- style -%}
+  #section-{{ section.id }}{
+    {%- for block in section.blocks -%}
+    {%- case block.type -%}
+    {%- when 'section_margin' -%}
+    margin-top: {{ block.settings.section_margin_top }}px;
+    margin-bottom: {{ block.settings.section_margin_bottom }}px;
+    {%- when 'section_padding' -%}
+    padding-top: {{ block.settings.section_padding_top }}px;
+    padding-bottom: {{ block.settings.section_padding_bottom }}px;
+    {%- when 'section_background' -%}    
+    background: {{ block.settings.section_bg_color }} 
+      {%- if block.settings.section_bg_image -%}url("{{ block.settings.section_bg_image | img_url: 'master' }}"){%- endif -%} no-repeat scroll center center / cover;
+    {%- endcase -%}
+    {%- endfor -%}
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {% case block.type %}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_md }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_md }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_md }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_md }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+  @media (max-width: 767px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {%- case block.type -%}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_xs }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_xs }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_xs }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_xs }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+
+#section-{{ section.id }} .section-title-wrapper .title {
+    color: {{ section.settings.section_title_color }};
+}
+#section-{{ section.id }} .section-title-wrapper .title-highlighter {
+    color: {{ section.settings.section_subtitle_color }};
+}
+#section-{{ section.id }} .section-title-wrapper .title-highlighter i{
+    color: {{ section.settings.section_icon_color }};
+}
+#section-{{ section.id }} .section-title-wrapper .title-highlighter i{
+  background-color: {{ section.settings.section_icon_bg_color }};
+}
+
+
+#section-{{ section.id }} .content-blog .content .title a{
+    color: {{ section.settings.blog_title_color }};
+}
+#section-{{ section.id }} .content-blog .content .title a:hover{
+    color: {{ section.settings.blog_title_hover_color }};
+}
+
+#section-{{ section.id }} .blog-grid .content .axil-btn{
+    color: {{ section.settings.blog_rm_color }};
+}
+#section-{{ section.id }} .blog-grid .content .axil-btn i{
+    color: {{ section.settings.blog_rm_color }};
+}
+#section-{{ section.id }} .blog-grid .content .axil-btn:hover{
+    color: {{ section.settings.blog_rm_hover_color }};
+}
+#section-{{ section.id }} .blog-grid .content .axil-btn:hover i{
+    color: {{ section.settings.blog_rm_hover_color }};
+}
+#section-{{ section.id }} .blog-grid .content .axil-btn:after{
+  background-color: {{ section.settings.blog_rm_hover_color }};
+}
+
+
+{%- endstyle -%}
+
+
+
+{% schema %}
+  {
+    "name": "Latest Blog",
+    "settings": [
+		{
+          "type": "header",
+          "content": "Container Style"
+        },
+        {
+            "type": "radio",
+            "id": "container_style",
+            "label": "Container Style",
+            "options":[
+              {
+                  "value":"style_1",
+                  "label": "Container"
+              },
+              {
+                  "value":"style_2",
+                  "label": "Container Fluid"
+              }
+            ],
+
+           "default": "style_1"
+        },
+		{
+		  "type": "header",
+          "content": "Section Heading"
+        },
+        
+		  {
+          "type": "text",
+          "id": "section_sub_title",
+          "label": "Sub Title",
+          "default": "Regular Post"
+      	}, 
+        {
+          "type": "text",
+          "id": "section_title",
+          "label": "Title",
+          "default": "Latest News"
+      	},
+		 
+		{
+			"type": "header",
+            "content": "Blog"
+        },
+		{
+          "type": "blog",
+          "id": "blog_handle",
+          "label": "Select Blog"
+        },
+		{
+            "type": "range",
+            "id": "blog_limit_handle",
+            "min": 2,
+            "max": 12,
+            "step": 1,
+            "label": "Limit",
+            "default": 3
+        },
+		{
+			"type": "header",
+            "content": "Options"
+        },
+		  
+		{
+			"type": "header",
+            "content": "Blog Grid Column"
+        },
+        {
+          "type": "select",
+          "id": "col_xl",
+          "label": "Desktops: > 1199px",
+          "default": "4",
+          "options": [
+            {
+              "label": "1 Col",
+              "value": "1"
+            },
+            {
+              "label": "2 Col",
+              "value": "6"
+            },
+            {
+              "label": "3 Col",
+              "value": "4"
+            },
+            {
+              "label": "4 Col",
+              "value": "3"
+            },
+            {
+              "label": "6 Col",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "col_lg",
+          "default": "4",
+          "label": "Desktops: > 991px",
+          "options": [
+            {
+              "label": "1 Col",
+              "value": "1"
+            },
+            {
+              "label": "2 Col",
+              "value": "6"
+            },
+            {
+              "label": "3 Col",
+              "value": "4"
+            },
+            {
+              "label": "4 Col",
+              "value": "3"
+            },
+            {
+              "label": "6 Col",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "col_md",
+          "default": "2",
+          "label": "Desktops: > 767px",
+          "options": [
+            {
+              "label": "1 Col",
+              "value": "1"
+            },
+            {
+              "label": "2 Col",
+              "value": "6"
+            },
+            {
+              "label": "3 Col",
+              "value": "4"
+            },
+            {
+              "label": "4 Col",
+              "value": "3"
+            },
+            {
+              "label": "6 Col",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "col_sm",
+          "default": "2",
+          "label": "Phones: >575px",
+          "options": [
+            {
+              "label": "1 Col",
+              "value": "1"
+            },
+            {
+              "label": "2 Col",
+              "value": "6"
+            },
+            {
+              "label": "3 Col",
+              "value": "4"
+            },
+            {
+              "label": "4 Col",
+              "value": "3"
+            },
+            {
+              "label": "6 Col",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "col_mobile",
+          "default": "1",
+          "label": "Small Phones: <576px",
+          "options": [
+            {
+              "label": "1 Col",
+              "value": "1"
+            },
+            {
+              "label": "2 Col",
+              "value": "6"
+            },
+            {
+              "label": "3 Col",
+              "value": "4"
+            },
+            {
+              "label": "4 Col",
+              "value": "3"
+            },
+            {
+              "label": "6 Col",
+              "value": "2"
+            }
+          ]
+        },
+		    {
+          "type": "header",
+          "content": "Color"
+        }, 
+        {
+           "type": "color",
+           "id": "section_title_color",
+           "label": "Section Title Color",
+           "default": "#292930"
+        }, 
+        {
+           "type": "color",
+           "id": "section_icon_color",
+           "label": "Section Icon Color",
+           "default": "#ffffff"
+        },  
+        {
+           "type": "color",
+           "id": "section_icon_bg_color",
+           "label": "Section Icon Background Color",
+           "default": "#8c71db"
+        }, 
+        {
+           "type": "color",
+           "id": "section_subtitle_color",
+           "label": "Section Sub Title Color",
+           "default": "#8c71db"
+        },  
+
+
+        {
+           "type": "color",
+           "id": "blog_title_color",
+           "label": "Blog Title Color",
+           "default": "#cf987e"
+        }, 
+        {
+           "type": "color",
+           "id": "blog_title_hover_color",
+           "label": "Blog Title Hover Color",
+           "default": "#cf987e"
+        }, 
+        {
+           "type": "color",
+           "id": "blog_user_color",
+           "label": "Blog User Color",
+           "default": "#ffffff"
+        },  
+        
+        {
+          "type": "color",
+          "id": "blog_rm_color",
+          "label": "Blog Read More Color",
+          "default": "#292930"
+       }, 
+       {
+          "type": "color",
+          "id": "blog_rm_hover_color",
+          "label": "Blog Read Hover Color",
+          "default": "#3577f0"
+       }
+    ],
+	"blocks":[
+	   {
+          "type": "section_padding",
+          "name": "Section Padding",
+		  "limit": 1,
+          "settings": [
+            {
+			  "type": "header",
+			  "content": "Large/Desktop Device"
+			},
+			{
+			  "type": "range",
+			  "id": "section_padding_top",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Padding Top",
+			  "unit": "px",
+			  "default": 0
+			},
+			{
+			  "type": "range",
+			  "id": "section_padding_bottom",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Padding Bottom",
+			  "unit": "px",
+			  "default": 100
+			},
+			{
+			  "type": "header",
+			  "content": "Tablet Device"
+			},
+			{
+			  "type": "range",
+			  "id": "section_padding_top_md",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Padding Top",
+			  "unit": "px",
+			  "default": 0
+			},
+			{
+			  "type": "range",
+			  "id": "section_padding_bottom_md",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Padding Bottom",
+			  "unit": "px",
+			  "default": 80
+			},
+			{
+			  "type": "header",
+			  "content": "Mobile Device"
+			},
+			{
+			  "type": "range",
+			  "id": "section_padding_top_xs",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Padding Top",
+			  "unit": "px",
+			  "default": 0
+			},
+			{
+			  "type": "range",
+			  "id": "section_padding_bottom_xs",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Padding Bottom",
+			  "unit": "px",
+			  "default": 60
+			}
+          ]
+       },
+	   {
+          "type": "section_margin",
+          "name": "Section Margin",
+		  "limit": 1,
+          "settings": [
+            {
+			  "type": "header",
+			  "content": "Large/Desktop Device"
+			},
+			{
+			  "type": "range",
+			  "id": "section_margin_top",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Margin Top",
+			  "unit": "px",
+			  "default": 0
+			},
+			{
+			  "type": "range",
+			  "id": "section_margin_bottom",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Margin Bottom",
+			  "unit": "px",
+			  "default": 0
+			},
+			{
+			  "type": "header",
+			  "content": "Tablet Device"
+			},
+			{
+			  "type": "range",
+			  "id": "section_margin_top_md",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Margin Top",
+			  "unit": "px",
+			  "default": 0
+			},
+			{
+			  "type": "range",
+			  "id": "section_margin_bottom_md",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Margin Bottom",
+			  "unit": "px",
+			  "default": 0
+			},
+			{
+			  "type": "header",
+			  "content": "Mobile Device"
+			},
+			{
+			  "type": "range",
+			  "id": "section_margin_top_xs",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Margin Top",
+			  "unit": "px",
+			  "default": 0
+			},
+			{
+			  "type": "range",
+			  "id": "section_margin_bottom_xs",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Margin Bottom",
+			  "unit": "px",
+			  "default": 0
+			}
+          ]
+       },
+	   {
+          "type": "section_background",
+          "name": "Section Background",
+		  "limit": 1,
+          "settings": [
+            {
+			  "type": "image_picker",
+			  "id": "section_bg_image",
+			  "label": "BG Image"
+			},
+			{
+			  "type": "color",
+			  "id": "section_bg_color",
+			  "label": "BG Color",
+			  "default": "#ffffff"
+			}
+          ]
+       }
+	],
+	"presets": [
+		{
+		  "name": "Latest Blog",
+		  "category": " blog",
+		  "blocks":[
+				{
+					"type": "section_padding"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+
