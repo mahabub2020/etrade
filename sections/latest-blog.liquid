@@ -81,23 +81,21 @@
 }
 
 
-#section-{{ section.id }} .title-highlighter a{
+#section-{{ section.id }} .content-blog .content .title a{
     color: {{ section.settings.blog_title_color }};
 }
-#section-{{ section.id }} .blog-entry-meta a:hover{
+#section-{{ section.id }} .content-blog .content .title a:hover{
     color: {{ section.settings.blog_title_hover_color }};
 }
-#section-{{ section.id }} .blog-footer-meta span{
-    color: {{ section.settings.blog_description_color }};
-}
 
-#section-{{ section.id }} .dot-style-1 .slick-dots li button {
-    border: 1px solid {{ section.settings.dot_border_color }};
+#section-{{ section.id }} .blog-grid .content .axil-btn{
+    color: {{ section.settings.blog_rm_color }};
 }
-
-#section-{{ section.id }} .dot-style-1 .slick-dots li.slick-active button{
-background-color: {{ section.settings.dot_active_color }};
-border-color: {{ section.settings.dot_border_active_color }};
+#section-{{ section.id }} .blog-grid .content .axil-btn:hover{
+    color: {{ section.settings.blog_rm_hover_color }};
+}
+#section-{{ section.id }} .blog-grid .content .axil-btn:after{
+  background-color: {{ section.settings.blog_rm_hover_color }};
 }
 
 
@@ -359,28 +357,23 @@ border-color: {{ section.settings.dot_border_active_color }};
         }, 
         {
            "type": "color",
-           "id": "blog_description_color",
-           "label": "Blog Description Color",
-           "default": "#8a8a8a"
-        }, 
+           "id": "blog_user_color",
+           "label": "Blog User Color",
+           "default": "#ffffff"
+        },  
+        
         {
-           "type": "color",
-           "id": "dot_border_color",
-           "label": "Dots Border Color",
-           "default": "#DFDFDF"
-        },
-        {
-           "type": "color",
-           "id": "dot_border_active_color",
-           "label": "Dots Active Border Color",
-           "default": "#cf987e"
-        },
-        {
-           "type": "color",
-           "id": "dot_active_color",
-           "label": "Dots Active BG Color",
-           "default": "#cf987e"
-        }
+          "type": "color",
+          "id": "blog_rm_color",
+          "label": "Blog Read More Color",
+          "default": "#cf987e"
+       }, 
+       {
+          "type": "color",
+          "id": "blog_rm_hover_color",
+          "label": "Blog Read Hover Color",
+          "default": "#cf987e"
+       }
     ],
 	"blocks":[
 	   {
