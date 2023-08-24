@@ -1,58 +1,24 @@
-<!-- Blog area Start Here -->
-<div class="blog-area" id="section-{{ section.id }}" data-section="LatestBlog">
-  <div class="{% if section.settings.container_style == 'style_1' %}container {% else %} container-fluid{% endif %}">
-    {% if section.settings.section_title != '' %}
-    <div class="row mb--30 mb-md--20">
-      <div class="col-12 text-{% if section.settings.text_style == 'text_style_left' %}left{% elsif section.settings.text_style == 'text_style_center' %}center{% elsif section.settings.text_style == 'text_style_right' %}right{% endif %}">
-        <h2 class="heading-secondary">{{ section.settings.section_title }}</h2>
-                {% if section.settings.section_title_border %}
-          <hr class="separator mtb--25">
-           {% endif %}
+<div id="section-{{ section.id }}" data-section="LatestBlog" class="axil-section-gap">
+ 
+    <div class="{% if section.settings.container_style == 'style_1' %}container {% else %} container-fluid{% endif %}">
+      <div class="section-title-wrapper section-title-center">
+          <span class="title-highlighter highlighter-primary"><i class="fas fa-fire"></i> Regular Post</span>
+          <h3 class="title">{{ section.settings.section_title }}</h3>
       </div>
-    </div>
-    {% endif %}
-    <div class="row">
-      <div class="col-12">
-        
-          
-          {%- capture data_slick_activation -%}
-          data-slick='{
-              {%- if section.settings.autoplay_true -%}
-              "autoplay": true,
-              "autoplaySpeed": {{ section.settings.autoplay_speed }},
-              {%- endif -%}
-                                 
-                                 {% if settings.rtl_enable %} "rtl": true,{% endif %} 
-                                 "slidesToScroll": 1,
-               "slidesToShow": {{ section.settings.blog_column }},
-                "responsive":[
-                    {"breakpoint":992, "settings": {"slidesToShow": {{ section.settings.blog_column_md }}} },
-                    {"breakpoint":768, "settings": {"slidesToShow": {{ section.settings.blog_column_sm }}} },
-                    {"breakpoint":480, "settings": {"slidesToShow": {{ section.settings.blog_column_sm }}} }
-                  ] 
-
-          }'
-  		 {%- endcapture -%}
-        
-        
-        
-        <div class="airi-element-carousel slick-gutter-30 blog-carousel dot-style-1" {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
-
-          {% assign blog = blogs[section.settings.blog_handle] %}
-          {% assign blog_limit = section.settings.blog_limit_handle %}
-          {% for article in blog.articles limit: blog_limit %}
-          <div class="item">
-            {% include 'blog-grid-item' %}
-          </div>
-          {% endfor %}
-        </div>
+        <div class="row g-5"> 
+              {% assign blog = blogs[section.settings.blog_handle] %}
+              {% assign blog_limit = section.settings.blog_limit_handle %}
+              {% for article in blog.articles limit: blog_limit %}
+                <div class="col-lg-4">
+                  {% include 'blog-grid-item' %}
+                </div>
+              {% endfor %} 
+            </div> 
       </div>
-    </div>
   </div>
 </div>
-<!-- Blog area End Here -->
-
-
+ 
+ 
 {%- style -%}
   #section-{{ section.id }}{
     {%- for block in section.blocks -%}
@@ -163,42 +129,14 @@ border-color: {{ section.settings.dot_border_active_color }};
 		  "type": "header",
           "content": "Section Heading"
         },
-        {
-          "type": "select",
-          "id": "text_style",
-          "label": "Heading Text Align",
-          "options":[
-            {
-              "value":"text_style_left",
-              "label": "Left"
-            },
-            {
-              "value":"text_style_center",
-              "label": "center"
-            },
-            {
-              "value":"text_style_right",
-              "label": "right"
-            }
-          ],
-          "default": "text_style_center"
-        },
-		{
+        
+		  {
           "type": "text",
           "id": "section_title",
           "label": "Section Title",
           "default": "Latest News"
       	},
-		{
-          "type": "header",
-          "content": "Section Title Border"
-        },
-        {
-          "type": "checkbox",
-          "id": "section_title_border",
-          "label": "Border Enable",
-          "default": false
-        },	
+		 
 		{
 			"type": "header",
             "content": "Blog"
@@ -221,25 +159,10 @@ border-color: {{ section.settings.dot_border_active_color }};
 			"type": "header",
             "content": "Options"
         },
-		{
-          "type": "checkbox",
-          "id": "autoplay_true",
-          "label": "Autoplay Enable",
-          "default": false
-      	},
-		{
-            "type": "range",
-            "id": "autoplay_speed",
-            "min": 1000,
-            "max": 9000,
-            "step": 1000,
-            "label": "Autoplay Speed",
-            "unit": "ms",
-            "default": 5000
-        },
+		  
 		{
 			"type": "header",
-            "content": "Blog Carousel Column"
+            "content": "Blog Grid Column"
         },
 		{
             "type": "range",
