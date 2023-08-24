@@ -20,25 +20,30 @@
         "hover_img": false
       }
     },
-    "6496b74a-424e-412a-b993-fbb11de18a61": {
-      "type": "latest-blog",
+    "006b98e5-f543-41c3-ac5e-4cd8bc26ade3": {
+      "type": "newsletter",
+      "blocks": {
+        "e03928ff-1869-4aeb-8cb6-e56daddd384c": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "e03928ff-1869-4aeb-8cb6-e56daddd384c"
+      ],
       "settings": {
-        "container_style": "style_1",
-        "section_title": "Latest News",
-        "blog_handle": "news",
-        "blog_limit_handle": 3,
-        "blog_column": 3,
-        "blog_column_md": 2,
-        "blog_column_sm": 1,
-        "section_title_color": "#282828",
-        "section_border_color": "#cf987e",
-        "section_description_color": "#8a8a8a",
-        "blog_title_color": "#cf987e",
-        "blog_title_hover_color": "#cf987e",
-        "blog_description_color": "#8a8a8a",
-        "dot_border_color": "#dfdfdf",
-        "dot_border_active_color": "#cf987e",
-        "dot_active_color": "#cf987e"
+        "before_title_icon": "fas fa-envelope-open",
+        "before_title_text": "Newsletter",
+        "before_title_color": "#3577f0",
+        "title": "Get weekly update",
+        "bg_img": "shopify:\/\/shop_images\/bg-image-5.jpg"
       }
     }
   },
