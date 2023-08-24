@@ -44,11 +44,19 @@
             "section_margin_top_xs": 0,
             "section_margin_bottom_xs": 0
           }
+        },
+        "4c9de218-44d8-4843-8406-11fa95bdb4ad": {
+          "type": "section_background",
+          "settings": {
+            "section_bg_image": "shopify:\/\/shop_images\/playful-father-and-daughter-having-fun-at-their-ne-2022-09-27-22-44-31-utc.jpg",
+            "section_bg_color": "#bc4242"
+          }
         }
       },
       "block_order": [
         "5f93b855-a1ad-4006-8476-c583e69fd5e7",
-        "3cb41267-1b3d-402d-96ba-865dd918db41"
+        "3cb41267-1b3d-402d-96ba-865dd918db41",
+        "4c9de218-44d8-4843-8406-11fa95bdb4ad"
       ],
       "settings": {
         "container_style": "style_1",
