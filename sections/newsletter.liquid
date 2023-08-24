@@ -6,9 +6,10 @@
       type="text/css">
     <div class="newsletter-content">
       <span class="title-highlighter highlighter-primary2">
-        <i class="fas fa-envelope-open"></i>Newsletter</span>
-      <h2 class="title mb--40 mb_sm--30">Get weekly update</h2>
-
+        <i class="{{ section.settings.before_title_icon }}"></i>
+        {{ section.settings.before_title_text }}</span>
+      <h2 class="title mb--40 mb_sm--30">{{ section.settings.title }}</h2>
+      {{ section.settings.bg_img }}
       <div
         class="wpcf7 js"
         id="wpcf7-f1515-p33-o1"
@@ -80,30 +81,32 @@
 </div>
 
 
-{% comment %} <div class="etrade-newsletter-wrapper bg_image bg_image--5">
-<div class="newsletter-content">
-<span class="title-highlighter highlighter-primary2"><i class="fas fa-envelope-open"></i>Newsletter</span>
-<h2 class="title mb--40 mb_sm--30">Get weekly update</h2>
-
-<div class="wpcf7 js" id="wpcf7-f1515-p33-o1" lang="en-US" dir="ltr">
-<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-<form action="/themes/etrade/home2/#wpcf7-f1515-p33-o1" method="post" class="wpcf7-form init demo mailchimp-ext-0.5.69" aria-label="Contact form" novalidate="novalidate" data-status="init">
-<div class="input-group newsletter-form">
-<div class="position-relative newsletter-inner mb--15">
-<p><span class="wpcf7-form-control-wrap" data-name="EMAIL"><input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your email address" value="" type="email" name="EMAIL"></span>
-</p>
-</div>
-<p><input class="wpcf7-form-control wpcf7-submit has-spinner axil-btn" type="submit" value="Subscribe"><span class="wpcf7-spinner"></span>
-</p>
-</div>
-<div class="wpcf7-response-output" aria-hidden="true"></div><p style="display: none !important"><span class="wpcf7-form-control-wrap referer-page"><input type="hidden" name="referer-page" value="https://dev.axilthemes.com/themes/etrade/" data-value="https://dev.axilthemes.com/themes/etrade/" class="wpcf7-form-control wpcf7-text referer-page" aria-invalid="false"></span></p>
-<!-- Chimpmatic extension by Renzo Johnson -->
-</form>
-</div>
-</div>
-</div> {% endcomment %}{% schema %}
+{% schema %}
   {
     "name": "Newsletter",
+    "settings": [
+      {
+        "type": "text",
+        "id": "before_title_icon",
+        "label": "Before Title Icon",
+        "placeholder": "Add fontawesome icon class here",
+        "default": "fas fa-envelope-open"
+      }, {
+        "type": "text",
+        "id": "before_title_text",
+        "label": "Before Title Text",
+        "default": "Newsletter"
+      }, {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Get weekly update"
+      }, {
+        "type": "image_picker",
+        "id": "bg_img",
+        "label": "Background Image"
+      }
+    ],
     "presets": [
       {
         "name": "Newsletter"
