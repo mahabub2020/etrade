@@ -1,11 +1,14 @@
 <div id="section-{{ section.id }}" data-section="LatestBlog" class="axil-section-gap">
- 
     <div class="{% if section.settings.container_style == 'style_1' %}container {% else %} container-fluid{% endif %}">
       <div class="section-title-wrapper section-title-center">
-          <span class="title-highlighter highlighter-primary"><i class="fas fa-fire"></i> Regular Post</span>
-          <h3 class="title">{{ section.settings.section_title }}</h3>
+           {% if block.settings.section_sub_title != '' %}
+              <span class="title-highlighter highlighter-primary"><i class="fas fa-fire"></i> {{ section.settings.section_sub_title }}</span>
+            {% endif %}
+            {% if block.settings.section_title != '' %}
+              <h3 class="title">{{ section.settings.section_title }}</h3>
+            {% endif %}
       </div>
-        <div class="row g-5"> 
+       <div class="row g-5"> 
               {% assign blog = blogs[section.settings.blog_handle] %}
               {% assign blog_limit = section.settings.blog_limit_handle %}
               {% for article in blog.articles limit: blog_limit %}
@@ -132,8 +135,14 @@ border-color: {{ section.settings.dot_border_active_color }};
         
 		  {
           "type": "text",
+          "id": "section_sub_title",
+          "label": "Sub Title",
+          "default": "Regular Post"
+      	}, 
+        {
+          "type": "text",
           "id": "section_title",
-          "label": "Section Title",
+          "label": "Title",
           "default": "Latest News"
       	},
 		 
@@ -164,34 +173,147 @@ border-color: {{ section.settings.dot_border_active_color }};
 			"type": "header",
             "content": "Blog Grid Column"
         },
-		{
-            "type": "range",
-            "id": "blog_column",
-            "min": 1,
-            "max": 12,
-            "step": 1,
-            "label": "Desktop",
-            "default": 3
+        {
+          "type": "select",
+          "id": "col_xl",
+          "label": "Desktops: > 1199px",
+          "default": "3",
+          "options": [
+            {
+              "label": "1 Col",
+              "value": "1"
+            },
+            {
+              "label": "2 Col",
+              "value": "6"
+            },
+            {
+              "label": "3 Col",
+              "value": "4"
+            },
+            {
+              "label": "4 Col",
+              "value": "3"
+            },
+            {
+              "label": "6 Col",
+              "value": "2"
+            }
+          ]
         },
-		{
-            "type": "range",
-            "id": "blog_column_md",
-            "min": 1,
-            "max": 12,
-            "step": 1,
-            "label": "Tablet",
-            "default": 2
+        {
+          "type": "select",
+          "id": "col_lg",
+          "default": "4",
+          "label": "Desktops: > 991px",
+          "options": [
+            {
+              "label": "1 Col",
+              "value": "1"
+            },
+            {
+              "label": "2 Col",
+              "value": "6"
+            },
+            {
+              "label": "3 Col",
+              "value": "4"
+            },
+            {
+              "label": "4 Col",
+              "value": "3"
+            },
+            {
+              "label": "6 Col",
+              "value": "2"
+            }
+          ]
         },
-		{
-            "type": "range",
-            "id": "blog_column_sm",
-            "min": 1,
-            "max": 12,
-            "step": 1,
-            "label": "Mobile",
-            "default": 1
+        {
+          "type": "select",
+          "id": "col_md",
+          "default": "2",
+          "label": "Desktops: > 767px",
+          "options": [
+            {
+              "label": "1 Col",
+              "value": "1"
+            },
+            {
+              "label": "2 Col",
+              "value": "6"
+            },
+            {
+              "label": "3 Col",
+              "value": "4"
+            },
+            {
+              "label": "4 Col",
+              "value": "3"
+            },
+            {
+              "label": "6 Col",
+              "value": "2"
+            }
+          ]
         },
-		{
+        {
+          "type": "select",
+          "id": "col_sm",
+          "default": "2",
+          "label": "Phones: >575px",
+          "options": [
+            {
+              "label": "1 Col",
+              "value": "1"
+            },
+            {
+              "label": "2 Col",
+              "value": "6"
+            },
+            {
+              "label": "3 Col",
+              "value": "4"
+            },
+            {
+              "label": "4 Col",
+              "value": "3"
+            },
+            {
+              "label": "6 Col",
+              "value": "2"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "col_mobile",
+          "default": "1",
+          "label": "Small Phones: <576px",
+          "options": [
+            {
+              "label": "1 Col",
+              "value": "1"
+            },
+            {
+              "label": "2 Col",
+              "value": "6"
+            },
+            {
+              "label": "3 Col",
+              "value": "4"
+            },
+            {
+              "label": "4 Col",
+              "value": "3"
+            },
+            {
+              "label": "6 Col",
+              "value": "2"
+            }
+          ]
+        },
+		    {
           "type": "header",
           "content": "Color"
         }, 
@@ -203,16 +325,24 @@ border-color: {{ section.settings.dot_border_active_color }};
         }, 
         {
            "type": "color",
-           "id": "section_border_color",
-           "label": "Border Color",
+           "id": "section_icon_color",
+           "label": "Icon Color",
+           "default": "#cf987e"
+        },  
+        {
+           "type": "color",
+           "id": "section_icon_bg_color",
+           "label": "Icon Background Color",
            "default": "#cf987e"
         }, 
         {
            "type": "color",
-           "id": "section_description_color",
-           "label": "Section Description Color",
+           "id": "section_subtitle_color",
+           "label": "Section Sub Title Color",
            "default": "#8a8a8a"
         },  
+
+
         {
            "type": "color",
            "id": "blog_title_color",
