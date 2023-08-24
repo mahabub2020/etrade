@@ -83,15 +83,18 @@
 </div>
 
 {% style %}
-#section-{{ section.id }} .bg_image {
-  background-image: url(
-    {% if section.settings.bg_img %}
-      {{ section.settings.bg_img | img_url: '1290x382' }}
-    {% else %}
-      http:\/\/via.placeholder.com\/1920x780
-    {% endif %}
-    );  
-}
+  #section-{{ section.id }} .bg_image {
+    background-image: url(
+      {% if section.settings.bg_img %}
+        {{ section.settings.bg_img | img_url: '1290x382' }}
+      {% else %}
+        http:\/\/via.placeholder.com\/1290x382
+      {% endif %}
+      );  
+  }
+  .newsletter-inner::before {
+    background-image: url({{ 'send-mail.png' | asset_url }});
+  }
   #section-{{ section.id }}{
     {%- for block in section.blocks -%}
       {%- case block.type -%}
