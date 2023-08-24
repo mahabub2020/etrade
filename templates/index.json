@@ -22,22 +22,6 @@
     },
     "6496b74a-424e-412a-b993-fbb11de18a61": {
       "type": "latest-blog",
-      "blocks": {
-        "template--20190269571387__6496b74a-424e-412a-b993-fbb11de18a61-section_padding-1": {
-          "type": "section_padding",
-          "settings": {
-            "section_padding_top": 10,
-            "section_padding_bottom": 145,
-            "section_padding_top_md": 40,
-            "section_padding_bottom_md": 80,
-            "section_padding_top_xs": 0,
-            "section_padding_bottom_xs": 60
-          }
-        }
-      },
-      "block_order": [
-        "template--20190269571387__6496b74a-424e-412a-b993-fbb11de18a61-section_padding-1"
-      ],
       "settings": {
         "container_style": "style_1",
         "section_title": "Latest News",
