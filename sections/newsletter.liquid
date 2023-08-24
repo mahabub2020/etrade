@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="etrade-newsletter-wrapper bg_image bg_image--5" style="background-image: url('{{ "bg-image-5.jpg" | asset_url }}');">
+  <div class="etrade-newsletter-wrapper bg_image bg_image--5" style="background-image: url('{{ "{{ section.settings.bg_img }}" | img_url }}');">
     <link
       href="//cdn-images.mailchimp.com/embedcode/classic-061523.css"
       rel="stylesheet"
@@ -9,7 +9,7 @@
         <i class="{{ section.settings.before_title_icon }}"></i>
         {{ section.settings.before_title_text }}</span>
       <h2 class="title mb--40 mb_sm--30">{{ section.settings.title }}</h2>
-      {{ section.settings.bg_img }}
+      
       <div
         class="wpcf7 js"
         id="wpcf7-f1515-p33-o1"
