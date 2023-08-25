@@ -27,6 +27,7 @@
           "wellcome_content": "Welcome to Store!",
           "currency_title": "Currency:",
           "header_contact_enable": true,
+          "logo": "shopify:\/\/shop_images\/logo.png",
           "logo_width": 150,
           "account_enable": true,
           "hotline_title": "24\/7 HOTLINE",
