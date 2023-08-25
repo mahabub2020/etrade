@@ -53,7 +53,7 @@
 					speed: 1500,
 					autoplay: false,
 					centerMode: true,
-					rtl: rtltrue,
+					 
 					responsive: [
 						{
 							breakpoint: 575,
