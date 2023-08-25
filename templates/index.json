@@ -44,18 +44,11 @@
             "section_margin_top_xs": 0,
             "section_margin_bottom_xs": 0
           }
-        },
-        "4c9de218-44d8-4843-8406-11fa95bdb4ad": {
-          "type": "section_background",
-          "settings": {
-            "section_bg_color": "#713636"
-          }
         }
       },
       "block_order": [
         "5f93b855-a1ad-4006-8476-c583e69fd5e7",
-        "3cb41267-1b3d-402d-96ba-865dd918db41",
-        "4c9de218-44d8-4843-8406-11fa95bdb4ad"
+        "3cb41267-1b3d-402d-96ba-865dd918db41"
       ],
       "settings": {
         "container_style": "style_1",
@@ -76,12 +69,32 @@
         "blog_title_hover_color": "#cf987e",
         "blog_user_color": "#ffffff",
         "blog_rm_color": "#8a8a8a",
-        "blog_rm_hover_color": "#3577f0"
+        "blog_rm_hover_color": "#3577f0",
+        "blog_post_border_color": "#f1f1f1"
+      }
+    },
+    "54eb0f9d-e514-4bef-8414-9a5ffec18330": {
+      "type": "nft-product-banner-slider",
+      "settings": {
+        "subtitle": "Largest NFT marketplace",
+        "banner_title": "Discover, collect, and sell extraordinary NFTs",
+        "banner_btn_txt": "Explore",
+        "banner_btn_url": "shopify:\/\/pages\/home1",
+        "product_collection": "womens",
+        "number_of_products_to_show": 6,
+        "product_layout": "5",
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "hover_img": false
       }
     }
   },
   "order": [
     "17405413-6b41-4e23-b0f4-3aaf1e79ffb7",
-    "6496b74a-424e-412a-b993-fbb11de18a61"
+    "6496b74a-424e-412a-b993-fbb11de18a61",
+    "54eb0f9d-e514-4bef-8414-9a5ffec18330"
   ]
 }
