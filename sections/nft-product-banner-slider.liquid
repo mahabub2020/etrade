@@ -53,11 +53,7 @@
  
 #section-{{ section.id }}.main-slider-style-3  {
   background-image: url( {{ block.settings.section_bg_color }} 
-    {% if section.settings.banner_img %}
       {{ section.settings.banner_img | img_url: '2000x1333' }}
-    {% else %}
-      http:\/\/via.placeholder.com\/2000x1333
-    {% endif %}
     );  
 }
 
