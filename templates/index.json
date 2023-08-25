@@ -92,11 +92,37 @@
         "reverse_order": true,
         "hover_img": false
       }
+    },
+    "c3018ea0-e816-415a-9493-92e28de4452b": {
+      "type": "section-video",
+      "blocks": {
+        "template--20190269571387__c3018ea0-e816-415a-9493-92e28de4452b-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 80,
+            "section_padding_bottom": 80,
+            "section_padding_top_md": 60,
+            "section_padding_bottom_md": 60,
+            "section_padding_top_xs": 60,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--20190269571387__c3018ea0-e816-415a-9493-92e28de4452b-section_padding-1"
+      ],
+      "settings": {
+        "section_title": "Meet The Greater",
+        "section_sub_title": "Video",
+        "video_img": "shopify:\/\/shop_images\/product-big-10_e079e2b0-d697-4370-877a-0fc3a67e7401.png",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=FkUn86bH34M"
+      }
     }
   },
   "order": [
     "17405413-6b41-4e23-b0f4-3aaf1e79ffb7",
     "6496b74a-424e-412a-b993-fbb11de18a61",
-    "54eb0f9d-e514-4bef-8414-9a5ffec18330"
+    "54eb0f9d-e514-4bef-8414-9a5ffec18330",
+    "c3018ea0-e816-415a-9493-92e28de4452b"
   ]
 }
