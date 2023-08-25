@@ -86,6 +86,7 @@
         "excluded_products": [
 
         ],
+        "offset_product": 1,
         "sort_by": "title",
         "reverse_order": false,
         "hover_img": false
