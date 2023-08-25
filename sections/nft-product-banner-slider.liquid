@@ -52,7 +52,7 @@
 <style>
  
 #section-{{ section.id }}.main-slider-style-3  {
-  background-image: url(
+  background-image: url( {{ block.settings.section_bg_color }} 
     {% if section.settings.banner_img %}
       {{ section.settings.banner_img | img_url: '2000x1333' }}
     {% else %}
@@ -108,6 +108,13 @@
       "id": "banner_img",
       "label": "Banner Background Image"
     },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+
 
     {
       "type": "header",
