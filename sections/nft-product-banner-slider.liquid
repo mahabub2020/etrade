@@ -3,15 +3,15 @@
       <div class="row align-items-center">
           <div class="col-xl-6 col-lg-6">
               <div class="main-slider-content">
-                {% if block.settings.subtitle != '' %}
-                  <span class="subtitle"><i class="fas fa-fire"></i>{{ block.settings.subtitle }}</span>
+                {% if section.settings.subtitle != '' %}
+                  <span class="subtitle"><i class="fas fa-fire"></i>{{ section.settings.subtitle }}</span>
                 {% endif %} 
-                {% if block.settings.banner_title != '' %}
-                  <h1 class="title">{{ block.settings.banner_title }}</h1>
+                {% if section.settings.banner_title != '' %}
+                  <h1 class="title">{{ section.settings.banner_title }}</h1>
                 {% endif %}  
-                {% if block.settings.banner_btn_url %}  
+                {% if section.settings.banner_btn_url %}  
                   <div class="shop-btn">
-                    <a href="{{ block.settings.banner_btn_url }}" class="axil-btn btn-bg-white right-icon"><i class="fal fa-long-arrow-right"></i> {{ block.settings.banner_btn_txt }}</a>
+                    <a href="{{ section.settings.banner_btn_url }}" class="axil-btn btn-bg-white right-icon"><i class="fal fa-long-arrow-right"></i> {{ section.settings.banner_btn_txt }}</a>
                   </div>   
                 {% endif %}   
               </div>
