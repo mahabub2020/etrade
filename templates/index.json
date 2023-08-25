@@ -80,7 +80,7 @@
         "banner_title": "Discover, collect, and sell extraordinary NFTs",
         "banner_btn_txt": "Explore",
         "banner_btn_url": "shopify:\/\/pages\/home1",
-        "banner_img": "shopify:\/\/shop_images\/woman-looking-through-black-shirts_23-2148302783.jpg",
+        "section_bg_color": "#dd1d1d",
         "product_collection": "womens",
         "number_of_products_to_show": 6,
         "product_layout": "5",
