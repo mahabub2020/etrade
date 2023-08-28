@@ -1,10 +1,19 @@
 <nav class="mainmenu-nav">
     <button class="mobile-close-btn mobile-nav-toggler"><i class="fas fa-times"></i></button>
-    <div class="mobile-nav-brand">
-        <a href="index.html" class="logo">
-            <img src="assets/images/logo/logo.png" alt="Site Logo">
-        </a>
-    </div>
+        <div class="mobile-nav-brand"> 
+            {% if section.settings.mobile_logo %}
+                <a href="/" class="logo"> 
+                <figure class="logo--transparency">
+                    <img src="{{ section.settings.mobile_logo | img_url: '300x300' }}" alt="{{ section.settings.mobile_logo.alt | default: shop.name }}">
+                </figure> 
+                </a>
+            {% else %}
+                <a href="/" class="logo-text">
+                {{ shop.name }}
+                </a>
+            {% endif %} 
+        </div>
+    
     <ul class="mainmenu">
         <li class="dropdown">
             <a class="dropdown-toggle" href="#" role="button" id="dropdown-header-menu" data-bs-toggle="dropdown" aria-expanded="false">
