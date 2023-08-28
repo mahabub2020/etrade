@@ -41,7 +41,7 @@ $(document).ready(function(){
         $('.header-search-modal + div').addClass('closeMask');
     });
 
-    $('.searchbar-close').on('click', function() {
+    $('.searchbar-close, .closeMask').on('click', function() {
         $('body, .header-search-modal').removeClass('open');
         $('.header-search-modal + div').removeClass('closeMask');
     });
