@@ -42,7 +42,6 @@ $(document).ready(function(){
 
                     setTimeout(function () {
                         $('div.card-header div.input-group input#prod-search').trigger('focus');
-                        document.getElementById('prod-search').focus();
                     }, 200);
     });
 
