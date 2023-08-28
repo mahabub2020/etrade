@@ -24,7 +24,7 @@
             <ul></ul>
           </div>
           <form
-            action="https://axilweb.us21.list-manage.com/subscribe/post?u=d2a79986af90d180038dc91c6&amp;id=e71e328c72&amp;f_id=0015dce6f0"
+            action="{{ section.settings.form_action_url }}"
             method="post"
             id="mc-embedded-subscribe-form"
             name="mc-embedded-subscribe-form"
@@ -180,6 +180,11 @@
         "type": "image_picker",
         "id": "bg_img",
         "label": "Background Image"
+      }, {
+        "type": "text",
+        "id": "form_action_url",
+        "label": "Form Action URL",
+        "default": "https://axilweb.us21.list-manage.com/subscribe/post?u=d2a79986af90d180038dc91c6&amp;id=e71e328c72&amp;f_id=0015dce6f0"
       }
     ],
 
