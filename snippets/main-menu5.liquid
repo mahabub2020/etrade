@@ -15,29 +15,14 @@
         </div>
     
     <ul class="mainmenu">
-        <li class="dropdown">
-            <a class="dropdown-toggle" href="#" role="button" id="dropdown-header-menu" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="far fa-th-large"></i> Categories
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdown-header-menu">
-                <li><a class="dropdown-item" href="shop-sidebar.html">Fashion</a></li>
-                <li><a class="dropdown-item" href="shop-sidebar.html">Electronics</a></li>
-                <li><a class="dropdown-item" href="shop-sidebar.html">Home Decor</a></li>
-                <li><a class="dropdown-item" href="shop-sidebar.html">Medicine</a></li>
-                <li><a class="dropdown-item" href="shop-sidebar.html">Furniture</a></li>
-                <li><a class="dropdown-item" href="shop-sidebar.html">Crafts</a></li>
-                <li><a class="dropdown-item" href="shop-sidebar.html">Accessories</a></li>
-                <li><a class="dropdown-item" href="shop-sidebar.html">Handicraft</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="shop.html"><i class="far fa-bags-shopping"></i> Shop</a>
-        </li>
-        <li>
-            <a href="shop-sidebar.html"><i class="far fa-badge-percent"></i>Deals</a>
-        </li>
-        <li>
-            <a href="contact.html"><i class="far fa-headset"></i>Support</a>
-        </li>
+
+        {% assign main_menu_handle = section.settings.header_primary_menu %}
+
+        {% for link in linklists[main_menu_handle].links %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+ 
+       
+
     </ul>
 </nav>
