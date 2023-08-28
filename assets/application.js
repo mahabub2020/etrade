@@ -39,6 +39,10 @@ $(document).ready(function(){
     $('.axil-search').on('click', function() {
         $('body, .header-search-modal').addClass('open');
         $('#closeMask').addClass('closeMask');
+
+        setTimeout(function () {
+            $('#prod-search').focus();
+        }, 200);
     });
 
     $('.searchbar-close, #closeMask').on('click', function() {
