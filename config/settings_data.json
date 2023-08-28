@@ -10,7 +10,7 @@
           "header_currency_enable": true,
           "header_top_center": "CHRISTMAS SALE - 25% OFF <span>added at the checkout<\/span>",
           "header_top_left": "Free Shipping on Orders Over $150",
-          "header_top_right_menu": "main-menu",
+          "header_top_right_menu": "header-top-menu",
           "welcome_text_enable": true,
           "wellcome_customer": "Welcome to Store",
           "wellcome_content": "Welcome to Store!",
