@@ -41,7 +41,8 @@ $(document).ready(function(){
         $('#closeMask').addClass('closeMask');
 
                     setTimeout(function () {
-                        $('div.card-header div.input-group input#prod-search').trigger('focus');
+                        // $('div.card-header div.input-group input#prod-search').trigger('focus');
+                        document.getElementById('prod-search').focus();
                     }, 200);
     });
 
