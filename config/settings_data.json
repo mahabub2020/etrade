@@ -26,7 +26,7 @@
           "location_space": "United Kingdom",
           "signin_title": "Login",
           "signout_title": "Logout",
-          "qwe_header_top_menu": "",
+          "header_primary_menu": "main-menu",
           "mini_cart_enable": true,
           "cart_title": "Shopping Cart",
           "view_cart_title": "View Cart",
