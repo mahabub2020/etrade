@@ -39,7 +39,7 @@ $(document).ready(function(){
     $('.axil-search').on('click', function() {
         $('body, .header-search-modal').addClass('open');
         $('#closeMask').addClass('closeMask');
-      $('div.card-header div.input-group input#prod-search').trigger('focus');
+      $('#prod-search').focus();;
     });
 
     $('.searchbar-close, #closeMask').on('click', function() {
