@@ -37,12 +37,12 @@ $(document).ready(function(){
 
     // Search modal open
     $('.axil-search').on('click', function() {
-        $('.header-search-modal').addClass('open');
+        $('body, .header-search-modal').addClass('open');
         $('.header-search-modal + div').addClass('closeMask');
     });
 
     $('.searchbar-close').on('click', function() {
-        $('.header-search-modal').removeClass('open');
+        $('body, .header-search-modal').removeClass('open');
         $('.header-search-modal + div').removeClass('closeMask');
     });
 
