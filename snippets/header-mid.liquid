@@ -4,10 +4,10 @@
             <div class="col-sm-6">
                 <div class="header-top-dropdown">  
                     {% if section.settings.header_languages_enable %} 
-                        {% include 'languages' %}
+                        {% render 'languages' %}
                     {% endif %}
                     {% if section.settings.header_currency_enable %} 
-                        {% include 'currency' %}
+                        {% render 'currency' %}
                     {% endif %}
                 </div>
             </div>

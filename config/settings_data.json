@@ -5,7 +5,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "header_style": "header_style_1",
+          "header_style": "header_style_5",
           "header_languages_enable": true,
           "header_currency_enable": true,
           "header_top_menu": "",
@@ -27,6 +27,8 @@
           "wellcome_content": "Welcome to Store!",
           "currency_title": "Currency:",
           "header_contact_enable": true,
+          "logo": "shopify:\/\/shop_images\/logo.png",
+          "logo_sticky": "shopify:\/\/shop_images\/logo.png",
           "logo_width": 150,
           "account_enable": true,
           "hotline_title": "24\/7 HOTLINE",

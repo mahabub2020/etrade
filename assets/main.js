@@ -15,6 +15,7 @@
             testimonialActivation();
             countdown();
             new_arrivals_product_activation();
+            slider_thumb_activation_two();
 
         });
 
@@ -30,6 +31,42 @@
         //     testimonialActivation();
         // });
     
+
+
+		 function slider_thumb_activation_two() {
+
+			var SlickCarousel = $('.main-slider-style-3');
+			if (SlickCarousel.length) {
+				try {
+					if (SlickCarousel.find('.slider-thumb-activation-two').hasClass('slick-initialized')) {
+						SlickCarousel.find('.slider-thumb-activation-two').slick('unslick');
+					}
+				} catch (e) { }
+
+				SlickCarousel.find('.slider-thumb-activation-two').slick({
+
+					infinite: true,
+					slidesToShow: 3,
+					centerPadding: '0',
+					arrows: false,
+					dots: true,
+					speed: 1500,
+					autoplay: false,
+					centerMode: true,
+					 
+					responsive: [
+						{
+							breakpoint: 575,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1,
+							}
+						},
+					]
+				});
+			}
+
+		}
 
 
 		function new_arrivals_product_activation() {
