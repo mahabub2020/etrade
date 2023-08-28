@@ -35,4 +35,13 @@ $(document).ready(function(){
         $(this).parent().find('.input-text.qty').trigger('stepDown').trigger('change');
     });
 
+    // Search modal open
+    $('.axil-search').on('click', function() {
+        $('.header-search-modal').addClass('open');
+    });
+    
+    $('.searchbar-close').on('click', function() {
+        $('.header-search-modal').removeClass('open');
+    });
+
 });
