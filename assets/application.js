@@ -42,7 +42,6 @@ $(document).ready(function(){
     });
 
     $('.searchbar-close, .closeMask').on('click', function() {
-      console.log('working');
         $('body, .header-search-modal').removeClass('open');
         $('.header-search-modal + div').removeClass('closeMask');
     });
