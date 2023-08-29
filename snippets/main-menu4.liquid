@@ -10,7 +10,7 @@
                       {% render 'header-logo' %}
                     </div>
                     {% assign linklist = section.settings.header_primary_menu %}
-                    <ul class="mainmenu nav-menu-list">
+                    <ul class="mainmenu">
                         {% for link in linklists[linklist].links %}
                         {% assign child_list_handle = link.title | handle %}
                         {% if linklists[child_list_handle] and linklists[child_list_handle].links.size > 0 %}

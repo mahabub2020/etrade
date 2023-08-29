@@ -1,0 +1,12 @@
+{% if section.settings.mobile_logo %}
+  <div class="mobile-nav-brand">
+    <a href="/" class="logo"> 
+        <img src="{{ section.settings.mobile_logo | img_url: '300x300' }}" alt="{{ section.settings.mobile_logo.alt | default: shop.name }}">
+    </a>
+    {% else %}
+    <a href="/" class="logo-text">
+      {{ shop.name }}
+    </a>
+  </div>
+{% endif %}
+ 
