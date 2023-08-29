@@ -66,31 +66,13 @@ $(document).ready(function(){
             if(url.indexOf('?') == -1) {
                 var newURL = url+"?keyword="+keyword;
             }else {
-                var newURL = url+"&keyword="+keyword;
+                if(url.indexOf('keyword') != -1) {
+                    url.replace(/(keyword=)[^\&]+/, '$1' + "keyword="+keyword);
+                }else {
+                    var newURL = url+"&keyword="+keyword;
+                }
             }
             history.pushState({}, null, newURL);
-            // $.ajax({
-            //     url: eTradeAjaxObj.ajaxurl,
-            //     type: 'POST',
-            //     data: {
-            //         'action': 'prod_search',
-            //         'keyword': keyword,
-            //     },
-            //     context: this,
-            //     beforeSend: function () {
-            //         // $('.search-results-body').empty();
-            //         $('.search_input_loader').show();
-            //         //$('#prod-search').attr('disabled', 'disabled');
-            //     },
-            //     success: function (data) {
-            //         $('.search_input_loader').hide();
-            //         $('.search-results-body').html(data);
-            //     },
-            //     // complete: function () {
-            //     // 	$('.search_input_loader').hide();
-            //     // 	// $('#prod-search').removeAttr('disabled').focus();
-            //     // }
-            // });
         }
     });
 
