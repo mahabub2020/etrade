@@ -11,6 +11,7 @@
           "header_top_center": "CHRISTMAS SALE - 25% OFF <span>added at the checkout<\/span>",
           "header_top_left": "Free Shipping on Orders Over $150",
           "header_top_right_menu": "header-top-menu",
+          "top_campaign_bg": "shopify:\/\/shop_images\/sale-tag.jpg",
           "welcome_text_enable": true,
           "wellcome_customer": "Welcome to Store",
           "wellcome_content": "Welcome to Store!",
