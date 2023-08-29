@@ -63,7 +63,7 @@ $(document).ready(function(){
             const searchResultHTML = await searchResult.text();
             $('.search-results-body').html(searchResultHTML);
             var url = window.location.href;
-            if(url.indexOf('?') != -1) {
+            if(url.indexOf('?') == -1) {
                 var newURL = url+"?keyword="+keyword;
             }else {
                 var newURL = url+"&keyword="+keyword;
