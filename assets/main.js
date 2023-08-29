@@ -43,7 +43,7 @@
             });
          }
         function searchClick(e) {
-            var screenWidth = axilInit._window.width();
+            var screenWidth = $(window).width();
             if (screenWidth < 576) {
                 $('.axil-search .search-button').on('click', function (e) {
                     e.preventDefault();
