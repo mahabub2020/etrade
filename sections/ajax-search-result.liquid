@@ -1,27 +1,16 @@
-<div class="header-search-modal" id="header-search-modal">
-    <button class="card-close searchbar-close"><i class="fas fa-times"></i></button>
-    <div class="header-search-wrap">
-        <div class="card-header">
-            <form action="#">
-                <div class="input-group">
-                    <input type="search" class="form-control" name="prod-search" id="prod-search" placeholder="What are you looking for?">
-                    <button type="submit" class="axil-btn btn-bg-primary"><i class="fal fa-search"></i></button>
-                </div>
-            </form>
-        </div>
-        <div class="search_input_loader loader1"></div>
-        <div class="card-body search-results-body">
-            <div class="recent-product">
-                <div class="search-result-header">
-                    <h6 class="title">Recent Product</h6>
-                    <a href="{{ routes.all_products_collection_url }}" class="view-all">View All</a>
-                </div>
-                <div class="psearch-results">  
-                    {% for product in collections['all'].products limit: 3 %}                               
+<div class="search-product">
+    <div class="search-result-header">
+        <h6 class="title">Recent Product</h6>
+        <a href="{{ routes.all_products_collection_url }}" class="view-all">View All</a>
+    </div>
+    <div class="psearch-results">  
+        {% for item in search.results %}
+            {% case item.object_type %}
+                {% when 'product' %}
                     <div class="axil-product-list">
                         <div class="thumbnail">
-                            <a href="{{ product.url }}">
-                                {{ product.featured_image | img_url: '150x150' | img_tag }}
+                            <a href="{{ item.url }}">
+                                {{ item.featured_image | img_url: '150x150' | img_tag }}
                             </a>
                         </div>
                         <div class="product-content">
@@ -33,19 +22,19 @@
                                 </span>
                             </div>
                             <h6 class="product-title">
-                                <a href="{{ product.url }}">{{ product.title }}</a>
+                                <a href="{{ item.url }}">{{ item.title }}</a>
                                 </h6>
                             <div class="product-price-variant">
                                 <span class="woocommerce-Price-amount amount">
-                                    {{ product.price | money }}
+                                    {{ item.price | money }}
                                 </span>
                             </div>
                             <div class="product-cart add-to-cart">
                                 {% form 'product', product %}
-                                  <input
+                                    <input
                                     type="hidden"
                                     name="id"
-                                    value="{{ product.selected_or_first_available_variant.id }}">
+                                    value="{{ item.selected_or_first_available_variant.id }}">
                                     <button type="submit"><i class="fal fa-shopping-cart"></i></button>
                                     <a href="https://dev.axilthemes.com/themes/etrade/wishlist/" rel="nofollow" data-product-id="1740" data-title-after="Added to Wishlist" class="axil-wishlist-icon axil-add-to-wishlist" data-nonce="389fe6afdd" target="_blank">
                                     <i class="wishlist-icon far fa-heart"></i>
@@ -54,10 +43,9 @@
                             </div>
                         </div>
                     </div>	
-                {% endfor %}          
-                </div>
-            </div>
-        </div>
+                {% else %}
+                    
+            {% endcase %}
+    {% endfor %}          
     </div>
 </div>
-<div id="closeMask"></div>

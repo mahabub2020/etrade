@@ -51,35 +51,40 @@ $(document).ready(function(){
         $('#closeMask').removeClass('closeMask');
     });
 
+    // Product search ajax
     var recent_product = $('.recent-product');
-    $(document).on('input', '#prod-search', function () {
+    $(document).on('input', '#prod-search', async function () {
         if (this.value.length <= 0) {
-            console.log(recent_product);
             $('.search-results-body').html(recent_product);
         } else if(this.value.length >= 3) {
             var keyword = $('#prod-search').val();
-            $.ajax({
-                url: eTradeAjaxObj.ajaxurl,
-                type: 'POST',
-                data: {
-                    'action': 'prod_search',
-                    'keyword': keyword,
-                },
-                context: this,
-                beforeSend: function () {
-                    // $('.search-results-body').empty();
-                    $('.search_input_loader').show();
-                    //$('#prod-search').attr('disabled', 'disabled');
-                },
-                success: function (data) {
-                    $('.search_input_loader').hide();
-                    $('.search-results-body').html(data);
-                },
-                // complete: function () {
-                // 	$('.search_input_loader').hide();
-                // 	// $('#prod-search').removeAttr('disabled').focus();
-                // }
-            });
+
+            const searchResult = await fetch("/?section_id=ajax-search-result");
+            const searchResultHTML = await searchResult.text();
+            $('.search-results-body').html(searchResultHTML);
+
+            // $.ajax({
+            //     url: eTradeAjaxObj.ajaxurl,
+            //     type: 'POST',
+            //     data: {
+            //         'action': 'prod_search',
+            //         'keyword': keyword,
+            //     },
+            //     context: this,
+            //     beforeSend: function () {
+            //         // $('.search-results-body').empty();
+            //         $('.search_input_loader').show();
+            //         //$('#prod-search').attr('disabled', 'disabled');
+            //     },
+            //     success: function (data) {
+            //         $('.search_input_loader').hide();
+            //         $('.search-results-body').html(data);
+            //     },
+            //     // complete: function () {
+            //     // 	$('.search_input_loader').hide();
+            //     // 	// $('#prod-search').removeAttr('disabled').focus();
+            //     // }
+            // });
         }
     });
 
