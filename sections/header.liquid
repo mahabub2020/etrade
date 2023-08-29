@@ -408,6 +408,23 @@
 {% endif %}  
 
 
+{%- style -%}
+ 
+.header-top-campaign
+{
+{% if section.settings.top_campaign_bg %}
+  background-image: url( {{ section.settings.top_campaign_bg | img_url: '1920x40' }} );
+{% else %}
+  background-image: url( {{ "campaign-bg2.png" | asset_url }} );
+{% endif %}
+
+}
+
+{%- endstyle -%}
+
+
+
+
 {% schema %}
   {
     "name": "Header",
@@ -478,6 +495,11 @@
             "id": "header_top_right_menu",
             "label": "Header Top Right Menu"
           },   
+          {
+            "type": "image_picker",
+            "id": "top_campaign_bg",
+            "label": "Top Background Image"
+          }, 
 
       {
         "type": "header",
