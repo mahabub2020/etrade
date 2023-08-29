@@ -417,8 +417,11 @@
 {% else %}
   background-image: url( {{ "campaign-bg2.png" | asset_url }} );
 {% endif %}
-
 }
+.header-top-campaign .campaign-content p{
+  color: {{ section.settings.header_top_txt_color }};
+}
+
 
 {%- endstyle -%}
 
@@ -854,10 +857,12 @@
         "content": "Color"
       }, {
         "type": "color",
-        "id": "header_bg_color",
-        "label": "Header BG Color",
-        "default": "#fff"
-      }, {
+        "id": "header_top_txt_color",
+        "label": "Header Top Text Color",
+        "default": "#eeb2ff"
+      }, 
+      
+      {
         "type": "color",
         "id": "header_bg_color_2",
         "label": "Header Sticky BG Color",
