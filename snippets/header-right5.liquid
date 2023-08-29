@@ -1,54 +1,20 @@
 <ul class="action-list">
-    <li class="axil-search">
-      <a
-        href="javascript:void(0)"
-        class="header-search-icon"
-        title="Search">
-        <i class="fal fa-search"></i>
-      </a>
+    <li class="axil-search d-none-laptop">
+        {% render 'header-search-box' %}
     </li>
-    <li class="wishlist">
-      <a href="wishlist.html">
-        <i class="fal fa-heart"></i>
-      </a>
+    <li class="axil-search d-none-desktop">
+        {% render 'header-search-mobile' %}
     </li>
     <li class="shopping-cart">
-      <a href="#" class="cart-dropdown-btn">
-        <span class="cart-count">{{ cart.item_count }}</span>
-        <i class="fal fa-shopping-cart"></i>
-      </a>
+        {% render 'header-cart-icon' %}
+    </li>
+    <li class="wishlist">
+        {% render 'header-wishlist-icon' %}
     </li>
     <li class="my-account">
-      <a href="javascript:void(0)">
-        <i class="flaticon-person"></i>
-      </a>
-      <div class="my-account-dropdown">
-        <span class="title">QUICKLINKS</span>
-        <ul>
-          <li>
-            <a href="my-account.html">My Account</a>
-          </li>
-          <li>
-            <a href="#">Initiate return</a>
-          </li>
-          <li>
-            <a href="#">Support</a>
-          </li>
-          <li>
-            <a href="#">Language</a>
-          </li>
-        </ul>
-        <div class="login-btn">
-          <a href="sign-in.html" class="axil-btn btn-bg-primary">Login</a>
-        </div>
-        <div class="reg-footer text-center">No account yet?
-          <a href="sign-up.html" class="btn-link">REGISTER HERE.</a>
-        </div>
-      </div>
+        {% render 'header-account-icon' %}
     </li>
-    <li class="axil-mobile-toggle">
-      <button class="menu-btn mobile-nav-toggler">
-        <i class="flaticon-menu-2"></i>
-      </button>
+    <li class="axil-mobile-toggle"> 
+        {% render 'header-mobile-nav-toggler' %} 
     </li>
-  </ul>
+</ul>
