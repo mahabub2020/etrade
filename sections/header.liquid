@@ -318,7 +318,8 @@
   <div class="axil-mainmenu aside-category-menu">
       <div class="container">
           <div class="header-navbar">
-              <div class="header-nav-department">
+            {% if section.settings.header_cat_menu %}  
+            <div class="header-nav-department">
                   <aside class="header-department">
                       <button class="header-department-text department-title">
                           <span class="icon"><i class="fal fa-bars"></i></span>
@@ -327,6 +328,7 @@
                       {% render 'categories-menu' %}
                   </aside>
               </div>
+            {% endif %}  
               <div class="header-main-nav">
                   <!-- Start Mainmanu Nav -->
                   <nav class="mainmenu-nav">
