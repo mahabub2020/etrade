@@ -27,6 +27,7 @@
           "signin_title": "Login",
           "signout_title": "Logout",
           "header_primary_menu": "main-menu",
+          "header_cat_menu": "header-top-menu",
           "mini_cart_enable": true,
           "cart_title": "Shopping Cart",
           "view_cart_title": "View Cart",
