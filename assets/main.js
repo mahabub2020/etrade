@@ -18,6 +18,7 @@
             slider_thumb_activation_two();
             headerIconToggle();
             searchClick();
+            headerCampaignRemove();
 
         });
 
@@ -32,7 +33,15 @@
         //     magnificPopupActivation();
         //     testimonialActivation();
         // });
-    
+
+        function headerCampaignRemove() {
+            $('.remove-campaign').on('click', function() {
+                 var targetElem = $('.header-top-campaign');
+                 targetElem.slideUp(function() {
+                     $(this).remove();
+                 });
+            });
+         }
         function searchClick(e) {
             var screenWidth = axilInit._window.width();
             if (screenWidth < 576) {
