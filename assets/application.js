@@ -67,7 +67,7 @@ $(document).ready(function(){
                 var newURL = url+"?keyword="+keyword;
             }else {
                 if(url.indexOf('keyword') != -1) {
-                    url.replace(/(keyword=)[^\&]+/, '$1' + "keyword="+keyword);
+                    var newURL = url.replace(/(keyword=)[^\&]+/, '$1' + "keyword="+keyword);
                 }else {
                     var newURL = url+"&keyword="+keyword;
                 }
