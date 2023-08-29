@@ -64,7 +64,7 @@ $(document).ready(function(){
             $('.search-results-body').html(searchResultHTML);
             var url = window.location.href;
             var newURL = url+"?q="+keyword;
-            window.location.href = newURL;
+            history.pushState({}, null, newURL);
             // $.ajax({
             //     url: eTradeAjaxObj.ajaxurl,
             //     type: 'POST',
