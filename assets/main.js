@@ -16,6 +16,8 @@
             countdown();
             new_arrivals_product_activation();
             slider_thumb_activation_two();
+            headerIconToggle();
+            searchClick();
 
         });
 
@@ -31,7 +33,36 @@
         //     testimonialActivation();
         // });
     
+        function searchClick(e) {
+            var screenWidth = axilInit._window.width();
+            if (screenWidth < 576) {
+                $('.axil-search .search-button').on('click', function (e) {
+                    e.preventDefault();
+                    $(this).toggleClass('open').siblings('.form-control').slideToggle().toggleClass('active');
+                })
+            }
+        }
+        function headerIconToggle() {
 
+            var maskWrapper = $('<div / >').addClass('accountToggleMask');
+
+            $('.my-account > a').on('click', function(e) {
+                if (!$(this).hasClass('open')) {
+                    $(this).addClass('open').siblings().addClass('open');
+                    $(this).parent().append(maskWrapper);
+
+                }else {
+                    $(this).removeClass('open').siblings().removeClass('open');
+                    $(this).parent().find('.accountToggleMask').remove();
+                }
+
+                $('.accountToggleMask').on('click', function(e) {
+                    $(this).removeClass('open').siblings().removeClass('open');
+                    $(this).parent().find('.accountToggleMask').remove();
+                })
+
+            })
+        }
 
 		 function slider_thumb_activation_two() {
 

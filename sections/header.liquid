@@ -90,7 +90,7 @@
           {% render 'header-logo' %}
         </div>
         <div class="header-main-nav">
-          {% render 'main-menu-1' %}
+          {% render 'main-menu5' %}
         </div>
         <div class="header-action">
           <ul class="action-list">
@@ -955,7 +955,7 @@
                 {% render 'header-logo' %}
               </div>
               <div class="header-main-nav">
-                {% render 'main-menu-5' %}
+                {% render 'main-menu5' %}
               </div>
               <div class="header-action">
                 {% render 'header-right5' %} 
@@ -1019,121 +1019,34 @@
         "id": "header_currency_enable",
         "label": "Currency Enable",
         "default": true
-      }, {
-        "type": "link_list",
-        "id": "header_top_menu",
-        "label": "Select Menu"
-      }, {
+      }, 
+      {
         "type": "header",
         "content": "Header Top"
-      }, {
-        "type": "text",
-        "id": "header_top_center",
-        "label": "Header Top Cente ",
-        "default": "CHRISTMAS SALE - 25% OFF <span>added at the checkout</span>"
-      }, {
-        "type": "header",
-        "content": "Section Padding"
-      }, {
-        "type": "header",
-        "content": "Large/Desktop Device"
-      }, {
-        "type": "text",
-        "id": "section_padding_top_1",
-        "label": "Section Padding Top",
-        "default": "2",
-        "info": "Defined in rem. Do not add the 'pixels' unit."
-      }, {
-        "type": "text",
-        "id": "section_padding_bottom_1",
-        "label": "Section Padding Bottom",
-        "default": "2",
-        "info": "Defined in rem. Do not add the 'pixels' unit."
-      }, {
-        "type": "header",
-        "content": "Tablet Device"
-      }, {
-        "type": "text",
-        "id": "section_padding_top_md_1",
-        "label": "Section Padding Top",
-        "default": "2",
-        "info": "Defined in rem. Do not add the 'pixels' unit."
-      }, {
-        "type": "text",
-        "id": "section_padding_bottom_md_1",
-        "label": "Section Padding Bottom",
-        "default": "2",
-        "info": "Defined in rem. Do not add the 'pixels' unit."
-      }, {
-        "type": "header",
-        "content": "Mobile Device"
-      }, {
-        "type": "text",
-        "id": "section_padding_top_xs_1",
-        "label": "Section Padding Top",
-        "default": "2",
-        "info": "Defined in rem. Do not add the 'pixels' unit."
-      }, {
-        "type": "text",
-        "id": "section_padding_bottom_xs_1",
-        "label": "Section Padding Bottom",
-        "default": "2",
-        "info": "Defined in rem. Do not add the 'pixels' unit."
-      }, {
-        "type": "header",
-        "content": "Sticky Header"
-      }, {
-        "type": "header",
-        "content": "Section Padding"
-      }, {
-        "type": "header",
-        "content": "Large/Desktop Device"
-      }, {
-        "type": "text",
-        "id": "section_padding_top_4",
-        "label": "Section Padding Top",
-        "default": "2",
-        "info": "Defined in rem. Do not add the 'pixels' unit."
-      }, {
-        "type": "text",
-        "id": "section_padding_bottom_4",
-        "label": "Section Padding Bottom",
-        "default": "2",
-        "info": "Defined in rem. Do not add the 'pixels' unit."
-      }, {
-        "type": "header",
-        "content": "Tablet Device"
-      }, {
-        "type": "text",
-        "id": "section_padding_top_md_4",
-        "label": "Section Padding Top",
-        "default": "2",
-        "info": "Defined in rem. Do not add the 'pixels' unit."
-      }, {
-        "type": "text",
-        "id": "section_padding_bottom_md_4",
-        "label": "Section Padding Bottom",
-        "default": "2",
-        "info": "Defined in rem. Do not add the 'pixels' unit."
-      }, {
-        "type": "header",
-        "content": "Mobile Device"
-      }, {
-        "type": "text",
-        "id": "section_padding_top_xs_4",
-        "label": "Section Padding Top",
-        "default": "2",
-        "info": "Defined in rem. Do not add the 'pixels' unit."
-      }, {
-        "type": "text",
-        "id": "section_padding_bottom_xs_4",
-        "label": "Section Padding Bottom",
-        "default": "2",
-        "info": "Defined in rem. Do not add the 'pixels' unit."
-      }, {
+      },
+          {
+            "type": "text",
+            "id": "header_top_center",
+            "label": "Header Top Cente ",
+            "default": "CHRISTMAS SALE - 25% OFF <span>added at the checkout</span>"
+          },  
+          {
+            "type": "text",
+            "id": "header_top_left",
+            "label": "Header Top Left ",
+            "default": "Free Shipping on Orders Over $150"
+          }, 
+          {
+            "type": "link_list",
+            "id": "header_top_right_menu",
+            "label": "Header Top Right Menu"
+          },   
+
+      {
         "type": "header",
         "content": "Wellcome Text"
-      }, {
+      }, 
+      {
         "type": "checkbox",
         "id": "welcome_text_enable",
         "label": "Welcome Text Enable",
@@ -1171,14 +1084,27 @@
         "type": "image_picker",
         "id": "logo",
         "label": "Logo"
-      }, {
+      },
+       {
         "type": "header",
         "content": "Sticky Logo"
-      }, {
+      },
+       {
         "type": "image_picker",
         "id": "logo_sticky",
         "label": "Logo"
-      }, {
+      },   
+      {
+        "type": "header",
+        "content": "Mobile Logo"
+      },
+       {
+        "type": "image_picker",
+        "id": "mobile_logo",
+        "label": "Mobile Logo"
+      }, 
+      
+      {
         "type": "range",
         "id": "logo_width",
         "label": "Custom logo width",
@@ -1236,9 +1162,12 @@
         "default": "Logout"
       }, {
         "type": "link_list",
-        "id": "qwe_header_top_menu",
-        "label": "Select Menu"
-      }, {
+        "id": "header_primary_menu",
+        "label": "Select Primary Menu"
+      }, 
+      
+      
+      {
         "type": "header",
         "content": "Mini Cart"
       }, {
