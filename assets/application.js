@@ -62,7 +62,9 @@ $(document).ready(function(){
             const searchResult = await fetch("/?section_id=ajax-search-result");
             const searchResultHTML = await searchResult.text();
             $('.search-results-body').html(searchResultHTML);
-
+            var url = window.location.href;
+            var newURL = url+"?q="+keyword;
+            window.location.href = newURL;
             // $.ajax({
             //     url: eTradeAjaxObj.ajaxurl,
             //     type: 'POST',

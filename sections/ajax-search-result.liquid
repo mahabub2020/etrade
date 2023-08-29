@@ -10,7 +10,7 @@
        replace:'\u0026','&' |
        split: "?" | last
     -%}
-    {{ query }}
+    {{ contentForQuerystring }}
     <div class="psearch-results">  
         {% for product in collections['all'].products limit: 3 %}                               
         <div class="axil-product-list">
