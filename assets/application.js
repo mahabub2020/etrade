@@ -63,7 +63,11 @@ $(document).ready(function(){
             const searchResultHTML = await searchResult.text();
             $('.search-results-body').html(searchResultHTML);
             var url = window.location.href;
-            var newURL = url+"?q="+keyword;
+            if(url.indexOf('?') != -1) {
+                var newURL = url+"?keyword="+keyword;
+            }else {
+                var newURL = url+"&keyword="+keyword;
+            }
             history.pushState({}, null, newURL);
             // $.ajax({
             //     url: eTradeAjaxObj.ajaxurl,
