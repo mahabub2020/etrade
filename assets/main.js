@@ -17,6 +17,7 @@
             new_arrivals_product_activation();
             slider_thumb_activation_two();
             headerIconToggle();
+            searchClick();
 
         });
 
@@ -32,7 +33,15 @@
         //     testimonialActivation();
         // });
     
-
+        function searchClick(e) {
+            var screenWidth = axilInit._window.width();
+            if (screenWidth < 576) {
+                $('.axil-search .search-button').on('click', function (e) {
+                    e.preventDefault();
+                    $(this).toggleClass('open').siblings('.form-control').slideToggle().toggleClass('active');
+                })
+            }
+        }
         function headerIconToggle() {
 
             var maskWrapper = $('<div / >').addClass('accountToggleMask');
