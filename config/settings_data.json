@@ -5,7 +5,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "header_style": "header_style_3",
+          "header_style": "header_style_2",
           "header_languages_enable": true,
           "header_currency_enable": true,
           "header_top_center": "CHRISTMAS SALE - 25% OFF <span>added at the checkout<\/span>",
@@ -61,7 +61,7 @@
           "social_icon_5_url": "",
           "copy_right_header_enable": true,
           "copy_ritht_text_header": "<p>Copyright © 99 Shopify All Right Reserved.<\/p>",
-          "header_bg_color": "#ffffff",
+          "header_top_txt_color": "#ffffff",
           "header_bg_color_2": "#ffffff",
           "transparent_header_color": "#ffffff",
           "transparent_header_hover_color": "#cf987e",
