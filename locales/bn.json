@@ -1429,7 +1429,141 @@
         "hide_accessibility_label": "অ্যাকাউন্ট মেনু লুকান",
         "label": "হিসাব",
         "show_accessibility_label": "অ্যাকাউন্ট মেনু দেখান",
-        "nav_accessibility_label": "অ্যাকাউন্ট নেভিগেশন"
+        "nav_accessibility_label": "অ্যাকাউন্ট নেভিগেশন",
+        "open_menu_accessibility_label": "অ্যাকাউন্ট নেভিগেশন খুলুন",
+        "close_menu_accessibility_label": "অ্যাকাউন্ট নেভিগেশন বন্ধ করুন",
+        "loading_message": "অ্যাকাউন্ট নেভিগেশন লোড হচ্ছে"
+      },
+      "action_menu_accessibility_label": "আরও কাজ",
+      "close_menu_accessibility_label": "প্রধান নেভিগেশন বন্ধ করুন",
+      "contact_email_subject": "{{shopName}} অনলাইন স্টোর থেকে যোগাযোগ করুন",
+      "contact_link": "যোগাযোগ করুন",
+      "delete_confirmation": {
+        "cancel": "বাতিল করুন",
+        "delete": "মুছে ফেলা"
+      },
+      "dismiss_toast": "খারিজ",
+      "document_title": "{{sectionName}} - {{shopName}} - অ্যাকাউন্ট",
+      "go_to_store_link": "দোকানে যাও",
+      "loading_message": "লোড হচ্ছে",
+      "log_out_link": "প্রস্থান",
+      "logout_overlay_label": "আপনাকে লগ আউট করা হচ্ছে...",
+      "nav_label_accessibility_label": "প্রধান নেভিগেশান",
+      "navigation_accessibility_message": "আপনি {{sectionName}} -এ নেভিগেট করেছেন",
+      "open_menu_accessibility_label": "প্রধান নেভিগেশন খুলুন",
+      "orders_link_label": "আদেশ",
+      "shop_logo_accessibility_label": "{{shopName}} লোগো",
+      "subscriptions_link_label": "সদস্যতা"
+    },
+    "account_information": {
+      "loading_accessibility_message": "অ্যাকাউন্টের তথ্য লোড হচ্ছে",
+      "loading_finished_accessibility_message": "অ্যাকাউন্ট তথ্য লোড হয়েছে",
+      "profile_card": {
+        "cancel": "বাতিল করুন",
+        "cancel_accessibility_label": "প্রোফাইল সম্পাদনা বাতিল করুন",
+        "edit": "সম্পাদনা করুন",
+        "edit_accessibility_label": "জীবন বৃত্তান্ত সম্পাদনা",
+        "email_help_text": "লগইন করার জন্য ব্যবহৃত ইমেল পরিবর্তন করা যাবে না",
+        "first_name": "নামের প্রথম অংশ",
+        "last_name": "নামের শেষাংশ",
+        "no_name_provided_accessibility_label": "কোনো নাম যোগ করা হয়নি",
+        "phone_number_help_text": "লগইন করার জন্য ব্যবহৃত ফোন নম্বর পরিবর্তন করা যাবে না",
+        "save": "সংরক্ষণ",
+        "save_accessibility_label": "প্রোফাইল সংরক্ষণ",
+        "title": "প্রোফাইল"
+      },
+      "profile_update_confirmation_message": "প্রোফাইল আপডেট",
+      "title": "হিসাবের তথ্য",
+      "people": {
+        "pagination": {
+          "load_more": "আর ঢুকাও",
+          "load_more_accessibility_label": "আরো মানুষ লোড",
+          "loading_accessibility_label": "মানুষ লোড হচ্ছে"
+        }
+      },
+      "add_button": "যোগ করুন"
+    },
+    "orders": {
+      "list_layout_accessibility_label": "লেআউট বিকল্প",
+      "list_title": "আদেশ",
+      "order_list": {
+        "column_headers": {
+          "order": "অর্ডার",
+          "items": "আইটেম",
+          "total": "মোট"
+        },
+        "delivered": "বিতরণ করা হয়েছে {{date}}",
+        "empty_state_order_source_description": "শুধুমাত্র {{email}} দ্বারা দেওয়া অর্ডারগুলি এখানে দেখাবে৷",
+        "empty_state_subtitle": "একটি অর্ডার দিতে দোকান যান.",
+        "empty_state_title": "এখনও কোন আদেশ নেই",
+        "empty_state_title_for_pending_orders": "কোন মুলতুবি আদেশ",
+        "estimated_shortform": "অনুমান। {{date}}",
+        "estimated_delivery": "আনুমানিক ডেলিভারি {{date}}",
+        "one_images_accessibility_label": "অর্ডারের মধ্যে রয়েছে {{lineItemName1}}",
+        "two_images_accessibility_label": "অর্ডারের মধ্যে রয়েছে {{lineItemName1}} , {{lineItemName2}}",
+        "three_images_accessibility_label": "অর্ডারের মধ্যে রয়েছে {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}}",
+        "four_images_accessibility_label": "অর্ডারের মধ্যে রয়েছে {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} , {{lineItemName4}}",
+        "more_than_three_products_accessibility_label": "অর্ডারে {{lineItemName1}} , {{lineItemName2}} , এবং আরও {{numberOfAdditionalProducts}} টি পণ্য রয়েছে",
+        "more_than_four_products_accessibility_label": "অর্ডারের মধ্যে রয়েছে {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} , এবং {{numberOfAdditionalProducts}} আরও পণ্য",
+        "plus_more": "+ {{numberOfAdditionalProducts}}",
+        "plus_more_products": "+ {{numberOfAdditionalProducts}} টি পণ্য",
+        "carousel": {
+          "one_products_accessibility_label": "অর্ডারে রয়েছে {{lineItemName1}} পরিমাণ {{lineItemQuantity1}}",
+          "two_products_accessibility_label": "অর্ডারের মধ্যে রয়েছে {{lineItemName1}} পরিমাণ {{lineItemQuantity1}} , {{lineItemName2}} পরিমাণ {{lineItemQuantity2}}",
+          "three_products_accessibility_label": "অর্ডারে {{lineItemName1}} পরিমাণ {{lineItemQuantity1}} , {{lineItemName2}} পরিমাণ {{lineItemQuantity2}} , {{lineItemName3}} পরিমাণ {{lineItemQuantity3}} অন্তর্ভুক্ত",
+          "four_products_accessibility_label": "অর্ডারের মধ্যে রয়েছে {{lineItemName1}} পরিমাণ {{lineItemQuantity1}} , {{lineItemName2}} পরিমাণ {{lineItemQuantity2}} , {{lineItemName3}} পরিমাণ {{lineItemQuantity3}} , {{lineItemName4}} Item {{lineItemQuantity4}}",
+          "five_products_accessibility_label": "অর্ডারের মধ্যে রয়েছে {{lineItemName1}} পরিমাণ {{lineItemQuantity1}} , {{lineItemName2}} পরিমাণ {{lineItemQuantity2}} , {{lineItemName3}} পরিমাণ {{lineItemQuantity3}} , {{lineItemName4}} {{lineItemQuantity4}} পরিমাণ {{lineItemName5}} পরিমাণ {{lineItemQuantity5}}",
+          "six_products_accessibility_label": "অর্ডারের মধ্যে রয়েছে {{lineItemName1}} পরিমাণ {{lineItemQuantity1}} , {{lineItemName2}} পরিমাণ {{lineItemQuantity2}} , {{lineItemName3}} পরিমাণ {{lineItemQuantity3}} , {{lineItemName4}} {{lineItemQuantity4}} পরিমাণ {{lineItemName5}} পরিমাণ {{lineItemQuantity5}} , {{lineItemName6}} পরিমাণ {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "অর্ডারের মধ্যে রয়েছে {{lineItemName1}} পরিমাণ {{lineItemQuantity1}} , {{lineItemName2}} পরিমাণ {{lineItemQuantity2}} , {{lineItemName3}} পরিমাণ {{lineItemQuantity3}} , {{lineItemName4}} {{lineItemQuantity4}} পরিমাণ {{lineItemName5}} পরিমাণ {{lineItemQuantity5}} , {{lineItemName6}} পরিমাণ {{lineItemQuantity6}} এবং আরও অনেক কিছু",
+          "view_order_details": "বিস্তারিত নির্দেশিকা দেখো",
+          "previous": "আগে",
+          "next": "পরবর্তী"
+        },
+        "items": {
+          "one": "{{count}} টি আইটেম",
+          "other": "{{count}} টি আইটেম"
+        },
+        "list_view": "তালিকার দৃশ্য দেখান",
+        "no_filtered_results_description": "আপনার অর্ডারগুলি দেখতে ফিল্টারগুলি সরান বা সামঞ্জস্য করুন",
+        "no_filtered_results_title": "কোন ফিল্টার করা ফলাফল",
+        "order_link": "অর্ডার দেখুন {{name}}",
+        "order_number": "অর্ডার {{name}}",
+        "orders_title": "নিশ্চিত করা হয়েছে",
+        "pagination": {
+          "nav_accessibility_label": "অর্ডার নেভিগেশন বোতাম",
+          "next": "পরবর্তী",
+          "next_accessibility_label": "পরবর্তী আদেশ",
+          "previous": "পূর্ববর্তী",
+          "previous_accessibility_label": "পূর্ববর্তী আদেশ",
+          "load_more": "আর ঢুকাও",
+          "load_more_accessibility_label": "আরো অর্ডার লোড"
+        },
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "বিস্তারিত জানার জন্য অর্ডার দেখুন",
+            "estimated_delivery": "আনুমানিক ডেলিভারি {{date}}",
+            "last_updated": "সর্বশেষ আপডেট করা হয়েছে {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "অনুমান। বিতরণ {{date}}"
+          }
+        },
+        "payment_status": {
+          "list_view": {
+            "overdue": "পরিশোধসময়াতীত পেমেন্ট",
+            "due": "পেমেন্ট বাকি {{date}}",
+            "due_today": "আজ পেমেন্ট বকেয়া",
+            "due_without_date": "বাকি টাকা",
+            "due_on_fulfillment": "পূরণের জন্য পেমেন্ট",
+            "pay_to_confirm": "নিশ্চিত করতে অর্থ প্রদান করুন",
+            "payment_not_due": "পেমেন্ট এখনও বকেয়া"
+          },
+          "table_view": {
+            "overdue": "ওভারডিউ",
+            "due": "শেষ তারিখ {{date}}",
+            "due_today": "আজ বাকি"
+          }
+        }
       }
     }
   },
