@@ -2,14 +2,14 @@
 {% form 'currency' %}
     <div class="dropdown">
         <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            USD
+            {{ shop.currency }}
         </button>
         <ul class="dropdown-menu">
             {% for currency in shop.enabled_currencies %}
                 {% if currency == cart.currency %}
-                    <li><a class="dropdown-item" href="#">{{currency.iso_code}}</a></li>
+                    <li><a class="dropdown-item" href="#">{{ currency.iso_code }}</a></li>
                 {% else %}
-                <li><a class="dropdown-item" href="#">{{currency.iso_code}}</a></li>
+                <li><a class="dropdown-item" href="#">{{ currency.iso_code }}</a></li>
                 {% endif %}
               {% endfor %}
 

@@ -80,7 +80,7 @@
 {% if section.settings.header_style == 'header_style_1' %}
 <header class="header axil-header header-style-1">
   {% comment %} {% render 'header-top' %} {% endcomment %}
-  {% render 'header-mid' %}
+  {% render 'header-top1' %}
   <!-- Start Mainmenu Area  -->
   <div id="axil-sticky-placeholder"></div>
   <div class="axil-mainmenu">
@@ -93,7 +93,7 @@
           {% render 'main-menu5' %}
         </div>
         <div class="header-action">
-       
+          {% render 'header-right5' %}
         </div>
       </div>
     </div>
@@ -103,12 +103,10 @@
 </header>
 {% elsif section.settings.header_style == 'header_style_2' %}
 <header class="header axil-header header-style-5">
-  
   {% render 'header-top2' %} 
-  
   <!-- Start Mainmenu Area  -->
   <div id="axil-sticky-placeholder"></div>
-  <div class="axil-mainmenu">
+    <div class="axil-mainmenu">
       <div class="container">
           <div class="header-navbar">
               <div class="header-brand">
@@ -231,7 +229,7 @@
   {% render 'header-top5' %}
   <!-- Start Mainmenu Area  -->
   <div id="axil-sticky-placeholder"></div>
-  <div class="axil-mainmenu">
+    <div class="axil-mainmenu">
       <div class="container-fluid">
           <div class="header-navbar">
               <div class="header-brand">
@@ -308,22 +306,23 @@
         "default": "header_style_1"
       },
 
-      {
-        "type": "checkbox",
-        "id": "header_languages_enable",
-        "label": "Languages Enable",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "header_currency_enable",
-        "label": "Currency Enable",
-        "default": true
-      }, 
+     
       {
         "type": "header",
         "content": "Header Top"
       },
+          {
+            "type": "checkbox",
+            "id": "header_languages_enable",
+            "label": "Languages Enable",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "header_currency_enable",
+            "label": "Currency Enable",
+            "default": true
+          },    
           {
             "type": "text",
             "id": "header_top_center",
@@ -335,6 +334,12 @@
             "id": "header_top_left",
             "label": "Header Top Left ",
             "default": "Free Shipping on Orders Over $150"
+          }, 
+          {
+            "type": "checkbox",
+            "id": "header_top_menu_enable",
+            "label": "Top Enable",
+            "default": true
           }, 
           {
             "type": "link_list",

@@ -3,8 +3,12 @@
         English
     </button>
     <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">English</a></li>
-        <li><a class="dropdown-item" href="#">Arabic</a></li>
-        <li><a class="dropdown-item" href="#">Spanish</a></li>
+        
+        <li>{%- for language in localization.available_languages -%}
+            <button type="submit" name="locale_code" class="Popover__Value {% if language.iso_code == localization.language.iso_code %}is-selected{% endif %} Heading Link Link--primary u-h6" value="{{ language.iso_code }}" {% if language.iso_code == localization.language.iso_code %}aria-current="true"{% endif %}>
+            {{- language.iso_code | capitalize -}}
+            </button>
+            {%- endfor -%}</li>
     </ul>
 </div>
+
