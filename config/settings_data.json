@@ -5,12 +5,12 @@
       "header": {
         "type": "header",
         "settings": {
-          "header_style": "header_style_2",
+          "header_style": "header_style_1",
           "header_languages_enable": true,
           "header_currency_enable": true,
           "header_top_center": "CHRISTMAS SALE - 25% OFF <span>added at the checkout<\/span>",
           "header_top_left": "Free Shipping on Orders Over $150",
-          "header_top_right_menu": "header-top-menu",
+          "header_top_right_menu": "",
           "top_campaign_bg": "shopify:\/\/shop_images\/sale-tag.jpg",
           "welcome_text_enable": true,
           "wellcome_customer": "Welcome to Store",
