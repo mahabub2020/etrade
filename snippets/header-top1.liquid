@@ -1,33 +1,36 @@
-<div class="axil-header-top">
-    <div class="container">
-        <div class="row align-items-center">
-            {% if section.settings.header_languages_enable or section.settings.header_currency_enable %} 
-            <div class="col-sm-6">
-                <div class="header-top-dropdown">  
-                    {% if section.settings.header_languages_enable %} 
-                        {% render 'languages' %}
-                    {% endif %}
-                    {% if section.settings.header_currency_enable %} 
-                        {% render 'currency' %}
-                    {% endif %}
+
+{% if section.settings.header_top_enable %} 
+    <div class="axil-header-top">
+        <div class="container">
+            <div class="row align-items-center">
+                {% if section.settings.header_languages_enable or section.settings.header_currency_enable %} 
+                <div class="col-sm-6">
+                    <div class="header-top-dropdown">  
+                        {% if section.settings.header_languages_enable %} 
+                            {% render 'languages' %}
+                        {% endif %}
+                        {% if section.settings.header_currency_enable %} 
+                            {% render 'currency' %}
+                        {% endif %}
+                    </div>
                 </div>
-            </div>
-        {% endif %}
-        {% if section.settings.header_top_menu_enable %} 
-            <div class="col-sm-6">
-                <div class="header-top-link">
-                    <ul class="quick-link"> 
-                    {% assign linklist = section.settings.header_top_right_menu %} 
-                        {% for link in linklists[linklist].links %}
-                            <li>
-                                <a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>
-                                {{ link.title }}</a>
-                            </li>  
-                        {%- endfor -%} 
-                    </ul>
+            {% endif %}
+            {% if section.settings.header_top_menu_enable %} 
+                <div class="col-sm-6">
+                    <div class="header-top-link">
+                        <ul class="quick-link"> 
+                        {% assign linklist = section.settings.header_top_right_menu %} 
+                            {% for link in linklists[linklist].links %}
+                                <li>
+                                    <a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>
+                                    {{ link.title }}</a>
+                                </li>  
+                            {%- endfor -%} 
+                        </ul>
+                    </div>
                 </div>
+            {% endif %}
             </div>
-        {% endif %}
         </div>
     </div>
-</div>
+{% endif %}
