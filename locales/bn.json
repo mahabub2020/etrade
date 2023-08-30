@@ -1,0 +1,128 @@
+{
+  "shopify": {
+    "sentence": {
+      "two_words_connector": " এবং ",
+      "last_word_connector": ", এবং "
+    },
+    "checkout": {
+      "general": {
+        "page_title": "চেকআউট",
+        "error_page_title": "ত্রুটি",
+        "skip_to_content": "এড়িয়ে যাও কন্টেন্ট",
+        "breadcrumb": "ব্রেডক্রাম্ব",
+        "continue_button_label": "চালিয়ে যান",
+        "complete_purchase_button_label": "সম্পূর্ণ আদেশ",
+        "pay_now_button_label": "এখন পরিশোধ করুন",
+        "authenticate_purchase_button_label": "পেমেন্ট প্রমাণীকরণ",
+        "edit_link_label": "সম্পাদনা করুন",
+        "all_rights_reserved": "সর্বস্বত্ব সংরক্ষিত %{shop_name}",
+        "print_policies_link_label": "ছাপা",
+        "cart": "কার্ট",
+        "close_modal_label": "বন্ধ",
+        "close_notice_label": "বন্ধ",
+        "expand_notice_label": "আরো দেখুন",
+        "continue_to_shipping_method": "শিপিং চালিয়ে যান",
+        "continue_to_payment_method": "পেমেন্ট চালিয়ে যান",
+        "continue_to_review": "পর্যালোচনা আদেশ",
+        "back_to_cart": "কার্টে ফেরত যান",
+        "back_to_contact_information": "তথ্য-এ ফেরত যান",
+        "back_to_shipping_method": "শিপিং এ ফিরে যান",
+        "back_to_payment_method": "পেমেন্টে ফিরে যান",
+        "choose_shipping_method": "একটি শিপিং পদ্ধতি চয়ন করুন",
+        "choose_payment_method": "একটি অর্থপ্রদান পদ্ধতি চয়ন করুন",
+        "choose_billing_address": "একটি বিলিং ঠিকানা চয়ন করুন",
+        "contact_us_html": "আরও তথ্যের জন্য আমাদের সাথে যোগাযোগ করুন",
+        "autocomplete_title": "পরামর্শ",
+        "autocomplete_single_item": "1টি আইটেম উপলব্ধ",
+        "autocomplete_multi_item": "{{number}} টি আইটেম উপলব্ধ৷",
+        "autocomplete_close": "প্রস্তাবনা বন্ধ করুন",
+        "forwarding_indicator": {
+          "new_window": "একটি নতুন উইন্ডোতে খোলে৷",
+          "external": "বাহ্যিক ওয়েবসাইট খোলে।",
+          "external_and_new_window": "একটি নতুন উইন্ডোতে বহিরাগত ওয়েবসাইট খোলে।"
+        },
+        "checkout_context": {
+          "step_one": "%{shop_name} - চেকআউট"
+        },
+        "tooltip_accessibility_label": "অধিক তথ্য",
+        "errors": {
+          "session_identifier_not_unique_error": "আপনার অর্ডারে কিছু ভুল হয়েছে, অনুগ্রহ করে আবার চেক আউট করার চেষ্টা করুন।",
+          "line_item_limit_reached": "লাইন আইটেমগুলির সর্বাধিক সংখ্যায় পৌঁছেছে৷"
+        },
+        "full_price": "পূর্ণ মূল্য:",
+        "title": "চেকআউট - {{shopName}}",
+        "full_title": "{{pageTitle}} - {{shopName}} - চেকআউট৷",
+        "loading_title": "চেকআউট - {{shopName}}",
+        "google_map_title": "গুগল মানচিত্র",
+        "submit_order_button_label": "অর্ডার জমা",
+        "submit_for_review_button_label": "পর্যালোচনার জন্য জমা",
+        "submit_for_review_notice_label": "আপনার অর্ডার পর্যালোচনা না হওয়া পর্যন্ত পেমেন্ট বকেয়া হবে না",
+        "continue_to_payment_plans_button_label": "অর্থপ্রদানের পরিকল্পনা চালিয়ে যান",
+        "back_button_label": "প্রত্যাবর্তন",
+        "choose_delivery_strategy": "একটি বিতরণ পদ্ধতি চয়ন করুন",
+        "autocomplete_zero_item": "কোন আইটেম উপলব্ধ",
+        "autocomplete_powered_by_google": "{{brandName}} দ্বারা চালিত",
+        "submit": "জমা দিন",
+        "processing": "প্রক্রিয়া করা হচ্ছে...",
+        "stepper": {
+          "increase": "{{type}} বাড়ান",
+          "decrease": "{{type}} কমান",
+          "minimum_reached": "ন্যূনতম {{value}} এ পৌঁছেছে৷",
+          "maximum_reached": "সর্বাধিক {{value}} এ পৌঁছেছে৷"
+        },
+        "remove_item": "%{label} সরান",
+        "remove_tag": "ট্যাগ সরান",
+        "dates": {
+          "weekdays": {
+            "monday": "সোমবার",
+            "tuesday": "মঙ্গলবার",
+            "wednesday": "বুধবার",
+            "thursday": "বৃহস্পতিবার",
+            "friday": "শুক্রবার",
+            "saturday": "শনিবার",
+            "sunday": "রবিবার"
+          },
+          "weekdays_abbreviation": {
+            "monday": "মো",
+            "tuesday": "তু",
+            "wednesday": "আমরা",
+            "thursday": "ম",
+            "saturday": "সা",
+            "sunday": "সু"
+          },
+          "months": {
+            "january": "জানুয়ারি",
+            "february": "ফেব্রুয়ারি",
+            "march": "মার্চ",
+            "april": "এপ্রিল",
+            "may": "মে",
+            "june": "জুন",
+            "july": "জুলাই",
+            "august": "আগস্ট",
+            "september": "সেপ্টেম্বর",
+            "october": "অক্টোবর",
+            "november": "নভেম্বর",
+            "december": "ডিসেম্বর"
+          }
+        },
+        "datepicker": {
+          "show_previous_month": "আগের মাস দেখান, {{month}} {{year}}",
+          "show_next_month": "পরের মাসে দেখান, {{month}} {{year}}",
+          "range_start": "পরিসীমা শুরু",
+          "in_range": "সীমার মধ্যে",
+          "range_end": "পরিসীমা শেষ"
+        }
+      },
+      "contact": {
+        "title": "তথ্য",
+        "address_title": "ঠিকানা",
+        "shipping_used_as_billing_notice": "এটি এই অর্ডারের জন্য আপনার বিলিং ঠিকানা হিসাবেও ব্যবহার করা হবে৷",
+        "delivery_option_title": "ডেলিভারি পদ্ধতি",
+        "contact_method_title": "যোগাযোগ",
+        "email_label": "ইমেইল",
+        "email_placeholder": "ইমেইল",
+        "email_or_phone_label": "ইমেইল বা মোবাইল ফোন নম্বর"
+      }
+    }
+  }
+}
