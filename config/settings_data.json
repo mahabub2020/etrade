@@ -31,7 +31,7 @@
           "checkout_title": "Checkout",
           "acount_enable": true,
           "acount_title": "QUICKLINKS",
-          "acount_menu": "footer",
+          "acount_menu": "header-top-menu",
           "login_btn_txt": "Login",
           "loginout_btn_txt": "Login Out",
           "register_info_txt": "No account yet?",
