@@ -1,7 +1,7 @@
 {% if cart.empty? %}
   <div class="return-to-shop text-center pt--80">
-    <h5 class="woocommerce-mini-cart__empty-message">No products in the cart.</h5>
-    <a href="{{ routes.all_products_collection_url }}" class="axil-btn checkout-btn">Return to shop</a>
+    <h5 class="woocommerce-mini-cart__empty-message">{{ section.settings.cart_notification }}</h5>
+    <a href="{{ routes.all_products_collection_url }}" class="axil-btn checkout-btn">{{ section.settings.return_btn_txt }}</a>
   </div>
 {% else %}
   <form
