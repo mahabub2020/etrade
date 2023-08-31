@@ -1,0 +1,53 @@
+<nav class="mainmenu-nav">
+    <button class="mobile-close-btn mobile-nav-toggler"><i class="fas fa-times"></i></button>
+        <div class="mobile-nav-brand"> 
+        {% if section.settings.mobile_logo %}
+            <a href="/" class="logo"> 
+            <figure class="logo--transparency">
+                <img src="{{ section.settings.mobile_logo | img_url: '300x300' }}" alt="{{ section.settings.mobile_logo.alt | default: shop.name }}">
+            </figure> 
+            </a>
+        {% else %}
+            <a href="/" class="logo-text">
+            {{ shop.name }}
+            </a>
+        {% endif %} 
+    </div>  
+    {% assign linklist = section.settings.header_primary_menu %}
+    <ul class="mainmenu nav-menu-list">
+        {% for link in linklists[linklist].links %}
+        {% assign child_list_handle = link.title | handle %}
+        {% if linklists[child_list_handle] and linklists[child_list_handle].links.size > 0 %}
+        <li class="menu-item-has-children {% if link.active %} is-active {% endif %}">
+            {{ link.title | link_to: link.url }}
+            <ul class="axil-submenu department-megamenu">
+            {% for child_link in linklists[child_list_handle].links %}
+            {% assign grand_child_list_handle = child_link.title | handle %}
+            {% if linklists[grand_child_list_handle] and linklists[grand_child_list_handle].links.size > 0 %}
+            <li class="has-dropdown">
+            {{ child_link.title | link_to: child_link.url }}
+            <ul>
+            {% for grand_child_link in linklists[grand_child_list_handle].links %}
+            <li>
+            {{ grand_child_link.title | link_to: grand_child_link.url }}
+            </li>
+            {% endfor %}
+            </ul>
+            </li>
+            {% else %}
+            <li>
+            {{ child_link.title | link_to: child_link.url }}
+            </li>
+            {% endif %}
+            {% endfor %}        
+            </ul>
+        </li>
+        {% else %}
+        <li class="{% if link.active %} is-active {% endif %}">
+        {{ link.title | link_to: link.url }}
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul> 
+</nav>
+
