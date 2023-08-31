@@ -1,6 +1,8 @@
 {% if section.settings.search_enable %}
+    <li class="axil-search d-none-laptop">
     <input type="search" class="placeholder product-search-input" name="search2" id="search2" value="" maxlength="128" placeholder="{{ section.settings.search_placeholder }}" autocomplete="off">
     <button type="submit" class="icon wooc-btn-search">
         <i class="far fa-search"></i>
     </button>
+</li>
 {% endif %}
