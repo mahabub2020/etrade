@@ -6,8 +6,8 @@
 <div class="my-account-dropdown">
     <span class="title">{{ section.settings.acount_title }}</span> 
         <ul> 
-            {% assign top_menu_handle = section.settings.acount_menu %}
-            {% for link in linklists[top_menu_handle].links %}
+            {% assign acount_menu_handle = section.settings.acount_menu %}
+            {% for link in linklists[acount_menu_handle].links %}
                 <li><a href="{{ link.url }}">{{ link.title }}</a></li>
             {% endfor %} 
         </ul> 
