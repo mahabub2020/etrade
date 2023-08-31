@@ -1,27 +1,30 @@
-
+{% if section.settings.acount_enable %}
 <li class="my-account">
 <a href="#">
     <i class="far fa-user"></i>
 </a>
 <div class="my-account-dropdown">
-    <span class="title">QUICKLINKS</span>
-    <ul>
-        <li>
-            <a href="my-account.html">My Account</a>
-        </li>
-        <li>
-            <a href="#">Initiate return</a>
-        </li>
-        <li>
-            <a href="#">Support</a>
-        </li>
-        <li>
-            <a href="#">Language</a>
-        </li>
-    </ul>
-    <div class="login-btn">
-        <a href="sign-in.html" class="axil-btn btn-bg-primary">Login</a>
-    </div>
-    <div class="reg-footer text-center">No account yet? <a href="sign-up.html" class="btn-link">REGISTER HERE.</a></div>
+    <span class="title">{{ section.settings.acount_title }}</span> 
+        <ul> 
+            {% assign top_menu_handle = section.settings.acount_menu %}
+            {% for link in linklists[top_menu_handle].links %}
+                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %} 
+        </ul> 
+
+        {% if shop.customer_accounts_enabled and customer %}
+            <div class="login-btn">
+                <a href="/account/logout" class="axil-btn btn-bg-primary">{{ section.settings.loginout_btn_txt }}</a>
+            </div>
+        {% else %}
+            <div class="login-btn">
+                <a href="/account/login" class="axil-btn btn-bg-primary">{{ section.settings.login_btn_txt }}</a>
+            </div>
+        {% endif %} 
+
+        {% if section.settings.register_btn_txt != block %}
+            <div class="reg-footer text-center">{{ section.settings.register_info_txt }} <a href="/register" class="btn-link">{{ section.settings.register_btn_txt }}</a></div>
+        {% endif %}
 </div>
 </li>
+{% endif %}

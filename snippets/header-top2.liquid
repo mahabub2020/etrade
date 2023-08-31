@@ -16,12 +16,10 @@
             <div class="col-lg-6 col-sm-6 col-12">
                 <div class="header-top-link">
                     <ul class="quick-link">
-                        {%- for link in linklists.header-top-menu.links -%} 
-                            <li>
-                                <a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>
-                                {{ link.title }}</a>
-                            </li>  
-                        {%- endfor -%} 
+                        {% assign top_menu_handle = section.settings.header_top_right_menu %}
+                        {% for link in linklists[top_menu_handle].links %}
+                            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
