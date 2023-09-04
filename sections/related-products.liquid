@@ -37,7 +37,10 @@
            {% if settings.rtl_enable %} "rtl": true,{% endif %} 
             "slidesToScroll": 1,
            "slidesToShow": {{ section.settings.product_column }},
-            
+
+            "arrows": true,
+            "dots": false, 
+          
             "responsive":[
                 {"breakpoint":992, "settings": {"slidesToShow": {{ section.settings.product_column_md }}} },
                 {"breakpoint":768, "settings": {"slidesToShow": {{ section.settings.product_column_sm }}} },
