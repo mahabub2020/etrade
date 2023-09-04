@@ -23,10 +23,10 @@
       "settings": {
         "container_style": "style_2",
         "related_products_enable": true,
-        "section_text_align": "section_text_center",
+        "section_before_title": "Your Recently",
         "section_title": "Related Products",
-        "section_title_border": false,
-        "related_product_limit_handle": 4,
+        "product_layout": "1",
+        "related_product_limit_handle": 8,
         "autoplay_true": false,
         "autoplay_speed": 5000,
         "product_column": 4,
