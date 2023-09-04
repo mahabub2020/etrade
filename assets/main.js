@@ -19,9 +19,14 @@
             headerIconToggle();
             searchClick();
             headerCampaignRemove();
-            new_arrivals_product_activation();
+            //new_arrivals_product_activation();
+            axilSlickActivation();
 
         });
+
+        function  axilSlickActivation (e) {
+            $('.slick-slider').not('.slick-initialized').slick();
+        }
 
 
 		 function new_arrivals_product_activation() {

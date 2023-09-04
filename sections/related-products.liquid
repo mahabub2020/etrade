@@ -22,12 +22,31 @@
       {% if section.settings.section_title != '' %}
         <div class="section-title-wrapper">
           <span class="title-highlighter highlighter-primary"
-            ><i class="far fa-shopping-basket"></i> {{ section.settings.section_before_title }}</span
-          >
+            ><i class="far fa-shopping-basket"></i> {{ section.settings.section_before_title -}}
+          </span>
           <h2 class="title">{{ section.settings.section_title }}</h2>
         </div>
       {% endif %}
-      <div class="new-arrivals-product-activation slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide">
+
+      {%- capture data_slick_activation -%}
+      data-slick='{
+          {%- if section.settings.autoplay_true -%}
+          "autoplay": true,
+          "autoplaySpeed": {{ section.settings.autoplay_speed }},
+          {%- endif -%}
+           {% if settings.rtl_enable %} "rtl": true,{% endif %} 
+            "slidesToScroll": 1,
+           "slidesToShow": {{ section.settings.product_column }},
+            "responsive":[
+                {"breakpoint":992, "settings": {"slidesToShow": {{ section.settings.product_column_md }}} },
+                {"breakpoint":768, "settings": {"slidesToShow": {{ section.settings.product_column_sm }}} },
+                {"breakpoint":480, "settings": {"slidesToShow": {{ section.settings.product_column_sm }}} }
+              ] 
+
+      }'
+   {%- endcapture -%}
+
+      <div class="new-arrivals-product-activation slick-initialized slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
         {% assign current_product = product %}
         {% assign current_product_count = false %}
         {% for product in collection.products limit: related_product_limit %}
@@ -84,26 +103,7 @@
       "type": "header",
       "content": "Section Heading"
     },
-    {
-      "type": "select",
-      "id": "section_text_align",
-      "label": "Heading Text Align",
-      "options": [
-        {
-          "label": "Left",
-          "value": "section_text_left"
-        },
-        {
-          "label": "Center",
-          "value": "section_text_center"
-        },
-        {
-          "label": "Right",
-          "value": "section_text_right"
-        }
-      ],
-      "default": "section_text_center"
-    },
+
     {
       "type": "text",
       "id": "section_before_title",
@@ -116,16 +116,7 @@
       "label": "Section Title",
       "default": "Related Products"
     },
-    {
-      "type": "header",
-      "content": "Section Title Border"
-    },
-    {
-      "type": "checkbox",
-      "id": "section_title_border",
-      "label": "Border Enable",
-      "default": false
-    },
+
     {
       "type": "header",
       "content": "Product Options"
