@@ -15,7 +15,7 @@
             countdown(); 
             slider_thumb_activation_two();
             headerIconToggle();
-            searchClick();
+           // searchClick();
             headerCampaignRemove(); 
             axilSlickActivation();
 
