@@ -8,18 +8,15 @@
 
             slider_slick_activation_two();
             slider_slick_activation_one();
-            slider_thumb_activation_one();
-            
+            slider_thumb_activation_one(); 
             readyActivation();
             magnificPopupActivation();
             testimonialActivation();
-            countdown();
-           
+            countdown(); 
             slider_thumb_activation_two();
             headerIconToggle();
             searchClick();
-            headerCampaignRemove();
-          
+            headerCampaignRemove(); 
             axilSlickActivation();
 
         });
