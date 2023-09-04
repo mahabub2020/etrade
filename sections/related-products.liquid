@@ -46,7 +46,7 @@
       }'
    {%- endcapture -%}
 
-      <div class="new-arrivals-product-activation slick-initialized slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
+      <div class="new-arrivals-product-activation slick-slider slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
         {% assign current_product = product %}
         {% assign current_product_count = false %}
         {% for product in collection.products limit: related_product_limit %}
