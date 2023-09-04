@@ -14,12 +14,12 @@
             magnificPopupActivation();
             testimonialActivation();
             countdown();
-            new_arrivals_product_activation();
+           
             slider_thumb_activation_two();
             headerIconToggle();
             searchClick();
             headerCampaignRemove();
-            //new_arrivals_product_activation();
+          
             axilSlickActivation();
 
         });
