@@ -43,7 +43,8 @@
   },
   "order": [
     "template",
+    "upsell-product",
     "related-products",
-    "upsell-product"
+    
   ]
 }
