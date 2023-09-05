@@ -21,12 +21,12 @@
         "9de3cd49-bfc1-4eaf-8756-f4aaee8b95d2"
       ],
       "settings": {
-        "container_style": "style_2",
+        "container_style": "style_1",
         "related_products_enable": true,
         "section_before_title": "Your Recently",
         "section_title": "Related Products",
         "product_layout": "1",
-        "related_product_limit_handle": 8,
+        "related_product_limit_handle": 9,
         "autoplay_true": false,
         "autoplay_speed": 5000,
         "product_column": 4,
