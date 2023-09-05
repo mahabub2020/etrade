@@ -35,10 +35,14 @@
         "section_title_color": "#282828",
         "section_border_color": "#cf987e"
       }
+    },
+    "upsell-product": {
+      "type": "upsell-product"
     }
   },
   "order": [
     "template",
-    "related-products"
+    "related-products",
+    "upsell-product"
   ]
 }
