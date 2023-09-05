@@ -18,7 +18,7 @@
     id="section-{{ section.id }}"
     class="axil-product-area axil-new-arrivals-activation bg-color-white axil-section-gap pb--50 pb_sm--30"
   >
-    <div class="container">
+    <div class="{% if section.settings.container_style == 'style_1' %}container {% else %} container-fluid{% endif %}">
       {% if section.settings.section_title != '' %}
         <div class="section-title-wrapper">
           <span class="title-highlighter highlighter-primary"
@@ -74,6 +74,71 @@
   <!-- End Recently Viewed Product Area -->
 {% endif %}
 
+
+
+
+{%- style -%}
+
+
+  #section-{{ section.id }}{
+    {%- for block in section.blocks -%}
+    {%- case block.type -%}
+    {%- when 'section_margin' -%}
+    margin-top: {{ block.settings.section_margin_top }}px;
+    margin-bottom: {{ block.settings.section_margin_bottom }}px;
+    {%- when 'section_padding' -%}
+    padding-top: {{ block.settings.section_padding_top }}px;
+    padding-bottom: {{ block.settings.section_padding_bottom }}px;
+    {%- when 'section_background' -%}    
+    background: {{ block.settings.section_bg_color }} 
+      {%- if block.settings.section_bg_image -%}url("{{ block.settings.section_bg_image | img_url: 'master' }}"){%- endif -%} no-repeat scroll center center / cover;
+    {%- endcase -%}
+    {%- endfor -%}
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {% case block.type %}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_md }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_md }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_md }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_md }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+  @media (max-width: 767px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {%- case block.type -%}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_xs }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_xs }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_xs }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_xs }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+
+#section-{{ section.id }} .heading-color {
+    color: {{ section.settings.section_title_color }}!important;
+}
+
+#section-{{ section.id }} .separator {
+    border-color: {{ section.settings.section_border_color }};
+}
+  
+
+#section-{{ section.id }} .color--light-3 {
+    color: {{ section.settings.section_description_color }}!important;
+}
+
+
+{%- endstyle -%}
 
 {% schema %}
 {
