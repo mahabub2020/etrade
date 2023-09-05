@@ -44,7 +44,7 @@
   "order": [
     "template",
     "upsell-product",
-    "related-products",
+    "related-products"
     
   ]
 }
