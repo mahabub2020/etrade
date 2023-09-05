@@ -29,25 +29,43 @@
       {% endif %}
 
       {%- capture data_slick_activation -%}
+
       data-slick='{
-          {%- if section.settings.autoplay_true -%}
+        {% if section.settings.autoplay_true %}
           "autoplay": true,
           "autoplaySpeed": {{ section.settings.autoplay_speed }},
-          {%- endif -%}
-           {% if settings.rtl_enable %} "rtl": true,{% endif %} 
-            "slidesToScroll": 1,
-           "slidesToShow": {{ section.settings.product_column }},
-
-            "arrows": true,
-            "dots": false, 
-          
-            "responsive":[
-                {"breakpoint":992, "settings": {"slidesToShow": {{ section.settings.product_column_md }}} },
-                {"breakpoint":768, "settings": {"slidesToShow": {{ section.settings.product_column_sm }}} },
-                {"breakpoint":480, "settings": {"slidesToShow": {{ section.settings.product_column_sm }}} }
-              ] 
-
+        {% endif %}
+        {% if settings.rtl_enable %}
+          "rtl": true,
+        {% endif %}
+        "slidesToScroll": 1,
+        "slidesToShow": {{ section.settings.product_column }},
+        "arrows": true,
+        "dots": false,
+        "prevArrow": "<button class=\'slide-arrow prev-arrow\'><i class=\'fal fa-long-arrow-left\'></i></button>",
+        "nextArrow": "<button class=\'slide-arrow next-arrow\'><i class=\'fal fa-long-arrow-right\'></i></button>",
+        "responsive": [
+          {
+            "breakpoint": 992,
+            "settings": {
+              "slidesToShow": {{ section.settings.product_column_md }}
+            }
+          },
+          {
+            "breakpoint": 768,
+            "settings": {
+              "slidesToShow": {{ section.settings.product_column_sm }}
+            }
+          },
+          {
+            "breakpoint": 480,
+            "settings": {
+              "slidesToShow": {{ section.settings.product_column_sm }}
+            }
+          }
+        ]
       }'
+ 
    {%- endcapture -%}
 
       <div class="new-arrivals-product-activation slick-slider slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
