@@ -8,7 +8,49 @@
       }
     },
     "single-product-tab": {
-      "type": "single-product-tab" 
+      "type": "single-product-tab",
+      "blocks": {
+        "edd41336-a684-47c4-8a11-2e107abadeb9": {
+          "type": "custom_tab",
+          "settings": {
+            "custom_tab_title": "Tab Title",
+            "custom_tab_handle": "home1"
+          }
+        },
+        "6d67c663-4bcf-4bed-b899-7a9e34c4c194": {
+          "type": "unique_tab_3",
+          "settings": {
+            "unique_tab_title": "Unique Tab Titlerf",
+            "unique_description_3": "[unique_description_3] Your content or text here [\/unique_description_3]"
+          }
+        }
+      },
+      "block_order": [
+        "edd41336-a684-47c4-8a11-2e107abadeb9",
+        "6d67c663-4bcf-4bed-b899-7a9e34c4c194"
+      ],
+      "settings": {
+        "container_style": "style_2",
+        "product_tab_enable": true,
+        "tab_style": "tab_style_center",
+        "text_style": "text_style_left",
+        "tab_active_handle": "info_tab",
+        "product_info_tab_enable": true,
+        "product_info_tab_title": "Description",
+        "product_review_tab_enable": true,
+        "product_review_tab_title": "Reviews",
+        "product_comments_enable": true,
+        "product_comments_title": "Comments",
+        "product_page_comments_box": "facebook_comment",
+        "facebook_comments_post_limit": "10",
+        "disqus_shortname": "demo-store",
+        "tab_text_color": "#8a8a8a",
+        "tab_border_color": "#fff",
+        "tab_text_hover_color": "#282828",
+        "tab_border_hover_color": "#cf987e",
+        "tab_text_active_color": "#282828",
+        "tab_active_border_color": "#cf987e"
+      }
     },
     "upsell-product": {
       "type": "upsell-product",
