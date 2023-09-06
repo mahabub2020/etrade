@@ -7,9 +7,6 @@
         "enable_published_date": true
       }
     },
-    "tab-with-product": {
-      "type": "information-tab" 
-    },
     "upsell-product": {
       "type": "upsell-product",
       "blocks": {
@@ -84,7 +81,6 @@
   },
   "order": [
     "template",
-    "information-tab",
     "upsell-product",
     "related-products"
   ]
