@@ -9,6 +9,17 @@
     },
     "upsell-product": {
       "type": "upsell-product",
+      "blocks": {
+        "38f5b788-018f-4355-8935-4a872a959010": {
+          "type": "section_background",
+          "settings": {
+            "section_bg_color": "#f5f5f5"
+          }
+        }
+      },
+      "block_order": [
+        "38f5b788-018f-4355-8935-4a872a959010"
+      ],
       "settings": {
         "container_style": "style_2",
         "upsell_products_enable": true,
