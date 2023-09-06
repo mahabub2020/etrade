@@ -8,7 +8,61 @@
       }
     },
     "tab-with-product": {
-      "type": "tab-with-product" 
+      "type": "tab-with-product",
+      "blocks": {
+        "e73d4a7c-bdb0-4837-b760-db522e6cb87a": {
+          "type": "tab_with_product",
+          "settings": {
+            "tab_product_handle": ""
+          }
+        },
+        "42700c8b-f6ae-4cf2-84c7-72752815f5ac": {
+          "type": "tab_with_product",
+          "settings": {
+            "tab_product_handle": ""
+          }
+        },
+        "817796e2-9b7e-413e-984f-6eb085df49f7": {
+          "type": "tab_with_product",
+          "settings": {
+            "tab_product_handle": ""
+          }
+        },
+        "8c111fe0-db24-46ad-9e6e-6975da3cb5b6": {
+          "type": "tab_with_product",
+          "settings": {
+            "tab_product_handle": ""
+          }
+        }
+      },
+      "block_order": [
+        "e73d4a7c-bdb0-4837-b760-db522e6cb87a",
+        "42700c8b-f6ae-4cf2-84c7-72752815f5ac",
+        "817796e2-9b7e-413e-984f-6eb085df49f7",
+        "8c111fe0-db24-46ad-9e6e-6975da3cb5b6"
+      ],
+      "settings": {
+        "container_style": "style_1",
+        "text_style": "text_style_center",
+        "tab_style": "tab_style_1",
+        "product_limit_handle": 8,
+        "product_column": "3",
+        "product_column_md": "4",
+        "product_column_xs": "12",
+        "button_title": "View All",
+        "button_url": "",
+        "section_text_align_2": "section_text_center",
+        "tab_text_color": "#d0d0d0",
+        "tab_border_color": "#fff",
+        "tab_text_hover_color": "#282828",
+        "tab_hover_border_color": "#282828",
+        "tab_text_active_color": "#282828",
+        "tab_active_border_color": "#cf987e",
+        "button_text_color": "#282828",
+        "button_border_color": "#D0D0D0",
+        "button_text_hover_color": "#282828",
+        "button_border_hover_color": "#282828"
+      }
     },
     "upsell-product": {
       "type": "upsell-product",
