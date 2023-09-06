@@ -23,14 +23,30 @@
             "unique_tab_title": "Unique Tab Titlerf",
             "unique_description_3": "[unique_description_3] Your content or text here [\/unique_description_3]"
           }
+        },
+        "3d39ae0b-34ed-4b61-96a5-3ad2bdeab2cc": {
+          "type": "custom_tab",
+          "settings": {
+            "custom_tab_title": "Tab Titledsadafasd",
+            "custom_tab_handle": "contact"
+          }
+        },
+        "6d193581-8a87-43ff-9b29-7d69cf87a40e": {
+          "type": "unique_tab_2",
+          "settings": {
+            "unique_tab_title": "Unique Tab Title",
+            "unique_description_2": "[unique_description_2] Your content or text here [\/unique_description_2]"
+          }
         }
       },
       "block_order": [
         "edd41336-a684-47c4-8a11-2e107abadeb9",
-        "6d67c663-4bcf-4bed-b899-7a9e34c4c194"
+        "6d67c663-4bcf-4bed-b899-7a9e34c4c194",
+        "3d39ae0b-34ed-4b61-96a5-3ad2bdeab2cc",
+        "6d193581-8a87-43ff-9b29-7d69cf87a40e"
       ],
       "settings": {
-        "container_style": "style_2",
+        "container_style": "style_1",
         "product_tab_enable": true,
         "tab_style": "tab_style_center",
         "text_style": "text_style_left",
@@ -41,7 +57,7 @@
         "product_review_tab_title": "Reviews",
         "product_comments_enable": true,
         "product_comments_title": "Commentsvv",
-        "product_page_comments_box": "facebook_comment",
+        "product_page_comments_box": "disqus_comment",
         "facebook_comments_post_limit": "10",
         "disqus_shortname": "etradeshopstore",
         "tab_text_color": "#8a8a8a",
