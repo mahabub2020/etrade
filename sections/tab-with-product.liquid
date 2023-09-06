@@ -143,8 +143,7 @@
       {%- endfor -%}
     }
   }
-
-
+ 
 #section-{{ section.id }} .tab-style-1 .nav-link {
     color: {{ section.settings.tab_text_color }};
 }
@@ -172,13 +171,9 @@ border-bottom: 2px solid {{ section.settings.button_border_color }};
 #section-{{ section.id }} .heading-button:hover  {
 border-bottom: 2px solid {{ section.settings.button_border_hover_color }};
 color: {{ section.settings.button_text_hover_color }};
-}
-
-
+} 
 {%- endstyle -%}
-
-
-
+ 
 {% schema %}
   {
     "name": "Tab With Product",
