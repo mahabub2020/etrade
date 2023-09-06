@@ -1,58 +1,63 @@
 {% if section.settings.product_tab_enable %}
-<div class="page-content-inner" id="section-{{ section.id }}">
+<div class="page-content-inner wc-tabs-wrapper bg-vista-white" id="section-{{ section.id }}">
   <div class="{% if section.settings.container_style == 'style_1' %}container p-0 {% else %} container-fluid p-0{% endif %}">
     <div class="row justify-content-{% if section.settings.tab_style == 'tab_style_left' %}left{% elsif section.settings.tab_style == 'tab_style_center' %}center{% elsif section.settings.tab_style == 'tab_style_right' %}end{% endif %}">
       <div class="col-12">
         <div class="product-data-tab tab-style-1">
           <div class="nav nav-tabs product-data-tab__head mb--40 mb-md--30" id="product-tab" role="tablist" style="justify-content: {% if section.settings.tab_style == 'tab_style_left' %}left{% elsif section.settings.tab_style == 'tab_style_center' %}center{% elsif section.settings.tab_style == 'tab_style_right' %}flex-end{% endif %}!important;">
-
+            <ul class="nav tabs wc-tabs" role="tablist">
             {% if section.settings.product_info_tab_enable %}
-            <a class="product-data-tab__link nav-link active" id="nav-description-tab" data-toggle="tab" href="#pro-dec" role="tab" {% if section.settings.tab_active_handle == 'info_tab' %}class="active" aria-selected="true"{% endif %}> 
+           <li> <a class="product-data-tab__link nav-link active" id="nav-description-tab" data-toggle="tab" href="#pro-dec" role="tab" {% if section.settings.tab_active_handle == 'info_tab' %}class="active" aria-selected="true"{% endif %}> 
               <span>{{ section.settings.product_info_tab_title }}</span>
             </a>
+          </li>
             {% endif %}
             {% if section.settings.product_review_tab_enable %}
-            <a class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" href="#pro-review" role="tab" {% if section.settings.tab_active_handle == 'review_tab' %}class="active" aria-selected="true"{% endif %}>
+              <li><a class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" href="#pro-review" role="tab" {% if section.settings.tab_active_handle == 'review_tab' %}class="active" aria-selected="true"{% endif %}>
               <span>{{ section.settings.product_review_tab_title }}</span>
             </a>
+          </li>
             {% endif %}
             {% if section.settings.product_comments_enable %}
-            <a class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" href="#comment-box" role="tab" {% if section.settings.tab_active_handle == 'comment_tab' %}class="active" aria-selected="true"{% endif %}>
+              <li> <a class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" href="#comment-box" role="tab" {% if section.settings.tab_active_handle == 'comment_tab' %}class="active" aria-selected="true"{% endif %}>
               <span>{{ section.settings.product_comments_title }}</span>
             </a>
+          </li>
             {% endif %}
 
                 {%- assign i = 1 -%}
               {%- for block in section.blocks -%}
               {%- case block.type -%}
               {%- when 'custom_tab' -%}
-                <a href="#{{ pages[block.settings.custom_tab_handle].title | handle }}-{{ block.id }}" class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" role="tab" aria-selected="false">
+                <li> <a href="#{{ pages[block.settings.custom_tab_handle].title | handle }}-{{ block.id }}" class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" role="tab" aria-selected="false">
                   {{ block.settings.custom_tab_title }}
                 </a>
+              </li>
               {%- when 'unique_tab_1' -%}
               {%- if product.description contains '[unique_description_1]' -%}
-                <a href="#{{ block.settings.unique_tab_title | handle }}-{{ block.id }}"  class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" role="tab" aria-selected="false">
+                <li> <a href="#{{ block.settings.unique_tab_title | handle }}-{{ block.id }}"  class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" role="tab" aria-selected="false">
                   {{ block.settings.unique_tab_title }}
                 </a>
+              </li>
               {%- endif -%}
               {%- when 'unique_tab_2' -%}
               {%- if product.description contains '[unique_description_2]' -%}
-                <a href="#{{ block.settings.unique_tab_title | handle }}-{{ block.id }}"  class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" role="tab" aria-selected="false">
+                <li><a href="#{{ block.settings.unique_tab_title | handle }}-{{ block.id }}"  class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" role="tab" aria-selected="false">
                   {{ block.settings.unique_tab_title }}
                 </a>
+              </li>
               {%- endif -%}
               {%- when 'unique_tab_3' -%}
               {%- if product.description contains '[unique_description_3]' -%}
-                <a href="#{{ block.settings.unique_tab_title | handle }}-{{ block.id }}"  class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" role="tab" aria-selected="false">
+                <li><a href="#{{ block.settings.unique_tab_title | handle }}-{{ block.id }}"  class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" role="tab" aria-selected="false">
                   {{ block.settings.unique_tab_title }}
                 </a>
+              </li>
               {%- endif -%}
               {%- endcase -%}
               {%- assign i = i | plus: 1 -%}
               {%- endfor -%}
-            
-
-          </div>
+            </ul></div>
           <div class="tab-content product-data-tab__content text-{% if section.settings.text_style == 'text_style_left' %}left{% elsif section.settings.text_style == 'text_style_center' %}center{% elsif section.settings.text_style == 'text_style_right' %}right{% endif %}" id="product-tabContent">
 
             {% if section.settings.product_info_tab_enable %}
