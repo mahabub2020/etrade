@@ -15,11 +15,11 @@
 <div class="page-content-inner" id="section-{{ section.id }}">
   <div class="{% if section.settings.container_style == 'style_1' %}container p-0 {% else %} container-fluid p-0{% endif %}">
     <div class="row {% if section.settings.content_handle == 'content_in_left' %}flex-row-reverse{% endif %}">
-       {%- if section.settings.product_style == 'product_default' -%}
+      
+      {%- if section.settings.product_style == 'product_default' -%}
       <div class="col-md-6 product-main-image">
         <div class="product-image">
           <div class="product-gallery vertical-slide-nav">
-            
             {%- if product.images.size -%}
             <div class="product-gallery__thumb">
               <div class="product-gallery__thumb--image">
@@ -198,7 +198,6 @@
       
       <div class="col-md-6 product-main-image">
         
-        
         <div class="product-image">
           <div class="product-gallery">
             <div class="product-gallery__large-image" id="ProductPhoto">
@@ -245,7 +244,7 @@
 
         
       </div>
-        {%- endif -%}
+      {%- endif -%}
       
       <div class="col-md-6 product-main-details mt--40 mt-md--10 mt-sm--30" {%- if section.settings.product_style == 'product_sticky' -%}id="sticky-sidebar"{%- endif -%} >
         
@@ -1430,143 +1429,4 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
 	 ]
   }
 {% endschema %}
-
-
-{%- if section.settings.product_zoom_enable -%}
-<script src="{{ 'jquery.elevateZoom-3.0.8.min.js' | asset_url }}"></script>
-{%- endif -%}
-
-{%- if section.settings.product_popup_enable -%}
-{{ 'jquery.fancybox.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'jquery.fancybox.min.js' | asset_url }}"></script>
-
-<script>
-  $(document).ready(function() {
-    $('.fancybox').fancybox();
-  });
-</script>
-{%- endif -%}
-
-{%- if section.settings.product_style == 'product_sticky' -%}
-<script src="{{ 'ResizeSensor-StickySidebar.js' | asset_url }}"></script>
-<script>
-  var sidebar = new StickySidebar('#product-content', {
-    containerSelector: '#product-details-with-gallery',
-    innerWrapperSelector: '.product-content-inner',
-    topSpacing: 20,
-    bottomSpacing: 20,
-    minWidth: 992,
-  });
-</script>
-{% endif %}
-
-
-<script>
-  var selectCallback = function(variant, selector) {
-    timber.productPage({
-      money_format: "{{ shop.money_format }}",
-      variant: variant,
-      selector: selector
-    });
-    
-    if (variant) {
-      
-      // Current variant select+
-      var form = jQuery('#' + selector.domIdPrefix).closest('form');
-      for (var i=0,length=variant.options.length; i<length; i++) {
-        var val = variant.options[i].replace(/'/g,"&#039;");
-        var radioButton = form.find(".swatch[data-option-index='" + i + "'] :radio[value='" + val +"']");
-        if (radioButton.size()) {
-          radioButton.get(0).checked = true;
-        }
-      }
-
-      // Current sku pass
-      $('.variant-sku').text(variant.sku);
-    }else {
-      $('.variant-sku').empty();
-    } 
-    
-    
-   {%- if section.settings.product_inventory_enable -%}  
-      /* -- code added for Inventory -- */
-      var selectors = {
-        variantInventory: '.variant-inventory'
-      };  
-      var inventory_level = (inv_qty[ variant.id ]);
-      if (inventory_level == 0){
-        $(selectors.variantInventory, this.$container).html('{{ section.settings.out_of_stock_title }}').show();
-      }
-      else if (inventory_level > 100) {
-          $(selectors.variantInventory, this.$container).html("{{ section.settings.in_stock_title }}").show();
-      }                
-      else {
-        $(selectors.variantInventory, this.$container).html(inventory_level + ' {{ section.settings.left_in_stock_title }}').show();
-      }
-      /* - Inventory end - */
-      {%- endif -%} 
-    
-    
-    
-    {%- if section.settings.product_zoom_enable -%}
-    // product image zoom with variant
-    if (variant && variant.featured_image) { 
-      jQuery('#ProductThumbs a[data-image-id="' + variant.featured_image.id + '"]').trigger('click'); 
-    }
-    {%- endif -%}
-
-  };
-  
-  jQuery(function($) {
-    new Shopify.OptionSelectors('productSelect', {
-      product: {{ product | json }},
-      onVariantSelected: selectCallback,
-      enableHistoryState: true
-    });
-
-    // Add label if only one product option and it isn't 'Title'. Could be 'Size'.
-    {% if product.options.size == 1 and product.options.first != 'Title' %}
-      $('.selector-wrapper:eq(0)').prepend('<label for="productSelect-option-0">{{ product.options.first | escape }}</label>');
-    {% endif %}
-
-    // Hide selectors if we only have 1 variant and its title contains 'Default'.
-    {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
-      $('.selector-wrapper').hide();
-    {% endif %}
-  });
-  
-  {%- if section.settings.product_zoom_enable -%}
-  function productZoom(){
-    $(".product-zoom").elevateZoom({
-      gallery: 'ProductThumbs',
-      galleryActiveClass: "active",
-      zoomType: "{{ section.settings.zoom_type }}",
-      cursor: "crosshair"
-    });
-    {%- if section.settings.product_popup_enable -%}
-    $(".product-zoom").on("click", function(e) {
-      var ez = $('.product-zoom').data('elevateZoom');
-      $.fancybox(ez.getGalleryList());
-      return false;
-    });
-    {% endif %}
-  };
-  function productZoomDisable(){
-    if( $(window).width() < 767 ) {
-      $('.zoomContainer').remove();
-      $(".product-zoom").removeData('elevateZoom');
-      $(".product-zoom").removeData('zoomImage');
-    } else {
-      productZoom();
-    }
-  };
-
-  productZoomDisable();
-
-  $(window).resize(function() {
-    productZoomDisable();
-  });
-  {%- endif -%}
-  
-  
-</script>
+ 
