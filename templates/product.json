@@ -15,10 +15,22 @@
           "settings": {
             "section_bg_color": "#f5f5f5"
           }
+        },
+        "cb06fe30-6885-4004-824f-47a3c6e74c81": {
+          "type": "section_margin",
+          "settings": {
+            "section_margin_top": 0,
+            "section_margin_bottom": 45,
+            "section_margin_top_md": 0,
+            "section_margin_bottom_md": 0,
+            "section_margin_top_xs": 0,
+            "section_margin_bottom_xs": 0
+          }
         }
       },
       "block_order": [
-        "38f5b788-018f-4355-8935-4a872a959010"
+        "38f5b788-018f-4355-8935-4a872a959010",
+        "cb06fe30-6885-4004-824f-47a3c6e74c81"
       ],
       "settings": {
         "container_style": "style_2",
