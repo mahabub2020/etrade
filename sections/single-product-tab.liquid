@@ -1,0 +1,723 @@
+{% if section.settings.product_tab_enable %}
+<div class="page-content-inner" id="section-{{ section.id }}">
+  <div class="{% if section.settings.container_style == 'style_1' %}container p-0 {% else %} container-fluid p-0{% endif %}">
+    <div class="row justify-content-{% if section.settings.tab_style == 'tab_style_left' %}left{% elsif section.settings.tab_style == 'tab_style_center' %}center{% elsif section.settings.tab_style == 'tab_style_right' %}end{% endif %}">
+      <div class="col-12">
+        <div class="product-data-tab tab-style-1">
+          <div class="nav nav-tabs product-data-tab__head mb--40 mb-md--30" id="product-tab" role="tablist" style="justify-content: {% if section.settings.tab_style == 'tab_style_left' %}left{% elsif section.settings.tab_style == 'tab_style_center' %}center{% elsif section.settings.tab_style == 'tab_style_right' %}flex-end{% endif %}!important;">
+
+            {% if section.settings.product_info_tab_enable %}
+            <a class="product-data-tab__link nav-link active" id="nav-description-tab" data-toggle="tab" href="#pro-dec" role="tab" {% if section.settings.tab_active_handle == 'info_tab' %}class="active" aria-selected="true"{% endif %}> 
+              <span>{{ section.settings.product_info_tab_title }}</span>
+            </a>
+            {% endif %}
+            {% if section.settings.product_review_tab_enable %}
+            <a class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" href="#pro-review" role="tab" {% if section.settings.tab_active_handle == 'review_tab' %}class="active" aria-selected="true"{% endif %}>
+              <span>{{ section.settings.product_review_tab_title }}</span>
+            </a>
+            {% endif %}
+            {% if section.settings.product_comments_enable %}
+            <a class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" href="#comment-box" role="tab" {% if section.settings.tab_active_handle == 'comment_tab' %}class="active" aria-selected="true"{% endif %}>
+              <span>{{ section.settings.product_comments_title }}</span>
+            </a>
+            {% endif %}
+
+                {%- assign i = 1 -%}
+              {%- for block in section.blocks -%}
+              {%- case block.type -%}
+              {%- when 'custom_tab' -%}
+                <a href="#{{ pages[block.settings.custom_tab_handle].title | handle }}-{{ block.id }}" class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" role="tab" aria-selected="false">
+                  {{ block.settings.custom_tab_title }}
+                </a>
+              {%- when 'unique_tab_1' -%}
+              {%- if product.description contains '[unique_description_1]' -%}
+                <a href="#{{ block.settings.unique_tab_title | handle }}-{{ block.id }}"  class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" role="tab" aria-selected="false">
+                  {{ block.settings.unique_tab_title }}
+                </a>
+              {%- endif -%}
+              {%- when 'unique_tab_2' -%}
+              {%- if product.description contains '[unique_description_2]' -%}
+                <a href="#{{ block.settings.unique_tab_title | handle }}-{{ block.id }}"  class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" role="tab" aria-selected="false">
+                  {{ block.settings.unique_tab_title }}
+                </a>
+              {%- endif -%}
+              {%- when 'unique_tab_3' -%}
+              {%- if product.description contains '[unique_description_3]' -%}
+                <a href="#{{ block.settings.unique_tab_title | handle }}-{{ block.id }}"  class="product-data-tab__link nav-link" id="nav-reviews-tab" data-toggle="tab" role="tab" aria-selected="false">
+                  {{ block.settings.unique_tab_title }}
+                </a>
+              {%- endif -%}
+              {%- endcase -%}
+              {%- assign i = i | plus: 1 -%}
+              {%- endfor -%}
+            
+
+          </div>
+          <div class="tab-content product-data-tab__content text-{% if section.settings.text_style == 'text_style_left' %}left{% elsif section.settings.text_style == 'text_style_center' %}center{% elsif section.settings.text_style == 'text_style_right' %}right{% endif %}" id="product-tabContent">
+
+            {% if section.settings.product_info_tab_enable %}
+            <div class="tab-pane {% if section.settings.tab_active_handle == 'info_tab' %}active{% endif %}" id="pro-dec" role="tabpanel" aria-labelledby="nav-description-tab">
+              <div class="product-description">
+                {%- if product.description contains '[product_description]' -%}            
+                {%- assign product_description_first = product.description | split:'[/product_description]' | first -%}
+                {%- assign product_description_final = product_description_first | split:'[product_description]' | last -%} 
+                {{ product_description_final }}
+                {%- else -%}
+                {{ product.description | split: '[short_description]' | first | split: '[product_description]' | first | split: '[new_products]' | first | split: '[product_video]' | first | split: '[affiliate_link]' | first | split: '[countdown]' | first }}
+                {%- endif -%}
+              </div>
+            </div>
+            {% endif %}
+
+            {% if section.settings.product_review_tab_enable %}
+            <div class="tab-pane  {% if section.settings.tab_active_handle == 'review_tab' %}active{% endif %}" id="pro-review" role="tabpanel" aria-labelledby="nav-reviews-tab">
+              <div class="product-reviews">
+                <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+
+              </div>
+            </div>
+            {% endif %}
+
+            {% if section.settings.product_comments_enable %}
+            <div class="tab-pane {% if section.settings.tab_active_handle == 'comment_tab' %}active{% endif %}" id="comment-box" role="tabpanel" aria-labelledby="nav-reviews-tab">
+              <div class="product-reviews">
+                <!-- disqus comment box start -->
+                {% if section.settings.product_page_comments_box =='disqus_comment' %}
+                {% include 'disqus-comment' %}
+                {% endif %}
+                <!-- disqus comment box end -->                
+                <!-- facebook comment box start -->
+                {% if section.settings.product_page_comments_box == 'facebook_comment' %}
+                {% include 'facebook-comment' %}
+                {% include 'facebook-comment-box-script' %}
+                {% endif %}
+                <!-- facebook comment box end -->
+
+              </div>
+            </div>
+            {% endif %}
+            
+               {%- assign i = 1 -%}
+            {%- for block in section.blocks -%}
+            {%- case block.type -%}
+            {%- when 'custom_tab' -%}
+            <div class="tab-pane fade" id="{{ pages[block.settings.custom_tab_handle].title | handle }}-{{ block.id }}" role="tabpanel" aria-labelledby="nav-reviews-tab">
+              <div class="product-reviews">
+              {{ pages[block.settings.custom_tab_handle].content }}
+              </div>
+            </div>
+
+            {%- when 'unique_tab_1' -%}
+            {%- if product.description contains '[unique_description_1]' -%}
+            <div class="tab-pane fade" id="{{ block.settings.unique_tab_title | handle }}-{{ block.id }}" role="tabpanel" aria-labelledby="nav-reviews-tab">
+              <div class="product-reviews">
+              {%- if product.description contains '[unique_description_1]' -%}            
+              {%- assign unique_description_first = product.description | split:'[/unique_description_1]' | first -%}
+              {%- assign unique_description_final = unique_description_first | split:'[unique_description_1]' | last -%} 
+              {{ unique_description_final }}
+              {%- endif -%}
+              </div>
+            </div>
+            {%- endif -%}
+            {%- when 'unique_tab_2' -%}
+            {%- if product.description contains '[unique_description_2]' -%}
+            <div class="tab-pane fade" id="{{ block.settings.unique_tab_title | handle }}-{{ block.id }}" role="tabpanel" aria-labelledby="nav-reviews-tab">
+              <div class="product-reviews">
+              {%- if product.description contains '[unique_description_2]' -%}            
+              {%- assign unique_description_first = product.description | split:'[/unique_description_2]' | first -%}
+              {%- assign unique_description_final = unique_description_first | split:'[unique_description_2]' | last -%} 
+              {{ unique_description_final }}
+              {%- endif -%}
+              </div>
+            </div>
+            {%- endif -%}
+            {%- when 'unique_tab_3' -%}
+            {%- if product.description contains '[unique_description_3]' -%}
+            <div class="tab-pane fade" id="{{ block.settings.unique_tab_title | handle }}-{{ block.id }}" role="tabpanel" aria-labelledby="nav-reviews-tab">
+              <div class="product-reviews">
+              {%- if product.description contains '[unique_description_3]' -%}            
+              {%- assign unique_description_first = product.description | split:'[/unique_description_3]' | first -%}
+              {%- assign unique_description_final = unique_description_first | split:'[unique_description_3]' | last -%} 
+              {{ unique_description_final }}
+              {%- endif -%}
+              </div>
+            </div>
+            {%- endif -%}
+
+            {%- endcase -%}
+            {%- assign i = i | plus: 1 -%}
+            {%- endfor -%}
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+
+
+<style>
+  
+  #section-{{ section.id }}{
+    {%- for block in section.blocks -%}
+    {%- case block.type -%}
+    {%- when 'section_margin' -%}
+    margin-top: {{ block.settings.section_margin_top }}px;
+    margin-bottom: {{ block.settings.section_margin_bottom }}px;
+    {%- when 'section_padding' -%}
+    padding-top: {{ block.settings.section_padding_top }}px;
+    padding-bottom: {{ block.settings.section_padding_bottom }}px;
+    {%- when 'section_background' -%}    
+    background: {{ block.settings.section_bg_color }} 
+      {%- if block.settings.section_bg_image -%}url("{{ block.settings.section_bg_image | img_url: 'master' }}"){%- endif -%} no-repeat scroll center center / cover;
+    {%- endcase -%}
+    {%- endfor -%}
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {% case block.type %}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_md }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_md }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_md }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_md }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+  @media (max-width: 767px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {%- case block.type -%}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_xs }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_xs }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_xs }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_xs }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+  
+
+#section-{{ section.id }} .tab-style-1.product-data-tab .product-data-tab__link.nav-link {
+    color: {{ section.settings.tab_text_color }};
+}
+  
+    #section-{{ section.id }} .tab-style-1.product-data-tab .product-data-tab__link.nav-link:hover {
+    color: {{ section.settings.tab_text_hover_color }};
+}
+  
+  
+    #section-{{ section.id }} .tab-style-1.product-data-tab .product-data-tab__link.nav-link.active {
+    color: {{ section.settings.tab_text_active_color }};
+}
+  
+  
+   #section-{{ section.id }} .tab-style-1 .nav-link span{
+  	    border-color: {{ section.settings.tab_border_color }};
+  }
+  
+    #section-{{ section.id }} .tab-style-1 .nav-link:hover span{
+  	    border-color: {{ section.settings.tab_border_hover_color }};
+  }
+  
+  
+  #section-{{ section.id }} .tab-style-1 .nav-link.active span{
+  	    border-color: {{ section.settings.tab_active_border_color }};
+  }
+  
+  
+  
+</style>
+
+
+{% schema %}
+  {
+    "name": "Information Tab",
+    "settings": [
+		{
+          "type": "header",
+          "content": "Container Style"
+        },
+        {
+            "type": "radio",
+            "id": "container_style",
+            "label": "Container Style",
+            "options":[
+              {
+                  "value":"style_1",
+                  "label": "Container"
+              },
+              {
+                  "value":"style_2",
+                  "label": "Container Fluid"
+              }
+            ],
+
+           "default": "style_2"
+        },
+		{
+            "type": "checkbox",
+            "id": "product_tab_enable",
+            "label": "Show Product Tab Section",
+            "default": true
+        },
+		{
+			"type": "header",
+            "content": " Tab"
+        },
+        {
+          "type": "select",
+          "id": "tab_style",
+          "label": "Text Align",
+          "options":[
+            {
+              "value":"tab_style_left",
+              "label": "Left"
+            },
+            {
+              "value":"tab_style_center",
+              "label": "center"
+            },
+            {
+              "value":"tab_style_right",
+              "label": "right"
+            }
+          ],
+          "default": "tab_style_center"
+        },
+		{
+		  "type": "header",
+          "content": "Tab Content"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "label": "Text Align",
+          "options":[
+            {
+              "value":"text_style_left",
+              "label": "Left"
+            },
+            {
+              "value":"text_style_center",
+              "label": "center"
+            },
+            {
+              "value":"text_style_right",
+              "label": "right"
+            }
+          ],
+          "default": "text_style_left"
+        },
+		{
+            "type": "radio",
+            "id": "tab_active_handle",
+            "label": "Active Tab",
+            "options": [
+              {
+                "value": "info_tab",
+                "label": "Description Tab"
+              },
+              {
+                "value": "review_tab",
+                "label": "Review Tab"
+              },
+			  {
+                "value": "comment_tab",
+                "label": "Comment Tab"
+              }
+            ],
+            "default": "info_tab"
+        },		
+		{
+            "type": "header",
+            "content": "Description Tab"
+        },
+		{
+            "type": "checkbox",
+            "id": "product_info_tab_enable",
+            "label": "Show Product Description",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "product_info_tab_title",
+            "label": "Description Title",
+            "default": "Description"
+        },
+		{
+            "type": "header",
+            "content": "Review Tab"
+        },
+		{
+            "type": "checkbox",
+            "id": "product_review_tab_enable",
+            "label": "Show Product Review",
+            "info": "Install Free Apps for Product Review [Click Here](https:\/\/apps.shopify.com\/product-reviews)",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "product_review_tab_title",
+            "label": "Title",
+            "default": "Reviews"
+        },
+		{
+            "type": "header",
+            "content": "Comment Tab"
+        },
+		{
+            "type": "checkbox",
+            "id": "product_comments_enable",
+            "label": "Show Comment",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "product_comments_title",
+            "label": "Comments Title",
+            "default": "Comments"
+        },
+        {
+            "type": "radio",
+            "id": "product_page_comments_box",
+            "label": "Select comments box",
+            "options": [
+              {
+                "value": "disqus_comment",
+                "label": "Disqus comments"
+              },
+              {
+                "value": "facebook_comment",
+                "label": "Facebook comments"
+              }
+            ],
+            "default": "facebook_comment"
+        },
+        {
+            "type": "text",
+            "id": "facebook_comments_post_limit",
+            "label": "FacebooK Comment Limit",
+            "default": "10"
+        },
+        {
+            "type": "text",
+            "id": "disqus_shortname",
+            "label": "Your Store Name",
+            "default": "demo-store",
+            "info": "Disqus Shortname (Get your shortname)[disqus.com](http:\/\/disqus.com)"
+        },
+		{
+          "type": "header",
+          "content": "Color"
+        },
+        {
+           "type": "color",
+           "id": "tab_text_color",
+           "label": "Tab Text Color",
+           "default": "#8a8a8a"
+        }, 
+        {
+           "type": "color",
+           "id": "tab_border_color",
+           "label": "Tab Border Color",
+           "default": "#fff"
+        }, 
+        {
+           "type": "color",
+           "id": "tab_text_hover_color",
+           "label": "Tab Text Hover Color",
+           "default": "#282828"
+        }, 
+        {
+           "type": "color",
+           "id": "tab_border_hover_color",
+           "label": "Tab Hover Border Color",
+           "default": "#cf987e"
+        }, 
+        {
+           "type": "color",
+           "id": "tab_text_active_color",
+           "label": "Tab Text Active Color",
+           "default": "#282828"
+        }, 
+        {
+           "type": "color",
+           "id": "tab_active_border_color",
+           "label": "Tab Active Border Color",
+           "default": "#cf987e"
+        } 
+	],
+	"blocks": [
+      {
+          "name": "Custom Tab",
+          "type": "custom_tab",
+          "limit": 3,
+          "settings": [
+              {
+                "type": "text",
+                "id": "custom_tab_title",
+                "label": "Tab Title",
+                "default": "Tab Title"
+              },
+              {
+                "type": "page",
+                "id": "custom_tab_handle",
+                "label": "Select Page for information",
+                "info": "[Create a page](\/admin\/pages\/new)"
+              }		
+          ]
+      },
+      {
+          "name": "Unique Tab 1",
+          "type": "unique_tab_1",
+          "limit": 1,
+          "settings": [
+              {
+                "type": "text",
+                "id": "unique_tab_title",
+                "label": "Unique Tab Title",
+                "default": "Unique Tab Title"
+              },
+              {
+                "type": "html",
+                "id": "unique_description_1",
+                "label": "Shortcode",
+                "default": "[unique_description_1] Your content or text here [\/unique_description_1]",
+                "info": "Use this shortcode in the product description for the unique description of each product"
+              }		
+          ]
+      },
+      {
+          "name": "Unique Tab 2",
+          "type": "unique_tab_2",
+          "limit": 1,
+          "settings": [
+              {
+                "type": "text",
+                "id": "unique_tab_title",
+                "label": "Unique Tab Title",
+                "default": "Unique Tab Title"
+              },
+              {
+                "type": "html",
+                "id": "unique_description_2",
+                "label": "Shortcode",
+                "default": "[unique_description_2] Your content or text here [\/unique_description_2]",
+                "info": "Use this shortcode in the product description for the unique description of each product"
+              }		
+          ]
+      },
+      {
+          "name": "Unique Tab 3",
+          "type": "unique_tab_3",
+          "limit": 1,
+          "settings": [
+              {
+                "type": "text",
+                "id": "unique_tab_title",
+                "label": "Unique Tab Title",
+                "default": "Unique Tab Title"
+              },
+              {
+                "type": "html",
+                "id": "unique_description_3",
+                "label": "Shortcode",
+                "default": "[unique_description_3] Your content or text here [\/unique_description_3]",
+                "info": "Use this shortcode in the product description for the unique description of each product"
+              }		
+          ]
+      },
+	  {
+          "type": "section_margin",
+          "name": "Section Margin",
+		  "limit": 1,
+          "settings": [
+            {
+			  "type": "header",
+			  "content": "Large/Desktop Device"
+			},
+			{
+			  "type": "range",
+			  "id": "section_margin_top",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Margin Top",
+			  "unit": "px",
+			  "default": 0
+			},
+			{
+			  "type": "range",
+			  "id": "section_margin_bottom",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Margin Bottom",
+			  "unit": "px",
+			  "default": 0
+			},
+			{
+			  "type": "header",
+			  "content": "Tablate Device"
+			},
+			{
+			  "type": "range",
+			  "id": "section_margin_top_md",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Margin Top",
+			  "unit": "px",
+			  "default": 0
+			},
+			{
+			  "type": "range",
+			  "id": "section_margin_bottom_md",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Margin Bottom",
+			  "unit": "px",
+			  "default": 0
+			},
+			{
+			  "type": "header",
+			  "content": "Mobile Device"
+			},
+			{
+			  "type": "range",
+			  "id": "section_margin_top_xs",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Margin Top",
+			  "unit": "px",
+			  "default": 0
+			},
+			{
+			  "type": "range",
+			  "id": "section_margin_bottom_xs",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Margin Bottom",
+			  "unit": "px",
+			  "default": 0
+			}
+          ]
+       },
+	   {
+          "type": "section_padding",
+          "name": "Section Padding",
+		  "limit": 1,
+          "settings": [
+            {
+			  "type": "header",
+			  "content": "Large/Desktop Device"
+			},
+			{
+			  "type": "range",
+			  "id": "section_padding_top",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Padding Top",
+			  "unit": "px",
+			  "default": 0
+			},
+			{
+			  "type": "range",
+			  "id": "section_padding_bottom",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Padding Bottom",
+			  "unit": "px",
+			  "default": 100
+			},
+			{
+			  "type": "header",
+			  "content": "Tablate Device"
+			},
+			{
+			  "type": "range",
+			  "id": "section_padding_top_md",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Padding Top",
+			  "unit": "px",
+			  "default": 0
+			},
+			{
+			  "type": "range",
+			  "id": "section_padding_bottom_md",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Padding Bottom",
+			  "unit": "px",
+			  "default": 80
+			},
+			{
+			  "type": "header",
+			  "content": "Mobile Device"
+			},
+			{
+			  "type": "range",
+			  "id": "section_padding_top_xs",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Padding Top",
+			  "unit": "px",
+			  "default": 0
+			},
+			{
+			  "type": "range",
+			  "id": "section_padding_bottom_xs",
+			  "min": 0,
+			  "max": 150,
+			  "step": 5,
+			  "label": "Padding Bottom",
+			  "unit": "px",
+			  "default": 60
+			}
+          ]
+       },
+	   {
+          "type": "section_background",
+          "name": "Section Background",
+		  "limit": 1,
+          "settings": [
+            {
+			  "type": "image_picker",
+			  "id": "section_bg_image",
+			  "label": "BG Image"
+			},
+			{
+			  "type": "color",
+			  "id": "section_bg_color",
+			  "label": "BG Color",
+			  "default": "#ffffff"
+			}
+          ]
+       }
+  	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
