@@ -177,12 +177,28 @@
         "section_title_color": "#282828",
         "section_border_color": "#cf987e"
       }
+    },
+    "reviewxpo-reviews-widget-app-section": {
+      "type": "apps",
+      "blocks": {
+        "884f1073-f1f0-4014-b1b7-3f429d53244b": {
+          "type": "shopify:\/\/apps\/reviewxpo-product-reviews-app\/blocks\/revews-widget\/3e3d94fa-8b53-4134-942c-f7662dc9282f",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "884f1073-f1f0-4014-b1b7-3f429d53244b"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "template",
     "single-product-tab",
     "upsell-product",
+    "reviewxpo-reviews-widget-app-section",
     "related-products"
   ]
 }

@@ -26,6 +26,7 @@
   <style>
     [x-cloak] { display: none !important; }
   </style>
+{{ shop.metafields.reviewxpo['global_styles'] }}
 </head>
 <body>
 
@@ -36,5 +37,12 @@
   </main>
 
   {% section 'footer' %}
+
+<script>
+    var rvxpo_product_ratings = {{ product.metafields.reviewxpo.rating.value | json }};
+</script>
+
+{{ shop.metafields.reviewxpo['global_scripts'] }}
+
 </body>
 </html>
