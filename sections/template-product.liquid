@@ -49,26 +49,42 @@
               <div class="position-sticky sticky-top">
                   <div class="single-product-content">
                       <div class="inner">
-                          <h2 class="product-title">Ella Everyday Tote</h2>
-                          <span class="price-amount">$155.00 - $255.00</span>
-                          <div class="product-rating">
-                              <div class="star-rating">
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="fas fa-star"></i>
-                                  <i class="far fa-star"></i>
-                              </div>
-                              <div class="review-link">
-                                  <a href="#">(<span>2</span> customer reviews)</a>
-                              </div>
+                          <h2 class="product-title">{{ product.title }}</h2> 
+                          <div class="product-price-wrapper mb--40 mb-md--10">
+                            <span class="money price-amount" id="ProductPrice">{{ product.selected_or_first_available_variant.price | money }}</span>
+                             {%- if product.compare_at_price_max > product.price -%}
+                            <span class="old-price">
+                              <span class="money price-amount" id="ComparePrice">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
+                            </span>
+                             {%- endif -%}
                           </div>
-                          <ul class="product-meta">
-                              <li><i class="fal fa-check"></i>In stock</li>
-                              <li><i class="fal fa-check"></i>Free delivery available</li>
-                              <li><i class="fal fa-check"></i>Sales 30% Off Use Code: MOTIVE30</li>
-                          </ul>
-                          <p class="description">In ornare lorem ut est dapibus, ut tincidunt nisi pretium. Integer ante est, hendrerit in rutrum quis, elementum eget magna. Pellentesque sagittis dictum libero, eu dignissim tellus.</p>
+       
+                          {%- if section.settings.product_review_enable -%}
+                            <div class="product-rating">
+                              <span class="star-rating shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+                            </div>
+                          {%- endif -%} 
+                          <div class="clearfix"></div>
+
+                                          
+                          {%- unless section.settings.product_description_handle == 'without_description' -%}
+                            {%- if section.settings.product_description_handle == 'full_description' -%}
+                            {{ product.description }}
+                            {%- elsif section.settings.product_description_handle == 'short_description' -%}
+                            <div class="product-short-description description mb--45 mb-sm--20">
+                              {%- if product.description contains '[short_description]' -%} 
+                              {%- assign short_description_first = product.description | split:'[/short_description]' | first -%}
+                              {%- assign short_description_final = short_description_first | split:'[short_description]' | last -%}
+                              {{ short_description_final }}
+                              {%- else -%}
+                              {%- assign truncatewords_count = section.settings.truncatewords_count_handle -%}
+                              {{ product.description | strip_html | truncatewords: truncatewords_count | split: '[short_description]' | first | split: '[product_description]' | first | split: '[new_products]' | first | split: '[product_video]' | first | split: '[affiliate_link]' | first | split: '[countdown]' | first }}
+                              {%- endif -%}
+                            </div>
+                  
+                            {%- endif -%}
+                            {%- endunless -%}
+
 
                           <div class="product-variations-wrapper">
 
@@ -135,6 +151,19 @@
 </div> 
 
 
+
+{% comment %}
+
+{% assign instructions = product.metafields.meta %}
+{% assign key = 'video' %}
+
+YouTube URL: {{ instructions[key] }}
+
+{% for field in product.metafields.instructions %}
+Loop: <li>{{ field | first }}: {{ field | last }}</li>
+{% endfor %}
+
+{% endcomment %}
 
 
 <style>
