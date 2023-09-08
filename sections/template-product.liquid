@@ -98,40 +98,78 @@
                   
                             {%- endif -%}
                             {%- endunless -%}
+                            {%- render 'product-variant' -%}
 
-                            {%- include 'product-variant' -%}
-
-                        
-
+                            {%- if product.description contains '[countdown]' -%}
+                              {%- assign count_down_first = product.description | split:'[/countdown]' | first -%}
+                              {%- assign count_down_final = count_down_first | split:'[countdown]' | last -%}
+                              <div class="product_coundown product_timing">
+                                <h5>{{ section.settings.countdown_heading }}</h5>
+                                <div class="coundown-main mb--30 mb-sm--20" data-countdown="{{ count_down_final }}"></div>
+                              </div>
+                              {%- endif -%}
                           <!-- Start Product Action Wrapper  -->
                           <div class="product-action-wrapper d-flex-center">
-                              <!-- Start Quentity Action  -->
-                              <div class="pro-qty mr--20"><input type="text" value="1"></div>
-                              <!-- End Quentity Action  -->
+                            
+                              {%- if product.description contains '[affiliate_link]' -%}
+                                {%- render 'affiliate-product-cart-action' -%}
+                              {%- else -%}
 
-                              <!-- Start Product Action  -->
-                              <ul class="product-action d-flex-center mb--0">
-                                  <li class="add-to-cart"><a href="cart.html" class="axil-btn btn-bg-primary">Add to Cart</a></li>
-                                  <li class="wishlist"><a href="wishlist.html" class="axil-btn wishlist-btn"><i class="far fa-heart"></i></a></li>
+
+                              <div class="product-action d-flex-center mb--0">
+              
+                                <div class="pro-qty mr--20 quantity product-quantity-action quantity-selector cart-plus-minus">
+                                  <input type="number" class="quantity-input cart-plus-minus-box" name="quantity" id="qty" value="1" min="1">
+                                </div>
+                                <ul class="product-action d-flex-center mb--0">
+                               
+                                  {% render 'product-cart-action' %}
+                                
+                                 {%- if settings.wishlist_enable -%}
+                                   {% render 'wishlist-button' with product as product %}
+                                {%- endif -%}
+                              
+                                {%- if settings.compare_product_enalbe -%}
+                                  <li class="add-to-cart">
+                                    <a href="#"  class="compare action-btn" data-pid="{{ product.handle  }}" title="Add to Compare" data-original-title="Compare" data-toggle="tooltip" data-placement="top">
+                                      <span>
+                                        <i class="dl-icon-compare"></i>
+                                      </span>
+                                    </a>
+                                  </li>
+                                {%- endif -%}
+
                               </ul>
-                              <!-- End Product Action  -->
-
                           </div>
-                          <!-- End Product Action Wrapper  -->
-
-                          <div class="product_meta">   
-                            <span class="sku_wrapper">SKU: <span class="sku">N/A</span></span> 
-                            <span class="posted_in">Categories: <a href="https://dev.axilthemes.com/themes/etrade/product-category/fashion/" rel="tag">Fashion</a>, <a href="https://dev.axilthemes.com/themes/etrade/product-category/fashion/handbag/" rel="tag">Handbag</a>, <a href="https://dev.axilthemes.com/themes/etrade/product-category/fashion/wallets/" rel="tag">Wallets</a></span>			
-                            <span class="tagged_as">Tags: <a href="https://dev.axilthemes.com/themes/etrade/product-tag/fashion/" rel="tag">Fashion</a>, <a href="https://dev.axilthemes.com/themes/etrade/product-tag/handbag/" rel="tag">Handbag</a></span>			 
-        
+                        {%- endif -%}
+                          <div class="product_meta">    
+                            {%- if current_variant.sku.size > 0 and section.settings.product_sku_enable -%}
+                              <span class="sku_wrapper">
+                                {{ section.settings.product_sku_title }} <span class="sku">{{ current_variant.sku }}</span>
+                              </span>
+                              {%- endif -%}  
+                            {% if section.settings.category_list_enable %}
+                              <span class="posted_in">{{ section.settings.category_title }}  
+                                {% assign category_list_limit = section.settings.category_list_limit_handle  %}
+                                {% for category in collections limit: category_list_limit %}
+                                <a href="{{ category.url }}">{{ category.title }}</a>{% unless forloop.last %},{% endunless %}
+                                {% endfor %} 
+                              </span>
+                              {% endif %} 
+                            {% if section.settings.category_tag_enable and product.tags.size > 0 %}
+                              <span class="tagged_as">{{ section.settings.tag_title }} 
+                                {% assign category_tag_limit = section.settings.category_tag_limit_handle  %}
+                                {% for tag in product.tags limit: category_tag_limit %}
+                                <a href="/collections/all/{{ tag | handle }}">{{ tag }}{% unless forloop.last %},{% endunless %}</a>
+                                {% endfor %}
+                              </span>
+                              {% endif %} 
 
                             {%- if section.settings.social_share_enable -%}
                               {%- render 'social-share' -%}
                             {%- endif -%}
 
                           </div>
-
-
                           <!-- End .product-desc-wrapper -->
                       </div>
                   </div>
@@ -142,9 +180,10 @@
         </div>
       </div>
     </div>
-  <?php do_action( 'woocommerce_after_single_product_summary' );?>
+  
   </div> <!-- end axil-single-product-area -->
 
+</div> 
 </div> 
 
 

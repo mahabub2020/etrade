@@ -1,7 +1,9 @@
-<div class="product-action flex-row align-items-center">
+
+<li class="add-to-cart">
+  <div class="product-action flex-row align-items-center">
   {% if product.available %}
   {% if settings.product_cart_type == 'ajax_spin_cart' %}
-  <button type="submit" class="ajax-spin-cart btn btn-style-1 btn-large add-to-cart" id="AddToCart">
+  <button type="submit" class="ajax-spin-cart btn btn-style-1 btn-large add-to-cart axil-btn btn-bg-primary" id="AddToCart">
     <span>
       <span class="cart-title" id="AddToCartText">{{ settings.cart_button_title }}</span>
       <span class="cart-loading">{{ settings.wait_title }}</span>
@@ -10,7 +12,7 @@
     </span>
   </button>
   {% elsif settings.product_cart_type == 'ajax_popup_cart' or settings.product_cart_type == 'without_ajax_cart' %}
-  <button type="submit" class="btn btn-style-1 btn-large add-to-cart" id="AddToCart">
+  <button type="submit" class="btn btn-style-1 btn-large add-to-cart axil-btn btn-bg-primary" id="AddToCart">
     <span>
       <span class="cart-title" id="AddToCartText">{{ settings.cart_button_title }}</span>
     </span>
@@ -25,8 +27,9 @@
   </script>
   {% endunless %}
   {% else %}
-  <button class="cart-disable btn-disable btn-style-1 btn-large add-to-cart" type="button">
+  <button class="cart-disable btn-disable btn-style-1 btn-large add-to-cart axil-btn btn-bg-primary" type="button">
     <span class="cart-text">{{ settings.soldout_button_title }}</span>
   </button>
   {% endif %}
 </div>
+</li>
