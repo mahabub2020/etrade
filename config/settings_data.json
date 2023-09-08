@@ -1,6 +1,7 @@
 {
   "current": {
-    "favicon": "shopify:\/\/shop_images\/product-25-300x300.jpg",
+    "favicon": "shopify:\/\/shop_images\/logo.png",
+    "currency_enable": true,
     "checkout_logo_image": "shopify:\/\/shop_images\/logo.svg",
     "sections": {
       "header": {
