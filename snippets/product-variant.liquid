@@ -14,7 +14,7 @@
   {%- if section.settings.product_variant_handle == 'product_variant_swatch_option' -%}
   {%- if product.available and product.variants.size > 1 -%}
   {% for option in product.options %}
-  {%- include 'swatch' with option -%}
+  {%- render 'swatch' with option -%}
   {% endfor %}
   {%- endif -%}                    
   <script>
