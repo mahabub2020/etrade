@@ -23,7 +23,7 @@
         "out_of_stock_title": "Out of stock",
         "product_description_handle": "short_description",
         "truncatewords_count_handle": 35,
-        "product_variant_handle": "product_variant_swatch_option",
+        "product_variant_handle": "product_variant_select_option",
         "show_variant_image": false,
         "dynamic_checkout_button_enable": true,
         "social_share_enable": true,
@@ -149,6 +149,21 @@
         "section_border_color": "#cf987e"
       }
     },
+    "reviewxpo-reviews-widget-app-section": {
+      "type": "apps",
+      "blocks": {
+        "884f1073-f1f0-4014-b1b7-3f429d53244b": {
+          "type": "shopify:\/\/apps\/reviewxpo-product-reviews-app\/blocks\/revews-widget\/3e3d94fa-8b53-4134-942c-f7662dc9282f",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "884f1073-f1f0-4014-b1b7-3f429d53244b"
+      ],
+      "settings": {
+      }
+    },
     "related-products": {
       "type": "related-products",
       "blocks": {
@@ -176,21 +191,6 @@
         "product_column_sm": 1,
         "section_title_color": "#282828",
         "section_border_color": "#cf987e"
-      }
-    },
-    "reviewxpo-reviews-widget-app-section": {
-      "type": "apps",
-      "blocks": {
-        "884f1073-f1f0-4014-b1b7-3f429d53244b": {
-          "type": "shopify:\/\/apps\/reviewxpo-product-reviews-app\/blocks\/revews-widget\/3e3d94fa-8b53-4134-942c-f7662dc9282f",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "884f1073-f1f0-4014-b1b7-3f429d53244b"
-      ],
-      "settings": {
       }
     }
   },

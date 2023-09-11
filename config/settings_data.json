@@ -2,6 +2,7 @@
   "current": {
     "favicon": "shopify:\/\/shop_images\/logo.png",
     "currency_enable": true,
+    "content_sidebar_handle": "content_sidebar_in_left",
     "checkout_logo_image": "shopify:\/\/shop_images\/logo.svg",
     "sections": {
       "header": {
