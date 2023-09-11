@@ -1,6 +1,6 @@
 
-<li class="add-to-cart">
-  <div class="product-action flex-row align-items-center">
+
+
   {% if product.available %}
   {% if settings.product_cart_type == 'ajax_spin_cart' %}
   <button type="submit" class="ajax-spin-cart btn btn-style-1 btn-large add-to-cart axil-btn btn-bg-primary" id="AddToCart">
@@ -31,5 +31,4 @@
     <span class="cart-text">{{ settings.soldout_button_title }}</span>
   </button>
   {% endif %}
-</div>
-</li>
+
