@@ -1,0 +1,98 @@
+
+{{ 'fastclick.min.js' | asset_url | script_tag | remove: ' type="text/javascript"' }}
+{{ 'timber.js' | asset_url | script_tag | remove: ' type="text/javascript"' }}
+
+<script src="{{ 'revolution-slider.js' | asset_url }}"></script>
+
+
+{% comment %}
+Template-specific js
+{% endcomment %}
+<script>
+  {% if resetPassword %}
+  $(function() {
+    timber.resetPasswordSuccess();
+  });
+  {% endif %}
+</script>
+
+{%- unless settings.product_cart_type == 'without_ajax_cart' -%}
+{%- include 'popup_cart' -%}
+{%- endunless -%}
+
+{%- if settings.ajax_search_enable -%}
+{% include 'ajax-search-bar' %}
+{%- endif -%}
+
+{%- if settings.product_quickview_enalbe -%}
+{% include 'product-quickview' %}
+
+<script>
+  $(".cart-plus-minus").prepend('<div class="dec qtybutton">-</div>');
+  $(".cart-plus-minus").append('<div class="inc qtybutton">+</div>');
+  $(".qtybutton").on("click", function() {
+    var $button = $(this);
+    var oldValue = $button.parent().find("input").val();
+    if ($button.text() == "+") {
+      var newVal = parseFloat(oldValue) + 1;
+    } else {
+      // Don't allow decrementing below zero
+      if (oldValue > 0) {
+        var newVal = parseFloat(oldValue) - 1;
+      } else {
+        newVal = 1;
+      }
+    }
+    $button.parent().find("input").val(newVal);
+  });
+</script>
+{%- endif -%}
+
+{% if settings.product_cart_type == 'ajax_spin_cart' %}
+<script>
+  $('.ajax-spin-cart').on('click', function() {
+    $(this).addClass('loading add-item');
+    setTimeout(function () {
+      $('.ajax-spin-cart').removeClass('loading');
+    },1000);
+    setTimeout(function () {
+      $('.ajax-spin-cart').removeClass("add-item");
+    },2000);
+
+  });
+</script>
+{% endif %}
+
+
+<!-- Recently Viewed Products -->
+{%- if template contains 'product' and settings.recenly_view_product_enable -%}
+<script>
+  Shopify.Products.recordRecentlyViewed();
+</script>
+{%- endif -%}
+
+
+{%- if settings.currency_enable -%}
+{%- include 'currency' -%}
+{%- endif -%}
+
+<script>
+  $('[data-countdown]').each(function() {
+    var $this = $(this), finalDate = $(this).data('countdown');
+    $this.countdown(finalDate, function(event) {
+      $this.html(event.strftime('<div class="countdown-area"><div class="single-countdown"><div class="count-number">%D</div><div class="count-title">days</div></div><div class="single-countdown"><div class="count-number">%H</div><div class="count-title">Hour</div></div><div class="single-countdown"><div class="count-number">%M</div><div class="count-title">Mint</div></div><div class="single-countdown"><div class="count-number">%S</div><div class="count-title">Sec</div></div></div>'));
+    });
+  });
+</script>
+
+{%- if settings.custom_script != '' -%}
+{{ settings.custom_script }}
+{%- endif -%}
+
+
+<!-- Ajax Cart js -->
+<script src="{{ 'option_selection.js' | shopify_asset_url }}"></script>
+<script src="{{ 'api.jquery.js' | shopify_asset_url }}"></script>
+
+<script src="{{ 'cart.api.js' | asset_url }}"></script>
+
