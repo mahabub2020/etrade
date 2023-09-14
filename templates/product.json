@@ -137,7 +137,7 @@
         "upsell_products_enable": true,
         "section_before_title": "Your Recently",
         "section_title": "Upsell Products",
-        "collection": "womens",
+        "collection": "frontpage",
         "product_layout": "1",
         "upsell_product_limit_handle": 4,
         "autoplay_true": false,
@@ -151,16 +151,6 @@
     },
     "reviewxpo-reviews-widget-app-section": {
       "type": "apps",
-      "blocks": {
-        "884f1073-f1f0-4014-b1b7-3f429d53244b": {
-          "type": "shopify:\/\/apps\/reviewxpo-product-reviews-app\/blocks\/revews-widget\/3e3d94fa-8b53-4134-942c-f7662dc9282f",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "884f1073-f1f0-4014-b1b7-3f429d53244b"
-      ],
       "settings": {
       }
     },
