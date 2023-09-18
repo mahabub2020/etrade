@@ -1,0 +1,22 @@
+ <nav class="department-nav-menu">
+    <button class="sidebar-close"><i class="fas fa-times"></i></button>
+    {% assign linklist = section.settings.header_cat_menu %}
+    <ul class="nav-menu-list">
+        {% for link in linklists[linklist].links %}
+        {% assign child_list_handle = link.title | handle %}
+        {% if linklists[child_list_handle] and linklists[child_list_handle].links.size > 0 %}
+        <li class="menu-item-has-children {% if link.active %} is-active {% endif %}">
+            <a href="{{ link.url }}" title="{{ link.title }}"  class="nav-link">
+                {{ link.title }} 
+              </a>  
+        </li>
+        {% else %}
+        <li class="{% if link.active %} is-active {% endif %}"> 
+        <a href="{{ link.url }}" title="{{ link.title }}"  class="nav-link">
+            {{ link.title }} 
+          </a>   
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul> 
+</nav>

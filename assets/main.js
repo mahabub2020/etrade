@@ -8,18 +8,78 @@
 
             slider_slick_activation_two();
             slider_slick_activation_one();
-            slider_thumb_activation_one();
-            
+            slider_thumb_activation_one(); 
             readyActivation();
             magnificPopupActivation();
             testimonialActivation();
-            countdown();
-            new_arrivals_product_activation();
+            countdown(); 
             slider_thumb_activation_two();
             headerIconToggle();
-            searchClick();
+           // searchClick();
+            headerCampaignRemove(); 
+            axilSlickActivation();
 
         });
+
+        function  axilSlickActivation (e) {
+            $('.slick-slider').not('.slick-initialized').slick();
+        }
+
+
+		 function new_arrivals_product_activation() {
+
+			var SlickCarousel = $('.axil-new-arrivals-activation');
+			if (SlickCarousel.length) {
+				try {
+					if (SlickCarousel.find('.new-arrivals-product-activation').hasClass('slick-initialized')) {
+						SlickCarousel.find('.new-arrivals-product-activation').slick('unslick');
+					}
+				} catch (e) { }
+
+				SlickCarousel.find('.new-arrivals-product-activation').slick({
+					infinite: true,
+					slidesToShow: 4,
+					slidesToScroll: 4,
+					arrows: true,
+					dots: false,
+					rtl: rtltrue,
+					prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-long-arrow-left"></i></button>',
+					nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-long-arrow-right"></i></button>',
+					responsive: [{
+						breakpoint: 1199,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 3
+						}
+					},
+					{
+						breakpoint: 991,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 3
+						}
+					},
+					{
+						breakpoint: 767,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 2
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					}
+					]
+
+				});
+			}
+
+		}
+
 
         // $(window).on('load', function () {
         //     readyActivation();
@@ -32,7 +92,15 @@
         //     magnificPopupActivation();
         //     testimonialActivation();
         // });
-    
+
+        function headerCampaignRemove() {
+            $('.remove-campaign').on('click', function() {
+                 var targetElem = $('.header-top-campaign');
+                 targetElem.slideUp(function() {
+                     $(this).remove();
+                 });
+            });
+         }
         function searchClick(e) {
             var screenWidth = axilInit._window.width();
             if (screenWidth < 576) {

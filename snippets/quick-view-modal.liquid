@@ -72,8 +72,7 @@
                           <div class="price-wrp">
                             <p class="price-amount price-offer-amount">
                               <del aria-hidden="true">
-                                <span class="woocommerce-Price-amount amount">
-                                  <span class="woocommerce-Price-currencySymbol">$</span>299.00</span>
+                                <span class="woocommerce-Price-amount amount"></span>
                               </del>
                               <ins>
                                 <span class="woocommerce-Price-amount amount">
@@ -220,6 +219,8 @@
         $('#yith-quick-view-modal .venobox').attr('href', product.featured_image);
         $('#yith-quick-view-modal .venobox img').attr('src', product.featured_image);
         $('#yith-quick-view-modal .product-title').text(product.title);
+        $('#yith-quick-view-modal del .amount').text(product.price_max);
+        $('#yith-quick-view-modal ins .amount').text(product.price);
       });
     }
 
