@@ -895,105 +895,44 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
 	],
 	"blocks":[
 		{
-          "type": "amazon_payments",
-          "name": "Amazon Payments",
-		  "limit": 1
+      "type": "@app"
+    },
+    {
+      "type": "text",
+      "name": "t:sections.main-product.blocks.text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "t:sections.main-product.blocks.text.settings.text.label",
+          "default": "Text block"
         },
-		{
-          "type": "american_express",
-          "name": "American Express",
-		  "limit": 1
-        },
-		{
-          "type": "apple_pay",
-          "name": "Apple Pay",
-		  "limit": 1
-        },
-		{
-          "type": "bitcoin",
-          "name": "Bitcoin",
-		  "limit": 1
-        },
-		{
-          "type": "dankort",
-          "name": "Dankort",
-		  "limit": 1
-        },
-		{
-          "type": "diners_club",
-          "name": "Diners Club",
-		  "limit": 1
-        },
-		{
-          "type": "discover",
-          "name": "Discover",
-		  "limit": 1
-        },
-		{
-          "type": "dogecoin",
-          "name": "Dogecoin",
-		  "limit": 1
-        },
-		{
-          "type": "dwolla",
-          "name": "Dwolla",
-		  "limit": 1
-        },
-		{
-          "type": "forbrugsforeningen",
-          "name": "Forbrugsforeningen",
-		  "limit": 1
-        },
-		{
-          "type": "google_pay",
-          "name": "Google Pay",
-		  "limit": 1
-        },
-		{
-          "type": "jcb",
-          "name": "Jcb",
-		  "limit": 1
-        },
-		{
-          "type": "klarna",
-          "name": "Klarna",
-		  "limit": 1
-        },
-		{
-          "type": "litecoin",
-          "name": "Litecoin",
-		  "limit": 1
-        },
-		{
-          "type": "maestro",
-          "name": "Maestro",
-		  "limit": 1
-        },
-		{
-          "type": "master",
-          "name": "Master",
-		  "limit": 1
-        },
-		{
-          "type": "paypal",
-          "name": "Paypal",
-		  "limit": 1
-        },
-		{
-          "type": "shopify_pay",
-          "name": "Shopify Pay",
-		  "limit": 1
-        },
-		{
-          "type": "sofort",
-          "name": "Sofort",
-		  "limit": 1
-        },
-		{
-          "type": "visa",
-          "name": "Visa",
-		  "limit": 1
-        },
+        {
+          "type": "select",
+          "id": "text-transform",
+          "label": "Text transform",
+          "options": [
+            {
+              "value": "lowercase",
+              "label": "Lowercase"
+            },
+            {
+              "value": "uppercase",
+              "label": "Uppercase"
+            },
+            {
+              "value": "capitalize",
+              "label": "Capitalize"
+            },
+            {
+              "value": "none",
+              "label": "None"
+            }
+          ],
+          "default": "lowercase"
+        }
+      ]
+    },
 		{
           "type": "section_margin",
           "name": "Section Margin",
