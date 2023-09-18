@@ -3,8 +3,6 @@
     "template": {
       "type": "template-product",
       "settings": {
-        "enable_author": true,
-        "enable_published_date": true
       }
     },
     "related-products": {

@@ -1,8 +1,23 @@
 {
-    "sections": {
-        "template": {
-            "type": "product-collection"
-        }
-    },
-    "order": ["template"]
+  "sections": {
+    "template": {
+      "type": "product-collection",
+      "settings": {
+        "title": "Product Collection",
+        "btn-label": "",
+        "product_collection": "etrade-products",
+        "number_of_products_to_show": 4,
+        "product_layout": "1",
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "hover_img": false
+      }
+    }
+  },
+  "order": [
+    "template"
+  ]
 }
