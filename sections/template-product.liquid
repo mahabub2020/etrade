@@ -61,7 +61,11 @@
                             </div>
                           {% endif %}
                         
-                          <h2 class="product-title">{{ product.title }}</h2> 
+                          {%- when 'title' -%}
+                            <div class="product-info-main-block product-title-wrapper">
+                              <h1 class="product-title text-{{ block.settings.text_transform }}">{{ product.title }}</h1>
+                            </div>
+ 
                           <div class="product-price-wrapper mb--20 mb-md--10">
                             <span class="money price-amount" id="ProductPrice">{{ product.selected_or_first_available_variant.price | money }}</span>
                              {%- if product.compare_at_price_max > product.price -%}
