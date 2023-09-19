@@ -49,6 +49,18 @@
               <div class="position-sticky sticky-top">
                   <div class="single-product-content">
                       <div class="inner">
+
+                        {%- for block in section.blocks -%}
+                          {%- case block.type -%}
+                            {%- when '@app' -%}
+                              {% render block %}
+                          {%- when 'text' -%}
+                          {% if block.settings.text != blank %}
+                          <div class="product-info-main-block product-item-vendor text-{{ block.settings.text-transform }}">
+                              {{ block.settings.text }}
+                            </div>
+                          {% endif %}
+                        
                           <h2 class="product-title">{{ product.title }}</h2> 
                           <div class="product-price-wrapper mb--20 mb-md--10">
                             <span class="money price-amount" id="ProductPrice">{{ product.selected_or_first_available_variant.price | money }}</span>
@@ -162,6 +174,9 @@
                           </div>
                           <!-- End .product-desc-wrapper -->
                       </div>
+                    {%- endcase -%}
+                  {%- endfor -%}
+
                   </div>
               </div>
           </div>
