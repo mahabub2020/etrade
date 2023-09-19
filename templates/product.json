@@ -9,10 +9,17 @@
             "text": "Text block",
             "text-transform": "lowercase"
           }
+        },
+        "ae764d1f-29be-4311-8762-8aee2b3dd2ef": {
+          "type": "title",
+          "settings": {
+            "text_transform": "lowercase"
+          }
         }
       },
       "block_order": [
-        "95bafc65-42ee-4ba8-af37-aa80dd3f0eb5"
+        "95bafc65-42ee-4ba8-af37-aa80dd3f0eb5",
+        "ae764d1f-29be-4311-8762-8aee2b3dd2ef"
       ],
       "settings": {
         "container_style": "style_1",
