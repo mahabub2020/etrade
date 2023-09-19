@@ -35,7 +35,8 @@ $(document).ready(function(){
         const quickViewProductsText = await quickViewProducts.text();
         const quickViewProductsHtml = $('<div>' + quickViewProductsText + '</div>')
         var output = $(quickViewProductsHtml).find('#ProductInfo-'+pId).html();
-        console.log(output);
+        $('#yith-quick-view-content').append(output);
+        $('#yith-quick-view-modal').modal('show');
     });
 
     // Cart item quantity change
