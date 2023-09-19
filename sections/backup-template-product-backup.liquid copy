@@ -65,12 +65,13 @@
                             <div class="product-info-main-block product-title-wrapper">
                               <h1 class="product-title text-{{ block.settings.text_transform }}">{{ product.title }}</h1>
                             </div>
+ 
 
                             {%- when 'price' -%}
                               <div class="product-info-main-block price-box no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                                 {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
                               </div>
-
+                              
                           <div class="product-price-wrapper mb--20 mb-md--10">
                             <span class="money price-amount" id="ProductPrice">{{ product.selected_or_first_available_variant.price | money }}</span>
                              {%- if product.compare_at_price_max > product.price -%}
@@ -79,29 +80,6 @@
                             </span>
                              {%- endif -%}
                           </div>
-
-                          {%- when 'visitor' -%}
-                            <div class="product-info-main-block product-visitors visitors">
-                              <span class="animate-pulse" style="animation-duration: 1s;">
-                                {% render 'icon', name: 'quick-view-dark', size: 'medium' %}
-                              </span>
-                              <span class="auto-visitors live-view-numb">
-                                                            <span id="cont"></span>
-                                                            people are viewing this right now
-                                                        </span>
-                              <script>
-                                $(document).ready(function() {
-                                  let genRnd = function () {
-                                    var min = {{ settings.product_visitors_minimum }};
-                                    var max = {{ settings.product_visitors_maximum }};
-                                    return Math.floor(Math.random() * (+ max - + min)) + + min;
-                                  };
-                                  setInterval(function () {
-                                    document.getElementById("cont").innerHTML = genRnd();
-                                  }, 2000);
-                                });
-                              </script>
-                            </div>
        
                           {%- if section.settings.product_review_enable -%}
                             <div class="product-rating">
