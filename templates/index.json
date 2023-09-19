@@ -2,7 +2,6 @@
   "sections": {
     "17405413-6b41-4e23-b0f4-3aaf1e79ffb7": {
       "type": "product-collection",
-      "disabled": true,
       "settings": {
         "title": "Product Collection",
         "btn-label": "",
@@ -40,7 +39,8 @@
         "before_title_text": "Newsletter",
         "before_title_color": "#3577f0",
         "title": "Get weekly update",
-        "bg_img": "shopify:\/\/shop_images\/bg-image-5.jpg"
+        "bg_img": "shopify:\/\/shop_images\/bg-image-5.jpg",
+        "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&amp;id=e71e328c72&amp;f_id=0015dce6f0"
       }
     }
   },
