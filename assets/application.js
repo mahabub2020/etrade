@@ -26,15 +26,16 @@ $(document).ready(function(){
         $('.cart-dropdown').addClass('open');
     });
 
-    $('.quickview').on('click', function(e) {
+    // QuickView
+    $('.quickview').on('click', async function(e) {
         e.preventDefault();
         var pId = $(this).data('product_id');
-        console.log(pId);
-        // QuickView
-        // const para = document.createElement("div");
-        // para.innerHTML = cartDrawerHTML;
-        // var output = $(para).find('.cart-body').html();
-        // console.log(output);
+        // console.log(pId);
+        const quickViewProducts = await fetch("/?section_id=quick-view-products");
+        const quickViewProductsText = await quickViewProducts.text();
+        const quickViewProductsHtml = $('<div>' + quickViewProductsText + '</div>')
+        var output = $(quickViewProductsHtml).find('#ProductInfo-'+pId).html();
+        console.log(output);
     });
 
     // Cart item quantity change
