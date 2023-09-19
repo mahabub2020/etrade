@@ -24,8 +24,8 @@ $(document).ready(function(){
         const cartDrawerHTML = await cartDrawer.text();
         const para = document.createElement("div");
         para.innerHTML = cartDrawerHTML;
-        
-        console.log($(para.find('.cart-body')));
+        var output = $(para).find('.cart-body');
+        console.log(output);
         $('.cart-body-wrap').html(cartDrawerHTML);
         $('.cart-dropdown').addClass('open');
     });
