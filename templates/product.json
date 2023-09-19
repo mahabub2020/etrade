@@ -2,6 +2,18 @@
   "sections": {
     "template": {
       "type": "template-product",
+      "blocks": {
+        "95bafc65-42ee-4ba8-af37-aa80dd3f0eb5": {
+          "type": "text",
+          "settings": {
+            "text": "Text block",
+            "text-transform": "lowercase"
+          }
+        }
+      },
+      "block_order": [
+        "95bafc65-42ee-4ba8-af37-aa80dd3f0eb5"
+      ],
       "settings": {
         "container_style": "style_1",
         "content_handle": "content_in_right",
