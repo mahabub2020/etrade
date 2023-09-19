@@ -16,8 +16,13 @@
             "text_transform": "lowercase"
           }
         },
-        "bb959770-0e44-4b31-b9f0-1a7b18781569": {
-          "type": "short-description",
+        "62c93693-3cf6-4e73-9116-69729457993b": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "d2c7b6cf-7c38-464e-bb74-937b38dac679": {
+          "type": "visitor",
           "settings": {
           }
         }
@@ -25,7 +30,8 @@
       "block_order": [
         "95bafc65-42ee-4ba8-af37-aa80dd3f0eb5",
         "ae764d1f-29be-4311-8762-8aee2b3dd2ef",
-        "bb959770-0e44-4b31-b9f0-1a7b18781569"
+        "62c93693-3cf6-4e73-9116-69729457993b",
+        "d2c7b6cf-7c38-464e-bb74-937b38dac679"
       ],
       "settings": {
         "container_style": "style_1",
