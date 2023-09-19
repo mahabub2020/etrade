@@ -44,14 +44,20 @@
             <input type="submit" value="Add to Cart">
           {% endform %}
         </li>
-        <li class="quickview">
-          <a
+        <li class="">
+          {% comment %} <a
             href="#"
             data-product_id="{{ product.id }}"
             title="QuickView"
             data-bs-toggle="modal"
             data-bs-target="#yith-quick-view-modal"
             onclick="quickview('{{ product.handle | handleize }}')">
+            <i class="far fa-eye"></i>
+          </a> {% endcomment %}
+          <a
+            href="#"
+            data-product_id="{{ product.id }}"
+            class="quickview">
             <i class="far fa-eye"></i>
           </a>
         </li>

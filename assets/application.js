@@ -22,12 +22,19 @@ $(document).ready(function(){
 
         const cartDrawer = await fetch("/?section_id=mini-cart");
         const cartDrawerHTML = await cartDrawer.text();
-        const para = document.createElement("div");
-        para.innerHTML = cartDrawerHTML;
-        var output = $(para).find('.cart-body').html();
-        console.log(output);
         $('.cart-body-wrap').html(cartDrawerHTML);
         $('.cart-dropdown').addClass('open');
+    });
+
+    $('.quickview').on('click', function(e) {
+        e.preventDefault();
+        var pId = $(this).data('product_id');
+        console.log(pId);
+        // QuickView
+        // const para = document.createElement("div");
+        // para.innerHTML = cartDrawerHTML;
+        // var output = $(para).find('.cart-body').html();
+        // console.log(output);
     });
 
     // Cart item quantity change
