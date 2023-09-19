@@ -25,13 +25,20 @@
           "type": "visitor",
           "settings": {
           }
+        },
+        "dd1559c0-5603-4693-85a3-707b378a2ce7": {
+          "type": "variant_picker",
+          "settings": {
+            "size_title": "Color"
+          }
         }
       },
       "block_order": [
         "95bafc65-42ee-4ba8-af37-aa80dd3f0eb5",
         "ae764d1f-29be-4311-8762-8aee2b3dd2ef",
         "62c93693-3cf6-4e73-9116-69729457993b",
-        "d2c7b6cf-7c38-464e-bb74-937b38dac679"
+        "d2c7b6cf-7c38-464e-bb74-937b38dac679",
+        "dd1559c0-5603-4693-85a3-707b378a2ce7"
       ],
       "settings": {
         "container_style": "style_1",
