@@ -67,10 +67,11 @@
                             </div>
  
 
-                            {%-when 'short-description'-%}
-											<div class="product-info-main-block product-short-description">{{ product.metafields.product.short_desciption.value | capitalize }}</div>
-
-                      
+                            {%- when 'price' -%}
+                              <div class="product-info-main-block price-box no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                                {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+                              </div>
+                              
                           <div class="product-price-wrapper mb--20 mb-md--10">
                             <span class="money price-amount" id="ProductPrice">{{ product.selected_or_first_available_variant.price | money }}</span>
                              {%- if product.compare_at_price_max > product.price -%}
@@ -996,7 +997,16 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
       "limit": 1
     },
  
-
+    {
+      "type": "price",
+      "name": "Prices",
+      "limit": 1
+    },
+    {
+      "type": "visitor",
+      "name": "Visitor",
+      "limit": 1
+    },
 
 
 		{
