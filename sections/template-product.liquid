@@ -66,6 +66,11 @@
                               <h1 class="product-title text-{{ block.settings.text_transform }}">{{ product.title }}</h1>
                             </div>
  
+
+                            {%-when 'short-description'-%}
+											<div class="product-info-main-block product-short-description">{{ product.metafields.product.short_desciption.value | capitalize }}</div>
+
+                      
                           <div class="product-price-wrapper mb--20 mb-md--10">
                             <span class="money price-amount" id="ProductPrice">{{ product.selected_or_first_available_variant.price | money }}</span>
                              {%- if product.compare_at_price_max > product.price -%}
@@ -956,7 +961,7 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
     },
     {
       "type": "title",
-      "name": "product_title",
+      "name": "Product Title",
       "limit": 1,
       "settings": [
         {
@@ -985,6 +990,15 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
         }
       ]
     },
+    {
+      "type": "short-description",
+      "name": "Short Description",
+      "limit": 1
+    },
+ 
+
+
+
 		{
           "type": "section_margin",
           "name": "Section Margin",
