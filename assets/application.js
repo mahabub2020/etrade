@@ -8,7 +8,8 @@ $(document).ready(function(){
         console.log('clicked');
         $('.cart-dropdown').removeClass('open');
     });
-
+    
+    // Add to cart
     $('form[action="/cart/add"]').on('submit', async function(e) {
         e.preventDefault();
         
@@ -26,11 +27,17 @@ $(document).ready(function(){
         $('.cart-dropdown').addClass('open');
     });
 
+    // Add to wishlist
+    $('.axil-add-to-wishlist').on('click', function(e) {
+        e.preventDefault();
+        var wishlist = localStorage.getItem('wishlist') || false;
+        console.log(wishlist);
+    });
+
     // QuickView
     $('.quickview').on('click', async function(e) {
         e.preventDefault();
         var pId = $(this).data('product_id');
-        // console.log(pId);
         const quickViewProducts = await fetch("/?section_id=quick-view-products");
         const quickViewProductsText = await quickViewProducts.text();
         const quickViewProductsHtml = $('<div>' + quickViewProductsText + '</div>')
