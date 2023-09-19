@@ -1,0 +1,335 @@
+{%- liquid
+    assign variants_available_arr = product.variants | map: 'available'
+    assign variants_option1_arr = product.variants | map: 'option1'
+    assign variants_option2_arr = product.variants | map: 'option2'
+    assign variants_option3_arr = product.variants | map: 'option3'
+
+    assign product_form_id = 'product-form-' | append: section.id
+-%}
+{% for option in product.options %}
+    {% if option == swatch %}
+        {% assign found_option = true %}
+        {% assign option_index = forloop.index0 %}
+        {% assign downcased_option_1 = swatch | downcase %}
+        {% assign option_color_swatch = settings.option_color_swatch | downcase %}
+        {% if option_color_swatch contains downcased_option_1 %}
+            {% assign is_color = true %}
+        {% endif %}
+        {% assign downcased_option_2 = swatch | downcase %}
+        {% assign downcased_sizechart_opt = settings.display_size_chart_at | downcase %}
+        {% if downcased_sizechart_opt contains  downcased_option_2 %}
+            {% assign size = true %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+
+<div class="product-info-main-block product-options-wrapper">
+    {%- unless product.has_only_default_variant -%}
+    {%- if settings.picker_type == 'button' -%}
+    <variant-radios class="no-js-hidden swatch-options" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+        {%- for option in product.options_with_values -%}
+        {%- assign onp = option.name -%}
+        {%- if onp == 'Size' -%}
+        <div class="swatch-attribute swatch-layered size">
+            <div class="size-wraper">
+            <span class="swatch-attribute-label">Size</span>
+            {% if request.page_type != 'index' %}
+            <a href="#" class="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                {%- render 'scale-icon' -%}
+                Size guide
+            </a>
+            {% endif%}
+                </div>
+            <fieldset class="swatch-attribute-options js product-form__input">
+                {%- for value in option.values -%}
+                <input id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" type="radio" name="{{ option.name }}" value="{{ value | escape }}" form="{{ product_form_id }}" {% if option.selected_value == value %} checked {% endif %}>
+                <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="swatch-option text {% if option.selected_value == value %} selected  {% endif %} facet-checkbox " data-bs-toggle="tooltip" data-bs-placement="top" title="{{ value | escape }}" data-bs-original-title="{{ tagn | escape }}" aria-label="{{ tagn | escape }}">
+                    {{ value | escape }}
+                </label>
+                {%- endfor -%}
+            </fieldset>
+        </div>
+        {%- endif -%}
+        {%- if onp == 'Color' -%}
+        <div class="swatch-attribute swatch-layered color">
+            <span class="swatch-attribute-label">Color</span>
+            <fieldset class="swatch-attribute-options js product-form__input">
+                {%- for value in option.values -%}
+                {%- liquid
+                    assign option_disabled = true
+                    for option1_name in variants_option1_arr
+                      case option.position
+                        when 1
+                          if variants_option1_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                            assign option_disabled = false
+                          endif
+                        when 2
+                          if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                            assign option_disabled = false
+                          endif
+                        when 3
+                          if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_option3_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                            assign option_disabled = false
+                          endif
+                      endcase
+                    endfor
+                -%}
+                    <input id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" type="radio" name="{{ option.name }}" value="{{ value | escape }}" form="{{ product_form_id }}" {% if option.selected_value == value %} checked {% endif %}>
+                    <label
+                        for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                        class="swatch-option color {% if option.selected_value == value %} selected  {% endif %} facet-checkbox"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="{{ value | escape }}"
+                        style="background-color: {{ value | escape }};"
+                        data-bs-original-title="{{ tagn | escape }}"
+                        aria-label="{{ tagn | escape }}"
+                    >
+                        {{ value | escape }}
+                    </label>
+                {%- endfor -%}
+        </fieldset>
+    </div>
+    {%- endif -%}
+    {%- if onp == 'Material' -%}
+    <div class="swatch-attribute swatch-layered color">
+        <div class="product-options-variant 4" data-style="text" data-property="{{ option.name | handleize }}">
+            <span class="swatch-attribute-label">Material</span>
+            <fieldset class="swatch-attribute-options js product-form__input">
+                {% for value in option.values %}
+                <div class="option-ds">
+                    <input id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" type="radio" name="{{ option.name }}" value="{{ value | escape }}" form="{{ product_form_id }}" {% if option.selected_value == value %} checked {% endif %}>
+                    <label
+                        for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                        class="swatch-option color {% if option.selected_value == value %} selected  {% endif %} facet-checkbox"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="{{ value | escape }}"
+                        style="background-color: {{ value | escape }};"
+                        data-bs-original-title="{{ tagn | escape }}"
+                        aria-label="{{ tagn | escape }}"
+                    >
+                    {{ value | escape }}
+                </label>
+                {% if hide_options_without_availability != true or disabled_value != true %}
+                <div class="option-{{ value | handleize }} meterial-btn {% if disabled_value %} disabled{% endif %}{% if active_value %} active{% endif %}" data-js-option-value data-value="{{ value | handleize }}" {{ trigger_attr }} style=" {% for i in (1..10) %}
+                {% capture material_name %}material_name_{{ i }}{% endcapture %}
+                {% assign material_name = settings[material_name] %}
+                {% assign material_name = material_name | downcase |strip %}
+                {% capture material_image %}material_{{ i }}{% endcapture %}
+                {% assign material_image = settings[material_image] %}
+                {%- assign materia = value | downcase | strip -%}
+                {% if materia == material_name %}
+                font-size:0;background-image: url(http:{{material_image | img_url: '160x160' }});
+                {%endif %}
+                {% endfor %}">{{ value }}</div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </fieldset>
+    </div>
+</div>
+{%- endif -%}
+{%- if onp == 'Style' -%}
+<div class="swatch-attribute swatch-layered color">
+    <div class="product-options-variant 4" data-style="text" data-property="{{ option.name | handleize }}">
+        <span class="swatch-attribute-label">Style</span>
+        <fieldset class="swatch-attribute-options js product-form__input">
+            {% for value in option.values %}
+            <div class="option-ds">
+                <input id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" type="radio" name="{{ option.name }}" value="{{ value | escape }}" form="{{ product_form_id }}" {% if option.selected_value == value %} checked {% endif %}>
+                <label 
+                    for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                    class="swatch-option color {% if option.selected_value == value %} selected  {% endif %} facet-checkbox"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="{{ value | escape }}"
+                    style="background-color: {{ value | escape }};"
+                    data-bs-original-title="{{ tagn | escape }}"
+                    aria-label="{{ tagn | escape }}"
+                >
+                {{ value | escape }}
+            </label>
+            {% if hide_options_without_availability != true or disabled_value != true %}
+            <div class="option-{{ value | handleize }} meterial-btn {% if disabled_value %} disabled{% endif %}{% if active_value %} active{% endif %}" data-js-option-value data-value="{{ value | handleize }}" {{ trigger_attr }}
+            style="{% for i in (1..10) %}
+            {% capture style_name %}style_name_{{ i }}{% endcapture %}
+            {% assign style_name = settings[style_name] %}
+            {% assign style_name = style_name | downcase |strip %}
+            {% capture style_image %}style_{{ i }}{% endcapture %}
+            {% assign style_image = settings[style_image] %}
+            {%- assign materia = value | downcase | strip -%}
+            {% if materia == style_name %}
+            font-size:0;background-image: url(http:{{style_image | img_url: '160x160' }});
+            {%endif %}
+            {% endfor %}">{{ value }}</div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </fieldset>
+</div>
+</div>
+{%- endif -%}
+{%- endfor -%}
+<script type="application/json">
+    {{ product.variants | json }}
+</script>
+</variant-radios>
+{%- endif -%}
+{%- if settings.picker_type == 'dropdown' -%}
+    <variant-selects id="variant-selects-{{ section.id }}" class="no-js-hidden swatch-options" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+        {%- for option in product.options_with_values -%}
+        <div class="product-form__input product-form__input--dropdown mb-4">
+            <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+                {{ option.name }}
+            </label>
+            <div class="select">
+                <select id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                class="select__select form-select"
+                name="options[{{ option.name | escape }}]"
+                form="{{ product_form_id }}"
+                >
+                {%- for value in option.values -%}
+                    {%- liquid
+                        assign option_disabled = true
+                        for option1_name in variants_option1_arr
+                        case option.position
+                            when 1
+                            if variants_option1_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                                assign option_disabled = false
+                            endif
+                            when 2
+                            if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                                assign option_disabled = false
+                            endif
+                            when 3
+                            if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_option3_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                                assign option_disabled = false
+                            endif
+                        endcase
+                        endfor
+                    -%}
+                    <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                        {{ value }}
+                    </option>
+                {%- endfor -%}
+            </select>
+        </div>
+    </div>
+    {%- endfor -%}
+    <script type="application/json">
+        {{ product.variants | json }}
+    </script>
+    </variant-selects>
+{% endif %}
+
+
+{%- if settings.picker_type == 'image' -%}
+    <variant-radios class="no-js-hidden swatch-options" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+       {%- for option in product.options_with_values -%}
+         {%- assign onp = option.name -%}
+         {%- if onp == 'Size' -%}
+            <div class="swatch-attribute swatch-layered size">
+                <div class="size-wraper">
+                <span class="swatch-attribute-label">Size</span>
+                {% if request.page_type != 'index' %}
+                <a class="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                    {%- render 'scale-icon' -%}
+                    Size guide
+                </a>
+                {% endif%}
+                    </div>
+                <fieldset class="swatch-attribute-options js product-form__input">
+                    {%- for value in option.values -%}
+                    <input id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" type="radio" name="{{ option.name }}" value="{{ value | escape }}" form="{{ product_form_id }}" {% if option.selected_value == value %} checked {% endif %}>
+                    <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" class="swatch-option text {% if option.selected_value == value %} selected  {% endif %} facet-checkbox " data-bs-toggle="tooltip" data-bs-placement="top" title="{{ value | escape }}" data-bs-original-title="{{ tagn | escape }}" aria-label="{{ tagn | escape }}">
+                        {{ value | escape }}
+                    </label>
+                    {%- endfor -%}
+                </fieldset>
+            </div>
+        {%- endif -%}
+        {%- if onp == 'Color' -%}
+          <div class="swatch-attribute swatch-layered color">
+              <span class="swatch-attribute-label">Color</span>
+              <fieldset class="swatch-attribute-options js product-form__input">
+                {%- for value in option.values -%}
+                  {%- liquid
+                      assign option_disabled = true
+                      for option1_name in variants_option1_arr
+                        case option.position
+                          when 1
+                            if variants_option1_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                              assign option_disabled = false
+                            endif
+                          when 2
+                            if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                              assign option_disabled = false
+                            endif
+                          when 3
+                            if option1_name == product.selected_or_first_available_variant.option1 and variants_option2_arr[forloop.index0] == product.selected_or_first_available_variant.option2 and variants_option3_arr[forloop.index0] == value and variants_available_arr[forloop.index0]
+                              assign option_disabled = false
+                            endif
+                        endcase
+                      endfor
+                  -%}
+                      <input id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" type="radio" name="{{ option.name }}" value="{{ value | escape }}" form="{{ product_form_id }}" {% if option.selected_value == value %} checked {% endif %}>
+                        {% for variant in product.variants %}
+                            {% if variant.title contains value  %}
+                                <label
+                                    for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                                    class="image-option color {% if option.selected_value == value %} selected  {% endif %} facet-checkbox"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="{{ value | escape }}"
+                                    data-bs-original-title="{{ tagn | escape }}"
+                                    aria-label="{{ tagn | escape }}"
+                                    style='background-image: url("{{ variant.image.src | img_url: '100x' }}")'
+                                >
+                                </label>
+                                {% break %}
+                            {% endif %}
+                        {% endfor %}
+                {%- endfor -%}
+              </fieldset>
+          </div>
+        {% endif %}
+       {% endfor %}
+      <script type="application/json">
+          {{ product.variants | json }}
+      </script>
+      {%- style -%}
+        .image-option {
+          background-size: cover;
+          width: 75px;
+          height: 100px;
+          margin-right: 5px;
+        }
+      {%- endstyle -%}
+    </variant-radios>
+{%- endif -%}
+
+{%- endunless -%}
+<noscript class="product-form__noscript-wrapper-{{ section.id }}">
+    <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
+        <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
+        <div class="select">
+            <select name="id" id="Variants-{{ section.id }}" class="select__select" form="{{ product_form_id }}">
+                {%- for variant in product.variants -%}
+                <option
+                {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+                {% if variant.available == false %}disabled{% endif %}
+                value="{{ variant.id }}"
+                >
+                {{ variant.title }}
+                {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                - {{ variant.price | money | strip_html }}
+            </option>
+            {%- endfor -%}
+        </select>
+        {% render 'icon-caret' %}
+    </div>
+</div>
+</noscript>
+</div>

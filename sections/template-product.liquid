@@ -80,26 +80,7 @@
                              {%- endif -%}
                           </div>
 
-                          {%- when 'visitor' -%}
-                            <div class="product-info-main-block product-visitors visitors">
-                             
-                              <span class="auto-visitors live-view-numb">
-                                                            <span id="cont"></span>
-                                                            people are viewing this right now
-                                                        </span>
-                              <script>
-                                $(document).ready(function() {
-                                  let genRnd = function () {
-                                    var min = {{ settings.product_visitors_minimum }};
-                                    var max = {{ settings.product_visitors_maximum }};
-                                    return Math.floor(Math.random() * (+ max - + min)) + + min;
-                                  };
-                                  setInterval(function () {
-                                    document.getElementById("cont").innerHTML = genRnd();
-                                  }, 2000);
-                                });
-                              </script>
-                            </div>
+                          
        
                           {%- if section.settings.product_review_enable -%}
                             <div class="product-rating">
@@ -141,7 +122,8 @@
                             {%- endif -%}
                             {%- endunless -%}
 
-                            {%- render 'product-variant' -%}
+                            {%- when 'variant_picker' -%}
+                              {%- render 'product-options-wrapper', product: product, block: block, product_form_id: product_form_id -%}
 
                             {%- if product.description contains '[countdown]' -%}
                               {%- assign count_down_first = product.description | split:'[/countdown]' | first -%}
@@ -1026,6 +1008,24 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
       "type": "visitor",
       "name": "Visitor",
       "limit": 1
+    },
+    {
+      "type": "variant_picker",
+      "name": "variant_picker",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Size guide settings"
+        },
+        {
+          "type": "text",
+          "id": "size_title",
+          "default": "Color",
+          "label": "Size option title",
+          "info": "Enter the option titles which you want to show Size guide button, separate with a comma"
+        }
+      ]
     },
 
 
