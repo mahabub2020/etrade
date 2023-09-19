@@ -25715,3 +25715,11 @@ select.dokan-form-control, input.dokan-form-control {
   -webkit-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0);
 }
+
+.h-20 {
+  height: 20px;
+}
+
+.w-20 {
+  width: 20px;
+}
