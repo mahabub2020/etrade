@@ -24,7 +24,7 @@ $(document).ready(function(){
         const cartDrawerHTML = await cartDrawer.text();
         const para = document.createElement("div");
         para.innerHTML = cartDrawerHTML;
-        var output = $(para).find('.cart-body');
+        var output = $(para).find('.cart-body').html();
         console.log(output);
         $('.cart-body-wrap').html(cartDrawerHTML);
         $('.cart-dropdown').addClass('open');
