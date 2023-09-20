@@ -51,7 +51,7 @@ $(document).ready(function(){
         else {
         wishlist.splice(indexInWishlist, 1);
         }
-        return setWishlist(wishlist);
+        return wishlist;
     };
 
     var getWishlist = function () {
