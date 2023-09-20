@@ -8,8 +8,7 @@ $(document).ready(function(){
         console.log('clicked');
         $('.cart-dropdown').removeClass('open');
     });
-    
-    // Add to cart
+
     $('form[action="/cart/add"]').on('submit', async function(e) {
         e.preventDefault();
         
@@ -77,6 +76,7 @@ $(document).ready(function(){
     $('.quickview').on('click', async function(e) {
         e.preventDefault();
         var pId = $(this).data('product_id');
+        // console.log(pId);
         const quickViewProducts = await fetch("/?section_id=quick-view-products");
         const quickViewProductsText = await quickViewProducts.text();
         const quickViewProductsHtml = $('<div>' + quickViewProductsText + '</div>')
