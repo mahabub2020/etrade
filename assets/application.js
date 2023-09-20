@@ -33,9 +33,7 @@ $(document).ready(function(){
         e.preventDefault();
         productID = $(this).data('product-id');
         productHandle = $(this).attr('data-product-handle');
-        console.log(productHandle);
-        // updateWishlist(productHandle);
-        console.log('updatelis: '+updateWishlist(productHandle));
+        updateWishlist(productHandle, this);
 
         if($(this).find('.wishlist-icon').hasClass('far')) {
             $(this).find('.wishlist-icon').removeClass('far');
@@ -43,30 +41,32 @@ $(document).ready(function(){
         }
     });    
 
-    var updateWishlist = function (handle) {
+    var updateWishlist = function (handle, element) {
         var wishlist = getWishlist();
         var indexInWishlist = wishlist.indexOf(handle);
-        console.log('index = '+indexInWishlist);
         if (indexInWishlist === -1) {
             wishlist.push(handle);
+            $(element).find('.wishlist-icon').removeClass('far');
+            $(element).find('.wishlist-icon').addClass('fas');
         }
         else {
             wishlist.splice(indexInWishlist, 1);
+            $(element).find('.wishlist-icon').removeClass('fas');
+            $(element).find('.wishlist-icon').addClass('far');
         }
-        console.log('wishlist: '+ wishlist);
         return setWishlist(wishlist);
     };
 
     var getWishlist = function () {
-        var wishlist = localStorage.getItem('wishlist') || false;
+        var wishlist = localStorage.getItem(wishlist_key) || false;
         if (wishlist) return wishlist.split(delimiter);
         return [];
     };
 
     var setWishlist = function (array) {
         var wishlist = array.join(delimiter);
-        if (array.length) localStorage.setItem('wishlist', wishlist);
-        else localStorage.removeItem('wishlist');
+        if (array.length) localStorage.setItem(wishlist_key, wishlist);
+        else localStorage.removeItem(wishlist_key);
 
         var event = new CustomEvent('shopify-wishlist:updated', {
             detail: { wishlist: array }
