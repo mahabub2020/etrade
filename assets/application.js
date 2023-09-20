@@ -43,14 +43,15 @@ $(document).ready(function(){
     });
 
     var updateWishlist = function (handle) {
+        var productID = handle.toString();
         var wishlist = getWishlist();
-        var indexInWishlist = wishlist.indexOf(handle);
+        var indexInWishlist = wishlist.indexOf(productID);
         console.log(indexInWishlist);
         if (indexInWishlist === -1) {
-        wishlist.push(handle);
+            wishlist.push(productID);
         }
         else {
-        wishlist.splice(indexInWishlist, 1);
+            wishlist.splice(indexInWishlist, 1);
         }
         return wishlist;
     };
