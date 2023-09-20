@@ -28,11 +28,50 @@ $(document).ready(function(){
     });
 
     // Add to wishlist
+    let wishlist_key = 'wishlist';
+    let delimiter = ',';
     $('.axil-add-to-wishlist').on('click', function(e) {
         e.preventDefault();
-        var wishlist = localStorage.getItem('wishlist') || false;
-        console.log(wishlist);
+        productID = $(this).data('product-id');
+        console.log(productID);
+        updateWishlist(productID);
+
+        console.log($(this + '.wishlist-icon'));
+        // if($(this).find('.wishlist-icon').hasClass('far')) {
+
+        // }
     });
+
+    var updateWishlist = function (handle) {
+        var wishlist = getWishlist();
+        var indexInWishlist = wishlist.indexOf(handle);
+        if (indexInWishlist === -1) {
+        wishlist.push(handle);
+        }
+        else {
+        wishlist.splice(indexInWishlist, 1);
+        }
+        return setWishlist(wishlist);
+    };
+
+    var getWishlist = function () {
+        var wishlist = localStorage.getItem(wishlist_key) || false;
+        if (wishlist) return wishlist.split(delimiter);
+        return [];
+    };
+
+    var setWishlist = function (array) {
+        var wishlist = array.join(delimiter);
+        if (array.length) localStorage.setItem(wishlist_key, wishlist);
+        else localStorage.removeItem(wishlist_key);
+
+        var event = new CustomEvent('shopify-wishlist:updated', {
+            detail: { wishlist: array }
+        });
+        document.dispatchEvent(event);
+
+        return wishlist;
+    };
 
     // QuickView
     $('.quickview').on('click', async function(e) {
