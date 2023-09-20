@@ -34,6 +34,7 @@ $(document).ready(function(){
         productID = $(this).data('product-id');
         console.log(productID);
         updateWishlist(productID);
+        console.log(updateWishlist(productID));
 
         if($(this).find('.wishlist-icon').hasClass('far')) {
             $(this).find('.wishlist-icon').removeClass('far');
