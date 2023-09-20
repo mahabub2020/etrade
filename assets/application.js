@@ -34,7 +34,7 @@ $(document).ready(function(){
         productID = $(this).data('product-id');
         productHandle = $(this).attr('data-product-handle');
         console.log(productHandle);
-        updateWishlist(productHandle);
+        // updateWishlist(productHandle);
         console.log('updatelis: '+updateWishlist(productHandle));
 
         if($(this).find('.wishlist-icon').hasClass('far')) {
