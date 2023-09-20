@@ -32,25 +32,25 @@ $(document).ready(function(){
     $('.axil-add-to-wishlist').on('click', function(e) {
         e.preventDefault();
         productID = $(this).data('product-id');
-        console.log(productID);
-        updateWishlist(productID);
-        console.log(updateWishlist(productID));
+        productHandle = $(this).attr('data-product-handle');
+        console.log(productHandle);
+        updateWishlist(productHandle);
+        console.log(updateWishlist(productHandle));
 
         if($(this).find('.wishlist-icon').hasClass('far')) {
             $(this).find('.wishlist-icon').removeClass('far');
             $(this).find('.wishlist-icon').addClass('fas');
         }
-    });
+    });    
 
     var updateWishlist = function (handle) {
-        var productID = handle.toString();
         var wishlist = getWishlist();
-        var indexInWishlist = wishlist.indexOf(productID);
+        var indexInWishlist = wishlist.indexOf(handle);
         if (indexInWishlist === -1) {
-        wishlist.push(productID);
+            wishlist.push(handle);
         }
         else {
-        wishlist.splice(indexInWishlist, 1);
+            wishlist.splice(indexInWishlist, 1);
         }
         return setWishlist(wishlist);
     };
