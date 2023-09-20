@@ -45,6 +45,7 @@ $(document).ready(function(){
     var updateWishlist = function (handle) {
         var wishlist = getWishlist();
         var indexInWishlist = wishlist.indexOf(handle);
+        console.log(indexInWishlist);
         if (indexInWishlist === -1) {
         wishlist.push(handle);
         }
