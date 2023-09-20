@@ -35,7 +35,7 @@ $(document).ready(function(){
         console.log(productID);
         updateWishlist(productID);
 
-        console.log($(this).children().first());
+        console.log($(this).children().first().hasClass('far'));
         // if($(this).find('.wishlist-icon').hasClass('far')) {
 
         // }
