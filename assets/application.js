@@ -56,15 +56,15 @@ $(document).ready(function(){
     };
 
     var getWishlist = function () {
-        var wishlist = localStorage.getItem(wishlist_key) || false;
+        var wishlist = localStorage.getItem('wishlist') || false;
         if (wishlist) return wishlist.split(delimiter);
         return [];
     };
 
     var setWishlist = function (array) {
         var wishlist = array.join(delimiter);
-        if (array.length) localStorage.setItem(wishlist_key, wishlist);
-        else localStorage.removeItem(wishlist_key);
+        if (array.length) localStorage.setItem('wishlist', wishlist);
+        else localStorage.removeItem('wishlist');
 
         var event = new CustomEvent('shopify-wishlist:updated', {
             detail: { wishlist: array }
