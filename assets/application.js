@@ -83,11 +83,15 @@ $(document).ready(function(){
     // Add to wishlist end
 
     // Wishlist page update
-    var renderWishlist = function() {
+    var renderWishlist = async function() {
         var wishlist = getWishlist();
-        console.log(wishlist);
+        const wishlistProducts = await fetch("/?section_id=wishlist-products");
+        const wishlistProductsText = await wishlistProducts.text();
+        const wishlistProductsHtml = $('<div>' + wishlistProductsText + '</div>');
         for(var i = 0; i < wishlist.length; i++) {
-            console.log('wishlist: ' + wishlist[i]);
+            var output = $(wishlistProductsHtml).find('#' + wishlist[i]).html();
+            $('.wishlist-items-wrapper').empty();
+            $('.wishlist-items-wrapper').append(output);
         }
     }
 
@@ -97,10 +101,9 @@ $(document).ready(function(){
     $('.quickview').on('click', async function(e) {
         e.preventDefault();
         var pId = $(this).data('product_id');
-        // console.log(pId);
         const quickViewProducts = await fetch("/?section_id=quick-view-products");
         const quickViewProductsText = await quickViewProducts.text();
-        const quickViewProductsHtml = $('<div>' + quickViewProductsText + '</div>')
+        const quickViewProductsHtml = $('<div>' + quickViewProductsText + '</div>');
         var output = $(quickViewProductsHtml).find('#ProductInfo-'+pId).html();
         $('#yith-quick-view-content .product').html(output);
         $('#yith-quick-view-modal').modal('show');
