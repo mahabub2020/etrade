@@ -88,7 +88,9 @@ $(document).ready(function(){
         const wishlistProducts = await fetch("/?section_id=wishlist-products");
         const wishlistProductsText = await wishlistProducts.text();
         const wishlistProductsHtml = $('<div>' + wishlistProductsText + '</div>');
+        $('.wishlist-items-wrapper').empty();
         for(var i = 0; i < wishlist.length; i++) {
+            var output = $(wishlistProductsHtml).find('#' + wishlist[i]).html();
             $('.wishlist-items-wrapper').append(output);
         }
     }
