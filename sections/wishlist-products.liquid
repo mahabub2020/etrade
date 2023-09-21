@@ -1,0 +1,49 @@
+{% for product in collections['all'].products %}
+  <tr id="yith-wcwl-row-1306" data-row-id="1306">
+    <td class="product-remove">
+      <div>
+        <a
+          href="#"
+          data-product-handle="{{ product.handle }}"
+          class="remove remove_from_wishlist"
+          title="Remove this product">×</a>
+      </div>
+    </td>
+
+    <td class="product-thumbnail">
+      <a href="{{ product.url }}">
+        <img
+          src="{{ product.featured_image | img_url: '300x300' }}"
+          class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+          alt="{{ product.title | escape }}">
+      </a>
+
+    </td>
+
+    <td class="product-title">
+      <h6>
+        <a href="{{ product.url }}">{{ product.title }}</a>
+      </h6>
+    </td>
+    <td class="product-price" data-title="Price">
+      <span class="woocommerce-Price-amount amount">{{ product.price | money }}</span>
+    </td>
+    <td class="product-stock-status" data-title="Status">
+      <span class="wishlist-in-stock">In Stock</span>
+    </td>
+    <td class="product-add-to-cart">
+      <!-- Add to cart button -->
+      {% form 'product', product %}
+        <input
+          type="hidden"
+          name="id"
+          value="{{ product.selected_or_first_available_variant.id }}">
+        <input type="submit" value="Add to Cart">
+      {% endform %}
+
+      <!-- Remove from wishlist -->
+
+    </td>
+
+  </tr>
+{% endfor %}

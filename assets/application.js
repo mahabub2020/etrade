@@ -26,12 +26,11 @@ $(document).ready(function(){
         $('.cart-dropdown').addClass('open');
     });
 
-    // Add to wishlist
+    // Add to wishlist start
     let wishlist_key = 'wishlist';
     let delimiter = ',';
     $('.axil-add-to-wishlist').on('click', function(e) {
         e.preventDefault();
-        productID = $(this).data('product-id');
         productHandle = $(this).attr('data-product-handle');
         updateWishlist(productHandle, this);
 
@@ -39,7 +38,13 @@ $(document).ready(function(){
             $(this).find('.wishlist-icon').removeClass('far');
             $(this).find('.wishlist-icon').addClass('fas');
         }
-    });    
+    });
+    
+    $('.remove_from_wishlist').on('click', function(e) {
+        e.preventDefault();
+        productHandle = $(this).attr('data-product-handle');
+        updateWishlist(productHandle, this);
+    });
 
     var updateWishlist = function (handle, element) {
         var wishlist = getWishlist();
@@ -75,6 +80,15 @@ $(document).ready(function(){
 
         return wishlist;
     };
+    // Add to wishlist end
+
+    // Wishlist page update
+    var renderWishlist = function() {
+        var wishlist = getWishlist();
+        console.log(wishlist.length());
+    }
+
+    renderWishlist();
 
     // QuickView
     $('.quickview').on('click', async function(e) {
