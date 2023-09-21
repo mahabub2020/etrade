@@ -36,7 +36,7 @@ $(document).ready(function(){
         renderWishlist();
     });
 
-    $('.wishlist-title').on('click', function(e) {
+    $('.product-thumbnail').on('click', function(e) {
         e.preventDefault();
         console.log('clicked');
         return false;
