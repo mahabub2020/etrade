@@ -90,7 +90,7 @@ $(document).ready(function(){
         const wishlistProductsHtml = $('<div>' + wishlistProductsText + '</div>');
         $('.wishlist-items-wrapper').empty();
         for(var i = 0; i < wishlist.length; i++) {
-            var output = $(wishlistProductsHtml).find('#' + wishlist[i]).html();
+            var output = $(wishlistProductsHtml).find('#' + wishlist[i]).outerHTML;
             console.log(output);
             $('.wishlist-items-wrapper').append(output);
         }
