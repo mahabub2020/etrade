@@ -83,13 +83,16 @@ $(document).ready(function(){
             var output = $(wishlistProductsHtml).find('#' + wishlist[i]).prop('outerHTML');
             $('.wishlist-items-wrapper').append(output);
         }
+
+        $('.remove_from_wishlist').on('click', function(e) {
+            e.preventDefault();
+            productHandle = $(this).attr('data-product-handle');
+            updateWishlist(productHandle);
+            renderWishlist();
+        });
     }
 
     renderWishlist();
-
-    $('.remove_from_wishlist').on('click', function(e) {
-        e.preventDefault();
-    });
 
     // QuickView
     $('.quickview').on('click', async function(e) {
