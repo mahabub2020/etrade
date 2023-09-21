@@ -93,7 +93,6 @@ $(document).ready(function(){
             var output = $(wishlistProductsHtml).find('#' + wishlist[i]).html();
             console.log(output);
             $('.wishlist-items-wrapper').append(output);
-            
         }
     }
 
