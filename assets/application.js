@@ -29,11 +29,16 @@ $(document).ready(function(){
     // Add to wishlist start
     let wishlist_key = 'wishlist';
     let delimiter = ',';
-    $('.axil-add-to-wishlist, .remove_from_wishlist').on('click', function(e) {
+    $('.axil-add-to-wishlist').on('click', function(e) {
         e.preventDefault();
         productHandle = $(this).attr('data-product-handle');
         updateWishlist(productHandle, this);
         renderWishlist();
+    });
+
+    $('.remove_from_wishlist').on('click', function(e) {
+        e.preventDefault();
+        console.log('clicked');
     });
 
     var updateWishlist = function (handle, element) {
@@ -81,7 +86,6 @@ $(document).ready(function(){
         $('.wishlist-items-wrapper').empty();
         for(var i = 0; i < wishlist.length; i++) {
             var output = $(wishlistProductsHtml).find('#' + wishlist[i]).prop('outerHTML');
-            console.log(output);
             $('.wishlist-items-wrapper').append(output);
         }
     }
