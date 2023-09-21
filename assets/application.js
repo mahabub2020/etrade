@@ -29,21 +29,11 @@ $(document).ready(function(){
     // Add to wishlist start
     let wishlist_key = 'wishlist';
     let delimiter = ',';
-    $('.axil-add-to-wishlist').on('click', function(e) {
+    $('.axil-add-to-wishlist, .remove_from_wishlist').on('click', function(e) {
         e.preventDefault();
         productHandle = $(this).attr('data-product-handle');
         updateWishlist(productHandle, this);
-
-        if($(this).find('.wishlist-icon').hasClass('far')) {
-            $(this).find('.wishlist-icon').removeClass('far');
-            $(this).find('.wishlist-icon').addClass('fas');
-        }
-    });
-    
-    $('.remove_from_wishlist').on('click', function(e) {
-        e.preventDefault();
-        productHandle = $(this).attr('data-product-handle');
-        updateWishlist(productHandle, this);
+        renderWishlist();
     });
 
     var updateWishlist = function (handle, element) {
