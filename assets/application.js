@@ -91,6 +91,7 @@ $(document).ready(function(){
         $('.wishlist-items-wrapper').empty();
         for(var i = 0; i < wishlist.length; i++) {
             var output = $(wishlistProductsHtml).find('#' + wishlist[i]).html();
+            console.log(output);
             $('.wishlist-items-wrapper').append(output);
         }
     }
