@@ -89,8 +89,6 @@ $(document).ready(function(){
         const wishlistProductsText = await wishlistProducts.text();
         const wishlistProductsHtml = $('<div>' + wishlistProductsText + '</div>');
         for(var i = 0; i < wishlist.length; i++) {
-            var output = $(wishlistProductsHtml).find('#' + wishlist[i]).html();
-            $('.wishlist-items-wrapper').empty();
             $('.wishlist-items-wrapper').append(output);
         }
     }
