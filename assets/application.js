@@ -36,12 +36,6 @@ $(document).ready(function(){
         renderWishlist();
     });
 
-    $('.product-thumbnail').on('click', function(e) {
-        e.preventDefault();
-        console.log('clicked');
-        return false;
-    });
-
     var updateWishlist = function (handle, element) {
         var wishlist = getWishlist();
         var indexInWishlist = wishlist.indexOf(handle);
@@ -89,6 +83,11 @@ $(document).ready(function(){
             var output = $(wishlistProductsHtml).find('#' + wishlist[i]).prop('outerHTML');
             $('.wishlist-items-wrapper').append(output);
         }
+
+        $('.remove_from_wishlist').on('click', function(e) {
+            e.preventDefault();
+            console.log('clicked');
+        });
     }
 
     renderWishlist();
