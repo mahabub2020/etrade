@@ -39,6 +39,7 @@ $(document).ready(function(){
     $('.remove_from_wishlist').on('click', function(e) {
         e.preventDefault();
         console.log('clicked');
+        return false;
     });
 
     var updateWishlist = function (handle, element) {
