@@ -36,7 +36,7 @@ $(document).ready(function(){
         renderWishlist();
     });
 
-    $('.remove_from_wishlist').on('click', function(e) {
+    $('.product-remove a').on('click', function(e) {
         e.preventDefault();
         console.log('clicked');
         return false;
