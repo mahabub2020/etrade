@@ -78,7 +78,7 @@ $(document).ready(function(){
         const wishlistProducts = await fetch("/?section_id=wishlist-products");
         const wishlistProductsText = await wishlistProducts.text();
         const wishlistProductsHtml = $('<div>' + wishlistProductsText + '</div>');
-        console.log(wishlist)
+        console.log(wishlist);
         if(wishlist != null) {
             $('.wishlist-items-wrapper').empty();
             for(var i = 0; i < wishlist.length; i++) {
