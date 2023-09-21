@@ -78,18 +78,20 @@ $(document).ready(function(){
         const wishlistProducts = await fetch("/?section_id=wishlist-products");
         const wishlistProductsText = await wishlistProducts.text();
         const wishlistProductsHtml = $('<div>' + wishlistProductsText + '</div>');
-        $('.wishlist-items-wrapper').empty();
-        for(var i = 0; i < wishlist.length; i++) {
-            var output = $(wishlistProductsHtml).find('#' + wishlist[i]).prop('outerHTML');
-            $('.wishlist-items-wrapper').append(output);
-        }
+        if(wishlist != null) {
+            $('.wishlist-items-wrapper').empty();
+            for(var i = 0; i < wishlist.length; i++) {
+                var output = $(wishlistProductsHtml).find('#' + wishlist[i]).prop('outerHTML');
+                $('.wishlist-items-wrapper').append(output);
+            }
 
-        $('.remove_from_wishlist').on('click', function(e) {
-            e.preventDefault();
-            productHandle = $(this).attr('data-product-handle');
-            updateWishlist(productHandle);
-            renderWishlist();
-        });
+            $('.remove_from_wishlist').on('click', function(e) {
+                e.preventDefault();
+                productHandle = $(this).attr('data-product-handle');
+                updateWishlist(productHandle);
+                renderWishlist();
+            });
+        }        
     }
 
     renderWishlist();
