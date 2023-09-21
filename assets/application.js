@@ -73,6 +73,7 @@ $(document).ready(function(){
     // Add to wishlist end
 
     // Wishlist page update
+    var wishlistWrapper = $('.wishlist-items-wrapper');
     var renderWishlist = async function() {
         var wishlist = getWishlist();
         const wishlistProducts = await fetch("/?section_id=wishlist-products");
@@ -92,7 +93,9 @@ $(document).ready(function(){
                 updateWishlist(productHandle);
                 renderWishlist();
             });
-        }        
+        } else {
+            $('.wishlist-items-wrapper').append(wishlistWrapper);
+        }
     }
 
     renderWishlist();
