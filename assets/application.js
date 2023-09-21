@@ -85,7 +85,10 @@ $(document).ready(function(){
     // Wishlist page update
     var renderWishlist = function() {
         var wishlist = getWishlist();
-        console.log(wishlist.length);
+        console.log(wishlist);
+        for(var i = 0; i < wishlist.length; i++) {
+            console.log('wishlist: ' + wishlist[i]);
+        }
     }
 
     renderWishlist();
