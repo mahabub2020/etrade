@@ -78,9 +78,9 @@ $(document).ready(function(){
         const wishlistProducts = await fetch("/?section_id=wishlist-products");
         const wishlistProductsText = await wishlistProducts.text();
         const wishlistProductsHtml = $('<div>' + wishlistProductsText + '</div>');
+        $('.wishlist-items-wrapper').empty();
         if(wishlist != '') {
-            $('.wishlist-items-wrapper').empty();
-            $('.header-action li.wishlist a').append('<span class="wishlist-icon-num wishlist-icon-style">'+wishlist.length+'</span>');
+            wishlistCount(wishlist.length);
             for(var i = 0; i < wishlist.length; i++) {
                 var output = $(wishlistProductsHtml).find('#' + wishlist[i]).prop('outerHTML');
                 $('.wishlist-items-wrapper').append(output);
@@ -99,6 +99,16 @@ $(document).ready(function(){
     }
 
     renderWishlist();
+
+    var wishlistCount = function (count) {
+        if(count > 0) {
+            $('.wishlist-icon-num').removeClass('d-none');
+            $('.wishlist-icon-num').text(count);
+        }
+        else {
+            $('.wishlist-icon-num').addClass('d-none');
+        }
+    }
 
     // QuickView
     $('.quickview').on('click', async function(e) {
