@@ -2,12 +2,12 @@
   <div class="container">
     <div class="row">
       {% if section.settings.shop_layout == "full" %}
-        {% render 'shop-full-width' %}
+        {% render 'shop-full-width', product_layout: section.settings.product_layout %}
       {% else %}
         {% if section.settings.shop_layout == "left" %}
           {% render 'shop-sidebar' %}
         {% endif %}
-        {% render 'shop-with-sidebar' %}
+        {% render 'shop-with-sidebar', product_layout: section.settings.product_layout %}
         {% if section.settings.shop_layout == "right" %}
           {% render 'shop-sidebar' %}
         {% endif %}
@@ -34,6 +34,40 @@
           }, {
             "label": "No Sidebar",
             "value": "full"
+          }
+        ]
+      }, {
+        "type": "select",
+        "id": "product_layout",
+        "label": "Product Collection Layout",
+        "options": [
+          {
+            "label": "Layout 1",
+            "value": "1"
+          },
+          {
+            "label": "Layout 2",
+            "value": "2"
+          },
+          {
+            "label": "Layout 3",
+            "value": "3"
+          },
+          {
+            "label": "Layout 4",
+            "value": "4"
+          }, {
+            "label": "Layout 5",
+            "value": "5"
+          }, {
+            "label": "Layout 6",
+            "value": "6"
+          }, {
+            "label": "Layout 7",
+            "value": "7"
+          }, {
+            "label": "Layout 8",
+            "value": "8"
           }
         ]
       }

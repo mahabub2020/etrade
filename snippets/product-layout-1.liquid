@@ -1,4 +1,4 @@
-<div class="axil-product product-style-one has-color-pick has-gallery-image">
+<div class="axil-product product-style-one">
   <div class="thumbnail">
     <a href="{{ product.url }}">
       {% if product.featured_image %}
@@ -43,13 +43,13 @@
         </li>
         <li class="">
           {% comment %} <a
-            href="#"
-            data-product_id="{{ product.id }}"
-            title="QuickView"
-            data-bs-toggle="modal"
-            data-bs-target="#yith-quick-view-modal"
-            onclick="quickview('{{ product.handle | handleize }}')">
-            <i class="far fa-eye"></i>
+          href="#"
+          data-product_id="{{ product.id }}"
+          title="QuickView"
+          data-bs-toggle="modal"
+          data-bs-target="#yith-quick-view-modal"
+          onclick="quickview('{{ product.handle | handleize }}')">
+          <i class="far fa-eye"></i>
           </a> {% endcomment %}
           <a
             href="#"
@@ -68,8 +68,7 @@
           <div
             class="star-rating"
             role="img"
-            aria-label="Rated 5.00 out of 5">
-          </div>
+            aria-label="Rated 5.00 out of 5"></div>
         </div>
         <span class="rating-number">
           <span>
