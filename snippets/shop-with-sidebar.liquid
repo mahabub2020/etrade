@@ -114,7 +114,7 @@
             </div> {% endcomment %}
             {% assign layout = 'product-layout-' | append: product_layout %}
             {% capture include_snippet %}
-              {% include layout %}
+              {% render layout %}
             {% endcapture %}
             {{ include_snippet }}
           </div>
