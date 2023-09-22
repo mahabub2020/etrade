@@ -49,6 +49,7 @@ $(document).ready(function(){
             $(element).find('.wishlist-icon').removeClass('fas');
             $(element).find('.wishlist-icon').addClass('far');
         }
+        $('li.wishlist a').append('<span class="wishlist-icon-num wishlist-icon-style">'+wishlist.length+'</span>');
         return setWishlist(wishlist);
     };
 
@@ -73,14 +74,12 @@ $(document).ready(function(){
     // Add to wishlist end
 
     // Wishlist page update
-    var wishlistWrapper = $('.wishlist-items-wrapper');
     var renderWishlist = async function() {
         var wishlist = getWishlist();
         const wishlistProducts = await fetch("/?section_id=wishlist-products");
         const wishlistProductsText = await wishlistProducts.text();
         const wishlistProductsHtml = $('<div>' + wishlistProductsText + '</div>');
         if(wishlist != '') {
-            console.log('wishlist: ' + wishlist);
             $('.wishlist-items-wrapper').empty();
             for(var i = 0; i < wishlist.length; i++) {
                 var output = $(wishlistProductsHtml).find('#' + wishlist[i]).prop('outerHTML');
@@ -94,7 +93,8 @@ $(document).ready(function(){
                 renderWishlist();
             });
         } else {
-            $('.wishlist-items-wrapper').append(wishlistWrapper);
+            var output = '<tr><td colspan="6" class="wishlist-empty">No products added to the wishlist</td></tr>';
+            $('.wishlist-items-wrapper').append(output);
         }
     }
 
