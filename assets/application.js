@@ -103,10 +103,12 @@ $(document).ready(function(){
 
     var wishlistCount = function (count) {
         if(count > 0) {
+            $('.wishlist-icon-num').removeClass('d-none');
             $('.wishlist-icon-num').text(count);
         }
         else {
-            $('.wishlist-icon-num').text('');
+            $('.wishlist-icon-num').addClass('d-none');
+            $('.wishlist-icon-num').text(count);
         }
     }
 
