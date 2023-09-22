@@ -49,7 +49,6 @@ $(document).ready(function(){
             $(element).find('.wishlist-icon').removeClass('fas');
             $(element).find('.wishlist-icon').addClass('far');
         }
-        $('li.wishlist a').append('<span class="wishlist-icon-num wishlist-icon-style">'+wishlist.length+'</span>');
         return setWishlist(wishlist);
     };
 
@@ -81,6 +80,7 @@ $(document).ready(function(){
         const wishlistProductsHtml = $('<div>' + wishlistProductsText + '</div>');
         if(wishlist != '') {
             $('.wishlist-items-wrapper').empty();
+            $('.header-action li.wishlist a').append('<span class="wishlist-icon-num wishlist-icon-style">'+wishlist.length+'</span>');
             for(var i = 0; i < wishlist.length; i++) {
                 var output = $(wishlistProductsHtml).find('#' + wishlist[i]).prop('outerHTML');
                 $('.wishlist-items-wrapper').append(output);
