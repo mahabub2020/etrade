@@ -5,18 +5,12 @@
       "theme_name": "Themekit template theme",
       "theme_version": "1.0.0",
       "theme_author": "Shopify",
-      "theme_documentation_url": "https://github.com/Shopify/themekit",
+      "theme_documentation_url": "https://github.com/Shopify/ddddd",
       "theme_support_url": "https://github.com/Shopify/themekit/issues"
     },
   {
-<<<<<<< HEAD
-    "name": "theme_info",
-    "theme_name": "Themekit template theme",
-    "theme_version": "1.0.0",
-    "theme_author": "Shopify",
-    "theme_documentation_url": "https:\/\/github.com\/Shopify\/themekit",
-    "theme_support_url": "https:\/\/github.com\/Shopify\/themekit\/issues"
-=======
+
+
       "name": "General Settings",
       "settings": [
           {
@@ -419,6 +413,35 @@
           }
       ]
   },
+    {
+    "name": "integrated Apps",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Product reviews"
+      },
+      {
+        "type": "select",
+        "id": "review_app",
+        "label": "Product reviews app",
+        "default": "shopify",
+        "info": "Select your preferred app. If you are using another app, please put the snippet code of the app to file: snippets/other-review-app-snippet.liquid or contact us for help.",
+        "options": [
+          {
+            "value": "shopify",
+            "label": "Product reviews by Shopify"
+          },
+          {
+            "value": "lai_reviews",
+            "label": "LAI Product Reviews"
+          }
+        ]
+      }
+    ]
+  },
+
+
+
   {
       "name": "Single Product",
       "settings": [
@@ -1753,6 +1776,6 @@
               "default": 0.7
           }
       ]
->>>>>>> 8620ad3a25d2772011f066f4ea4df8019a477e21
+ 
   }
 ]
