@@ -2,6 +2,7 @@
   "current": {
     "favicon": "shopify:\/\/shop_images\/logo.png",
     "currency_enable": true,
+    "review_app": "lai_reviews",
     "content_sidebar_handle": "content_sidebar_in_left",
     "checkout_logo_image": "shopify:\/\/shop_images\/logo.svg",
     "sections": {
@@ -16,18 +17,9 @@
           "header_top_left": "Free Shipping on Orders Over $150",
           "header_top_menu_enable": true,
           "header_top_right_menu": "main-menu",
-<<<<<<< HEAD
           "logo_width": 150,
           "header_primary_menu": "main-menu",
           "header_cat_menu": "",
-=======
-          "top_campaign_bg": "shopify:\/\/shop_images\/sale-tag.jpg",
-          "logo": "shopify:\/\/shop_images\/logo.png",
-          "logo_sticky": "shopify:\/\/shop_images\/logo.png",
-          "logo_width": 150,
-          "header_primary_menu": "main-menu",
-          "header_cat_menu": "header-top-menu",
->>>>>>> 8620ad3a25d2772011f066f4ea4df8019a477e21
           "search_enable": true,
           "search_placeholder": "What are you looking for?",
           "search_title": "Start typing and press Enter to search",
@@ -35,19 +27,11 @@
           "btn_url": "shopify:\/\/collections\/womens",
           "wishlist_enable": true,
           "mini_cart_enable": true,
-<<<<<<< HEAD
-          "cart_title": "Shopping Cart",
-          "cart_notification": "No products in the cart.",
-          "return_btn_txt": "Return to shop",
-          "view_cart_title": "View Cart",
-          "checkout_title": "Checkout",
-=======
           "cart_title": "Shopping Cartsss",
           "cart_notification": "No products in the casssssrt.",
           "return_btn_txt": "Return to shopsss",
           "view_cart_title": "View Cartsss",
           "checkout_title": "Checkoutsssss",
->>>>>>> 8620ad3a25d2772011f066f4ea4df8019a477e21
           "acount_enable": true,
           "acount_title": "QUICKLINKS",
           "acount_menu": "footer",
