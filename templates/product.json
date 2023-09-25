@@ -86,6 +86,7 @@
     },
     "single-product-tab": {
       "type": "single-product-tab",
+      "disabled": true,
       "settings": {
         "container_style": "style_1",
         "product_tab_enable": true,
@@ -111,29 +112,7 @@
     },
     "upsell-product": {
       "type": "upsell-product",
-      "blocks": {
-        "38f5b788-018f-4355-8935-4a872a959010": {
-          "type": "section_background",
-          "settings": {
-            "section_bg_color": "#f5f5f5"
-          }
-        },
-        "cb06fe30-6885-4004-824f-47a3c6e74c81": {
-          "type": "section_margin",
-          "settings": {
-            "section_margin_top": 0,
-            "section_margin_bottom": 45,
-            "section_margin_top_md": 0,
-            "section_margin_bottom_md": 0,
-            "section_margin_top_xs": 0,
-            "section_margin_bottom_xs": 0
-          }
-        }
-      },
-      "block_order": [
-        "38f5b788-018f-4355-8935-4a872a959010",
-        "cb06fe30-6885-4004-824f-47a3c6e74c81"
-      ],
+      "disabled": true,
       "settings": {
         "container_style": "style_2",
         "upsell_products_enable": true,
@@ -185,34 +164,34 @@
         "section_border_color": "#cf987e"
       }
     },
-    "7e6f8fff-4dfe-41af-a1a2-ecbda311cd2a": {
+    "85c54a0e-24ac-4918-88a9-c40571be93c4": {
       "type": "product-info-detailed-tabs",
       "blocks": {
-        "e0b8cbcd-07ca-4bb5-ac04-f08e26192737": {
-          "type": "description",
-          "settings": {
-            "header": "Product description"
-          }
-        },
-        "b198a6df-161e-4701-b7f5-91d405c285a9": {
-          "type": "reviews",
-          "settings": {
-            "text-header": "Product reviews",
-            "custom_liquid": ""
-          }
-        },
-        "168de1b3-0f46-4bdd-8f66-688d08519009": {
+        "a69ce3c0-3617-4ebb-8dcc-5c67bb4f8804": {
           "type": "custom_tabs",
           "settings": {
             "for_group": "Heading",
             "tabs_content": "Content"
           }
+        },
+        "99ed2f40-5555-4d8a-a3da-b260947d527e": {
+          "type": "description",
+          "settings": {
+            "header": "Product description"
+          }
+        },
+        "1b708f6f-d16c-478f-b727-5d846f49b3cf": {
+          "type": "reviews",
+          "settings": {
+            "text-header": "Product reviews",
+            "custom_liquid": ""
+          }
         }
       },
       "block_order": [
-        "e0b8cbcd-07ca-4bb5-ac04-f08e26192737",
-        "b198a6df-161e-4701-b7f5-91d405c285a9",
-        "168de1b3-0f46-4bdd-8f66-688d08519009"
+        "a69ce3c0-3617-4ebb-8dcc-5c67bb4f8804",
+        "99ed2f40-5555-4d8a-a3da-b260947d527e",
+        "1b708f6f-d16c-478f-b727-5d846f49b3cf"
       ],
       "settings": {
         "container": "container-xxl",
@@ -220,11 +199,6 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "open": true
-      }
-    },
-    "sma_reviews_section_auto": {
-      "type": "reviews-importer-product",
-      "settings": {
       }
     }
   },
@@ -234,7 +208,6 @@
     "upsell-product",
     "reviewxpo-reviews-widget-app-section",
     "related-products",
-    "7e6f8fff-4dfe-41af-a1a2-ecbda311cd2a",
-    "sma_reviews_section_auto"
+    "85c54a0e-24ac-4918-88a9-c40571be93c4"
   ]
 }
