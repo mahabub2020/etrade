@@ -221,6 +221,11 @@
         "padding_bottom": 0,
         "open": true
       }
+    },
+    "sma_reviews_section_auto": {
+      "type": "reviews-importer-product",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -229,6 +234,7 @@
     "upsell-product",
     "reviewxpo-reviews-widget-app-section",
     "related-products",
-    "7e6f8fff-4dfe-41af-a1a2-ecbda311cd2a"
+    "7e6f8fff-4dfe-41af-a1a2-ecbda311cd2a",
+    "sma_reviews_section_auto"
   ]
 }

@@ -13,9 +13,9 @@
 {% assign orderID  = 0 %}
 {% for order in customer.orders %}
   {% for line_item in order.line_items %}
-      {% if line_item.url contains handleProductCurrent %}
-          {% assign alreadyBuy  = true%}
-      {% endif %}
+    {% if line_item.url contains handleProductCurrent %}
+      {% assign alreadyBuy  = true%}
+    {% endif %}
   {% endfor %}
 {% endfor %}
 <script>
@@ -41,8 +41,11 @@
   }
 </script>
 <div class="scm-container" style="display: none;">
-    <div class="scm-reviews-importer" data-product-id= {{ product.id }}>
-        <iframe class="scm-reviews-importer-iframe" width="100%" title="Sma reviews section Product page" data-idIframe="{{ random_number }}"></iframe>
+  {% if section.settings.title %}
+      {{ section.settings.title }}
+  {% endif %}
+    <div class="scm-reviews-importer" data-product-id={{ product.id }}>
+        <iframe class="scm-reviews-importer-iframe" width="100%" title="Sma reviews section Product Page" data-idIframe="{{ random_number }}"></iframe>
     </div>
 </div>
 <div class="scm-value-rate-product" data-rate-version2= {{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo | json}}>
@@ -50,19 +53,41 @@
 {% assign countAverage = product.metafields.scm_review_importer.reviewsData.reviewCountInfo.average | plus: 0 %}
 {% if shop.metafields.scm_review_importer.shop_info_setting['jsonLd'] %}
     {%- if countAverage > 0 %}
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org/",
-            "@type": "Product",
-            "@id": {{ canonical_url | append: '#product' | json }},
-            "name": {{ product.title | json }},
-            "review": {{ product.metafields.scm_review_importer.reviewsData['seoReviews'] }},
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo.average }}",
-              "ratingCount": "{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo.total }}"
-            }
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/",
+          "@type": "Product",
+          "@id": {{ canonical_url | append: '#product' | json }},
+          "name": {{ product.title | json }},
+          "review": {{ product.metafields.scm_review_importer.reviewsData['seoReviews'] }},
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo.average }}",
+            "ratingCount": "{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo.total }}"
           }
-        </script>
+        }
+      </script>
     {%- endif -%}
 {%- endif -%}
+{% schema %}
+{
+    "name": "LAI product reviews",
+    "class": "index-section",
+    "settings": [
+        {
+          "type": "product",
+          "id": "lai_product",
+          "label": "Choose Product"
+        },
+        {
+          "type": "liquid",
+          "id": "title",
+          "label": "Product Reviews Title"
+        }
+    ],
+    "presets": [{
+    "name": "LAI product reviews",
+    "category": "LAI Reviews"
+    }]
+}
+{% endschema %}

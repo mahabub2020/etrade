@@ -50,6 +50,8 @@
     [x-cloak] { display: none !important; }
   </style>
 {{ shop.metafields.reviewxpo['global_styles'] }}
+
+ {% render "reviews-importer-variable-js" %}
 </head>
 <body>
 
@@ -68,5 +70,7 @@
 
 {{ shop.metafields.reviewxpo['global_scripts'] }}
 
+
+ {% render "reviews-importer-popup" %}
 </body>
 </html>

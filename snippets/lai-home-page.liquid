@@ -1,0 +1,29 @@
+{% assign random_number = "now" | date: "%N" | modulo: 1000 | plus: 0 %}
+<script>
+  var scmCustomDataWigetAll= (typeof scmCustomDataWigetAll == "undefined" || scmCustomDataWigetAll == null) ? [] : scmCustomDataWigetAll;
+  scmCustomDataWigetAll[{{ random_number }}] ={
+    "productId" : '',
+    "typePage" : 'homePage',
+    'reviewsInFo' : {
+      'rate1' : '',
+      'rate2' : '',
+      'rate3' : '',
+      'rate4' : '',
+      'rate5' : '',
+      'total' : '',
+      'average' : '',
+      'product_shopify_id' : ''
+    },
+    "product_group_id": '',
+    "order_current_product" : "",
+    "blockReviewFirst" : "{{ shop.metafields.scm_review_importer.reviews_homePage }}"
+  };
+</script>
+<div class="scm-container" style="display: none;">
+  <div class="{{ section.settings.class_wrap_title | escape }}">
+    <h2 class="{% if block.settings.class_title %} {{ section.settings.class_title | escape }}{% else %}title-lai{% endif %}">{{ section.settings.title }}</h2>
+  </div>
+  <div class="scm-reviews-importer">
+    <iframe class="scm-reviews-importer-iframe" width="100%" title="Sma reviews section Home Page" data-idIframe="{{ random_number }}"></iframe>
+  </div>
+</div>
