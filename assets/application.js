@@ -39,6 +39,8 @@ $(document).ready(function(){
     var updateWishlist = function (handle, element) {
         var wishlist = getWishlist();
         var indexInWishlist = wishlist.indexOf(handle);
+
+        // wishlist icon change
         if (indexInWishlist === -1) {
             wishlist.push(handle);
             $(element).find('.wishlist-icon').removeClass('far');
@@ -84,6 +86,7 @@ $(document).ready(function(){
                 var output = $(wishlistProductsHtml).find('#' + wishlist[i]).prop('outerHTML');
                 $('.wishlist-items-wrapper').append(output);
 
+                // wishlist icon change
                 $('.wishlist a[data-product-handle="'+wishlist[i]+'"]').find('.wishlist-icon').removeClass('far');
                 $('.wishlist a[data-product-handle="'+wishlist[i]+'"]').find('.wishlist-icon').addClass('fas');
             }
