@@ -68,19 +68,17 @@
 
                             {%- when 'price' -%}
                               <div class="product-info-main-block price-box no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-                                {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+                                <div class="product-price-wrapper mb--20 mb-md--10">
+                                  <span class="money price-amount" id="ProductPrice">{{ product.selected_or_first_available_variant.price | money }}</span>
+                                   {%- if product.compare_at_price_max > product.price -%}
+                                  <span class="old-price">
+                                    <span class="money price-amount" id="ComparePrice">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
+                                  </span>
+                                   {%- endif -%}
+                                </div>
                               </div>
-
-                          <div class="product-price-wrapper mb--20 mb-md--10">
-                            <span class="money price-amount" id="ProductPrice">{{ product.selected_or_first_available_variant.price | money }}</span>
-                             {%- if product.compare_at_price_max > product.price -%}
-                            <span class="old-price">
-                              <span class="money price-amount" id="ComparePrice">{{ product.selected_or_first_available_variant.compare_at_price | money }}</span>
-                            </span>
-                             {%- endif -%}
-                          </div>
-
-                          
+                         
+                          <div class="clearfix"></div>
        
                           {%- if section.settings.product_review_enable -%}
                             <div class="product-rating">
@@ -179,6 +177,7 @@
                               </span>
                               {% endif %} 
 
+                              
                             {%- if section.settings.social_share_enable -%}
                               {%- render 'social-share' -%}
                             {%- endif -%}

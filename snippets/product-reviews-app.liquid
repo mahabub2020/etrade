@@ -1,0 +1,11 @@
+{% assign review_app = settings.review_app %}
+{% if custom_liquid != blank %}
+    {{ custom_liquid }}
+{% else %}
+    {% case review_app %}
+        {% when 'shopify' %}
+            <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
+        {% when 'lai_reviews' %}
+            {% render "reviews-importer" %}
+    {% endcase %}
+{% endif %}
