@@ -49,7 +49,7 @@
               <div class="position-sticky sticky-top">
                   <div class="single-product-content">
                       <div class="inner">
-                        {%- assign product_form_id = 'product-form-' | append: section.id -%}
+
                         {%- for block in section.blocks -%}
                           {%- case block.type -%}
                             {%- when '@app' -%}
@@ -65,12 +65,13 @@
                             <div class="product-info-main-block product-title-wrapper">
                               <h1 class="product-title text-{{ block.settings.text_transform }}">{{ product.title }}</h1>
                             </div>
+ 
 
                             {%- when 'price' -%}
                               <div class="product-info-main-block price-box no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                                 {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
                               </div>
-
+                              
                           <div class="product-price-wrapper mb--20 mb-md--10">
                             <span class="money price-amount" id="ProductPrice">{{ product.selected_or_first_available_variant.price | money }}</span>
                              {%- if product.compare_at_price_max > product.price -%}
@@ -79,8 +80,6 @@
                             </span>
                              {%- endif -%}
                           </div>
-
-                          
        
                           {%- if section.settings.product_review_enable -%}
                             <div class="product-rating">
@@ -122,8 +121,7 @@
                             {%- endif -%}
                             {%- endunless -%}
 
-               
-                              {%- render 'product-options-wrapper', product: product, block: block, product_form_id: product_form_id -%}
+                            {%- render 'product-variant' -%}
 
                             {%- if product.description contains '[countdown]' -%}
                               {%- assign count_down_first = product.description | split:'[/countdown]' | first -%}
@@ -1008,24 +1006,6 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
       "type": "visitor",
       "name": "Visitor",
       "limit": 1
-    },
-    {
-      "type": "variant_picker",
-      "name": "variant_picker",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "header",
-          "content": "Size guide settings"
-        },
-        {
-          "type": "text",
-          "id": "size_title",
-          "default": "Color",
-          "label": "Size option title",
-          "info": "Enter the option titles which you want to show Size guide button, separate with a comma"
-        }
-      ]
     },
 
 

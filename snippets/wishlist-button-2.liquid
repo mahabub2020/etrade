@@ -1,0 +1,8 @@
+
+{%- if product.handle != blank -%}
+<a class="action-wishlist tile-actions--btn flex wishlist-btn wishlist add_wishlist action-btn" href="javascript: void(0)" button-wishlist data-product-handle="{{ product.handle }}">
+  <span class="add-wishlist"><i class="dl-icon-heart4" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"></i></span>
+  <span class="loading-wishlist"><i class="fa fa-circle-o-notch fa-spin"></i></span>
+  <span class="remove-wishlist"><i class="fa fa-heart" data-toggle="tooltip" data-placement="top" title="Remove Wishlist"></i></span>
+</a>
+{%- endif -%}

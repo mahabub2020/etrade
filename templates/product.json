@@ -2,9 +2,194 @@
   "sections": {
     "template": {
       "type": "template-product",
+      "blocks": {
+        "95bafc65-42ee-4ba8-af37-aa80dd3f0eb5": {
+          "type": "text",
+          "settings": {
+            "text": "Text block",
+            "text-transform": "lowercase"
+          }
+        },
+        "ae764d1f-29be-4311-8762-8aee2b3dd2ef": {
+          "type": "title",
+          "settings": {
+            "text_transform": "lowercase"
+          }
+        },
+        "62c93693-3cf6-4e73-9116-69729457993b": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "d2c7b6cf-7c38-464e-bb74-937b38dac679": {
+          "type": "visitor",
+          "settings": {
+          }
+        },
+        "dd1559c0-5603-4693-85a3-707b378a2ce7": {
+          "type": "variant_picker",
+          "settings": {
+            "size_title": "Color"
+          }
+        }
+      },
+      "block_order": [
+        "95bafc65-42ee-4ba8-af37-aa80dd3f0eb5",
+        "ae764d1f-29be-4311-8762-8aee2b3dd2ef",
+        "62c93693-3cf6-4e73-9116-69729457993b",
+        "d2c7b6cf-7c38-464e-bb74-937b38dac679",
+        "dd1559c0-5603-4693-85a3-707b378a2ce7"
+      ],
       "settings": {
-        "enable_author": true,
-        "enable_published_date": true
+        "container_style": "style_1",
+        "content_handle": "content_in_right",
+        "product_style": "product_default",
+        "product_zoom_enable": true,
+        "zoom_type": "inner",
+        "product_popup_enable": true,
+        "product_cursole": "3",
+        "product_cursole_2": "3",
+        "product_cursole_3": "3",
+        "product_sku_enable": true,
+        "product_sku_title": "SKU:",
+        "product_review_enable": true,
+        "countdown_heading": "<strong>Hurry up<\/strong>! offer ends in:",
+        "product_inventory_enable": true,
+        "availability_title": "Availability:",
+        "in_stock_title": "In stock",
+        "left_in_stock_title": "left in stock",
+        "out_of_stock_title": "Out of stock",
+        "product_description_handle": "short_description",
+        "truncatewords_count_handle": 35,
+        "product_variant_handle": "product_variant_select_option",
+        "show_variant_image": false,
+        "dynamic_checkout_button_enable": true,
+        "social_share_enable": true,
+        "social_share_title": "Share:",
+        "store_delivery_enable": true,
+        "map_icon": "map-marker",
+        "store_title": "Find store near you",
+        "store_url": "",
+        "map_icon_1": "exchange",
+        "store_title_2": "Delivery and return",
+        "store_url_2": "",
+        "category_list_enable": true,
+        "category_title": "Categories:",
+        "category_list_limit_handle": "3",
+        "category_tag_enable": true,
+        "tag_title": "Tags:",
+        "category_tag_limit_handle": "3",
+        "payment_option_enable": true,
+        "payment_information": "<p>Guaranteed safe checkout<\/p>",
+        "payment_icon_enable": true
+      }
+    },
+    "single-product-tab": {
+      "type": "single-product-tab",
+      "blocks": {
+        "edd41336-a684-47c4-8a11-2e107abadeb9": {
+          "type": "custom_tab",
+          "settings": {
+            "custom_tab_title": "Tab Title",
+            "custom_tab_handle": "home1"
+          }
+        },
+        "6d67c663-4bcf-4bed-b899-7a9e34c4c194": {
+          "type": "unique_tab_3",
+          "settings": {
+            "unique_tab_title": "Unique Tab Titlerf",
+            "unique_description_3": "[unique_description_3] Your content or text here [\/unique_description_3]"
+          }
+        },
+        "3d39ae0b-34ed-4b61-96a5-3ad2bdeab2cc": {
+          "type": "custom_tab",
+          "settings": {
+            "custom_tab_title": "Tab Titledsadafasd",
+            "custom_tab_handle": "contact"
+          }
+        },
+        "6d193581-8a87-43ff-9b29-7d69cf87a40e": {
+          "type": "unique_tab_2",
+          "settings": {
+            "unique_tab_title": "Unique Tab Title",
+            "unique_description_2": "[unique_description_2] Your content or text here [\/unique_description_2]"
+          }
+        }
+      },
+      "block_order": [
+        "edd41336-a684-47c4-8a11-2e107abadeb9",
+        "6d67c663-4bcf-4bed-b899-7a9e34c4c194",
+        "3d39ae0b-34ed-4b61-96a5-3ad2bdeab2cc",
+        "6d193581-8a87-43ff-9b29-7d69cf87a40e"
+      ],
+      "settings": {
+        "container_style": "style_1",
+        "product_tab_enable": true,
+        "tab_style": "tab_style_center",
+        "text_style": "text_style_left",
+        "tab_active_handle": "info_tab",
+        "product_info_tab_enable": true,
+        "product_info_tab_title": "Descriptionffff",
+        "product_review_tab_enable": true,
+        "product_review_tab_title": "Reviews",
+        "product_comments_enable": true,
+        "product_comments_title": "Commentsvv",
+        "product_page_comments_box": "disqus_comment",
+        "facebook_comments_post_limit": "10",
+        "disqus_shortname": "etradeshopstore",
+        "tab_text_color": "#8a8a8a",
+        "tab_border_color": "#ffffff",
+        "tab_text_hover_color": "#282828",
+        "tab_border_hover_color": "#cf987e",
+        "tab_text_active_color": "#282828",
+        "tab_active_border_color": "#cf987e"
+      }
+    },
+    "upsell-product": {
+      "type": "upsell-product",
+      "blocks": {
+        "38f5b788-018f-4355-8935-4a872a959010": {
+          "type": "section_background",
+          "settings": {
+            "section_bg_color": "#f5f5f5"
+          }
+        },
+        "cb06fe30-6885-4004-824f-47a3c6e74c81": {
+          "type": "section_margin",
+          "settings": {
+            "section_margin_top": 0,
+            "section_margin_bottom": 45,
+            "section_margin_top_md": 0,
+            "section_margin_bottom_md": 0,
+            "section_margin_top_xs": 0,
+            "section_margin_bottom_xs": 0
+          }
+        }
+      },
+      "block_order": [
+        "38f5b788-018f-4355-8935-4a872a959010",
+        "cb06fe30-6885-4004-824f-47a3c6e74c81"
+      ],
+      "settings": {
+        "container_style": "style_2",
+        "upsell_products_enable": true,
+        "section_before_title": "Your Recently",
+        "section_title": "Upsell Products",
+        "collection": "frontpage",
+        "product_layout": "1",
+        "upsell_product_limit_handle": 4,
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_md": 2,
+        "product_column_sm": 1,
+        "section_title_color": "#282828",
+        "section_border_color": "#cf987e"
+      }
+    },
+    "reviewxpo-reviews-widget-app-section": {
+      "type": "apps",
+      "settings": {
       }
     },
     "related-products": {
@@ -39,6 +224,9 @@
   },
   "order": [
     "template",
+    "single-product-tab",
+    "upsell-product",
+    "reviewxpo-reviews-widget-app-section",
     "related-products"
   ]
 }

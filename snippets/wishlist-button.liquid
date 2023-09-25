@@ -1,0 +1,9 @@
+{%- if product.handle != blank -%}
+  <li class="wishlist">
+    <a class="action-wishlist tile-actions--btn axil-btn wishlist-btn" href="javascript: void(0)" button-wishlist data-product-handle="{{ product.handle }}">
+      <span class="add-wishlist"><i class="dl-icon-heart2"></i></span>
+      <span class="loading-wishlist"><i class="fa fa-circle-o-notch fa-spin"></i></span>
+      <span class="remove-wishlist"><i class="fa fa-heart"></i></span>
+  </a>
+</li>
+{%- endif -%}
