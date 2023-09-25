@@ -83,6 +83,9 @@ $(document).ready(function(){
             for(var i = 0; i < wishlist.length; i++) {
                 var output = $(wishlistProductsHtml).find('#' + wishlist[i]).prop('outerHTML');
                 $('.wishlist-items-wrapper').append(output);
+
+                $('.wishlist a[data-product-handle="'+wishlist[i]+'"]').find('.wishlist-icon').removeClass('far');
+                $('.wishlist a[data-product-handle="'+wishlist[i]+'"]').find('.wishlist-icon').addClass('fas');
             }
 
             $('.remove_from_wishlist').on('click', function(e) {

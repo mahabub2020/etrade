@@ -329,11 +329,23 @@
             </div>
             </div>
             </div> {% endcomment %}
-            {% assign layout = 'product-layout-' | append: product_layout %}
-            {% capture include_snippet %}
-              {% include layout %}
-            {% endcapture %}
-            {{ include_snippet }}
+            {% if product_layout == "1" %}
+              {% render 'product-layout-1', product: product %}
+            {% elsif product_layout == "2" %}
+              {% render 'product-layout-2', product: product %}
+            {% elsif product_layout == "3" %}
+              {% render 'product-layout-3', product: product %}
+            {% elsif product_layout == "4" %}
+              {% render 'product-layout-4', product: product %}
+            {% elsif product_layout == "5" %}
+              {% render 'product-layout-5', product: product %}
+            {% elsif product_layout == "6" %}
+              {% render 'product-layout-6', product: product %}
+            {% elsif product_layout == "7" %}
+              {% render 'product-layout-7', product: product %}
+            {% else %}
+              {% render 'product-layout-8', product: product %}
+            {% endif %}
           </div>
         {% endfor %}
       </div>
