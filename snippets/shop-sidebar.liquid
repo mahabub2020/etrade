@@ -6,36 +6,18 @@
       </button>
     </div>
 
-    {% for typeee in shop.types %}
-      {{ typeee }}
-    {% endfor %}
+
 
     {% if section.settings.filter_by_category == true %}
       <div class="toggle-list product-categories widget woocommerce widget_product_categories">
         <h6 class="title">Product categories</h6>
         <div class="shop-submenu">
           <ul class="product-categories">
-            <li class="cat-item cat-item-141">
-              <a href="https://dev.axilthemes.com/themes/etrade/product-category/deals/">Deals</a>
-            </li>
-            <li class="cat-item cat-item-71">
-              <a href="https://dev.axilthemes.com/themes/etrade/product-category/electronics/">Electronics</a>
-            </li>
-            <li class="cat-item cat-item-20">
-              <a href="https://dev.axilthemes.com/themes/etrade/product-category/fashion/">Fashion</a>
-            </li>
-            <li class="cat-item cat-item-48">
-              <a href="https://dev.axilthemes.com/themes/etrade/product-category/furniture/">Furniture</a>
-            </li>
-            <li class="cat-item cat-item-59">
-              <a href="https://dev.axilthemes.com/themes/etrade/product-category/jewellery/">Jewellery</a>
-            </li>
-            <li class="cat-item cat-item-21">
-              <a href="https://dev.axilthemes.com/themes/etrade/product-category/multipurpose/">Multipurpose</a>
-            </li>
-            <li class="cat-item cat-item-85">
-              <a href="https://dev.axilthemes.com/themes/etrade/product-category/nft/">Nft</a>
-            </li>
+            {% for product_type in shop.types %}
+              <li class="cat-item cat-item-141">
+                <a href="https://dev.axilthemes.com/themes/etrade/product-category/deals/">{{ product_type }}</a>
+              </li>
+            {% endfor %}
           </ul>
         </div>
       </div>
