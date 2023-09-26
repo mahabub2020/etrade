@@ -6,8 +6,8 @@
       </button>
     </div>
 
-    {% for products in collection %}
-      {{ products.all_types }}
+    {% for typeee in shop.types %}
+      {{ typeee }}
     {% endfor %}
 
     {% if section.settings.filter_by_category == true %}
