@@ -36,7 +36,8 @@
             "value": "full"
           }
         ]
-      }, {
+      },
+      {
         "type": "select",
         "id": "product_layout",
         "label": "Product Collection Layout",
@@ -70,13 +71,34 @@
             "value": "8"
           }
         ]
+      },
+      {
+        "type": "checkbox",
+        "id": "filter_by_category",
+        "label": "Filter by Category",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "filter_by_gender",
+        "label": "Filter by Gender",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "filter_by_size",
+        "label": "Filter by Size",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "filter_by_color",
+        "label": "Filter by Color",
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "filter_by_price",
+        "label": "Filter by Price",
+        "default": true
       }
     ]
-  }
-{% endschema %}
-
-{% schema %}
-  {
-    "name": "Sidebar"
   }
 {% endschema %}
