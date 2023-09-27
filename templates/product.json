@@ -200,6 +200,22 @@
         "section_title_color": "#282828",
         "section_border_color": "#cf987e"
       }
+    },
+    "sma_reviews_section_auto": {
+      "type": "apps",
+      "blocks": {
+        "sma_reviews_section_auto": {
+          "type": "shopify:\/\/apps\/lai-product-reviews\/blocks\/lai-product-section\/cad3c6c6-329e-4416-ba74-b79359b5b6e1",
+          "settings": {
+            "lai_product": ""
+          }
+        }
+      },
+      "block_order": [
+        "sma_reviews_section_auto"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -208,6 +224,7 @@
     "single-product-tab",
     "upsell-product",
     "reviewxpo-reviews-widget-app-section",
-    "related-products"
+    "related-products",
+    "sma_reviews_section_auto"
   ]
 }
