@@ -128,7 +128,7 @@
         "upsell_products_enable": true,
         "section_before_title": "Your Recently",
         "section_title": "Upsell Products",
-        "collection": "frontpage",
+        "collection": "checkproduct",
         "product_layout": "1",
         "upsell_product_limit_handle": 4,
         "autoplay_true": false,
@@ -148,10 +148,22 @@
           "settings": {
             "section_bg_color": "#ab5f5f"
           }
+        },
+        "43dec5fa-2722-4e9b-89d9-4ada68ee1af3": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 70,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 70,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
         }
       },
       "block_order": [
-        "9de3cd49-bfc1-4eaf-8756-f4aaee8b95d2"
+        "9de3cd49-bfc1-4eaf-8756-f4aaee8b95d2",
+        "43dec5fa-2722-4e9b-89d9-4ada68ee1af3"
       ],
       "settings": {
         "container_style": "style_1",
