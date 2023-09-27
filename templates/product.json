@@ -146,7 +146,7 @@
         "9de3cd49-bfc1-4eaf-8756-f4aaee8b95d2": {
           "type": "section_background",
           "settings": {
-            "section_bg_color": "#FF7F00"
+            "section_bg_color": "#ff7f00"
           }
         },
         "43dec5fa-2722-4e9b-89d9-4ada68ee1af3": {
@@ -171,10 +171,10 @@
         "section_before_title": "dhgdghdfgdhbdg",
         "section_title": "dfgdfgdfg",
         "product_layout": "1",
-        "related_product_limit_handle": 12,
+        "related_product_limit_handle": 8,
         "autoplay_true": true,
-        "autoplay_speed": 5000,
-        "product_column": 7,
+        "autoplay_speed": 4000,
+        "product_column": 4,
         "product_column_md": 2,
         "product_column_sm": 1,
         "section_title_color": "#282828",
