@@ -120,33 +120,7 @@
         "padding_bottom": 0,
         "open": true
       }
-    },
-    "single-product-tab": {
-      "type": "single-product-tab",
-      "disabled": true,
-      "settings": {
-        "container_style": "style_1",
-        "product_tab_enable": true,
-        "tab_style": "tab_style_center",
-        "text_style": "text_style_left",
-        "tab_active_handle": "info_tab",
-        "product_info_tab_enable": true,
-        "product_info_tab_title": "Descriptionffff",
-        "product_review_tab_enable": true,
-        "product_review_tab_title": "Reviews",
-        "product_comments_enable": true,
-        "product_comments_title": "Commentsvv",
-        "product_page_comments_box": "disqus_comment",
-        "facebook_comments_post_limit": "10",
-        "disqus_shortname": "etradeshopstore",
-        "tab_text_color": "#8a8a8a",
-        "tab_border_color": "#ffffff",
-        "tab_text_hover_color": "#282828",
-        "tab_border_hover_color": "#cf987e",
-        "tab_text_active_color": "#282828",
-        "tab_active_border_color": "#cf987e"
-      }
-    },
+    }, 
     "upsell-product": {
       "type": "upsell-product",
       "disabled": true,
@@ -220,8 +194,7 @@
   },
   "order": [
     "template",
-    "85c54a0e-24ac-4918-88a9-c40571be93c4",
-    "single-product-tab",
+    "85c54a0e-24ac-4918-88a9-c40571be93c4", 
     "upsell-product",
     "reviewxpo-reviews-widget-app-section",
     "related-products",
