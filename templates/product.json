@@ -123,7 +123,6 @@
     },
     "upsell-product": {
       "type": "upsell-product",
-      "disabled": true,
       "settings": {
         "container_style": "style_2",
         "upsell_products_enable": true,
