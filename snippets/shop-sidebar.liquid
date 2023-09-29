@@ -6,17 +6,17 @@
       </button>
     </div>
 
-
-
     {% if section.settings.filter_by_category == true %}
       <div class="toggle-list product-categories widget woocommerce widget_product_categories">
         <h6 class="title">Product categories</h6>
         <div class="shop-submenu">
           <ul class="product-categories">
             {% for product_type in shop.types %}
-              <li class="cat-item cat-item-141">
-                <a href="https://dev.axilthemes.com/themes/etrade/product-category/deals/">{{ product_type }}</a>
-              </li>
+              {% if product_type != '' %}
+                <li class="cat-item cat-item-141">
+                  <a href="https://dev.axilthemes.com/themes/etrade/product-category/deals/">{{ product_type }}</a>
+                </li>
+              {% endif %}
             {% endfor %}
           </ul>
         </div>
