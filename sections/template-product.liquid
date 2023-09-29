@@ -767,7 +767,7 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
           "label": "Show Payment Option",
           "default": true
       	},
-        
+
 		{
           "type": "richtext",
           "id": "payment_information",
@@ -902,6 +902,42 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
           "id": "show_collections",
           "label": "Show collections list",
           "default": true
+        },
+        {
+          "type": "select",
+          "id": "category_list_limit_handle",
+          "label": "How Many Category Show",
+          "options": [
+			      {
+              "label": "1",
+              "value": "1"
+            },
+			      {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            }
+          ],
+          "default": "3"
         },
         {
           "type": "checkbox",
