@@ -38,7 +38,9 @@
             "show_collections": true,
             "show_vendor": true,
             "show_availability": true,
-            "show_sku": true
+            "show_sku": true,
+            "show_tag": true,
+            "category_tag_limit_handle": "2"
           }
         }
       },
@@ -88,7 +90,6 @@
         "category_list_limit_handle": "3",
         "category_tag_enable": true,
         "tag_title": "Tags:",
-        "category_tag_limit_handle": "3",
         "payment_option_enable": true,
         "payment_information": "<p>Guaranteed safe checkout<\/p>",
         "payment_icon_enable": true
