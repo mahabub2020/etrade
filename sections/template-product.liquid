@@ -78,56 +78,14 @@
                                 </div>
                               </div>
                          
-                          <div class="clearfix"></div>
+                          
        
-                          {%- if section.settings.product_review_enable -%}
-                            <div class="product-rating">
-                              <span class="star-rating shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
-                            </div>
-                          {%- endif -%} 
-                          <div class="clearfix"></div>
-
-                                                                        
-                        {%- if section.settings.product_inventory_enable -%}          
-                        <script>       
-                          var inv_qty = {};
-                          {% for var in product.variants %}
-                          inv_qty[{{- var.id -}}] = {{ var.inventory_quantity | default: 0 }};
-                          {% endfor %}
-                        </script>            
-                        {% if current_variant.inventory_management == "shopify" %}
-                        <div class="product-variant-inventory">
-                          <span class="inventory-title">{{ section.settings.availability_title }}</span> <span class="variant-inventory">{{ current_variant.inventory_quantity }} {{ section.settings.left_in_stock_title }}</span>
-                        </div>
-                        {% endif %}
-                        {%- endif -%}
-
-                          {%- unless section.settings.product_description_handle == 'without_description' -%}
-                            {%- if section.settings.product_description_handle == 'full_description' -%}
-                            {{ product.description }}
-                            {%- elsif section.settings.product_description_handle == 'short_description' -%}
-                            <div class="product-short-description description mb--45 mb-sm--20">
-                              {%- if product.description contains '[short_description]' -%} 
-                              {%- assign short_description_first = product.description | split:'[/short_description]' | first -%}
-                              {%- assign short_description_final = short_description_first | split:'[short_description]' | last -%}
-                              {{ short_description_final }}
-                              {%- else -%}
-                              {%- assign truncatewords_count = section.settings.truncatewords_count_handle -%}
-                              {{ product.description | strip_html | truncatewords: truncatewords_count | split: '[short_description]' | first | split: '[product_description]' | first | split: '[new_products]' | first | split: '[product_video]' | first | split: '[affiliate_link]' | first | split: '[countdown]' | first }}
-                              {%- endif -%}
-                            </div>
-                  
-                            {%- endif -%}
-                            {%- endunless -%}
-
-               
+                          
                           <!-- Start Product Action Wrapper  -->
-                          <div class="product-action-wrapper"> 
-                        
-                          {% when 'meta' %}
-                            {% render 'product-meta', block: block %}
+                          <div class="product-action-wrapper">
 
-                          </div>
+                            {% when 'meta' %}
+                              {% render 'product-meta', block: block %}
                           <!-- End .product-desc-wrapper -->
                       </div>
                     {%- endcase -%}
