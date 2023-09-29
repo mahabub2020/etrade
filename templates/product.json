@@ -31,6 +31,15 @@
           "settings": {
             "size_title": "Color"
           }
+        },
+        "b849e72c-91af-4438-9b1a-36e3a726494e": {
+          "type": "meta",
+          "settings": {
+            "show_collections": true,
+            "show_vendor": true,
+            "show_availability": true,
+            "show_sku": true
+          }
         }
       },
       "block_order": [
@@ -38,7 +47,8 @@
         "ae764d1f-29be-4311-8762-8aee2b3dd2ef",
         "62c93693-3cf6-4e73-9116-69729457993b",
         "d2c7b6cf-7c38-464e-bb74-937b38dac679",
-        "dd1559c0-5603-4693-85a3-707b378a2ce7"
+        "dd1559c0-5603-4693-85a3-707b378a2ce7",
+        "b849e72c-91af-4438-9b1a-36e3a726494e"
       ],
       "settings": {
         "container_style": "style_1",
