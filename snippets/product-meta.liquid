@@ -1,0 +1,43 @@
+<div class="product-info-main-block main-product-block-meta">
+    <ul class="product-additional-infos">
+        {% if block.settings.show_vendor %}
+            <li>
+                <span class="product-additional-infos-label">{{ 'products.product.vendor' | t }}:</span>
+                <div class="product-additional-infos-value">{{ product.vendor | link_to_vendor }}</div>
+            </li>
+        {% endif %}
+        {% if block.settings.show_availability %}
+            <li>
+                <span class="product-additional-infos-label">{{ 'products.product.availability' | t }}:</span>
+                <div class="product-additional-infos-value {% if product.available %}text-success {% else %} text-danger{% endif %}" data-availability>
+                    {% if product.variants.first.inventory_management == "shopify" and product.variants.first.inventory_quantity > 0 %}
+                        In Stock.
+                        {% else %}
+                        Out Of Stock
+                    {% endif %}
+                </div>
+            </li>
+        {% endif %}
+        {% if block.settings.show_sku %}
+            <li>
+                <span class="product-additional-infos-label">{{ 'products.product.sku' | t }}:</span>
+                <div class="product-additional-infos-value product-sku" data-product-sku>
+                    {% assign current_variant = product.selected_or_first_available_variant %}
+                    {{ current_variant.sku | default: 'N/A' }}
+                </div>
+            </li>
+        {% endif %}
+        {% if block.settings.show_collections and product.collections.size > 0 %}
+            <li class="product-categories d-flex">
+                <span class="product-additional-infos-label">{{ 'products.product.collection' | t }}:</span>
+                <div class="product-additional-infos-value">
+                    {% for collection in product.collections %}
+                    <a href="{{ collection.url }}">
+                        {{ collection.title }}{%- if forloop.last != true -%}, {%- endif -%}
+                    </a>
+                    {% endfor %}
+                </div>
+            </li>
+        {% endif %}
+    </ul>
+</div>

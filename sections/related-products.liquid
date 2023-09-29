@@ -12,7 +12,10 @@
   {% endfor %}
 {% endif %}
 
+{{ collection }}
 
+
+{% if collection and collection.products_count > 1 and section.settings.related_products_enable %}
   <!-- Start Recently Viewed Product Area -->
   <div
     id="section-{{ section.id }}"
@@ -30,7 +33,6 @@
 
       {%- capture data_slick_activation -%}
 
- 
       data-slick='{
           {%- if section.settings.autoplay_true -%}
           "autoplay": true,
@@ -72,7 +74,7 @@
     </div>
   </div>
   <!-- End Recently Viewed Product Area -->
-
+{% endif %}
 
 
 
