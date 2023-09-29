@@ -56,6 +56,7 @@ STYLESHEET INDEXING
 |
 |___ END STYLESHEET INDEXING
 
+
 ======================================================== --*/
 /* ===============================
 Default Styles
@@ -9189,6 +9190,7 @@ Header Styles
 }
 
 /* ===============================
+
 Shop Styles
 ================================== */
 /*----------------------
@@ -13575,7 +13577,7 @@ body.open .closeMask {
 
 /* ===============================
 Blog Styles
-================================== */
+================================= */
 /*----------------------------
 Blog List  
 ----------------------------*/
@@ -25712,4 +25714,24 @@ select.dokan-form-control, input.dokan-form-control {
   left: 55px;
   -webkit-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0);
+}
+
+.h-20 {
+  height: 20px;
+}
+
+.w-20 {
+  width: 20px;
+}
+
+.product-additional-list {
+  padding: 0;
+  margin: 0;
+}
+.product-additional-list li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
 }
