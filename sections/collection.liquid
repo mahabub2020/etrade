@@ -73,12 +73,34 @@
         ]
       },
       {
+        "type": "range",
+        "label": "Product Per Page",
+        "id": "product_per_page",
+        "default": "6"
+      },
+      {
+        "type": "select",
+        "label": "Product Loading Style",
+        "id": "loading_style",
+        "options": [
+          {
+            "label": "Load More",
+            "value": "load_more"
+          }, {
+            "label": "Infinite Scrolling",
+            "value": "infinite"
+          }, {
+            "label": "Pagination",
+            "value": "pagination"
+          }
+        ],
+        "default": "load_more"
+      }, {
         "type": "checkbox",
         "id": "filter_by_category",
         "label": "Filter by Category",
         "default": true
-      },
-      {
+      }, {
         "type": "checkbox",
         "id": "filter_by_gender",
         "label": "Filter by Gender",
