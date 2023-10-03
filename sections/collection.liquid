@@ -2,12 +2,12 @@
   <div class="container">
     <div class="row">
       {% if section.settings.shop_layout == "full" %}
-        {% render 'shop-full-width', settings: section.settings %}
+        {% render 'shop-full-width', product_layout: section.settings.product_layout %}
       {% else %}
         {% if section.settings.shop_layout == "left" %}
           {% render 'shop-sidebar' %}
         {% endif %}
-        {% render 'shop-with-sidebar', settings: section.settings %}
+        {% render 'shop-with-sidebar', product_layout: section.settings.product_layout %}
         {% if section.settings.shop_layout == "right" %}
           {% render 'shop-sidebar' %}
         {% endif %}
