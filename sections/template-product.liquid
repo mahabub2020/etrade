@@ -242,7 +242,12 @@
                       <div class="product-action-wrapper"> 
                       {% when 'meta' %}
                         {% render 'product-meta', block: block %}
-                  </div>
+                    </div>
+                   {% when 'social_share' %}
+                    {%- if block.settings.social_share_enable -%}
+                      {%- render 'social-share' -%}
+                    {%- endif -%}
+
 
                     {%- endcase -%}
                   {%- endfor -%}
@@ -779,22 +784,7 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
           "label": "Enable Dynamic Checkout Buttons",
           "default": true
       	},
-		{
-          "type": "header",
-          "content": "Social Share Option"
-      	},
-		{
-          "type": "checkbox",
-          "id": "social_share_enable",
-          "label": "Show Social Share",
-          "default": true
-      	},
-		{
-          "type": "text",
-          "id": "social_share_title",
-          "label": "Social Share Title",
-          "default": "Share:"
-      	},
+		
 		{
             "type": "header",
             "content": "Store and Delivery"
@@ -1216,7 +1206,28 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
           "default": "3"
         }
       ]
+    }, 
+    {
+      "type": "social_share",
+      "name": "Social Share",
+      "limit": 1,
+      "settings": [ 
+        {
+          "type": "text",
+          "id": "social_share_title",
+          "default": "Share",
+          "label": "Label"
+          
+        }
+        {
+          "type": "checkbox",
+          "id": "social_share_enable",
+          "label": "Show Social Icon",
+          "default": true
+        }
+      ]
     },
+ 
 		{
           "type": "section_margin",
           "name": "Section Margin",
