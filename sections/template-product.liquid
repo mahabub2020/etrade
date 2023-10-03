@@ -243,11 +243,9 @@
                       {% when 'meta' %}
                         {% render 'product-meta', block: block %}
                     </div>
-                   {% when 'social_share' %}
-                    {%- if block.settings.social_share_enable -%}
+                   {% when 'social_share' %} 
                       {%- render 'social-share' -%}
-                    {%- endif -%}
-
+                     
 
                     {%- endcase -%}
                   {%- endfor -%}
