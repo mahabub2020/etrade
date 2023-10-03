@@ -177,41 +177,7 @@
                                           </a>
                                       </li>
                                   {%- endif -%}
-                                    {%- if block.settings.show_share -%}
-                                  {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
-                                  <li class="dropdown">
-                                    <a href="javascript:void(0);" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                      {% render 'icon', name: 'share-icon', class: 'w-24 h-24 me-2', size: 'custom' %}
-                                                                          <span>Share</span>
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                      {% capture share_url %}
-                                        {{ shop.url -}}
-                                        {{- product.url }}
-                                      {% endcapture %}
-                                      <li>
-                                        <a title="Facebook" class="action facebook" href="#" onclick="PopupCenter('https://www.facebook.com/sharer/sharer.php?u={{ shop.url }}{{ product.url }}','MyWindow','450','450'); return false;">
-                                                                                  {% render 'icon', name: 'facebook-icon', class: 'w-20 h-20 me-2', size: 'custom' %}Facebook
-                                                                              </a>
-                                      </li>
-                                      <li>
-                                        <a title="Twitter" class="action" href="#" onclick="PopupCenter('//twitter.com/share?url={{ shop.url }}{{ product.url }}&text={{ product.title }}','MyWindow','450','450'); return false;">
-                                                                                  {% render 'icon', name: 'twitter-icon', class: 'w-20 h-20 me-2', size: 'custom' %}Twitter
-                                                                              </a>
-                                      </li>
-                                      <li>
-                                        <a title="Pinterest" class="action" href="#" onclick="PopupCenter('//pinterest.com/pin/create/button/?url={{ shop.url }}{{ product.url }}&media={{ featured_image.src | image_url: width: 1024, height: 1024 }}','MyWindow','450','450'); return false;">
-                                                                                  {% render 'icon', name: 'pinterest-icon', class: 'w-20 h-20 me-2', size: 'custom' %}Pinterest
-                                                                              </a>
-                                      </li>
-                                      <li>
-                                        <a title="Email" class="action" href="mailto:?subject=Check this {{ shop.url }}{{ product.url }}">
-                                                                                  {% render 'icon', name: 'email-icon', class: 'w-20 h-20 me-2', size: 'custom' %}Email
-                                                                              </a>
-                                      </li>
-                                    </ul>
-                                  </li>
-                                    {%- endif -%}
+                                   
                                       </ul>
                                     </div>
                                 {%- endcase -%}
@@ -1085,12 +1051,6 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
           "type": "checkbox",
           "id": "show_atp",
           "label": "Ask about this product",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "show_share",
-          "label": "Share",
           "default": true
         }
       ]
