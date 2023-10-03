@@ -28,7 +28,8 @@
         <a href="{{ pagination.next.url }}" class="border border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white px-8 py-3 mx-1 rounded-sm font-medium">Next</a>
       {% endif %}
     </nav>
-{% else %}
+  {% else %}
     {% comment %} {% render 'products-with-infinite' %} {% endcomment %}
+    {{ 'Infinite' }}
   {% endif %}
 {% endif %}
