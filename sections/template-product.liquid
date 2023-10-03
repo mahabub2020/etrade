@@ -81,9 +81,168 @@
                           <div class="product-action-wrapper"> 
                             {% when 'meta' %}
                               {% render 'product-meta', block: block %}
-                         
-                      </div>
+                        </div>
 
+
+                              
+											{%- when 'buy_buttons' -%}
+                        <div class="product-info-main-block box-tocart">
+                        <product-form class="product-form">
+                          <div class="product-form__error-message-wrapper" role="alert" hidden>
+                            {% render 'icon-error' %}
+                            <span class="product-form__error-message"></span>
+                          </div>
+                          {%- form 'product', product, id: product_form_id, class: 'form box-tocart', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
+                            <div class="product-form__buttons qty">
+                              {%- for block in section.blocks -%}
+                                {%- case block.type -%}
+                                  {%- when 'buy_buttons' -%}
+                                    {% if block.settings.show-quantity-selector %}
+                                    <div class="control">
+                                      <div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
+                                        <label class="form__label visually-hidden" for="quantity-{{ section.id }}">{{ 'products.product.quantity.label' | t }}</label>
+                                        <quantity-input class="quantity d-flex">
+                                          <button class="quantity__button no-js-hidden icon-minus qty-minus" name="minus" type="button">
+                                                                                      <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+                                          </button>
+                                              <input class="quantity__input form-control" type="number" name="quantity" id="quantity-{{ section.id }}" min="1" value="1" form="{{ product_form_id }}">
+                                          <button class="quantity__button no-js-hidden icon-plus qty-plus" name="plus" type="button">
+                                                                                      <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
+                                          </button>
+                                        </quantity-input>
+                                      </div>
+                                    </div>
+                                    {% endif %}
+                                    {% if block.settings.add-to-cart-button %}
+                                    <div class="actions">
+                                      <button type="submit" name="add" class="product-form-submit button btn btn-secondary d-block w-100"
+                                                                              {% if settings.cart_type == "drawer" %}
+                                                                                  data-bs-toggle="offcanvas"
+                                                                                  data-bs-target="#cart-drawer-popup"
+                                                                                  {% endif %}
+                                                                                  aria-controls="cart-drawer-popup"
+                                                                              {%- if product.selected_or_first_available_variant.available == false or product.selected_or_first_available_variant.quantity_rule_soldout -%}
+                                                                                  disabled
+                                                                              {%- endif -%}
+                                      >
+                                                                          <span>
+                                        {%- if product.selected_or_first_available_variant.available == false or product.selected_or_first_available_variant.quantity_rule_soldout -%}
+                                          {{ 'products.product.sold_out' | t }}
+                                        {% else %}
+                                          {% if product.selected_or_first_available_variant.inventory_quantity <= 0 %}
+                                            {{ 'products.product.pre_order' | t }}
+                                          {% else %}
+                                            {{ 'products.product.add_to_cart' | t }}
+                                          {% endif %}
+                                        {% endif %}
+                                                                          </span>
+                                        <div class="loading-overlay__spinner hidden">
+                                          <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                            <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                                          </svg>
+                                        </div>
+                                      </button>
+                                    </div>
+                                    {% endif %}
+                                    <div class="form-check agree-terms">
+                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                      <label class="form-check-label" for="flexCheckDefault">{{ section.settings.paragraph }}</label>
+                                    </div>
+                                    {%- if block.settings.show_dynamic_checkout -%}
+                                      <div class="buy-one-click">{{ form | payment_button }}</div>
+                                    {%- endif -%}
+                                  </div>
+  
+                                    <div class="product-social-links mt-4">
+                                      <ul>
+                                        {%- when 'addons' -%}
+                                  {% if block.settings.show_wishlist %}
+                                      <li class="product-wishlist">
+                                          <a href="javascript:void(0);" class="wishlist-button" data-product-handle="{{ product.handle }}" button-wishlist>
+                                              {% render 'icon', name: 'heart', class: 'w-24 h-24 me-2', size: 'custom' %}
+                                              <span>Wishlist</span>
+                                          </a>
+                                      </li>
+                                  {% endif %}
+                                  {% if block.settings.show_compare %}
+                                      <li class="product-compare">
+                                          <a href="javascript:void(0);" class="add-to-compare" data-handle-product="{{ product.handle }}" button-compare>
+                                              {% render 'icon', name: 'compare', class: 'w-24 h-24 me-2', size: 'custom' %}
+                                              <span>Compare</span>
+                                          </a>
+                                      </li>
+                                  {% endif %}
+                                  {%- if block.settings.show_atp -%}
+                                      <li class="theme-ask">
+                                          <a data-bs-toggle="modal" role="button" href="#contact-form-model">
+                                              {% render 'icon', name: 'question-icon', class: 'w-24 h-24 me-2', size: 'custom' %}
+                                              <span>Ask about this product</span>
+                                          </a>
+                                      </li>
+                                  {%- endif -%}
+                                    {%- if block.settings.show_share -%}
+                                  {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
+                                  <li class="dropdown">
+                                    <a href="javascript:void(0);" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                      {% render 'icon', name: 'share-icon', class: 'w-24 h-24 me-2', size: 'custom' %}
+                                                                          <span>Share</span>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                      {% capture share_url %}
+                                        {{ shop.url -}}
+                                        {{- product.url }}
+                                      {% endcapture %}
+                                      <li>
+                                        <a title="Facebook" class="action facebook" href="#" onclick="PopupCenter('https://www.facebook.com/sharer/sharer.php?u={{ shop.url }}{{ product.url }}','MyWindow','450','450'); return false;">
+                                                                                  {% render 'icon', name: 'facebook-icon', class: 'w-20 h-20 me-2', size: 'custom' %}Facebook
+                                                                              </a>
+                                      </li>
+                                      <li>
+                                        <a title="Twitter" class="action" href="#" onclick="PopupCenter('//twitter.com/share?url={{ shop.url }}{{ product.url }}&text={{ product.title }}','MyWindow','450','450'); return false;">
+                                                                                  {% render 'icon', name: 'twitter-icon', class: 'w-20 h-20 me-2', size: 'custom' %}Twitter
+                                                                              </a>
+                                      </li>
+                                      <li>
+                                        <a title="Pinterest" class="action" href="#" onclick="PopupCenter('//pinterest.com/pin/create/button/?url={{ shop.url }}{{ product.url }}&media={{ featured_image.src | image_url: width: 1024, height: 1024 }}','MyWindow','450','450'); return false;">
+                                                                                  {% render 'icon', name: 'pinterest-icon', class: 'w-20 h-20 me-2', size: 'custom' %}Pinterest
+                                                                              </a>
+                                      </li>
+                                      <li>
+                                        <a title="Email" class="action" href="mailto:?subject=Check this {{ shop.url }}{{ product.url }}">
+                                                                                  {% render 'icon', name: 'email-icon', class: 'w-20 h-20 me-2', size: 'custom' %}Email
+                                                                              </a>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                    {%- endif -%}
+                                      </ul>
+                                    </div>
+                                {%- endcase -%}
+                              {%- endfor -%}
+                          {%- endform -%}
+                        </product-form>
+                                              {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
+                                              {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
+                                              <pickup-availability class="product__pickup-availabilities no-js-hidden quick-add-hidden my-3"
+                                                  {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %} available{% endif %}
+                                                  data-root-url="{{ routes.root_url }}"
+                                                  data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+                                                  data-has-only-default-variant="{{ product.has_only_default_variant }}"
+                                              >
+                                                  <template>
+                                                      <pickup-availability-preview class="pickup-availability-preview">
+                                                          {% render 'icon', name: 'check-line', class: 'w-20 h-20 text-success', size: 'custom' %}
+                                                          <div class="pickup-availability-info">
+                                                              <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
+                                                              <button class="pickup-availability-button link link--text position-relative">{{ 'products.product.pickup_availability.refresh' | t }}</button>
+                                                          </div>
+                                                      </pickup-availability-preview>
+                                                  </template>
+                                              </pickup-availability>
+                                              <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+                      </div>
+                         
 
                     {%- endcase -%}
                   {%- endfor -%}
