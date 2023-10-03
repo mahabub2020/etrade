@@ -154,6 +154,7 @@ $(document).ready(function(){
           type: 'GET',
           dataType: 'html',
           success: function(responseHTML){
+            console.log(responseHTML);
             $('.axiltheme-archive-products').append($(responseHTML).find('.axiltheme-archive-products').html());
           },
           complete: function() {
