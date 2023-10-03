@@ -8,15 +8,10 @@
       type="hidden"
       value="{{ pagination.pages }}"
       data-total-pages>
-    <input type="hidden"
+    <input
+      type="hidden"
       value="{{ pagination.current_page  }}"
       data-current-page>
-    {% comment %} <div class="load-more_wrap">
-    <button class="btn js-load-more">
-    <span load-more-text>Load more</span>
-    <span class="hide" loader></span>
-    </button>
-    </div> {% endcomment %}
     <div class="axiltheme-loadmore-btn-area text-center pt--30">
       <button class="axiltheme-loadmore-btn axil-btn btn-bg-lighter btn-load-more">
         <span class="axiltheme-loadmore-btn-text">Load More</span>
@@ -27,13 +22,19 @@
     </div>
   {% elsif section.settings.loading_style == "pagination" %}
     <nav role="navigation" class="flex justify-center items-center my-8">
-      {% if pagination.previous %}
-        <a href="{{ pagination.previous.url }}" class="border border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white px-8 py-3 mx-1 rounded-sm font-medium">Previous</a>
-      {% endif %}
+      <ul class="list-unstyled">
+        {% if pagination.previous %}
+          <li>
+            <a href="{{ pagination.previous.url }}" class="border border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white px-8 py-3 mx-1 rounded-sm font-medium">Previous</a>
+          </li>
+        {% endif %}
 
-      {% if pagination.next %}
-        <a href="{{ pagination.next.url }}" class="border border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white px-8 py-3 mx-1 rounded-sm font-medium">Next</a>
-      {% endif %}
+        {% if pagination.next %}
+          <li class="infinite_next">
+            <a href="{{ pagination.next.url }}" class="border border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white px-8 py-3 mx-1 rounded-sm font-medium">Next</a>
+          </li>
+        {% endif %}
+      </ul>
     </nav>
   {% else %}
     {% comment %} {% render 'products-with-infinite' %} {% endcomment %}
