@@ -154,7 +154,8 @@ $(document).ready(function(){
           type: 'GET',
           dataType: 'html',
           success: function(responseHTML){
-            console.log($(responseHTML).find('.grid--view-items').html());
+            var resp = $(responseHTML).find('.grid--view-items').html();
+            console.log(resp);
           },
           complete: function() {
             if(currentPage <= totalPages) {
