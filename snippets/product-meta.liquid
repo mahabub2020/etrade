@@ -51,3 +51,6 @@
         {% endif %}  
     </ul>
 </div>
+{%- if section.settings.social_share_enable -%}
+    {%- render 'social-share' -%}
+  {%- endif -%}

@@ -78,11 +78,7 @@
                                 </div>
                               </div> 
                            
-                          <div class="product-action-wrapper"> 
-                            {% when 'meta' %}
-                              {% render 'product-meta', block: block %}
-                        </div>
-
+                         
 
                               
 											{%- when 'buy_buttons' -%}
@@ -243,6 +239,10 @@
                                               <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
                       </div>
                          
+                      <div class="product-action-wrapper"> 
+                      {% when 'meta' %}
+                        {% render 'product-meta', block: block %}
+                  </div>
 
                     {%- endcase -%}
                   {%- endfor -%}
