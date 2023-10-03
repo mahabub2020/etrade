@@ -31,10 +31,12 @@
       {% endif %}
     </nav>
   {% else %}
-    {% if pagination.next %}
-      <li class="infinite_next">
-        <a href="{{ pagination.next.url }}" class="">Loading</a>
-      </li>
-    {% endif %}
+    <ul class="list-unstyled">
+      {% if pagination.next %}
+        <li class="infinite_next">
+          <a href="{{ pagination.next.url }}" class="">Loading</a>
+        </li>
+      {% endif %}
+    </ul>
   {% endif %}
 {% endif %}
