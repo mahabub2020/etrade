@@ -60,6 +60,12 @@
             "show_tag": true,
             "category_tag_limit_handle": "1"
           }
+        },
+        "8c175ad4-ed46-42fc-a621-500002e1e2a2": {
+          "type": "social_share",
+          "settings": {
+            "social_share_title": "Shared"
+          }
         }
       },
       "block_order": [
@@ -70,7 +76,8 @@
         "dd1559c0-5603-4693-85a3-707b378a2ce7",
         "e33fff6f-e923-44ac-b511-6e76980808a6",
         "f3997cc0-8cd5-4a47-9225-813fc30bd56d",
-        "b849e72c-91af-4438-9b1a-36e3a726494e"
+        "b849e72c-91af-4438-9b1a-36e3a726494e",
+        "8c175ad4-ed46-42fc-a621-500002e1e2a2"
       ],
       "settings": {
         "container_style": "style_1",
@@ -96,8 +103,6 @@
         "product_variant_handle": "product_variant_select_option",
         "show_variant_image": false,
         "dynamic_checkout_button_enable": true,
-        "social_share_enable": true,
-        "social_share_title": "Share:",
         "store_delivery_enable": true,
         "map_icon": "map-marker",
         "store_title": "Find store near you",
