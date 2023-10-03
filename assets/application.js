@@ -154,14 +154,11 @@ $(document).ready(function(){
           type: 'GET',
           dataType: 'html',
           success: function(responseHTML){
-            console.log(responseHTML);
             $('.axiltheme-archive-products').append($(responseHTML).find('.axiltheme-archive-products').html());
           },
           complete: function() {
-            if(currentPage <= totalPages) {
+            if(currentPage < totalPages) {
                $this.attr('disabled', false); 
-               $this.find('.axiltheme-loadmore-btn-text').removeClass('hide'); 
-               $this.find('[loader]').addClass('hide');
             } 
           }
         })
