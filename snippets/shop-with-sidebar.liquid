@@ -38,7 +38,13 @@
         </div>
       </div>
     </div>
-    {% render 'products-with-pagination' %}
+    {% if settings.loading_style == "load_more" %}
+      {% render 'products-with-loadmore', product_layout: settings.product_layout %}
+    {% elsif settings.loading_style == "pagination" %}
+      {% render 'products-with-pagination' %}
+    {% else %}
+      {% render 'products-with-infinite' %}
+    {% endif %}
     {% comment %} <div
     class="axiltheme-loadmore-data"
     data-paged="1"
@@ -51,5 +57,6 @@
     <i class="fa fa-spinner fa-spin"></i>
     </span>
     </button>
-    </div> {% endcomment %}</div>
+    </div> {% endcomment %}
+  </div>
 </div>
