@@ -3,7 +3,15 @@
     "template": {
       "type": "collection",
       "settings": {
-        "shop_layout": "left"
+        "shop_layout": "left",
+        "product_layout": "1",
+        "product_per_page": 6,
+        "loading_style": "pagination",
+        "filter_by_category": true,
+        "filter_by_gender": true,
+        "filter_by_size": true,
+        "filter_by_color": true,
+        "filter_by_price": true
       }
     }
   },
