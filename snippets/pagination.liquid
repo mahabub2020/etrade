@@ -22,22 +22,19 @@
     </div>
   {% elsif section.settings.loading_style == "pagination" %}
     <nav role="navigation" class="flex justify-center items-center my-8">
-      <ul class="list-unstyled">
-        {% if pagination.previous %}
-          <li>
-            <a href="{{ pagination.previous.url }}" class="border border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white px-8 py-3 mx-1 rounded-sm font-medium">Previous</a>
-          </li>
-        {% endif %}
+      {% if pagination.previous %}
+        <a href="{{ pagination.previous.url }}" class="border border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white px-8 py-3 mx-1 rounded-sm font-medium">Previous</a>
+      {% endif %}
 
-        {% if pagination.next %}
-          <li class="infinite_next">
-            <a href="{{ pagination.next.url }}" class="border border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white px-8 py-3 mx-1 rounded-sm font-medium">Next</a>
-          </li>
-        {% endif %}
-      </ul>
+      {% if pagination.next %}
+        <a href="{{ pagination.next.url }}" class="border border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white px-8 py-3 mx-1 rounded-sm font-medium">Next</a>
+      {% endif %}
     </nav>
   {% else %}
-    {% comment %} {% render 'products-with-infinite' %} {% endcomment %}
-    {{ 'Infinite' }}
+    {% if pagination.next %}
+      <li class="infinite_next">
+        <a href="{{ pagination.next.url }}" class="">Loading</a>
+      </li>
+    {% endif %}
   {% endif %}
 {% endif %}
