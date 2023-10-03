@@ -2,14 +2,14 @@
   {% if section.settings.loading_style == "load_more" %}
     <input
       type="hidden"
-      value="{{ paginate.next.url }}"
+      value="{{ pagination.next.url }}"
       data-next-url>
     <input
       type="hidden"
-      value="{{ paginate.pages }}"
+      value="{{ pagination.pages }}"
       data-total-pages>
     <input type="hidden"
-      value="{{ paginate.current_page  }}"
+      value="{{ pagination.current_page  }}"
       data-current-page>
     {% comment %} <div class="load-more_wrap">
     <button class="btn js-load-more">
