@@ -155,7 +155,7 @@ $(document).ready(function(){
           dataType: 'html',
           success: function(responseHTML){
             var resp = $(responseHTML).find('.grid--view-items').html();
-            console.log(resp);
+            console.log(responseHTML);
           },
           complete: function() {
             if(currentPage <= totalPages) {
