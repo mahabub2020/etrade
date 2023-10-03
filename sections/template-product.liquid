@@ -893,6 +893,63 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
       ]
     }, 
     {
+      "type": "buy_buttons",
+      "name": "t:sections.main-product.blocks.buy_buttons.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show-quantity-selector",
+          "label": "Show Quantity selector",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "add-to-cart-button",
+          "label": "Show Add to cart button",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_dynamic_checkout",
+          "label": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.label",
+          "info": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.info",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "addons",
+      "name": "t:sections.main-product.blocks.addons.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_wishlist",
+          "label": "Show Wishlist",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "show_compare",
+          "label": "Show Compare",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "show_atp",
+          "label": "t:sections.main-product.blocks.show_atp",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "show_share",
+          "label": "t:sections.main-product.blocks.share.name",
+          "default": true
+        }
+      ]
+    },
+    {
       "type": "meta",
       "name": "Product Meta",
       "limit": 1,
