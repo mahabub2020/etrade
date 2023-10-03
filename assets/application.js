@@ -140,7 +140,7 @@ $(document).ready(function(){
     });
 
     // Load more
-    $('.js-load-more').on('click', function(){
+    $('.btn-load-more').on('click', function(){
         var $this =$(this),
         totalPages = parseInt($('[data-total-pages]').val()),
         currentPage = parseInt($('[data-current-page]').val());
@@ -154,13 +154,12 @@ $(document).ready(function(){
           type: 'GET',
           dataType: 'html',
           success: function(responseHTML){
-            var resp = $(responseHTML).find('.grid--view-items').html();
-            console.log(responseHTML);
+            $('.axiltheme-archive-products').append($(responseHTML).find('.axiltheme-archive-products').html());
           },
           complete: function() {
             if(currentPage <= totalPages) {
                $this.attr('disabled', false); 
-               $this.find('[load-more-text]').removeClass('hide'); 
+               $this.find('.axiltheme-loadmore-btn-text').removeClass('hide'); 
                $this.find('[loader]').addClass('hide');
             } 
           }

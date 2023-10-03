@@ -8,14 +8,21 @@
       type="hidden"
       value="{{ paginate.pages }}"
       data-total-pages>
-    <input
-      type="hidden"
+    <input type="hidden"
       value="{{ paginate.current_page  }}"
       data-current-page>
-    <div class="load-more_wrap">
-      <button class="btn js-load-more">
-        <span load-more-text>Load more</span>
-        <span class="hide" loader></span>
+    {% comment %} <div class="load-more_wrap">
+    <button class="btn js-load-more">
+    <span load-more-text>Load more</span>
+    <span class="hide" loader></span>
+    </button>
+    </div> {% endcomment %}
+    <div class="axiltheme-loadmore-btn-area text-center pt--30">
+      <button class="axiltheme-loadmore-btn axil-btn btn-bg-lighter btn-load-more">
+        <span class="axiltheme-loadmore-btn-text">Load More</span>
+        <span class="axiltheme-loadmore-btn-icon">
+          <i class="fa fa-spinner fa-spin"></i>
+        </span>
       </button>
     </div>
   {% elsif section.settings.loading_style == "pagination" %}
