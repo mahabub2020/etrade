@@ -144,8 +144,8 @@ $(document).ready(function(){
         var $this =$(this),
         totalPages = parseInt($('[data-total-pages]').val()),
         currentPage = parseInt($('[data-current-page]').val());
-        $this.attr('disabled', true);
-        $this.find('[loader]').removeClass('hide');
+        // $this.attr('disabled', true);
+        // $this.find('[loader]').removeClass('hide');
         currentPage = currentPage+1;
         var nextUrl = $('[data-next-url]').val().replace(/page=[0-9]+/,'page='+currentPage);
         $('[data-current-page]').val(currentPage);
@@ -157,8 +157,8 @@ $(document).ready(function(){
             $('.axiltheme-archive-products').append($(responseHTML).find('.axiltheme-archive-products').html());
           },
           complete: function() {
-            if(currentPage < totalPages) {
-               $this.attr('disabled', false); 
+            if(currentPage == totalPages) {
+               $this.hide(); 
             } 
           }
         })
