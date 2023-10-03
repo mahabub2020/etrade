@@ -113,16 +113,16 @@
                                     {% if block.settings.add-to-cart-button %}
                                     <div class="actions">
                                       <button type="submit" name="add" class="product-form-submit button btn btn-secondary d-block w-100"
-                                                                              {% if settings.cart_type == "drawer" %}
-                                                                                  data-bs-toggle="offcanvas"
-                                                                                  data-bs-target="#cart-drawer-popup"
-                                                                                  {% endif %}
-                                                                                  aria-controls="cart-drawer-popup"
-                                                                              {%- if product.selected_or_first_available_variant.available == false or product.selected_or_first_available_variant.quantity_rule_soldout -%}
-                                                                                  disabled
-                                                                              {%- endif -%}
-                                      >
-                                                                          <span>
+                            {% if settings.cart_type == "drawer" %}
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#cart-drawer-popup"
+                                {% endif %}
+                                aria-controls="cart-drawer-popup"
+                            {%- if product.selected_or_first_available_variant.available == false or product.selected_or_first_available_variant.quantity_rule_soldout -%}
+                                disabled
+                            {%- endif -%}
+                          >
+                          <span>
                                         {%- if product.selected_or_first_available_variant.available == false or product.selected_or_first_available_variant.quantity_rule_soldout -%}
                                           {{ 'products.product.sold_out' | t }}
                                         {% else %}
@@ -242,11 +242,9 @@
                       <div class="product-action-wrapper"> 
                       {% when 'meta' %}
                         {% render 'product-meta', block: block %}
-                    </div>
-                   {% when 'social_share' %} 
-                   <span class="product-social-title">{{ block.settings.social_share_title }}</span>
-                      {%- render 'social-share' -%}
-                     
+                    </div> 
+                    {% when 'social_share' %}  
+                      {%- render 'social-share', block: block -%} 
 
                     {%- endcase -%}
                   {%- endfor -%}
