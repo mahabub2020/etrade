@@ -1,3919 +1,558 @@
 {
-  "settings_schema": {
-    "global": {
-      "settings": {
-        "header__border": {
-          "content": "Border"
-        },
-        "header__shadow": {
-          "content": "Shadow"
-        },
-        "blur": {
-          "label": "Blur"
-        },
-        "corner_radius": {
-          "label": "Border radius"
-        },
-        "font_size": {
-          "label": "Font size"
-        },
-        "horizontal_offset": {
-          "label": "Horizontal offset"
-        },
-        "vertical_offset": {
-          "label": "Vertical offset"
-        },
-        "thickness": {
-          "label": "Thickness"
-        },
-        "opacity": {
-          "label": "Opacity"
-        },
-        "image_padding": {
-          "label": "Image padding"
-        },
-        "text_alignment": {
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Center"
-          },
-          "options__3": {
-            "label": "Right"
-          },
-          "label": "Text alignment"
-        }
+  "general": {
+    "language": {
+      "language": "Language"
+    },
+    "breadcrumbs": {
+      "home": "Home",
+      "cart": "Shopping cart",
+      "home_link_title": "Back to the frontpage"
+    },
+    "password_page": {
+      "opening_soon": "Opening Soon",
+      "login_form_heading": "Enter store using password",
+      "login_password_button": "Enter using password",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_error": "Wrong password!",
+      "login_form_submit": "Enter",
+      "admin_link_html": "Are you the store owner? <a href=\"\/admin\" class=\"text-decoration-underline text-reset\">Log in here<\/a>",
+      "powered_by_shopify_html": "All Right Reserved © 2022. Create with ❤️ By <a class=\"fw-bold text-reset\" target=\"_blank\" title=\"BullTheme\" href=\"https:\/\/bulltheme.com\/\">BullTheme<\/a>."
+    },
+    "meta": {
+      "tags": "Tagged \"{{ tags }}\"",
+      "page": "Page {{ page }}"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "Share on Facebook",
+        "share_on_twitter": "Tweet on Twitter",
+        "share_on_pinterest": "Pin on Pinterest"
+      },
+      "links": {
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "pinterest": "Pinterest",
+        "instagram": "Instagram",
+        "tumblr": "Tumblr",
+        "snapchat": "Snapchat",
+        "youtube": "YouTube",
+        "vimeo": "Vimeo",
+        "tiktok": "TikTok",
+        "dribbble": "Dribbble",
+        "linkedin": "Linkedin"
+      }
+    },
+    "continue_shopping": "Continue shopping",
+    "pagination": {
+      "label": "Pagination",
+      "page": "Page {{ number }}",
+      "next": "Next page",
+      "previous": "Previous page"
+    },
+    "search": {
+      "search": "Search products",
+      "more_results": "More Results"
+    },
+    "collections": {
+      "general": {
+        "collection_items": "items"
       }
     },
     "cart": {
-      "name": "Cart",
-      "general": {
-        "shipping_calculator_button": "Calculate Shipping",
-        "shipping_calculator_calculating": "Calculating...",
-        "shipping_calculator_error_message": "Error: Please enter right shipping information",
-        "shipping_calculator_success_many_rates": {
-          "there_are": "There are",
-          "shipping_rates_available_for": "shipping rates available for",
-          "starting_at": ", starting at"
-        },
-        "shipping_calculator_success_one_rate": "There is one shipping rate available for",
-        "shipping_calculator_success_no_rate": "There is no shipping rate available for this order and destination.",
-        "shipping_calculator_success_at": "at",
-        "cart_countdown": "Please, hurry! Someone has placed an order on one of the items you have in the cart. We'll keep it for you for",
-        "cart_countdown_minutes": "minutes.",
-        "note_placeholder": "Special instruction for seller..."
+      "view": "View my cart ({{ count }})",
+      "item_added": "Item added to your cart"
+    },
+    "share": {
+      "close": "Close share",
+      "copy_to_clipboard": "Copy link",
+      "share_url": "Link",
+      "success_message": "Link copied to clipboard"
+    },
+    "slider": {
+      "of": "of",
+      "next_slide": "Slide right",
+      "previous_slide": "Slide left"
+    }
+  },
+  "homepage": {
+    "onboarding": {
+      "product_title": "Your product's name",
+      "product_description": "This area is used to describe your product’s details. Tell customers about the look, feel, and style of your product. Add details on color, materials used, sizing, and where it was made.",
+      "collection_title": "Your collection's name",
+      "blog_title": "Your post's title",
+      "blog_excerpt": "Your store hasn’t published any blog posts yet. A blog can be used to talk about new product launches, tips, or other news you want to share with your customers. You can check out Shopify’s ecommerce blog for inspiration and advice for your own store and blog.",
+      "blog_author": "Author name",
+      "no_content": "This section doesn’t currently include any content. Add content to this section using the sidebar.",
+      "view_all": "View all",
+      "read_more_title": "Read more",
+      "blog_tag": "BullTheme"
+    }
+  },
+  "header": {
+    "qty": "Qty",
+    "viewcart": "View Cart",
+    "checkout": "Checkout",
+    "total": "Total",
+    "no_product": "No products in the cart.",
+    "my_cart": "My Cart",
+    "custom_link_account": "My Account",
+    "custom_link_wishlist": "My Wishlist",
+    "custom_link_checkout": "Checkout",
+    "custom_link_logout": "Logout",
+    "custom_link_login": "Sign In",
+    "custom_link_create_account": "Create an account",
+    "search_placeholder": "Search product",
+    "language": "Languages:",
+    "currency": "Currency:"
+  },
+  "newsletter": {
+    "label": "Email",
+    "success": "Thanks for subscribing",
+    "button_label": "Subscribe"
+  },
+  "wishlist": {
+    "general": {
+      "my_wishlist": "My Wish Lists",
+      "wishlist": "Wish Lists",
+      "my_wishlist_2": "My Wishlist",
+      "product_image": "Image",
+      "product_name": "Product Name",
+      "unit_price": "Price",
+      "share_wishlist": "Share my Wishlist Via Email",
+      "no_login_html": "To create a wish list you must <a href=\"\/account\/login\">sign in<\/a> or <a href=\"\/account\/register\">create an account<\/a>.",
+      "add_to_wishlist": "Add to Wish List",
+      "remove_wishlist": "Remove Wish List",
+      "add_to_wishlist_1": "Add to wishlist",
+      "remove_wishlist_1": "Remove wishlist",
+      "note": "Already in your wishlist, Go to wishlist",
+      "subtext": "To create a wish list you must",
+      "sign_in": "sign in",
+      "or": "or",
+      "wishlist_empty": "Looks like you haven't started a wishlist yet...",
+      "create_account": "create an account"
+    }
+  },
+  "accessibility": {
+    "skip_to_text": "Skip to content",
+    "skip_to_product_info": "Skip to product information",
+    "close": "Close",
+    "unit_price_separator": "per",
+    "vendor": "Vendor:",
+    "error": "Error",
+    "refresh_page": "Choosing a selection results in a full page refresh.",
+    "link_messages": {
+      "new_window": "Opens in a new window.",
+      "external": "Opens external website."
+    },
+    "loading": "Loading...",
+    "total_reviews": "total reviews",
+    "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
+    "collapsible_content_title": "Collapsible content"
+  },
+  "blogs": {
+    "article": {
+      "blog": "Blog",
+      "read_more_title": "Read more: {{ title }}",
+      "comments": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
       },
-      "settings": {
-        "cart_type": {
-          "label": "Cart type",
-          "drawer": {
-            "label": "Drawer"
-          },
-          "page": {
-            "label": "Page"
-          },
-          "notification": {
-            "label": "Popup notification"
-          }
-        },
-        "show_vendor": {
-          "label": "Show vendor"
-        },
-        "show_cart_note": {
-          "label": "Enable cart note"
-        },
-        "cart_drawer": {
-          "header": "Cart drawer",
-          "collection": {
-            "label": "Collection",
-            "info": "Visible when cart drawer is empty"
-          }
-        }
-      }
-    },
-    "cards": {
-      "name": "Cards",
-      "settings": {
-        "header__badge": {
-          "content": "Badge"
-        },
-        "style": {
-          "options__1": {
-            "label": "Standard"
-          },
-          "options__2": {
-            "label": "Card"
-          },
-          "label": "Style"
-        }
-      }
-    },
-    "badges": {
-      "name": "Badges",
-      "settings": {
-        "position": {
-          "options__1": {
-            "label": "Bottom left"
-          },
-          "options__2": {
-            "label": "Bottom right"
-          },
-          "options__3": {
-            "label": "Top left"
-          },
-          "options__4": {
-            "label": "Top right"
-          },
-          "label": "Product card position"
-        },
-        "sale_badge_color_scheme": {
-          "label": "Sale badge color scheme"
-        },
-        "sold_out_badge_color_scheme": {
-          "label": "Sold out badge color scheme"
-        }
-      }
-    },
-    "colors": {
-      "name": "Colors",
-      "backgroundcolor": "Background Color",
-      "settings": {
-        "accentcolors": "Accent Colors",
-        "primaryaccent": "Primary accent",
-        "bgcolor": "Background Colors",
-        "mainbackground": "Main background ",
-        "form-bg": "Form field background ",
-        "text-colors": "Text Colors",
-        "bodytext": "Body text",
-        "headingtext": "Heading texts",
-        "subtext": "Sub texts",
-        "labels": {
-          "name": "Header badge color",
-          "sale": "Sale badge color",
-          "news": "News badge color",
-          "hot": "Hot badge color",
-          "commingsoon": "Commingsoon badge color"
-        },
-        "textlink": "Text link",
-        "textlinkhover": "Text link hover",
-        "btn-colors": "Button Colors (Primary Button)",
-        "btn-secondary": "Button Colors (Secondary Button)",
-        "product-color": "Product colors",
-        "product-title": "Product title",
-        "sale-price": "Sale price",
-        "regular_price": "Regular price",
-        "vender-collection": "Product vendor, collection",
-        "prod-desc": "Product description, details",
-        "announcement": "Announcement bar colors",
-        "topbar": {
-          "content": "Topbar bar colors",
-          "name": "Topbar"
-        },
-        "bg": "Background",
-        "bg-hover": "Background hover",
-        "text-color": "Text Color",
-        "texthover": "Text color hover",
-        "header-color": "Header Colors",
-        "txt": "Text",
-        "txt-icon": "Texts & icons",
-        "header-trans": "Texts & icons on transparent header",
-        "cart-badge": "Cart & wishlist count color",
-        "cart-badge-bg": "Cart & wishlist count background",
-        "footer-color": "Footer Colors",
-        "subtext-color": "Subtext color",
-        "link-color": "Link color",
-        "link-color-hover": "Link color hover",
-        "mobile-bg": "Mobile background color",
-        "footer-bottom": "Footer Bottom Colors",
-        "border-color": "Border Colors",
-        "img-overlay": "Image overlay",
-        "opacity": "Opacity",
-        "border": "Border",
-        "tooltip": "Tooltip",
-        "colors_solid_button_labels": {
-          "label": "Solid button label",
-          "info": "Used as foreground color on accent colors."
-        },
-        "colors_accent_1": {
-          "label": "Accent 1",
-          "info": "Used for solid button background."
-        },
-        "gradient_accent_1": {
-          "label": "Accent 1 gradient"
-        },
-        "colors_accent_2": {
-          "label": "Accent 2"
-        },
-        "gradient_accent_2": {
-          "label": "Accent 2 gradient"
-        },
-        "header__1": {
-          "content": "Primary colors"
-        },
-        "header__2": {
-          "content": "Secondary colors"
-        },
-        "colors_text": {
-          "label": "Text",
-          "info": "Used as foreground color on background colors."
-        },
-        "colors_outline_button_labels": {
-          "label": "Outline button",
-          "info": "Also used for text links."
-        },
-        "colors_background_1": {
-          "label": "Background 1"
-        },
-        "gradient_background_1": {
-          "label": "Background 1 gradient"
-        },
-        "colors_background_2": {
-          "label": "Background 2"
-        },
-        "gradient_background_2": {
-          "label": "Background 2 gradient"
-        }
-      }
-    },
-    "product_card": {
-      "name": "Product Card",
-      "settings": {
-        "layout": {
-          "label": "Layout",
-          "alignment": "Content alignment",
-          "option_1": {
-            "label": "Left"
-          },
-          "option_2": {
-            "label": "Center"
-          },
-          "option_3": {
-            "label": "Right"
-          }
-        },
-        "image": {
-          "title": {
-            "label": "Image"
-          },
-          "image_ratio": {
-            "label": "Aspect ratio",
-            "options__1": {
-              "label": "Adapt to image"
-            },
-            "label_show": "Show second image on hover"
-          },
-          "default-label": "Default thumbnail",
-          "info-label": "For products without images"
-        },
-        "variants": {
-          "name": "Variant options",
-          "option_1": {
-            "label": "Show variant options size"
-          },
-          "option_2": {
-            "label": "Show variant options color"
-          }
-        },
-        "show-content": {
-          "name": "Content",
-          "label-1": "Show Add To Cart button",
-          "label-2": "Show Quickview button",
-          "label-3": "Show Wishlist button",
-          "label-4": "Show Compare button"
-        },
-        "product-title": {
-          "name": "Product title",
-          "cap-text": "Capitalize product name",
-          "label": "Product title line limit",
-          "options": {
-            "label-1": "No limit",
-            "label-2": "1 line",
-            "label-3": "2 lines",
-            "label-4": "3 lines"
-          },
-          "price": "Product prices",
-          "low-price": "Show lowest prices"
-        },
-        "badges": {
-          "name": "Badges",
-          "label-1": "Sale badge",
-          "options": {
-            "label-1": "Hide",
-            "label-2": "Show text",
-            "label-3": "Show % discounted"
-          },
-          "label-2": "Show sold out badge",
-          "label-3": "Show reviews badge",
-          "label-4": "Show custom tag badges",
-          "info": "How to set up custom product tags?."
-        },
-        "add-to-cart": {
-          "name": "When click Select options button",
-          "label-1": "Open select options popup",
-          "label-2": "Go to product page"
-        }
-      }
-    },
-    "product_variants": {
-      "name": "Product options swatches",
-      "label": "Colors Palette",
-      "prod-color": "Custom colors",
-      "prod-color-info": "Use Hex color code, see more [Hex color](https:\/\/www.color-hex.com\/)",
-      "images": {
-        "name": "Custom Images",
-        "meterial": {
-          "name": "Required: PNG images only!     Recommended size: 60x60 (px)",
-          "options__1": {
-            "label": "Custom image for value 1",
-            "label2": "Option value 1"
-          },
-          "options__2": {
-            "label": "Custom image for value 2",
-            "label2": "Option value 2"
-          },
-          "options__3": {
-            "label": "Custom image for value 3",
-            "label2": "Option value 3"
-          },
-          "options__4": {
-            "label": "Custom image for value 4",
-            "label2": "Option value 4"
-          },
-          "options__5": {
-            "label": "Custom image for value 5",
-            "label2": "Option value 5"
-          },
-          "options__6": {
-            "label": "Custom image for value 6",
-            "label2": "Option value 6"
-          },
-          "options__7": {
-            "label": "Custom image for value 7",
-            "label2": "Option value 7"
-          },
-          "options__8": {
-            "label": "Custom image for value 8",
-            "label2": "Option value 8"
-          },
-          "options__9": {
-            "label": "Custom image for value 9",
-            "label2": "Option value 9"
-          },
-          "options__10": {
-            "label": "Custom image for value 10",
-            "label2": "Option value 10"
-          },
-          "options__11": {
-            "label": "Custom image for value 11",
-            "label2": "Option value 11"
-          },
-          "options__12": {
-            "label": "Custom image for value 12",
-            "label2": "Option value 12"
-          },
-          "options__13": {
-            "label": "Custom image for value 13",
-            "label2": "Option value 13"
-          },
-          "options__14": {
-            "label": "Custom image for value 14",
-            "label2": "Option value 14"
-          },
-          "options__15": {
-            "label": "Custom image for value 15",
-            "label2": "Option value 15"
-          },
-          "options__16": {
-            "label": "Custom image for value 16",
-            "label2": "Option value 16"
-          },
-          "options__17": {
-            "label": "Custom image for value 17",
-            "label2": "Option value 17"
-          },
-          "options__18": {
-            "label": "Custom image for value 18",
-            "label2": "Option value 18"
-          },
-          "options__19": {
-            "label": "Custom image for value 19",
-            "label2": "Option value 19"
-          },
-          "options__20": {
-            "label": "Custom image for value 20",
-            "label2": "Option value 20"
-          },
-          "options__21": {
-            "label": "Custom image for value 21",
-            "label2": "Option value 21"
-          },
-          "options__22": {
-            "label": "Custom image for value 22",
-            "label2": "Option value 22"
-          },
-          "options__23": {
-            "label": "Custom image for value 23",
-            "label2": "Option value 23"
-          },
-          "options__24": {
-            "label": "Custom image for value 24",
-            "label2": "Option value 24"
-          },
-          "options__25": {
-            "label": "Custom image for value 25",
-            "label2": "Option value 25"
-          },
-          "options__26": {
-            "label": "Custom image for value 26",
-            "label2": "Option value 26"
-          },
-          "options__27": {
-            "label": "Custom image for value 27",
-            "label2": "Option value 27"
-          },
-          "options__28": {
-            "label": "Custom image for value 28",
-            "label2": "Option value 28"
-          },
-          "options__29": {
-            "label": "Custom image for value 29",
-            "label2": "Option value 29"
-          },
-          "options__30": {
-            "label": "Custom image for value 30",
-            "label2": "Option value 30"
-          },
-          "options__31": {
-            "label": "Custom image for value 31",
-            "label2": "Option value 31"
-          },
-          "options__32": {
-            "label": "Custom image for value 32",
-            "label2": "Option value 32"
-          },
-          "options__33": {
-            "label": "Custom image for value 33",
-            "label2": "Option value 33"
-          },
-          "options__34": {
-            "label": "Custom image for value 34",
-            "label2": "Option value 34"
-          },
-          "options__35": {
-            "label": "Custom image for value 35",
-            "label2": "Option value 35"
-          },
-          "options__36": {
-            "label": "Custom image for value 36",
-            "label2": "Option value 36"
-          },
-          "options__37": {
-            "label": "Custom image for value 37",
-            "label2": "Option value 37"
-          },
-          "options__38": {
-            "label": "Custom image for value 38",
-            "label2": "Option value 38"
-          },
-          "options__39": {
-            "label": "Custom image for value 39",
-            "label2": "Option value 39"
-          },
-          "options__40": {
-            "label": "Custom image for value 40",
-            "label2": "Option value 40"
-          },
-          "options__41": {
-            "label": "Custom image for value 41",
-            "label2": "Option value 41"
-          },
-          "options__42": {
-            "label": "Custom image for value 42",
-            "label2": "Option value 42"
-          },
-          "options__43": {
-            "label": "Custom image for value 43",
-            "label2": "Option value 43"
-          },
-          "options__44": {
-            "label": "Custom image for value 44",
-            "label2": "Option value 44"
-          },
-          "options__45": {
-            "label": "Custom image for value 45",
-            "label2": "Option value 45"
-          },
-          "options__46": {
-            "label": "Custom image for value 46",
-            "label2": "Option value 46"
-          },
-          "options__47": {
-            "label": "Custom image for value 47",
-            "label2": "Option value 47"
-          },
-          "options__48": {
-            "label": "Custom image for value 48",
-            "label2": "Option value 48"
-          },
-          "options__49": {
-            "label": "Custom image for value 49",
-            "label2": "Option value 49"
-          },
-          "options__50": {
-            "label": "Custom image for value 50",
-            "label2": "Option value 50"
-          }
-        }
-      }
-    },
-    "typography": {
-      "name": "Typography",
-      "settings": {
-        "bodytext": "BODY TEXT",
-        "base-size": "Base size",
-        "line-height": "Line height ",
-        "type_header_font": {
-          "label": "Font",
-          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
-        },
-        "custom-font": {
-          "name": "Use custom font",
-          "label1": "Google-Font",
-          "label2": "Custom-Font",
-          "custom-body-text": "Custom font for Body text",
-          "font-url": "Font URL",
-          "font-family-name": "Custom Font-family Name",
-          "default-font": "Default font weight",
-          "font-weights": "Font weight",
-          "font-weight": {
-            "100": "Thin 100",
-            "200": "Extra-light 200",
-            "300": "Light 300",
-            "400": "Regular 400",
-            "500": "Medium 500",
-            "600": "Semi-bold 600",
-            "700": "Bold 700",
-            "800": "Extra-bold 800",
-            "900": "Black 900"
-          }
-        },
-        "heading_scale": {
-          "label": "Font size scale"
-        },
-        "header__1": {
-          "content": "Headings"
-        },
-        "header__2": {
-          "content": "Body"
-        },
-        "type_body_font": {
-          "label": "Font",
-          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
-        },
-        "body_scale": {
-          "label": "Font size scale"
-        }
-      }
-    },
-    "buttons": {
-      "name": "Buttons",
-      "paragraph": "The button font is inherited from body text.",
-      "upper-text": "Uppercase text label"
-    },
-    "variant_pills": {
-      "name": "Variant pills"
-    },
-    "inputs": {
-      "name": "Inputs"
-    },
-    "content_containers": {
-      "name": "Content containers"
-    },
-    "popups": {
-      "name": "Dropdowns and pop-ups",
-      "paragraph": "Affects areas like navigation dropdowns, pop-up modals, and cart pop-ups."
-    },
-    "media": {
-      "name": "Media"
-    },
-    "drawers": {
-      "name": "Drawers"
-    },
-    "styles": {
-      "name": "Icons",
-      "settings": {
-        "accent_icons": {
-          "options__3": {
-            "label": "Outline button"
-          },
-          "options__4": {
-            "label": "Text"
-          },
-          "label": "Color"
-        }
-      }
-    },
-    "integration": {
-      "name": "Integration",
-      "label": "Google map API",
-      "google": {
-        "label": "GooleMap Api Key",
-        "info": "[Get Api Key](https:\/\/help.shopify.com\/en\/manual\/online-store\/themes\/themes-by-shopify\/vintage-themes\/customizing-vintage-themes\/map-section-api-key)"
-      },
-      "instagram": {
-        "name": "Instagram Token",
-        "label": "Access Token",
-        "info": "[Get Instagram token](https:\/\/docs.bulltheme.com\/shopify\/athens\/#\/instagram)"
-      }
-    },
-    "social-media": {
-      "name": "Store contact",
-      "phone": "Phone number",
-      "label": "Social media",
+      "moderated": "Please note, comments need to be approved before they are published.",
+      "comment_form_title": "Leave a comment",
+      "name": "Name",
       "email": "Email",
-      "settings": {
-        "name": "Social links",
-        "header": {
-          "content": "Social accounts"
-        },
-        "social_twitter_link": {
-          "label": "Twitter",
-          "info": "https:\/\/twitter.com\/shopify"
-        },
-        "social_facebook_link": {
-          "label": "Facebook",
-          "info": "https:\/\/facebook.com\/shopify"
-        },
-        "social_pinterest_link": {
-          "label": "Pinterest",
-          "info": "https:\/\/pinterest.com\/shopify"
-        },
-        "social_instagram_link": {
-          "label": "Instagram",
-          "info": "http:\/\/instagram.com\/shopify"
-        },
-        "social_tiktok_link": {
-          "label": "TikTok",
-          "info": "https:\/\/tiktok.com\/@shopify"
-        },
-        "social_tumblr_link": {
-          "label": "Tumblr link",
-          "info": "https:\/\/shopify.tumblr.com"
-        },
-        "social_snapchat_link": {
-          "label": "Snapchat",
-          "info": "https:\/\/www.snapchat.com\/add\/shopify"
-        },
-        "social_youtube_link": {
-          "label": "YouTube",
-          "info": "https:\/\/www.youtube.com\/shopify"
-        },
-        "social_linkedin_link": {
-          "label": "Linkedin",
-          "info": "https:\/\/www.linkedin.com\/shopify"
-        },
-        "social_dribbble_link": {
-          "label": "dribbble",
-          "info": "https:\/\/www.dribbble.com\/shopify"
-        },
-        "social_vimeo_link": {
-          "label": "Vimeo",
-          "info": "https:\/\/vimeo.com\/shopify"
-        }
-      }
+      "message": "Comment",
+      "post": "Post comment",
+      "back_to_blog": "Back to blog",
+      "share": "Share this article",
+      "success": "Your comment was posted successfully! Thank you!",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated."
     },
-    "search_input": {
-      "name": "Search behavior",
-      "settings": {
-        "header": {
-          "content": "Product suggestions"
-        },
-        "predictive_search_enabled": {
-          "label": "Enable product suggestions"
-        },
-        "predictive_search_show_vendor": {
-          "label": "Show vendor",
-          "info": "Visible when product suggestions enabled."
-        },
-        "predictive_search_show_price": {
-          "label": "Show price",
-          "info": "Visible when product suggestions enabled."
-        }
-      }
-    },
-    "layout-settings": {
-      "name": "Layout Settings",
-      "settings": {
-        "fixed-container": "Fixed width container",
-        "container-width": "Container width",
-        "fluid-container": "Fluid container",
-        "info": "A section with \"Fluid container\" will take-up the complete width of the viewport and will expand or shrink when ever the viewport is resized.",
-        "c-max": "Container max-width",
-        "ml-mr": " Margin left & right"
-      }
-    },
-    "scroll-top": {
-      "name": "Scroll to top button",
-      "settings": {
-        "scroll-top-header": {
-          "label": "Scroll to top button"
-        },
-        "scroll-top": {
-          "label": "Show scroll to top button"
-        }
-      }
-    },
-    "favicon": {
-      "name": "Favicon",
-      "settings": {
-        "favicon-header": {
-          "label": "Favicon"
-        },
-        "favicon": {
-          "label": "Image favicon",
-          "info": "Will be scaled down to 32 x 32px"
-        },
-        "favicon-label": {
-          "label": "Use favicon icon (32px x 32px)",
-          "info": "Will be scaled down to 32 x 32px"
-        }
-      }
-    },
-    "prod-visitor": {
-      "name": "Product Item",
-      "label": "Product Visitors",
-      "options__1": {
-        "label": "Visitors min value"
+    "sidebar": {
+      "recent_articles": "Popular Posts",
+      "tag_cloud": "Popular Tags",
+      "categories": "Categories",
+      "jol": "Join Our List",
+      "brand": "Brands",
+      "instagram": "Instagram",
+      "follow": "Follow Us",
+      "fproduct": "Featured Product"
+    }
+  },
+  "onboarding": {
+    "product_title": "Example product title",
+    "collection_title": "Your collection's name"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to cart",
+      "pre_order": "Pre-Order",
+      "choose_options": "Choose options",
+      "choose_product_options": "Choose options for {{ product_name }}",
+      "description": "Description",
+      "on_sale": "Sale",
+      "product_variants": "Product variants",
+      "media": {
+        "gallery_viewer": "Gallery Viewer",
+        "load_image": "Load image {{ index }} in gallery view",
+        "load_model": "Load 3D Model {{ index }} in gallery view",
+        "load_video": "Play video {{ index }} in gallery view",
+        "image_available": "Image {{ index }} is now available in gallery view",
+        "open_media": "Open media {{ index }} in modal",
+        "play_model": "Play 3D Viewer",
+        "play_video": "Play video"
       },
-      "options__2": {
-        "label": "Visitors max value"
-      }
+      "tooltip": {
+        "search": "Search",
+        "account": "Account",
+        "wishlist": "Wishlist",
+        "compare": "Compare",
+        "cart": "Cart",
+        "add-To-Wishlist": "Add To Wishlist",
+        "quick-view": "Quick View",
+        "2-columns": "2 columns",
+        "3-columns": "3 columns",
+        "4-columns": "4 columns",
+        "5-columns": "5 columns",
+        "6-columns": "6 columns",
+        "notes": "Note",
+        "note": "Add note for seller",
+        "back": "Back"
+      },
+      "quantity": {
+        "label": "Quantity",
+        "input_label": "Quantity for {{ product }}",
+        "increase": "Increase quantity for {{ product }}",
+        "decrease": "Decrease quantity for {{ product }}"
+      },
+      "pickup_availability": {
+        "view_store_info": "View store information",
+        "check_other_stores": "Check availability at other stores",
+        "pick_up_available": "Pickup available",
+        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground fw-5\">{{ location_name }}<\/span>",
+        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}<\/span>",
+        "unavailable": "Couldn't load pickup availability",
+        "refresh": "Refresh"
+      },
+      "price": {
+        "from_price_html": "From {{ price }}",
+        "regular_price": "Regular price",
+        "sale_price": "Sale price",
+        "unit_price": "Unit price"
+      },
+      "share": "Share this product",
+      "sold_out": "Sold out",
+      "unavailable": "Unavailable",
+      "vendor": "Vendor",
+      "availability": "Availability",
+      "collection": "Collection",
+      "sku": "SKU",
+      "tag": "Tags",
+      "video_exit_message": "{{ title }} opens full screen video in same window.",
+      "view_full_details": "View full details",
+      "xr_button": "View in your space",
+      "xr_button_label": "View in your space, loads item in augmented reality window",
+      "include_taxes": "Tax included.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout."
     },
-    "currency_format": {
-      "name": "Currency",
-      "settings": {
-        "content": "Currency codes",
-        "paragraph": "Cart and checkout prices always show currency codes. Example: $1.00 USD.",
-        "currency_code_enabled": {
-          "label": "Show currency codes"
-        },
-        "content2": "Although you will be able to display prices on your store front in different currencies, Shopify will still process orders in your shop's currency.",
-        "label": "Money format",
-        "options__1": {
-          "label": "Without Currency, ex: $10.00"
-        },
-        "options__2": {
-          "label": "With Currency, ex: $10 CAD"
-        },
-        "currency": {
-          "info": "Size: 50px x 30px",
-          "options__1": {
-            "label": "Currencies 1 you wish to support",
-            "label2": "Currencies 1 icon"
-          },
-          "options__2": {
-            "label": "Currencies 2 you wish to support",
-            "label2": "Currencies 2 icon"
-          },
-          "options__3": {
-            "label": "Currencies 3 you wish to support",
-            "label2": "Currencies 3 icon"
-          },
-          "options__4": {
-            "label": "Currencies 4 you wish to support",
-            "label2": "Currencies 4 icon"
-          },
-          "options__5": {
-            "label": "Currencies 5 you wish to support",
-            "label2": "Currencies 5 icon"
-          }
-        }
-      }
+    "modal": {
+      "label": "Media gallery"
     },
-    "layout": {
-      "name": "Layout",
-      "settings": {
-        "page_width": {
-          "label": "Page width"
-        },
-        "spacing_sections": {
-          "label": "Vertical space between sections"
-        },
-        "header__grid": {
-          "content": "Grid"
-        },
-        "paragraph__grid": {
-          "content": "Affects areas with a multicolumn layout."
-        },
-        "spacing_grid_horizontal": {
-          "label": "Horizontal space"
-        },
-        "spacing_grid_vertical": {
-          "label": "Vertical space"
-        }
+    "facets": {
+      "apply": "Apply",
+      "clear": "Clear",
+      "clear_all": "Remove all",
+      "from": "From",
+      "filter_and_sort": "Filter and sort",
+      "filter_by_label": "Filter:",
+      "filter_button": "Filter",
+      "filters_selected": {
+        "one": "{{ count }} selected",
+        "other": "{{ count }} selected"
+      },
+      "filter_selected_accessibility": "{{ type }} ({{ count }} filters selected)",
+      "show_more": "Show more",
+      "show_less": "Show less",
+      "max_price": "The highest price is {{ price }}",
+      "product_count": {
+        "one": "{{ product_count }} of {{ count }} product",
+        "other": "{{ product_count }} of {{ count }} products"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} product",
+        "other": "{{ count }} products"
+      },
+      "reset": "Reset",
+      "sort_button": "Sort",
+      "sort_by_label": "Sort by:",
+      "to": "To",
+      "clear_filter": "Remove filter"
+    }
+  },
+  "templates": {
+    "search": {
+      "no_results": "No results found for “{{ terms }}”. Check the spelling or use a different word or phrase.",
+      "page": "Page",
+      "products": "Products",
+      "results_with_count": {
+        "one": "Found {{ count }} result for \"{{ terms }}\"",
+        "other": "Found {{ count }} results for \"{{ terms }}\""
+      },
+      "results_with_count_and_term": {
+        "one": "Found {{ count }} results for “{{ terms }}”",
+        "other": "Found {{ count }} results for “{{ terms }}”"
+      },
+      "title": "Search results",
+      "search_for": "Results for",
+      "heading": "{{ terms }}"
+    },
+    "cart": {
+      "cart": "TODO"
+    },
+    "contact": {
+      "form": {
+        "post_success": "TODO",
+        "error_heading": "TODO",
+        "name": "TODO",
+        "email": "TODO",
+        "phone": "TODO",
+        "comment": "TODO"
       }
     }
   },
+  "cart": {
+    "cart": "Cart"
+  },
+  "contact": {
+    "form": {
+      "title": "Contact form",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone number",
+      "comment": "Comment",
+      "send": "Send",
+      "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
+      "error_heading": "Please adjust the following:"
+    }
+  },
+  "404": {
+    "title": "Page not found",
+    "subtext": "404"
+  },
   "sections": {
-    "Custom-block": "Custom-block",
-    "collection-slider": "Collection slider",
-    "aboutus": "About Us",
-    "responsive": {
-      "label": "Responsive size"
-    },
-    "recent-view": {
-      "name": "Recently Viewed Products"
-    },
-    "brand-page": {
-      "name": "Brands Page",
-      "display_brand": "Display Brands Slider?",
-      "link_brand": {
-        "name": "Link Type by",
-        "label": "Vendor",
-        "label2": "Collection",
-        "label3": "Your Brands"
+    "header": {
+      "announcement": "Announcement",
+      "menu": "Menu",
+      "cart_count": {
+        "one": "{{ count }} item",
+        "other": "{{ count }} items"
       }
     },
-    "headers": {
-      "name-label": "Name",
-      "label-tag": "Label",
-      "name": "Header",
-      "copyright": "Copyright",
-      "main-nav": "Main Navigation",
-      "header_topbar_menu": "Top Navigation",
-      "header_sticky": "Sticky on top",
-      "transparent_on_top": "Transparent on top",
-      "logos": "Logos",
-      "enable_wishlist": "Show wishlist?",
-      "enable_compare": "Show Comparelist?",
-      "enable_search": "Show Search?",
-      "enable_header_fullwidth": "Enable Full Width",
-      "float": "Float",
-      "url": "Url",
-      "logo": {
-        "name": "Logo text",
-        "label": "Default Logo",
-        "mobile-label": "Logo mobile",
-        "logo_transparent": "Logo for transparent header",
-        "logo_svg": "Default Logo - SVG",
-        "logo_svg_info": "Upload your SVG logo to [Files](\/admin\/settings\/files) to get the URL.",
-        "logo_mobile_svg": "Logo mobile - SVG",
-        "logo_transparent_svg": "Logo for transparent header - SVG",
-        "logo_max_width": "Logo width (desktop)",
-        "sticky_logo_max_width": "Logo width (sticky)",
-        "mobile_logo_max_width": "Logo width (mobile)",
-        "enable_custom_content": "Enable Custom Content",
-        "custom_content": "Text Content"
+    "cart": {
+      "title": "Your cart",
+      "caption": "Cart items",
+      "remove_title": "Remove {{ title }}",
+      "subtotal": "Subtotal",
+      "new_subtotal": "New subtotal",
+      "note": "Order special instructions",
+      "notes": "Special instructions for seller",
+      "note-text": "Add note for seller",
+      "checkout": "Check out",
+      "empty": "Your cart is empty",
+      "cart_error": "There was an error while updating your cart. Please try again.",
+      "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
+      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
+      "taxes_included_but_shipping_at_checkout": "Tax included and shipping calculated at checkout",
+      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
+      "taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout",
+      "headings": {
+        "product": "Product",
+        "price": "Price",
+        "total": "Total",
+        "quantity": "Quantity"
       },
-      "settings": {
-        "for-items": "For item",
-        "columns-size": "Links column size",
-        "second-column": "Second level is column",
-        "line-size": "Column lines size",
-        "product-megamenu": "Products (Mega menu)",
-        "html-megamenu": "Custom html (Mega menu)",
-        "product": "Products",
-        "for_group": "For group (Name)",
-        "megamenu-group": "Group (Mega menu)",
-        "group": "Group",
-        "action-button": {
-          "search": "Show search icon",
-          "account": "Show account icon",
-          "wishlist": "Show wishlist icon",
-          "compare": "Show comparison icon",
-          "cart": "Show cart icon",
-          "col-size": "Column size",
-          "row": "Rows",
-          "promo-box-menu": "Promo box (Mega menu)",
-          "promo-box": "Promo box"
-        },
-        "type": {
-          "name": "Type",
-          "options__1": {
-            "label": "Hot"
-          },
-          "options__2": {
-            "label": "Sale"
-          },
-          "options__3": {
-            "label": "New"
-          },
-          "options__4": {
-            "label": "Commingsoon"
-          }
-        },
-        "megamenu": {
-          "megamenu_title_image": "Title image (Mega menu)",
-          "megamenu_label": "Label (Mega menu)",
-          "content": "Title image",
-          "info": "Only for second level!"
-        },
-        "logo": {
-          "label": "Logo image"
-        },
-        "logo_width": {
-          "unit": "px",
-          "label": "Custom logo width"
-        },
-        "logo_position": {
-          "label": "Desktop logo position",
-          "options__1": {
-            "label": "Middle left"
-          },
-          "options__2": {
-            "label": "Top left"
-          },
-          "options__3": {
-            "label": "Top center"
-          },
-          "info": "Position is automatically optimized for mobile."
-        },
-        "menu": {
-          "label": "Menu"
-        },
-        "menu_type_desktop": {
-          "label": "Desktop menu type",
-          "info": "Menu type is automatically optimized for mobile.",
-          "options__1": {
-            "label": "Dropdown"
-          },
-          "options__2": {
-            "label": "Mega menu"
-          }
-        },
-        "show_line_separator": {
-          "label": "Show separator line"
-        },
-        "enable_sticky_header": {
-          "label": "Enable sticky header",
-          "info": "Header shows on the screen as customers scroll up."
-        },
-        "margin_bottom": {
-          "label": "Bottom margin"
-        }
-      }
-    },
-    "gdpr": {
-      "name": "GDPR Modal",
-      "enable": "Enable",
-      "label": "Show GDPR Modal on the:",
-      "info": "Only Desktop",
-      "opacity": "Background Color with Opacity 90%",
-      "privacy_policy_color": "Privacy Policy Text Color",
-      "privacy_policy_text": "Privacy Policy Text",
-      "gdpr-desc": "Description text",
-      "policy-link": "Privacy Policy Link",
-      "accept-cookies": "Accept Cookies Text"
-    },
-    "maps": {
-      "name": "Google Maps",
-      "maps-height": "Height",
-      "content": "Google maps must have API Key. Click Theme Settings bellow to setup API Key.",
-      "label": "Coordinate X",
-      "label2": "Coordinate Y",
-      "zoom": "Zoom",
-      "info": "Integer",
-      "mapsettings": "Maps settings",
-      "maptext": "Map Text"
-    },
-    "popup_product": {
-      "name": "Popup Product",
-      "show_popup_product": "Someone Purchased Modal on the",
-      "label": "Only Desktop",
-      "label2": "Text Someone recently bought",
-      "time_location_text": "Time and Location Text",
-      "popup_product_speed": {
-        "name": "Change slides every",
-        "options__1": {
-          "label": "5 seconds"
-        },
-        "options__2": {
-          "label": "6 seconds"
-        },
-        "options__3": {
-          "label": "7 seconds"
-        },
-        "options__4": {
-          "label": "8 seconds"
-        },
-        "options__5": {
-          "label": "9 seconds"
-        },
-        "options__6": {
-          "label": "10 seconds"
-        },
-        "options__7": {
-          "label": "1 minutes"
-        },
-        "options__8": {
-          "label": "3 minutes"
-        }
-      }
-    },
-    "team": {
-      "label": "Slider items",
-      "content": "Content",
-      "m_name": "Content title text",
-      "work_title": "Content Sub-title text",
-      "item_image": "Slider image",
-      "name": "Slider Section",
-      "show_team_count": "Show Slide count",
-      "count_inline_title": "Slide items count inline",
-      "items_per_row": "Slide items per row"
-    },
-    "404-main": {
-      "name": "Main 404",
-      "label": "Heading Text",
-      "label2": "Message Text"
-    },
-    "testimonial": {
-      "name": "Testimonial",
-      "client": {
-        "label": "Client image",
-        "label2": "Client Name",
-        "label3": "Client Post",
-        "label4": "Review title",
-        "label5": "Review Text"
-      }
-    },
-    "all": {
-      "tab-label": "Open Tab By Default",
-      "header-label": "Section header",
-      "padding": {
-        "section_padding_heading": "Section padding",
-        "padding_top": "Top padding",
-        "padding_bottom": "Bottom padding"
-      },
-      "container": {
-        "name": "Container type",
-        "option1": "Default",
-        "option2": "Full width",
-        "option3": "Use container box"
-      },
-      "space": {
-        "info": "Example is '20,30,40,60'",
-        "margin": {
-          "options__1": {
-            "label1": "Margin Top",
-            "label2": "Responsive Margin Top"
-          },
-          "options__2": {
-            "label1": "Margin Bottom",
-            "label2": "Responsive Margin Bottom"
-          }
-        },
-        "padding": {
-          "options__1": {
-            "label1": "Padding Top",
-            "label2": "Responsive Padding Top"
-          },
-          "options__2": {
-            "label1": "Padding Bottom",
-            "label2": "Responsive Padding Bottom"
-          }
-        }
-      },
-      "spacing": "Spacing",
-      "colors": {
-        "accent_1": {
-          "label": "Accent 1"
-        },
-        "accent_2": {
-          "label": "Accent 2"
-        },
-        "background_1": {
-          "label": "Background 1"
-        },
-        "background_2": {
-          "label": "Background 2"
-        },
-        "inverse": {
-          "label": "Inverse"
-        },
-        "label": "Color scheme",
-        "has_cards_info": "To change the card color scheme, update your theme settings."
-      },
-      "heading_size": {
-        "label": "Heading size",
-        "options__1": {
-          "label": "h1"
-        },
-        "options__2": {
-          "label": "h2"
-        },
-        "options__3": {
-          "label": "h3"
-        },
-        "options__4": {
-          "label": "h4"
-        },
-        "options__5": {
-          "label": "h5"
-        },
-        "options__6": {
-          "label": "h6"
-        }
-      }
-    },
-    "announcement-bar": {
-      "name": "Announcement bar",
-      "label": "Show announcement",
-      "label1": "Show currency selector",
-      "label2": "Show language selector",
-      "info1": "Visible only with enabled global setting multiple currencies",
-      "info2": "For multiple languages install app 'Weglot Translate'",
-      "language_app": "Language app",
-      "options": {
-        "options__1": {
-          "label": "Menu with external links"
-        },
-        "options__2": {
-          "label": "Weglot Translate APP. Default APP design"
-        },
-        "options__3": {
-          "label": "Weglot Translate APP. Theme design"
-        }
-      },
-      "blocks": {
-        "label": "Show phone number",
-        "label2": "Show email",
-        "announcement": {
-          "name": "Announcement",
-          "settings": {
-            "text": {
-              "label": "Text"
-            },
-            "link": {
-              "label": "Link"
-            }
-          }
-        }
-      }
-    },
-    "apps": {
-      "name": "Apps",
-      "settings": {
-        "include_margins": {
-          "label": "Make section margins the same as theme"
-        }
-      },
-      "presets": {
-        "name": "Apps"
-      }
-    },
-    "faq": {
-      "name": "FAQs",
-      "content": "Settings",
-      "label": "Select menu",
-      "label2": "Title Text",
-      "custom": "Custom content",
-      "accordion-item": "Accordion item"
-    },
-    "collage": {
-      "name": "Collage",
-      "settings": {
-        "heading": {
-          "label": "Heading"
-        },
-        "desktop_layout": {
-          "label": "Desktop layout",
-          "options__1": {
-            "label": "Left large block"
-          },
-          "options__2": {
-            "label": "Right large block"
-          }
-        },
-        "mobile_layout": {
-          "label": "Mobile layout",
-          "options__1": {
-            "label": "Collage"
-          },
-          "options__2": {
-            "label": "Column"
-          }
-        }
-      },
-      "blocks": {
-        "image": {
-          "name": "Image",
-          "settings": {
-            "image": {
-              "label": "Image"
-            },
-            "image_padding": {
-              "label": "Use original image ratio",
-              "info": "Select if you don't want your image to be cropped."
-            }
-          }
-        },
-        "product": {
-          "name": "Product",
-          "label": "Select Product",
-          "from_ago": "Purchase Location",
-          "time_ago": "20 minutes ago",
-          "settings": {
-            "product": {
-              "label": "Product"
-            },
-            "secondary_background": {
-              "label": "Show secondary background"
-            },
-            "second_image": {
-              "label": "Show second image on hover"
-            }
-          }
-        },
-        "collection": {
-          "name": "Collection",
-          "settings": {
-            "collection": {
-              "label": "Collection"
-            }
-          }
-        },
-        "video": {
-          "name": "Video",
-          "settings": {
-            "cover_image": {
-              "label": "Cover image"
-            },
-            "video_url": {
-              "label": "URL",
-              "info": "Video plays in a pop-up if the section contains other blocks.",
-              "placeholder": "Use a YouTube or Vimeo URL"
-            },
-            "image_padding": {
-              "label": "Use original image ratio",
-              "info": "Select if you don't want your image to be cropped."
-            },
-            "description": {
-              "label": "Video alt text",
-              "info": "Describe the video for customers using screen readers. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#video-block)"
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Collage"
-      }
-    },
-    "collection-list": {
-      "mobile-setting": {
-        "mobile_gap": "Column gap",
-        "info": "Only work in slider",
-        "per-row": "Collections per row",
-        "m-per-row": "Mobile view per row"
-      },
-      "enable-slider": "Enable slider",
-      "slide-control": "Hide slider controls",
-      "custom-class": "Custom classes",
-      "advanced": "Advanced settings",
-      "name": "Collection list",
-      "card-setting": {
-        "name": "Card settings",
-        "label": "Layout",
-        "style": "Style",
-        "options__1": {
-          "label": "Style 1"
-        },
-        "options__2": {
-          "label": "Style 2"
-        },
-        "options__3": {
-          "label": "Style 3"
-        },
-        "options__4": {
-          "label": "Style 3"
-        },
-        "options__5": {
-          "label": "Style 4"
-        }
-      },
-      "settings": {
-        "grid": {
-          "name": "Grid settings"
-        },
-        "slider": {
-          "name": "SLIDER SETTINGS"
-        },
-        "title": {
-          "label": "Heading"
-        },
-        "image_ratio": {
-          "label": "Image ratio",
-          "options__1": {
-            "label": "Adapt to image"
-          },
-          "options__2": {
-            "label": "Portrait"
-          },
-          "options__3": {
-            "label": "Square"
-          },
-          "info": "Add images by editing your collections. [Learn more](https:\/\/help.shopify.com\/manual\/products\/collections)"
-        },
-        "columns_desktop": {
-          "label": "Number of columns on desktop"
-        },
-        "show_view_all": {
-          "label": "Enable \"View all\" button if list includes more collections than shown"
-        },
-        "header_mobile": {
-          "content": "Mobile Layout"
-        },
-        "columns_mobile": {
-          "label": "Number of columns on mobile",
-          "options__1": {
-            "label": "1 column"
-          },
-          "options__2": {
-            "label": "2 columns"
-          }
-        },
-        "swipe_on_mobile": {
-          "label": "Enable swipe on mobile"
-        }
-      },
-      "blocks": {
-        "featured_collection": {
-          "name": "Collection",
-          "label": "Title",
-          "label1": "Sub Title",
-          "label2": "Products per row",
-          "settings": {
-            "label": "Featured image",
-            "btn-text": "Button text",
-            "collection": {
-              "label": "Collection",
-              "name": "Product tabs"
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Collection list"
-      }
-    },
-    "contact-form": {
-      "name": "Contact Form",
-      "label": "contact-text",
-      "label2": "Description Box Title text",
-      "text-block": "Text block",
-      "presets": {
-        "name": "Contact form"
-      }
-    },
-    "custom-liquid": {
-      "name": "Custom Liquid",
-      "settings": {
-        "custom_liquid": {
-          "label": "Custom Liquid",
-          "info": "Add app snippets or other Liquid code to create advanced customizations."
-        }
-      },
-      "presets": {
-        "name": "Custom Liquid"
-      }
-    },
-    "featured-blog": {
-      "name": "Blog posts",
-      "max_count": "Max Count Blog",
-      "blog-show": "Posts to show",
-      "settings": {
-        "heading": {
-          "label": "Heading"
-        },
-        "blog": {
-          "label": "Blog"
-        },
-        "line_clamp_title": {
-          "name": "Blog title line limit",
-          "label": "Blog desc line limit",
-          "option_1": {
-            "label": "No limit"
-          },
-          "option_2": {
-            "label": "1 line"
-          },
-          "option_3": {
-            "label": "2 lines"
-          },
-          "option_4": {
-            "label": "3 lines"
-          }
-        },
-        "post_limit": {
-          "label": "Number of blog posts to show"
-        },
-        "columns_desktop": {
-          "label": "Number of columns on desktop"
-        },
-        "show_view_all": {
-          "label": "Enable \"View all\" button if blog includes more blog posts than shown"
-        },
-        "show_image": {
-          "label": "Show featured image",
-          "info": "For best results, use an image with a 3:2 aspect ratio. [Learn more](https:\/\/help.shopify.com\/manual\/shopify-admin\/productivity-tools\/image-editor#understanding-image-aspect-ratio)"
-        },
-        "show_date": {
-          "label": "Show date"
-        },
-        "show_author": {
-          "label": "Show author"
-        }
-      },
-      "presets": {
-        "name": "Blog posts"
-      }
-    },
-    "instagram-feed": {
-      "name": "Instagram",
-      "label": "Number of Photos",
-      "info": "Number of photos to show initially"
-    },
-    "featured-collection": {
-      "name1": "Featured promotion",
-      "name": "Featured collection",
-      "max_count": "Max Count Products",
-      "label": "Featured",
-      "settings": {
-        "text_alignment": "Side Content alignment",
-        "side_image": "Side image",
-        "side_heading": "Side Heading",
-        "side_subheading": "Side Subheading",
-        "side_description": "Side description",
-        "side-content": "Side Content",
-        "title": {
-          "label": "Heading"
-        },
-        "description": {
-          "label": "Description"
-        },
-        "show_description": {
-          "label": "Show collection description from the admin"
-        },
-        "description_style": {
-          "label": "Description style",
-          "options__1": {
-            "label": "Body"
-          },
-          "options__2": {
-            "label": "Subtitle"
-          },
-          "options__3": {
-            "label": "Uppercase"
-          }
-        },
-        "collection": {
-          "label": "Collection"
-        },
-        "products_to_show": {
-          "label": "Maximum products to show",
-          "name": "Products to show"
-        },
-        "columns_desktop": {
-          "label": "Number of columns on desktop"
-        },
-        "show_view_all": {
-          "label": "Enable \"View all\" if collection has more products than shown"
-        },
-        "view_all_style": {
-          "label": "\"View all\" style",
-          "options__1": {
-            "label": "Link"
-          },
-          "options__2": {
-            "label": "Outline button"
-          },
-          "options__3": {
-            "label": "Solid button"
-          }
-        },
-        "enable_desktop_slider": {
-          "label": "Enable carousel on desktop"
-        },
-        "full_width": {
-          "label": "Make products full width"
-        },
-        "header": {
-          "content": "Product card"
-        },
-        "image_ratio": {
-          "label": "Image ratio",
-          "options__1": {
-            "label": "Adapt to image"
-          },
-          "options__2": {
-            "label": "Portrait"
-          },
-          "options__3": {
-            "label": "Square"
-          }
-        },
-        "show_secondary_image": {
-          "label": "Show second image on hover"
-        },
-        "show_vendor": {
-          "label": "Show vendor"
-        },
-        "show_rating": {
-          "label": "Show product rating",
-          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-collection-show-product-rating)"
-        },
-        "enable_quick_buy": {
-          "label": "Enable quick add button",
-          "info": "Optimal with popup or drawer cart type."
-        },
-        "header_mobile": {
-          "content": "Mobile Layout"
-        },
-        "columns_mobile": {
-          "label": "Number of columns on mobile",
-          "options__1": {
-            "label": "1 column"
-          },
-          "options__2": {
-            "label": "2 columns"
-          }
-        },
-        "swipe_on_mobile": {
-          "label": "Enable swipe on mobile"
-        }
-      },
-      "presets": {
-        "name": "Featured collection"
-      }
-    },
-    "featured-product": {
-      "name": "Featured product",
-      "menu": "Select categories menu",
-      "blocks": {
-        "text": {
-          "name": "Text",
-          "settings": {
-            "text": {
-              "label": "Text"
-            },
-            "text_style": {
-              "label": "Text style",
-              "options__1": {
-                "label": "Body"
-              },
-              "options__2": {
-                "label": "Subtitle"
-              },
-              "options__3": {
-                "label": "Uppercase"
-              }
-            }
-          }
-        },
-        "categories": "Widget categories",
-        "title": {
-          "name": "Title"
-        },
-        "price": {
-          "name": "Price"
-        },
-        "quantity_selector": {
-          "name": "Quantity selector"
-        },
-        "variant_picker": {
-          "name": "Variant picker",
-          "settings": {
-            "picker_type": {
-              "label": "Type",
-              "options__1": {
-                "label": "Dropdown"
-              },
-              "options__2": {
-                "label": "Pills"
-              }
-            }
-          }
-        },
-        "buy_buttons": {
-          "name": "Buy buttons",
-          "settings": {
-            "show_dynamic_checkout": {
-              "label": "Show dynamic checkout buttons",
-              "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
-            }
-          }
-        },
-        "description": {
-          "name": "Description"
-        },
-        "share": {
-          "name": "Share",
-          "settings": {
-            "text": {
-              "label": "Text"
-            },
-            "featured_image_info": {
-              "content": "If you include a link in social media posts, the page’s featured image will be shown as the preview image. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/images\/showing-social-media-thumbnail-images)"
-            },
-            "title_info": {
-              "content": "A store title and description are included with the preview image. [Learn more](https:\/\/help.shopify.com\/manual\/promoting-marketing\/seo\/adding-keywords#set-a-title-and-description-for-your-online-store)"
-            }
-          }
-        },
-        "custom_liquid": {
-          "name": "Custom liquid",
-          "settings": {
-            "custom_liquid": {
-              "label": "Custom liquid"
-            }
-          }
-        },
-        "rating": {
-          "name": "Product rating",
-          "settings": {
-            "paragraph": {
-              "content": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-product-rating)"
-            }
-          }
-        }
-      },
-      "settings": {
-        "product": {
-          "label": "Product"
-        },
-        "secondary_background": {
-          "label": "Show secondary background"
-        },
-        "header": {
-          "content": "Media",
-          "info": "Learn more about [media types](https:\/\/help.shopify.com\/manual\/products\/product-media)"
-        },
-        "hide_variants": {
-          "label": "Hide unselected variants’ media on desktop"
-        },
-        "enable_video_looping": {
-          "label": "Enable video looping"
-        }
-      },
-      "presets": {
-        "name": "Featured product"
+      "update": "Update",
+      "login": {
+        "title": "Have an account?",
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in<\/a> to check out faster."
       }
     },
     "footer": {
-      "name": "Footer",
-      "label": "Show footer",
-      "footer-b-border": "Footer bottom border",
-      "footer_copyright": "Copyrights",
-      "footer-alignment": {
-        "label": "Footer alignment"
-      },
-      "enable_footer_logosvg": "Enable SVG Logo",
-      "brand_logo_svg": "Code of SVG Logo",
-      "brand_logo_info": "default file is - 'assets\/logo.svg'",
-      "store-info": {
-        "name": "Store Info"
-      },
-      "footer-text": "Footer text",
-      "footer_button": "Footer button",
-      "footer_link": "Footer link",
-      "blocks": {
-        "link_list": {
-          "name": "Menu",
-          "settings": {
-            "heading": {
-              "label": "Heading",
-              "info": "Heading required to display the menu."
-            },
-            "menu": {
-              "label": "Menu",
-              "info": "Displays only top-level menu items."
-            }
-          }
-        },
-        "text": {
-          "name": "Text",
-          "settings": {
-            "heading": {
-              "label": "Heading"
-            },
-            "subtext": {
-              "label": "Subtext"
-            }
-          }
-        }
-      },
-      "settings": {
-        "newsletter_enable": {
-          "label": "Show email signup"
-        },
-        "newsletter_heading": {
-          "label": "Heading"
-        },
-        "header__1": {
-          "content": "Email Signup",
-          "info": "Subscribers added automatically to your “accepted marketing” customer list. [Learn more](https:\/\/help.shopify.com\/manual\/customers\/manage-customers)"
-        },
-        "header__2": {
-          "content": "Social media icons",
-          "info": "To display your social media accounts, link them in your theme settings."
-        },
-        "show_social": {
-          "label": "Show social media icons"
-        },
-        "header__3": {
-          "content": "Country\/region selector"
-        },
-        "header__4": {
-          "info": "To add a country\/region, go to your [payment settings.](\/admin\/settings\/payments)"
-        },
-        "enable_country_selector": {
-          "label": "Enable country\/region selector"
-        },
-        "header__5": {
-          "content": "Language selector"
-        },
-        "header__6": {
-          "info": "To add a language, go to your [language settings.](\/admin\/settings\/languages)"
-        },
-        "enable_language_selector": {
-          "label": "Enable language selector"
-        },
-        "header__7": {
-          "content": "Payment methods"
-        },
-        "payment_enable": {
-          "label": "Show payment icons"
-        },
-        "margin_top": {
-          "label": "Top margin"
-        }
-      }
+      "payment": "Payment methods"
     },
-    "image-banner": {
-      "name": "Image banner",
-      "label": "Service image banner",
-      "settings": {
-        "image": {
-          "label": "First image"
-        },
-        "image_2": {
-          "label": "Second image"
-        },
-        "image_overlay_opacity": {
-          "label": "Image overlay opacity"
-        },
-        "image_height": {
-          "label": "Banner height",
-          "options__1": {
-            "label": "Small"
-          },
-          "options__2": {
-            "label": "Medium"
-          },
-          "options__3": {
-            "label": "Large"
-          },
-          "info": "For best results, use an image with a 3:2 aspect ratio. [Learn more](https:\/\/help.shopify.com\/manual\/shopify-admin\/productivity-tools\/image-editor#understanding-image-aspect-ratio)"
-        },
-        "desktop_content_position": {
-          "options__1": {
-            "label": "Top Left"
-          },
-          "options__2": {
-            "label": "Top Center"
-          },
-          "options__3": {
-            "label": "Top Right"
-          },
-          "options__4": {
-            "label": "Middle Left"
-          },
-          "options__5": {
-            "label": "Middle Center"
-          },
-          "options__6": {
-            "label": "Middle Right"
-          },
-          "options__7": {
-            "label": "Bottom Left"
-          },
-          "options__8": {
-            "label": "Bottom Center"
-          },
-          "options__9": {
-            "label": "Bottom Right"
-          },
-          "label": "Desktop content position"
-        },
-        "show_text_box": {
-          "label": "Show container on desktop"
-        },
-        "desktop_content_alignment": {
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Center"
-          },
-          "options__3": {
-            "label": "Right"
-          },
-          "label": "Desktop content alignment"
-        },
-        "color_scheme": {
-          "info": "Visible when container displayed."
-        },
-        "header": {
-          "content": "Mobile Layout"
-        },
-        "mobile_content_alignment": {
-          "name": "Mobile layout",
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Center"
-          },
-          "options__3": {
-            "label": "Right"
-          },
-          "label": "Mobile content alignment"
-        },
-        "stack_images_on_mobile": {
-          "label": "Stack images on mobile"
-        },
-        "show_text_below": {
-          "label": "Show container on mobile"
-        },
-        "adapt_height_first_image": {
-          "label": "Adapt section height to first image size",
-          "info": "Overwrites image banner height setting when checked."
-        }
-      },
-      "blocks": {
-        "heading": {
-          "name": "Heading",
-          "settings": {
-            "heading": {
-              "label": "Heading"
-            }
-          }
-        },
-        "text": {
-          "name": "Text",
-          "settings": {
-            "text": {
-              "label": "Description"
-            },
-            "text_style": {
-              "options__1": {
-                "label": "Body"
-              },
-              "options__2": {
-                "label": "Subtitle"
-              },
-              "options__3": {
-                "label": "Uppercase"
-              },
-              "label": "Text style"
-            }
-          }
-        },
-        "buttons": {
-          "name": "Buttons",
-          "label": "Button style",
-          "btn_style": {
-            "options__1": {
-              "label": "Primary button"
-            },
-            "options__2": {
-              "label": "Secondary button"
-            },
-            "options__3": {
-              "label": "White button"
-            },
-            "options__4": {
-              "label": "Underline button"
-            },
-            "options__5": {
-              "label": "Normal"
-            }
-          },
-          "btn_size": {
-            "label": "Button size",
-            "options__1": {
-              "label": "Button small"
-            },
-            "options__2": {
-              "label": "Button medium"
-            },
-            "options__3": {
-              "label": "Button large"
-            }
-          },
-          "settings": {
-            "label": "Image link",
-            "info": "Link to image",
-            "button_label_1": {
-              "label": "Button label",
-              "info": "Leave the label blank to hide the button."
-            },
-            "button_link_1": {
-              "label": "First button link"
-            },
-            "button_style_secondary_1": {
-              "label": "Use outline button style"
-            },
-            "button_label_2": {
-              "label": "Button link",
-              "info": "Leave the label blank to hide the button."
-            },
-            "button_link_2": {
-              "label": "Second button link"
-            },
-            "button_style_secondary_2": {
-              "label": "Use outline button style"
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Image banner"
-      }
+    "featured_blog": {
+      "view_all": "View all",
+      "onboarding_title": "Your post's title",
+      "onboarding_content": "Your store hasn’t published any blog posts yet. A blog can be used to talk about new product launches, tips, or other news you want to share with your customers."
     },
-    "image-with-text": {
-      "name": "Image with text",
-      "settings": {
-        "image": {
-          "label": "Image"
-        },
-        "height": {
-          "options__1": {
-            "label": "Adapt to image"
-          },
-          "options__2": {
-            "label": "Small"
-          },
-          "options__3": {
-            "label": "Large"
-          },
-          "label": "Image height"
-        },
-        "desktop_image_width": {
-          "options__1": {
-            "label": "Small"
-          },
-          "options__2": {
-            "label": "Medium"
-          },
-          "options__3": {
-            "label": "Large"
-          },
-          "label": "Desktop image width",
-          "info": "Image is automatically optimized for mobile."
-        },
-        "layout": {
-          "options__1": {
-            "label": "Image first"
-          },
-          "options__2": {
-            "label": "Image second"
-          },
-          "label": "Desktop image placement",
-          "info": "Image first is the default mobile layout."
-        },
-        "desktop_content_alignment": {
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Center"
-          },
-          "options__3": {
-            "label": "Right"
-          },
-          "label": "Desktop content alignment"
-        },
-        "desktop_content_position": {
-          "options__1": {
-            "label": "Top"
-          },
-          "options__2": {
-            "label": "Middle"
-          },
-          "options__3": {
-            "label": "Bottom"
-          },
-          "label": "Desktop content position"
-        },
-        "content_layout": {
-          "options__1": {
-            "label": "No overlap"
-          },
-          "options__2": {
-            "label": "Overlap"
-          },
-          "label": "Content layout"
-        },
-        "mobile_content_alignment": {
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Center"
-          },
-          "options__3": {
-            "label": "Right"
-          },
-          "label": "Mobile content alignment"
-        }
-      },
-      "blocks": {
-        "heading": {
-          "name": "Heading",
-          "settings": {
-            "heading": {
-              "label": "Heading"
-            }
-          }
-        },
-        "caption": {
-          "name": "Caption",
-          "settings": {
-            "text": {
-              "label": "Text"
-            },
-            "text_style": {
-              "label": "Text style",
-              "options__1": {
-                "label": "Subtitle"
-              },
-              "options__2": {
-                "label": "Uppercase"
-              }
-            },
-            "caption_size": {
-              "label": "Text size",
-              "options__1": {
-                "label": "Small"
-              },
-              "options__2": {
-                "label": "Medium"
-              },
-              "options__3": {
-                "label": "Large"
-              }
-            }
-          }
-        },
-        "text": {
-          "name": "Text",
-          "settings": {
-            "text": {
-              "label": "Content"
-            },
-            "text_style": {
-              "label": "Text style",
-              "options__1": {
-                "label": "Body"
-              },
-              "options__2": {
-                "label": "Subtitle"
-              }
-            }
-          }
-        },
-        "button": {
-          "name": "Button",
-          "settings": {
-            "button_label": {
-              "label": "Button label",
-              "info": "Leave the label blank to hide the button."
-            },
-            "button_link": {
-              "label": "Button link"
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Image with text"
-      }
+    "featured_collection": {
+      "view_all": "View all",
+      "view_all_label": "View all products in the {{ collection_name }} collection",
+      "slider": "Slider"
     },
-    "main-article": {
-      "name": "Blog post",
-      "blocks": {
-        "recent": {
-          "name": "Recent Post",
-          "label": "Recently Blog Show Limits"
-        },
-        "block_newsletter": {
-          "widget": "Widget categories",
-          "name": "Newsletter Signup",
-          "label": "Placeholder",
-          "label2": "Blog text",
-          "content": "Newslatter content"
-        },
-        "featured_image": {
-          "name": "Featured image",
-          "settings": {
-            "image_height": {
-              "label": "Featured image height",
-              "options__1": {
-                "label": "Adapt to image"
-              },
-              "options__2": {
-                "label": "Small"
-              },
-              "options__3": {
-                "label": "Medium"
-              },
-              "options__4": {
-                "label": "Large"
-              },
-              "info": "For best results, use an image with a 16:9 aspect ratio. [Learn more](https:\/\/help.shopify.com\/manual\/shopify-admin\/productivity-tools\/image-editor#understanding-image-aspect-ratio)"
-            }
-          }
-        },
-        "title": {
-          "name": "Title",
-          "settings": {
-            "blog_show_title": {
-              "label": "Blog Title show"
-            },
-            "show_share": {
-              "label": "Enable Share"
-            },
-            "show_tags": {
-              "label": "Enable Tags",
-              "name": "Tags"
-            },
-            "blog_show_date": {
-              "label": "Show date"
-            },
-            "blog_show_author": {
-              "label": "Show author"
-            }
-          }
-        },
-        "content": {
-          "name": "Content"
-        },
-        "share": {
-          "name": "Share",
-          "settings": {
-            "text": {
-              "label": "Text"
-            },
-            "featured_image_info": {
-              "content": "If you include a link in social media posts, the page’s featured image will be shown as the preview image. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/images\/showing-social-media-thumbnail-images)."
-            },
-            "title_info": {
-              "content": "A store title and description are included with the preview image. [Learn more](https:\/\/help.shopify.com\/manual\/promoting-marketing\/seo\/adding-keywords#set-a-title-and-description-for-your-online-store)."
-            }
-          }
-        }
-      }
+    "collection_list": {
+      "view_all": "View all"
     },
-    "main-blog": {
-      "name": "Blog posts",
-      "settings": {
-        "header": {
-          "content": "Blog post card"
-        },
-        "excerpt": "Show excerpt",
-        "read-link": "Show read more link",
-        "show_image": {
-          "label": "Show featured image"
-        },
-        "show_date": {
-          "label": "Show publised date"
-        },
-        "show_tags": {
-          "label": "Show tags"
-        },
-        "show_author": {
-          "label": "Show author"
-        },
-        "paragraph": {
-          "content": "Change excerpts by editing your blog posts. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/blogs\/writing-blogs#display-an-excerpt-from-a-blog-post)"
-        },
-        "layout": {
-          "label": "Desktop layout",
-          "options__1": {
-            "label": "Grid"
-          },
-          "options__2": {
-            "label": "Collage"
-          },
-          "info": "Posts are stacked on mobile."
-        },
-        "image_height": {
-          "label": "Blog Image aspect ratio",
-          "label2": "Adapt to image",
-          "options__1": {
-            "label": "Adapt to image"
-          },
-          "options__2": {
-            "label": "Small"
-          },
-          "options__3": {
-            "label": "Medium"
-          },
-          "options__4": {
-            "label": "Large"
-          },
-          "info": "For best results, use an image with a 3:2 aspect ratio. [Learn more](https:\/\/help.shopify.com\/manual\/shopify-admin\/productivity-tools\/image-editor#understanding-image-aspect-ratio)"
-        }
-      }
-    },
-    "main-cart-footer": {
-      "name": "Cart Footer",
-      "settings": {
-        "show_cart_note": {
-          "label": "Enable cart note"
-        }
-      },
-      "blocks": {
-        "subtotal": {
-          "name": "Subtotal price"
-        },
-        "buttons": {
-          "name": "Checkout button"
-        }
-      }
-    },
-    "main-cart-items": {
-      "name": "Items",
-      "settings": {
-        "show_vendor": {
-          "label": "Show vendor"
-        }
-      }
-    },
-    "main-collection-banner": {
-      "page-head": "Page header",
-      "name": "Collection banner",
-      "breadcrumb": {
-        "name": "Display Breadcrumb?",
-        "vertical_alignment": "Vertical alignment",
-        "upper_title": "Uppercase title",
-        "enable_parallax": "Enable parallax effect",
-        "collection_all_desc": "Description for all products",
-        "banner": "Custom banner",
-        "info": "Choose a collection to show this banner.",
-        "description": "Description",
-        "desc-label": "Show description",
-        "options__1": {
-          "label": "Breadcrumb outside"
-        },
-        "options__2": {
-          "label": "Breadcrumb inside"
-        },
-        "options__3": {
-          "label": "Without breadcrumb"
-        }
-      },
-      "label": "Breadcrumb layout",
-      "settings": {
-        "paragraph": {
-          "content": "Add a description or image by editing your collection. [Learn more](https:\/\/help.shopify.com\/manual\/products\/collections\/collection-layout)"
-        },
-        "show_collection_description": {
-          "label": "Show collection description"
-        },
-        "show_collection_image": {
-          "label": "Show collection image",
-          "info": "For best results, use an image with a 16:9 aspect ratio. [Learn more](https:\/\/help.shopify.com\/manual\/shopify-admin\/productivity-tools\/image-editor#understanding-image-aspect-ratio)"
-        }
-      }
-    },
-    "main-collection-product-grid": {
-      "name": "Product grid",
-      "settings": {
-        "sidebar": {
-          "name": "Filters position",
-          "options__1": {
-            "label": "Left sidebar"
-          },
-          "options__2": {
-            "label": "Right sidebar"
-          },
-          "options__3": {
-            "label": "Off-canvas sidebar"
-          }
-        },
-        "paginate_type": {
-          "name": "Pagination type",
-          "label": "PAGINATION",
-          "options__1": {
-            "label": "Paging by number"
-          },
-          "options__2": {
-            "label": "Load more button"
-          },
-          "options__3": {
-            "label": "Infinite loading"
-          }
-        },
-        "header": {
-          "content": "Media",
-          "info": "Learn more about satish [media types.](https:\/\/help.shopify.com\/manual\/products\/product-media)"
-        },
-        "enable_sticky_info": {
-          "label": "Enable sticky content on desktop"
-        },
-        "gallery_layout": {
-          "label": "Desktop layout",
-          "options__1": {
-            "label": "Stacked"
-          },
-          "options__2": {
-            "label": "Thumbnails"
-          },
-          "options__3": {
-            "label": "Thumbnail carousel"
-          }
-        },
-        "media_size": {
-          "label": "Desktop media size",
-          "info": "Media is automatically optimized for mobile.",
-          "options__1": {
-            "label": "Small"
-          },
-          "options__2": {
-            "label": "Medium"
-          },
-          "options__3": {
-            "label": "Large"
-          }
-        },
-        "mobile_thumbnails": {
-          "label": "Mobile layout",
-          "options__1": {
-            "label": "Show thumbnails"
-          },
-          "options__2": {
-            "label": "Hide thumbnails"
-          }
-        },
-        "hide_variants": {
-          "label": "Hide other variants’ media after selecting a variant"
-        },
-        "enable_video_looping": {
-          "label": "Enable video looping"
-        },
-        "products_per_page": {
-          "label": "Products per page"
-        },
-        "columns_desktop": {
-          "label": "Number of columns on desktop"
-        },
-        "filter": {
-          "name": "Filter by tags",
-          "design_filtergroup": {
-            "name": "Design",
-            "options__1": {
-              "label": "List"
-            },
-            "options__2": {
-              "label": "Inline link"
-            },
-            "options__3": {
-              "label": "Button"
-            },
-            "options__4": {
-              "label": "Color"
-            }
-          }
-        },
-        "enable_filtering": {
-          "label": "Enable filtering",
-          "info": "Customize [filters](\/admin\/menus)"
-        },
-        "filter_type": {
-          "label": "Desktop filter layout",
-          "options__1": {
-            "label": "Horizontal"
-          },
-          "options__2": {
-            "label": "Vertical"
-          },
-          "options__3": {
-            "label": "Drawer"
-          },
-          "info": "Drawer is the default mobile layout."
-        },
-        "enable_sorting": {
-          "label": "Enable sorting"
-        },
-        "image_ratio": {
-          "label": "Image ratio",
-          "options__1": {
-            "label": "Adapt to image"
-          },
-          "options__2": {
-            "label": "Portrait"
-          },
-          "options__3": {
-            "label": "Square"
-          }
-        },
-        "show_secondary_image": {
-          "label": "Show second image on hover"
-        },
-        "show_vendor": {
-          "label": "Show vendor"
-        },
-        "show_rating": {
-          "label": "Show product rating",
-          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/page-types#product-grid-section-settings)"
-        },
-        "header__1": {
-          "content": "Filtering and sorting"
-        },
-        "header__3": {
-          "content": "Product card"
-        },
-        "enable_tags": {
-          "label": "Enable filtering",
-          "info": "[Customize filters](\/admin\/menus)"
-        },
-        "enable_quick_buy": {
-          "label": "Enable quick add button",
-          "info": "Optimal with popup or drawer cart type."
-        },
-        "collapse_on_larger_devices": {
-          "label": "Collapse on desktop"
-        },
-        "header_mobile": {
-          "content": "Mobile Layout"
-        },
-        "columns_mobile": {
-          "label": "Number of columns on mobile",
-          "options__1": {
-            "label": "1 column"
-          },
-          "options__2": {
-            "label": "2 columns"
-          }
-        }
-      }
-    },
-    "product-listing": {
-      "name": "Product listing",
-      "max-height": "Max height",
-      "filtergroup": "Tags List",
-      "show_label": "Show color with label",
-      "sorting_filtering": "Sorting and Filtering",
-      "show_columns_switcher": "Show columns switcher",
-      "custom-block": "Custom block",
-      "sidebar_categories_title": "Categories Block Title",
-      "default-settings": "Default settings",
-      "popular-tag": {
-        "name": "Popular Tags",
-        "label": "Unique Tags List",
-        "tag": "Tag?"
-      },
-      "grid_columns": {
-        "label": "Products per row in Grid layout",
-        "info": "For devices with screen width greater than 1024px"
-      },
-      "limit-height-widget": "Limit filter widget's height"
-    },
-    "main-list-collections": {
-      "name": "Collections list page",
-      "label": "All Collections",
-      "grid_columns": "Collection per row in Grid layout",
-      "grid_columns_info": "For devices with screen width greater than 1024px",
-      "display_type": {
-        "name": "Select collections to show",
-        "all": "All",
-        "selected": "Selected"
-      },
-      "settings": {
-        "name": "Settings",
-        "title": {
-          "label": "Heading"
-        },
-        "sort": {
-          "label": "Sort collections by:",
-          "options__1": {
-            "label": "Alphabetically, A-Z"
-          },
-          "options__2": {
-            "label": "Alphabetically, Z-A"
-          },
-          "options__3": {
-            "label": "Date, new to old"
-          },
-          "options__4": {
-            "label": "Date, old to new"
-          },
-          "options__5": {
-            "label": "Product count, high to low"
-          },
-          "options__6": {
-            "label": "Product count, low to high"
-          }
-        },
-        "image_ratio": {
-          "label": "Image ratio",
-          "options__1": {
-            "label": "Adapt to image"
-          },
-          "options__2": {
-            "label": "Portrait"
-          },
-          "options__3": {
-            "label": "Square"
-          },
-          "info": "Add images by editing your collections. [Learn more](https:\/\/help.shopify.com\/manual\/products\/collections)"
-        },
-        "columns_desktop": {
-          "label": "Number of columns on desktop"
-        },
-        "header_mobile": {
-          "content": "Mobile Layout"
-        },
-        "columns_mobile": {
-          "label": "Number of columns on mobile",
-          "options__1": {
-            "label": "1 column"
-          },
-          "options__2": {
-            "label": "2 columns"
-          }
-        }
-      }
-    },
-    "main-page": {
-      "name": "Page"
-    },
-    "main-password-footer": {
-      "name": "Password footer"
-    },
-    "main-password-header": {
-      "name": "Password header",
-      "settings": {
-        "logo": {
-          "label": "Logo image"
-        },
-        "logo_max_width": {
-          "label": "Custom logo width",
-          "unit": "px"
-        }
-      }
-    },
-    "main-product": {
-      "name": "Product information",
-      "prod-media": "Product media",
-      "show_nav_media_mobile": "Show thumbnails on mobile",
-      "show_pagination_mobile": "Show pagination on mobile",
-      "stickey-cart": {
-        "name": "Sticky add to cart",
-        "show_stickey_mobile": "Show on mobile",
-        "show_stickey_desk": "Show on desktop"
-      },
-      "gallery_layout": {
-        "name": "Layout",
-        "options__1": {
-          "label": "Standard"
-        },
-        "options__2": {
-          "label": "Grid 1 column"
-        },
-        "options__3": {
-          "label": "Grid 2 columns"
-        },
-        "options__4": {
-          "label": "Grid mix"
-        },
-        "options__5": {
-          "label": "Slider 1 columns"
-        },
-        "options__6": {
-          "label": "Slider vertical"
-        },
-        "options__7": {
-          "label": "Slider full width"
-        },
-        "options__8": {
-          "label": "Slider 2 columns"
-        }
-      },
-      "blocks": {
-        "visitor": "Visitors counter",
-        "counter": "Counter",
-        "countdown": "Product-stock",
-        "addons": {
-          "name": "Addon buttons",
-          "settings": {
-            "heading": {
-              "info": "Include a heading that explains the content.",
-              "label": "Heading"
-            },
-            "content": {
-              "label": "Row content"
-            },
-            "page": {
-              "label": "Row content from page"
-            },
-            "icon": {
-              "label": "Icon",
-              "options__1": {
-                "label": "None"
-              },
-              "options__2": {
-                "label": "Apple"
-              },
-              "options__3": {
-                "label": "Banana"
-              },
-              "options__4": {
-                "label": "Bottle"
-              },
-              "options__5": {
-                "label": "Box"
-              },
-              "options__6": {
-                "label": "Carrot"
-              },
-              "options__7": {
-                "label": "Chat bubble"
-              },
-              "options__8": {
-                "label": "Check mark"
-              },
-              "options__9": {
-                "label": "Clipboard"
-              },
-              "options__10": {
-                "label": "Dairy"
-              },
-              "options__11": {
-                "label": "Dairy free"
-              },
-              "options__12": {
-                "label": "Dryer"
-              },
-              "options__13": {
-                "label": "Eye"
-              },
-              "options__14": {
-                "label": "Fire"
-              },
-              "options__15": {
-                "label": "Gluten free"
-              },
-              "options__16": {
-                "label": "Heart"
-              },
-              "options__17": {
-                "label": "Iron"
-              },
-              "options__18": {
-                "label": "Leaf"
-              },
-              "options__19": {
-                "label": "Leather"
-              },
-              "options__20": {
-                "label": "Lightning bolt"
-              },
-              "options__21": {
-                "label": "Lipstick"
-              },
-              "options__22": {
-                "label": "Lock"
-              },
-              "options__23": {
-                "label": "Map pin"
-              },
-              "options__24": {
-                "label": "Nut free"
-              },
-              "options__25": {
-                "label": "Pants"
-              },
-              "options__26": {
-                "label": "Paw print"
-              },
-              "options__27": {
-                "label": "Pepper"
-              },
-              "options__28": {
-                "label": "Perfume"
-              },
-              "options__29": {
-                "label": "Plane"
-              },
-              "options__30": {
-                "label": "Plant"
-              },
-              "options__31": {
-                "label": "Price tag"
-              },
-              "options__32": {
-                "label": "Question mark"
-              },
-              "options__33": {
-                "label": "Recycle"
-              },
-              "options__34": {
-                "label": "Return"
-              },
-              "options__35": {
-                "label": "Ruler"
-              },
-              "options__36": {
-                "label": "Serving dish"
-              },
-              "options__37": {
-                "label": "Shirt"
-              },
-              "options__38": {
-                "label": "Shoe"
-              },
-              "options__39": {
-                "label": "Silhouette"
-              },
-              "options__40": {
-                "label": "Snowflake"
-              },
-              "options__41": {
-                "label": "Star"
-              },
-              "options__42": {
-                "label": "Stopwatch"
-              },
-              "options__43": {
-                "label": "Truck"
-              },
-              "options__44": {
-                "label": "Washing"
-              }
-            }
-          }
-        },
-        "show_wishlist": "Wish list",
-        "show_compare": "Add Compare",
-        "show_atp": "Ask about this product",
-        "text": {
-          "name": "Text",
-          "settings": {
-            "text": {
-              "label": "Text"
-            },
-            "text_style": {
-              "label": "Text style",
-              "options__1": {
-                "label": "Body"
-              },
-              "options__2": {
-                "label": "Subtitle"
-              },
-              "options__3": {
-                "label": "Uppercase"
-              }
-            }
-          }
-        },
-        "title": {
-          "name": "Product title"
-        },
-        "description": {
-          "name": "Short description"
-        },
-        "price": {
-          "name": "Price"
-        },
-        "quantity_selector": {
-          "name": "Quantity selector"
-        },
-        "variant_picker": {
-          "name": "Variant selector",
-          "settings": {
-            "picker_type": {
-              "label": "Type",
-              "options__1": {
-                "label": "Dropdown"
-              },
-              "options__2": {
-                "label": "Pills"
-              }
-            }
-          }
-        },
-        "buy_buttons": {
-          "name": "Buy buttons",
-          "settings": {
-            "show_dynamic_checkout": {
-              "label": "Show dynamic checkout buttons",
-              "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
-            }
-          }
-        },
-        "pickup_availability": {
-          "name": "Pickup availability"
-        },
-        "share": {
-          "name": "Share",
-          "settings": {
-            "text": {
-              "label": "Text"
-            },
-            "featured_image_info": {
-              "content": "If you include a link in social media posts, the page’s featured image will be shown as the preview image. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/images\/showing-social-media-thumbnail-images)."
-            },
-            "title_info": {
-              "content": "A store title and description are included with the preview image. [Learn more](https:\/\/help.shopify.com\/manual\/promoting-marketing\/seo\/adding-keywords#set-a-title-and-description-for-your-online-store)."
-            }
-          }
-        },
-        "custom_liquid": {
-          "name": "Custom liquid",
-          "settings": {
-            "custom_liquid": {
-              "label": "Custom liquid",
-              "info": "Add app snippets or other Liquid code to create advanced customizations."
-            }
-          }
-        },
-        "popup": {
-          "name": "Pop-up",
-          "settings": {
-            "link_label": {
-              "label": "Link label"
-            },
-            "page": {
-              "label": "Page"
-            }
-          }
-        },
-        "rating": {
-          "name": "Product rating",
-          "settings": {
-            "paragraph": {
-              "content": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/page-types#product-rating-block)"
-            }
-          }
-        }
-      },
-      "settings": {
-        "header": {
-          "content": "Media",
-          "info": "Learn more about [media types.](https:\/\/help.shopify.com\/manual\/products\/product-media)"
-        },
-        "enable_sticky_info": {
-          "label": "Enable sticky content on desktop"
-        },
-        "gallery_layout": {
-          "label": "Desktop layout",
-          "options__1": {
-            "label": "Stacked"
-          },
-          "options__2": {
-            "label": "Thumbnails"
-          },
-          "options__3": {
-            "label": "Thumbnail carousel"
-          }
-        },
-        "media_size": {
-          "label": "Desktop media size",
-          "info": "Media is automatically optimized for mobile.",
-          "options__1": {
-            "label": "Small"
-          },
-          "options__2": {
-            "label": "Medium"
-          },
-          "options__3": {
-            "label": "Large"
-          }
-        },
-        "mobile_thumbnails": {
-          "label": "Mobile layout",
-          "options__1": {
-            "label": "Show thumbnails"
-          },
-          "options__2": {
-            "label": "Hide thumbnails"
-          }
-        },
-        "hide_variants": {
-          "label": "Hide other variants’ media after selecting a variant"
-        },
-        "enable_video_looping": {
-          "label": "Enable video looping"
-        }
-      }
-    },
-    "main-search": {
-      "name": "Search results",
-      "label": "Search",
-      "settings": {
-        "columns_desktop": {
-          "label": "Number of columns on desktop"
-        },
-        "image_ratio": {
-          "label": "Image ratio",
-          "options__1": {
-            "label": "Adapt to image"
-          },
-          "options__2": {
-            "label": "Portrait"
-          },
-          "options__3": {
-            "label": "Square"
-          }
-        },
-        "show_secondary_image": {
-          "label": "Show second image on hover"
-        },
-        "show_vendor": {
-          "label": "Show vendor"
-        },
-        "show_rating": {
-          "label": "Show product rating",
-          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/page-types#search-results-section-settings)"
-        },
-        "header__1": {
-          "content": "Product card"
-        },
-        "header__2": {
-          "content": "Blog card"
-        },
-        "article_show_date": {
-          "label": "Show date"
-        },
-        "article_show_author": {
-          "label": "Show author"
-        },
-        "header_mobile": {
-          "content": "Mobile Layout"
-        },
-        "columns_mobile": {
-          "label": "Number of columns on mobile",
-          "options__1": {
-            "label": "1 column"
-          },
-          "options__2": {
-            "label": "2 columns"
-          }
-        }
-      }
-    },
-    "multicolumn": {
-      "name": "Multicolumn",
-      "settings": {
-        "title": {
-          "label": "Heading"
-        },
-        "image_width": {
-          "label": "Image width",
-          "options__1": {
-            "label": "One-third width of column"
-          },
-          "options__2": {
-            "label": "Half width of column"
-          },
-          "options__3": {
-            "label": "Full width of column"
-          }
-        },
-        "image_ratio": {
-          "label": "Image ratio",
-          "options__1": {
-            "label": "Adapt to image"
-          },
-          "options__2": {
-            "label": "Portrait"
-          },
-          "options__3": {
-            "label": "Square"
-          },
-          "options__4": {
-            "label": "Circle"
-          }
-        },
-        "columns_desktop": {
-          "label": "Number of columns on desktop"
-        },
-        "column_alignment": {
-          "label": "Column alignment",
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Center"
-          }
-        },
-        "background_style": {
-          "label": "Secondary background",
-          "options__1": {
-            "label": "None"
-          },
-          "options__2": {
-            "label": "Show as column background"
-          }
-        },
-        "button_label": {
-          "label": "Button label"
-        },
-        "button_link": {
-          "label": "Button link"
-        },
-        "header_mobile": {
-          "content": "Mobile Layout"
-        },
-        "columns_mobile": {
-          "label": "Number of columns on mobile",
-          "options__1": {
-            "label": "1 column"
-          },
-          "options__2": {
-            "label": "2 columns"
-          }
-        },
-        "swipe_on_mobile": {
-          "label": "Enable swipe on mobile"
-        }
-      },
-      "blocks": {
-        "column": {
-          "name": "Column",
-          "settings": {
-            "image": {
-              "label": "Image"
-            },
-            "title": {
-              "label": "Heading"
-            },
-            "text": {
-              "label": "Description"
-            },
-            "link_label": {
-              "label": "Link label"
-            },
-            "link": {
-              "label": "Link"
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Multicolumn"
-      }
-    },
-    "newsletter": {
-      "label": "Newsletter",
-      "label1": "Newsletter Text",
-      "name": "Newsletter",
-      "settings": {
-        "layout-styling": {
-          "name": "Layout styling",
-          "bg_image": "Background image",
-          "content": "Social share",
-          "info": "This is only visible in style-2",
-          "social-heading": "Left-Heading",
-          "sub-head": "Left-Sub",
-          "desc": "Left-Description",
-          "options__1": {
-            "label": "Horizontal"
-          },
-          "options__2": {
-            "label": "Vertical"
-          },
-          "options__3": {
-            "label": "Form with image"
-          },
-          "options__4": {
-            "label": "Style 4"
-          },
-          "options__5": {
-            "label": "Style 5"
-          }
-        },
-        "full_width": {
-          "label": "Make section full width"
-        },
-        "paragraph": {
-          "content": "Each email subscription creates a customer account. [Learn more](https:\/\/help.shopify.com\/manual\/customers)"
-        }
-      },
-      "blocks": {
-        "heading": {
-          "name": "Heading",
-          "settings": {
-            "heading": {
-              "label": "Heading"
-            }
-          }
-        },
-        "paragraph": {
-          "name": "Subheading",
-          "settings": {
-            "paragraph": {
-              "label": "Description"
-            }
-          }
-        },
-        "email_form": {
-          "name": "Email form"
-        }
-      },
-      "presets": {
-        "name": "Newsletter"
-      }
-    },
-    "email-signup-banner": {
-      "name": "Email signup banner",
-      "settings": {
-        "paragraph": {
-          "content": "Each email subscription creates a customer account. [Learn more](https:\/\/help.shopify.com\/manual\/customers)"
-        },
-        "image": {
-          "label": "Background image"
-        },
-        "image_overlay_opacity": {
-          "label": "Image overlay opacity"
-        },
-        "show_background_image": {
-          "label": "Show background image"
-        },
-        "show_heading": {
-          "label": "Show Heading",
-          "label2": "Show Heading Text"
-        },
-        "show_subheading": {
-          "label": "Show Sub-Heading text",
-          "label2": "Sub Heading Text"
-        },
-        "show_description": {
-          "label": "Show description text"
-        },
-        "show_text_box": {
-          "label": "Show container on desktop"
-        },
-        "desktop_content_position": {
-          "options__1": {
-            "label": "Top Left"
-          },
-          "options__2": {
-            "label": "Top Center"
-          },
-          "options__3": {
-            "label": "Top Right"
-          },
-          "options__4": {
-            "label": "Middle Left"
-          },
-          "options__5": {
-            "label": "Middle Center"
-          },
-          "options__6": {
-            "label": "Middle Right"
-          },
-          "options__7": {
-            "label": "Bottom Left"
-          },
-          "options__8": {
-            "label": "Bottom Center"
-          },
-          "options__9": {
-            "label": "Bottom Right"
-          },
-          "label": "Desktop content position"
-        },
-        "color_scheme": {
-          "info": "Visible when container displayed."
-        },
-        "image_height": {
-          "label": "Banner height",
-          "options__1": {
-            "label": "Adapt to image"
-          },
-          "options__2": {
-            "label": "Small"
-          },
-          "options__3": {
-            "label": "Medium"
-          },
-          "options__4": {
-            "label": "Large"
-          },
-          "info": "For best results, use an image with a 16:9 aspect ratio. [Learn more](https:\/\/help.shopify.com\/manual\/shopify-admin\/productivity-tools\/image-editor#understanding-image-aspect-ratio)"
-        },
-        "desktop_content_alignment": {
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Center"
-          },
-          "options__3": {
-            "label": "Right"
-          },
-          "label": "Desktop content alignment"
-        },
-        "header": {
-          "content": "Mobile Layout"
-        },
-        "mobile_content_alignment": {
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Center"
-          },
-          "options__3": {
-            "label": "Right"
-          },
-          "label": "Mobile content alignment"
-        },
-        "show_text_below": {
-          "label": "Show content below image on mobile",
-          "info": "For best results, use an image with a 16:9 aspect ratio. [Learn more](https:\/\/help.shopify.com\/manual\/shopify-admin\/productivity-tools\/image-editor#understanding-image-aspect-ratio)"
-        }
-      },
-      "blocks": {
-        "heading": {
-          "name": "Heading",
-          "settings": {
-            "heading": {
-              "label": "Heading"
-            }
-          }
-        },
-        "paragraph": {
-          "name": "Paragraph",
-          "settings": {
-            "paragraph": {
-              "label": "Description"
-            },
-            "text_style": {
-              "options__1": {
-                "label": "Body"
-              },
-              "options__2": {
-                "label": "Subtitle"
-              },
-              "label": "Text style"
-            }
-          }
-        },
-        "email_form": {
-          "name": "Email form"
-        }
-      },
-      "presets": {
-        "name": "Email signup banner"
-      }
-    },
-    "page": {
-      "name": "Page",
-      "settings": {
-        "page": {
-          "label": "Page"
-        }
-      },
-      "presets": {
-        "name": "Page"
-      }
-    },
-    "product-recommendations": {
-      "name": "Product recommendations",
-      "settings": {
-        "heading": {
-          "label": "Heading"
-        },
-        "products_to_show": {
-          "label": "Maximum products to show"
-        },
-        "columns_desktop": {
-          "label": "Number of columns on desktop"
-        },
-        "paragraph__1": {
-          "content": "Dynamic recommendations use order and product information to change and improve over time. [Learn more](https:\/\/help.shopify.com\/themes\/development\/recommended-products)"
-        },
-        "header__2": {
-          "content": "Product card"
-        },
-        "image_ratio": {
-          "label": "Image ratio",
-          "options__1": {
-            "label": "Adapt to image"
-          },
-          "options__2": {
-            "label": "Portrait"
-          },
-          "options__3": {
-            "label": "Square"
-          }
-        },
-        "show_secondary_image": {
-          "label": "Show second image on hover"
-        },
-        "show_vendor": {
-          "label": "Show vendor"
-        },
-        "show_rating": {
-          "label": "Show product rating",
-          "info": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/page-types#product-recommendations-section-settings)"
-        },
-        "header_mobile": {
-          "content": "Mobile Layout"
-        },
-        "columns_mobile": {
-          "label": "Number of columns on mobile",
-          "options__1": {
-            "label": "1 column"
-          },
-          "options__2": {
-            "label": "2 columns"
-          }
-        }
-      }
-    },
-    "rich-text": {
-      "name": "Rich text",
-      "label": "Custom html",
-      "settings": {
-        "full_width": {
-          "label": "Make section full width"
-        }
-      },
-      "blocks": {
-        "heading": {
-          "name": "Heading",
-          "info": "Allow custom HTML",
-          "settings": {
-            "heading": {
-              "label": "Heading"
-            }
-          }
-        },
-        "text": {
-          "name": "Text",
-          "settings": {
-            "text": {
-              "label": "Description"
-            }
-          }
-        },
-        "button": {
-          "name": "Button",
-          "settings": {
-            "button_label": {
-              "label": "Button label"
-            },
-            "button_link": {
-              "label": "Button link"
-            },
-            "button_style_secondary": {
-              "label": "Use outline button style"
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Rich text"
-      }
+    "collection_template": {
+      "empty": "No products found",
+      "title": "Collection",
+      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all<\/a>"
     },
     "video": {
-      "name": "Video",
-      "settings": {
-        "heading": {
-          "label": "Heading"
-        },
-        "cover_image": {
-          "label": "Cover image"
-        },
-        "video_url": {
-          "label": "URL",
-          "placeholder": "Use a YouTube or Vimeo URL",
-          "info": "Video plays in the page."
-        },
-        "description": {
-          "label": "Video alt text",
-          "info": "Describe the video for customers using screen readers. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#video)"
-        },
-        "image_padding": {
-          "label": "Add image padding",
-          "info": "Select image padding if you don't want your cover image to be cropped."
-        },
-        "full_width": {
-          "label": "Make section full width"
-        }
-      },
-      "presets": {
-        "name": "Video"
-      }
+      "load_video": "Load video: {{ description }}"
     },
     "slideshow": {
-      "name": "Slideshow",
-      "info": "Content",
-      "labels": "Content in container box",
-      "show_bg_size": {
-        "name": "Background image size",
-        "info": "Only Desktop",
-        "options__1": {
-          "label": "Full-width"
-        },
-        "options__2": {
-          "label": "Container-width"
-        }
-      },
-      "settings": {
-        "btn-label1": "Shop Now",
-        "label": "General",
-        "text_color": "Text color",
-        "slide-height": {
-          "label": "Slide height",
-          "info": "Only applies to screens > 767px",
-          "options__1": {
-            "label": "Adapt to first slide image"
-          },
-          "options__2": {
-            "label": "Small"
-          },
-          "options__3": {
-            "label": "Medium"
-          },
-          "options__4": {
-            "label": "Large"
-          },
-          "options__5": {
-            "label": "Full-screen"
-          }
-        },
-        "overlay": "Show overlay",
-        "position": {
-          "label": "Pagination position",
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Bottom"
-          },
-          "options__3": {
-            "label": "Right"
-          }
-        },
-        "pagination": {
-          "label": "Pagination color",
-          "label2": "Show pagination",
-          "label3": "Show navigation",
-          "label4": "Auto-rotate slides",
-          "label5": "Change slides every",
-          "info5": "Work when auto-rotate",
-          "options__1": {
-            "label": "Dark"
-          },
-          "options__2": {
-            "label": "Light"
-          }
-        },
-        "mobile-setting": {
-          "name": "Mobile settings",
-          "label": "Use content above the image"
-        },
-        "alignment": {
-          "name": "Image position",
-          "label": "Content position",
-          "options__1": {
-            "label": "Top left"
-          },
-          "options__2": {
-            "label": "Top center"
-          },
-          "options__3": {
-            "label": "Top right"
-          },
-          "options__4": {
-            "label": "Middle left"
-          },
-          "options__5": {
-            "label": "Middle center"
-          },
-          "options__6": {
-            "label": "Middle right"
-          },
-          "options__7": {
-            "label": "Bottom left"
-          },
-          "options__8": {
-            "label": "Bottom center"
-          },
-          "options__9": {
-            "label": "Bottom right"
-          }
-        },
-        "text_alignment": {
-          "name": "Text alignment",
-          "text-align": "Text alignment",
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Center"
-          },
-          "options__3": {
-            "label": "Right"
-          }
-        },
-        "layout": {
-          "label": "Layout",
-          "options__1": {
-            "label": "Full width"
-          },
-          "options__2": {
-            "label": "Grid"
-          }
-        },
-        "slide_height": {
-          "label": "Slide height",
-          "options__1": {
-            "label": "Adapt to first image"
-          },
-          "options__2": {
-            "label": "Small"
-          },
-          "options__3": {
-            "label": "Medium"
-          },
-          "options__4": {
-            "label": "Large"
-          }
-        },
-        "slider_visual": {
-          "label": "Pagination style",
-          "options__1": {
-            "label": "Counter"
-          },
-          "options__2": {
-            "label": "Dots"
-          },
-          "options__3": {
-            "label": "Numbers"
-          }
-        },
-        "auto_rotate": {
-          "label": "Auto-rotate slides"
-        },
-        "change_slides_speed": {
-          "label": "Change slides every"
-        },
-        "mobile": {
-          "content": "Mobile layout"
-        },
-        "show_text_below": {
-          "label": "Show content below images on mobile"
-        },
-        "accessibility": {
-          "content": "Accessibility",
-          "label": "Slideshow description",
-          "info": "Describe the slideshow for customers using screen readers."
-        },
-        "blocks": {
-          "name": "Image slide",
-          "background": {
-            "label": "Background settings",
-            "d-label": "Image on desktop",
-            "d-info": "1920 x 900px recommended",
-            "m-label": "Image on mobile",
-            "m-info": "600 x 480px recommended",
-            "bg-option": {
-              "name": "Background image or video option",
-              "info": "Only Desktop",
-              "label1": "Video",
-              "label2": "Image"
-            }
-          }
-        }
-      },
-      "blocks": {
-        "slide": {
-          "name": "Slide",
-          "settings": {
-            "image": {
-              "label": "Image"
-            },
-            "heading": {
-              "label": "Heading"
-            },
-            "text_size": "Text size",
-            "subheading": {
-              "label": "Subheading",
-              "info": "Allow custom HTML"
-            },
-            "button_label": {
-              "label": "Button label",
-              "info": "Leave the label blank to hide the button."
-            },
-            "link": {
-              "label": "Button link"
-            },
-            "secondary_style": {
-              "label": "Use outline button style"
-            },
-            "box_align": {
-              "label": "Desktop content position",
-              "info": "Position is automatically optimized for mobile.",
-              "options__1": {
-                "label": "Top left"
-              },
-              "options__2": {
-                "label": "Top center"
-              },
-              "options__3": {
-                "label": "Top right"
-              },
-              "options__4": {
-                "label": "Middle left"
-              },
-              "options__5": {
-                "label": "Middle center"
-              },
-              "options__6": {
-                "label": "Middle right"
-              },
-              "options__7": {
-                "label": "Bottom left"
-              },
-              "options__8": {
-                "label": "Bottom center"
-              },
-              "options__9": {
-                "label": "Bottom right"
-              }
-            },
-            "show_text_box": {
-              "label": "Show container on desktop"
-            },
-            "text_alignment": {
-              "label": "Desktop content alignment",
-              "option_1": {
-                "label": "Left"
-              },
-              "option_2": {
-                "label": "Center"
-              },
-              "option_3": {
-                "label": "Right"
-              }
-            },
-            "image_overlay_opacity": {
-              "label": "Image overlay opacity"
-            },
-            "color_scheme": {
-              "info": "Visible when container displayed."
-            },
-            "text_alignment_mobile": {
-              "label": "Mobile content alignment",
-              "options__1": {
-                "label": "Left"
-              },
-              "options__2": {
-                "label": "Center"
-              },
-              "options__3": {
-                "label": "Right"
-              }
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Slideshow"
-      }
+      "load_slide": "Load slide",
+      "previous_slideshow": "Previous slide",
+      "next_slideshow": "Next slide",
+      "pause_slideshow": "Pause slideshow",
+      "play_slideshow": "Play slideshow",
+      "carousel": "Carousel",
+      "slide": "Slide"
     },
-    "collapsible_content": {
-      "name": "Collapsible tabs",
-      "settings": {
-        "caption": {
-          "label": "Caption"
-        },
-        "heading": {
-          "label": "Heading"
-        },
-        "heading_alignment": {
-          "label": "Heading alignment",
-          "options__1": {
-            "label": "Left"
-          },
-          "options__2": {
-            "label": "Center"
-          },
-          "options__3": {
-            "label": "Right"
-          }
-        },
-        "layout": {
-          "label": "Layout",
-          "options__1": {
-            "label": "No container"
-          },
-          "options__2": {
-            "label": "Row container"
-          },
-          "options__3": {
-            "label": "Section container"
-          }
-        },
-        "container_color_scheme": {
-          "label": "Container color scheme",
-          "info": "Visible when Layout is set to Row or Section container."
-        },
-        "open_first_collapsible_row": {
-          "label": "Open first collapsible row"
-        },
-        "header": {
-          "content": "Image layout"
-        },
-        "image": {
-          "label": "Image"
-        },
-        "image_ratio": {
-          "label": "Image ratio",
-          "options__1": {
-            "label": "Adapt to image"
-          },
-          "options__2": {
-            "label": "Small"
-          },
-          "options__3": {
-            "label": "Large"
-          }
-        },
-        "desktop_layout": {
-          "label": "Desktop layout",
-          "options__1": {
-            "label": "Image first"
-          },
-          "options__2": {
-            "label": "Image second"
-          },
-          "info": "Image is always first on mobile."
-        }
-      },
-      "blocks": {
-        "collapsible_row": {
-          "name": "block",
-          "settings": {
-            "heading": {
-              "info": "Include a heading that explains the content.",
-              "label": "Heading"
-            },
-            "row_content": {
-              "label": "Row content"
-            },
-            "page": {
-              "label": "Row content from page"
-            },
-            "icon": {
-              "label": "Icon",
-              "options__1": {
-                "label": "None"
-              },
-              "options__2": {
-                "label": "Apple"
-              },
-              "options__3": {
-                "label": "Banana"
-              },
-              "options__4": {
-                "label": "Bottle"
-              },
-              "options__5": {
-                "label": "Box"
-              },
-              "options__6": {
-                "label": "Carrot"
-              },
-              "options__7": {
-                "label": "Chat bubble"
-              },
-              "options__8": {
-                "label": "Check mark"
-              },
-              "options__9": {
-                "label": "Clipboard"
-              },
-              "options__10": {
-                "label": "Dairy"
-              },
-              "options__11": {
-                "label": "Dairy free"
-              },
-              "options__12": {
-                "label": "Dryer"
-              },
-              "options__13": {
-                "label": "Eye"
-              },
-              "options__14": {
-                "label": "Fire"
-              },
-              "options__15": {
-                "label": "Gluten free"
-              },
-              "options__16": {
-                "label": "Heart"
-              },
-              "options__17": {
-                "label": "Iron"
-              },
-              "options__18": {
-                "label": "Leaf"
-              },
-              "options__19": {
-                "label": "Leather"
-              },
-              "options__20": {
-                "label": "Lightning bolt"
-              },
-              "options__21": {
-                "label": "Lipstick"
-              },
-              "options__22": {
-                "label": "Lock"
-              },
-              "options__23": {
-                "label": "Map pin"
-              },
-              "options__24": {
-                "label": "Nut free"
-              },
-              "options__25": {
-                "label": "Pants"
-              },
-              "options__26": {
-                "label": "Paw print"
-              },
-              "options__27": {
-                "label": "Pepper"
-              },
-              "options__28": {
-                "label": "Perfume"
-              },
-              "options__29": {
-                "label": "Plane"
-              },
-              "options__30": {
-                "label": "Plant"
-              },
-              "options__31": {
-                "label": "Price tag"
-              },
-              "options__32": {
-                "label": "Question mark"
-              },
-              "options__33": {
-                "label": "Recycle"
-              },
-              "options__34": {
-                "label": "Return"
-              },
-              "options__35": {
-                "label": "Ruler"
-              },
-              "options__36": {
-                "label": "Serving dish"
-              },
-              "options__37": {
-                "label": "Shirt"
-              },
-              "options__38": {
-                "label": "Shoe"
-              },
-              "options__39": {
-                "label": "Silhouette"
-              },
-              "options__40": {
-                "label": "Snowflake"
-              },
-              "options__41": {
-                "label": "Star"
-              },
-              "options__42": {
-                "label": "Stopwatch"
-              },
-              "options__43": {
-                "label": "Truck"
-              },
-              "options__44": {
-                "label": "Washing"
-              }
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Collapsible tabs"
-      }
+    "page": {
+      "title": "Page title"
     }
-  }
+  },
+  "localization": {
+    "country_label": "Country\/region",
+    "language_label": "Language",
+    "update_language": "Update language",
+    "update_country": "Update country\/region"
+  },
+  "customer": {
+    "account": {
+      "title": "Account",
+      "details": "Account details",
+      "view_addresses": "View addresses",
+      "return": "Return to Account details"
+    },
+    "account_fallback": "Account",
+    "activate_account": {
+      "title": "Activate account",
+      "subtext": "Create your password to activate your account.",
+      "password": "Password",
+      "password_confirm": "Confirm password",
+      "submit": "Activate account",
+      "cancel": "Decline invitation"
+    },
+    "addresses": {
+      "title": "Addresses",
+      "default": "Default",
+      "add_new": "Add a new address",
+      "edit_address": "Edit address",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "company": "Company",
+      "address1": "Address 1",
+      "address2": "Address 2",
+      "city": "City",
+      "country": "Country\/region",
+      "province": "Province",
+      "zip": "Postal\/ZIP code",
+      "phone": "Phone",
+      "set_default": "Set as default address",
+      "add": "Add address",
+      "update": "Update address",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "delete": "Delete",
+      "delete_confirm": "Are you sure you wish to delete this address?"
+    },
+    "log_in": "Log in",
+    "log_out": "Log out",
+    "login_page": {
+      "cancel": "Cancel",
+      "create_account": "Create account",
+      "create_account_content_text": "Creating an account has many benefits: check out faster, keep more than one address, track orders and more.",
+      "email": "Email",
+      "forgot_password": "Forgot your password?",
+      "guest_continue": "Continue",
+      "guest_title": "Continue as a guest",
+      "password": "Password",
+      "title": "Login",
+      "sign_in": "Sign in",
+      "submit": "Submit"
+    },
+    "order": {
+      "title": "Order {{ name }}",
+      "date_html": "Placed on {{ date }}",
+      "cancelled_html": "Order Cancelled on {{ date }}",
+      "cancelled_reason": "Reason: {{ reason }}",
+      "billing_address": "Billing Address",
+      "payment_status": "Payment Status",
+      "shipping_address": "Shipping Address",
+      "fulfillment_status": "Fulfillment Status",
+      "discount": "Discount",
+      "shipping": "Shipping",
+      "tax": "Tax",
+      "product": "Product",
+      "sku": "SKU",
+      "price": "Price",
+      "quantity": "Quantity",
+      "total": "Total",
+      "fulfilled_at_html": "Fulfilled {{ date }}",
+      "track_shipment": "Track shipment",
+      "tracking_url": "Tracking link",
+      "tracking_company": "Carrier",
+      "tracking_number": "Tracking number",
+      "subtotal": "Subtotal",
+      "total_duties": "Duties"
+    },
+    "orders": {
+      "title": "Order history",
+      "order_number": "Order",
+      "order_number_link": "Order number {{ number }}",
+      "date": "Date",
+      "payment_status": "Payment status",
+      "fulfillment_status": "Fulfillment status",
+      "total": "Total",
+      "none": "You haven't placed any orders yet."
+    },
+    "recover_password": {
+      "title": "Reset your password",
+      "subtext": "We will send you an email to reset your password",
+      "success": "We've sent you an email with a link to update your password."
+    },
+    "register": {
+      "title": "Create account",
+      "first_name": "First name",
+      "last_name": "Last name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create"
+    },
+    "reset_password": {
+      "title": "Reset account password",
+      "subtext": "Enter a new password for {{ email }}",
+      "password": "Password",
+      "password_confirm": "Confirm password",
+      "submit": "Reset password"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Here's your {{ value }} gift card for {{ shop }}!",
+      "subtext": "Your gift card",
+      "gift_card_code": "Gift card code",
+      "shop_link": "Continue shopping",
+      "remaining_html": "Remaining {{ balance }}",
+      "add_to_apple_wallet": "Add to Apple Wallet",
+      "qr_image_alt": "QR code — scan to redeem gift card",
+      "copy_code": "Copy code",
+      "expired": "Expired",
+      "copy_code_success": "Code copied successfully",
+      "print_gift_card": "Print"
+    }
+  },
+  "block": {
+    "video": {
+      "load_video": "TODO"
+    }
+  },
+  "product": {
+    "out_of_stock": "TODO"
+  },
+  "from_price": "TODO"
 }
