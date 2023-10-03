@@ -244,6 +244,7 @@
                         {% render 'product-meta', block: block %}
                     </div>
                    {% when 'social_share' %} 
+                   <span class="product-social-title">{{ block.settings.social_share_title }}</span>
                       {%- render 'social-share' -%}
                      
 
