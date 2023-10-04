@@ -10,7 +10,7 @@
       data-total-pages>
     <input
       type="hidden"
-      value="{{ pagination.current_page }}"
+      value="{{ pagination.current_page  }}"
       data-current-page>
     <div class="axiltheme-loadmore-btn-area text-center pt--30">
       <button class="axiltheme-loadmore-btn axil-btn btn-bg-lighter btn-load-more">
@@ -34,18 +34,7 @@
     <ul class="list-unstyled flex justify-center items-center my-8">
       {% if pagination.next %}
         <li class="infinite_next">
-          <input
-            type="hidden"
-            value="{{ pagination.pages }}"
-            data-total-pages>
-          <input
-            type="hidden"
-            value="{{ pagination.items }}"
-            data-current-page>
-          <a
-            href="{{ pagination.next.url }}"
-            id="page-change"
-            data-page-no="{{ pagination.current_offset }}">Loading</a>
+          <a href="{{ pagination.next.url }}" class="">Loading</a>
         </li>
       {% endif %}
     </ul>
