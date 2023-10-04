@@ -40,12 +40,12 @@
             data-total-pages>
           <input
             type="hidden"
-            value="{{ pagination.current_page }}"
+            value="{{ pagination.items }}"
             data-current-page>
           <a
             href="{{ pagination.next.url }}"
             id="page-change"
-            data-page-no="{{ pagination.current_page }}">Loading</a>
+            data-page-no="{{ pagination.current_offset }}">Loading</a>
         </li>
       {% endif %}
     </ul>
