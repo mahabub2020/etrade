@@ -164,12 +164,6 @@ $(document).ready(function(){
         })
     });
 
-    // Infinite scrolling
-    $('#page-change').on('data-attribute-changed', function() {
-        var pageNo = parseInt($('[data-current-page]').val());
-        console.log("page number: " + pageNo);
-    });
-
     // Search modal open
     $('.axil-search').on('click', function() {
         $('body, .header-search-modal').addClass('open');
