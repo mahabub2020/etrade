@@ -166,8 +166,8 @@ $(document).ready(function(){
 
     // Infinite scrolling
     $('#page-change').on('data-attribute-changed', function() {
-        var pageNo = $(this).attr('href');
-        console.log(pageNo);
+        var pageNo = parseInt($('[data-current-page]').val());
+        console.log("page number: " + pageNo);
     });
 
     // Search modal open

@@ -38,6 +38,10 @@
             type="hidden"
             value="{{ pagination.pages }}"
             data-total-pages>
+          <input
+            type="hidden"
+            value="{{ pagination.current_page  }}"
+            data-current-page>
           <a href="{{ pagination.next.url }}" id="page-change">Loading</a>
         </li>
       {% endif %}
