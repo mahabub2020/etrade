@@ -165,8 +165,8 @@ $(document).ready(function(){
     });
 
     // Infinite scrolling
-    $(document).on('data-attribute-changed', function() {
-        var pageNo = $('.infinite_next [data-current-page]').attr('href');
+    $('#page-change').on('data-attribute-changed', function() {
+        var pageNo = $(this).attr('href');
         console.log(pageNo);
     });
 
