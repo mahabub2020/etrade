@@ -32,13 +32,11 @@
     </nav>
   {% else %}
     <ul class="list-unstyled flex justify-center items-center my-8">
-      {% if pagination.next %}
-        <li class="infinite_next">
-          <p>
-            <a href="{{ pagination.next.url }}" class="">Loading</a>
-          </p>
-        </li>
-      {% endif %}
+      <li class="infinite_next">
+        {% if pagination.next %}
+          <a href="{{ pagination.next.url }}" class="">Loading</a>
+        {% endif %}
+      </li>
     </ul>
   {% endif %}
 {% endif %}
