@@ -647,37 +647,7 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
           "label": "Out of Stock Title",
           "default": "Out of stock"		
       	},
-		{
-          "type": "header",
-          "content": "Product Description"
-      	},
-		{
-          "type": "radio",
-          "id": "product_description_handle",
-          "label": "Description Handle",
-		  "options":[
-				{
-                    "label": "Full Description",
-                    "value": "full_description"
-                },
-                {
-                    "label": "Short Description",
-                    "value": "short_description"
-                },
-                {
-                    "label": "Without Description",
-                    "value": "without_description"
-                }
-			],
-			"default": "short_description"
-      	},
-		{
-          "type": "number",
-          "id": "truncatewords_count_handle",
-          "label": "Description Word Count",
-          "default": 35,
-		  "info": "If 'Short Description' is selected and the shortcode is not used, then it will be applicable"
-      	},
+		
 		{
           "type": "header",
           "content": "Product Variant"

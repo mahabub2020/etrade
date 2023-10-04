@@ -78,23 +78,46 @@
                                 </div>
                               </div> 
                            
-                         
+                              {%- when 'buy_buttons' -%}
+                                {%- unless block.settings.product_description_handle == 'without_description' -%}
+                                  {%- if block.settings.product_description_handle == 'full_description' -%}
+                                  {{ product.description }}
+                                  {%- elsif block.settings.product_description_handle == 'short_description' -%}
+                                  <div class="product-short-description description mb--45 mb-sm--20">
+                                    {%- if product.description contains '[short_description]' -%} 
+                                    {%- assign short_description_first = product.description | split:'[/short_description]' | first -%}
+                                    {%- assign short_description_final = short_description_first | split:'[short_description]' | last -%}
+                                    {{ short_description_final }}
+                                    {%- else -%}
+                                    {%- assign truncatewords_count = block.settings.truncatewords_count_handle -%}
+                                    {{ product.description | strip_html | truncatewords: truncatewords_count | split: '[short_description]' | first | split: '[product_description]' | first | split: '[new_products]' | first | split: '[product_video]' | first | split: '[affiliate_link]' | first | split: '[countdown]' | first }}
+                                    {%- endif -%}
+                                </div>
+                      
+                                {%- endif -%}
+                                {%- endunless -%}
 
                               
 											{%- when 'buy_buttons' -%}
                         <div class="product-info-main-block box-tocart">
                         <product-form class="product-form">
+
                           <div class="product-form__error-message-wrapper" role="alert" hidden>
                             {% render 'icon-error' %}
                             <span class="product-form__error-message"></span>
                           </div>
+
+
                           {%- form 'product', product, id: product_form_id, class: 'form box-tocart', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
+                            
                             <div class="product-form__buttons qty">
                               {%- for block in section.blocks -%}
                                 {%- case block.type -%}
                                   {%- when 'buy_buttons' -%}
                                     {% if block.settings.show-quantity-selector %}
+
+
                                     <div class="control">
                                       <div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
                                         <label class="form__label visually-hidden" for="quantity-{{ section.id }}">{{ 'products.product.quantity.label' | t }}</label>
@@ -110,37 +133,43 @@
                                       </div>
                                     </div>
                                     {% endif %}
+
                                     {% if block.settings.add-to-cart-button %}
                                     <div class="actions">
-                                      <button type="submit" name="add" class="product-form-submit button btn btn-secondary d-block w-100"
-                            {% if settings.cart_type == "drawer" %}
-                                data-bs-toggle="offcanvas"
-                                data-bs-target="#cart-drawer-popup"
-                                {% endif %}
-                                aria-controls="cart-drawer-popup"
-                            {%- if product.selected_or_first_available_variant.available == false or product.selected_or_first_available_variant.quantity_rule_soldout -%}
-                                disabled
-                            {%- endif -%}
-                          >
-                          <span>
-                                        {%- if product.selected_or_first_available_variant.available == false or product.selected_or_first_available_variant.quantity_rule_soldout -%}
-                                          {{ 'products.product.sold_out' | t }}
-                                        {% else %}
-                                          {% if product.selected_or_first_available_variant.inventory_quantity <= 0 %}
-                                            {{ 'products.product.pre_order' | t }}
-                                          {% else %}
-                                            {{ 'products.product.add_to_cart' | t }}
-                                          {% endif %}
-                                        {% endif %}
-                                                                          </span>
+
+<button type="submit" name="add" class="product-form-submit button btn btn-secondary d-block w-100"
+{% if settings.cart_type == "drawer" %}
+data-bs-toggle="offcanvas"
+data-bs-target="#cart-drawer-popup"
+{% endif %}
+aria-controls="cart-drawer-popup"
+{%- if product.selected_or_first_available_variant.available == false or product.selected_or_first_available_variant.quantity_rule_soldout -%}
+disabled
+{%- endif -%}
+>
+<span>
+{%- if product.selected_or_first_available_variant.available == false or product.selected_or_first_available_variant.quantity_rule_soldout -%}
+{{ 'products.product.sold_out' | t }}
+{% else %}
+{% if product.selected_or_first_available_variant.inventory_quantity <= 0 %}
+{{ 'products.product.pre_order' | t }}
+{% else %}
+{{ 'products.product.add_to_cart' | t }}
+{% endif %}
+{% endif %}
+</span>
                                         <div class="loading-overlay__spinner hidden">
                                           <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
                                             <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
                                           </svg>
                                         </div>
+
                                       </button>
                                     </div>
                                     {% endif %}
+
+
+
                                     <div class="form-check agree-terms">
                                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                       <label class="form-check-label" for="flexCheckDefault">{{ section.settings.paragraph }}</label>
@@ -148,6 +177,7 @@
                                     {%- if block.settings.show_dynamic_checkout -%}
                                       <div class="buy-one-click">{{ form | payment_button }}</div>
                                     {%- endif -%}
+
                                   </div>
   
                                     <div class="product-social-links mt-4">
@@ -184,33 +214,17 @@
                               {%- endfor -%}
                           {%- endform -%}
                         </product-form>
-                                              {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
-                                              {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
-                                              <pickup-availability class="product__pickup-availabilities no-js-hidden quick-add-hidden my-3"
-                                                  {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %} available{% endif %}
-                                                  data-root-url="{{ routes.root_url }}"
-                                                  data-variant-id="{{ product.selected_or_first_available_variant.id }}"
-                                                  data-has-only-default-variant="{{ product.has_only_default_variant }}"
-                                              >
-                                                  <template>
-                                                      <pickup-availability-preview class="pickup-availability-preview">
-                                                          {% render 'icon', name: 'check-line', class: 'w-20 h-20 text-success', size: 'custom' %}
-                                                          <div class="pickup-availability-info">
-                                                              <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
-                                                              <button class="pickup-availability-button link link--text position-relative">{{ 'products.product.pickup_availability.refresh' | t }}</button>
-                                                          </div>
-                                                      </pickup-availability-preview>
-                                                  </template>
-                                              </pickup-availability>
-                                              <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+                                          
                       </div>
                          
                       <div class="product-action-wrapper"> 
                       {% when 'meta' %}
                         {% render 'product-meta', block: block %}
-                    </div> 
-                    {% when 'social_share' %}  
-                      {%- render 'social-share', block: block -%} 
+                      </div> 
+
+                        {% when 'social_share' %}  
+                          {%- render 'social-share', block: block -%} 
+
 
                     {%- endcase -%}
                   {%- endfor -%}
@@ -675,37 +689,7 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
           "label": "Out of Stock Title",
           "default": "Out of stock"		
       	},
-		{
-          "type": "header",
-          "content": "Product Description"
-      	},
-		{
-          "type": "radio",
-          "id": "product_description_handle",
-          "label": "Description Handle",
-		  "options":[
-				{
-                    "label": "Full Description",
-                    "value": "full_description"
-                },
-                {
-                    "label": "Short Description",
-                    "value": "short_description"
-                },
-                {
-                    "label": "Without Description",
-                    "value": "without_description"
-                }
-			],
-			"default": "short_description"
-      	},
-		{
-          "type": "number",
-          "id": "truncatewords_count_handle",
-          "label": "Description Word Count",
-          "default": 35,
-		  "info": "If 'Short Description' is selected and the shortcode is not used, then it will be applicable"
-      	},
+		 
 		{
           "type": "header",
           "content": "Product Variant"
@@ -970,10 +954,45 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
         }
       ]
     },
+
+ 
     {
-      "type": "short-description",
+      "type": "product_short_description",
       "name": "Short Description",
-      "limit": 1
+      "limit": 1,
+      "settings":[
+        {
+          "type": "header",
+          "content": "Product Description"
+      	},
+		    {
+          "type": "radio",
+          "id": "product_description_handle",
+          "label": "Description Handle",
+		      "options":[
+                {
+                  "label": "Full Description",
+                  "value": "full_description"
+                },
+                {
+                  "label": "Short Description",
+                  "value": "short_description"
+                },
+                {
+                  "label": "Without Description",
+                  "value": "without_description"
+                }
+              ],
+              "default": "short_description"
+      	},
+		    {
+          "type": "number",
+          "id": "truncatewords_count_handle",
+          "label": "Description Word Count",
+          "default": 35,
+		      "info": "If 'Short Description' is selected and the shortcode is not used, then it will be applicable"
+      	}
+      ] 
     },
  
     {
@@ -986,6 +1005,9 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
       "name": "Visitor",
       "limit": 1
     },
+
+
+
     {
       "type": "variant_picker",
       "name": "variant_picker",
@@ -1004,6 +1026,14 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
         }
       ]
     }, 
+
+
+ 
+
+
+
+
+
     {
       "type": "buy_buttons",
       "name": "Buy buttons",
