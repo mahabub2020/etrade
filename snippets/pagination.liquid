@@ -34,7 +34,11 @@
     <ul class="list-unstyled flex justify-center items-center my-8">
       {% if pagination.next %}
         <li class="infinite_next">
-          <a href="{{ pagination.next.url }}" class=""></a>
+          <input
+            type="hidden"
+            value="{{ pagination.pages }}"
+            data-total-pages>
+          <a href="{{ pagination.next.url }}" data-current-page>Loading</a>
         </li>
       {% endif %}
     </ul>

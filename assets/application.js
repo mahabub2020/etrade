@@ -140,7 +140,7 @@ $(document).ready(function(){
     });
 
     // Load more
-    $('.btn-load-more').on('click', function(){
+    $('.btn-load-more').on('click', function() {
         var $this =$(this),
         totalPages = parseInt($('[data-total-pages]').val()),
         currentPage = parseInt($('[data-current-page]').val());
@@ -162,7 +162,13 @@ $(document).ready(function(){
             } 
           }
         })
-      });
+    });
+
+    // Infinite scrolling
+    $(document).on('data-attribute-changed', function() {
+        var pageNo = $('.infinite_next [data-current-page]').attr('href');
+        console.log(pageNo);
+    });
 
     // Search modal open
     $('.axil-search').on('click', function() {
