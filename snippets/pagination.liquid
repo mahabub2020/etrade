@@ -33,7 +33,10 @@
   {% else %}
     <ul class="list-unstyled flex justify-center items-center my-8">
       {% if pagination.next %}
-        <li class="infinite_next">{% comment %} <a href="{{ pagination.next.url }}" class="">Loading</a> {% endcomment %}
+        <li class="infinite_next">
+          <p>
+            <a href="{{ pagination.next.url }}" class="">Loading</a>
+          </p>
         </li>
       {% endif %}
     </ul>
