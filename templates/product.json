@@ -26,6 +26,13 @@
           "settings": {
           }
         },
+        "fb24c306-529d-4663-a3b3-cbb70f8202fd": {
+          "type": "product_short_description",
+          "settings": {
+            "product_description_handle": "short_description",
+            "truncatewords_count_handle": 35
+          }
+        },
         "dd1559c0-5603-4693-85a3-707b378a2ce7": {
           "type": "variant_picker",
           "settings": {
@@ -65,13 +72,6 @@
           "settings": {
             "social_share_title": "Shared"
           }
-        },
-        "fb24c306-529d-4663-a3b3-cbb70f8202fd": {
-          "type": "product_short_description",
-          "settings": {
-            "product_description_handle": "short_description",
-            "truncatewords_count_handle": 35
-          }
         }
       },
       "block_order": [
@@ -79,12 +79,12 @@
         "ae764d1f-29be-4311-8762-8aee2b3dd2ef",
         "62c93693-3cf6-4e73-9116-69729457993b",
         "d2c7b6cf-7c38-464e-bb74-937b38dac679",
+        "fb24c306-529d-4663-a3b3-cbb70f8202fd",
         "dd1559c0-5603-4693-85a3-707b378a2ce7",
         "e33fff6f-e923-44ac-b511-6e76980808a6",
         "f3997cc0-8cd5-4a47-9225-813fc30bd56d",
         "b849e72c-91af-4438-9b1a-36e3a726494e",
-        "8c175ad4-ed46-42fc-a621-500002e1e2a2",
-        "fb24c306-529d-4663-a3b3-cbb70f8202fd"
+        "8c175ad4-ed46-42fc-a621-500002e1e2a2"
       ],
       "settings": {
         "container_style": "style_1",
