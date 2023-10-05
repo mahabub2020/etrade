@@ -13,9 +13,12 @@
           <ul class="product-categories">
             {% for product_type in shop.types %}
               {% if product_type != '' %}
-                <li class="cat-item cat-item-141">
-                  <a href="https://dev.axilthemes.com/themes/etrade/product-category/deals/">{{ product_type }}</a>
-                </li>
+                {% assign product_types = product_type | split: ", " %}
+                {% for type in product_types %}
+                  <li class="cat-item cat-item-141">
+                    <a href="https://dev.axilthemes.com/themes/etrade/product-category/deals/">{{ product_type }}</a>
+                  </li>
+                {% endfor %}
               {% endif %}
             {% endfor %}
           </ul>
