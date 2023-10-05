@@ -26,13 +26,14 @@
                         {% for image in product.images %}
                         <div class="col-6 mb--20">
                             <div class="single-product-thumbnail axil-product thumbnail-grid">
-                                <div class="thumbnail">
-                                  <figure class="product-gallery__thumb--single">
-                                    <a class="product-single__thumbnail {% if forloop.first and section.settings.product_zoom_enable %}active{% endif %}" href="{{ image.src | img_url: '1024x1024' }}" 
-                             data-image="{{ image.src | img_url: '1024x1024' }}" data-zoom-image="{{ image.src | img_url: '1024x1024' }}" data-image-id="{{ image.id }}">
-                            <img src="{{ image.src | img_url: 'compact' }}" alt="{{ image.alt | escape }}">
-                                </a>
-                                </div>
+                              <div class="thumbnail"> 
+                                    <figure class="product-gallery__thumb--single">
+                                      <a class="product-single__thumbnail {% if forloop.first and section.settings.product_zoom_enable %}active{% endif %}" href="{{ image.src | img_url: '1024x1024' }}" 
+                                      data-image="{{ image.src | img_url: '1024x1024' }}" data-zoom-image="{{ image.src | img_url: '1024x1024' }}" data-image-id="{{ image.id }}">
+                                      <img src="{{ image.src | img_url: 'compact' }}" alt="{{ image.alt | escape }}">
+                                      </a>
+                                  </figure>
+                              </div>
                             </div>
                         </div>
                         {% endfor %}
@@ -54,12 +55,13 @@
                           {%- case block.type -%}
                             {%- when '@app' -%}
                               {% render block %}
+
                           {%- when 'text' -%}
-                          {% if block.settings.text != blank %}
-                          <div class="product-info-main-block product-item-vendor text-{{ block.settings.text-transform }}">
-                              {{ block.settings.text }}
-                            </div>
-                          {% endif %}
+                            {% if block.settings.text != blank %}
+                            <div class="product-info-main-block product-item-vendor text-{{ block.settings.text-transform }}">
+                                {{ block.settings.text }}
+                              </div>
+                            {% endif %}
                         
                           {%- when 'title' -%}
                             <div class="product-info-main-block product-title-wrapper">
@@ -78,34 +80,20 @@
                                 </div>
                               </div> 
                            
-                              {%- when 'product_short_description' -%}
-                                {%- unless block.settings.product_description_handle == 'without_description' -%}
-                                  {%- if block.settings.product_description_handle == 'full_description' -%}
-                                  {{ product.description }}
-                                  {%- elsif block.settings.product_description_handle == 'short_description' -%}
-                                  <div class="product-short-description description mb--45 mb-sm--20">
-                                    {%- if product.description contains '[short_description]' -%} 
-                                    {%- assign short_description_first = product.description | split:'[/short_description]' | first -%}
-                                    {%- assign short_description_final = short_description_first | split:'[short_description]' | last -%}
-                                    {{ short_description_final }}
-                                    {%- else -%}
-                                    {%- assign truncatewords_count = block.settings.truncatewords_count_handle -%}
-                                    {{ product.description | strip_html | truncatewords: truncatewords_count | split: '[short_description]' | first | split: '[product_description]' | first | split: '[new_products]' | first | split: '[product_video]' | first | split: '[affiliate_link]' | first | split: '[countdown]' | first }}
-                                    {%- endif -%}
+                              {%- when 'product_short_description' -%} 
+                                <div class="product-short-description description mb--45 mb-sm--20">
+                                  {{ product.metafields.product.short_desciption.value | capitalize }}
                                 </div>
-                      
-                                {%- endif -%}
-                                {%- endunless -%}
-
+           
                               
-											{%- when 'buy_buttons' -%}
-                        <div class="product-info-main-block box-tocart">
-                        <product-form class="product-form">
+                            {%- when 'buy_buttons' -%}
+                              <div class="product-info-main-block box-tocart">
+                              <product-form class="product-form">
 
-                          <div class="product-form__error-message-wrapper" role="alert" hidden>
-                            {% render 'icon-error' %}
-                            <span class="product-form__error-message"></span>
-                          </div>
+                            <div class="product-form__error-message-wrapper" role="alert" hidden>
+                              {% render 'icon-error' %}
+                              <span class="product-form__error-message"></span>
+                            </div>
 
                           {%- form 'product', product, id: product_form_id, class: 'form box-tocart', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
@@ -135,28 +123,27 @@
 
                                     {% if block.settings.add-to-cart-button %}
                                     <div class="actions">
-
-<button type="submit" name="add" class="product-form-submit button btn btn-secondary d-block w-100"
-{% if settings.cart_type == "drawer" %}
-data-bs-toggle="offcanvas"
-data-bs-target="#cart-drawer-popup"
-{% endif %}
-aria-controls="cart-drawer-popup"
-{%- if product.selected_or_first_available_variant.available == false or product.selected_or_first_available_variant.quantity_rule_soldout -%}
-disabled
-{%- endif -%}
->
-<span>
-{%- if product.selected_or_first_available_variant.available == false or product.selected_or_first_available_variant.quantity_rule_soldout -%}
-{{ 'products.product.sold_out' | t }}
-{% else %}
-{% if product.selected_or_first_available_variant.inventory_quantity <= 0 %}
-{{ 'products.product.pre_order' | t }}
-{% else %}
-{{ 'products.product.add_to_cart' | t }}
-{% endif %}
-{% endif %}
-</span>
+                                        <button type="submit" name="add" class="product-form-submit button btn btn-secondary d-block w-100"
+                                        {% if settings.cart_type == "drawer" %}
+                                          data-bs-toggle="offcanvas"
+                                          data-bs-target="#cart-drawer-popup"
+                                          {% endif %}
+                                          aria-controls="cart-drawer-popup"
+                                          {%- if product.selected_or_first_available_variant.available == false or product.selected_or_first_available_variant.quantity_rule_soldout -%}
+                                          disabled
+                                          {%- endif -%}
+                                          >
+                                          <span>
+                                          {%- if product.selected_or_first_available_variant.available == false or product.selected_or_first_available_variant.quantity_rule_soldout -%}
+                                          {{ 'products.product.sold_out' | t }}
+                                          {% else %}
+                                          {% if product.selected_or_first_available_variant.inventory_quantity <= 0 %}
+                                          {{ 'products.product.pre_order' | t }}
+                                          {% else %}
+                                          {{ 'products.product.add_to_cart' | t }}
+                                          {% endif %}
+                                          {% endif %}
+                                        </span>
                                         <div class="loading-overlay__spinner hidden">
                                           <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
                                             <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
