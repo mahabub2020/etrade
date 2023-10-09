@@ -132,6 +132,7 @@ $(document).ready(function(){
 
     $('#quick-view-close').on('click', function(e) {
         e.preventDefault();
+        console.log('close');
         $('#yith-quick-view-modal').modal('hide');
     })
 
