@@ -132,7 +132,8 @@ $(document).ready(function(){
 
     $('#yith-quick-view-close').on('click', function(e) {
         e.preventDefault();
-        $('#yith-quick-view-modal .close').click();
+        $('#yith-quick-view-modal').modal().hide();
+        $('.modal-backdrop').hide();
     })
 
     // Cart item quantity change
