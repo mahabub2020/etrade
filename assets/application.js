@@ -127,7 +127,7 @@ $(document).ready(function(){
         const quickViewProductsHtml = $('<div>' + quickViewProductsText + '</div>');
         var output = $(quickViewProductsHtml).find('#ProductInfo-'+pId).html();
         $('#yith-quick-view-content .product').html(output);
-        $('#yith-quick-view-modal').modal('show');
+        $('#yith-quick-view-modal').modal().show();
     });
 
     $('#yith-quick-view-close').on('click', function(e) {
