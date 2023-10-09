@@ -130,6 +130,11 @@ $(document).ready(function(){
         $('#yith-quick-view-modal').modal('show');
     });
 
+    $('#quick-view-close').on('click', function(e) {
+        e.preventDefault();
+        $('#yith-quick-view-modal').modal('hide');
+    })
+
     // Cart item quantity change
     $('.quantity-plus').on('click', function() {
         $(this).parent().find('.input-text.qty').trigger('stepUp').trigger('change');
