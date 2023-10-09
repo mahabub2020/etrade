@@ -664,3 +664,8 @@ video {
     flex: 1 1 0%;
   }
 }
+
+/* Tonmoy */
+.modal {
+  background-color: #0005;
+}
