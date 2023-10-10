@@ -679,6 +679,7 @@ ul.filter-group-display__list {
 .filter-group-display__list-item input[type=checkbox] {
   opacity: 1;
   position: unset;
+  width: unset;
   height: unset;
   margin-right: 8px;
 }
