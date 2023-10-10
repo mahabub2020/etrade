@@ -672,12 +672,13 @@ video {
 .yith-wcqv-wrapper {
   margin: 50px auto;
 }
-ul .filter-group-display__list {
+ul.filter-group-display__list {
   list-style: none;
   padding: 0;
 }
 .filter-group-display__list-item input[type=checkbox] {
   opacity: 1;
   position: unset;
+  height: unset;
   margin-right: 8px;
 }
