@@ -3,7 +3,7 @@
     <header class="woocommerce-products-header"></header>
     <div class="woocommerce-notices-wrapper"></div>
 
-    {% paginate collections['all'].products by section.settings.product_per_page %}
+    {% paginate collection.products by section.settings.product_per_page %}
       <form class="filter-form">
         {%- for filter in collection.filters -%}
           <details class="filter-group">
