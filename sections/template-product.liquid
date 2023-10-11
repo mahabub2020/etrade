@@ -171,7 +171,7 @@
                                             <li class="product-wishlist">
                                                 <a href="javascript:void(0);" class="wishlist-button" data-product-handle="{{ product.handle }}" button-wishlist>
                                                     <span class="addon-icon-wrp">{% render 'icon', name: 'heart', class: 'w-24 h-24', size: 'custom' %}</span>
-                                                    <span>Wishlist</span>
+                                                    <span>{{ block.settings.wishlist_title }}</span>
                                                 </a>
                                             </li>
                                         {% endif %}
@@ -179,7 +179,7 @@
                                       <li class="product-compare">
                                           <a href="javascript:void(0);" class="add-to-compare" data-handle-product="{{ product.handle }}" button-compare>
                                             <span class="addon-icon-wrp">{% render 'icon', name: 'compare', class: 'w-24 h-24', size: 'custom' %}</span>
-                                              <span>Compare</span>
+                                              <span>{{ block.settings.compare_title }}</span>
                                           </a>
                                       </li>
                                   {% endif %}
@@ -187,7 +187,7 @@
                                       <li class="theme-ask">
                                           <a data-bs-toggle="modal" role="button" href="#contact-form-model">
                                               <span class="addon-icon-wrp"> {% render 'icon', name: 'question-icon', class: 'w-24 h-24', size: 'custom' %}</span>
-                                              <span>Ask about this product</span>
+                                              <span>{{ block.settings.ask_title }}</span>
                                           </a>
                                       </li>
                                   {%- endif -%}
@@ -759,7 +759,7 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
         {
           "type": "text",
           "id": "compare_title",
-          "default": "Wishlist",
+          "default": "Compare",
           "label": "Compare Title",
           "info": "Enter the option Compare Title"
         },
@@ -776,7 +776,7 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
           "label": "Ask Title",
           "info": "Enter the option Ask Title"
         }
-        
+
       ]
     },
     {
