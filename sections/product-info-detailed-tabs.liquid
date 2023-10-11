@@ -32,7 +32,7 @@
                       {{ block.settings.header }}
                     </h2>
                     <div id="st{{ block.id }}" class="accordion-collapse collapse {% if section.settings.open %} show {% endif %} d-md-block" aria-labelledby="st{{block.id}}" data-bs-parent="#product-info-tab">
-                      <div class="accordion-body">
+                      <div class="accordion-body entry-content">
                         {% assign content = product.description | remove: "[disable-icon-new]" %}
                         {{ content }}
                       </div>
