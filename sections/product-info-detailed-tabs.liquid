@@ -1,7 +1,7 @@
-<div id="product-info-detailed" class="product-info-detailed woocommerce-tabs wc-tabs-wrapper bg-vista-white" style="background-color: {{ section.settings.background-color }}; --section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px;">
+<div id="product-info-detailed" class="product-info-detailed shopify-tabs wc-tabs-wrapper bg-vista-white" style="background-color: {{ section.settings.background-color }}; --section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px;">
     <div class="{{ section.settings.container }}">
-      <div class="woocommerce-tabs-wrp"> 
-          <ul class="nav nav-tabs justify-content-center d-md-flex d-none" id="myTab" role="tablist">
+      <div class="shopify-tabs-wrp"> 
+          <ul class="nav tabs wc-tabs" id="myTab" role="tablist">
             {% for block in section.blocks %}
               {% case block.type %}
                 {% when 'description' %}
