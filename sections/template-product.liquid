@@ -704,13 +704,7 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
         }
       ]
     }, 
-
-
- 
-
-
-
-
+  
 
     {
       "type": "buy_buttons",
@@ -750,17 +744,39 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
           "default": false
         },
         {
+          "type": "text",
+          "id": "wishlist_title",
+          "default": "Wishlist",
+          "label": "Wishlist Title",
+          "info": "Enter the option Wishlist Title"
+        },
+        {
           "type": "checkbox",
           "id": "show_compare",
           "label": "Show Compare",
           "default": false
         },
         {
+          "type": "text",
+          "id": "compare_title",
+          "default": "Wishlist",
+          "label": "Compare Title",
+          "info": "Enter the option Compare Title"
+        },
+        {
           "type": "checkbox",
           "id": "show_atp",
           "label": "Ask about this product",
           "default": true
+        },
+        {
+          "type": "text",
+          "id": "ask_title",
+          "default": "Ask about this product",
+          "label": "Ask Title",
+          "info": "Enter the option Ask Title"
         }
+        
       ]
     },
     {
