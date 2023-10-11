@@ -676,7 +676,7 @@ ul.filter-group-display__list {
   list-style: none;
   padding: 0;
 }
-.filter-group-display__list-item input[type=checkbox] {
+input[type=checkbox] {
   opacity: 1;
   position: unset;
   width: unset;
