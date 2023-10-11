@@ -2,45 +2,44 @@
   <div class="main-content">
     <header class="woocommerce-products-header"></header>
     <div class="woocommerce-notices-wrapper"></div>
-
-    {% paginate collections['all'].products by section.settings.product_per_page %}
-      <div class="axil-shop-top">
-        <div class="row">
-          <div class="col-12 ">
-            <div class="category-select align-items-center justify-content-end">
-              <p class="woocommerce-result-count filter-results">
-                Showing 1-<span class="wc-last-result-count">{{ section.settings.product_per_page }}</span>
-                of {{ collections['all'].all_products_count }} results</p>
-              <div class="sort-list">
-                <form class="woocommerce-ordering" method="get">
-                  <select
-                    name="orderby"
-                    class="orderby"
-                    aria-label="Shop order">
-                    <option value="menu_order" selected="selected">Default sorting</option>
-                    <option value="popularity">Sort by popularity</option>
-                    <option value="rating">Sort by average rating</option>
-                    <option value="date">Sort by latest</option>
-                    <option value="price">Sort by price: low to high</option>
-                    <option value="price-desc">Sort by price: high to low</option>
-                  </select>
-                  <input
-                    type="hidden"
-                    name="paged"
-                    value="1">
-                </form>
-              </div>
+    <div class="axil-shop-top">
+      <div class="row">
+        <div class="col-12 ">
+          <div class="category-select align-items-center justify-content-end">
+            <p class="woocommerce-result-count filter-results">
+              Showing 1-<span class="wc-last-result-count">{{ section.settings.product_per_page }}</span>
+              of {{ collections['all'].all_products_count }} results</p>
+            <div class="sort-list">
+              <form class="woocommerce-ordering" method="get">
+                <select
+                  name="orderby"
+                  class="orderby"
+                  aria-label="Shop order">
+                  <option value="menu_order" selected="selected">Default sorting</option>
+                  <option value="popularity">Sort by popularity</option>
+                  <option value="rating">Sort by average rating</option>
+                  <option value="date">Sort by latest</option>
+                  <option value="price">Sort by price: low to high</option>
+                  <option value="price-desc">Sort by price: high to low</option>
+                </select>
+                <input
+                  type="hidden"
+                  name="paged"
+                  value="1">
+              </form>
             </div>
-            <div class="d-lg-none">
-              <button class="product-filter-mobile filter-toggle">
-                <i class="fas fa-filter"></i>
-                FILTER
-              </button>
-            </div>
+          </div>
+          <div class="d-lg-none">
+            <button class="product-filter-mobile filter-toggle">
+              <i class="fas fa-filter"></i>
+              FILTER
+            </button>
           </div>
         </div>
       </div>
+    </div>
 
+    {% paginate collections['all'].products by section.settings.product_per_page %}
       <div id="product-grid" class="products axiltheme-archive-products row axiltheme-loadmore-wrapper">
         {% for product in collections['all'].products %}
           <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 product type-product post-1206 status-publish first instock product_cat-cleaner product_cat-kids product_cat-multipurpose product_tag-keyboard product_tag-mouse has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
