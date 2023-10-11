@@ -1,4 +1,4 @@
-<div id="product-info-detailed" class="product-info-detailed shopify-tabs wc-tabs-wrapper bg-vista-white" style="background-color: {{ section.settings.background-color }}; --section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px;">
+<div id="product-info-detailed" class="product-info-detailed shopify-tabs wc-tabs-wrapper bg-vista-white" style="background-color: {{ section.settings.background-color }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
     <div class="{{ section.settings.container }}">
       <div class="shopify-tabs-wrp"> 
           <ul class="nav tabs wc-tabs" id="myTab" role="tablist">
@@ -73,7 +73,72 @@
       </div>
     </div>
   </div>
-  {% schema %}
+
+
+  {%- style -%}
+
+
+  #section-{{ section.id }}{
+    {%- for block in section.blocks -%}
+    {%- case block.type -%}
+    {%- when 'section_margin' -%}
+    margin-top: {{ block.settings.section_margin_top }}px;
+    margin-bottom: {{ block.settings.section_margin_bottom }}px;
+    {%- when 'section_padding' -%}
+    padding-top: {{ block.settings.section_padding_top }}px;
+    padding-bottom: {{ block.settings.section_padding_bottom }}px;
+    {%- when 'section_background' -%}    
+    background: {{ block.settings.section_bg_color }} 
+      {%- if block.settings.section_bg_image -%}url("{{ block.settings.section_bg_image | img_url: 'master' }}"){%- endif -%} no-repeat scroll center center / cover;
+    {%- endcase -%}
+    {%- endfor -%}
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {% case block.type %}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_md }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_md }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_md }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_md }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+  @media (max-width: 767px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {%- case block.type -%}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_xs }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_xs }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_xs }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_xs }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+
+#section-{{ section.id }} .heading-color {
+    color: {{ section.settings.section_title_color }}!important;
+}
+
+#section-{{ section.id }} .separator {
+    border-color: {{ section.settings.section_border_color }};
+}
+  
+
+#section-{{ section.id }} .color--light-3 {
+    color: {{ section.settings.section_description_color }}!important;
+}
+
+
+{%- endstyle -%}
+
+{% schema %}
 {
   "name": "Product information tabs",
   "tag": "section",
