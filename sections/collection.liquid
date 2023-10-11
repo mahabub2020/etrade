@@ -1,6 +1,7 @@
 <div class="axil-shop-area axil-section-gap bg-color-white">
   <div class="container">
     <div class="row">
+      <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
       {% if section.settings.shop_layout == "full" %}
         {% render 'shop-full-width', product_layout: section.settings.product_layout %}
       {% else %}
