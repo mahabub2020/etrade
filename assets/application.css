@@ -677,9 +677,9 @@ ul.filter-group-display__list {
   padding: 0;
 }
 input[type=checkbox] {
-  opacity: 1;
-  position: unset;
-  width: unset;
-  height: unset;
-  margin-right: 8px;
+  opacity: 1 !important;
+  position: unset !important;
+  width: unset !important;
+  height: unset !important;
+  margin-right: 8px !important;
 }
