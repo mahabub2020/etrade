@@ -1,7 +1,4 @@
 {% assign random_number = "now" | date: "%N" | modulo: 1000 | plus: 0 %}
-<script>
-  var scmCustomDataWigetAll= (typeof scmCustomDataWigetAll == "undefined" || scmCustomDataWigetAll == null) ? [] : scmCustomDataWigetAll;
-</script>
 {% assign smaTemplateCurrent= template | split: '.' | first %}
 {% if smaTemplateCurrent != 'product' %}
   {% if section.settings.lai_product != null and section.settings.lai_product != "" %}
@@ -19,6 +16,7 @@
   {% endfor %}
 {% endfor %}
 <script>
+  var scmCustomDataWigetAll= (typeof scmCustomDataWigetAll == "undefined" || scmCustomDataWigetAll == null) ? [] : scmCustomDataWigetAll;
   scmCustomDataWigetAll[{{ random_number }}] ={
     "productId" : '{{ product.id }}',
     "typePage" : 'productPage',

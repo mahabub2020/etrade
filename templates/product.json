@@ -95,34 +95,7 @@
         "product_popup_enable": true,
         "product_cursole": "3",
         "product_cursole_2": "3",
-        "product_cursole_3": "3",
-        "product_sku_enable": true,
-        "product_sku_title": "SKU:",
-        "product_review_enable": true,
-        "countdown_heading": "<strong>Hurry up<\/strong>! offer ends in:",
-        "product_inventory_enable": true,
-        "availability_title": "Availability:",
-        "in_stock_title": "In stock",
-        "left_in_stock_title": "left in stock",
-        "out_of_stock_title": "Out of stock",
-        "product_variant_handle": "product_variant_select_option",
-        "show_variant_image": false,
-        "dynamic_checkout_button_enable": true,
-        "store_delivery_enable": true,
-        "map_icon": "map-marker",
-        "store_title": "Find store near you",
-        "store_url": "",
-        "map_icon_1": "exchange",
-        "store_title_2": "Delivery and return",
-        "store_url_2": "",
-        "category_list_enable": true,
-        "category_title": "Categories:",
-        "category_list_limit_handle": "3",
-        "category_tag_enable": true,
-        "tag_title": "Tags:",
-        "payment_option_enable": true,
-        "payment_information": "<p>Guaranteed safe checkout<\/p>",
-        "payment_icon_enable": true
+        "product_cursole_3": "3"
       }
     },
     "85c54a0e-24ac-4918-88a9-c40571be93c4": {
@@ -221,12 +194,29 @@
         "section_title_color": "#282828",
         "section_border_color": "#cf987e"
       }
+    },
+    "sma_reviews_section_auto": {
+      "type": "apps",
+      "blocks": {
+        "sma_reviews_section_auto": {
+          "type": "shopify:\/\/apps\/lai-product-reviews\/blocks\/lai-product-section\/cad3c6c6-329e-4416-ba74-b79359b5b6e1",
+          "settings": {
+            "lai_product": ""
+          }
+        }
+      },
+      "block_order": [
+        "sma_reviews_section_auto"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "template",
     "85c54a0e-24ac-4918-88a9-c40571be93c4",
     "upsell-product",
-    "related-products"
+    "related-products",
+    "sma_reviews_section_auto"
   ]
 }
