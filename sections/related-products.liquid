@@ -3,7 +3,6 @@
 
 {% if collection == null or collection.handle == 'frontpage' or collection.handle == 'all' %}
   {% assign product_found = false %}
-
   {% for c in product.collections %}
     {% if product_found == false and c.handle != 'frontpage' and c.handle != 'all' and c.all_products_count > 1 %}
       {% assign product_found = true %}
@@ -11,10 +10,6 @@
     {% endif %}
   {% endfor %}
 {% endif %}
-
-{{ collection }}
-
-
 {% if collection and collection.products_count > 1 and section.settings.related_products_enable %}
   <!-- Start Recently Viewed Product Area -->
   <div
