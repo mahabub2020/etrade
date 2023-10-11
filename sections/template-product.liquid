@@ -160,27 +160,25 @@
                                       </button>
                                     </div>
                                     {% endif %}
-
-
+ 
 
                                   </div>
-
-  
-                                    <div class="product-social-links mt-4">
-                                      <ul>
+ 
+                                    <div class="addon-button-wrp">
+                                      <ul class="addon-button-list">
                                         {%- when 'addons' -%}
-                                  {% if block.settings.show_wishlist %}
-                                      <li class="product-wishlist">
-                                          <a href="javascript:void(0);" class="wishlist-button" data-product-handle="{{ product.handle }}" button-wishlist>
-                                              {% render 'icon', name: 'heart', class: 'w-24 h-24 me-2', size: 'custom' %}
-                                              <span>Wishlist</span>
-                                          </a>
-                                      </li>
-                                  {% endif %}
-                                  {% if block.settings.show_compare %}
+                                        {% if block.settings.show_wishlist %}
+                                            <li class="product-wishlist">
+                                                <a href="javascript:void(0);" class="wishlist-button" data-product-handle="{{ product.handle }}" button-wishlist>
+                                                    <span class="addon-icon-wrp">{% render 'icon', name: 'heart', class: 'w-24 h-24', size: 'custom' %}</span>
+                                                    <span>Wishlist</span>
+                                                </a>
+                                            </li>
+                                        {% endif %}
+                                    {% if block.settings.show_compare %}
                                       <li class="product-compare">
                                           <a href="javascript:void(0);" class="add-to-compare" data-handle-product="{{ product.handle }}" button-compare>
-                                              {% render 'icon', name: 'compare', class: 'w-24 h-24 me-2', size: 'custom' %}
+                                            <span class="addon-icon-wrp">{% render 'icon', name: 'compare', class: 'w-24 h-24', size: 'custom' %}</span>
                                               <span>Compare</span>
                                           </a>
                                       </li>
@@ -188,7 +186,7 @@
                                   {%- if block.settings.show_atp -%}
                                       <li class="theme-ask">
                                           <a data-bs-toggle="modal" role="button" href="#contact-form-model">
-                                              {% render 'icon', name: 'question-icon', class: 'w-24 h-24 me-2', size: 'custom' %}
+                                              <span class="addon-icon-wrp"> {% render 'icon', name: 'question-icon', class: 'w-24 h-24', size: 'custom' %}</span>
                                               <span>Ask about this product</span>
                                           </a>
                                       </li>
