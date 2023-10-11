@@ -12,7 +12,7 @@
 
 
 
-<div id="section-{{ section.id }}">
+<div class="woocommerce" id="section-{{ section.id }}">
   <div class="axil-single-product-area axil-section-gap pb--0 bg-color-white single-product-1">
     <div class="single-product-thumb">
       <div class="{% if section.settings.container_style == 'style_1' %}container p-0 {% else %} container-fluid p-0{% endif %}">
@@ -84,7 +84,7 @@
                                 <div class="product-short-description description mb--45 mb-sm--20">
                                   {{ product.metafields.custom.short_desciption | capitalize }}
                                 </div>
-           
+            
                               
                             {%- when 'buy_buttons' -%}
                               <div class="product-info-main-block box-tocart">
@@ -98,32 +98,39 @@
                           {%- form 'product', product, id: product_form_id, class: 'form box-tocart', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                             <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
                             
-                            <div class="product-form__buttons qty">
+                            <div class="product-action-wrapper d-flex product-form__buttons qty">
                               {%- for block in section.blocks -%}
                                 {%- case block.type -%}
                                   {%- when 'buy_buttons' -%}
+
                                     {% if block.settings.show-quantity-selector %}
 
-
-                                    <div class="control">
+                                    <div class="control product-action-wrapper d-flex-center quantity">
                                       <div class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}" {{ block.shopify_attributes }}>
                                         <label class="form__label visually-hidden" for="quantity-{{ section.id }}">{{ 'products.product.quantity.label' | t }}</label>
-                                        <quantity-input class="quantity d-flex">
+                                        
+                                        <quantity-input class="quantity d-flex input-group-btn pro-qty mr--20">
+                                         
                                           <button class="quantity__button no-js-hidden icon-minus qty-minus" name="minus" type="button">
-                                                                                      <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+                                            <span class=" qtybtn quantity-btn quantity-minus">-</span>
                                           </button>
-                                              <input class="quantity__input form-control" type="number" name="quantity" id="quantity-{{ section.id }}" min="1" value="1" form="{{ product_form_id }}">
-                                          <button class="quantity__button no-js-hidden icon-plus qty-plus" name="plus" type="button">
-                                                                                      <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
-                                          </button>
+
+                                              <input class="quantity__input form-control input-text qty text" type="number" name="quantity" id="quantity-{{ section.id }}" min="1" value="1" form="{{ product_form_id }}">
+                                          
+                                            <button class="quantity__button no-js-hidden icon-plus qty-plus input-text qty text" name="plus" type="button">
+                                              <span class=" qtybtn quantity-btn quantity-minus">+</span>
+                                            </button>
                                         </quantity-input>
+
                                       </div>
                                     </div>
                                     {% endif %}
 
+
+
                                     {% if block.settings.add-to-cart-button %}
                                     <div class="actions">
-                                        <button type="submit" name="add" class="product-form-submit button btn btn-secondary d-block w-100"
+                                        <button type="submit" name="add" class="product-form-submit button btn alt btn-secondary d-block w-100"
                                         {% if settings.cart_type == "drawer" %}
                                           data-bs-toggle="offcanvas"
                                           data-bs-target="#cart-drawer-popup"
@@ -156,15 +163,8 @@
 
 
 
-                                    <div class="form-check agree-terms">
-                                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      <label class="form-check-label" for="flexCheckDefault">{{ section.settings.paragraph }}</label>
-                                    </div>
-                                    {%- if block.settings.show_dynamic_checkout -%}
-                                      <div class="buy-one-click">{{ form | payment_button }}</div>
-                                    {%- endif -%}
-
                                   </div>
+
   
                                     <div class="product-social-links mt-4">
                                       <ul>
@@ -668,44 +668,11 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
       ]
     },
 
- 
+
     {
       "type": "product_short_description",
       "name": "Short Description",
-      "limit": 1,
-      "settings":[
-        {
-          "type": "header",
-          "content": "Product Description"
-      	},
-		    {
-          "type": "radio",
-          "id": "product_description_handle",
-          "label": "Description Handle",
-		      "options":[
-                {
-                  "label": "Full Description",
-                  "value": "full_description"
-                },
-                {
-                  "label": "Short Description",
-                  "value": "short_description"
-                },
-                {
-                  "label": "Without Description",
-                  "value": "without_description"
-                }
-              ],
-              "default": "short_description"
-      	},
-		    {
-          "type": "number",
-          "id": "truncatewords_count_handle",
-          "label": "Description Word Count",
-          "default": 35,
-		      "info": "If 'Short Description' is selected and the shortcode is not used, then it will be applicable"
-      	}
-      ] 
+      "limit": 1
     },
  
     {
