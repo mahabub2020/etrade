@@ -10,18 +10,16 @@
 
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 
-
-
 <div class="woocommerce" id="section-{{ section.id }}">
   <div class="axil-single-product-area axil-section-gap pb--0 bg-color-white single-product-1">
     <div class="single-product-thumb">
       <div class="{% if section.settings.container_style == 'style_1' %}container p-0 {% else %} container-fluid p-0{% endif %}">
         <div class="row {% if section.settings.content_handle == 'content_in_left' %}flex-row-reverse{% endif %}">
-          {%- if section.settings.product_style == 'product_default' -%}
+          {%- if section.settings.product_style == 'product_default_2' -%}
             <div class="col-lg-6 mb--40">
               <div class="h-100">
                 <div class="position-sticky sticky-top">
-                    <div class="row row--10">
+                    <div class="row row--10"> 
                       {%- if product.images.size -%}
                         {% for image in product.images %}
                         <div class="col-6 mb--20">
@@ -37,12 +35,66 @@
                             </div>
                         </div>
                         {% endfor %}
-                      {%- endif -%}
+                      {%- endif -%} 
                         <!-- End .col -->
                     </div>
                 </div>
             </div>
             </div> 
+
+          {% elsif section.settings.product_style == 'product_default' %}
+            <div class="col-lg-6 mb--40">
+              <div class="row">
+                  <div class="col-lg-10 order-lg-2">
+                      <div class="single-product-thumbnail-wrap zoom-gallery">
+                        <div class="product-quick-view position-view">
+                          <a href="#" class="popup-zoom">
+                              <i class="far fa-search-plus"></i>
+                          </a>
+                      </div>
+                          <div class="product-large-thumbnail single-product-thumbnail axil-product">
+                              
+                            {%- if product.images.size -%}
+                              {% for image in product.images %}
+                               
+                                    <div class="thumbnail">
+                                            <a class="product-single__thumbnail {% if forloop.first and section.settings.product_zoom_enable %}active{% endif %}" href="{{ image.src | img_url: '1024x1024' }}" 
+                                            data-image="{{ image.src | img_url: '1024x1024' }}" data-zoom-image="{{ image.src | img_url: '1024x1024' }}" data-image-id="{{ image.id }}">
+                                            <img src="{{ image.src | img_url: 'compact' }}" alt="{{ image.alt | escape }}">
+                                            </a>
+                                      </div> 
+                                    
+                              {% endfor %}
+                            {%- endif -%} 
+  
+
+                          </div>
+                          <div class="label-block">
+                              <div class="product-badget">20% OFF</div>
+                          </div>
+                          
+                      </div>
+                  </div>
+
+                  <div class="col-lg-2 order-lg-1">
+                      <div class="product-small-thumb small-thumb-wrapper small-thumb-style-two">
+
+
+                        {%- if product.images.size -%}
+                          {% for image in product.images %}
+                           
+                                <div class="small-thumb-img"> 
+                                        <img src="{{ image.src | img_url: '60x60' }}" alt="{{ image.alt | escape }}">
+                                </div> 
+                                
+                          {% endfor %}
+                        {%- endif -%}  
+ 
+                      </div>
+                  </div>
+              </div>
+          </div>
+
           {%- endif -%}
 
           <div class="col-lg-6 mb--40">
@@ -678,17 +730,10 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
       "name": "Prices",
       "limit": 1
     },
-    {
-      "type": "visitor",
-      "name": "Visitor",
-      "limit": 1
-    },
-
-
-
+    
     {
       "type": "variant_picker",
-      "name": "variant_picker",
+      "name": "Variant Picker",
       "limit": 1,
       "settings": [
         {

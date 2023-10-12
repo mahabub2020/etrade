@@ -18,8 +18,97 @@
            // searchClick();
             headerCampaignRemove(); 
             axilSlickActivation();
+            axilslickactivation2();
+            magnificPopupActivation();
 
         });
+
+
+        function magnificPopupActivation() {
+            $(document).on('click', 'a.popup-zoom', function (event) {
+  
+              event.preventDefault();
+                  let images = [];
+                  $('.single-product-thumbnail .slick-track .slick-slide').each(function() { // the containers for all your galleries
+                      images.push({
+                          src: $(this).find('img').attr('src'),
+                          type: 'image'
+                      });
+                  });
+  
+                  $(this).magnificPopup({
+                      items: images, // the selector for gallery item
+                      type: 'image',
+                      gallery: {
+                        enabled:true
+                      }
+                  }).magnificPopup('open');
+                  
+              });
+          }
+
+        function axilslickactivation2() { 
+
+			var SlickCarousel = $('.single-product-thumb');
+
+
+			if (SlickCarousel.length) {
+				try {
+					if (SlickCarousel.find('.product-small-thumb').hasClass('slick-initialized')) {
+						SlickCarousel.find('.product-small-thumb').slick('unslick');
+					}
+
+					if (SlickCarousel.find('.product-large-thumbnail').hasClass('slick-initialized')) {
+						SlickCarousel.find('.product-large-thumbnail').slick('unslick');
+					}
+
+				} catch (e) { }
+
+
+				SlickCarousel.find('.product-large-thumbnail').slick({
+					infinite: false,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: true,
+					dots: false,
+					speed: 800,
+					draggable: false,
+					
+					asNavFor: '.product-small-thumb'
+
+				});
+				SlickCarousel.find('.product-small-thumb').slick({
+					infinite: false,
+					slidesToShow: 6,
+					slidesToScroll: 1,
+					arrows: false,
+					dots: false,
+					focusOnSelect: true,
+					vertical: true,
+					
+					speed: 800,
+					asNavFor: '.product-large-thumbnail',
+					responsive: [{
+						breakpoint: 992,
+						settings: {
+							vertical: false,
+						}
+					},
+					{
+						breakpoint: 768,
+						settings: {
+							vertical: false,
+							slidesToShow: 4,
+						}
+					}
+					]
+
+
+				});
+			}
+		}
+
+
 
         function  axilSlickActivation (e) {
             $('.slick-slider').not('.slick-initialized').slick();
