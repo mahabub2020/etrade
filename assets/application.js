@@ -147,6 +147,7 @@ $(document).ready(function(){
 
     // Load more
     $('.btn-load-more').on('click', function() {
+        console.log('clicked')
         var $this =$(this),
         totalPages = parseInt($('[data-total-pages]').val()),
         currentPage = parseInt($('[data-current-page]').val());
