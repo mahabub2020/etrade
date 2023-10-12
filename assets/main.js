@@ -5,12 +5,11 @@
 
 
         $(document).ready(function(){
-
             slider_slick_activation_two();
             slider_slick_activation_one();
             slider_thumb_activation_one(); 
             readyActivation();
-            magnificPopupActivation();
+          
             testimonialActivation();
             countdown(); 
             slider_thumb_activation_two();
@@ -19,31 +18,65 @@
             headerCampaignRemove(); 
             axilSlickActivation();
             axilslickactivation2();
+            magnificPopupActivationProductDetails();
             magnificPopupActivation();
 
         });
-
-
         function magnificPopupActivation() {
-            $(document).on('click', 'a.popup-zoom', function (event) {
-  
-              event.preventDefault();
-                  let images = [];
-                  $('.single-product-thumbnail .slick-track .slick-slide').each(function() { // the containers for all your galleries
-                      images.push({
-                          src: $(this).find('img').attr('src'),
-                          type: 'image'
-                      });
-                  });
-  
-                  $(this).magnificPopup({
-                      items: images, // the selector for gallery item
-                      type: 'image',
-                      gallery: {
-                        enabled:true
-                      }
-                  }).magnificPopup('open');
-                  
+            var yPopup = $('.popup-youtube');
+            if (yPopup.length) {
+                yPopup.magnificPopup({
+                    disableOn: 300,
+                    type: 'iframe',
+                    mainClass: 'mfp-fade',
+                    removalDelay: 160,
+                    preloader: false,
+                    fixedContentPos: false
+                });
+            }
+            if ($('.zoom-gallery').length) {
+                $('.zoom-gallery').each(function() {
+                    $(this).magnificPopup({
+                        delegate: 'a.popup-zoom-gallery',
+                        type: 'image',
+                        gallery: {
+                            enabled: true
+                        }
+                    });
+                });
+            }
+        }
+
+
+
+        function magnificPopupActivationProductDetails() {
+            $(document).on('click', '.product-quick-view', function (event) {
+                event.preventDefault();
+
+                $(this).next('.single-product-thumbnail').children('.slick-list').children('.slick-track').children('.slick-slide').magnificPopup({
+                    delegate: 'a',
+                    type: 'image',
+                    gallery: {
+                        enabled: true
+                    }
+                }).magnificPopup('open');
+
+                /*let images = [];
+                $('.single-product-thumbnail .slick-track .slick-slide').each(function() { // the containers for all your galleries
+                    images.push({
+                        src: $(this).find('img').attr('src'),
+                        type: 'image'
+                    });
+                });
+
+                $(this).magnificPopup({
+                    items: images, // the selector for gallery item
+                    delegate: 'a',
+                    type: 'image',
+                    gallery: {
+                    enabled:true
+                    }
+                }).magnificPopup('open');*/
               });
           }
 
@@ -738,31 +771,6 @@
             ]
         });
       }
-      function magnificPopupActivation() {
-            var yPopup = $('.popup-youtube');
-            if (yPopup.length) {
-                yPopup.magnificPopup({
-                    disableOn: 300,
-                    type: 'iframe',
-                    mainClass: 'mfp-fade',
-                    removalDelay: 160,
-                    preloader: false,
-                    fixedContentPos: false
-                });
-            }
-            if ($('.zoom-gallery').length) {
-                $('.zoom-gallery').each(function() {
-                    $(this).magnificPopup({
-                        delegate: 'a.popup-zoom',
-                        type: 'image',
-                        gallery: {
-                            enabled: true
-                        }
-                    });
-                });
-            }
-        }
-
-
+      
 
     })(jQuery)
