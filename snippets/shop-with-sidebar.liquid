@@ -1,5 +1,6 @@
 <div class="col-xl-9 col-lg-9 col-12">
   <div class="main-content">
+    <div class="product-grid-container" id="ProductGridContainer">
     {% paginate collection.products by section.settings.product_per_page %}
       <div class="axil-shop-top">
         <div class="row">
@@ -38,7 +39,6 @@
         </div>
       </div>
 
-      <div class="product-grid-container" id="ProductGridContainer">
         <div id="product-grid" class="collection products axiltheme-archive-products row axiltheme-loadmore-wrapper">
           <div class="loading-overlay gradient"></div>
           {% for product in collection.products %}
@@ -63,9 +63,9 @@
             </div>
           {% endfor %}
         </div>
-      </div>
       {% render 'pagination', pagination: paginate %}
     {% endpaginate %}
+    </div>
 
     {% comment %} <div
     class="axiltheme-loadmore-data"
