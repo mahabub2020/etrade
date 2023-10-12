@@ -12,8 +12,6 @@ class FacetFiltersForm extends HTMLElement {
 
 		const facetWrapper = this.querySelector('#FacetsWrapperDesktop');
 		if (facetWrapper) facetWrapper.addEventListener('keyup', onKeyUpEscape);
-
-        console.log(document.getElementById('ProductGridContainer').innerHTML);
 	}
 
 	static setListeners() {
