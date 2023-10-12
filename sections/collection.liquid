@@ -44,7 +44,7 @@
       {
         "type": "select",
         "id": "product_layout",
-        "label": "Product Collection Layout",
+        "label": "Product Box Layout",
         "options": [
           {
             "label": "Layout 1",
@@ -102,6 +102,20 @@
           }
         ],
         "default": "load_more"
+      }, {
+        "type": "select",
+        "id": "filter_style",
+        "label": "Filter Style",
+        "options": [
+          {
+            "label": "Default Filter",
+            "value": "default"
+          }, {
+            "label": "Ajax Filter",
+            "value": "ajax"
+          }
+        ],
+        "default": "default"
       }, {
         "type": "checkbox",
         "id": "filter_by_category",
