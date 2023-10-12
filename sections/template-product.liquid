@@ -15,17 +15,37 @@
     <div class="single-product-thumb">
       <div class="{% if section.settings.container_style == 'style_1' %}container p-0 {% else %} container-fluid p-0{% endif %}">
         <div class="row {% if section.settings.content_handle == 'content_in_left' %}flex-row-reverse{% endif %}">
-          {%- if section.settings.product_thumbnail_style == 'product_thumbnail_1' -%}
-            {% render 'product-thumbnail-1' %}   
-          {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_2' %}
-            {% render 'product-thumbnail-2' %} 
-          {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_3' %}
-            {% render 'product-thumbnail-3' %} 
-          {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_4' %}
-            {% render 'product-thumbnail-4' %}  
-          {%- endif -%}
+        
+            {%- if section.settings.product_thumbnail_style == 'product_thumbnail_1' -%}
+              <div class="col-lg-7 mb--40">
+                {% render 'product-thumbnail-1' %}   
+              </div>
+            {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_2' %}
+              <div class="col-lg-7 mb--40">
+                {% render 'product-thumbnail-2' %} 
+              </div>
+            {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_3' %}
+              <div class="col-lg-7 mb--40">
+                {% render 'product-thumbnail-3' %} 
+              </div>
+            {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_4' %}
+              <div class="col-lg-7 mb--40">
+                {% render 'product-thumbnail-4' %}  
+              </div>
+            {%- endif -%}
+       
 
-          <div class="col-lg-6 mb--40">
+            {%- if section.settings.product_thumbnail_style == 'product_thumbnail_1' -%}
+              <div class="col-lg-5 mb--40">  
+            {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_2' %}
+              <div class="col-lg-6 mb--40"> 
+            {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_3' %}
+              <div class="col-lg-6 mb--40"> 
+            {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_4' %}
+              <div class="col-lg-6 mb--40">
+            {%- endif -%}
+          
+
             <div class="h-100">
               <div class="position-sticky sticky-top">
                   <div class="single-product-content">
@@ -320,31 +340,31 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
           "type": "select",
           "id": "product_thumbnail_style",
           "label": "Product Thumbnail Style",
-		  "options":[
-				{
-                    "label": "Default",
-                    "value": "product_thumbnail_1"
-                },
-				{
-                    "label": "Default 2",
-                    "value": "product_thumbnail_2"
-                },
-                {
-                    "label": "Gallery",
-                    "value": "product_thumbnail_3"
-                },
-                {
-                    "label": "Sticky",
-                    "value": "product_thumbnail_4"
-                }
-			],
-			"default": "product_default"
-      	},
-		{
-          "type": "header",
-          "content": "Product Zoom"
-      	},
-		{
+          "options":[
+            {
+                        "label": "Default",
+                        "value": "product_thumbnail_1"
+                    },
+            {
+                        "label": "Default 2",
+                        "value": "product_thumbnail_2"
+                    },
+                    {
+                        "label": "Gallery",
+                        "value": "product_thumbnail_3"
+                    },
+                    {
+                        "label": "Sticky",
+                        "value": "product_thumbnail_4"
+                    }
+          ],
+          "default": "product_default"
+            },
+        {
+              "type": "header",
+              "content": "Product Zoom"
+            },
+        {
           "type": "checkbox",
           "id": "product_zoom_enable",
           "label": "Product Zoom Enable",
