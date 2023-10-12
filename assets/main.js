@@ -20,8 +20,76 @@
             axilslickactivation2();
             magnificPopupActivationProductDetails();
             magnificPopupActivation();
+            axilslickactivation3();
 
         });
+
+
+
+
+		function axilslickactivation3() {
+
+			var SlickCarousel = $('.single-product-thumb');
+
+
+			if (SlickCarousel.length) {
+				try {
+					if (SlickCarousel.find('.product-small-thumb-2').hasClass('slick-initialized')) {
+						SlickCarousel.find('.product-small-thumb-2').slick('unslick');
+					}
+
+					if (SlickCarousel.find('.product-large-thumbnail-2').hasClass('slick-initialized')) {
+						SlickCarousel.find('.product-large-thumbnail-2').slick('unslick');
+					}
+
+				} catch (e) { }
+
+				SlickCarousel.find('.product-large-thumbnail-2').slick({
+					infinite: false,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: true,
+					dots: false,
+					speed: 800,
+					draggable: false,
+				 
+					asNavFor: '.product-small-thumb-2',
+					prevArrow: '<button class="slide-arrow prev-arrow"><i class="far fa-angle-left"></i></button>',
+					nextArrow: '<button class="slide-arrow next-arrow"><i class="far fa-angle-right"></i></button>'
+
+
+				});
+				SlickCarousel.find('.product-small-thumb-2').slick({
+					infinite: false,
+					slidesToShow: 6,
+					slidesToScroll: 1,
+					arrows: false,
+					dots: false,
+					focusOnSelect: true,
+					speed: 800,
+					 
+					asNavFor: '.product-large-thumbnail-2',
+					responsive: [{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 5,
+						}
+					},
+					{
+						breakpoint: 479,
+						settings: {
+							slidesToShow: 4,
+						}
+					}
+					]
+
+
+				});
+
+			}
+		}
+		
+
         function magnificPopupActivation() {
             var yPopup = $('.popup-youtube');
             if (yPopup.length) {
