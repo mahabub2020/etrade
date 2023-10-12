@@ -35,6 +35,8 @@
             {%- endif -%}
        
 
+
+            
             {%- if section.settings.product_thumbnail_style == 'product_thumbnail_1' -%}
               <div class="col-lg-5 mb--40">  
             {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_2' %}
@@ -342,23 +344,23 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
           "label": "Product Thumbnail Style",
           "options":[
             {
-                        "label": "Default",
+                        "label": "Gallery 1",
                         "value": "product_thumbnail_1"
                     },
             {
-                        "label": "Default 2",
+                        "label": "Gallery 2",
                         "value": "product_thumbnail_2"
                     },
                     {
-                        "label": "Gallery",
+                        "label": "Gallery 3",
                         "value": "product_thumbnail_3"
                     },
                     {
-                        "label": "Sticky",
+                        "label": "Gallery 4",
                         "value": "product_thumbnail_4"
                     }
           ],
-          "default": "product_default"
+          "default": "product_thumbnail_1"
             },
         {
               "type": "header",
