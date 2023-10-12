@@ -344,27 +344,31 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
               ],
               "default": "content_in_right"
         },
-		{
+		    {
           "type": "select",
           "id": "product_thumbnail_style",
           "label": "Product Thumbnail Style",
           "options":[
-            {
-                        "label": "Gallery 1",
-                        "value": "product_thumbnail_1"
-                    },
-            {
-                        "label": "Gallery 2",
-                        "value": "product_thumbnail_2"
-                    },
-                    {
-                        "label": "Gallery 3",
-                        "value": "product_thumbnail_3"
-                    },
-                    {
-                        "label": "Gallery 4",
-                        "value": "product_thumbnail_4"
-                    }
+              {
+                  "label": "Gallery 1",
+                  "value": "product_thumbnail_1"
+              },
+              {
+                  "label": "Gallery 2",
+                  "value": "product_thumbnail_2"
+              },
+              {
+                  "label": "Gallery 3",
+                  "value": "product_thumbnail_3"
+              },
+              {
+                  "label": "Gallery 4",
+                  "value": "product_thumbnail_4"
+              },
+              {
+                  "label": "Gallery 5",
+                  "value": "product_thumbnail_5"
+              }
           ],
           "default": "product_thumbnail_1"
             },
@@ -379,23 +383,23 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
           "info": "It's not applicable for 'Product Style: Gallery'",
           "default": true		
       	},
-		{
-          "type": "select",
-          "id": "zoom_type",
-          "label": "Zoom Type",
-		  "options":[
-				{
-                    "label": "Lens",
-                    "value": "lens"
-                },
-                {
-                    "label": "Window",
-                    "value": "window"
-                },
-                {
-                    "label": "Inner",
-                    "value": "inner"
-                }
+      {
+      "type": "select",
+      "id": "zoom_type",
+      "label": "Zoom Type",
+      "options":[
+      {
+            "label": "Lens",
+            "value": "lens"
+          },
+          {
+              "label": "Window",
+              "value": "window"
+          },
+          {
+              "label": "Inner",
+              "value": "inner"
+          }
 			],
 			"default": "inner"
       	},
