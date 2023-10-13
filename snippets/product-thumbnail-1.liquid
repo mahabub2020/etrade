@@ -1,11 +1,14 @@
     <div class="row">
         <div class="col-lg-10 order-lg-2">
-            <div class="single-product-thumbnail-wrap zoom-gallery">
-              <div class="product-quick-view position-view">
-                <a href="#" class="popup-zoom">
-                    <i class="far fa-search-plus"></i>
-                </a>
-            </div>
+            <div class="single-product-thumbnail-wrap zoom-gallery"> 
+            {%- if section.settings.product_popup_enable -%}
+                <div class="product-quick-view position-view">
+                    <a href="#" class="popup-zoom">
+                        <i class="far fa-search-plus"></i>
+                    </a>
+                </div>
+             {%- endif -%} 
+
                 <div class="product-large-thumbnail single-product-thumbnail axil-product">
                   {%- if product.images.size -%}
                     {% for image in product.images %}
