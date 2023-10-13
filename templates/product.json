@@ -84,10 +84,36 @@
       "settings": {
         "container_style": "style_1",
         "content_handle": "content_in_right",
-        "product_thumbnail_style": "product_thumbnail_5",
+        "product_thumbnail_style": "product_thumbnail_4",
         "product_zoom_enable": true,
         "zoom_type": "inner",
         "product_popup_enable": true
+      }
+    },
+    "ca10b4c1-734f-485f-99d8-bf339d396a49": {
+      "type": "newsletter",
+      "blocks": {
+        "template--21159462175006__ca10b4c1-734f-485f-99d8-bf339d396a49-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21159462175006__ca10b4c1-734f-485f-99d8-bf339d396a49-section_padding-1"
+      ],
+      "settings": {
+        "before_title_icon": "fas fa-envelope-open",
+        "before_title_text": "Newsletter",
+        "before_title_color": "#3577f0",
+        "title": "Get weekly update",
+        "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
       }
     },
     "85c54a0e-24ac-4918-88a9-c40571be93c4": {
@@ -208,6 +234,7 @@
   },
   "order": [
     "template",
+    "ca10b4c1-734f-485f-99d8-bf339d396a49",
     "85c54a0e-24ac-4918-88a9-c40571be93c4",
     "upsell-product",
     "related-products",
