@@ -84,13 +84,10 @@
       "settings": {
         "container_style": "style_1",
         "content_handle": "content_in_right",
-        "product_thumbnail_style": "product_thumbnail_4",
+        "product_thumbnail_style": "product_thumbnail_1",
         "product_zoom_enable": true,
         "zoom_type": "inner",
-        "product_popup_enable": true,
-        "product_cursole": "3",
-        "product_cursole_2": "3",
-        "product_cursole_3": "3"
+        "product_popup_enable": true
       }
     },
     "85c54a0e-24ac-4918-88a9-c40571be93c4": {
