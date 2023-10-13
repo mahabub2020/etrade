@@ -7,8 +7,16 @@
 {%- if product.available -%}
 {%- assign sold_out = false -%}
 {%- endif -%}
-
 {%- assign current_variant = product.selected_or_first_available_variant -%}
+ 
+
+{%- if  product.metafields.custom.single_product_layout -%}
+  {%- assign single_product_layout =  product.metafields.custom.single_product_layout -%}
+{% else %}
+  {%- assign single_product_layout =  section.settings.product_thumbnail_style -%}
+{%- endif -%}
+/////
+{{ single_product_layout }}
 
 <div class="woocommerce" id="section-{{ section.id }}">
   <div class="axil-single-product-area axil-section-gap pb--40 bg-color-white single-product-1">
@@ -16,23 +24,23 @@
       <div class="{% if section.settings.container_style == 'style_1' %}container p-0 {% else %} container-fluid p-0{% endif %}">
         <div class="row {% if section.settings.content_handle == 'content_in_left' %}flex-row-reverse{% endif %}">
         
-            {%- if section.settings.product_thumbnail_style == 'product_thumbnail_1' -%}
+            {%- if single_product_layout == 'product_thumbnail_1' -%}
               <div class="col-lg-7 mb--40">
                 {% render 'product-thumbnail-1' %}   
               </div>
-            {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_2' %}
+            {% elsif single_product_layout == 'product_thumbnail_2' %}
               <div class="col-lg-6 mb--40">
                 {% render 'product-thumbnail-2' %} 
               </div>
-            {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_3' %}
+            {% elsif single_product_layout == 'product_thumbnail_3' %}
               <div class="col-lg-6 mb--40">
                 {% render 'product-thumbnail-3' %} 
               </div>
-            {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_4' %}
+            {% elsif single_product_layout == 'product_thumbnail_4' %}
               <div class="col-lg-6 mb--40">
                 {% render 'product-thumbnail-4' %}  
               </div>
-              {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_5' %}
+              {% elsif single_product_layout == 'product_thumbnail_5' %}
               <div class="col-lg-6 mb--40">
                 {% render 'product-thumbnail-5' %}  
               </div>
@@ -41,15 +49,15 @@
 
 
             
-            {%- if section.settings.product_thumbnail_style == 'product_thumbnail_1' -%}
+            {%- if single_product_layout == 'product_thumbnail_1' -%}
               <div class="col-lg-5 mb--40">  
-            {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_2' %}
+            {% elsif single_product_layout == 'product_thumbnail_2' %}
               <div class="col-lg-6 mb--40"> 
-            {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_3' %}
+            {% elsif single_product_layout == 'product_thumbnail_3' %}
               <div class="col-lg-6 mb--40"> 
-            {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_4' %}
+            {% elsif single_product_layout == 'product_thumbnail_4' %}
               <div class="col-lg-6 mb--40"> 
-            {% elsif section.settings.product_thumbnail_style == 'product_thumbnail_5' %}
+            {% elsif single_product_layout == 'product_thumbnail_5' %}
               <div class="col-lg-6 mb--40">
             {%- endif -%}
           
