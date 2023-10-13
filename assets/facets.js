@@ -86,6 +86,7 @@ class FacetFiltersForm extends HTMLElement {
 			.forEach((element) => {
 				element.classList.add('scroll-trigger--cancel');
 			});
+		const endlessCollection = new Ajaxinate({container: '#product-grid', pagination: '.infinite_next'});
 	}
 
 	static renderProductCount(html) {
