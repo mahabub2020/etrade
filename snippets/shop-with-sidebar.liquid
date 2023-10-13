@@ -10,21 +10,19 @@
                 Showing {{ collection.products_count }} of {{ collections['all'].all_products_count }} products</p>
               <div class="sort-list">
                 <form class="woocommerce-ordering" method="get">
-                  <select
-                    name="orderby"
-                    class="orderby"
-                    aria-label="Shop order">
-                    <option value="menu_order" selected="selected">Default sorting</option>
-                    <option value="popularity">Sort by popularity</option>
-                    <option value="rating">Sort by average rating</option>
-                    <option value="date">Sort by latest</option>
-                    <option value="price">Sort by price: low to high</option>
-                    <option value="price-desc">Sort by price: high to low</option>
-                  </select>
-                  <input
-                    type="hidden"
-                    name="paged"
-                    value="1">
+                  {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                  <select>
+{%- for option in collection.sort_options %}
+  <option
+    value="{{ option.value }}"
+    {%- if option.value == sort_by %}
+      selected="selected"
+    {%- endif %}
+  >
+    {{ option.name }}
+  </option>
+{% endfor -%}
+</select>
                 </form>
               </div>
             </div>
