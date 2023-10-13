@@ -47,7 +47,6 @@
     {{ 'slick.min.js' | asset_url | script_tag }}
     {{ 'main.js' | asset_url | script_tag }}<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer> </script>
 
-<<<<<<< HEAD
     {{ 'component-show-more.css' | asset_url | stylesheet_tag }}
     
     <style>
@@ -56,20 +55,11 @@
       }
     </style>
     {{ shop.metafields.reviewxpo['global_styles'] }}
+    {% render "reviews-importer-variable-js" %}
     {% if template contains 'collection' %}
       {{ 'https://cdn.shopify.com/s/files/1/0382/4185/files/ajaxinate.js?937' | script_tag }}{% endif %}
   </head>
   <body>
-=======
-  <style>
-    [x-cloak] { display: none !important; }
-  </style>
-{{ shop.metafields.reviewxpo['global_styles'] }}
-
- {% render "reviews-importer-variable-js" %}
-</head>
-<body>
->>>>>>> 01e2a4e4bd976e81e3ccac30927d0f66b2c135e9
 
     {% section 'header' %}
 
