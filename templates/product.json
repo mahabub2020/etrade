@@ -206,6 +206,20 @@
       ],
       "disabled": true,
       "settings": {
+        "container_style": "style_2",
+        "upsell_products_enable": true,
+        "section_before_title": "Your Recently",
+        "section_title": "Upsell Products",
+        "collection": "womens",
+        "product_layout": "2",
+        "upsell_product_limit_handle": 1,
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_md": 2,
+        "product_column_sm": 1,
+        "section_title_color": "#282828",
+        "section_border_color": "#cf987e"
       }
     }
   },
