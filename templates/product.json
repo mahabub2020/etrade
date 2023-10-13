@@ -138,7 +138,7 @@
         "upsell_product_limit_handle": 4,
         "autoplay_true": true,
         "autoplay_speed": 5000,
-        "product_column": 5,
+        "product_column": 4,
         "product_column_md": 6,
         "product_column_sm": 1,
         "section_title_color": "#282828",
