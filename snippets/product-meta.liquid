@@ -1,0 +1,54 @@
+<div class="product-met-wrp"> 
+    <ul class="product-additional-list">
+        {% if block.settings.show_vendor %}
+            <li>
+                <span class="product-additional-label">{{ 'products.product.vendor' | t }}:</span>
+                <div class="product-additional-value">{{ product.vendor | link_to_vendor }}</div>
+            </li>
+        {% endif %}
+        {% if block.settings.show_availability %}
+            <li>
+                <span class="product-additional-label">{{ 'products.product.availability' | t }}:</span>
+                <div class="product-additional-value {% if product.available %}text-success {% else %} text-danger{% endif %}" data-availability>
+                    {% if product.variants.first.inventory_management == "shopify" and product.variants.first.inventory_quantity > 0 %}
+                        In Stock.
+                        {% else %}
+                        Out Of Stock
+                    {% endif %}
+                </div>
+            </li>
+        {% endif %}
+        {% if block.settings.show_sku %}
+            <li>
+                <span class="product-additional-label sku_wrapper">{{ 'products.product.sku' | t }}:</span>
+                <div class="product-additional-value product-sku" data-product-sku>
+                    {% assign current_variant = product.selected_or_first_available_variant %}
+                    {{ current_variant.sku | default: 'N/A' }}
+                </div>
+            </li>
+        {% endif %}  
+        {% if block.settings.show_collections and product.collections.size > 0 %}
+            <li class="product-categories d-flex">
+                <span class="product-additional-label">{{ 'products.product.collection' | t }}:</span>
+                <div class="product-additional-value"> 
+                    {% assign category_list_limit = block.settings.category_list_limit_handle %}
+                    {% for category in collections limit: category_list_limit %}
+                    <a href="{{ category.url }}">{{ category.title }}</a>{% unless forloop.last %},{% endunless %}
+                    {% endfor %}  
+                </div>
+            </li>
+        {% endif %} 
+        {% if block.settings.show_tag and product.tags.size > 0 %}
+            <li class="product-categories d-flex">
+                <span class="product-additional-label">{{ 'products.product.tag' | t }}:</span>
+                <div class="product-additional-value">
+                {% assign category_tag_limit = block.settings.category_tag_limit_handle %}
+                {% for tag in product.tags limit: category_tag_limit %}
+                <a href="/collections/all/{{ tag | handle }}">{{ tag }}{% unless forloop.last %},{% endunless %}</a>
+                {% endfor %}
+                </div>
+            </li>
+        {% endif %}  
+    </ul>
+</div>
+ 

@@ -683,3 +683,6 @@ input[type=checkbox] {
   height: unset !important;
   margin-right: 8px !important;
 }
+.h-24 {
+  height: 24px;
+}

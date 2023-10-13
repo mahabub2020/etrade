@@ -46,6 +46,7 @@ function mainstyles() {
         .pipe(scss())
         .pipe(autoPrefixer('last 2 versions'))
         .pipe(concat('theme-default.css'))
+        .pipe(concat('style.css'))
         .pipe(dest('./assets/'))
 }
 

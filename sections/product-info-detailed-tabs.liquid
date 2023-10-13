@@ -1,0 +1,275 @@
+<div id="product-info-detailed" class="product-info-detailed shopify-tabs wc-tabs-wrapper bg-vista-white" style="background-color: {{ section.settings.background-color }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;">
+    <div class="{{ section.settings.container }}">
+      <div class="shopify-tabs-wrp"> 
+          <ul class="nav tabs wc-tabs" id="myTab" role="tablist">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'description' %}
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link {% if forloop.first %} active{% endif %}" id="prodcut-descroption-tab" aria-label="prodcut-description" data-bs-toggle="tab" data-bs-target="#prodcut-description" type="button" role="tab" aria-controls="prodcut-description" aria-selected="true">{{ block.settings.header }}</button>
+                  </li>
+                {%- when 'custom_tabs' -%}
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link {% if forloop.first %} active{% endif %}" id="prodcut-{{ block.id }}" aria-label="{{ block.settings.for_group | handle }}" data-bs-toggle="tab" data-bs-target="#{{ block.settings.for_group | handle }}" type="button" role="tab" aria-controls="{{ block.settings.for_group | handle }}" aria-selected="false">
+                      {{ block.settings.for_group }}</button>
+                  </li>
+                {% when 'reviews' %}
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link {% if forloop.first %} active{% endif %}" id="review-tab" data-bs-toggle="tab" data-bs-target="#review" type="button" role="tab" aria-controls="review" aria-selected="true">{{ block.settings.text-header }}</button>
+                  </li>
+              {% endcase %}
+            {% endfor %}
+          </ul>
+          <div class="tab-content item faq faq-item accordion accordion-flush" id="product-info-tab">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'description' %}
+                  <div class="tab-pane fade {% if forloop.first %}show active{% endif %} accordion-item" id="prodcut-description" role="tabpanel" aria-labelledby="prodcut-description" tabindex="0">
+                    <h2 class="accordion-header accordion-button d-md-none" id="headingone1" data-bs-toggle="collapse" data-bs-target="#st{{ block.id }}" {% if section.settings.open %} aria-expanded="true"{% else %} aria-expanded="false"{% endif %} aria-controls="st{{block.id}}">
+                      <span class="toggle-minus">
+                        <span></span>
+                      </span>
+                      {{ block.settings.header }}
+                    </h2>
+                    <div id="st{{ block.id }}" class="accordion-collapse collapse {% if section.settings.open %} show {% endif %} d-md-block" aria-labelledby="st{{block.id}}" data-bs-parent="#product-info-tab">
+                      <div class="accordion-body entry-content">
+                        {% assign content = product.description | remove: "[disable-icon-new]" %}
+                        {{ content }}
+                      </div>
+                    </div>
+                  </div>
+                {%- when 'custom_tabs' -%}
+                    <div class="tab-pane fade {% if forloop.first %}show active{% endif %} accordion-item" id="{{ block.settings.for_group | handle }}" role="tabpanel" aria-labelledby="{{ block.settings.for_group | handle }}" tabindex="0">
+                        <h2 class="accordion-header accordion-button d-md-none" id="flush-headingone" data-bs-toggle="collapse" data-bs-target="#st{{ block.id }}" aria-expanded="false" aria-controls="st{{block.id}}">
+                        <span class="toggle-minus">
+                            <span></span>
+                        </span>
+                        {{ block.settings.for_group }}
+                        </h2>
+                        <div id="st{{ block.id }}" class="accordion-collapse collapse d-md-block" aria-labelledby="st{{block.id}}" data-bs-parent="#product-info-tab">
+                        <div class="accordion-body">
+                            {{ block.settings.tabs_content }}
+                        </div>
+                        </div>
+                    </div>
+                {% when 'reviews' %}
+                    <div class="tab-pane fade {% if forloop.first %}show active{% endif %} accordion-item" id="review" role="tabpanel" aria-labelledby="review" tabindex="0">
+                        <h2 class="accordion-header accordion-button d-md-none" id="flush-headingone1" data-bs-toggle="collapse" data-bs-target="#st{{ block.id }}" aria-expanded="false" aria-controls="st{{block.id}}">
+                        <span class="toggle-minus">
+                            <span></span>
+                        </span>
+                        {{ block.settings.text-header }}
+                        </h2>
+                        <div id="st{{ block.id }}" class="accordion-collapse collapse d-md-block" aria-labelledby="st{{block.id}}" data-bs-parent="#product-info-tab">
+                            <div class="accordion-body">
+                                {% render 'product-reviews-app', custom_liquid: block.settings.custom_liquid %}
+                            </div>
+                        </div>
+                    </div>
+              {% endcase %}
+            {% endfor %}
+          </div>
+      
+      </div>
+    </div>
+  </div>
+
+
+  {%- style -%}
+
+
+  #section-{{ section.id }}{
+    {%- for block in section.blocks -%}
+    {%- case block.type -%}
+    {%- when 'section_margin' -%}
+    margin-top: {{ block.settings.section_margin_top }}px;
+    margin-bottom: {{ block.settings.section_margin_bottom }}px;
+    {%- when 'section_padding' -%}
+    padding-top: {{ block.settings.section_padding_top }}px;
+    padding-bottom: {{ block.settings.section_padding_bottom }}px;
+    {%- when 'section_background' -%}    
+    background: {{ block.settings.section_bg_color }} 
+      {%- if block.settings.section_bg_image -%}url("{{ block.settings.section_bg_image | img_url: 'master' }}"){%- endif -%} no-repeat scroll center center / cover;
+    {%- endcase -%}
+    {%- endfor -%}
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {% case block.type %}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_md }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_md }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_md }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_md }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+  @media (max-width: 767px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {%- case block.type -%}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_xs }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_xs }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_xs }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_xs }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+
+#section-{{ section.id }} .heading-color {
+    color: {{ section.settings.section_title_color }}!important;
+}
+
+#section-{{ section.id }} .separator {
+    border-color: {{ section.settings.section_border_color }};
+}
+  
+
+#section-{{ section.id }} .color--light-3 {
+    color: {{ section.settings.section_description_color }}!important;
+}
+
+
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Product information tabs",
+  "tag": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "General"
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container type",
+      "options": [
+        {
+          "value": "container-fluid",
+          "label": "Default"
+        },
+        {
+          "value": "container-full-width",
+          "label": "Full width"
+        },
+        {
+          "value": "container-xxl",
+          "label": "Use container box"
+        }
+      ],
+      "default": "container-xxl"
+    },
+    {
+      "type": "color",
+      "id": "background-color",
+      "label": "Background color",
+      "default": "#f9f3f0"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Sections Padding Top",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Sections Padding bottom",
+      "default": 40
+    }
+  ],
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "custom_tabs",
+      "name": "Custom Tabs",
+      "settings": [
+        {
+          "type": "text",
+          "id": "for_group",
+          "label": "Heading",
+          "default": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "tabs_content",
+          "label": "Content",
+          "default": "Content"
+        }
+      ]
+    },
+    {
+      "type": "description",
+      "name": "Product description",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "This tab will show the product's description"
+        },
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Tab header",
+          "default": "Product description"
+        }
+      ]
+    },
+    {
+      "type": "reviews",
+      "name": "Product reviews",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Requirements",
+          "info": "This section requires a product reviews app to work. Such as Shopify product reviews, Growave, Judge.me, Loox"
+        },
+        {
+          "type": "text",
+          "id": "text-header",
+          "label": "Tab header",
+          "default": "Product reviews"
+        },
+        {
+          "type": "header",
+          "content": "Other review app"
+        },
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Custom liquid",
+          "info": "Paste the liquid code of the app review here"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product information tabs"
+    }
+  ]
+}
+{% endschema %}

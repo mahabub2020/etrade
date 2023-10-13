@@ -1,0 +1,50 @@
+
+  <div class="row">
+      <div class="col-lg-10 order-lg-2">
+          <div class="single-product-thumbnail-wrap zoom-gallery">
+            <div class="product-quick-view position-view">
+              <a href="#" class="popup-zoom">
+                  <i class="far fa-search-plus"></i>
+              </a>
+          </div>
+              <div class="product-large-thumbnail single-product-thumbnail axil-product">
+                  
+                {%- if product.images.size -%}
+                  {% for image in product.images %}
+                        <div class="thumbnail">
+                                <a class="product-single__thumbnail {% if forloop.first and section.settings.product_zoom_enable %}active{% endif %}" href="{{ image.src | img_url: '1024x1024' }}" 
+                                data-image="{{ image.src | img_url: '1024x1024' }}" data-zoom-image="{{ image.src | img_url: '1024x1024' }}" data-image-id="{{ image.id }}">
+                                <img src="{{ image.src | img_url: 'compact' }}" alt="{{ image.alt | escape }}">
+                                </a>
+                          </div> 
+                        
+                  {% endfor %}
+                {%- endif -%} 
+
+
+              </div>
+              <div class="label-block">
+                  <div class="product-badget">20% OFF</div>
+              </div>
+              
+          </div>
+      </div>
+
+      <div class="col-lg-2 order-lg-1">
+          <div class="product-small-thumb small-thumb-wrapper small-thumb-style-two">
+
+
+            {%- if product.images.size -%}
+              {% for image in product.images %}
+               
+                    <div class="small-thumb-img"> 
+                            <img src="{{ image.src | img_url: '60x60' }}" alt="{{ image.alt | escape }}">
+                    </div> 
+                    
+              {% endfor %}
+            {%- endif -%}  
+
+          </div>
+      </div>
+  </div>
+

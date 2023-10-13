@@ -56,6 +56,7 @@ STYLESHEET INDEXING
 |
 |___ END STYLESHEET INDEXING
 
+
 ======================================================== --*/
 /* ===============================
 Default Styles
@@ -9189,6 +9190,7 @@ Header Styles
 }
 
 /* ===============================
+
 Shop Styles
 ================================== */
 /*----------------------
@@ -13575,7 +13577,7 @@ body.open .closeMask {
 
 /* ===============================
 Blog Styles
-================================== */
+================================= */
 /*----------------------------
 Blog List  
 ----------------------------*/
@@ -25712,4 +25714,146 @@ select.dokan-form-control, input.dokan-form-control {
   left: 55px;
   -webkit-transform: translateX(0) translateY(0);
           transform: translateX(0) translateY(0);
+}
+
+.h-20 {
+  height: 20px;
+}
+
+.w-20 {
+  width: 20px;
+}
+
+.product-additional-list {
+  padding: 0;
+  margin: 0;
+}
+.product-additional-list li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.addon-button-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px 0 20px 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-column-gap: 42px;
+     -moz-column-gap: 42px;
+          column-gap: 42px;
+}
+.addon-button-list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+.addon-button-list li a span.addon-icon-wrp {
+  height: 40px;
+  width: 40px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.shopify-tabs ul.tabs {
+  margin: 0 -20px 60px;
+}
+@media only screen and (max-width: 575px) {
+  .shopify-tabs ul.tabs {
+    border-bottom: 1px solid #c7c7c7;
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .shopify-tabs ul.tabs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 0 60px;
+  }
+}
+.shopify-tabs ul.tabs li {
+  margin: 0 20px;
+}
+@media only screen and (max-width: 575px) {
+  .shopify-tabs ul.tabs li {
+    margin: 10px 0;
+  }
+}
+.shopify-tabs ul.tabs li .nav-link {
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: 500;
+  display: block;
+  color: var(--color-body);
+  position: relative;
+  padding: 0;
+}
+.shopify-tabs ul.tabs li .nav-link:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: var(--color-primary);
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.shopify-tabs ul.tabs li .nav-link.active, .shopify-tabs ul.tabs li .nav-link:hover {
+  color: var(--color-primary);
+}
+.shopify-tabs ul.tabs li .nav-link.active:after, .shopify-tabs ul.tabs li .nav-link:hover:after {
+  width: 100%;
+  left: 0;
+  opacity: 1;
+}
+@media only screen and (max-width: 1199px) {
+  .shopify-tabs ul.tabs li .nav-link {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .shopify-tabs ul.tabs li .nav-link {
+    font-size: 20px;
+  }
+}
+.shopify-tabs div#prodcut-description {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
 }

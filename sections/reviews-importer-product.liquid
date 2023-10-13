@@ -1,0 +1,93 @@
+{% assign random_number = "now" | date: "%N" | modulo: 1000 | plus: 0 %}
+<script>
+  var scmCustomDataWigetAll= (typeof scmCustomDataWigetAll == "undefined" || scmCustomDataWigetAll == null) ? [] : scmCustomDataWigetAll;
+</script>
+{% assign smaTemplateCurrent= template | split: '.' | first %}
+{% if smaTemplateCurrent != 'product' %}
+  {% if section.settings.lai_product != null and section.settings.lai_product != "" %}
+    {%- assign product = all_products[section.settings.lai_product] -%}
+  {% endif %}
+{% endif %}
+{% assign handleProductCurrent = product.handle %}
+{% assign alreadyBuy  = false %}
+{% assign orderID  = 0 %}
+{% for order in customer.orders %}
+  {% for line_item in order.line_items %}
+    {% if line_item.url contains handleProductCurrent %}
+      {% assign alreadyBuy  = true%}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+<script>
+  scmCustomDataWigetAll[{{ random_number }}] ={
+    "productId" : '{{ product.id }}',
+    "typePage" : 'productPage',
+    "scmCustomData" : JSON.stringify({'minJs' : false}),
+    'reviewsInFo' : {
+      'rate1' : '{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo.rate1 }}',
+      'rate2' : '{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo.rate2 }}',
+      'rate3' : '{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo.rate3 }}',
+      'rate4' : '{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo.rate4 }}',
+      'rate5' : '{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo.rate5 }}',
+      'total' : '{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo.total }}',
+      'average' : '{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo.average }}',
+      'product_shopify_id' : '{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo.product_shopify_id }}'
+    },
+    "product_group_id": '{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo.product_group_id }}',
+    "order_current_product" : "{{ alreadyBuy }}",
+    "blockReviewFirst" : "{{ product.metafields.scm_review_importer.reviewsData['reviewItems'] }}",
+		"qaData": '{{ product.metafields.scm_review_importer.qaData | json }}',
+		"qaSetting": '{{ shop.metafields.scm_review_importer.qaSetting | json }}'
+  }
+</script>
+<div class="scm-container" style="display: none;">
+  {% if section.settings.title %}
+      {{ section.settings.title }}
+  {% endif %}
+    <div class="scm-reviews-importer" data-product-id={{ product.id }}>
+        <iframe class="scm-reviews-importer-iframe" width="100%" title="Sma reviews section Product Page" data-idIframe="{{ random_number }}"></iframe>
+    </div>
+</div>
+<div class="scm-value-rate-product" data-rate-version2= {{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo | json}}>
+</div>
+{% assign countAverage = product.metafields.scm_review_importer.reviewsData.reviewCountInfo.average | plus: 0 %}
+{% if shop.metafields.scm_review_importer.shop_info_setting['jsonLd'] %}
+    {%- if countAverage > 0 %}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org/",
+          "@type": "Product",
+          "@id": {{ canonical_url | append: '#product' | json }},
+          "name": {{ product.title | json }},
+          "review": {{ product.metafields.scm_review_importer.reviewsData['seoReviews'] }},
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo.average }}",
+            "ratingCount": "{{ product.metafields.scm_review_importer.reviewsData.reviewCountInfo.total }}"
+          }
+        }
+      </script>
+    {%- endif -%}
+{%- endif -%}
+{% schema %}
+{
+    "name": "LAI product reviews",
+    "class": "index-section",
+    "settings": [
+        {
+          "type": "product",
+          "id": "lai_product",
+          "label": "Choose Product"
+        },
+        {
+          "type": "liquid",
+          "id": "title",
+          "label": "Product Reviews Title"
+        }
+    ],
+    "presets": [{
+    "name": "LAI product reviews",
+    "category": "LAI Reviews"
+    }]
+}
+{% endschema %}
