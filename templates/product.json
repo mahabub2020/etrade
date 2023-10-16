@@ -121,7 +121,7 @@
       ],
       "settings": {
         "container": "container-xxl",
-        "background-color": "rgba(0,0,0,0)",
+        "background-color": "#bebebe",
         "padding_top": 60,
         "padding_bottom": 55
       }
