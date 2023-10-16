@@ -8,27 +8,6 @@
             <div class="category-select align-items-center justify-content-end">
               <p class="woocommerce-result-count filter-results">
                 Showing {{ collection.products_count }} of {{ collections['all'].all_products_count }} products</p>
-              <div class="sort-list">
-                <form class="woocommerce-ordering" method="get">
-                  {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-                  <select
-                  name="sort_by"
-                  class="sorter-options form-select select__select caption-large"
-                  id="SortBy"
-                  aria-describedby="a11y-refresh-page-message">
-                    {%- for option in collection.sort_options %}
-                      <option
-                        value="{{ option.value }}"
-                        {%- if option.value == sort_by %}
-                          selected="selected"
-                        {%- endif %}
-                      >
-                        {{ option.name }}
-                      </option>
-                    {% endfor -%}
-                  </select>
-                </form>
-              </div>
               {% if section.settings.enable_sorting %}
                 <div class="toolbar-sorter sorter">
                   <facet-filters-form class="facets no-js-hidden">
@@ -39,7 +18,6 @@
                             {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
                             <select
                                 name="sort_by"
-                                class="sorter-options form-select select__select caption-large"
                                 id="SortBy"
                                 aria-describedby="a11y-refresh-page-message"
                             >

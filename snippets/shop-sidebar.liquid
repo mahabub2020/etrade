@@ -105,7 +105,7 @@
       {% render 'facets',
         results: collection,
         enable_filtering: true,
-        enable_sorting: true,
+        enable_sorting: section.settings.enable_sorting,
         filter_type: 'vertical',
         paginate: paginate
       %}
