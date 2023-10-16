@@ -13,9 +13,9 @@
                   {%- if product.images.size -%}
                     {% for image in product.images %}
                           <div class="thumbnail">
-                                <a class="product-single-thumbnail {% if forloop.first and section.settings.product_zoom_enable %}active{% endif %}" href="{{ image.src | img_url: '1024x1024' }}" 
-                                data-image="{{ image.src | img_url: '1024x1024' }}" data-zoom-image="{{ image.src | img_url: '1024x1024' }}" data-image-id="{{ image.id }}">
-                                <img src="{{ image.src | img_url: 'compact' }}" alt="{{ image.alt | escape }}">
+                                <a class="product-single-thumbnail {% if forloop.first and section.settings.product_zoom_enable %}active{% endif %}" href="{{ image.src | img_url:  '630x630' }}" 
+                                data-image="{{ image.src | img_url:  '630x630' }}" data-zoom-image="{{ image.src | img_url:  '630x630' }}" data-image-id="{{ image.id }}">
+                                <img src="{{ image.src | img_url: '630x630' }}" alt="{{ image.alt | escape }}">
                                 </a>
                         </div> 
                         

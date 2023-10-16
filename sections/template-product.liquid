@@ -10,10 +10,10 @@
 {%- assign current_variant = product.selected_or_first_available_variant -%}
  
 
-{%- if  product.metafields.custom.single_product_layout -%}
-  {%- assign single_product_layout =  product.metafields.custom.single_product_layout -%}
-{% else %}
+{%- if  section.settings.product_thumbnail_style -%}
   {%- assign single_product_layout =  section.settings.product_thumbnail_style -%}
+{% else %}
+  {%- assign single_product_layout =  product.metafields.custom.single_product_layout.value -%} 
 {%- endif -%}
 
 
@@ -22,8 +22,8 @@
     <div class="single-product-thumb">
       <div class="{% if section.settings.container_style == 'style_1' %}container p-0 {% else %} container-fluid p-0{% endif %}">
         <div class="row {% if section.settings.content_handle == 'content_in_left' %}flex-row-reverse{% endif %}">
-        
-            {%- if single_product_layout == 'product_thumbnail_1' -%}
+
+            {%- if single_product_layout == 'product_thumbnail_1' -%} 
               <div class="col-lg-7 mb--40">
                 {% render 'product-thumbnail-1' %}   
               </div>
