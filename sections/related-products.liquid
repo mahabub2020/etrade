@@ -124,15 +124,11 @@
 #section-{{ section.id }} .heading-color {
     color: {{ section.settings.section_title_color }}!important;
 }
-
-#section-{{ section.id }} .separator {
-    border-color: {{ section.settings.section_border_color }};
+ 
+#section-{{ section.id }} .heading-color {
+    color: {{ section.settings.section_title_color }}!important;
 }
-  
-
-#section-{{ section.id }} .color--light-3 {
-    color: {{ section.settings.section_description_color }}!important;
-}
+ 
 
 
 {%- endstyle -%}
@@ -160,7 +156,7 @@
         }
       ],
 
-      "default": "style_2"
+      "default": "style_1"
     },
     {
       "type": "checkbox",
@@ -367,7 +363,19 @@
           "label": "Margin Bottom",
           "unit": "px",
           "default": 0
-        }
+        },
+        {
+          "type": "color",
+          "id": "section_title_before",
+          "label": "Title before Color",
+          "default": "#8c71db"
+        },
+        {
+          "type": "color",
+          "id": "section_title_color",
+          "label": "Section Title Color",
+          "default": "#292930"
+        } 
       ]
     },
     {
@@ -464,19 +472,8 @@
           "id": "section_bg_color",
           "label": "Background Color",
           "default": "#ffffff"
-        }, 
-        {
-          "type": "color",
-          "id": "section_title_before",
-          "label": "Title before Color",
-          "default": "#8c71db"
-        },
-        {
-          "type": "color",
-          "id": "section_title_color",
-          "label": "Section Title Color",
-          "default": "#292930"
-        } 
+        }
+        
       ]
     }
   ],
