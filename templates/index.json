@@ -1,5 +1,27 @@
 {
   "sections": {
+    "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd": {
+      "type": "multi-column-collection",
+      "settings": {
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+          "accessories",
+          "camera-photo",
+          "computers",
+          "deals",
+          "headphones",
+          "laptops",
+          "pc-gaming",
+          "phones",
+          "smartwatches"
+        ],
+        "list_per_slider": 10,
+        "col_xl": 5,
+        "col_lg": 5,
+        "col_md": 3,
+        "col_sm": 2
+      }
+    },
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3": {
       "type": "newsletter",
       "blocks": {
@@ -28,6 +50,7 @@
     }
   },
   "order": [
+    "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3"
   ]
 }
