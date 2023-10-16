@@ -11,18 +11,22 @@
               <div class="sort-list">
                 <form class="woocommerce-ordering" method="get">
                   {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-                  <select>
-{%- for option in collection.sort_options %}
-  <option
-    value="{{ option.value }}"
-    {%- if option.value == sort_by %}
-      selected="selected"
-    {%- endif %}
-  >
-    {{ option.name }}
-  </option>
-{% endfor -%}
-</select>
+                  <select
+                  name="sort_by"
+                  class="sorter-options form-select select__select caption-large"
+                  id="SortBy"
+                  aria-describedby="a11y-refresh-page-message">
+                    {%- for option in collection.sort_options %}
+                      <option
+                        value="{{ option.value }}"
+                        {%- if option.value == sort_by %}
+                          selected="selected"
+                        {%- endif %}
+                      >
+                        {{ option.name }}
+                      </option>
+                    {% endfor -%}
+                  </select>
                 </form>
               </div>
             </div>
