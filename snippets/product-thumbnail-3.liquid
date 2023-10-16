@@ -8,8 +8,8 @@
               <div class="col-6 mb--20">
                   <div class="single-product-thumbnail axil-product thumbnail-grid">
                     <div class="thumbnail"> 
-                          <figure class="product-gallery__thumb--single">
-                            <a class="product-single__thumbnail {% if forloop.first and section.settings.product_zoom_enable %}active{% endif %}" href="{{ image.src | img_url: '1024x1024' }}" 
+                          <figure class="product-gallery-thumb-single">
+                            <a class="product-single-thumbnail {% if forloop.first and section.settings.product_zoom_enable %}active{% endif %}" href="{{ image.src | img_url: '1024x1024' }}" 
                             data-image="{{ image.src | img_url: '1024x1024' }}" data-zoom-image="{{ image.src | img_url: '1024x1024' }}" data-image-id="{{ image.id }}">
                             <img src="{{ image.src | img_url: 'compact' }}" alt="{{ image.alt | escape }}">
                             </a>

@@ -1,37 +1,35 @@
-<div class="axil-header-top">
+
+{%- capture data_slick_activation -%}
+
+data-slick='{
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    autoplay: true,   
+    "nextArrow": "<button class=\"slide-arrow prev-arrow\"><i class=\"fal fa-long-arrow-right\"></i></button>", 
+    "prevArrow": "<button class=\"slide-arrow next-arrow\"><i class=\"fal fa-long-arrow-left\"></i></button>",
+    
+}'
+{%- endcapture -%}
+
+<div class="header-top-campaign">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-sm-6 col-12">
-                <div class="header-top-dropdown">
-                    <div class="dropdown">
-                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            English
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">English</a></li>
-                            <li><a class="dropdown-item" href="#">Arabic</a></li>
-                            <li><a class="dropdown-item" href="#">Spanish</a></li>
-                        </ul>
+        <div class="row justify-content-center">
+            <div class="col-xl-5 col-lg-6 col-md-10">
+                <div class="header-campaign-activation axil-slick-arrow arrow-both-side header-campaign-arrow"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
+          
+                    <div class="slick-slide">
+                        <div class="campaign-content">
+                            <p>STUDENT NOW GET 10% OFF : <a href="#">GET OFFER</a></p>
+                        </div>
                     </div>
-                    <div class="dropdown">
-                        <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            USD
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">USD</a></li>
-                            <li><a class="dropdown-item" href="#">AUD</a></li>
-                            <li><a class="dropdown-item" href="#">EUR</a></li>
-                        </ul>
+                    <div class="slick-slide">
+                        <div class="campaign-content">
+                            <p>STUDENT NOW GET 10% OFF : <a href="#">GET OFFER</a></p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-sm-6 col-12">
-                <div class="header-top-link">
-                    <ul class="quick-link">
-                        <li><a href="#">Help</a></li>
-                        <li><a href="sign-up.html">Join Us</a></li>
-                        <li><a href="sign-in.html">Sign In</a></li>
-                    </ul>
                 </div>
             </div>
         </div>
