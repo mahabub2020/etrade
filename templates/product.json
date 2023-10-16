@@ -16,13 +16,13 @@
             "text_transform": "lowercase"
           }
         },
-        "fb24c306-529d-4663-a3b3-cbb70f8202fd": {
-          "type": "product_short_description",
+        "62c93693-3cf6-4e73-9116-69729457993b": {
+          "type": "price",
           "settings": {
           }
         },
-        "62c93693-3cf6-4e73-9116-69729457993b": {
-          "type": "price",
+        "fb24c306-529d-4663-a3b3-cbb70f8202fd": {
+          "type": "product_short_description",
           "settings": {
           }
         },
@@ -73,8 +73,8 @@
       "block_order": [
         "95bafc65-42ee-4ba8-af37-aa80dd3f0eb5",
         "ae764d1f-29be-4311-8762-8aee2b3dd2ef",
-        "fb24c306-529d-4663-a3b3-cbb70f8202fd",
         "62c93693-3cf6-4e73-9116-69729457993b",
+        "fb24c306-529d-4663-a3b3-cbb70f8202fd",
         "dd1559c0-5603-4693-85a3-707b378a2ce7",
         "e33fff6f-e923-44ac-b511-6e76980808a6",
         "f3997cc0-8cd5-4a47-9225-813fc30bd56d",
@@ -84,36 +84,10 @@
       "settings": {
         "container_style": "style_1",
         "content_handle": "content_in_right",
-        "product_thumbnail_style": "product_thumbnail_4",
+        "product_thumbnail_style": "product_thumbnail_5",
         "product_zoom_enable": true,
         "zoom_type": "inner",
         "product_popup_enable": true
-      }
-    },
-    "ca10b4c1-734f-485f-99d8-bf339d396a49": {
-      "type": "newsletter",
-      "blocks": {
-        "template--21159462175006__ca10b4c1-734f-485f-99d8-bf339d396a49-section_padding-1": {
-          "type": "section_padding",
-          "settings": {
-            "section_padding_top": 0,
-            "section_padding_bottom": 100,
-            "section_padding_top_md": 0,
-            "section_padding_bottom_md": 80,
-            "section_padding_top_xs": 0,
-            "section_padding_bottom_xs": 60
-          }
-        }
-      },
-      "block_order": [
-        "template--21159462175006__ca10b4c1-734f-485f-99d8-bf339d396a49-section_padding-1"
-      ],
-      "settings": {
-        "before_title_icon": "fas fa-envelope-open",
-        "before_title_text": "Newsletter",
-        "before_title_color": "#3577f0",
-        "title": "Get weekly update",
-        "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
       }
     },
     "85c54a0e-24ac-4918-88a9-c40571be93c4": {
@@ -234,7 +208,6 @@
   },
   "order": [
     "template",
-    "ca10b4c1-734f-485f-99d8-bf339d396a49",
     "85c54a0e-24ac-4918-88a9-c40571be93c4",
     "upsell-product",
     "related-products",
