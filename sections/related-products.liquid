@@ -121,15 +121,17 @@
     }
   }
 
-#section-{{ section.id }} .heading-color {
-    color: {{ section.settings.section_title_color }}!important;
+#section-{{ section.id }} .section-title-wrapper .title-highlighter {
+    color: {{ section.settings.section_title_before }}!important;
 }
  
-#section-{{ section.id }} .heading-color {
+#section-{{ section.id }} .section-title-wrapper .title {
     color: {{ section.settings.section_title_color }}!important;
 }
- 
-
+#section-{{ section.id }} .title-highlighter.highlighter-primary i {
+    background-color: {{ section.settings.section_title_before }}!important;
+     
+}
 
 {%- endstyle -%}
 
