@@ -29,6 +29,46 @@
                   </select>
                 </form>
               </div>
+              {% if section.settings.enable_sorting %}
+                <div class="toolbar-sorter sorter">
+                  <facet-filters-form class="facets no-js-hidden">
+                    <form class="facets-vertical-form" id="FacetSortForm">
+                      <div class="sorting caption">
+                        <div class="facet-filters__field">
+                          <div class="select">
+                            {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                            <select
+                                name="sort_by"
+                                class="sorter-options form-select select__select caption-large"
+                                id="SortBy"
+                                aria-describedby="a11y-refresh-page-message"
+                            >
+                              {%- for option in collection.sort_options -%}
+                                <option
+                                    value="{{ option.value | escape }}"
+                                    {% if option.value == sort_by %}
+                                      selected="selected"
+                                    {% endif %}
+                                >
+                                  {{ option.name | escape }}
+                                </option>
+                              {%- endfor -%}
+                            </select>
+                          </div>
+                        </div>
+                        <noscript>
+                          <button
+                              type="submit"
+                              class="facets__button-no-js button"
+                          >
+                            {{ 'products.facets.sort_button' | t }}
+                          </button>
+                        </noscript>
+                      </div>
+                    </form>
+                  </facet-filters-form>
+                </div>
+              {% endif %}
             </div>
             <div class="d-lg-none">
               <button class="product-filter-mobile filter-toggle">
