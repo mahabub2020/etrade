@@ -112,7 +112,7 @@
         "9f2537bc-58a6-4c2a-9f60-62bc435a0d4a"
       ],
       "settings": {
-        "container": "container-fluid",
+        "container": "container-xxl",
         "background-color": "#f9f3f0",
         "padding_top": 80,
         "padding_bottom": 40
