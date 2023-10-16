@@ -110,7 +110,7 @@
       }, {
         "type": "select",
         "id": "filter_style",
-        "label": "Filter Style",
+        "label": "Filter Type",
         "options": [
           {
             "label": "Default Filter",
@@ -122,30 +122,24 @@
         ],
         "default": "default"
       }, {
-        "type": "checkbox",
-        "id": "filter_by_category",
-        "label": "Filter by Category",
-        "default": true
-      }, {
-        "type": "checkbox",
-        "id": "filter_by_gender",
-        "label": "Filter by Gender",
-        "default": true
-      }, {
-        "type": "checkbox",
-        "id": "filter_by_size",
-        "label": "Filter by Size",
-        "default": true
-      }, {
-        "type": "checkbox",
-        "id": "filter_by_color",
-        "label": "Filter by Color",
-        "default": true
-      }, {
-        "type": "checkbox",
-        "id": "filter_by_price",
-        "label": "Filter by Price",
-        "default": true
+        "type": "select",
+        "id": "filter_type",
+        "label": "Filter Style",
+        "options": [
+          {
+            "value": "horizontal",
+            "label": "Horizontal"
+          },
+          {
+            "value": "vertical",
+            "label": "Vertical"
+          },
+          {
+            "value": "drawer",
+            "label": "Drawer"
+          }
+        ],
+        "default": "horizontal"
       }
     ]
   }
