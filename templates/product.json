@@ -125,7 +125,7 @@
         "upsell_products_enable": true,
         "section_before_title": "Your Recently",
         "section_title": "Upsell Products",
-        "collection": "checkproduct",
+        "collection": "accessories",
         "product_layout": "1",
         "upsell_product_limit_handle": 4,
         "autoplay_true": true,
