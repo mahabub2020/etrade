@@ -159,7 +159,7 @@
         "e2d0019e-ff58-410d-8ccc-fc71250d5f5c": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 0,
+            "section_padding_top": 100,
             "section_padding_bottom": 100,
             "section_padding_top_md": 0,
             "section_padding_bottom_md": 80,
@@ -170,7 +170,7 @@
         "1dfe6470-d2a8-4987-80e3-150aaf605fce": {
           "type": "section_margin",
           "settings": {
-            "section_margin_top": 0,
+            "section_margin_top": 105,
             "section_margin_bottom": 0,
             "section_margin_top_md": 0,
             "section_margin_bottom_md": 0,
@@ -181,8 +181,8 @@
         "b6e10c2a-bbba-41bc-a5b2-6fe013443a94": {
           "type": "section_background",
           "settings": {
-            "section_bg_color": "#ffffff",
-            "section_title_before": "#8c71db",
+            "section_bg_color": "rgba(0,0,0,0)",
+            "section_title_before": "#1f1c28",
             "section_title_color": "#292930"
           }
         }
