@@ -143,7 +143,9 @@
         "9de3cd49-bfc1-4eaf-8756-f4aaee8b95d2": {
           "type": "section_background",
           "settings": {
-            "section_bg_color": "#ff7f00"
+            "section_bg_color": "#ff7f00",
+            "section_title_before": "#8c71db",
+            "section_title_color": "#292930"
           }
         },
         "43dec5fa-2722-4e9b-89d9-4ada68ee1af3": {
@@ -173,28 +175,7 @@
         "autoplay_speed": 4000,
         "product_column": 4,
         "product_column_md": 2,
-        "product_column_sm": 1,
-        "section_title_color": "#204a80",
-        "section_border_color": "#cf987e"
-      }
-    },
-    "sma_reviews_section_auto": {
-      "type": "apps",
-      "blocks": {
-        "sma_reviews_section_auto": {
-          "type": "shopify:\/\/apps\/lai-product-reviews\/blocks\/lai-product-section\/cad3c6c6-329e-4416-ba74-b79359b5b6e1",
-          "disabled": true,
-          "settings": {
-            "lai_product": "",
-            "title": ""
-          }
-        }
-      },
-      "block_order": [
-        "sma_reviews_section_auto"
-      ],
-      "disabled": true,
-      "settings": {
+        "product_column_sm": 1
       }
     }
   },
@@ -202,7 +183,6 @@
     "template",
     "51429078-9b7a-40fa-99b0-c7e8baead472",
     "upsell-product",
-    "related-products",
-    "sma_reviews_section_auto"
+    "related-products"
   ]
 }
