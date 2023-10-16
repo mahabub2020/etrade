@@ -159,11 +159,11 @@
         "e2d0019e-ff58-410d-8ccc-fc71250d5f5c": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 100,
-            "section_padding_bottom": 100,
-            "section_padding_top_md": 0,
+            "section_padding_top": 15,
+            "section_padding_bottom": 40,
+            "section_padding_top_md": 40,
             "section_padding_bottom_md": 80,
-            "section_padding_top_xs": 0,
+            "section_padding_top_xs": 45,
             "section_padding_bottom_xs": 60
           }
         },
@@ -181,9 +181,7 @@
         "b6e10c2a-bbba-41bc-a5b2-6fe013443a94": {
           "type": "section_background",
           "settings": {
-            "section_bg_color": "rgba(0,0,0,0)",
-            "section_title_before": "#1f1c28",
-            "section_title_color": "#292930"
+            "section_bg_color": "rgba(0,0,0,0)"
           }
         }
       },
@@ -203,7 +201,9 @@
         "autoplay_speed": 5000,
         "product_column": 4,
         "product_column_md": 2,
-        "product_column_sm": 1
+        "product_column_sm": 1,
+        "section_title_before": "#FF7F00",
+        "section_title_color": "#204a80"
       }
     }
   },
