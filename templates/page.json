@@ -1,5 +1,11 @@
 {
   "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
     "0008d5c8-c50a-411c-8524-b1d1f9054032": {
       "type": "banner-slider",
       "blocks": {
@@ -15,7 +21,7 @@
             "price": "$49.00",
             "plus_icon_active": true,
             "pos_x_type": "right",
-            "pos_x": 92,
+            "pos_x": 192,
             "pos_y_type": "bottom",
             "pos_y": 64
           }
@@ -63,15 +69,30 @@
       "settings": {
       }
     },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
+    "b475c665-7dd4-4176-ab16-f35f19793bf6": {
+      "type": "collection-carousel",
       "settings": {
+        "collection_style": "cat_style_1",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "sub_title": "Before Title",
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+          "phones",
+          "pc-gaming",
+          "laptops",
+          "headphones",
+          "fashion",
+          "electronics",
+          "computers",
+          "camera-photo",
+          "accessories"
+        ]
       }
     }
   },
   "order": [
+    "main",
     "0008d5c8-c50a-411c-8524-b1d1f9054032",
-    "main"
+    "b475c665-7dd4-4176-ab16-f35f19793bf6"
   ]
 }
