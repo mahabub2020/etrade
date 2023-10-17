@@ -578,7 +578,7 @@
     {%- endif -%}
   {%- endif -%}
   {% comment %}  Drawer and mobile filter {% endcomment %}
-  {% comment %} <menu-drawer
+  <menu-drawer
     class="mobile-facets__wrapper{% if filter_type == 'horizontal' or filter_type == 'vertical' %} medium-hide large-up-hide{% endif %}"
     data-breakpoint="mobile">
     <details class="mobile-facets__disclosure disclosure-has-popup">
@@ -923,7 +923,7 @@
         </form>
       </facet-filters-form>
     </details>
-  </menu-drawer> {% endcomment %}
+  </menu-drawer>
 
   <div class="active-facets active-facets-mobile medium-hide large-up-hide">
     {%- for filter in results.filters -%}
