@@ -124,7 +124,7 @@
                       class="facets__summary caption-large focus-offset"
                       aria-label="{{ filter.label }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})"
                     >
-                      <div>
+                      <div class="d-flex gap-2">
                         <span>
                           {{- filter.label | escape }}
                           {%- if filter_type == 'vertical' -%}
@@ -317,7 +317,7 @@
                     {% endif %}
                   >
                     <summary class="facets__summary caption-large focus-offset">
-                      <div>
+                      <div class="d-flex gap-2">
                         <span>{{ filter.label | escape }}</span>
                         {% render 'icon-caret' %}
                       </div>
@@ -460,7 +460,7 @@
 
         {%- if filter_type == 'horizontal' -%}
           {% comment %} Sorting and product count are the last elements when filter type is horizontal {% endcomment %}
-          {%- if enable_sorting -%}
+          {% comment %} {%- if enable_sorting -%}
             <div class="facet-filters sorting caption">
               <div class="facet-filters__field">
                 <h2 class="facet-filters__label caption-large text-body">
@@ -495,7 +495,7 @@
                 </button>
               </noscript>
             </div>
-          {%- endif -%}
+          {%- endif -%} {% endcomment %}
           <div class="product-count light" role="status">
             <h2 class="product-count__text text-body">
               <span id="ProductCountDesktop">
@@ -530,7 +530,7 @@
     {%- if enable_sorting and filter_type == 'vertical' -%}
       <facet-filters-form class="small-hide">
         <form class="no-js">
-          <div class="facet-filters sorting caption">
+          {% comment %} <div class="facet-filters sorting caption">
             <div class="facet-filters__field">
               <h2 class="facet-filters__label caption-large text-body">
                 <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
@@ -563,7 +563,7 @@
                 {{ 'products.facets.sort_button' | t }}
               </button>
             </noscript>
-          </div>
+          </div> {% endcomment %}
 
           {% if results.current_vendor or results.current_type %}
             <input type="hidden" name="q" value="{{ results.current_vendor }}{{ results.current_type }}">
@@ -974,7 +974,7 @@
   {%- if enable_sorting and filter_type == 'drawer' -%}
     <facet-filters-form class="facets small-hide">
       <form id="FacetSortDrawerForm" class="facets__form">
-        <div class="facet-filters sorting caption small-hide">
+        {% comment %} <div class="facet-filters sorting caption small-hide">
           <div class="facet-filters__field">
             <h2 class="facet-filters__label caption-large text-body">
               <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
@@ -1007,7 +1007,7 @@
               {{ 'products.facets.sort_button' | t }}
             </button>
           </noscript>
-        </div>
+        </div> {% endcomment %}
 
         {% if results.current_vendor or results.current_type %}
           <input type="hidden" name="q" value="{{ results.current_vendor }}{{ results.current_type }}">
