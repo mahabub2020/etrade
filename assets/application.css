@@ -689,3 +689,6 @@ input[type=checkbox] {
 svg.icon.icon-caret {
   width: 18px;
 }
+.active-facets facet-remove:only-child {
+  display: none;
+}
