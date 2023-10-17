@@ -88,11 +88,24 @@
           "accessories"
         ]
       }
+    },
+    "aec5fef1-93a3-48a2-9e52-d8272f0b2514": {
+      "type": "section-countdown",
+      "settings": {
+        "cd_title": "Enhance Your Music Experience",
+        "cd_sub_title": "Don't Miss!!",
+        "end_time": "2024-12-23",
+        "cd_btn_txt": "Check it Out!",
+        "cd_btn_url": "shopify:\/\/products\/bass-meets-clarity",
+        "cd_img": "shopify:\/\/shop_images\/poster-03.png",
+        "is_animations": true
+      }
     }
   },
   "order": [
     "main",
     "0008d5c8-c50a-411c-8524-b1d1f9054032",
-    "b475c665-7dd4-4176-ab16-f35f19793bf6"
+    "b475c665-7dd4-4176-ab16-f35f19793bf6",
+    "aec5fef1-93a3-48a2-9e52-d8272f0b2514"
   ]
 }
