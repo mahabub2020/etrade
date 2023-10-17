@@ -36,11 +36,29 @@
             "pos_y_type": "top",
             "pos_y": 4
           }
+        },
+        "5d8da3b7-547d-4dbd-8447-b8cb9fa474cc": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": "shopify:\/\/products\/zone-headphone",
+            "banner_img": "shopify:\/\/shop_images\/product-38.png",
+            "price_label": "From",
+            "price": "$49.00",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4
+          }
         }
       },
       "block_order": [
         "781dfdfa-ab3f-4d1b-9b70-54e528412198",
-        "ec752c92-c049-4b81-872e-a7d614ee725d"
+        "ec752c92-c049-4b81-872e-a7d614ee725d",
+        "5d8da3b7-547d-4dbd-8447-b8cb9fa474cc"
       ],
       "settings": {
       }
