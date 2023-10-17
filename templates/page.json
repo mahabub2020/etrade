@@ -9,15 +9,15 @@
             "subtitle": "Hot Deal In This Week",
             "banner_title": "Smart Digital Watch",
             "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
+            "banner_btn_url": "shopify:\/\/collections\/electronics",
             "banner_img": "shopify:\/\/shop_images\/product-38.png",
             "price_label": "From",
             "price": "$49.00",
             "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
+            "pos_x_type": "right",
+            "pos_x": 92,
+            "pos_y_type": "bottom",
+            "pos_y": 64
           }
         },
         "ec752c92-c049-4b81-872e-a7d614ee725d": {
@@ -26,7 +26,7 @@
             "subtitle": "Hot Deal In This Week",
             "banner_title": "Smart Digital Watch",
             "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
+            "banner_btn_url": "shopify:\/\/collections\/electronics",
             "banner_img": "shopify:\/\/shop_images\/product-31.png",
             "price_label": "From",
             "price": "$49.00",
@@ -43,7 +43,7 @@
             "subtitle": "Hot Deal In This Week",
             "banner_title": "Smart Digital Watch",
             "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "shopify:\/\/products\/zone-headphone",
+            "banner_btn_url": "shopify:\/\/collections\/electronics",
             "banner_img": "shopify:\/\/shop_images\/product-39.png",
             "price_label": "From",
             "price": "$49.00",
