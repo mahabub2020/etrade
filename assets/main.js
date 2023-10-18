@@ -25,7 +25,9 @@
 
         });
 
-      
+document.addEventListener("shopify:section:load", () => {
+    axilSlickActivation();
+});
 
 function  axilSlickActivation (e) {
     $('.slick-slider').not('.slick-initialized').slick();
