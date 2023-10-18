@@ -4,12 +4,12 @@
   </button>
   <div class="header-search-wrap">
     <div class="card-header">
-      <form action="#">
+      <form action="{{ routes.search_url }}" method="get" role="search">
         <div class="input-group">
           <input
             type="search"
             class="form-control"
-            name="prod-search"
+            name="q"
             id="prod-search"
             placeholder="{{ section.settings.search_placeholder }}">
           <button type="submit" class="axil-btn btn-bg-primary">
