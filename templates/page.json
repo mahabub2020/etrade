@@ -72,7 +72,7 @@
     "b475c665-7dd4-4176-ab16-f35f19793bf6": {
       "type": "collection-carousel",
       "settings": {
-        "collection_style": "cat_style_1",
+        "collection_style": "cat_style_2",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "sub_title": "Before Title",
         "section_title": "Featured Categories",
@@ -100,31 +100,12 @@
         "cd_img": "shopify:\/\/shop_images\/poster-03.png",
         "is_animations": true
       }
-    },
-    "b38a78e2-51d3-43a8-98a0-7cd7712e777d": {
-      "type": "section-product-carousel",
-      "settings": {
-        "title": "New Arrivals",
-        "sub_title": "Recently Viewed",
-        "is_countdown": true,
-        "end_time": "2024-05-22",
-        "product_collection": "computers",
-        "number_of_products_to_show": 8,
-        "excluded_products": [
-
-        ],
-        "offset_product": 0,
-        "sort_by": "title",
-        "reverse_order": true,
-        "product_layout": "1"
-      }
     }
   },
   "order": [
     "main",
     "0008d5c8-c50a-411c-8524-b1d1f9054032",
     "b475c665-7dd4-4176-ab16-f35f19793bf6",
-    "aec5fef1-93a3-48a2-9e52-d8272f0b2514",
-    "b38a78e2-51d3-43a8-98a0-7cd7712e777d"
+    "aec5fef1-93a3-48a2-9e52-d8272f0b2514"
   ]
 }
