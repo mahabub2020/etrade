@@ -36,7 +36,7 @@ data-slick='{
           <h2 class="title">{{ section.settings.section_title }}</h2>
         {% endif %}
       </div>
-      <div class="categrie-product-activation slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
+      <div class="categrie-product-activation slick-layout-wrapper--15 slick-slider axil-slick-arrow  arrow-top-slide"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
         {% for collection in section.settings.featured_cat_collection %}
           {% if collection.all_products_count > 0 %}
             <div class="slick-single-layout">
@@ -74,7 +74,7 @@ data-slick='{
             <h2 class="title">{{ section.settings.section_title }}</h2>
           {% endif %}
         </div>
-        <div class="categrie-product-activation-3 slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
+        <div class="categrie-product-activation-3 slick-slider slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
           {% for collection in section.settings.featured_cat_collection %}
             {% if collection.all_products_count > 0 %}
               <div class="slick-single-layout slick-slide">
@@ -103,7 +103,7 @@ data-slick='{
   <!-- Start Categorie Area  -->
   <div class="axil-categorie-area pt--30 bg-color-white">
     <div class="container">
-      <div class="categrie-product-activation-2 categorie-product-two slick-layout-wrapper--15"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
+      <div class="categrie-product-activation-2 slick-slider categorie-product-two slick-layout-wrapper--15"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
         {% for collection in section.settings.featured_cat_collection %}
           {% if collection.all_products_count > 0 %} 
             <div class="slick-single-layout slick-slide">
