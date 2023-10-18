@@ -4,31 +4,28 @@
      
 
         $(document).ready(function(){
-        //     slider_slick_activation_two();
-        //     slider_slick_activation_one();
-        //     slider_thumb_activation_one(); 
-        //     readyActivation();
+            slider_slick_activation_two();
+            slider_slick_activation_one();
+            slider_thumb_activation_one(); 
+            readyActivation();
           
-        //     testimonialActivation();
-        //     countdown(); 
-        //     slider_thumb_activation_two();
-        //     headerIconToggle();
-        //    // searchClick();
-        //     headerCampaignRemove(); 
+            testimonialActivation();
+            countdown(); 
+            slider_thumb_activation_two();
+            headerIconToggle();
+           // searchClick();
+            headerCampaignRemove(); 
            
-        //     axilslickactivation2();
-        //     magnificPopupActivationProductDetails();
-        //     magnificPopupActivation();
-        //     axilslickactivation3();
+            axilslickactivation2();
+            magnificPopupActivationProductDetails();
+            magnificPopupActivation();
+            axilslickactivation3();
 
             axilSlickActivation();
 
         });
 
-        document.addEventListener("shopify:section:load", () => {
-            axilSlickActivation();
-    
-        });
+      
 
 function  axilSlickActivation (e) {
     $('.slick-slider').not('.slick-initialized').slick();
@@ -422,59 +419,59 @@ function slider_thumb_activation_two() {
 }
 
 
-function new_arrivals_product_activation() {
+// function new_arrivals_product_activation() {
 
-    var SlickCarousel = $('.axil-new-arrivals-activation');
-    if (SlickCarousel.length) {
-        try {
-            if (SlickCarousel.find('.new-arrivals-product-activation').hasClass('slick-initialized')) {
-                SlickCarousel.find('.new-arrivals-product-activation').slick('unslick');
-            }
-        } catch (e) { }
+//     var SlickCarousel = $('.axil-new-arrivals-activation');
+//     if (SlickCarousel.length) {
+//         try {
+//             if (SlickCarousel.find('.new-arrivals-product-activation').hasClass('slick-initialized')) {
+//                 SlickCarousel.find('.new-arrivals-product-activation').slick('unslick');
+//             }
+//         } catch (e) { }
 
-        SlickCarousel.find('.new-arrivals-product-activation').slick({
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            arrows: true,
-            dots: false,
+//         SlickCarousel.find('.new-arrivals-product-activation').slick({
+//             infinite: true,
+//             slidesToShow: 4,
+//             slidesToScroll: 4,
+//             arrows: true,
+//             dots: false,
             
-            prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-long-arrow-left"></i></button>',
-            nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-long-arrow-right"></i></button>',
-            responsive: [{
-                breakpoint: 1199,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
-            },
-            {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-            ]
+//             prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-long-arrow-left"></i></button>',
+//             nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-long-arrow-right"></i></button>',
+//             responsive: [{
+//                 breakpoint: 1199,
+//                 settings: {
+//                     slidesToShow: 3,
+//                     slidesToScroll: 3
+//                 }
+//             },
+//             {
+//                 breakpoint: 991,
+//                 settings: {
+//                     slidesToShow: 3,
+//                     slidesToScroll: 3
+//                 }
+//             },
+//             {
+//                 breakpoint: 767,
+//                 settings: {
+//                     slidesToShow: 2,
+//                     slidesToScroll: 2
+//                 }
+//             },
+//             {
+//                 breakpoint: 480,
+//                 settings: {
+//                     slidesToShow: 1,
+//                     slidesToScroll: 1
+//                 }
+//             }
+//             ]
 
-        });
-    }
+//         });
+//     }
 
-}
+// }
 
 
 
