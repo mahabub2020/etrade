@@ -23,7 +23,9 @@
             axilslickactivation3();
 
         });
-
+        $(document).addEventListener("shopify:section:load", () => {
+            readyActivation();
+        });
 
 
 
