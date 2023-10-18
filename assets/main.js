@@ -24,10 +24,13 @@
 
         });
 
+        document.addEventListener("shopify:section:load", () => {
+            axilSlickActivation();
+    
+        });
 
 
-
-		function productGlightbox() {
+function productGlightbox() {
 
 	// Start Product Page Lightbox
 	var lightbox = GLightbox({
@@ -85,96 +88,94 @@
 		}
 	});
 	// End Product Page Lightbox
+ }
+function axilslickactivation3() {
+
+    var SlickCarousel = $('.single-product-thumb');
 
 
-        }
-		function axilslickactivation3() {
-
-			var SlickCarousel = $('.single-product-thumb');
-
-
-			if (SlickCarousel.length) {
-				try {
-					if (SlickCarousel.find('.product-small-thumb-2').hasClass('slick-initialized')) {
-						SlickCarousel.find('.product-small-thumb-2').slick('unslick');
-					}
-
-					if (SlickCarousel.find('.product-large-thumbnail-2').hasClass('slick-initialized')) {
-						SlickCarousel.find('.product-large-thumbnail-2').slick('unslick');
-					}
-
-				} catch (e) { }
-
-				SlickCarousel.find('.product-large-thumbnail-2').slick({
-					infinite: false,
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					arrows: true,
-					dots: false,
-					speed: 800,
-					draggable: false,
-				 
-					asNavFor: '.product-small-thumb-2',
-					prevArrow: '<button class="slide-arrow prev-arrow"><i class="far fa-angle-left"></i></button>',
-					nextArrow: '<button class="slide-arrow next-arrow"><i class="far fa-angle-right"></i></button>'
-
-
-				});
-				SlickCarousel.find('.product-small-thumb-2').slick({
-					infinite: false,
-					slidesToShow: 6,
-					slidesToScroll: 1,
-					arrows: false,
-					dots: false,
-					focusOnSelect: true,
-					speed: 800,
-					 
-					asNavFor: '.product-large-thumbnail-2',
-					responsive: [{
-						breakpoint: 768,
-						settings: {
-							slidesToShow: 5,
-						}
-					},
-					{
-						breakpoint: 479,
-						settings: {
-							slidesToShow: 4,
-						}
-					}
-					]
-
-
-				});
-
-			}
-		}
-		
-
-        function magnificPopupActivation() {
-            var yPopup = $('.popup-youtube');
-            if (yPopup.length) {
-                yPopup.magnificPopup({
-                    disableOn: 300,
-                    type: 'iframe',
-                    mainClass: 'mfp-fade',
-                    removalDelay: 160,
-                    preloader: false,
-                    fixedContentPos: false
-                });
+    if (SlickCarousel.length) {
+        try {
+            if (SlickCarousel.find('.product-small-thumb-2').hasClass('slick-initialized')) {
+                SlickCarousel.find('.product-small-thumb-2').slick('unslick');
             }
-            if ($('.zoom-gallery').length) {
-                $('.zoom-gallery').each(function() {
-                    $(this).magnificPopup({
-                        delegate: 'a.popup-zoom-gallery',
-                        type: 'image',
-                        gallery: {
-                            enabled: true
-                        }
-                    });
-                });
+
+            if (SlickCarousel.find('.product-large-thumbnail-2').hasClass('slick-initialized')) {
+                SlickCarousel.find('.product-large-thumbnail-2').slick('unslick');
             }
-        }
+
+        } catch (e) { }
+
+        SlickCarousel.find('.product-large-thumbnail-2').slick({
+            infinite: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            speed: 800,
+            draggable: false,
+            
+            asNavFor: '.product-small-thumb-2',
+            prevArrow: '<button class="slide-arrow prev-arrow"><i class="far fa-angle-left"></i></button>',
+            nextArrow: '<button class="slide-arrow next-arrow"><i class="far fa-angle-right"></i></button>'
+
+
+        });
+        SlickCarousel.find('.product-small-thumb-2').slick({
+            infinite: false,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            focusOnSelect: true,
+            speed: 800,
+                
+            asNavFor: '.product-large-thumbnail-2',
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 5,
+                }
+            },
+            {
+                breakpoint: 479,
+                settings: {
+                    slidesToShow: 4,
+                }
+            }
+            ]
+
+
+        });
+
+    }
+}
+
+
+function magnificPopupActivation() {
+    var yPopup = $('.popup-youtube');
+    if (yPopup.length) {
+        yPopup.magnificPopup({
+            disableOn: 300,
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 160,
+            preloader: false,
+            fixedContentPos: false
+        });
+    }
+    if ($('.zoom-gallery').length) {
+        $('.zoom-gallery').each(function() {
+            $(this).magnificPopup({
+                delegate: 'a.popup-zoom-gallery',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    }
+}
 
 
 
@@ -711,105 +712,7 @@
             
         });
         
-        $('.categrie-product-activation-2').slick({
-            infinite: true,
-            slidesToShow: 7,
-            slidesToScroll: 7,
-            arrows: true,
-            dots: false,
-            autoplay: true,
-            speed: 1000,
-            prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-long-arrow-left"></i></button>',
-            nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-long-arrow-right"></i></button>',
-            responsive: [
-                {
-                    breakpoint: 1399,
-                    settings: {
-                        slidesToShow: 6,
-                        slidesToScroll: 6
-                    }
-                },
-                {
-                    breakpoint: 1199,
-                    settings: {
-                        slidesToShow: 5,
-                        slidesToScroll: 5
-                    }
-                },
-                {
-                    breakpoint: 991,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 479,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
         
-        $('.categrie-product-activation-3').slick({
-            infinite: true,
-            slidesToShow: 6,
-            slidesToScroll: 6,
-            arrows: true,
-            dots: false,
-            autoplay: false,
-            speed: 1000,
-            prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-long-arrow-left"></i></button>',
-            nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-long-arrow-right"></i></button>',
-            responsive: [
-                {
-                    breakpoint: 1199,
-                    settings: {
-                        slidesToShow: 5,
-                        slidesToScroll: 5
-                    }
-                },
-                {
-                    breakpoint: 991,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 4
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3
-                    }
-                },
-                {
-                    breakpoint: 479,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 400,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                },
-
-            ]
-        });
-
         $('.categrie-product-activation-4').slick({
             infinite: true,
             slidesToShow: 1,
@@ -822,55 +725,7 @@
             nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-angle-right"></i></button>',
         });
 
-        $('.categrie-product-activation').slick({
-            infinite: true,
-            slidesToShow: 7,
-            slidesToScroll: 7,
-            arrows: true,
-            dots: false,
-            autoplay: false,
-            speed: 1000,
-            prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-long-arrow-left"></i></button>',
-            nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-long-arrow-right"></i></button>',
-            responsive: [
-                {
-                    breakpoint: 1199,
-                    settings: {
-                        slidesToShow: 6,
-                        slidesToScroll: 6
-                    }
-                },
-                {
-                    breakpoint: 991,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 4
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3
-                    }
-                },
-                {
-                    breakpoint: 479,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 400,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                },
-
-            ]
-        });
+        
       }
       function testimonialActivation() {
 
