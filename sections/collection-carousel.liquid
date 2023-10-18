@@ -1,16 +1,24 @@
 
 {%- capture data_slick_activation -%}
-data-slick='{
-"slidesToShow":3, 
-"autoplay":true, 
-infinite:true, 
-slidesToScroll:6,
-arrows:true,
-dots:false, 
-        
-}'
-{%- endcapture -%}
+      data-slick='{
+          {%- if section.settings.autoplay_true -%}
+          "autoplay": true,
+          "autoplaySpeed": {{ section.settings.autoplay_speed }},
+          {%- endif -%} 
+          "slidesToScroll": 1,
+          "slidesToShow": {{ section.settings.product_column }}, 
+          "arrows": true,
+          "dots": false,   
+          "nextArrow": "<button class=\"slide-arrow prev-arrow\"><i class=\"fal fa-long-arrow-left\"></i></button>", 
+          "prevArrow": "<button class=\"slide-arrow next-arrow\"><i class=\"fal fa-long-arrow-right\"></i></button>",
 
+            "responsive":[
+                {"breakpoint":992, "settings": {"slidesToShow": {{ section.settings.product_column_lg }}} },
+                {"breakpoint":768, "settings": {"slidesToShow": {{ section.settings.product_column_md }}} },
+                {"breakpoint":480, "settings": {"slidesToShow": {{ section.settings.product_column_sm }}} }
+              ]  
+      }'
+   {%- endcapture -%}
 
 {% if section.settings.collection_style == 'cat_style_1' %}
   <!-- Start Categorie Area  -->
