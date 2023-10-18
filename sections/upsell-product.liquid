@@ -38,7 +38,7 @@
       }'
    {%- endcapture -%}
 
-      <div class="new-arrivals-product-activation slick-slider slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
+      <div class="slick-slider slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
         
         {% assign collection = collections[section.settings.collection] %}
         {% for product in collection.products limit: upsell_product_limit %}
