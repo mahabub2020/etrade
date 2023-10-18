@@ -23,7 +23,7 @@
             axilslickactivation3();
 
         });
-        $(document).addEventListener("shopify:section:load", () => {
+        document.addEventListener("shopify:section:load", () => {
             slider_slick_activation_two();
             slider_slick_activation_one();
             slider_thumb_activation_one(); 
