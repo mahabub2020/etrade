@@ -29,7 +29,7 @@ $(document).ready(function(){
     // Add to wishlist start
     let wishlist_key = 'wishlist';
     let delimiter = ',';
-    $('.axil-add-to-wishlist').on('click', function(e) {
+    $(document).on('click', '.axil-add-to-wishlist', function(e) {
         e.preventDefault();
         productHandle = $(this).attr('data-product-handle');
         updateWishlist(productHandle, this);
