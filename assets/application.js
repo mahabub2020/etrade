@@ -171,7 +171,8 @@ $(document).ready(function(){
     });
 
     // Search modal open
-    $('.axil-search').on('click', function() {
+    $('.axil-search').on('click', function(e) {
+        e.preventDefault();
         $('body, .header-search-modal').addClass('open');
         $('#closeMask').addClass('closeMask');
 
