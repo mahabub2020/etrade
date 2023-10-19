@@ -692,6 +692,6 @@ svg.icon.icon-caret {
 .active-facets facet-remove:only-child {
   display: none;
 }
-.header-search-modal .card-header form {
+.header-search-modal.open .card-header form {
   margin-bottom: 0;
 }
