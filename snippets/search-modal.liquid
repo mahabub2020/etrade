@@ -2,23 +2,37 @@
   <button class="card-close searchbar-close">
     <i class="fas fa-times"></i>
   </button>
+  <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
   <div class="header-search-wrap">
     <div class="card-header">
-      <form action="{{ routes.search_url }}" method="get" role="search">
-        <div class="input-group">
-          <input
-            type="search"
-            class="form-control"
-            name="q"
-            id="prod-search"
-            placeholder="{{ section.settings.search_placeholder }}">
-          <button type="submit" class="axil-btn btn-bg-primary">
-            <i class="fal fa-search"></i>
-          </button>
-        </div>
-      </form>
+      <predictive-search>
+        <form action="{{ routes.search_url }}" method="get" role="search">
+          <div class="input-group">
+            <input
+              class="form-control"
+              placeholder="{{ section.settings.search_placeholder }}"
+              id="Search"
+              type="search"
+              name="q"
+              value="{{ search.terms | escape }}"
+              role="combobox"
+              aria-expanded="false"
+              aria-owns="predictive-search-results"
+              aria-controls="predictive-search-results"
+              aria-haspopup="listbox"
+              aria-autocomplete="list"
+            >
+            <input name="options[prefix]" type="hidden" value="last">
+        
+            <div id="predictive-search" tabindex="-1"></div>
+            <button type="submit" class="axil-btn btn-bg-primary">
+              <i class="fal fa-search"></i>
+            </button>
+          </div>
+        </form>
+      </predictive-search>
     </div>
-    <div class="search_input_loader loader1"></div>
+    {% comment %} <div class="search_input_loader loader1"></div>
     <div class="card-body search-results-body">
       <div class="recent-product">
         <div class="search-result-header">
@@ -79,7 +93,82 @@
           {% endfor %}
         </div>
       </div>
-    </div>
+    </div> {% endcomment %}
   </div>
 </div>
 <div id="closeMask"></div>
+
+{%- if predictive_search.performed -%}
+  <div id="predictive-search-results">
+    {%- if predictive_search.resources.products.size > 0 -%}
+      <h3 id="predictive-search-products">
+        Products
+      </h3>
+      <a href="search?q={{ predictive_search.terms }}" class="view-all">View All</a>
+      {% comment %} <ul role="listbox" aria-labelledby="predictive-search-products"> {% endcomment %}
+      <div class="psearch-results" role="listbox" aria-labelledby="predictive-search-products">
+        {%- for product in predictive_search.resources.products -%}
+          {% comment %} <li role="option">
+            <a href="{{ product.url }}">
+              {{ product | image_url: width: 50 | image_tag }}
+              <span>{{ product.title }}</span>
+            </a>
+          </li> {% endcomment %}
+          <div class="axil-product-list">
+              <div class="thumbnail">
+                <a href="{{ product.url }}">
+                  {{ product.featured_image | img_url: '150x150' | img_tag }}
+                </a>
+              </div>
+              <div class="product-content">
+                <div class="product-rating">
+                  <div
+                    class="star-rating"
+                    role="img"
+                    aria-label="Rated 5.00 out of 5"></div>
+                  <span class="rating-number">
+                    <span>1 +</span>
+                    Reviews
+                  </span>
+                </div>
+                <h6 class="product-title">
+                  <a href="{{ product.url }}">{{ product.title }}</a>
+                </h6>
+                <div class="product-price-variant">
+                  <span class="woocommerce-Price-amount amount">
+                    {{ product.price | money }}
+                  </span>
+                </div>
+                <div class="product-cart add-to-cart">
+                  {% form 'product', product %}
+                    <input
+                      type="hidden"
+                      name="id"
+                      value="{{ product.selected_or_first_available_variant.id }}">
+                    <button type="submit">
+                      <i class="fal fa-shopping-cart"></i>
+                    </button>
+                    <a
+                      href="https://dev.axilthemes.com/themes/etrade/wishlist/"
+                      rel="nofollow"
+                      data-product-id="1740"
+                      data-title-after="Added to Wishlist"
+                      class="axil-wishlist-icon axil-add-to-wishlist"
+                      data-nonce="389fe6afdd"
+                      target="_blank">
+                      <i class="wishlist-icon far fa-heart"></i>
+                      <i class="fas fa-spinner ajax-loading"></i>
+                    </a>
+                  {% endform %}
+                </div>
+              </div>
+            </div>
+        {%- endfor -%}
+      {% comment %} </ul> {% endcomment %}
+      </div>
+    {%- endif -%}
+    <button>
+      Search for “{{ predictive_search.terms }}”
+    </button>
+  </div>
+{%- endif -%}
