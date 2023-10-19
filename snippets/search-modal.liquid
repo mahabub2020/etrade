@@ -32,7 +32,7 @@
         </form>
       </predictive-search>
     </div>
-    {% comment %} <div class="search_input_loader loader1"></div>
+    <div class="search_input_loader loader1"></div>
     <div class="card-body search-results-body">
       <div class="recent-product">
         <div class="search-result-header">
@@ -93,7 +93,7 @@
           {% endfor %}
         </div>
       </div>
-    </div> {% endcomment %}
+    </div>
   </div>
 </div>
 <div id="closeMask"></div>
@@ -101,9 +101,11 @@
 {%- if predictive_search.performed -%}
   <div id="predictive-search-results">
     {%- if predictive_search.resources.products.size > 0 -%}
-      <h3 id="predictive-search-products">
-        Products
-      </h3>
+      <div class="search-result-header">
+        <h6 class="title" id="predictive-search-products">
+          Products
+        </h6>
+      </div>
       <a href="search?q={{ predictive_search.terms }}" class="view-all">View All</a>
       {% comment %} <ul role="listbox" aria-labelledby="predictive-search-products"> {% endcomment %}
       <div class="psearch-results" role="listbox" aria-labelledby="predictive-search-products">
