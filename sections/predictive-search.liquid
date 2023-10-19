@@ -8,7 +8,7 @@
         </div>
         <a href="search?q={{ predictive_search.terms }}" class="view-all">View All</a>
         <div class="psearch-results" role="listbox" aria-labelledby="predictive-search-products">
-          {%- for product in predictive_search.resources.products -%}
+          {%- for product in predictive_search.resources.products limit: 3 -%}
               <div class="axil-product-list">
                 <div class="thumbnail">
                   <a href="{{ product.url }}">
@@ -61,8 +61,5 @@
           {%- endfor -%}
         </div>
       {%- endif -%}
-      <button>
-        Search for “{{ predictive_search.terms }}”
-      </button>
     </div>
   {%- endif -%}
