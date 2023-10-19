@@ -36,24 +36,21 @@
                   </div>
                   <div class="product-cart add-to-cart">
                     {% form 'product', product %}
-                      <input
+                        <input
                         type="hidden"
                         name="id"
                         value="{{ product.selected_or_first_available_variant.id }}">
-                      <button type="submit">
+                        <button type="submit">
                         <i class="fal fa-shopping-cart"></i>
-                      </button>
-                      <a
-                        href="https://dev.axilthemes.com/themes/etrade/wishlist/"
-                        rel="nofollow"
-                        data-product-id="1740"
-                        data-title-after="Added to Wishlist"
-                        class="axil-wishlist-icon axil-add-to-wishlist"
-                        data-nonce="389fe6afdd"
-                        target="_blank">
-                        <i class="wishlist-icon far fa-heart"></i>
-                        <i class="fas fa-spinner ajax-loading"></i>
-                      </a>
+                        </button>
+                        <a
+                            href="#"
+                            data-product-handle="{{ product.handle }}"
+                            data-title-after="Added to Wishlist"
+                            class="axil-wishlist-icon axil-add-to-wishlist">
+                            <i class="wishlist-icon far fa-heart"></i>
+                            <i class="fas fa-spinner ajax-loading"></i>
+                        </a>
                     {% endform %}
                   </div>
                 </div>
