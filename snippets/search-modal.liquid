@@ -29,70 +29,70 @@
             </button>
           </div>
         </form>
+        <div class="card-body search-results-body">
+          <div class="recent-product">
+            <div class="search-result-header">
+              <h6 class="title">Recent Product</h6>
+              <a href="{{ routes.all_products_collection_url }}" class="view-all">View All</a>
+            </div>
+            <div class="psearch-results" id="predictive-search" tabindex="-1">
+              {% for product in collections['all'].products limit: 3 %}
+                <div class="axil-product-list">
+                  <div class="thumbnail">
+                    <a href="{{ product.url }}">
+                      {{ product.featured_image | img_url: '150x150' | img_tag }}
+                    </a>
+                  </div>
+                  <div class="product-content">
+                    <div class="product-rating">
+                      <div
+                        class="star-rating"
+                        role="img"
+                        aria-label="Rated 5.00 out of 5"></div>
+                      <span class="rating-number">
+                        <span>1  +</span>
+                        Reviews
+                      </span>
+                    </div>
+                    <h6 class="product-title">
+                      <a href="{{ product.url }}">{{ product.title }}</a>
+                    </h6>
+                    <div class="product-price-variant">
+                      <span class="woocommerce-Price-amount amount">
+                        {{ product.price | money }}
+                      </span>
+                    </div>
+                    <div class="product-cart add-to-cart">
+                      {% form 'product', product %}
+                        <input
+                          type="hidden"
+                          name="id"
+                          value="{{ product.selected_or_first_available_variant.id }}">
+                        <button type="submit">
+                          <i class="fal fa-shopping-cart"></i>
+                        </button>
+                        <a
+                          href="https://dev.axilthemes.com/themes/etrade/wishlist/"
+                          rel="nofollow"
+                          data-product-id="1740"
+                          data-title-after="Added to Wishlist"
+                          class="axil-wishlist-icon axil-add-to-wishlist"
+                          data-nonce="389fe6afdd"
+                          target="_blank">
+                          <i class="wishlist-icon far fa-heart"></i>
+                          <i class="fas fa-spinner ajax-loading"></i>
+                        </a>
+                      {% endform %}
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
       </predictive-search>
     </div>
     <div class="search_input_loader loader1"></div>
-    <div class="card-body search-results-body">
-      <div class="recent-product">
-        <div class="search-result-header">
-          <h6 class="title">Recent Product</h6>
-          <a href="{{ routes.all_products_collection_url }}" class="view-all">View All</a>
-        </div>
-        <div class="psearch-results" id="predictive-search" tabindex="-1">
-          {% for product in collections['all'].products limit: 3 %}
-            <div class="axil-product-list">
-              <div class="thumbnail">
-                <a href="{{ product.url }}">
-                  {{ product.featured_image | img_url: '150x150' | img_tag }}
-                </a>
-              </div>
-              <div class="product-content">
-                <div class="product-rating">
-                  <div
-                    class="star-rating"
-                    role="img"
-                    aria-label="Rated 5.00 out of 5"></div>
-                  <span class="rating-number">
-                    <span>1  +</span>
-                    Reviews
-                  </span>
-                </div>
-                <h6 class="product-title">
-                  <a href="{{ product.url }}">{{ product.title }}</a>
-                </h6>
-                <div class="product-price-variant">
-                  <span class="woocommerce-Price-amount amount">
-                    {{ product.price | money }}
-                  </span>
-                </div>
-                <div class="product-cart add-to-cart">
-                  {% form 'product', product %}
-                    <input
-                      type="hidden"
-                      name="id"
-                      value="{{ product.selected_or_first_available_variant.id }}">
-                    <button type="submit">
-                      <i class="fal fa-shopping-cart"></i>
-                    </button>
-                    <a
-                      href="https://dev.axilthemes.com/themes/etrade/wishlist/"
-                      rel="nofollow"
-                      data-product-id="1740"
-                      data-title-after="Added to Wishlist"
-                      class="axil-wishlist-icon axil-add-to-wishlist"
-                      data-nonce="389fe6afdd"
-                      target="_blank">
-                      <i class="wishlist-icon far fa-heart"></i>
-                      <i class="fas fa-spinner ajax-loading"></i>
-                    </a>
-                  {% endform %}
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 <div id="closeMask"></div>
