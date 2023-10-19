@@ -98,7 +98,7 @@
 </div>
 <div id="closeMask"></div>
 
-{%- if predictive_search.performed -%}
+{% comment %} {%- if predictive_search.performed -%}
   <div id="predictive-search-results">
     {%- if predictive_search.resources.products.size > 0 -%}
       <div class="search-result-header">
@@ -106,17 +106,17 @@
           Products
         </h6>
       </div>
-      <a href="search?q={{ predictive_search.terms }}" class="view-all">View All</a>
+      <a href="search?q={{ predictive_search.terms }}" class="view-all">View All</a> {% endcomment %}
       {% comment %} <ul role="listbox" aria-labelledby="predictive-search-products"> {% endcomment %}
-      <div class="psearch-results" role="listbox" aria-labelledby="predictive-search-products">
-        {%- for product in predictive_search.resources.products -%}
+      {% comment %} <div class="psearch-results" role="listbox" aria-labelledby="predictive-search-products">
+        {%- for product in predictive_search.resources.products -%} {% endcomment %}
           {% comment %} <li role="option">
             <a href="{{ product.url }}">
               {{ product | image_url: width: 50 | image_tag }}
               <span>{{ product.title }}</span>
             </a>
           </li> {% endcomment %}
-            <div class="axil-product-list">
+            {% comment %} <div class="axil-product-list">
               <div class="thumbnail">
                 <a href="{{ product.url }}">
                   {{ product.featured_image | img_url: '150x150' | img_tag }}
@@ -165,12 +165,12 @@
                 </div>
               </div>
             </div>
-        {%- endfor -%}
+        {%- endfor -%} {% endcomment %}
       {% comment %} </ul> {% endcomment %}
-      </div>
+      {% comment %} </div>
     {%- endif -%}
     <button>
       Search for “{{ predictive_search.terms }}”
     </button>
   </div>
-{%- endif -%}
+{%- endif -%} {% endcomment %}
