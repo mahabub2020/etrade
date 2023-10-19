@@ -3,10 +3,10 @@
       {%- if predictive_search.resources.products.size > 0 -%}
         <div class="search-result-header">
           <h6 class="title" id="predictive-search-products">
-            Products
+            {{ predictive_search.resources.products.size }} Result Found
           </h6>
+          <a href="search?q={{ predictive_search.terms }}" class="view-all">View All</a>
         </div>
-        <a href="search?q={{ predictive_search.terms }}" class="view-all">View All</a>
         <div class="psearch-results" role="listbox" aria-labelledby="predictive-search-products">
           {%- for product in predictive_search.resources.products limit: 3 -%}
               <div class="axil-product-list">
