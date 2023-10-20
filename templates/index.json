@@ -97,6 +97,19 @@
         "74e0d307-8719-4372-a7f4-b9f8cddf19e8"
       ],
       "settings": {
+        "collection_style": "cat_style_1",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "sub_title": "Before Title",
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+
+        ],
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 2,
+        "product_column_lg": 5,
+        "product_column_md": 4,
+        "product_column_sm": 2
       }
     },
     "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd": {
