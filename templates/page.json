@@ -69,32 +69,6 @@
       "settings": {
       }
     },
-    "b475c665-7dd4-4176-ab16-f35f19793bf6": {
-      "type": "collection-carousel",
-      "settings": {
-        "collection_style": "cat_style_1",
-        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
-        "sub_title": "Categories",
-        "section_title": "Browse by Category",
-        "featured_cat_collection": [
-          "phones",
-          "pc-gaming",
-          "laptops",
-          "headphones",
-          "fashion",
-          "electronics",
-          "computers",
-          "accessories",
-          "woman"
-        ],
-        "autoplay_true": true,
-        "autoplay_speed": 5000,
-        "product_column": 6,
-        "product_column_lg": 5,
-        "product_column_md": 4,
-        "product_column_sm": 2
-      }
-    },
     "aec5fef1-93a3-48a2-9e52-d8272f0b2514": {
       "type": "section-countdown",
       "settings": {
@@ -111,7 +85,6 @@
   "order": [
     "main",
     "0008d5c8-c50a-411c-8524-b1d1f9054032",
-    "b475c665-7dd4-4176-ab16-f35f19793bf6",
     "aec5fef1-93a3-48a2-9e52-d8272f0b2514"
   ]
 }
