@@ -9,7 +9,7 @@ $(document).ready(function(){
         $('.cart-dropdown').removeClass('open');
     });
 
-    $('form[action="/cart/add"]').on('submit', async function(e) {
+    $(document).on('submit', 'form[action="/cart/add"]', async function(e) {
         e.preventDefault();
         
         await fetch("cart/add", {
@@ -186,30 +186,5 @@ $(document).ready(function(){
         $('body, .header-search-modal').removeClass('open');
         $('#closeMask').removeClass('closeMask');
     });
-
-    // Product search ajax
-    // var recent_product = $('.recent-product');
-    // $(document).on('input', '#prod-search', async function () {
-    //     if (this.value.length <= 0) {
-    //         $('.search-results-body').html(recent_product);
-    //     } else if(this.value.length >= 3) {
-    //         var keyword = $('#prod-search').val();
-
-    //         const searchResult = await fetch("/?section_id=ajax-search-result");
-    //         const searchResultHTML = await searchResult.text();
-    //         $('.search-results-body').html(searchResultHTML);
-    //         var url = window.location.href;
-    //         if(url.indexOf('?') == -1) {
-    //             var newURL = url+"?keyword="+keyword;
-    //         }else {
-    //             if(url.indexOf('keyword') != -1) {
-    //                 var newURL = url.replace(/(keyword=)[^\&]+/, '$1' + keyword);
-    //             }else {
-    //                 var newURL = url+"&keyword="+keyword;
-    //             }
-    //         }
-    //         history.pushState({}, null, newURL);
-    //     }
-    // });
 
 });
