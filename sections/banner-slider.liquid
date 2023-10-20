@@ -1,22 +1,34 @@
 
-{%- capture data_slick_activation -%}
-      data-slick='{
-          {%- if section.settings.autoplay_true -%}
-          "autoplay": true,
-          "autoplaySpeed": {{ section.settings.autoplay_speed }},
-          {%- endif -%} 
+   {%- capture data_slick_activation_content -%}
+      data-slick='{  
+      "autoplaySpeed": 1, 
+      "slidesToScroll": 1,
+      "slidesToShow": 1, 
+      "arrows": false,
+      "dots": false,
+      "focusOnSelect": false, 
+      "speed": 500,
+      "fade": true,
+      "infinite": true, 
+      "autoplay": true,
+      "asNavFor": ".slider-thumb-activation-one",
+    }'
+   {%- endcapture -%}
+   
+   {%- capture data_slick_activation -%}
+      data-slick='{ 
+          
           "slidesToScroll": 1,
-          "slidesToShow": {{ section.settings.product_column }}, 
-          "arrows": true,
-          "dots": false,   
-          "nextArrow": "<button class=\"slide-arrow prev-arrow\"><i class=\"fal fa-long-arrow-left\"></i></button>", 
-          "prevArrow": "<button class=\"slide-arrow next-arrow\"><i class=\"fal fa-long-arrow-right\"></i></button>",
-
-            "responsive":[
-                {"breakpoint":992, "settings": {"slidesToShow": {{ section.settings.product_column_lg }}} },
-                {"breakpoint":768, "settings": {"slidesToShow": {{ section.settings.product_column_md }}} },
-                {"breakpoint":480, "settings": {"slidesToShow": {{ section.settings.product_column_sm }}} }
-              ]  
+          "slidesToShow": 2, 
+          "arrows": false,
+          "dots": false,
+          "infinite": true, 
+          "focusOnSelect": false,
+          "speed": 1000,
+          "asNavFor": ".slider-content-activation-one",
+          "responsive":[ 
+            {"breakpoint":992, "settings": {"slidesToShow": 1 } }
+          ]  
       }'
    {%- endcapture -%}
 <div id="section-{{ section.id }}" class="axil-main-slider-area main-slider-style-1">
@@ -24,7 +36,7 @@
       <div class="row align-items-center">
           <div class="col-lg-5 col-sm-6">
               <div class="main-slider-content"> 
-                    <div class=" axil-slick-slider slider-content-activation-one"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
+                    <div class=" axil-slick-slider slider-content-activation-one"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation_content }}>
                     {% for block in section.blocks %}  
                     {% case block.type %}
                     {% when 'banner' %}
@@ -198,7 +210,7 @@
       "default": 2
     }
   ],
-  
+
     
     "blocks": [
       {
