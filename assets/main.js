@@ -6,7 +6,7 @@
         $(document).ready(function(){
             slider_slick_activation_two();
             slider_slick_activation_one();
-            slider_thumb_activation_one(); 
+             
             readyActivation();
           
             testimonialActivation();
@@ -30,7 +30,7 @@ document.addEventListener("shopify:section:load", () => {
 });
 
 function  axilSlickActivation (e) {
-    $('.slick-slider').not('.slick-initialized').slick();
+    $('.axil-slick-slider').not('.slick-initialized').slick();
 }
 
 function productGlightbox() {
@@ -566,64 +566,6 @@ function slider_slick_activation_one() {
     } 
 }
 
-
-function slider_thumb_activation_one(){
-    var SlickCarousel = $('.main-slider-style-1');
-
-    if (SlickCarousel.length) {
-        try {
-            if (SlickCarousel.find('.slider-thumb-activation-one').hasClass('slick-initialized')) {
-                SlickCarousel.find('.slider-thumb-activation-one').slick('unslick');
-            }
-
-            if (SlickCarousel.find('.slider-content-activation-one').hasClass('slick-initialized')) {
-                SlickCarousel.find('.slider-content-activation-one').slick('unslick');
-            }
-
-
-        } catch (e) { }
-
-
-        SlickCarousel.find('.slider-thumb-activation-one').slick({
-            infinite: true,
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: true,
-            focusOnSelect: false,
-            speed: 1000,
-            
-            asNavFor: '.slider-content-activation-one',
-            prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-long-arrow-left"></i></button>',
-            nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-long-arrow-right"></i></button>',
-            responsive: [{
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }
-            ]
-
-        });
-
-        SlickCarousel.find('.slider-content-activation-one').slick({
-
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: false,
-            focusOnSelect: false,
-            speed: 500,
-            fade: true,
-            autoplay: false,
-            
-            asNavFor: '.slider-thumb-activation-one',
-
-        });
-
-    }
-}
 
 function readyActivation() {
 
