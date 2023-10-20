@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-    $('.cart-dropdown-btn').on('click', function() {
+    $('.cart-dropdown-btn').on('click', function(e) {
+        e.preventDefault();
         $('.cart-dropdown').addClass('open');
     });
 
