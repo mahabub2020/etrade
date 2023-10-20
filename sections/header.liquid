@@ -78,8 +78,14 @@
 </div>
 <div class="wooc-overlay-cart"></div>
 
+{%- if  page.metafields.custom.header_layout -%}
+  {%- assign header_style =  page.metafields.custom.header_layout.value -%}
+{% else %}
+  {%- assign header_style =  section.settings.header_style -%} 
+{%- endif -%}
+ 
 {% render 'search-modal' %}
-{% if section.settings.header_style == 'header_style_1' %}
+{% if header_style == 'header_style_1' %}
 <header class="header axil-header header-style-1">
   {% comment %} {% render 'header-top' %} {% endcomment %}
   {% render 'header-top1' %}
@@ -104,7 +110,7 @@
 
   <!-- End Mainmenu Area -->
 </header>
-{% elsif section.settings.header_style == 'header_style_2' %}
+{% elsif header_style == 'header_style_2' %}
 <header class="header axil-header header-style-5">
   {% render 'header-top2' %} 
   <!-- Start Mainmenu Area  -->
@@ -129,7 +135,7 @@
   <!-- End Mainmenu Area -->
 </header>
 <!-- End Header -->
-{% elsif section.settings.header_style == 'header_style_3' %}
+{% elsif header_style == 'header_style_3' %}
 <header class="header axil-header header-style-2">
   {% render 'header-top3' %} 
   <!-- Start Header Top Area  -->
@@ -190,7 +196,7 @@
   <!-- End Mainmenu Area  -->
 </header>
 
-{% elsif section.settings.header_style == 'header_style_4' %}
+{% elsif header_style == 'header_style_4' %}
 <header class="header axil-header header-style-4">
  {% render 'header-top4' %} 
   <!-- Start Header Top Area  -->
@@ -225,7 +231,7 @@
   {% render 'main-menu4' %}
   <!-- End Mainmenu Area  -->
 </header>
-{% elsif section.settings.header_style == 'header_style_5' %}
+{% elsif header_style == 'header_style_5' %}
 
 <header class="header axil-header header-style-7">
   {% render 'header-top5' %}
@@ -247,6 +253,7 @@
       </div>
   </div>
   <!-- End Mainmenu Area -->
+  {% render 'header-top-campaign' %}
 </header>
 {% endif %}  
 

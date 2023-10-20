@@ -10,10 +10,10 @@
 {%- assign current_variant = product.selected_or_first_available_variant -%}
  
 
-{%- if  product.metafields.custom.single_product_layout -%}
-  {%- assign single_product_layout =  product.metafields.custom.single_product_layout -%}
-{% else %}
+{%- if  section.settings.product_thumbnail_style -%}
   {%- assign single_product_layout =  section.settings.product_thumbnail_style -%}
+{% else %}
+  {%- assign single_product_layout =  product.metafields.custom.single_product_layout.value -%} 
 {%- endif -%}
 
 
@@ -22,8 +22,8 @@
     <div class="single-product-thumb">
       <div class="{% if section.settings.container_style == 'style_1' %}container p-0 {% else %} container-fluid p-0{% endif %}">
         <div class="row {% if section.settings.content_handle == 'content_in_left' %}flex-row-reverse{% endif %}">
-        
-            {%- if single_product_layout == 'product_thumbnail_1' -%}
+
+            {%- if single_product_layout == 'product_thumbnail_1' -%} 
               <div class="col-lg-7 mb--40">
                 {% render 'product-thumbnail-1' %}   
               </div>
@@ -354,26 +354,26 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
 		    {
           "type": "select",
           "id": "product_thumbnail_style",
-          "label": "Product Thumbnail Style",
+          "label": "Product Thumbnail Layout",
           "options":[
               {
-                  "label": "Gallery 1",
+                  "label": "Product Thumbnail 1",
                   "value": "product_thumbnail_1"
               },
               {
-                  "label": "Gallery 2",
+                  "label": "Product Thumbnail 2",
                   "value": "product_thumbnail_2"
               },
               {
-                  "label": "Gallery 3",
+                  "label": "Product Thumbnail 3",
                   "value": "product_thumbnail_3"
               },
               {
-                  "label": "Gallery 4",
+                  "label": "Product Thumbnail 4",
                   "value": "product_thumbnail_4"
               },
               {
-                  "label": "Gallery 5",
+                  "label": "Product Thumbnail 5",
                   "value": "product_thumbnail_5"
               }
           ],
@@ -410,207 +410,18 @@ Loop: <li>{{ field | first }}: {{ field | last }}</li>
 			],
 			"default": "inner"
       	},
-		{
+		    {
           "type": "header",
           "content": "Image Popup"
       	},
-		{
-          "type": "checkbox",
-          "id": "product_popup_enable",
-          "label": "Product Popup Enable",
-          "default": true,
-		  "info": "When 'Product Zoom' enabled then it applicable"	
-      	},
-		{
-          "type": "header",
-          "content": "Product Thum Image"
-      	},
         {
-          "type": "header",
-          "content": "Large/Desktop Device"
-        },
-        {
-          "type": "select",
-          "id": "product_cursole",
-          "label": "Thum Image",
-          "options":[
-			{
-              "value":"1",
-              "label": "1 image"
-            },
-			{
-              "value":"2",
-              "label": "2 image"
-            },
-            {
-              "value":"3",
-              "label": "3 image"
-            },
-            {
-              "value":"4",
-              "label": "4 image"
-            },
-            {
-              "value":"5",
-              "label": "5 image"
-            },
-            {
-              "value":"6",
-              "label": "6 image"
-            },
-            {
-              "value":"7",
-              "label": "7 image"
-            },
-            {
-              "value":"8",
-              "label": "8 image"
-            },
-            {
-              "value":"9",
-              "label": "9 image"
-            },
-            {
-              "value":"10",
-              "label": "10 image"
-            },
-            {
-              "value":"11",
-              "label": "11 image"
-            },
-            {
-              "value":"12",
-              "label": "12 image"
-            }
-
-          ],
-
-          "default": "3"
-        },
-        {
-          "type": "header",
-          "content": "Tablate Device"
-        },
-        {
-          "type": "select",
-          "id": "product_cursole_2",
-          "label": "Thum Image",
-          "options":[
-			{
-              "value":"1",
-              "label": "1 image"
-            },
-			{
-              "value":"2",
-              "label": "2 image"
-            },
-            {
-              "value":"3",
-              "label": "3 image"
-            },
-            {
-              "value":"4",
-              "label": "4 image"
-            },
-            {
-              "value":"5",
-              "label": "5 image"
-            },
-            {
-              "value":"6",
-              "label": "6 image"
-            },
-            {
-              "value":"7",
-              "label": "7 image"
-            },
-            {
-              "value":"8",
-              "label": "8 image"
-            },
-            {
-              "value":"9",
-              "label": "9 image"
-            },
-            {
-              "value":"10",
-              "label": "10 image"
-            },
-            {
-              "value":"11",
-              "label": "11 image"
-            },
-            {
-              "value":"12",
-              "label": "12 image"
-            }
-
-          ],
-
-          "default": "3"
-        },
-        {
-          "type": "header",
-          "content": "Mobile Device"
-        },
-        {
-          "type": "select",
-          "id": "product_cursole_3",
-          "label": "Thum Image",
-          "options":[
-			{
-              "value":"1",
-              "label": "1 image"
-            },
-			{
-              "value":"2",
-              "label": "2 image"
-            },
-            {
-              "value":"3",
-              "label": "3 image"
-            },
-            {
-              "value":"4",
-              "label": "4 image"
-            },
-            {
-              "value":"5",
-              "label": "5 image"
-            },
-            {
-              "value":"6",
-              "label": "6 image"
-            },
-            {
-              "value":"7",
-              "label": "7 image"
-            },
-            {
-              "value":"8",
-              "label": "8 image"
-            },
-            {
-              "value":"9",
-              "label": "9 image"
-            },
-            {
-              "value":"10",
-              "label": "10 image"
-            },
-            {
-              "value":"11",
-              "label": "11 image"
-            },
-            {
-              "value":"12",
-              "label": "12 image"
-            }
-
-          ],
-
-          "default": "3"
-        } 
+        "type": "checkbox",
+        "id": "product_popup_enable",
+        "label": "Product Popup Enable",
+        "default": true,
+        "info": "When 'Product Zoom' enabled then it applicable"	
+      }
+		
 	],
 
 	"blocks":[

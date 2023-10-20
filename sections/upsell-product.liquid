@@ -38,7 +38,7 @@
       }'
    {%- endcapture -%}
 
-      <div class="new-arrivals-product-activation slick-slider slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
+      <div class="slick-slider slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
         
         {% assign collection = collections[section.settings.collection] %}
         {% for product in collection.products limit: upsell_product_limit %}
@@ -110,25 +110,23 @@
     }
   }
 
-#section-{{ section.id }} .heading-color {
+#section-{{ section.id }} .section-title-wrapper .title-highlighter {
+    color: {{ section.settings.section_title_before }}!important;
+}
+ 
+#section-{{ section.id }} .section-title-wrapper .title {
     color: {{ section.settings.section_title_color }}!important;
 }
-
-#section-{{ section.id }} .separator {
-    border-color: {{ section.settings.section_border_color }};
+#section-{{ section.id }} .title-highlighter.highlighter-primary i {
+    background-color: {{ section.settings.section_title_before }}!important;
+     
 }
-  
-
-#section-{{ section.id }} .color--light-3 {
-    color: {{ section.settings.section_description_color }}!important;
-}
-
-
+ 
 {%- endstyle -%}
 
 {% schema %}
 {
-  "name": "Upsell Product",
+  "name": "Upsell Products",
   "settings": [
     {
       "type": "header",
@@ -289,17 +287,18 @@
     },
     {
       "type": "color",
-      "id": "section_title_color",
-      "label": "Section Title Color",
-      "default": "#282828"
+      "id": "section_title_before",
+      "label": "Title before Color",
+      "default": "#8c71db"
     },
     {
       "type": "color",
-      "id": "section_border_color",
-      "label": "Border Color",
-      "default": "#cf987e"
-    }
+      "id": "section_title_color",
+      "label": "Section Title Color",
+      "default": "#292930"
+    } 
   ],
+
   "blocks": [
     {
       "type": "section_margin",
@@ -467,15 +466,20 @@
         {
           "type": "image_picker",
           "id": "section_bg_image",
-          "label": "BG Image"
+          "label": "Background Image"
         },
         {
           "type": "color",
           "id": "section_bg_color",
-          "label": "BG Color",
+          "label": "Background Color",
           "default": "#ffffff"
         }
       ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Upsell Products"
     }
   ]
 }

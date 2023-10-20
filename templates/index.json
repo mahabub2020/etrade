@@ -1,19 +1,25 @@
 {
   "sections": {
-    "17405413-6b41-4e23-b0f4-3aaf1e79ffb7": {
-      "type": "product-collection",
+    "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd": {
+      "type": "multi-column-collection",
       "settings": {
-        "title": "Product Collection",
-        "btn-label": "",
-        "product_collection": "etrade-products",
-        "number_of_products_to_show": 5,
-        "product_layout": "1",
-        "excluded_products": [
-
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+          "accessories",
+          "camera-photo",
+          "computers",
+          "deals",
+          "headphones",
+          "laptops",
+          "pc-gaming",
+          "phones",
+          "smartwatches"
         ],
-        "sort_by": "title",
-        "reverse_order": false,
-        "hover_img": false
+        "list_per_slider": 10,
+        "col_xl": 5,
+        "col_lg": 5,
+        "col_md": 3,
+        "col_sm": 2
       }
     },
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3": {
@@ -39,13 +45,12 @@
         "before_title_text": "Newsletter",
         "before_title_color": "#3577f0",
         "title": "Get weekly update",
-        "bg_img": "shopify:\/\/shop_images\/bg-image-5.jpg",
         "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&amp;id=e71e328c72&amp;f_id=0015dce6f0"
       }
     }
   },
   "order": [
-    "17405413-6b41-4e23-b0f4-3aaf1e79ffb7",
+    "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3"
   ]
 }

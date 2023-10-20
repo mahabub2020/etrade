@@ -1,3 +1,25 @@
+
+{%- capture data_slick_activation -%}
+      data-slick='{
+          {%- if section.settings.autoplay_true -%}
+          "autoplay": true,
+          "autoplaySpeed": {{ section.settings.autoplay_speed }},
+          {%- endif -%} 
+          "slidesToScroll": 1,
+          "slidesToShow": {{ section.settings.product_column }}, 
+          "arrows": true,
+          "dots": false,   
+          "nextArrow": "<button class=\"slide-arrow prev-arrow\"><i class=\"fal fa-long-arrow-left\"></i></button>", 
+          "prevArrow": "<button class=\"slide-arrow next-arrow\"><i class=\"fal fa-long-arrow-right\"></i></button>",
+
+            "responsive":[
+                {"breakpoint":992, "settings": {"slidesToShow": {{ section.settings.product_column_lg }}} },
+                {"breakpoint":768, "settings": {"slidesToShow": {{ section.settings.product_column_md }}} },
+                {"breakpoint":480, "settings": {"slidesToShow": {{ section.settings.product_column_sm }}} }
+              ]  
+      }'
+   {%- endcapture -%}
+
 {% if section.settings.collection_style == 'cat_style_1' %}
   <!-- Start Categorie Area  -->
   <div class="axil-categorie-area bg-color-white axil-section-gapcommon">
@@ -11,7 +33,7 @@
           <h2 class="title">{{ section.settings.section_title }}</h2>
         {% endif %}
       </div>
-      <div class="categrie-product-activation slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide">
+      <div class="slick-slider slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
         {% for collection in section.settings.featured_cat_collection %}
           {% if collection.all_products_count > 0 %}
             <div class="slick-single-layout">
@@ -49,7 +71,7 @@
             <h2 class="title">{{ section.settings.section_title }}</h2>
           {% endif %}
         </div>
-        <div class="categrie-product-activation-3 slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide">
+        <div class="categrie-product-activation-3 slick-slider slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
           {% for collection in section.settings.featured_cat_collection %}
             {% if collection.all_products_count > 0 %}
               <div class="slick-single-layout slick-slide">
@@ -78,7 +100,7 @@
   <!-- Start Categorie Area  -->
   <div class="axil-categorie-area pt--30 bg-color-white">
     <div class="container">
-      <div class="categrie-product-activation-2 categorie-product-two slick-layout-wrapper--15">
+      <div class="categrie-product-activation-2 slick-slider categorie-product-two slick-layout-wrapper--15"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
         {% for collection in section.settings.featured_cat_collection %}
           {% if collection.all_products_count > 0 %} 
             <div class="slick-single-layout slick-slide">
@@ -148,10 +170,71 @@
         "id": "section_title",
         "default": "Featured Categories",
         "label": "Title"
-      }, {
+      }, 
+      {
         "type": "collection_list",
         "id": "featured_cat_collection",
         "label": "Collection"
+      },
+      {
+        "type": "header",
+        "content": "Options"
+      },
+      {
+        "type": "checkbox",
+        "id": "autoplay_true",
+        "label": "Autoplay Enable",
+        "default": false
+      },
+      {
+        "type": "range",
+        "id": "autoplay_speed",
+        "min": 1000,
+        "max": 9000,
+        "step": 1000,
+        "label": "Autoplay Speed",
+        "unit": "ms",
+        "default": 5000
+      },
+      {
+        "type": "header",
+        "content": "Product Carousel Column"
+      },
+      {
+        "type": "range",
+        "id": "product_column",
+        "min": 1,
+        "max": 12,
+        "step": 1,
+        "label": "Desktop",
+        "default": 6
+      },
+      {
+        "type": "range",
+        "id": "product_column_lg",
+        "min": 1,
+        "max": 12,
+        "step": 1,
+        "label": "Laptop",
+        "default": 5
+      },
+      {
+        "type": "range",
+        "id": "product_column_md",
+        "min": 1,
+        "max": 12,
+        "step": 1,
+        "label": "Tablet",
+        "default": 4
+      },
+      {
+        "type": "range",
+        "id": "product_column_sm",
+        "min": 1,
+        "max": 12,
+        "step": 1,
+        "label": "Mobile",
+        "default": 2
       }
     ],
 

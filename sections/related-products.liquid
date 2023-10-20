@@ -121,19 +121,17 @@
     }
   }
 
-#section-{{ section.id }} .heading-color {
+#section-{{ section.id }} .section-title-wrapper .title-highlighter {
+    color: {{ section.settings.section_title_before }}!important;
+}
+ 
+#section-{{ section.id }} .section-title-wrapper .title {
     color: {{ section.settings.section_title_color }}!important;
 }
-
-#section-{{ section.id }} .separator {
-    border-color: {{ section.settings.section_border_color }};
+#section-{{ section.id }} .title-highlighter.highlighter-primary i {
+    background-color: {{ section.settings.section_title_before }}!important;
+     
 }
-  
-
-#section-{{ section.id }} .color--light-3 {
-    color: {{ section.settings.section_description_color }}!important;
-}
-
 
 {%- endstyle -%}
 
@@ -160,7 +158,7 @@
         }
       ],
 
-      "default": "style_2"
+      "default": "style_1"
     },
     {
       "type": "checkbox",
@@ -288,23 +286,19 @@
       "step": 1,
       "label": "Mobile",
       "default": 1
-    },
+    },  
     {
-      "type": "header",
-      "content": "Color"
-    },
-    {
-      "type": "color",
-      "id": "section_title_color",
-      "label": "Section Title Color",
-      "default": "#282828"
-    },
-    {
-      "type": "color",
-      "id": "section_border_color",
-      "label": "Border Color",
-      "default": "#cf987e"
-    }
+        "type": "color",
+        "id": "section_title_before",
+        "label": "Title before Color",
+        "default": "#8c71db"
+      },
+      {
+        "type": "color",
+        "id": "section_title_color",
+        "label": "Section Title Color",
+        "default": "#292930"
+      } 
   ],
   "blocks": [
     {
@@ -478,10 +472,16 @@
         {
           "type": "color",
           "id": "section_bg_color",
-          "label": "BG Color",
+          "label": "Background Color",
           "default": "#ffffff"
         }
+        
       ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Related Product"
     }
   ]
 }
