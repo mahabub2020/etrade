@@ -14,13 +14,13 @@
           "settings": {
             "subtitle": "Hot Deal In This Week",
             "banner_title": "Smart Digital Watchhcbnv",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "shopify:\/\/collections\/electronics",
+            "banner_btn_txt": "",
+            "banner_btn_url": "",
             "banner_img": "shopify:\/\/shop_images\/21-1.jpg",
             "price_label": "From",
             "price": "$49.00",
             "plus_icon_active": true,
-            "pos_x_type": "right",
+            "pos_x_type": "left",
             "pos_x": 192,
             "pos_y_type": "bottom",
             "pos_y": 64
@@ -67,6 +67,8 @@
         "5d8da3b7-547d-4dbd-8447-b8cb9fa474cc"
       ],
       "settings": {
+        "autoplay_true": false,
+        "autoplay_speed": 2000
       }
     },
     "b475c665-7dd4-4176-ab16-f35f19793bf6": {
