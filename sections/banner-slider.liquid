@@ -1,14 +1,23 @@
 
 {%- capture data_slick_activation -%}
-      data-slick='{ 
-
+      data-slick='{
+          {%- if section.settings.autoplay_true -%}
+          "autoplay": true,
+          "autoplaySpeed": {{ section.settings.autoplay_speed }},
+          {%- endif -%} 
           "slidesToScroll": 1,
-          "slidesToShow": 4, 
+          "slidesToShow": {{ section.settings.product_column }}, 
           "arrows": true,
           "dots": false,   
-          
-      }'
+          "nextArrow": "<button class=\"slide-arrow prev-arrow\"><i class=\"fal fa-long-arrow-left\"></i></button>", 
+          "prevArrow": "<button class=\"slide-arrow next-arrow\"><i class=\"fal fa-long-arrow-right\"></i></button>",
 
+            "responsive":[
+                {"breakpoint":992, "settings": {"slidesToShow": {{ section.settings.product_column_lg }}} },
+                {"breakpoint":768, "settings": {"slidesToShow": {{ section.settings.product_column_md }}} },
+                {"breakpoint":480, "settings": {"slidesToShow": {{ section.settings.product_column_sm }}} }
+              ]  
+      }'
    {%- endcapture -%}
 <div id="section-{{ section.id }}" class="axil-main-slider-area main-slider-style-1">
   <div class="container">
@@ -205,6 +214,66 @@
             "label": "Spacing",
             "unit": "px",
             "default": 4
+          },
+          {
+            "type": "header",
+            "content": "Options"
+          },
+          {
+            "type": "checkbox",
+            "id": "autoplay_true",
+            "label": "Autoplay Enable",
+            "default": false
+          },
+          {
+            "type": "range",
+            "id": "autoplay_speed",
+            "min": 1000,
+            "max": 9000,
+            "step": 1000,
+            "label": "Autoplay Speed",
+            "unit": "ms",
+            "default": 5000
+          },
+          {
+            "type": "header",
+            "content": "Product Carousel Column"
+          },
+          {
+            "type": "range",
+            "id": "product_column",
+            "min": 1,
+            "max": 12,
+            "step": 1,
+            "label": "Desktop",
+            "default": 6
+          },
+          {
+            "type": "range",
+            "id": "product_column_lg",
+            "min": 1,
+            "max": 12,
+            "step": 1,
+            "label": "Laptop",
+            "default": 5
+          },
+          {
+            "type": "range",
+            "id": "product_column_md",
+            "min": 1,
+            "max": 12,
+            "step": 1,
+            "label": "Tablet",
+            "default": 4
+          },
+          {
+            "type": "range",
+            "id": "product_column_sm",
+            "min": 1,
+            "max": 12,
+            "step": 1,
+            "label": "Mobile",
+            "default": 2
           }
           
         ]

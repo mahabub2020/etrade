@@ -4,22 +4,22 @@
      
 
         $(document).ready(function(){
-            slider_slick_activation_two();
-            slider_slick_activation_one();
+        //     slider_slick_activation_two();
+        //     slider_slick_activation_one();
              
-            readyActivation();
+        //     readyActivation();
           
-            testimonialActivation();
-            countdown(); 
-            slider_thumb_activation_two();
-            headerIconToggle();
-           // searchClick();
-            headerCampaignRemove(); 
+        //     testimonialActivation();
+        //     countdown(); 
+        //     slider_thumb_activation_two();
+        //     headerIconToggle();
+        //    // searchClick();
+        //     headerCampaignRemove(); 
            
-            axilslickactivation2();
-            magnificPopupActivationProductDetails();
-            magnificPopupActivation();
-            axilslickactivation3();
+        //     axilslickactivation2();
+        //     magnificPopupActivationProductDetails();
+        //     magnificPopupActivation();
+        //     axilslickactivation3();
 
             axilSlickActivation();
 
