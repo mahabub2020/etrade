@@ -695,3 +695,6 @@ svg.icon.icon-caret {
 .header-search-modal .header-search-wrap .card-header form {
   padding-bottom: 0;
 }
+.header-search-modal .search-result-header {
+  padding-top: 20px;
+}
