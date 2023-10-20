@@ -1,23 +1,14 @@
 
 {%- capture data_slick_activation -%}
-      data-slick='{
-          {%- if section.settings.autoplay_true -%}
-          "autoplay": true,
-          "autoplaySpeed": {{ section.settings.autoplay_speed }},
-          {%- endif -%} 
+      data-slick='{ 
+
           "slidesToScroll": 1,
-          "slidesToShow": {{ section.settings.product_column }}, 
+          "slidesToShow": 4, 
           "arrows": true,
           "dots": false,   
-          "nextArrow": "<button class=\"slide-arrow prev-arrow\"><i class=\"fal fa-long-arrow-left\"></i></button>", 
-          "prevArrow": "<button class=\"slide-arrow next-arrow\"><i class=\"fal fa-long-arrow-right\"></i></button>",
-
-            "responsive":[
-                {"breakpoint":992, "settings": {"slidesToShow": {{ section.settings.product_column_lg }}} },
-                {"breakpoint":768, "settings": {"slidesToShow": {{ section.settings.product_column_md }}} },
-                {"breakpoint":480, "settings": {"slidesToShow": {{ section.settings.product_column_sm }}} }
-              ]  
+          
       }'
+
    {%- endcapture -%}
 <div id="section-{{ section.id }}" class="axil-main-slider-area main-slider-style-1">
   <div class="container">
