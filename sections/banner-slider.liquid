@@ -91,7 +91,114 @@
 
 {% schema %}
 {
-    "name": "Banner Slider",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collection Style"
+    },
+    {
+      "type": "radio",
+      "id": "collection_style",
+      "label": "Collection Layout",
+      "options": [
+        {
+          "value": "cat_style_1",
+          "label": "Style 1"
+        }, {
+          "value": "cat_style_2",
+          "label": "Style 2"
+        }, {
+          "value": "cat_style_3",
+          "label": "Style 3"
+        }
+      ],
+
+      "default": "cat_style_1"
+    },
+    {
+      "type": "html",
+      "id": "sub_title_icon",
+      "default": "<i class='fas fa-tags'></i>",
+      "label": "Before Icon"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "default": "Before Title",
+      "label": "Before Title"
+    }, {
+      "type": "text",
+      "id": "section_title",
+      "default": "Featured Categories",
+      "label": "Title"
+    }, 
+    {
+      "type": "collection_list",
+      "id": "featured_cat_collection",
+      "label": "Collection"
+    },
+    {
+      "type": "header",
+      "content": "Options"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_true",
+      "label": "Autoplay Enable",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 1000,
+      "max": 9000,
+      "step": 1000,
+      "label": "Autoplay Speed",
+      "unit": "ms",
+      "default": 5000
+    },
+    {
+      "type": "header",
+      "content": "Product Carousel Column"
+    },
+    {
+      "type": "range",
+      "id": "product_column",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Desktop",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "product_column_lg",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Laptop",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "product_column_md",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Tablet",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "product_column_sm",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Mobile",
+      "default": 2
+    }
+  ],
+  
     
     "blocks": [
       {
@@ -214,66 +321,6 @@
             "label": "Spacing",
             "unit": "px",
             "default": 4
-          },
-          {
-            "type": "header",
-            "content": "Options"
-          },
-          {
-            "type": "checkbox",
-            "id": "autoplay_true",
-            "label": "Autoplay Enable",
-            "default": false
-          },
-          {
-            "type": "range",
-            "id": "autoplay_speed",
-            "min": 1000,
-            "max": 9000,
-            "step": 1000,
-            "label": "Autoplay Speed",
-            "unit": "ms",
-            "default": 5000
-          },
-          {
-            "type": "header",
-            "content": "Product Carousel Column"
-          },
-          {
-            "type": "range",
-            "id": "product_column",
-            "min": 1,
-            "max": 12,
-            "step": 1,
-            "label": "Desktop",
-            "default": 6
-          },
-          {
-            "type": "range",
-            "id": "product_column_lg",
-            "min": 1,
-            "max": 12,
-            "step": 1,
-            "label": "Laptop",
-            "default": 5
-          },
-          {
-            "type": "range",
-            "id": "product_column_md",
-            "min": 1,
-            "max": 12,
-            "step": 1,
-            "label": "Tablet",
-            "default": 4
-          },
-          {
-            "type": "range",
-            "id": "product_column_sm",
-            "min": 1,
-            "max": 12,
-            "step": 1,
-            "label": "Mobile",
-            "default": 2
           }
           
         ]
