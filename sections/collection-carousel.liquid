@@ -8,10 +8,10 @@
           "slidesToScroll": 1,
           "slidesToShow": {{ section.settings.product_column }}, 
           "arrows": true,
+          {% if settings.rtl_enable %} "rtl": true,{% endif %} 
           "dots": false,   
           "nextArrow": "<button class=\"slide-arrow prev-arrow\"><i class=\"fal fa-long-arrow-left\"></i></button>", 
           "prevArrow": "<button class=\"slide-arrow next-arrow\"><i class=\"fal fa-long-arrow-right\"></i></button>",
-
             "responsive":[
                 {"breakpoint":992, "settings": {"slidesToShow": {{ section.settings.product_column_lg }}} },
                 {"breakpoint":768, "settings": {"slidesToShow": {{ section.settings.product_column_md }}} },
@@ -71,7 +71,7 @@
             <h2 class="title">{{ section.settings.section_title }}</h2>
           {% endif %}
         </div>
-        <div class="categrie-product-activation-3 slick-slider slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
+        <div class="categrie-product-activation-3 axil-slick-slider slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
           {% for collection in section.settings.featured_cat_collection %}
             {% if collection.all_products_count > 0 %}
               <div class="slick-single-layout slick-slide">
@@ -100,7 +100,7 @@
   <!-- Start Categorie Area  -->
   <div class="axil-categorie-area pt--30 bg-color-white">
     <div class="container">
-      <div class="categrie-product-activation-2 slick-slider categorie-product-two slick-layout-wrapper--15"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
+      <div class="categrie-product-activation-2 axil-slick-slider categorie-product-two slick-layout-wrapper--15"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
         {% for collection in section.settings.featured_cat_collection %}
           {% if collection.all_products_count > 0 %} 
             <div class="slick-single-layout slick-slide">
@@ -124,7 +124,6 @@
     </div>
   </div>
   <!-- End Categorie Area  -->
-
 {% endif %}
 
 {% schema %}
