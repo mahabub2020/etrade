@@ -114,16 +114,7 @@
           "laptops",
           "pc-gaming",
           "phones",
-          "smartwatches",
-          "baby-s",
-          "arm-chair",
-          "coats-sweater",
-          "desk-table",
-          "electronics",
-          "fashion",
-          "handbag",
-          "hoddie",
-          "jumpsuits"
+          "smartwatches"
         ],
         "list_per_slider": 8,
         "autoplay_true": false,

@@ -108,12 +108,28 @@
         "cd_img": "shopify:\/\/shop_images\/poster-03.png",
         "is_animations": true
       }
+    },
+    "11e2be9b-7c69-4850-8ba6-558de5014330": {
+      "type": "section-multicolumn-product-carousel",
+      "settings": {
+        "title": "Product Collection",
+        "product_collection": "electronics",
+        "list_per_slider": 4,
+        "number_of_products_to_show": 8,
+        "product_layout": "1",
+        "autoplay_true": true,
+        "autoplay_speed": 5000,
+        "col_lg": 4,
+        "col_md": 2,
+        "col_sm": 2
+      }
     }
   },
   "order": [
     "main",
     "0008d5c8-c50a-411c-8524-b1d1f9054032",
     "b475c665-7dd4-4176-ab16-f35f19793bf6",
-    "aec5fef1-93a3-48a2-9e52-d8272f0b2514"
+    "aec5fef1-93a3-48a2-9e52-d8272f0b2514",
+    "11e2be9b-7c69-4850-8ba6-558de5014330"
   ]
 }
