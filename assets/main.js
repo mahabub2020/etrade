@@ -4,22 +4,22 @@
      
 
         $(document).ready(function(){
-        //     slider_slick_activation_two();
-        //     slider_slick_activation_one();
+            slider_slick_activation_two();
+            slider_slick_activation_one();
              
-        //     readyActivation();
+            readyActivation();
           
-        //     testimonialActivation();
-        //     countdown(); 
-        //     slider_thumb_activation_two();
-        //     headerIconToggle();
-        //    // searchClick();
-        //     headerCampaignRemove(); 
+            testimonialActivation();
+            countdown(); 
+            slider_thumb_activation_two();
+            headerIconToggle();
+           // searchClick();
+            headerCampaignRemove(); 
            
-        //     axilslickactivation2();
-        //     magnificPopupActivationProductDetails();
-        //     magnificPopupActivation();
-        //     axilslickactivation3();
+            axilslickactivation2();
+            magnificPopupActivationProductDetails();
+            magnificPopupActivation();
+            axilslickactivation3();
 
             axilSlickActivation();
 
@@ -653,20 +653,7 @@ function readyActivation() {
         nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-angle-right"></i></button>',
         
     });
-
-
-    $('.categrie-product-activation-4').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: false,
-        autoplay: false,
-        speed: 1000,
-        prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-angle-left"></i></button>',
-        nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-angle-right"></i></button>',
-    });
-
+ 
 
 }
 function testimonialActivation() {
