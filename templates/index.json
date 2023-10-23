@@ -116,7 +116,7 @@
           "phones",
           "smartwatches"
         ],
-        "list_per_slider": 2,
+        "list_per_slider": 4,
         "col_xl": 2,
         "col_lg": 5,
         "col_md": 3,
