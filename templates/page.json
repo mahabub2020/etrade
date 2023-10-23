@@ -113,13 +113,13 @@
       "type": "section-multicolumn-product-carousel",
       "settings": {
         "title": "Product Collection",
-        "product_collection": "electronics",
-        "list_per_slider": 4,
+        "product_collection": "accessories",
+        "list_per_slider": 3,
         "number_of_products_to_show": 8,
         "product_layout": "1",
         "autoplay_true": true,
         "autoplay_speed": 5000,
-        "col_lg": 4,
+        "col_lg": 3,
         "col_md": 2,
         "col_sm": 2
       }
