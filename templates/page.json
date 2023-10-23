@@ -113,6 +113,7 @@
       "type": "section-multicolumn-product-carousel",
       "settings": {
         "title": "Product Collection",
+        "title_icon": "shopify:\/\/shop_images\/Ladies-Suit.png",
         "product_collection": "accessories",
         "list_per_slider": 3,
         "number_of_products_to_show": 8,
