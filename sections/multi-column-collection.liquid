@@ -1,5 +1,4 @@
 
-
 {%- capture data_slick_activation -%}
       data-slick='{
           {%- if section.settings.autoplay_true -%}
@@ -52,8 +51,8 @@
                                       {%- else -%}
                                         {%- assign collection_image = blank -%}
                                       {%- endif -%}
-                                    <img src="{{ collection_image | img_url: '190x246' }}" alt="{{ collection.title | escape }}">
-                                    <h5 class="cat-title">{{ collection.title | escape  }}</h5>
+                                    <img src="{{ collection_image | img_url: '190x304' }}" alt="{{ collection.title | escape }}">
+                                    <h5 class="cat-title">{{ collection.title | escape }}</h5>
  
                                 </a>
                             </div> 

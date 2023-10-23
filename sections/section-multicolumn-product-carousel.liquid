@@ -1,3 +1,21 @@
+
+{%- capture data_slick_activation -%}
+      data-slick='{
+          {%- if section.settings.autoplay_true -%}
+          "autoplay": true,
+          "autoplaySpeed": {{ section.settings.autoplay_speed }},
+          {%- endif -%} 
+          "slidesToScroll": 1,
+          "slidesToShow": 1, 
+          "arrows": true,
+          {% if settings.rtl_enable %} "rtl": true,{% endif %} 
+          "infinite": true,
+          "dots": false,   
+          "nextArrow": "<button class=\"slide-arrow prev-arrow\"><i class=\"fal fa-long-arrow-left\"></i></button>", 
+          "prevArrow": "<button class=\"slide-arrow next-arrow\"><i class=\"fal fa-long-arrow-right\"></i></button>"      
+      }'
+   {%- endcapture -%}
+
 <div class="axil-product-area bg-color-white axil-section-gapcommon">
   <div class="container">
       <div class="section-title-border slider-section-title">
@@ -11,7 +29,7 @@
           </h2>
         {% endif %}
       </div>
-      <div class="popular-product-activation slick-layout-wrapper slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
+      <div class="popular-product-activation axil-slick-slider slick-layout-wrapper slick-layout-wrapper--15 axil-slick-angle angle-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
           {%- liquid 
             assign count = 1  
             assign totalitems = section.settings.list_per_slider
@@ -44,8 +62,6 @@
                     {% endif %}
 
                   {% endfor %} 
-
-          
       </div>
   </div>
 </div>
@@ -125,6 +141,26 @@
           "value": "8"
         }
       ]
+    },
+    {
+      "type": "header",
+      "content": "Options"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_true",
+      "label": "Autoplay Enable",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 1000,
+      "max": 9000,
+      "step": 1000,
+      "label": "Autoplay Speed",
+      "unit": "ms",
+      "default": 5000
     },
     {
       "type": "header",
