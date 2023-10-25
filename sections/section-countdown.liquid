@@ -7,14 +7,21 @@
                 <div class="col-xl-5 col-lg-6">
                     <div class="poster-countdown-content">
                         <div class="section-title-wrapper">
+                          {% if section.settings.cd_sub_title != "" %} 
                             <span class="title-highlighter highlighter-secondary"> <i class="fal fa-headphones-alt"></i>{{ section.settings.cd_sub_title }}</span>
+                          {% endif %}
+                          {% if section.settings.cd_title != "" %} 
                             <h2 class="title">{{ section.settings.cd_title }}</h2>
-                        </div> 
+                          {% endif %}
+                        </div>  
+
                         <div data-time="{{ section.settings.end_time }}" class="poster-countdown countdown mb--40"></div>
+                       
                         {% if section.settings.cd_btn_txt != blank %}
-                          <a href="{{ section.settings.cd_btn_url }}" class="axil-btn btn-bg-primary">{{ section.settings.cd_btn_txt }}</a>
-                        {% endif %}
-                      </div>
+                            <a href="{{ section.settings.cd_btn_url }}" class="axil-btn btn-bg-primary">{{ section.settings.cd_btn_txt }}</a>
+                          {% endif %}
+                          
+                        </div>
 
                 </div>
                 <div class="col-xl-7 col-lg-6">
@@ -87,7 +94,7 @@
     {
       "type": "checkbox",
       "id": "is_animations",
-      "label": "Disable animations"
+      "label": "Enable animations"
     }
    
   ],
