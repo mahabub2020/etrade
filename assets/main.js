@@ -1,7 +1,6 @@
 (function ($) {
  
     'use strict';
-     
 
         $(document).ready(function(){
             slider_slick_activation_two();
@@ -15,18 +14,17 @@
             headerIconToggle();
            // searchClick();
             headerCampaignRemove(); 
-           
             axilslickactivation2();
             magnificPopupActivationProductDetails();
             magnificPopupActivation();
             axilslickactivation3();
-
             axilSlickActivation();
 
         });
 
 document.addEventListener("shopify:section:load", () => {
     axilSlickActivation();
+    countdown(); 
 });
 
 function  axilSlickActivation (e) {
@@ -643,7 +641,19 @@ function readyActivation() {
         ]
     });
 
- 
+    $('.popular-product-activation').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-angle-left"></i></button>',
+        nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-angle-right"></i></button>',
+        
+    });
+
+
+
 
 }
 function testimonialActivation() {

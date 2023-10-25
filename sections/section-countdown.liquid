@@ -7,10 +7,10 @@
                 <div class="col-xl-5 col-lg-6">
                     <div class="poster-countdown-content">
                         <div class="section-title-wrapper">
-                          {% if section.settings.cd_sub_title != "" %} 
+                          {% if section.settings.cd_sub_title != blank %} 
                             <span class="title-highlighter highlighter-secondary"> <i class="fal fa-headphones-alt"></i>{{ section.settings.cd_sub_title }}</span>
                           {% endif %}
-                          {% if section.settings.cd_title != "" %} 
+                          {% if section.settings.cd_title != blank %} 
                             <h2 class="title">{{ section.settings.cd_title }}</h2>
                           {% endif %}
                         </div>  
