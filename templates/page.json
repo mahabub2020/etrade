@@ -164,8 +164,12 @@
         "c5379b69-f634-4093-aef6-8a82a53f930d"
       ],
       "settings": {
-        "section_title": "Our Users Feedback",
-        "section_sub_title": "Testimonials"
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "section_title": "Our Users Feedbackb",
+        "section_sub_title": "Testimonials",
+        "autoplay_true": false,
+        "autoplay_speed": 5000
       }
     }
   },
