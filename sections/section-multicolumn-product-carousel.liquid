@@ -15,10 +15,10 @@
           "prevArrow": "<button class=\"slide-arrow next-arrow\"><i class=\"fal fa-long-arrow-right\"></i></button>"      
       }'
    {%- endcapture -%}
-
+ 
 <div class="axil-product-area bg-color-white axil-section-gapcommon">
   <div class="container">
-    {% if title_layout == 'style_1' %}
+    {% if section.settings.title_layout == 'style_1' %}
       <div class="section-title-border slider-section-title">
         {% if section.settings.title != blank %}
           <h2 class="title">{{ section.settings.title }} 
@@ -30,7 +30,7 @@
           </h2>
         {% endif %}
       </div>
-      {% elsif title_layout == 'style_2' %}
+      {% elsif section.settings.title_layout == 'style_2' %}
         {% if section.settings.is_countdown == true %}
           {% assign is_coutdown_start = '<div class="d-md-flex align-items-end flash-sale-section axilcoutdown2">' %}
           {% assign is_coutdown_end = '</div>' %}
