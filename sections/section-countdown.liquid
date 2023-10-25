@@ -1,6 +1,4 @@
- 
-  <!-- Poster Countdown Area  -->
-  <div class="axil-poster-countdown axilcoutdown">
+ <div class="axil-poster-countdown axilcoutdown">
     <div class="container">
         <div class="poster-countdown-wrap bg-lighter">
             <div class="row">
@@ -50,12 +48,16 @@
 {% schema %}
 {
   "name": "Section CountDown",
-
   "settings": [
     {
       "type": "header",
-      "content": "CountDown"
-    },
+      "content": "CountDown Content"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "is_animations",
+      "label": "Enable Section Title"
+    } 
     {
       "type": "text",
       "id": "cd_title",
@@ -95,8 +97,7 @@
       "type": "checkbox",
       "id": "is_animations",
       "label": "Enable animations"
-    }
-   
+    } 
   ],
   "presets": [
     {

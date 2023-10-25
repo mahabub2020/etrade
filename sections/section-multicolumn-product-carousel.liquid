@@ -18,6 +18,7 @@
 
 <div class="axil-product-area bg-color-white axil-section-gapcommon">
   <div class="container">
+    {% if title_layout == 'style_1' %}
       <div class="section-title-border slider-section-title">
         {% if section.settings.title != blank %}
           <h2 class="title">{{ section.settings.title }} 
@@ -29,6 +30,30 @@
           </h2>
         {% endif %}
       </div>
+      {% elsif title_layout == 'style_2' %}
+        {% if section.settings.is_countdown == true %}
+          {% assign is_coutdown_start = '<div class="d-md-flex align-items-end flash-sale-section axilcoutdown2">' %}
+          {% assign is_coutdown_end = '</div>' %}
+        {% else %}
+          {% assign is_coutdown_start = '' %}
+          {% assign is_coutdown_end = '' %}
+        {% endif %}
+  
+        {{ is_coutdown_start }}
+          <div class="section-title-wrapper">
+              <span class="title-highlighter highlighter-primary"><i class="far fa-shopping-basket"></i> {{ section.settings.sub_title }} </span>
+              <h2 class="title">{{ section.settings.title }} </h2>
+          </div>
+  
+            {% if section.settings.is_countdown == true %}
+                <div data-time="{{ section.settings.end_time }}" class="sale-countdown countdown"></div>
+            {% endif %}
+            
+            {{ is_coutdown_end }}
+      {% endif %}  
+
+   
+
       <div class="popular-product-activation axil-slick-slider slick-layout-wrapper slick-layout-wrapper--15 axil-slick-angle angle-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
           {%- liquid 
             assign count = 1  
@@ -72,11 +97,52 @@
   "name": "MC Product Carousel",
   "settings": [
     {
+      "type": "checkbox",
+      "id": "is_section_title",
+      "label": "Enable Section Title"
+    },
+    {
+      "type": "select",
+      "id": "title_layout",
+      "label": "Title Layout",
+      "options": [
+        {
+          "label": "Layout 1",
+          "value": "style_1"
+        },
+        {
+          "label": "Layout 2",
+          "value": "style_2"
+        }
+       
+      ]
+    }, 
+
+    {
       "type": "text",
       "id": "title",
-      "default": "Product Collection",
+      "default": "New Arrivals",
       "label": "Title"
     },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "default": "Recently Viewed",
+      "label": "Sub Title"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_countdown",
+      "label": "Disable Countdown"
+    },
+    {
+      "type": "text",
+      "id": "end_time",
+      "label": "End date and time",
+      "default": "2024-05-22",
+      "info": "Format: yyyy-mm-dd"
+    },
+    
     {
       "type": "image_picker",
       "id": "title_icon",
