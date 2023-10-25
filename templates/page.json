@@ -129,6 +129,26 @@
         "col_md": 2,
         "col_sm": 2
       }
+    },
+    "24129658-3442-4d48-850d-ff7a81e17b4c": {
+      "type": "section-testimonial-carousel",
+      "blocks": {
+        "template--21159461093662__24129658-3442-4d48-850d-ff7a81e17b4c-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--21159461093662__24129658-3442-4d48-850d-ff7a81e17b4c-review-1"
+      ],
+      "settings": {
+        "section_title": "Our Users Feedback",
+        "section_sub_title": "Testimonials"
+      }
     }
   },
   "order": [
@@ -136,6 +156,7 @@
     "0008d5c8-c50a-411c-8524-b1d1f9054032",
     "b475c665-7dd4-4176-ab16-f35f19793bf6",
     "aec5fef1-93a3-48a2-9e52-d8272f0b2514",
-    "11e2be9b-7c69-4850-8ba6-558de5014330"
+    "11e2be9b-7c69-4850-8ba6-558de5014330",
+    "24129658-3442-4d48-850d-ff7a81e17b4c"
   ]
 }
