@@ -112,10 +112,15 @@
     "11e2be9b-7c69-4850-8ba6-558de5014330": {
       "type": "section-multicolumn-product-carousel",
       "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
         "title": "Product Collection",
+        "sub_title": "Recently Viewed",
+        "is_countdown": true,
+        "end_time": "2024-05-22",
         "title_icon": "shopify:\/\/shop_images\/service5.png",
         "product_collection": "accessories",
-        "list_per_slider": 8,
+        "list_per_slider": 2,
         "number_of_products_to_show": 12,
         "product_layout": "1",
         "autoplay_true": true,
