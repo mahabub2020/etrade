@@ -101,6 +101,24 @@
         "autoplay_speed": 5000
       }
     },
+    "8fe79a74-fc1f-45a6-9d05-dfe3793191c3": {
+      "type": "collection-carousel",
+      "settings": {
+        "collection_style": "cat_style_1",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "sub_title": "Before Title",
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+
+        ],
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 6,
+        "product_column_lg": 5,
+        "product_column_md": 4,
+        "product_column_sm": 2
+      }
+    },
     "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd": {
       "type": "multi-column-collection",
       "settings": {
@@ -117,7 +135,7 @@
           "smartwatches"
         ],
         "list_per_slider": 8,
-        "autoplay_true": false,
+        "autoplay_true": true,
         "autoplay_speed": 5000,
         "col_xl": 4,
         "col_lg": 5,
@@ -154,6 +172,7 @@
   },
   "order": [
     "3dd30f8a-44f5-4b4c-bbd9-186ea9950822",
+    "8fe79a74-fc1f-45a6-9d05-dfe3793191c3",
     "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3"
   ]
