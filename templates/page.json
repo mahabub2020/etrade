@@ -210,6 +210,23 @@
         "product_column_md": 4,
         "product_column_sm": 1
       }
+    },
+    "b025eb70-0468-4bce-80b7-a2cbcab34d1e": {
+      "type": "section-product-list",
+      "settings": {
+        "title": "Recently Viewed",
+        "subtitle": "Recently Viewed",
+        "product_collection": "accessories",
+        "excluded_products": [
+
+        ],
+        "number_of_products_to_show": 8,
+        "col_xl": "2",
+        "col_lg": "2",
+        "col_md": "2",
+        "col_sm": "1",
+        "col_mobile": "1"
+      }
     }
   },
   "order": [
@@ -219,6 +236,7 @@
     "aec5fef1-93a3-48a2-9e52-d8272f0b2514",
     "11e2be9b-7c69-4850-8ba6-558de5014330",
     "24129658-3442-4d48-850d-ff7a81e17b4c",
-    "bec99a32-f605-45e5-80ce-51c3e4f8c951"
+    "bec99a32-f605-45e5-80ce-51c3e4f8c951",
+    "b025eb70-0468-4bce-80b7-a2cbcab34d1e"
   ]
 }
