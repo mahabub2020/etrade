@@ -184,6 +184,23 @@
         "autoplay_true": true,
         "autoplay_speed": 5000
       }
+    },
+    "bec99a32-f605-45e5-80ce-51c3e4f8c951": {
+      "type": "section-product-carousel",
+      "settings": {
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
+        "product_collection": "accessories",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1"
+      }
     }
   },
   "order": [
@@ -192,6 +209,7 @@
     "b475c665-7dd4-4176-ab16-f35f19793bf6",
     "aec5fef1-93a3-48a2-9e52-d8272f0b2514",
     "11e2be9b-7c69-4850-8ba6-558de5014330",
-    "24129658-3442-4d48-850d-ff7a81e17b4c"
+    "24129658-3442-4d48-850d-ff7a81e17b4c",
+    "bec99a32-f605-45e5-80ce-51c3e4f8c951"
   ]
 }
