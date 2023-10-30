@@ -188,15 +188,16 @@
     "bec99a32-f605-45e5-80ce-51c3e4f8c951": {
       "type": "section-product-carousel",
       "settings": {
-        "title": "New Arrivals",
-        "sub_title": "Recently Viewed",
+        "title": "",
+        "sub_title": "",
         "is_countdown": false,
         "end_time": "2024-05-22",
         "product_collection": "accessories",
-        "number_of_products_to_show": 8,
+        "number_of_products_to_show": 4,
         "excluded_products": [
 
         ],
+        "offset_product": 1,
         "sort_by": "title",
         "reverse_order": false,
         "product_layout": "2",
@@ -205,7 +206,7 @@
         "product_column": 4,
         "product_column_lg": 5,
         "product_column_md": 4,
-        "product_column_sm": 2
+        "product_column_sm": 1
       }
     }
   },
