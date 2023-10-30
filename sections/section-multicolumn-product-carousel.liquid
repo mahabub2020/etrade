@@ -90,13 +90,13 @@
                   {% endfor %} 
       </div>
   </div>
-
+  {% if section.settings.isbutton_true == true %}
     <div class="row">
       <div class="col-lg-12 text-center mt--20 mt_sm--0">
-        <a class="axil-btn btn-bg-lighter btn-load-more" href="#">View All Products</a>					
+        <a class="axil-btn btn-bg-lighter btn-load-more" href="{{ section.settings.btn_url }}">{{ section.settings.btn_txt }}</a>					
       </div>
   </div>
-
+{% endif %}
 
 </div>
 <!-- End Expolre Product Area  -->
@@ -227,6 +227,12 @@
       "content": "View All Button"
     },
     {
+      "type": "checkbox",
+      "id": "isbutton_true",
+      "label": "button Enable",
+      "default": false
+    },
+    {
       "type": "text",
       "id": "btn_txt",
       "label": "Button Text",
@@ -237,10 +243,10 @@
       "id": "btn_url",
       "label": "URL"
     },
-    
+
     {
       "type": "header",
-      "content": "Options"
+      "content": "Slider Options"
     },
     {
       "type": "checkbox",
