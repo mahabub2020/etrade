@@ -188,8 +188,10 @@
     "bec99a32-f605-45e5-80ce-51c3e4f8c951": {
       "type": "section-product-carousel",
       "settings": {
-        "title": "",
-        "sub_title": "",
+        "is_section_title": true,
+        "title": "gvsfvsf",
+        "sub_title": "fsfsfdgv",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "is_countdown": false,
         "end_time": "2024-05-22",
         "product_collection": "accessories",
