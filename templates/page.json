@@ -67,7 +67,7 @@
         "5d8da3b7-547d-4dbd-8447-b8cb9fa474cc"
       ],
       "settings": {
-        "autoplay_true": false,
+        "autoplay_true": true,
         "autoplay_speed": 2000
       }
     },
@@ -160,19 +160,28 @@
             "author_name": "Wade Warren",
             "author_desg": "Head of Marketing"
           }
+        },
+        "2e8df00d-ca6a-4631-b17e-5a8c3f818ef5": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
         }
       },
       "block_order": [
         "template--21159461093662__24129658-3442-4d48-850d-ff7a81e17b4c-review-1",
         "9eea9190-ad01-4212-9d1e-430a70ee0742",
-        "c5379b69-f634-4093-aef6-8a82a53f930d"
+        "c5379b69-f634-4093-aef6-8a82a53f930d",
+        "2e8df00d-ca6a-4631-b17e-5a8c3f818ef5"
       ],
       "settings": {
         "is_section_title": false,
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "section_title": "Our Users Feedbackb",
         "section_sub_title": "Testimonials",
-        "autoplay_true": false,
+        "autoplay_true": true,
         "autoplay_speed": 5000
       }
     }
