@@ -56,8 +56,7 @@
               {% endif %}
               
               {{ is_coutdown_end }}
-        {% endif %}  
-
+        {% endif %}   
       {% endif %}
 
       <div class="popular-product-activation axil-slick-slider slick-layout-wrapper slick-layout-wrapper--15 axil-slick-angle angle-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
@@ -65,23 +64,20 @@
             assign count = 1  
             assign totalitems = section.settings.list_per_slider
             assign loopcount = 0
-              -%} 
-              {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
-                       
+           -%} 
+              {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}                       
                 {% assign loopcount = loopcount | plus: 1 %} 
                     {% if count == 1 %}
                       <div class="slick-single-layout">
                         <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
-                    {% endif %}
-              
+                    {% endif %} 
                       <div class="col">
                         {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
                         {% capture include_snippet %}
                           {% include layout %}
                         {% endcapture %}
                         {{ include_snippet }}
-                    </div> 
-
+                    </div>  
                     {% if count == totalitems %}
                         </div></div> 
                       {% assign count = 1 %}  
@@ -90,11 +86,18 @@
                       {% assign count = count | plus: 1 %} 
                     {% else %}
                         {% assign count = count | plus: 1 %}
-                    {% endif %}
-
+                    {% endif %} 
                   {% endfor %} 
       </div>
   </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-center mt--20 mt_sm--0">
+        <a class="axil-btn btn-bg-lighter btn-load-more" href="#">View All Products</a>					
+      </div>
+  </div>
+
+
 </div>
 <!-- End Expolre Product Area  -->
 
@@ -218,6 +221,23 @@
         }
       ]
     },
+
+    {
+      "type": "header",
+      "content": "View All Button"
+    },
+    {
+      "type": "text",
+      "id": "btn_txt",
+      "label": "Button Text",
+      "default": "View All Deals"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "URL"
+    },
+    
     {
       "type": "header",
       "content": "Options"

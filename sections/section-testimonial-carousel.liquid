@@ -21,6 +21,7 @@
 
 <div id="section-{{ section.id }}" class="axil-testimoial-area axil-section-gap bg-vista-white">
     <div class="container">
+
         <div class="section-title-wrapper"> 
             {% if section.settings.section_sub_title != '' %}  
               <span class="title-highlighter highlighter-secondary"> {{ section.settings.sub_title_icon }}  {{ section.settings.section_sub_title | escape }}</span>
@@ -85,7 +86,8 @@
       "type": "html",
       "id": "sub_title_icon",
       "default": "<i class='fas fa-tags'></i>",
-      "label": "Before Icon"
+      "label": "Before Icon",
+      "info": "Recommended Fontawesome Icon"
     },
     {
       "type": "text",
