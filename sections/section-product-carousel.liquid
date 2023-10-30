@@ -31,18 +31,23 @@
       {% assign is_coutdown_end = '' %}
     {% endif %}
 
+    {% if section.settings.is_section_title == true %} 
       {{ is_coutdown_start }}
         <div class="section-title-wrapper">
-            <span class="title-highlighter highlighter-primary"><i class="far fa-shopping-basket"></i> {{ section.settings.sub_title }} </span>
+          {% if section.settings.sub_title != blank %}  
+          <span class="title-highlighter highlighter-primary">{{ section.settings.sub_title_icon }} {{ section.settings.sub_title }} </span>
+        {% endif %} 
+        {% if section.settings.title != blank %}  
             <h2 class="title">{{ section.settings.title }} </h2>
-        </div>
-
+          {% endif %} 
+        </div> 
           {% if section.settings.is_countdown == true %}
               <div data-time="{{ section.settings.end_time }}" class="sale-countdown countdown"></div>
-          {% endif %}
-          
+          {% endif %} 
           {{ is_coutdown_end }}
 
+
+        {% endif %}
       <div class="new-arrivals-product-activation axil-slick-slider slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
           
             {% if section.settings.reverse_order == true %}
@@ -82,6 +87,11 @@
   "name": "Product Carousel",
   "settings": [
     {
+      "type": "checkbox",
+      "id": "is_section_title",
+      "label": "Enable Section Title"
+    },
+    {
       "type": "text",
       "id": "title",
       "default": "New Arrivals",
@@ -92,6 +102,13 @@
       "id": "sub_title",
       "default": "Recently Viewed",
       "label": "Sub Title"
+    }, 
+    {
+      "type": "html",
+      "id": "sub_title_icon",
+      "default": "<i class='fas fa-tags'></i>",
+      "label": "Before Icon",
+      "info": "Recommended Fontawesome Icon"
     },
     {
       "type": "checkbox",
@@ -219,7 +236,7 @@
       "max": 12,
       "step": 1,
       "label": "Desktop",
-      "default": 6
+      "default": 4
     },
     {
       "type": "range",
@@ -228,7 +245,7 @@
       "max": 12,
       "step": 1,
       "label": "Laptop",
-      "default": 5
+      "default": 3
     },
     {
       "type": "range",
@@ -237,7 +254,7 @@
       "max": 12,
       "step": 1,
       "label": "Tablet",
-      "default": 4
+      "default": 3
     },
     {
       "type": "range",
