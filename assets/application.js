@@ -9,10 +9,6 @@ $(document).ready(function(){
         $('.cart-dropdown').removeClass('open');
     });
 
-    $(document).on('click', '.remove_from_cart_button', function(e) {
-        return false;
-    });
-
     $(document).on('submit', 'form[action="/cart/add"]', async function(e) {
         e.preventDefault();
         
