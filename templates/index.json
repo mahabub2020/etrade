@@ -1,25 +1,35 @@
 {
   "sections": {
-    "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd": {
-      "type": "multi-column-collection",
+    "4bc97fd9-8b39-4479-9234-8b04cd49088e": {
+      "type": "product-collection",
+      "blocks": {
+        "template--21009528586518__4bc97fd9-8b39-4479-9234-8b04cd49088e-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21009528586518__4bc97fd9-8b39-4479-9234-8b04cd49088e-section_padding-1"
+      ],
       "settings": {
-        "section_title": "Featured Categories",
-        "featured_cat_collection": [
-          "accessories",
-          "camera-photo",
-          "computers",
-          "deals",
-          "headphones",
-          "laptops",
-          "pc-gaming",
-          "phones",
-          "smartwatches"
+        "title": "Product Collection",
+        "btn-label": "",
+        "product_collection": "etrade-products",
+        "number_of_products_to_show": 4,
+        "product_layout": "1",
+        "excluded_products": [
+
         ],
-        "list_per_slider": 10,
-        "col_xl": 5,
-        "col_lg": 5,
-        "col_md": 3,
-        "col_sm": 2
+        "sort_by": "title",
+        "reverse_order": false,
+        "hover_img": false
       }
     },
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3": {
@@ -45,12 +55,13 @@
         "before_title_text": "Newsletter",
         "before_title_color": "#3577f0",
         "title": "Get weekly update",
+        "bg_img": "shopify:\/\/shop_images\/bg-image-5.jpg",
         "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&amp;id=e71e328c72&amp;f_id=0015dce6f0"
       }
     }
   },
   "order": [
-    "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd",
+    "4bc97fd9-8b39-4479-9234-8b04cd49088e",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3"
   ]
 }
