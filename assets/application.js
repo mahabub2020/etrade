@@ -9,7 +9,7 @@ $(document).ready(function(){
         $('.cart-dropdown').removeClass('open');
     });
 
-    $(document).on('click', 'remove_from_cart_button', function(e) {
+    $(document).on('click', '.remove_from_cart_button', function(e) {
         e.preventDefault();
     });
 
