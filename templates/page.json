@@ -214,9 +214,12 @@
     "b025eb70-0468-4bce-80b7-a2cbcab34d1e": {
       "type": "section-product-list",
       "settings": {
-        "title": "Recently Viewed",
-        "subtitle": "Recently Viewed",
+        "is_section_title": true,
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "title": "Recently Viewedb",
+        "subtitle": "Recently Viewedv",
         "product_collection": "accessories",
+        "offset_product": 1,
         "excluded_products": [
 
         ],
