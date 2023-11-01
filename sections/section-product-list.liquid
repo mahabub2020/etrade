@@ -51,8 +51,7 @@
                                 <i class="fal fa-star"></i>
                             </span>
                               <span class="rating-number"><span>100+</span> Reviews</span>
-                          </div>
-                          
+                          </div>                          
                           <h6 class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></h6>
                           <div class="product-price-variant">
                               <span class="price current-price">{{ product.price | money }}</span> 
@@ -63,11 +62,11 @@
                                 type="hidden"
                                 name="id"
                                 value="{{ product.selected_or_first_available_variant.id }}">
-                              <button class="cart-btn" type="submit">
-                                <i class="fal fa-shopping-cart"></i>
-                              </button>
+                                <button class="cart-btn" type="submit">
+                                  <i class="fal fa-shopping-cart"></i>
+                                </button>
                             {% endform %}  
-                              <a href="wishlist.html" class="cart-btn"><i class="fal fa-heart"></i></a>
+                              <a href="#" class="cart-btn"><i class="fal fa-heart"></i></a>
                           </div>
                       </div>
                   </div>
@@ -79,7 +78,6 @@
   </div>
 </div>
 <!-- End Most Sold Product Area  -->
-
 
 {% schema %}
 {

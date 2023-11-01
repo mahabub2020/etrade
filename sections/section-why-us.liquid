@@ -2,16 +2,20 @@
 {% if section.settings.wulayout == 'layout1' %}
  <div  id="section-{{ section.id }}" class="axil-why-choose-area axil-section-gap pb--50 pb_sm--30">
   <div class="container"> 
-    <div class="section-title-wrapper section-title-center"> 
-      {% if section.settings.section_sub_title != '' %}  
-      <span class="title-highlighter highlighter-secondary"> <i class="fal fa-thumbs-up"></i>{{ section.settings.section_sub_title | escape }}</span>
-      {% endif %} 
-      {% if section.settings.section_title != '' %}  
-        <div class="heading-title">
-          <h2 class="title">{{ section.settings.section_title | escape }}</h2>
-        </div>  
-      {% endif %}  
-      </div>
+    {% if section.settings.is_section_title == true %} 
+        <div class="section-title-wrapper section-title-center"> 
+          {% if section.settings.section_sub_title != '' %}  
+          <span class="title-highlighter highlighter-secondary">
+               {{ section.settings.sub_title_icon }} 
+             {{ section.settings.section_sub_title | escape }}</span>
+          {% endif %} 
+          {% if section.settings.section_title != '' %}  
+            <div class="heading-title">
+              <h2 class="title">{{ section.settings.section_title | escape }}</h2>
+            </div>  
+          {% endif %}  
+        </div>
+      {% endif %}
         <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }} row--20">     
         {% for block in section.blocks %}
           {% case block.type %}
@@ -96,6 +100,18 @@
     {
       "type": "header",
       "content": "Why Us"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_section_title",
+      "label": "Enable Section Title"
+    },
+    {
+      "type": "html",
+      "id": "sub_title_icon",
+      "default": "<i class='fal fa-thumbs-up'></i>",
+      "label": "Before Icon",
+      "info": "Recommended Fontawesome Icon"
     },
     {
       "type": "text",
@@ -298,6 +314,7 @@
         {
           "type": "richtext",
           "id": "wstitle", 
+          "default": "<p>Fast & Secure Delivery</p>",
           "label": "Title"
         },
         {
