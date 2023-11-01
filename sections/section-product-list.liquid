@@ -2,18 +2,20 @@
 <div class="axil-most-sold-product axil-section-gap">
   <div class="container">
       <div class="product-area pb--50">
-          <div class="section-title-wrapper section-title-center">
-              {% if section.settings.subtitle != blank %}
-                <span class="title-highlighter highlighter-primary">
-                  <i class="fas fa-star"></i> 
-                  {{ section.settings.subtitle }}  
-              </span>
-              {% endif %}     
-              {% if section.settings.title != blank %}
-                <h2 class="title">{{ section.settings.title }}  
-              </h2>
-              {% endif %}    
-          </div>
+          {% if section.settings.is_section_title == true %} 
+            <div class="section-title-wrapper section-title-center">
+                {% if section.settings.subtitle != blank %}
+                  <span class="title-highlighter highlighter-primary">
+                    {{ section.settings.sub_title_icon }}  
+                    {{ section.settings.subtitle }}  
+                </span>
+                {% endif %}     
+                {% if section.settings.title != blank %}
+                  <h2 class="title">{{ section.settings.title }}  
+                </h2>
+                {% endif %}    
+            </div>
+          {% endif %}
           <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
             {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show offset: section.settings.offset_product  %}
               {% assign ex = 0 %}
@@ -83,6 +85,18 @@
 {
   "name": "Product List",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "is_section_title",
+      "label": "Enable Section Title"
+    },
+    {
+      "type": "html",
+      "id": "sub_title_icon",
+      "default": "<i class='fas fa-tags'></i>",
+      "label": "Before Icon",
+      "info": "Recommended Fontawesome Icon"
+    },
     {
       "type": "text",
       "id": "title",

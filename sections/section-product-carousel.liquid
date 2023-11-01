@@ -46,10 +46,8 @@
           {% endif %} 
           {{ is_coutdown_end }}
 
-
         {% endif %}
-      <div class="new-arrivals-product-activation axil-slick-slider slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
-          
+      <div class="new-arrivals-product-activation axil-slick-slider slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>   
             {% if section.settings.reverse_order == true %}
               {% assign collection = section.settings.product_collection.products | sort: section.settings.sort_by | reverse %}
             {% else %}
