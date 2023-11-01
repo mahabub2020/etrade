@@ -1,13 +1,16 @@
 $(document).ready(function(){
 
-    $('.cart-dropdown-btn').on('click', function(e) {
+    $(document).on('click', '.cart-dropdown-btn', function(e) {
         e.preventDefault();
         $('.cart-dropdown').addClass('open');
     });
 
-    $('.cart-close').on('click', function() {
-        console.log('clicked');
+    $(document).on('click', '.cart-close', function() {
         $('.cart-dropdown').removeClass('open');
+    });
+
+    $(document).on('click', 'remove_from_cart_button', function(e) {
+        e.preventDefault();
     });
 
     $(document).on('submit', 'form[action="/cart/add"]', async function(e) {
