@@ -230,6 +230,32 @@
         "col_sm": "1",
         "col_mobile": "1"
       }
+    },
+    "389b4ea9-86d6-4b2d-8671-b0850fa435dd": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--21159461093662__389b4ea9-86d6-4b2d-8671-b0850fa435dd-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Fast & Secure Delivery<\/strong><\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service9.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--21159461093662__389b4ea9-86d6-4b2d-8671-b0850fa435dd-whyus-1"
+      ],
+      "settings": {
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout1",
+        "col_xl": "5",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
     }
   },
   "order": [
@@ -240,6 +266,7 @@
     "11e2be9b-7c69-4850-8ba6-558de5014330",
     "24129658-3442-4d48-850d-ff7a81e17b4c",
     "bec99a32-f605-45e5-80ce-51c3e4f8c951",
-    "b025eb70-0468-4bce-80b7-a2cbcab34d1e"
+    "b025eb70-0468-4bce-80b7-a2cbcab34d1e",
+    "389b4ea9-86d6-4b2d-8671-b0850fa435dd"
   ]
 }
