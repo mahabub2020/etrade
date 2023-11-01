@@ -10,7 +10,7 @@ $(document).ready(function(){
     });
 
     $(document).on('click', '.remove_from_cart_button', function(e) {
-        e.preventDefault();
+        return false;
     });
 
     $(document).on('submit', 'form[action="/cart/add"]', async function(e) {
