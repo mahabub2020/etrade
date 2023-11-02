@@ -33,7 +33,7 @@ $(document).ready(function(){
         e.preventDefault();
         productHandle = $(this).attr('data-product-handle');
         updateWishlist(productHandle, this);
-        renderWishlist();
+        // renderWishlist();
     });
 
     var updateWishlist = function (handle, element) {
@@ -105,7 +105,7 @@ $(document).ready(function(){
     //     wishlistCount(wishlist.length);
     // }
 
-    renderWishlist();
+    // renderWishlist();
 
     var wishlistCount = function (count) {
         if(count > 0) {
