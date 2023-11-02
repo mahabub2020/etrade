@@ -67,8 +67,6 @@
         "5d8da3b7-547d-4dbd-8447-b8cb9fa474cc"
       ],
       "settings": {
-        "autoplay_true": true,
-        "autoplay_speed": 2000
       }
     },
     "b475c665-7dd4-4176-ab16-f35f19793bf6": {
@@ -106,22 +104,12 @@
     "11e2be9b-7c69-4850-8ba6-558de5014330": {
       "type": "section-multicolumn-product-carousel",
       "settings": {
-        "is_section_title": true,
-        "title_layout": "style_2",
         "title": "Product Collectioncdas",
-        "sub_title": "Recently Viewed",
-        "is_countdown": true,
-        "end_time": "2024-05-22",
         "title_icon": "shopify:\/\/shop_images\/service5.png",
         "product_collection": "accessories",
         "list_per_slider": 2,
         "number_of_products_to_show": 12,
         "product_layout": "1",
-        "isbutton_true": true,
-        "btn_txt": "vvView All Deals",
-        "btn_url": "shopify:\/\/collections\/all",
-        "autoplay_true": true,
-        "autoplay_speed": 5000,
         "col_lg": 4,
         "col_md": 2,
         "col_sm": 2
@@ -171,21 +159,15 @@
         "2e8df00d-ca6a-4631-b17e-5a8c3f818ef5"
       ],
       "settings": {
-        "is_section_title": false,
-        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "section_title": "Our Users Feedbackb",
-        "section_sub_title": "Testimonials",
-        "autoplay_true": true,
-        "autoplay_speed": 5000
+        "section_sub_title": "Testimonials"
       }
     },
     "bec99a32-f605-45e5-80ce-51c3e4f8c951": {
       "type": "section-product-carousel",
       "settings": {
-        "is_section_title": true,
         "title": "gvsfvsf",
         "sub_title": "fsfsfdgv",
-        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "is_countdown": false,
         "end_time": "2024-05-22",
         "product_collection": "accessories",
@@ -196,20 +178,12 @@
         "offset_product": 1,
         "sort_by": "title",
         "reverse_order": false,
-        "product_layout": "2",
-        "autoplay_true": true,
-        "autoplay_speed": 5000,
-        "product_column": 4,
-        "product_column_lg": 5,
-        "product_column_md": 4,
-        "product_column_sm": 1
+        "product_layout": "2"
       }
     },
     "b025eb70-0468-4bce-80b7-a2cbcab34d1e": {
       "type": "section-product-list",
       "settings": {
-        "is_section_title": true,
-        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "title": "Recently Viewedb",
         "subtitle": "Recently Viewedv",
         "product_collection": "accessories",
@@ -277,8 +251,6 @@
         "d4c3d1ec-93ee-47e8-b71b-49c605546a6c"
       ],
       "settings": {
-        "is_section_title": true,
-        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
         "section_title": "Why People Choose Us",
         "section_sub_title": "Why Us",
         "wulayout": "layout1",

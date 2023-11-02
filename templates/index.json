@@ -97,8 +97,6 @@
         "74e0d307-8719-4372-a7f4-b9f8cddf19e8"
       ],
       "settings": {
-        "autoplay_true": true,
-        "autoplay_speed": 5000
       }
     },
     "8fe79a74-fc1f-45a6-9d05-dfe3793191c3": {
@@ -122,17 +120,7 @@
     "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd": {
       "type": "multi-column-collection",
       "settings": {
-        "title": "Product Collection",
-        "btn-label": "",
-        "product_collection": "etrade-products",
-        "number_of_products_to_show": 4,
-        "product_layout": "1",
-        "excluded_products": [
-
-        ],
         "list_per_slider": 8,
-        "autoplay_true": true,
-        "autoplay_speed": 5000,
         "col_xl": 4,
         "col_lg": 5,
         "col_md": 3,
