@@ -9,7 +9,7 @@ $(document).ready(function(){
         $('.cart-dropdown').removeClass('open');
     });
 
-    $(document).on('submit', 'form[action="/cart/add"]', async function(e) {
+    $('form[action="/cart/add"]').on('submit', async function(e) {
         e.preventDefault();
         
         await fetch("cart/add", {
@@ -29,7 +29,7 @@ $(document).ready(function(){
     // Add to wishlist start
     let wishlist_key = 'wishlist';
     let delimiter = ',';
-    $(document).on('click', '.axil-add-to-wishlist', function(e) {
+    $('.axil-add-to-wishlist').on('click', function(e) {
         e.preventDefault();
         productHandle = $(this).attr('data-product-handle');
         updateWishlist(productHandle, this);
