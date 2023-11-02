@@ -1,23 +1,126 @@
 {
   "sections": {
-    "4bc97fd9-8b39-4479-9234-8b04cd49088e": {
-      "type": "product-collection",
+    "3dd30f8a-44f5-4b4c-bbd9-186ea9950822": {
+      "type": "banner-slider",
       "blocks": {
-        "template--21009528586518__4bc97fd9-8b39-4479-9234-8b04cd49088e-section_padding-1": {
-          "type": "section_padding",
+        "9cdcb778-450d-40dd-aa0c-33398c6bd5b9": {
+          "type": "banner",
           "settings": {
-            "section_padding_top": 0,
-            "section_padding_bottom": 100,
-            "section_padding_top_md": 0,
-            "section_padding_bottom_md": 80,
-            "section_padding_top_xs": 0,
-            "section_padding_bottom_xs": 60
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": "",
+            "banner_img": "shopify:\/\/shop_images\/product-38.png",
+            "price_label": "From",
+            "price": "$49.00",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4
+          }
+        },
+        "04eea2b2-b7fe-4ad5-9c93-925ab2d9368d": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": "",
+            "banner_img": "shopify:\/\/shop_images\/product-31.png",
+            "price_label": "From",
+            "price": "$49.00",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4
+          }
+        },
+        "5c4c0b1f-c70d-41e4-85fe-3203e7fd4107": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": "",
+            "banner_img": "shopify:\/\/shop_images\/21-1.jpg",
+            "price_label": "From",
+            "price": "$49.00",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4
+          }
+        },
+        "dba6f249-8662-4cb4-acec-69214417dfa2": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": "",
+            "banner_img": "shopify:\/\/shop_images\/phone.jpg",
+            "price_label": "From",
+            "price": "$49.00",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4
+          }
+        },
+        "74e0d307-8719-4372-a7f4-b9f8cddf19e8": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": "",
+            "banner_img": "shopify:\/\/shop_images\/Ladies-Suit.png",
+            "price_label": "From",
+            "price": "$49.00",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4
           }
         }
       },
       "block_order": [
-        "template--21009528586518__4bc97fd9-8b39-4479-9234-8b04cd49088e-section_padding-1"
+        "9cdcb778-450d-40dd-aa0c-33398c6bd5b9",
+        "04eea2b2-b7fe-4ad5-9c93-925ab2d9368d",
+        "5c4c0b1f-c70d-41e4-85fe-3203e7fd4107",
+        "dba6f249-8662-4cb4-acec-69214417dfa2",
+        "74e0d307-8719-4372-a7f4-b9f8cddf19e8"
       ],
+      "settings": {
+        "autoplay_true": true,
+        "autoplay_speed": 5000
+      }
+    },
+    "8fe79a74-fc1f-45a6-9d05-dfe3793191c3": {
+      "type": "collection-carousel",
+      "settings": {
+        "collection_style": "cat_style_1",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "sub_title": "Before Title",
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+
+        ],
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 6,
+        "product_column_lg": 5,
+        "product_column_md": 4,
+        "product_column_sm": 2
+      }
+    },
+    "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd": {
+      "type": "multi-column-collection",
       "settings": {
         "title": "Product Collection",
         "btn-label": "",
@@ -27,9 +130,13 @@
         "excluded_products": [
 
         ],
-        "sort_by": "title",
-        "reverse_order": false,
-        "hover_img": false
+        "list_per_slider": 8,
+        "autoplay_true": true,
+        "autoplay_speed": 5000,
+        "col_xl": 4,
+        "col_lg": 5,
+        "col_md": 3,
+        "col_sm": 2
       }
     },
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3": {
@@ -61,7 +168,9 @@
     }
   },
   "order": [
-    "4bc97fd9-8b39-4479-9234-8b04cd49088e",
+    "3dd30f8a-44f5-4b4c-bbd9-186ea9950822",
+    "8fe79a74-fc1f-45a6-9d05-dfe3793191c3",
+    "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3"
   ]
 }

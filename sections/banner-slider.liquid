@@ -1,33 +1,51 @@
 
-{%- capture data_slick_activation -%}
-      data-slick='{
-          {%- if section.settings.autoplay_true -%}
-          "autoplay": true
-          ,
-          "autoplaySpeed": {{ section.settings.autoplay_speed }},
-          {%- endif -%} 
-          "slidesToScroll": 1,
-          "slidesToShow": {{ section.settings.product_column }}, 
-          "arrows": true,
-          "dots": false,   
-          "nextArrow": "<button class=\"slide-arrow prev-arrow\"><i class=\"fal fa-long-arrow-left\"></i></button>", 
-          "prevArrow": "<button class=\"slide-arrow next-arrow\"><i class=\"fal fa-long-arrow-right\"></i></button>",
+   {%- capture data_slick_activation_content -%}
+      data-slick='{  
 
-            "responsive":[
-                {"breakpoint":992, "settings": {"slidesToShow": {{ section.settings.product_column_lg }}} },
-                {"breakpoint":768, "settings": {"slidesToShow": {{ section.settings.product_column_md }}} },
-                {"breakpoint":480, "settings": {"slidesToShow": {{ section.settings.product_column_sm }}} }
-              ]  
+      {%- if section.settings.autoplay_true -%}
+      "autoplay": true,
+      "autoplaySpeed": {{ section.settings.autoplay_speed }},
+      {%- endif -%}  
+    
+      "slidesToScroll": 1,
+      "slidesToShow": 1, 
+      "arrows": false,
+      "dots": false,
+      "focusOnSelect": false, 
+      "speed": 500,
+      "fade": true,
+      "infinite": true,  
+      "asNavFor": ".slider-thumb-activation-one",
+    }'
+   {%- endcapture -%}
+   
+   {%- capture data_slick_activation -%}
+      data-slick='{ 
+          
+        {%- if section.settings.autoplay_true -%}
+          "autoplay": true,
+          "autoplaySpeed": {{ section.settings.autoplay_speed }},
+          {%- endif -%}  
+          
+          "slidesToScroll": 1,
+          "slidesToShow": 2, 
+          "arrows": false,
+          "dots": false,
+          "infinite": true, 
+          "focusOnSelect": false,
+          "speed": 1000,
+          "asNavFor": ".slider-content-activation-one",
+          "responsive":[ 
+            {"breakpoint":992, "settings": {"slidesToShow": 1 } }
+          ]  
       }'
    {%- endcapture -%}
-
 <div id="section-{{ section.id }}" class="axil-main-slider-area main-slider-style-1">
   <div class="container">
       <div class="row align-items-center">
           <div class="col-lg-5 col-sm-6">
-              <div class="main-slider-content">
-                  
-                    <div class="slick-slider slider-content-activation-one"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
+              <div class="main-slider-content"> 
+                    <div class=" axil-slick-slider slider-content-activation-one"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation_content }}>
                     {% for block in section.blocks %}  
                     {% case block.type %}
                     {% when 'banner' %}
@@ -59,11 +77,11 @@
           </div>
           <div class="col-lg-7 col-sm-6">
               <div class="main-slider-large-thumb">
-                  <div class="slider-thumb-activation-one axil-slick-dots">
+                  <div class="axil-slick-slider slider-thumb-activation-one axil-slick-dots" {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
                     {% for block in section.blocks %}  
                     {% case block.type %}
                     {% when 'banner' %}
-                    <div class="single-slide slick-slide" data-sal="slide-up" data-sal-delay="600" data-sal-duration="1500">
+                    <div class="single-slide slick-slide slick-single-layout">
                            
                           <img src="{% if block.settings.banner_img %}{{ block.settings.banner_img | img_url: '672x541' }}{% else %}http:\/\/via.placeholder.com\/672x541{% endif %}" alt="{{ block.settings.banner_img.alt }}"> 
                          
@@ -94,7 +112,35 @@
 
 {% schema %}
 {
-    "name": "Banner Slider",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collection Style"
+    },
+    
+    {
+      "type": "header",
+      "content": "Options"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_true",
+      "label": "Autoplay Enable",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 1000,
+      "max": 9000,
+      "step": 1000,
+      "label": "Autoplay Speed",
+      "unit": "ms",
+      "default": 5000
+    }
+    
+  ],
+
     
     "blocks": [
       {

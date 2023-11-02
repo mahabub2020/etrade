@@ -14,13 +14,13 @@
           "settings": {
             "subtitle": "Hot Deal In This Week",
             "banner_title": "Smart Digital Watchhcbnv",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "shopify:\/\/collections\/electronics",
+            "banner_btn_txt": "",
+            "banner_btn_url": "",
             "banner_img": "shopify:\/\/shop_images\/21-1.jpg",
             "price_label": "From",
             "price": "$49.00",
             "plus_icon_active": true,
-            "pos_x_type": "right",
+            "pos_x_type": "left",
             "pos_x": 192,
             "pos_y_type": "bottom",
             "pos_y": 64
@@ -67,14 +67,16 @@
         "5d8da3b7-547d-4dbd-8447-b8cb9fa474cc"
       ],
       "settings": {
+        "autoplay_true": true,
+        "autoplay_speed": 2000
       }
     },
     "b475c665-7dd4-4176-ab16-f35f19793bf6": {
       "type": "collection-carousel",
       "settings": {
         "collection_style": "cat_style_1",
-        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
-        "sub_title": "Categories",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>ddd",
+        "sub_title": "Categoriesddd",
         "section_title": "Browse by Category",
         "featured_cat_collection": [
           "phones",
@@ -94,11 +96,197 @@
       "settings": {
         "cd_title": "Enhance Your Music Experience",
         "cd_sub_title": "Don't Miss!!",
-        "end_time": "2023-12-23",
+        "end_time": "2024-12-23",
         "cd_btn_txt": "Check it Out!",
-        "cd_btn_url": "shopify:\/\/products\/bass-meets-clarity",
+        "cd_btn_url": "shopify:\/\/products\/zone-headphone",
         "cd_img": "shopify:\/\/shop_images\/poster-03.png",
         "is_animations": true
+      }
+    },
+    "11e2be9b-7c69-4850-8ba6-558de5014330": {
+      "type": "section-multicolumn-product-carousel",
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "Product Collectioncdas",
+        "sub_title": "Recently Viewed",
+        "is_countdown": true,
+        "end_time": "2024-05-22",
+        "title_icon": "shopify:\/\/shop_images\/service5.png",
+        "product_collection": "accessories",
+        "list_per_slider": 2,
+        "number_of_products_to_show": 12,
+        "product_layout": "1",
+        "isbutton_true": true,
+        "btn_txt": "vvView All Deals",
+        "btn_url": "shopify:\/\/collections\/all",
+        "autoplay_true": true,
+        "autoplay_speed": 5000,
+        "col_lg": 4,
+        "col_md": 2,
+        "col_sm": 2
+      }
+    },
+    "24129658-3442-4d48-850d-ff7a81e17b4c": {
+      "type": "section-testimonial-carousel",
+      "blocks": {
+        "template--21159461093662__24129658-3442-4d48-850d-ff7a81e17b4c-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/21-1.jpg",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "9eea9190-ad01-4212-9d1e-430a70ee0742": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "c5379b69-f634-4093-aef6-8a82a53f930d": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "2e8df00d-ca6a-4631-b17e-5a8c3f818ef5": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--21159461093662__24129658-3442-4d48-850d-ff7a81e17b4c-review-1",
+        "9eea9190-ad01-4212-9d1e-430a70ee0742",
+        "c5379b69-f634-4093-aef6-8a82a53f930d",
+        "2e8df00d-ca6a-4631-b17e-5a8c3f818ef5"
+      ],
+      "settings": {
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "section_title": "Our Users Feedbackb",
+        "section_sub_title": "Testimonials",
+        "autoplay_true": true,
+        "autoplay_speed": 5000
+      }
+    },
+    "bec99a32-f605-45e5-80ce-51c3e4f8c951": {
+      "type": "section-product-carousel",
+      "settings": {
+        "is_section_title": true,
+        "title": "gvsfvsf",
+        "sub_title": "fsfsfdgv",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
+        "product_collection": "accessories",
+        "number_of_products_to_show": 4,
+        "excluded_products": [
+
+        ],
+        "offset_product": 1,
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "2",
+        "autoplay_true": true,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 5,
+        "product_column_md": 4,
+        "product_column_sm": 1
+      }
+    },
+    "b025eb70-0468-4bce-80b7-a2cbcab34d1e": {
+      "type": "section-product-list",
+      "settings": {
+        "is_section_title": true,
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "title": "Recently Viewedb",
+        "subtitle": "Recently Viewedv",
+        "product_collection": "accessories",
+        "offset_product": 1,
+        "excluded_products": [
+
+        ],
+        "number_of_products_to_show": 8,
+        "col_xl": "2",
+        "col_lg": "2",
+        "col_md": "2",
+        "col_sm": "1",
+        "col_mobile": "1"
+      }
+    },
+    "389b4ea9-86d6-4b2d-8671-b0850fa435dd": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--21159461093662__389b4ea9-86d6-4b2d-8671-b0850fa435dd-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Fast & Secure Delivery<\/strong><\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service9.png"
+          }
+        },
+        "a84f8df0-7c2d-452b-8736-00d28a961524": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Fast & Secure Delivery<\/strong><\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service10.png"
+          }
+        },
+        "a5cf8366-122c-435e-a365-bc9f979a7c96": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Fast & Secure Delivery<\/strong><\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service6.png"
+          }
+        },
+        "afe1cfbb-832b-498a-af9c-8f5912afaddb": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Fast & Secure Delivery<\/strong><\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service8.png"
+          }
+        },
+        "d4c3d1ec-93ee-47e8-b71b-49c605546a6c": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Fast & Secure Delivery<\/strong><\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service7.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--21159461093662__389b4ea9-86d6-4b2d-8671-b0850fa435dd-whyus-1",
+        "a84f8df0-7c2d-452b-8736-00d28a961524",
+        "a5cf8366-122c-435e-a365-bc9f979a7c96",
+        "afe1cfbb-832b-498a-af9c-8f5912afaddb",
+        "d4c3d1ec-93ee-47e8-b71b-49c605546a6c"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout1",
+        "col_xl": "5",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
       }
     }
   },
@@ -106,6 +294,11 @@
     "main",
     "0008d5c8-c50a-411c-8524-b1d1f9054032",
     "b475c665-7dd4-4176-ab16-f35f19793bf6",
-    "aec5fef1-93a3-48a2-9e52-d8272f0b2514"
+    "aec5fef1-93a3-48a2-9e52-d8272f0b2514",
+    "11e2be9b-7c69-4850-8ba6-558de5014330",
+    "24129658-3442-4d48-850d-ff7a81e17b4c",
+    "bec99a32-f605-45e5-80ce-51c3e4f8c951",
+    "b025eb70-0468-4bce-80b7-a2cbcab34d1e",
+    "389b4ea9-86d6-4b2d-8671-b0850fa435dd"
   ]
 }

@@ -2,16 +2,20 @@
 {% if section.settings.wulayout == 'layout1' %}
  <div  id="section-{{ section.id }}" class="axil-why-choose-area axil-section-gap pb--50 pb_sm--30">
   <div class="container"> 
-    <div class="section-title-wrapper section-title-center"> 
-      {% if section.settings.section_sub_title != '' %}  
-      <span class="title-highlighter highlighter-secondary"> <i class="fal fa-thumbs-up"></i>{{ section.settings.section_sub_title | escape }}</span>
-      {% endif %} 
-      {% if section.settings.section_title != '' %}  
-        <div class="heading-title">
-          <h2 class="title">{{ section.settings.section_title | escape }}</h2>
-        </div>  
-      {% endif %}  
-      </div>
+    {% if section.settings.is_section_title == true %} 
+        <div class="section-title-wrapper section-title-center"> 
+          {% if section.settings.section_sub_title != '' %}  
+          <span class="title-highlighter highlighter-secondary">
+               {{ section.settings.sub_title_icon }} 
+             {{ section.settings.section_sub_title | escape }}</span>
+          {% endif %} 
+          {% if section.settings.section_title != '' %}  
+            <div class="heading-title">
+              <h2 class="title">{{ section.settings.section_title | escape }}</h2>
+            </div>  
+          {% endif %}  
+        </div>
+      {% endif %}
         <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }} row--20">     
         {% for block in section.blocks %}
           {% case block.type %}
@@ -89,6 +93,60 @@
 </div>
 {% endif %}
 
+
+{%- style -%}
+
+  #section-{{ section.id }}{
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'section_margin' -%}
+        margin-top: {{ block.settings.section_margin_top }}px;
+        margin-bottom: {{ block.settings.section_margin_bottom }}px;
+        {%- when 'section_padding' -%}
+        padding-top: {{ block.settings.section_padding_top }}px;
+        padding-bottom: {{ block.settings.section_padding_bottom }}px;
+        {%- when 'section_background' -%}
+        background: {{ block.settings.section_bg_color }}
+        {%- if block.settings.section_bg_image -%}
+          url("{{ block.settings.section_bg_image | img_url: 'master' }}"){%- endif -%} no-repeat scroll center center / cover;
+      {%- endcase -%}
+    {%- endfor -%}
+  }
+
+  @media(min-width: 768px) and (max-width: 991px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+        {% case block.type %}
+          {%- when 'section_margin' -%}
+          margin-top: {{ block.settings.section_margin_top_md }}px;
+          margin-bottom: {{ block.settings.section_margin_bottom_md }}px;
+          {%- when 'section_padding' -%}
+          padding-top: {{ block.settings.section_padding_top_md }}px;
+          padding-bottom: {{ block.settings.section_padding_bottom_md }}px;
+        {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+
+  @media(max-width: 767px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'section_margin' -%}
+          margin-top: {{ block.settings.section_margin_top_xs }}px;
+          margin-bottom: {{ block.settings.section_margin_bottom_xs }}px;
+          {%- when 'section_padding' -%}
+          padding-top: {{ block.settings.section_padding_top_xs }}px;
+          padding-bottom: {{ block.settings.section_padding_bottom_xs }}px;
+        {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+{%- endstyle -%}
+
+
+
+
 {% schema %}
 {
   "name": "Section Why Us",
@@ -96,6 +154,18 @@
     {
       "type": "header",
       "content": "Why Us"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_section_title",
+      "label": "Enable Section Title"
+    },
+    {
+      "type": "html",
+      "id": "sub_title_icon",
+      "default": "<i class='fal fa-thumbs-up'></i>",
+      "label": "Before Icon",
+      "info": "Recommended Fontawesome Icon"
     },
     {
       "type": "text",
@@ -290,6 +360,7 @@
       ]
     }
   ],
+
   "blocks": [
     {
       "type": "whyus",
@@ -298,6 +369,7 @@
         {
           "type": "richtext",
           "id": "wstitle", 
+          "default": "<p>Fast & Secure Delivery</p>",
           "label": "Title"
         },
         {
@@ -312,6 +384,174 @@
           "info": "Recommended Size: 60px X 60px"
         }
       ]
+    },
+    {
+      "type": "section_padding",
+      "name": "Section Padding",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Large/Desktop Device"
+        },
+        {
+          "type": "range",
+          "id": "section_padding_top",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Padding Top",
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "section_padding_bottom",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Padding Bottom",
+          "unit": "px",
+          "default": 100
+        },
+        {
+          "type": "header",
+          "content": "Tablet Device"
+        }, {
+          "type": "range",
+          "id": "section_padding_top_md",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Padding Top",
+          "unit": "px",
+          "default": 0
+        }, {
+          "type": "range",
+          "id": "section_padding_bottom_md",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Padding Bottom",
+          "unit": "px",
+          "default": 80
+        }, 
+        {
+          "type": "header",
+          "content": "Mobile Device"
+        },
+        {
+          "type": "range",
+          "id": "section_padding_top_xs",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Padding Top",
+          "unit": "px",
+          "default": 0
+        }, 
+        {
+          "type": "range",
+          "id": "section_padding_bottom_xs",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Padding Bottom",
+          "unit": "px",
+          "default": 60
+        }
+      ]
+    }, 
+    {
+      "type": "section_margin",
+      "name": "Section Margin",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Large/Desktop Device"
+        },
+        {
+          "type": "range",
+          "id": "section_margin_top",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Margin Top",
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "section_margin_bottom",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Margin Bottom",
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Tablet Device"
+        }, {
+          "type": "range",
+          "id": "section_margin_top_md",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Margin Top",
+          "unit": "px",
+          "default": 0
+        }, {
+          "type": "range",
+          "id": "section_margin_bottom_md",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Margin Bottom",
+          "unit": "px",
+          "default": 0
+        }, {
+          "type": "header",
+          "content": "Mobile Device"
+        }, {
+          "type": "range",
+          "id": "section_margin_top_xs",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Margin Top",
+          "unit": "px",
+          "default": 0
+        }, {
+          "type": "range",
+          "id": "section_margin_bottom_xs",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Margin Bottom",
+          "unit": "px",
+          "default": 0
+        }
+      ]
+    }, 
+    {
+      "type": "section_background",
+      "name": "Section Background",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "section_bg_image",
+          "label": "BG Image"
+        }, {
+          "type": "color",
+          "id": "section_bg_color",
+          "label": "BG Color",
+          "default": "#ffffff"
+        }
+      ]
     }
   ],
   "presets": [
@@ -320,6 +560,9 @@
       "blocks": [
         {
           "type": "whyus"
+        },
+        {
+          "type": "section_padding"
         }
       ]
     }
