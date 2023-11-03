@@ -314,7 +314,7 @@
           "type": "cta",
           "settings": {
             "badge": "Always free",
-            "badge_title": "",
+            "badge_title": "<p>Dadge\/Sub Title<\/p>",
             "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
             "cta_url": "",
             "cta_img": "shopify:\/\/shop_images\/poster-02.png",
