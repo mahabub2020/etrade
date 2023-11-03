@@ -328,8 +328,8 @@
             "badge_title": "<p>Get VR <br> Reality Glass<\/p>",
             "badge_content": "50% Offer In Winter",
             "cta_url": "shopify:\/\/products\/asus-zenbook-laptop",
-            "cta_img": "shopify:\/\/shop_images\/poster-01.png",
-            "reverse_order": true
+            "cta_img": "shopify:\/\/shop_images\/poster-02.png",
+            "reverse_order": false
           }
         }
       },
