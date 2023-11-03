@@ -277,8 +277,8 @@
         "306e3e8f-bc80-4014-b424-6209fde4fdf7": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 100,
-            "section_padding_bottom": 100,
+            "section_padding_top": 0,
+            "section_padding_bottom": 65,
             "section_padding_top_md": 0,
             "section_padding_bottom_md": 0,
             "section_padding_top_xs": 0,
