@@ -9,22 +9,22 @@ $(document).ready(function(){
         $('.cart-dropdown').removeClass('open');
     });
 
-    $(document).on('submit', 'form[action="/cart/add"]', async function(e) {
-        e.preventDefault();
+    // $(document).on('submit', 'form[action="/cart/add"]', async function(e) {
+    //     e.preventDefault();
         
-        // await fetch("cart/add", {
-        //     method: "post",
-        //     body: new FormData(this),
-        // });
-        const res = await fetch("/cart.json");
-        const cart = await res.json();
-        $('.cart-count').html(cart.item_count);
+    //     await fetch("cart/add", {
+    //         method: "post",
+    //         body: new FormData(this),
+    //     });
+    //     const res = await fetch("/cart.json");
+    //     const cart = await res.json();
+    //     $('.cart-count').html(cart.item_count);
 
-        const cartDrawer = await fetch("/?section_id=mini-cart");
-        const cartDrawerHTML = await cartDrawer.text();
-        $('.cart-body-wrap').html(cartDrawerHTML);
-        $('.cart-dropdown').addClass('open');
-    });
+    //     const cartDrawer = await fetch("/?section_id=mini-cart");
+    //     const cartDrawerHTML = await cartDrawer.text();
+    //     $('.cart-body-wrap').html(cartDrawerHTML);
+    //     $('.cart-dropdown').addClass('open');
+    // });
 
     // Add to wishlist start
     let wishlist_key = 'wishlist';
