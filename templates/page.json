@@ -67,6 +67,8 @@
         "5d8da3b7-547d-4dbd-8447-b8cb9fa474cc"
       ],
       "settings": {
+        "autoplay_true": false,
+        "autoplay_speed": 5000
       }
     },
     "b475c665-7dd4-4176-ab16-f35f19793bf6": {
@@ -86,7 +88,13 @@
           "computers",
           "accessories",
           "woman"
-        ]
+        ],
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 6,
+        "product_column_lg": 5,
+        "product_column_md": 4,
+        "product_column_sm": 2
       }
     },
     "aec5fef1-93a3-48a2-9e52-d8272f0b2514": {
@@ -104,12 +112,22 @@
     "11e2be9b-7c69-4850-8ba6-558de5014330": {
       "type": "section-multicolumn-product-carousel",
       "settings": {
+        "is_section_title": false,
+        "title_layout": "style_1",
         "title": "Product Collectioncdas",
+        "sub_title": "Recently Viewed",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
         "title_icon": "shopify:\/\/shop_images\/service5.png",
         "product_collection": "accessories",
         "list_per_slider": 2,
         "number_of_products_to_show": 12,
         "product_layout": "1",
+        "isbutton_true": false,
+        "btn_txt": "View All Deals",
+        "btn_url": "",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
         "col_lg": 4,
         "col_md": 2,
         "col_sm": 2
@@ -159,15 +177,21 @@
         "2e8df00d-ca6a-4631-b17e-5a8c3f818ef5"
       ],
       "settings": {
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "section_title": "Our Users Feedbackb",
-        "section_sub_title": "Testimonials"
+        "section_sub_title": "Testimonials",
+        "autoplay_true": false,
+        "autoplay_speed": 5000
       }
     },
     "bec99a32-f605-45e5-80ce-51c3e4f8c951": {
       "type": "section-product-carousel",
       "settings": {
+        "is_section_title": false,
         "title": "gvsfvsf",
         "sub_title": "fsfsfdgv",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "is_countdown": false,
         "end_time": "2024-05-22",
         "product_collection": "accessories",
@@ -178,12 +202,20 @@
         "offset_product": 1,
         "sort_by": "title",
         "reverse_order": false,
-        "product_layout": "2"
+        "product_layout": "2",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
       }
     },
     "b025eb70-0468-4bce-80b7-a2cbcab34d1e": {
       "type": "section-product-list",
       "settings": {
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "title": "Recently Viewedb",
         "subtitle": "Recently Viewedv",
         "product_collection": "accessories",
@@ -263,6 +295,8 @@
         "306e3e8f-bc80-4014-b424-6209fde4fdf7"
       ],
       "settings": {
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
         "section_title": "Why People Choose Us",
         "section_sub_title": "Why Us",
         "wulayout": "layout1",
@@ -279,23 +313,23 @@
         "template--21159461093662__a711bca3-775a-4e86-8cf9-27dc24a9bca0-cta-1": {
           "type": "cta",
           "settings": {
-            "badge": "Always free",
-            "badge_title": "<p>Dadge\/Sub Title<\/p>",
+            "badge": "Collections",
+            "badge_title": "Rich sound, <br> for less.",
             "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
             "cta_url": "",
-            "cta_img": "shopify:\/\/shop_images\/poster-02.png",
-            "reverse_order": false
+            "cta_img": "shopify:\/\/shop_images\/poster-01.png",
+            "reverse_order": true
           }
         },
         "2ce7b226-8920-450c-8607-ccdd39ac6afa": {
           "type": "cta",
           "settings": {
-            "badge": "Dadge\/Sub Title",
-            "badge_title": "<p>Get VR <br\/> Reality Glass<\/p>",
-            "badge_content": "50% Offer In Winter",
+            "badge": "50% Offer In Winter",
+            "badge_title": "Get VR <br> Reality Glass",
+            "badge_content": "",
             "cta_url": "shopify:\/\/products\/asus-zenbook-laptop",
-            "cta_img": "shopify:\/\/shop_images\/poster-01.png",
-            "reverse_order": true
+            "cta_img": "shopify:\/\/shop_images\/poster-02.png",
+            "reverse_order": false
           }
         }
       },
