@@ -319,10 +319,21 @@
             "cta_url": "",
             "reverse_order": false
           }
+        },
+        "2ce7b226-8920-450c-8607-ccdd39ac6afa": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "",
+            "reverse_order": false
+          }
         }
       },
       "block_order": [
-        "template--21159461093662__a711bca3-775a-4e86-8cf9-27dc24a9bca0-cta-1"
+        "template--21159461093662__a711bca3-775a-4e86-8cf9-27dc24a9bca0-cta-1",
+        "2ce7b226-8920-450c-8607-ccdd39ac6afa"
       ],
       "settings": {
         "ctalayout": "cta1"
