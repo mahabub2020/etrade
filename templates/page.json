@@ -306,6 +306,27 @@
         "col_sm": "2",
         "col_mobile": "1"
       }
+    },
+    "a711bca3-775a-4e86-8cf9-27dc24a9bca0": {
+      "type": "section-delivery",
+      "blocks": {
+        "template--21159461093662__a711bca3-775a-4e86-8cf9-27dc24a9bca0-cta-1": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "",
+            "reverse_order": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21159461093662__a711bca3-775a-4e86-8cf9-27dc24a9bca0-cta-1"
+      ],
+      "settings": {
+        "ctalayout": "cta1"
+      }
     }
   },
   "order": [
@@ -317,6 +338,7 @@
     "24129658-3442-4d48-850d-ff7a81e17b4c",
     "bec99a32-f605-45e5-80ce-51c3e4f8c951",
     "b025eb70-0468-4bce-80b7-a2cbcab34d1e",
-    "389b4ea9-86d6-4b2d-8671-b0850fa435dd"
+    "389b4ea9-86d6-4b2d-8671-b0850fa435dd",
+    "a711bca3-775a-4e86-8cf9-27dc24a9bca0"
   ]
 }
