@@ -32,7 +32,7 @@ class FacetFiltersForm extends HTMLElement {
 	static renderPage(searchParams, event, updateURLHash = true) {
 		FacetFiltersForm.searchParamsPrev = searchParams;
 		const sections = FacetFiltersForm.getSections();
-		const countContainer = document.getElementById('ProductCount');
+		// const countContainer = document.getElementById('ProductCount');
 		const countContainerDesktop = document.getElementById('ProductCountDesktop');
 		document.getElementById('ProductGridContainer').querySelector('.collection').classList.add('loading');
 		if (countContainer) {
@@ -91,8 +91,8 @@ class FacetFiltersForm extends HTMLElement {
 	}
 
 	static renderProductCount(html) {
-		const count = new DOMParser().parseFromString(html, 'text/html').getElementById('ProductCount').innerHTML;
-		const container = document.getElementById('ProductCount');
+		// const count = new DOMParser().parseFromString(html, 'text/html').getElementById('ProductCount').innerHTML;
+		// const container = document.getElementById('ProductCount');
 		const containerDesktop = document.getElementById('ProductCountDesktop');
 		container.innerHTML = count;
 		container.classList.remove('loading');
