@@ -112,7 +112,7 @@
     "11e2be9b-7c69-4850-8ba6-558de5014330": {
       "type": "section-multicolumn-product-carousel",
       "settings": {
-        "is_section_title": false,
+        "is_section_title": true,
         "title_layout": "style_1",
         "title": "Product Collectioncdas",
         "sub_title": "Recently Viewed",
@@ -188,7 +188,7 @@
     "bec99a32-f605-45e5-80ce-51c3e4f8c951": {
       "type": "section-product-carousel",
       "settings": {
-        "is_section_title": false,
+        "is_section_title": true,
         "title": "gvsfvsf",
         "sub_title": "fsfsfdgv",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
@@ -214,7 +214,7 @@
     "b025eb70-0468-4bce-80b7-a2cbcab34d1e": {
       "type": "section-product-list",
       "settings": {
-        "is_section_title": false,
+        "is_section_title": true,
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "title": "Recently Viewedb",
         "subtitle": "Recently Viewedv",
@@ -295,7 +295,7 @@
         "306e3e8f-bc80-4014-b424-6209fde4fdf7"
       ],
       "settings": {
-        "is_section_title": false,
+        "is_section_title": true,
         "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
         "section_title": "Why People Choose Us",
         "section_sub_title": "Why Us",
