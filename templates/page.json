@@ -324,9 +324,9 @@
         "2ce7b226-8920-450c-8607-ccdd39ac6afa": {
           "type": "cta",
           "settings": {
-            "badge": "",
+            "badge": "Dadge\/Sub Title",
             "badge_title": "<p>Get VR <br\/> Reality Glass<\/p>",
-            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "badge_content": "50% Offer In Winter",
             "cta_url": "shopify:\/\/products\/asus-zenbook-laptop",
             "cta_img": "shopify:\/\/shop_images\/poster-01.png",
             "reverse_order": true
