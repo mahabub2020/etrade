@@ -313,8 +313,8 @@
         "template--21159461093662__a711bca3-775a-4e86-8cf9-27dc24a9bca0-cta-1": {
           "type": "cta",
           "settings": {
-            "badge": "Always free",
-            "badge_title": "Dadge\/Sub Title",
+            "badge": "Collections",
+            "badge_title": "Rich sound, <br> for less.",
             "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
             "cta_url": "",
             "cta_img": "shopify:\/\/shop_images\/poster-01.png",
