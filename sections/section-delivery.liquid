@@ -1,5 +1,6 @@
 
 {% if section.settings.ctalayout == 'cta1' %}
+
 <div id="section-{{ section.id }}" class="delivery-poster-area">
   <div class="container">
       <div class="row">
@@ -38,18 +39,16 @@
         {% for block in section.blocks %}
           {% case block.type %}
             {% when 'cta' %}   
-            <div class="col-lg-6 mb--30">
-
+            <div class="col-lg-6 mb--30"> 
               {% if block.settings.reverse_order == true %}
-
                 <div class="single-poster">
                     <a href="{{ block.settings.cta_url | escape }}">
                       <img src="{% if block.settings.cta_img %}{{ block.settings.cta_img | img_url: '630x246' }}{% else %}http:\/\/via.placeholder.com\/630x246{% endif %}" alt="{{ block.settings.cta_img.alt }}"> 
                         <div class="poster-content">
                             <div class="inner">
                               {% if block.settings.badge_title != '' %}   
-                              <h3 class="title">{{ block.settings.badge_title }}</h3> 
-                            {% endif %}   
+                                <h3 class="title">{{ block.settings.badge_title }}</h3> 
+                              {% endif %}   
                             {% if block.settings.badge != '' %}   
                               <span class="sub-title">{{ block.settings.badge | escape }} <i class="fal fa-long-arrow-right"></i></span>
                             {% endif %}    
@@ -184,9 +183,8 @@
           "label": "Dadge/Sub Title"
         },
         {
-          "type": "richtext",
-          "id": "badge_title",
-          
+          "type": "textarea",
+          "id": "badge_title", 
           "label": "CTA Title"
         },
         {
