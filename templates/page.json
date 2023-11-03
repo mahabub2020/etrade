@@ -318,7 +318,7 @@
             "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
             "cta_url": "",
             "cta_img": "shopify:\/\/shop_images\/poster-02.png",
-            "reverse_order": false
+            "reverse_order": true
           }
         },
         "2ce7b226-8920-450c-8607-ccdd39ac6afa": {
