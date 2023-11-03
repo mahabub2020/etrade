@@ -35,9 +35,9 @@ class FacetFiltersForm extends HTMLElement {
 		// const countContainer = document.getElementById('ProductCount');
 		const countContainerDesktop = document.getElementById('ProductCountDesktop');
 		document.getElementById('ProductGridContainer').querySelector('.collection').classList.add('loading');
-		if (countContainer) {
-			countContainer.classList.add('loading');
-		}
+		// if (countContainer) {
+		// 	countContainer.classList.add('loading');
+		// }
 		if (countContainerDesktop) {
 			countContainerDesktop.classList.add('loading');
 		}
