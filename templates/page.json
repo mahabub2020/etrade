@@ -356,6 +356,33 @@
       "settings": {
         "ctalayout": "cta2"
       }
+    },
+    "83f376aa-a062-44a7-b925-ff72570961d8": {
+      "type": "newsletter",
+      "blocks": {
+        "template--21159461093662__83f376aa-a062-44a7-b925-ff72570961d8-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21159461093662__83f376aa-a062-44a7-b925-ff72570961d8-section_padding-1"
+      ],
+      "settings": {
+        "before_title_icon": "fas fa-envelope-open",
+        "before_title_text": "Newsletter",
+        "before_title_color": "#899fc9",
+        "title": "Get weekly update",
+        "bg_img": "shopify:\/\/shop_images\/bg-image-5.jpg",
+        "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
+      }
     }
   },
   "order": [
@@ -368,6 +395,7 @@
     "bec99a32-f605-45e5-80ce-51c3e4f8c951",
     "b025eb70-0468-4bce-80b7-a2cbcab34d1e",
     "389b4ea9-86d6-4b2d-8671-b0850fa435dd",
-    "a711bca3-775a-4e86-8cf9-27dc24a9bca0"
+    "a711bca3-775a-4e86-8cf9-27dc24a9bca0",
+    "83f376aa-a062-44a7-b925-ff72570961d8"
   ]
 }
