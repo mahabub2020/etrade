@@ -213,6 +213,22 @@
     },
     "b025eb70-0468-4bce-80b7-a2cbcab34d1e": {
       "type": "section-product-list",
+      "blocks": {
+        "c447e89f-9999-4bb3-a652-a8e91e842f5c": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 8,
+            "section_padding_bottom": 6,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "c447e89f-9999-4bb3-a652-a8e91e842f5c"
+      ],
       "settings": {
         "is_section_title": true,
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
