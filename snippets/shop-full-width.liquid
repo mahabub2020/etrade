@@ -1,269 +1,259 @@
 <div class="col-12">
   <div class="main-content">
-    <header class="woocommerce-products-header"></header>
-    <div class="woocommerce-notices-wrapper"></div>
-    <div class="axil-shop-top">
-      <div class="row">
-        <div class="col-lg-9">
-          {% comment %} Default Filter {% endcomment %}
-          {% if section.settings.filter_style == "default" %}
-            <form class="filter-form">
-              {%- for filter in collection.filters -%}
-                <details class="filter-group">
-                  <summary class="filter-group-summary">
-                    <div>
-                      <span>{{ filter.label }}</span>
-        
-                      {%- if filter.active_values.size > 0 -%}
-                        <span>({{ filter.active_values.size }})</span>
-                      {%- endif -%}
-                    </div>
-                  </summary>
-        
-                  <div class="filter-group-display">
-                    <div class="filter-group-display__header">
-                      <span class="filter-group-display__header-selected">{{ filter.active_values.size }} selected</span>
-        
-                      {%- if filter.active_values.size > 0 -%}
-                        <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset">Reset</a>
-                      {%- endif -%}
-                    </div>
-        
-                    {%- case filter.type -%}
-                      {%- when 'boolean' or 'list' -%}
-                      <ul class="filter-group-display__list">
-                        {%- for filter_value in filter.values -%}
-                          <li class="filter-group-display__list-item">
-                            <label for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
-                              <input
-                                type="checkbox"
-                                name="{{ filter_value.param_name }}"
-                                value="{{ filter_value.value }}"
-                                id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
-                                {% if filter_value.active -%}checked{%- endif %}
-                                {% if filter_value.count == 0 and filter_value.active == false -%}disabled{%- endif %}>{{ filter_value.label }}</label>
-                          </li>
+    {% comment %} <header class="woocommerce-products-header"></header>
+    <div class="woocommerce-notices-wrapper"></div> {% endcomment %}
+
+    <div class="product-grid-container" id="ProductGridContainer">
+      {% paginate collections['all'].products by 6 %}
+        <div class="axil-shop-top">
+          <div class="row">
+            <div class="col-lg-9">
+              {% comment %} Default Filter {% endcomment %}
+              {% if section.settings.filter_style == "default" %}
+                <form class="filter-form">
+                  {%- for filter in collection.filters -%}
+                    <details class="filter-group">
+                      <summary class="filter-group-summary">
+                        <div>
+                          <span>{{ filter.label }}</span>
+            
+                          {%- if filter.active_values.size > 0 -%}
+                            <span>({{ filter.active_values.size }})</span>
+                          {%- endif -%}
+                        </div>
+                      </summary>
+            
+                      <div class="filter-group-display">
+                        <div class="filter-group-display__header">
+                          <span class="filter-group-display__header-selected">{{ filter.active_values.size }} selected</span>
+            
+                          {%- if filter.active_values.size > 0 -%}
+                            <a href="{{ filter.url_to_remove }}" class="filter-group-display__header-reset">Reset</a>
+                          {%- endif -%}
+                        </div>
+            
+                        {%- case filter.type -%}
+                          {%- when 'boolean' or 'list' -%}
+                          <ul class="filter-group-display__list">
+                            {%- for filter_value in filter.values -%}
+                              <li class="filter-group-display__list-item">
+                                <label for="Filter-{{ filter.param_name }}-{{ forloop.index }}">
+                                  <input
+                                    type="checkbox"
+                                    name="{{ filter_value.param_name }}"
+                                    value="{{ filter_value.value }}"
+                                    id="Filter-{{ filter.param_name }}-{{ forloop.index }}"
+                                    {% if filter_value.active -%}checked{%- endif %}
+                                    {% if filter_value.count == 0 and filter_value.active == false -%}disabled{%- endif %}>{{ filter_value.label }}</label>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+            
+                          <div class="filter-group-display__submit">
+                            <input type="submit" value="Apply">
+                          </div>
+                          {%- when 'price_range' -%}
+                          <div class="filter-group-display__price-range">
+                            <div class="filter-group-display__price-range-from">
+                              <span>{{ cart.currency.symbol }}</span>
+            
+                              <input name="{{ filter.min_value.param_name }}"id="Filter-{{ filter.min_value.param_name }}"{% if filter.min_value.value -%}value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"{%- endif %}type="number"placeholder="0"min="0"max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+            
+                              <label for="Filter-{{ filter.min_value.param_name }}">From</label>
+                            </div>
+                            <div class="filter-group-display__price-range-to">
+                              <span>{{ cart.currency.symbol }}</span>
+            
+                              <input name="{{ filter.max_value.param_name }}"id="Filter-{{ filter.max_value.param_name }}"{% if filter.max_value.value -%}value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"{%- endif %}type="number"placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"min="0"max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
+            
+                              <label for="Filter-{{ filter.max_value.param_name }}">To</label>
+                            </div>
+                          </div>
+            
+                          <div class="filter-group-display__submit">
+                            <input type="submit" value="Apply">
+                          </div>
+                        {%- endcase -%}
+                      </div>
+                    </details>
+                  {%- endfor -%}
+            
+                  <div class="active-filters">
+                    <a href="{{ collection.url }}?sort_by={{ collection.sort_by }}" class="active-filters__clear">Clear all</a>
+            
+                    {%- for filter in collection.filters -%}
+                      {%- if filter.type == "price_range" -%}
+                        {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
+                          <a class="active-filters__remove-filter" href="{{ filter.url_to_remove }}">
+                            {%- assign min_value = filter.min_value.value | default: 0 -%}
+                            {%- assign max_value = filter.max_value.value | default: filter.range_max -%}
+                            {{ min_value | money }} - {{ max_value | money }} X
+                          </a>
+                        {%- endif -%}
+                      {%- else -%}
+                        {%- for filter_value in filter.active_values -%}
+                          <a class="active-filters__remove-filter" href="{{ filter_value.url_to_remove }}">
+                            {{ filter.label }}: {{ filter_value.label }} X
+                          </a>
                         {%- endfor -%}
-                      </ul>
-        
-                      <div class="filter-group-display__submit">
-                        <input type="submit" value="Apply">
-                      </div>
-                      {%- when 'price_range' -%}
-                      <div class="filter-group-display__price-range">
-                        <div class="filter-group-display__price-range-from">
-                          <span>{{ cart.currency.symbol }}</span>
-        
-                          <input name="{{ filter.min_value.param_name }}"id="Filter-{{ filter.min_value.param_name }}"{% if filter.min_value.value -%}value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"{%- endif %}type="number"placeholder="0"min="0"max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
-        
-                          <label for="Filter-{{ filter.min_value.param_name }}">From</label>
-                        </div>
-                        <div class="filter-group-display__price-range-to">
-                          <span>{{ cart.currency.symbol }}</span>
-        
-                          <input name="{{ filter.max_value.param_name }}"id="Filter-{{ filter.max_value.param_name }}"{% if filter.max_value.value -%}value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"{%- endif %}type="number"placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"min="0"max="{{ filter.range_max | money_without_currency | replace: ',', '' }}">
-        
-                          <label for="Filter-{{ filter.max_value.param_name }}">To</label>
-                        </div>
-                      </div>
-        
-                      <div class="filter-group-display__submit">
-                        <input type="submit" value="Apply">
-                      </div>
-                    {%- endcase -%}
-                  </div>
-                </details>
-              {%- endfor -%}
-        
-              <div class="active-filters">
-                <a href="{{ collection.url }}?sort_by={{ collection.sort_by }}" class="active-filters__clear">Clear all</a>
-        
-                {%- for filter in collection.filters -%}
-                  {%- if filter.type == "price_range" -%}
-                    {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
-                      <a class="active-filters__remove-filter" href="{{ filter.url_to_remove }}">
-                        {%- assign min_value = filter.min_value.value | default: 0 -%}
-                        {%- assign max_value = filter.max_value.value | default: filter.range_max -%}
-                        {{ min_value | money }} - {{ max_value | money }} X
-                      </a>
-                    {%- endif -%}
-                  {%- else -%}
-                    {%- for filter_value in filter.active_values -%}
-                      <a class="active-filters__remove-filter" href="{{ filter_value.url_to_remove }}">
-                        {{ filter.label }}: {{ filter_value.label }} X
-                      </a>
+                      {%- endif- %}
                     {%- endfor -%}
-                  {%- endif- %}
-                {%- endfor -%}
+                  </div>
+                </form>
+              {% else %}
+                {% comment %} Facets filter {% endcomment %}
+                {% render 'facets',
+                  results: collection,
+                  enable_filtering: true,
+                  enable_sorting: true,
+                  filter_type: 'vertical',
+                  paginate: paginate
+                %}
+                  
+              {% endif %}
+            </div>
+            <div class="col-lg-3">
+              <div class="category-select justify-content-lg-end">
+                {% if section.settings.enable_sorting %}
+                  <div class="toolbar-sorter sorter">
+                    <facet-filters-form class="facets no-js-hidden">
+                      <form class="facets-vertical-form" id="FacetSortForm">
+                        <div class="sorting caption">
+                          <div class="facet-filters__field">
+                            <div class="select">
+                              {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                              <select
+                                  name="sort_by"
+                                  id="SortBy"
+                                  aria-describedby="a11y-refresh-page-message"
+                              >
+                                {%- for option in collection.sort_options -%}
+                                  <option
+                                      value="{{ option.value | escape }}"
+                                      {% if option.value == sort_by %}
+                                        selected="selected"
+                                      {% endif %}
+                                  >
+                                    {{ option.name | escape }}
+                                  </option>
+                                {%- endfor -%}
+                              </select>
+                            </div>
+                          </div>
+                          <noscript>
+                            <button
+                                type="submit"
+                                class="facets__button-no-js button"
+                            >
+                              {{ 'products.facets.sort_button' | t }}
+                            </button>
+                          </noscript>
+                        </div>
+                      </form>
+                    </facet-filters-form>
+                  </div>
+                {% endif %}
               </div>
-            </form>
-          {% else %}
-            {% comment %} Facets filter {% endcomment %}
-            {% render 'facets',
-              results: collection,
-              enable_filtering: true,
-              enable_sorting: true,
-              filter_type: 'vertical',
-              paginate: paginate
-            %}
-              
-          {% endif %}
-        </div>
-        <div class="col-lg-3">
-          <div class="category-select justify-content-lg-end">
-            <div class="sort-list">
-              <form class="woocommerce-ordering" method="get">
-                <select
-                  name="orderby"
-                  class="orderby"
-                  aria-label="Shop order">
-                  <option value="menu_order" selected="selected">Default sorting</option>
-                  <option value="popularity">Sort by popularity</option>
-                  <option value="rating">Sort by average rating</option>
-                  <option value="date">Sort by latest</option>
-                  <option value="price">Sort by price: low to high</option>
-                  <option value="price-desc">Sort by price: high to low</option>
-                </select>
-                <input
-                  type="hidden"
-                  name="paged"
-                  value="1">
-                <input
-                  type="hidden"
-                  name="sidebar"
-                  value="full"><input
-                  type="hidden"
-                  name="pagination"
-                  value="numb"></form>
             </div>
           </div>
         </div>
-      </div>
+
+        <div id="product-grid" class="collection products axiltheme-archive-products  row--15 row axiltheme-loadmore-wrapper">
+          {% for product in collections['all'].products %}
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 product type-product post-1206 status-publish first instock product_cat-cleaner product_cat-kids product_cat-multipurpose product_tag-keyboard product_tag-mouse has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
+              {% comment %} <div class="axil-product product-style-one">
+              <div class="thumbnail">
+              <a href="{{ product.url }}">
+              {% if product.featured_image %}
+              <img
+              src="{{ product.featured_image | img_url: '300x300' }}"
+              class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+              alt="{{ product.title | escape }}"
+              loading="lazy">
+              {% else %}
+              {{ 'image' | placeholder_svg_tag }}
+              {% endif %}
+              </a>
+              <div class="label-block label-right">
+              <div class="product-badget">34% OFF</div>
+              </div>
+
+              <div class="product-hover-action">
+              <ul class="cart-action">
+              <li class="wishlist">
+              <a
+              href="https://dev.axilthemes.com/themes/etrade/wishlist/"
+              rel="nofollow"
+              data-product-id="1206"
+              data-title-after="Added to Wishlist"
+              class="axil-wishlist-icon axil-add-to-wishlist"
+              data-nonce="0a331db5b1"
+              target="_blank">
+              <i class="wishlist-icon far fa-heart"></i>
+              <i class="fas fa-spinner ajax-loading"></i>
+              </a>
+              </li>
+              <li class="add-to-cart select-option">
+              {% form 'product', product %}
+              <input
+              type="hidden"
+              name="id"
+              value="{{ product.selected_or_first_available_variant.id }}">
+              <input type="submit" value="Add to Cart">
+              {% endform %}
+              </a>
+              </li>
+              <li class="quickview">
+              <a
+              href="#"
+              class="yith-wcqv-button"
+              data-product_id="1206"
+              title="QuickView">
+              <i class="far fa-eye"></i>
+              </a>
+              </li>
+              </ul>
+              </div>
+              </div>
+              <div class="product-content">
+              <div class="inner">
+              <h5 class="title">
+              <a href="{{ product.url }}">{{ product.title }}</a>
+              </h5>
+
+              <div class="product-price-variant">
+              <div class="price">
+              <span class="woocommerce-Price-amount amount">{{ product.price | money }}</span>
+              </div>
+              </div>
+
+
+              </div>
+              </div>
+              </div> {% endcomment %}
+              {% if product_layout == "1" %}
+                {% render 'product-layout-1', product: product %}
+              {% elsif product_layout == "2" %}
+                {% render 'product-layout-2', product: product %}
+              {% elsif product_layout == "3" %}
+                {% render 'product-layout-3', product: product %}
+              {% elsif product_layout == "4" %}
+                {% render 'product-layout-4', product: product %}
+              {% elsif product_layout == "5" %}
+                {% render 'product-layout-5', product: product %}
+              {% elsif product_layout == "6" %}
+                {% render 'product-layout-6', product: product %}
+              {% elsif product_layout == "7" %}
+                {% render 'product-layout-7', product: product %}
+              {% else %}
+                {% render 'product-layout-8', product: product %}
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+
+        {% render 'pagination', pagination: paginate %}
+      {% endpaginate %}
     </div>
-    {% paginate collections['all'].products by 6 %}
-      <div class="products axiltheme-archive-products  row--15 row axiltheme-loadmore-wrapper">
-        {% for product in collections['all'].products %}
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 product type-product post-1206 status-publish first instock product_cat-cleaner product_cat-kids product_cat-multipurpose product_tag-keyboard product_tag-mouse has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
-            {% comment %} <div class="axil-product product-style-one">
-            <div class="thumbnail">
-            <a href="{{ product.url }}">
-            {% if product.featured_image %}
-            <img
-            src="{{ product.featured_image | img_url: '300x300' }}"
-            class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-            alt="{{ product.title | escape }}"
-            loading="lazy">
-            {% else %}
-            {{ 'image' | placeholder_svg_tag }}
-            {% endif %}
-            </a>
-            <div class="label-block label-right">
-            <div class="product-badget">34% OFF</div>
-            </div>
-
-            <div class="product-hover-action">
-            <ul class="cart-action">
-            <li class="wishlist">
-            <a
-            href="https://dev.axilthemes.com/themes/etrade/wishlist/"
-            rel="nofollow"
-            data-product-id="1206"
-            data-title-after="Added to Wishlist"
-            class="axil-wishlist-icon axil-add-to-wishlist"
-            data-nonce="0a331db5b1"
-            target="_blank">
-            <i class="wishlist-icon far fa-heart"></i>
-            <i class="fas fa-spinner ajax-loading"></i>
-            </a>
-            </li>
-            <li class="add-to-cart select-option">
-            {% form 'product', product %}
-            <input
-            type="hidden"
-            name="id"
-            value="{{ product.selected_or_first_available_variant.id }}">
-            <input type="submit" value="Add to Cart">
-            {% endform %}
-            </a>
-            </li>
-            <li class="quickview">
-            <a
-            href="#"
-            class="yith-wcqv-button"
-            data-product_id="1206"
-            title="QuickView">
-            <i class="far fa-eye"></i>
-            </a>
-            </li>
-            </ul>
-            </div>
-            </div>
-            <div class="product-content">
-            <div class="inner">
-            <h5 class="title">
-            <a href="{{ product.url }}">{{ product.title }}</a>
-            </h5>
-
-            <div class="product-price-variant">
-            <div class="price">
-            <span class="woocommerce-Price-amount amount">{{ product.price | money }}</span>
-            </div>
-            </div>
-
-
-            </div>
-            </div>
-            </div> {% endcomment %}
-            {% if product_layout == "1" %}
-              {% render 'product-layout-1', product: product %}
-            {% elsif product_layout == "2" %}
-              {% render 'product-layout-2', product: product %}
-            {% elsif product_layout == "3" %}
-              {% render 'product-layout-3', product: product %}
-            {% elsif product_layout == "4" %}
-              {% render 'product-layout-4', product: product %}
-            {% elsif product_layout == "5" %}
-              {% render 'product-layout-5', product: product %}
-            {% elsif product_layout == "6" %}
-              {% render 'product-layout-6', product: product %}
-            {% elsif product_layout == "7" %}
-              {% render 'product-layout-7', product: product %}
-            {% else %}
-              {% render 'product-layout-8', product: product %}
-            {% endif %}
-          </div>
-        {% endfor %}
-      </div>
-      {% comment %} <div class="nav-links">
-      <ul class="clearfix page-numbers">
-      <li class="pagi pagi-previous disabled">
-      <span>
-      <i class="fal fa-arrow-left"></i>
-      </span>
-      </li>
-      <li class="active">
-      <span>1</span>
-      </li>
-      <li>
-      <a href="https://dev.axilthemes.com/themes/etrade/shop/page/2/?sidebar=full&amp;pagination=numb">2</a>
-      </li>
-      <li>
-      <a href="https://dev.axilthemes.com/themes/etrade/shop/page/3/?sidebar=full&amp;pagination=numb">3</a>
-      </li>
-      <li class="dot">
-      <span>...</span>
-      </li>
-      <li>
-      <a href="https://dev.axilthemes.com/themes/etrade/shop/page/9/?sidebar=full&amp;pagination=numb">9</a>
-      </li>
-      <li class="pagi pagi-next">
-      <a href="https://dev.axilthemes.com/themes/etrade/shop/page/2/?sidebar=full&amp;pagination=numb">
-      <i class="fal fa-arrow-right"></i>
-      </a>
-      </li>
-      </ul>
-      </div> {% endcomment %}
-      {% render 'pagination', pagination: paginate %}
-    {% endpaginate %}
   </div>
 </div>
