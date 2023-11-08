@@ -4,7 +4,7 @@
     <div class="woocommerce-notices-wrapper"></div> {% endcomment %}
 
     <div class="product-grid-container" id="ProductGridContainer">
-      {% paginate collections['all'].products by 6 %}
+      {% paginate collection.products by section.settings.product_per_page %}
         <div class="axil-shop-top">
           <div class="row">
             <div class="col-lg-9">
@@ -159,78 +159,8 @@
         </div>
 
         <div id="product-grid" class="collection products axiltheme-archive-products  row--15 row axiltheme-loadmore-wrapper">
-          {% for product in collections['all'].products %}
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 product type-product post-1206 status-publish first instock product_cat-cleaner product_cat-kids product_cat-multipurpose product_tag-keyboard product_tag-mouse has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">
-              {% comment %} <div class="axil-product product-style-one">
-              <div class="thumbnail">
-              <a href="{{ product.url }}">
-              {% if product.featured_image %}
-              <img
-              src="{{ product.featured_image | img_url: '300x300' }}"
-              class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-              alt="{{ product.title | escape }}"
-              loading="lazy">
-              {% else %}
-              {{ 'image' | placeholder_svg_tag }}
-              {% endif %}
-              </a>
-              <div class="label-block label-right">
-              <div class="product-badget">34% OFF</div>
-              </div>
-
-              <div class="product-hover-action">
-              <ul class="cart-action">
-              <li class="wishlist">
-              <a
-              href="https://dev.axilthemes.com/themes/etrade/wishlist/"
-              rel="nofollow"
-              data-product-id="1206"
-              data-title-after="Added to Wishlist"
-              class="axil-wishlist-icon axil-add-to-wishlist"
-              data-nonce="0a331db5b1"
-              target="_blank">
-              <i class="wishlist-icon far fa-heart"></i>
-              <i class="fas fa-spinner ajax-loading"></i>
-              </a>
-              </li>
-              <li class="add-to-cart select-option">
-              {% form 'product', product %}
-              <input
-              type="hidden"
-              name="id"
-              value="{{ product.selected_or_first_available_variant.id }}">
-              <input type="submit" value="Add to Cart">
-              {% endform %}
-              </a>
-              </li>
-              <li class="quickview">
-              <a
-              href="#"
-              class="yith-wcqv-button"
-              data-product_id="1206"
-              title="QuickView">
-              <i class="far fa-eye"></i>
-              </a>
-              </li>
-              </ul>
-              </div>
-              </div>
-              <div class="product-content">
-              <div class="inner">
-              <h5 class="title">
-              <a href="{{ product.url }}">{{ product.title }}</a>
-              </h5>
-
-              <div class="product-price-variant">
-              <div class="price">
-              <span class="woocommerce-Price-amount amount">{{ product.price | money }}</span>
-              </div>
-              </div>
-
-
-              </div>
-              </div>
-              </div> {% endcomment %}
+          {% for product in collection.products %}
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 product type-product post-1206 status-publish first instock product_cat-cleaner product_cat-kids product_cat-multipurpose product_tag-keyboard product_tag-mouse has-post-thumbnail sale taxable shipping-taxable purchasable product-type-simple">              
               {% if product_layout == "1" %}
                 {% render 'product-layout-1', product: product %}
               {% elsif product_layout == "2" %}
