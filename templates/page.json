@@ -198,10 +198,17 @@
             "section_padding_top_xs": 46,
             "section_padding_bottom_xs": 46
           }
+        },
+        "2137a65a-f0ea-4153-8a85-091854cb6544": {
+          "type": "section_background",
+          "settings": {
+            "section_bg_color": "#af3e3e"
+          }
         }
       },
       "block_order": [
-        "75bddaaa-aeff-48ef-ab6e-52046150048f"
+        "75bddaaa-aeff-48ef-ab6e-52046150048f",
+        "2137a65a-f0ea-4153-8a85-091854cb6544"
       ],
       "settings": {
         "is_section_title": true,
