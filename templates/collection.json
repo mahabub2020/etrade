@@ -5,8 +5,8 @@
       "settings": {
         "shop_layout": "full",
         "product_layout": "1",
-        "product_per_page": 6,
-        "loading_style": "pagination",
+        "product_per_page": 8,
+        "loading_style": "load_more",
         "enable_sorting": true,
         "filter_style": "ajax"
       }
