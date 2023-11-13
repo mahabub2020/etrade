@@ -113,7 +113,7 @@
       "type": "section-multicolumn-product-carousel",
       "settings": {
         "is_section_title": true,
-        "title_layout": "style_1",
+        "title_layout": "style_2",
         "title": "Product Collectioncdas",
         "sub_title": "Recently Viewed",
         "is_countdown": true,
