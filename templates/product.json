@@ -220,6 +220,21 @@
       ],
       "settings": {
       }
+    },
+    "16998597661a7bb969": {
+      "type": "apps",
+      "blocks": {
+        "d6f68b68-bea9-4afc-899d-dcf0fb58f2d1": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "d6f68b68-bea9-4afc-899d-dcf0fb58f2d1"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -227,6 +242,7 @@
     "51429078-9b7a-40fa-99b0-c7e8baead472",
     "upsell-product",
     "3a5c998f-15ca-4d4e-98d6-f54f0615521b",
-    "16998596726eb8ee32"
+    "16998596726eb8ee32",
+    "16998597661a7bb969"
   ]
 }
