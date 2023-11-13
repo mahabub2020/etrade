@@ -118,94 +118,6 @@
         "padding_bottom": 40
       }
     },
-    "upsell-product": {
-      "type": "upsell-product",
-      "blocks": {
-        "074e81d2-402e-4075-a08f-428b49dec08d": {
-          "type": "section_margin",
-          "settings": {
-            "section_margin_top": 0,
-            "section_margin_bottom": 0,
-            "section_margin_top_md": 0,
-            "section_margin_bottom_md": 0,
-            "section_margin_top_xs": 0,
-            "section_margin_bottom_xs": 0
-          }
-        }
-      },
-      "block_order": [
-        "074e81d2-402e-4075-a08f-428b49dec08d"
-      ],
-      "settings": {
-        "container_style": "style_1",
-        "upsell_products_enable": true,
-        "section_before_title": "Your Recently",
-        "section_title": "Upsell Products",
-        "collection": "accessories",
-        "product_layout": "1",
-        "upsell_product_limit_handle": 4,
-        "autoplay_true": true,
-        "autoplay_speed": 5000,
-        "product_column": 4,
-        "product_column_md": 6,
-        "product_column_sm": 1,
-        "section_title_before": "#8c71db",
-        "section_title_color": "#282828"
-      }
-    },
-    "3a5c998f-15ca-4d4e-98d6-f54f0615521b": {
-      "type": "related-products",
-      "blocks": {
-        "e2d0019e-ff58-410d-8ccc-fc71250d5f5c": {
-          "type": "section_padding",
-          "settings": {
-            "section_padding_top": 85,
-            "section_padding_bottom": 40,
-            "section_padding_top_md": 40,
-            "section_padding_bottom_md": 80,
-            "section_padding_top_xs": 45,
-            "section_padding_bottom_xs": 60
-          }
-        },
-        "1dfe6470-d2a8-4987-80e3-150aaf605fce": {
-          "type": "section_margin",
-          "settings": {
-            "section_margin_top": 105,
-            "section_margin_bottom": 0,
-            "section_margin_top_md": 0,
-            "section_margin_bottom_md": 0,
-            "section_margin_top_xs": 0,
-            "section_margin_bottom_xs": 0
-          }
-        },
-        "b6e10c2a-bbba-41bc-a5b2-6fe013443a94": {
-          "type": "section_background",
-          "settings": {
-            "section_bg_color": "rgba(0,0,0,0)"
-          }
-        }
-      },
-      "block_order": [
-        "e2d0019e-ff58-410d-8ccc-fc71250d5f5c",
-        "1dfe6470-d2a8-4987-80e3-150aaf605fce",
-        "b6e10c2a-bbba-41bc-a5b2-6fe013443a94"
-      ],
-      "settings": {
-        "container_style": "style_1",
-        "related_products_enable": true,
-        "section_before_title": "Your Recently",
-        "section_title": "Related Products",
-        "product_layout": "1",
-        "related_product_limit_handle": 4,
-        "autoplay_true": false,
-        "autoplay_speed": 5000,
-        "product_column": 4,
-        "product_column_md": 2,
-        "product_column_sm": 1,
-        "section_title_before": "#8c71db",
-        "section_title_color": "#204a80"
-      }
-    },
     "16998596726eb8ee32": {
       "type": "apps",
       "blocks": {
@@ -240,8 +152,6 @@
   "order": [
     "template",
     "51429078-9b7a-40fa-99b0-c7e8baead472",
-    "upsell-product",
-    "3a5c998f-15ca-4d4e-98d6-f54f0615521b",
     "16998596726eb8ee32",
     "16998597661a7bb969"
   ]
