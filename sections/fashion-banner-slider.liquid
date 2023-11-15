@@ -22,7 +22,7 @@ data-slick='{
         <div class="row row--20">
             <div class="col-lg-9">
                 <div class="slider-box-wrap">
-                    <div class="slider-activation-one axil-slick-dots"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation_content }}> 
+                    <div class="axil-slick-slider slider-activation-one axil-slick-dots"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation_content }}> 
                     {% for block in section.blocks %}  
                     {% case block.type %}
                       {% when 'banner' %}
