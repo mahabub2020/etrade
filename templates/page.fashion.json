@@ -145,12 +145,13 @@
         "title": "Recently Viewed",
         "sub_title": "Recently Viewed",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
-        "is_countdown": false,
+        "is_countdown": true,
         "end_time": "2024-05-22",
         "product_collection": "fashion",
         "number_of_products_to_show": 8,
         "excluded_products": [
-
+          "copy-of-men-s-suit-separates-with-performance-stretch-fabric",
+          "women-s-winter-mid-length-thick-warm-faux-lamb-wool"
         ],
         "sort_by": "title",
         "reverse_order": false,
