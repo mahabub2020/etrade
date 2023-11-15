@@ -1,4 +1,3 @@
-   
 {%- capture data_slick_activation -%}
 data-slick='{
     {%- if section.settings.autoplay_true -%}
@@ -22,31 +21,47 @@ data-slick='{
 <!-- Start Expolre Product Area  -->
    <div class="axil-new-arrivals-product-area fullwidth-container flash-sale-area section-gap-80-35">
     <div class="container ml--xxl-0">
-     
-      {% if section.settings.is_countdown == true %}
-        {% assign is_coutdown_start = '<div class="d-md-flex align-items-end flash-sale-section axilcoutdown2">' %}
-        {% assign is_coutdown_end = '</div>' %}
-      {% else %}
-        {% assign is_coutdown_start = '' %}
-        {% assign is_coutdown_end = '' %}
-      {% endif %}
-  
-      {% if section.settings.is_section_title == true %} 
-        {{ is_coutdown_start }}
-          <div class="section-title-wrapper">
-            {% if section.settings.sub_title != blank %}  
-            <span class="title-highlighter highlighter-primary">{{ section.settings.sub_title_icon }} {{ section.settings.sub_title }} </span>
-          {% endif %} 
-          {% if section.settings.title != blank %}  
-              <h2 class="title">{{ section.settings.title }} </h2>
-            {% endif %} 
-          </div> 
-            {% if section.settings.is_countdown == true %}
-                <div data-time="{{ section.settings.end_time }}" class="sale-countdown countdown"></div>
-            {% endif %} 
-            {{ is_coutdown_end }} 
+      {% if section.settings.is_section_title %} 
+
+      {% if section.settings.title_layout == 'style_1' %}
+        <div class="section-title-border slider-section-title">
+          {% if section.settings.title != blank %}
+            <h2 class="title">{{ section.settings.title }} 
+            {% if section.settings.title_icon %}  
+            <img src="{{ section.settings.title_icon | img_url:  '60x60' }}"
+              alt="{{ section.settings.title_icon.alt | default: shop.name }}"  decoding="async"
+              loading="lazy">
+            {% endif %}  
+            </h2>
           {% endif %}
- 
+        </div>
+        {% elsif section.settings.title_layout == 'style_2' %}
+          {% if section.settings.is_countdown == true %}
+            {% assign is_coutdown_start = '<div class="d-md-flex align-items-end flash-sale-section axilcoutdown2">' %}
+            {% assign is_coutdown_end = '</div>' %}
+          {% else %}
+            {% assign is_coutdown_start = '' %}
+            {% assign is_coutdown_end = '' %}
+          {% endif %}
+    
+          {{ is_coutdown_start }}
+            <div class="section-title-wrapper">
+              {% if section.settings.sub_title != blank %}  
+                <span class="title-highlighter highlighter-primary"><i class="far fa-shopping-basket"></i> {{ section.settings.sub_title }} </span>
+              {% endif %}
+              {% if section.settings.title != blank %}  
+                <h2 class="title">{{ section.settings.title }} </h2>
+              {% endif %}
+            </div>
+    
+              {% if section.settings.is_countdown == true %}
+                  <div data-time="{{ section.settings.end_time }}" class="sale-countdown countdown"></div>
+              {% endif %}
+              
+              {{ is_coutdown_end }}
+        {% endif %}   
+      {% endif %}
+      
         <div class="axil-slick-slider recently-viwed-activation slick-layout-wrapper--15 axil-slick-angle angle-top-slide"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
           {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
             <div class="slick-single-layout">
