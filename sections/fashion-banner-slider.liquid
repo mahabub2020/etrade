@@ -1,10 +1,28 @@
+ 
+{%- capture data_slick_activation_content -%}
+data-slick='{   
+{%- if section.settings.autoplay_true -%}
+"autoplay": true,
+"autoplaySpeed": {{ section.settings.autoplay_speed }},
+{%- endif -%}   
+"slidesToScroll": 1,
+"slidesToShow": 1, 
+"arrows": false,
+"dots": false,
+"focusOnSelect": false, 
+"speed": 500,
+"fade": true,
+"infinite": true,   
+}'
+{%- endcapture -%}
+
 <div id="section-{{ section.id }}" class="axil-main-slider-area main-slider-style-2">
   <div class="container">
     <div class="slider-offset-left">
         <div class="row row--20">
             <div class="col-lg-9">
                 <div class="slider-box-wrap">
-                    <div class="slider-activation-one axil-slick-dots"> 
+                    <div class="slider-activation-one axil-slick-dots"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation_content }}> 
                     {% for block in section.blocks %}  
                     {% case block.type %}
                       {% when 'banner' %}
@@ -53,8 +71,7 @@
 <style>
   #section-{{ section.id }}.main-slider-style-2 .slider-offset-left {
     margin-left: {{ section.settings.left_offset }}px; 
-}
-
+} 
 </style>
 
 

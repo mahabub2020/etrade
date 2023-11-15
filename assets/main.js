@@ -4,7 +4,7 @@
 
         $(document).ready(function(){
             slider_slick_activation_two();
-            slider_slick_activation_one();
+            //slider_slick_activation_one();
              
             readyActivation();
           
