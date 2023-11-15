@@ -1,17 +1,31 @@
    <!-- Start Expolre Product Area  -->
    <div class="axil-new-arrivals-product-area fullwidth-container flash-sale-area section-gap-80-35">
     <div class="container ml--xxl-0">
-      {% if section.settings.title != blank %}
-        <div class="section-title-border slider-section-title">
-            <h2 class="title">{{ section.settings.title }} 
-            {% if section.settings.title_icon %}  
-             <img src="{{ section.settings.title_icon | img_url:  '60x60' }}"
-              alt="{{ section.settings.title_icon.alt | default: shop.name }}"  decoding="async"
-              loading="lazy">
-            {% endif %}  
-            </h2> 
-        </div>
+     
+      {% if section.settings.is_countdown == true %}
+        {% assign is_coutdown_start = '<div class="d-md-flex align-items-end flash-sale-section axilcoutdown2">' %}
+        {% assign is_coutdown_end = '</div>' %}
+      {% else %}
+        {% assign is_coutdown_start = '' %}
+        {% assign is_coutdown_end = '' %}
       {% endif %}
+  
+      {% if section.settings.is_section_title == true %} 
+        {{ is_coutdown_start }}
+          <div class="section-title-wrapper">
+            {% if section.settings.sub_title != blank %}  
+            <span class="title-highlighter highlighter-primary">{{ section.settings.sub_title_icon }} {{ section.settings.sub_title }} </span>
+          {% endif %} 
+          {% if section.settings.title != blank %}  
+              <h2 class="title">{{ section.settings.title }} </h2>
+            {% endif %} 
+          </div> 
+            {% if section.settings.is_countdown == true %}
+                <div data-time="{{ section.settings.end_time }}" class="sale-countdown countdown"></div>
+            {% endif %} 
+            {{ is_coutdown_end }} 
+          {% endif %}
+ 
         <div class="recently-viwed-activation slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
           {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
 
@@ -32,17 +46,52 @@
   "name": "RS Product Carousel",
   "settings": [
     {
+      "type": "checkbox",
+      "id": "is_section_title",
+      "label": "Enable Section Title"
+    },
+    {
       "type": "text",
       "id": "title",
-      "default": "Recently Viewed",
+      "default": "New Arrivals",
       "label": "Title"
     },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "default": "Recently Viewed",
+      "label": "Sub Title"
+    }, 
+    {
+      "type": "html",
+      "id": "sub_title_icon",
+      "default": "<i class='fas fa-tags'></i>",
+      "label": "Before Icon",
+      "info": "Recommended Fontawesome Icon"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_countdown",
+      "label": "Disable Countdown"
+    },
+    {
+      "type": "text",
+      "id": "end_time",
+      "label": "End date and time",
+      "default": "2024-05-22",
+      "info": "Format: yyyy-mm-dd"
+    },
+
+    
     {
       "type": "image_picker",
       "id": "title_icon",
       "label": "Title Icon",
       "info": "Recommended Size: 60 x 60px"
     },
+
+
+
     {
       "type": "collection",
       "id": "product_collection", 
