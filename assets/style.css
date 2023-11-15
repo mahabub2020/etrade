@@ -25862,3 +25862,12 @@ select.dokan-form-control, input.dokan-form-control {
   margin-top: 24px;
   margin-bottom: 20px;
 }
+
+.service-box .icon {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
