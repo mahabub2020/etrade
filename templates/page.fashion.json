@@ -137,11 +137,21 @@
         "col_sm": "2",
         "col_mobile": "1"
       }
+    },
+    "2dfda938-fd1e-48f1-a821-d2eb0356929b": {
+      "type": "section-rightstretch-product-carousel",
+      "settings": {
+        "title": "Recently Viewed",
+        "product_collection": "fashion",
+        "number_of_products_to_show": 8,
+        "product_layout": "1"
+      }
     }
   },
   "order": [
     "main",
     "26cccca4-b6b4-40c1-806d-95a98890f20a",
-    "00ab6f59-69a7-4134-9807-1c0ddf46339b"
+    "00ab6f59-69a7-4134-9807-1c0ddf46339b",
+    "2dfda938-fd1e-48f1-a821-d2eb0356929b"
   ]
 }
