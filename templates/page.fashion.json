@@ -49,10 +49,99 @@
         "product_url": "",
         "product_img": "shopify:\/\/shop_images\/product-41.png"
       }
+    },
+    "00ab6f59-69a7-4134-9807-1c0ddf46339b": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--21507254386974__00ab6f59-69a7-4134-9807-1c0ddf46339b-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Fast & Secure Delivery<\/strong><\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service1.png"
+          }
+        },
+        "6a307e67-3426-4955-83a0-dcc3735691bc": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>100% Guarantee On Product<\/strong><\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
+          }
+        },
+        "template--21507254386974__00ab6f59-69a7-4134-9807-1c0ddf46339b-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        },
+        "fcb08c27-68d1-48f5-99be-616cad04214d": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>24 Hour Return Policy<\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service3.png"
+          }
+        },
+        "7891d32e-3fbc-4d97-844b-c56a10f3095d": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>24 Hour Return Policy<\/strong><\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service4.png"
+          }
+        },
+        "13a264c8-3ba3-4577-a38e-212f4076ec17": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service5.png"
+          }
+        },
+        "d7ceaef3-c145-4923-883d-79f4da3ad7e5": {
+          "type": "section_margin",
+          "settings": {
+            "section_margin_top": 40,
+            "section_margin_bottom": 0,
+            "section_margin_top_md": 0,
+            "section_margin_bottom_md": 0,
+            "section_margin_top_xs": 0,
+            "section_margin_bottom_xs": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--21507254386974__00ab6f59-69a7-4134-9807-1c0ddf46339b-whyus-1",
+        "6a307e67-3426-4955-83a0-dcc3735691bc",
+        "template--21507254386974__00ab6f59-69a7-4134-9807-1c0ddf46339b-section_padding-1",
+        "fcb08c27-68d1-48f5-99be-616cad04214d",
+        "7891d32e-3fbc-4d97-844b-c56a10f3095d",
+        "13a264c8-3ba3-4577-a38e-212f4076ec17",
+        "d7ceaef3-c145-4923-883d-79f4da3ad7e5"
+      ],
+      "settings": {
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout1",
+        "col_xl": "5",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
     }
   },
   "order": [
     "main",
-    "26cccca4-b6b4-40c1-806d-95a98890f20a"
+    "26cccca4-b6b4-40c1-806d-95a98890f20a",
+    "00ab6f59-69a7-4134-9807-1c0ddf46339b"
   ]
 }
