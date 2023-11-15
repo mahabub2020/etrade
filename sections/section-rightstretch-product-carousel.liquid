@@ -1,4 +1,25 @@
-   <!-- Start Expolre Product Area  -->
+   
+{%- capture data_slick_activation -%}
+data-slick='{
+    {%- if section.settings.autoplay_true -%}
+    "autoplay": true,
+    "autoplaySpeed": {{ section.settings.autoplay_speed }},
+    {%- endif -%} 
+    "slidesToScroll": 1,
+    "slidesToShow": {{ section.settings.product_column }}, 
+    "arrows": true,
+    {% if settings.rtl_enable %} "rtl": true,{% endif %} 
+    "dots": false,   
+    "nextArrow": "<button class=\"slide-arrow prev-arrow\"><i class=\"fal fa-long-arrow-left\"></i></button>", 
+    "prevArrow": "<button class=\"slide-arrow next-arrow\"><i class=\"fal fa-long-arrow-right\"></i></button>",
+      "responsive":[
+          {"breakpoint":992, "settings": {"slidesToShow": {{ section.settings.product_column_lg }}} },
+          {"breakpoint":768, "settings": {"slidesToShow": {{ section.settings.product_column_md }}} },
+          {"breakpoint":480, "settings": {"slidesToShow": {{ section.settings.product_column_sm }}} }
+        ]  
+}'
+{%- endcapture -%}
+<!-- Start Expolre Product Area  -->
    <div class="axil-new-arrivals-product-area fullwidth-container flash-sale-area section-gap-80-35">
     <div class="container ml--xxl-0">
      
@@ -26,7 +47,7 @@
             {{ is_coutdown_end }} 
           {% endif %}
  
-        <div class="recently-viwed-activation slick-layout-wrapper--15 axil-slick-angle angle-top-slide">
+        <div class="axil-slick-slider recently-viwed-activation slick-layout-wrapper--15 axil-slick-angle angle-top-slide"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
           {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}
             <div class="slick-single-layout">
               {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
@@ -51,58 +72,36 @@
       "label": "Enable Section Title"
     },
     {
-      "type": "select",
-      "id": "title_layout",
-      "label": "Title Layout",
-      "options": [
-        {
-          "label": "Layout 1",
-          "value": "style_1"
-        },
-        {
-          "label": "Layout 2",
-          "value": "style_2"
-        }
-       
-      ]
-    }, 
-    {
       "type": "text",
       "id": "title",
       "default": "New Arrivals",
-      "label": "Title",
-      "info": "Ttile Layout 1 & 2"
+      "label": "Title"
     },
     {
       "type": "text",
       "id": "sub_title",
       "default": "Recently Viewed",
-      "label": "Sub Title",
-      "info": "Ttile Layout 2"
+      "label": "Sub Title"
+    }, 
+    {
+      "type": "html",
+      "id": "sub_title_icon",
+      "default": "<i class='fas fa-tags'></i>",
+      "label": "Before Icon",
+      "info": "Recommended Fontawesome Icon"
     },
     {
       "type": "checkbox",
       "id": "is_countdown",
-      "label": "Disable Countdown",
-      "info": "Ttile Layout 2"
+      "label": "Disable Countdown"
     },
     {
       "type": "text",
       "id": "end_time",
       "label": "End date and time",
       "default": "2024-05-22",
-      "info": "Format: yyyy-mm-dd",
-      "info": "Ttile Layout 2"
+      "info": "Format: yyyy-mm-dd"
     },
-    
-    {
-      "type": "image_picker",
-      "id": "title_icon",
-      "label": "Title Icon",
-      "info": "Recommended Size: 60 x 60px",
-      "info": "Ttile Layout 1"
-    },
-
     {
       "type": "collection",
       "id": "product_collection", 
@@ -118,6 +117,39 @@
       "default": 8,
       "label": "Number of products to show"
     }, 
+    {
+      "type": "product_list",
+      "id": "excluded_products",
+      "label": "Product To Exclude"
+    }, 
+    {
+      "type": "number",
+      "id": "offset_product",
+      "label": "Offset"
+    }, 
+    {
+      "type": "select",
+      "id": "sort_by",
+      "label": "Sort By",
+      "options": [
+        {
+          "label": "Name",
+          "value": "title"
+        }, {
+          "label": "Price",
+          "value": "price"
+        }, {
+          "label": "Date",
+          "value": "published_at"
+        }
+      ],
+      "default": "title"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "reverse_order",
+      "label": "Reverse Order"
+    },
     {
       "type": "select",
       "id": "product_layout",
@@ -152,12 +184,254 @@
           "value": "8"
         }
       ]
+    },
+    {
+      "type": "header",
+      "content": "Slider Options"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_true",
+      "label": "Autoplay Enable",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 1000,
+      "max": 9000,
+      "step": 1000,
+      "label": "Autoplay Speed",
+      "unit": "ms",
+      "default": 5000
+    },
+    {
+      "type": "header",
+      "content": "Product Carousel Column"
+    },
+    {
+      "type": "range",
+      "id": "product_column",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Desktop",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "product_column_lg",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Laptop",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "product_column_md",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Tablet",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "product_column_sm",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": "Mobile",
+      "default": 2
+    } 
+  ],
+  "blocks": [ 
+    {
+      "type": "section_padding",
+      "name": "Section Padding",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Large/Desktop Device"
+        },
+        {
+          "type": "range",
+          "id": "section_padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Padding Top",
+          "unit": "px",
+          "default": 60
+        },
+        {
+          "type": "range",
+          "id": "section_padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Padding Bottom",
+          "unit": "px",
+          "default": 60
+        },
+        {
+          "type": "header",
+          "content": "Tablet Device"
+        },
+        {
+          "type": "range",
+          "id": "section_padding_top_md",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Padding Top",
+          "unit": "px",
+          "default": 46
+        },
+        {
+          "type": "range",
+          "id": "section_padding_bottom_md",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Padding Bottom",
+          "unit": "px",
+          "default": 46
+        },
+        {
+          "type": "header",
+          "content": "Mobile Device"
+        },
+        {
+          "type": "range",
+          "id": "section_padding_top_xs",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Padding Top",
+          "unit": "px",
+          "default": 46
+        },
+        {
+          "type": "range",
+          "id": "section_padding_bottom_xs",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Padding Bottom",
+          "unit": "px",
+          "default": 46
+        }
+      ]
+    },
+    {
+      "type": "section_margin",
+      "name": "Section Margin",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Large/Desktop Device"
+        },
+        {
+          "type": "range",
+          "id": "section_margin_top",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Margin Top",
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "section_margin_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Margin Bottom",
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Tablet Device"
+        },
+        {
+          "type": "range",
+          "id": "section_margin_top_md",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Margin Top",
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "section_margin_bottom_md",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Margin Bottom",
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Mobile Device"
+        },
+        {
+          "type": "range",
+          "id": "section_margin_top_xs",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Margin Top",
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "section_margin_bottom_xs",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Margin Bottom",
+          "unit": "px",
+          "default": 0
+        }
+      ]
+    },
+    {
+      "type": "section_background",
+      "name": "Section Background",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "section_bg_image",
+          "label": "BG Image"
+        },
+        {
+          "type": "color",
+          "id": "section_bg_color",
+          "label": "BG Color",
+          "default": "#ffffff"
+        }
+      ]
     }
-    
   ],
   "presets": [
     {
-      "name": "RS Product Carousel"
+      "name": "RS Product Carousel",
+      "blocks": [
+        {
+          "type": "section_padding"
+        }
+      ]
     }
   ]
 }
