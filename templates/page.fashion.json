@@ -4,5 +4,8 @@
           "type": "template-fashion",
           "settings": {}
       }
-  }
+  },
+  "order": [
+    "main"
+  ]
 }
