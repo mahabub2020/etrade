@@ -1,9 +1,10 @@
- {
+{
   "sections": {
-      "main": {
-          "type": "page-fashion",
-          "settings": {}
+    "main": {
+      "type": "page-fashion",
+      "settings": {
       }
+    }
   },
   "order": [
     "main"
