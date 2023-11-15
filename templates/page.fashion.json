@@ -69,17 +69,6 @@
             "ws_img": "shopify:\/\/shop_images\/service2.png"
           }
         },
-        "template--21507254386974__00ab6f59-69a7-4134-9807-1c0ddf46339b-section_padding-1": {
-          "type": "section_padding",
-          "settings": {
-            "section_padding_top": 0,
-            "section_padding_bottom": 100,
-            "section_padding_top_md": 0,
-            "section_padding_bottom_md": 80,
-            "section_padding_top_xs": 0,
-            "section_padding_bottom_xs": 60
-          }
-        },
         "fcb08c27-68d1-48f5-99be-616cad04214d": {
           "type": "whyus",
           "settings": {
@@ -114,16 +103,27 @@
             "section_margin_top_xs": 0,
             "section_margin_bottom_xs": 0
           }
+        },
+        "cb9b20e4-303d-4597-a503-41bed654d4c4": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 0,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 0,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 0
+          }
         }
       },
       "block_order": [
         "template--21507254386974__00ab6f59-69a7-4134-9807-1c0ddf46339b-whyus-1",
         "6a307e67-3426-4955-83a0-dcc3735691bc",
-        "template--21507254386974__00ab6f59-69a7-4134-9807-1c0ddf46339b-section_padding-1",
         "fcb08c27-68d1-48f5-99be-616cad04214d",
         "7891d32e-3fbc-4d97-844b-c56a10f3095d",
         "13a264c8-3ba3-4577-a38e-212f4076ec17",
-        "d7ceaef3-c145-4923-883d-79f4da3ad7e5"
+        "d7ceaef3-c145-4923-883d-79f4da3ad7e5",
+        "cb9b20e4-303d-4597-a503-41bed654d4c4"
       ],
       "settings": {
         "is_section_title": false,
