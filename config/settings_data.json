@@ -21,7 +21,7 @@
           "logo": "shopify:\/\/shop_images\/logo.png",
           "logo_width": 150,
           "header_primary_menu": "main-menu",
-          "header_cat_menu": "main-menu",
+          "header_cat_menu": "collections-menu",
           "search_enable": true,
           "search_placeholder": "What are you looking for?",
           "search_title": "Start typing and press Enter to search",
