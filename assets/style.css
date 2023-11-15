@@ -25857,3 +25857,8 @@ select.dokan-form-control, input.dokan-form-control {
   background: transparent;
   border: none;
 }
+
+.main-slider-style-2 .slider-offset-left {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
