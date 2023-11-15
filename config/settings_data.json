@@ -9,7 +9,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "header_style": "header_style_1",
+          "header_style": "header_style_3",
           "header_top_enable": true,
           "header_languages_enable": true,
           "header_currency_enable": true,
