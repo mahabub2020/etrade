@@ -141,10 +141,26 @@
     "2dfda938-fd1e-48f1-a821-d2eb0356929b": {
       "type": "section-rightstretch-product-carousel",
       "settings": {
+        "is_section_title": true,
         "title": "Recently Viewed",
+        "sub_title": "Recently Viewed",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
         "product_collection": "fashion",
         "number_of_products_to_show": 8,
-        "product_layout": "1"
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
       }
     }
   },
