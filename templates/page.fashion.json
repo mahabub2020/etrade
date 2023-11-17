@@ -140,11 +140,34 @@
     },
     "2dfda938-fd1e-48f1-a821-d2eb0356929b": {
       "type": "section-rightstretch-product-carousel",
+      "blocks": {
+        "7197aa47-19e7-4020-bd48-6b53075c76ea": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 8,
+            "section_padding_bottom": 4,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        },
+        "c8f9a6c8-f5a2-4e32-9aaa-50d9e1dafde2": {
+          "type": "section_background",
+          "settings": {
+            "section_bg_color": "#bababa"
+          }
+        }
+      },
+      "block_order": [
+        "7197aa47-19e7-4020-bd48-6b53075c76ea",
+        "c8f9a6c8-f5a2-4e32-9aaa-50d9e1dafde2"
+      ],
       "settings": {
         "is_section_title": true,
+        "title_layout": "style_1",
         "title": "Recently Viewed",
         "sub_title": "Recently Viewed",
-        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "is_countdown": true,
         "end_time": "2024-05-22",
         "product_collection": "fashion",
