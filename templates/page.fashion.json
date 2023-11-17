@@ -144,8 +144,8 @@
         "7197aa47-19e7-4020-bd48-6b53075c76ea": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 8,
-            "section_padding_bottom": 4,
+            "section_padding_top": 34,
+            "section_padding_bottom": 30,
             "section_padding_top_md": 46,
             "section_padding_bottom_md": 46,
             "section_padding_top_xs": 46,
@@ -155,7 +155,8 @@
         "c8f9a6c8-f5a2-4e32-9aaa-50d9e1dafde2": {
           "type": "section_background",
           "settings": {
-            "section_bg_color": "#bababa"
+            "section_bg_image": "shopify:\/\/shop_images\/20n.jpg",
+            "section_bg_color": "{{ shop.brand.colors.primary[0].background }}"
           }
         }
       },
@@ -170,6 +171,7 @@
         "sub_title": "Recently Viewed",
         "is_countdown": true,
         "end_time": "2024-05-22",
+        "title_icon": "shopify:\/\/shop_images\/service10.png",
         "product_collection": "fashion",
         "number_of_products_to_show": 8,
         "excluded_products": [
@@ -177,6 +179,47 @@
           "women-s-winter-mid-length-thick-warm-faux-lamb-wool"
         ],
         "offset_product": 0,
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1",
+        "autoplay_true": true,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
+    },
+    "aae6cd26-4fd6-46a1-b5cc-1241bf092cfa": {
+      "type": "section-product-carousel",
+      "blocks": {
+        "template--21507254386974__aae6cd26-4fd6-46a1-b5cc-1241bf092cfa-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21507254386974__aae6cd26-4fd6-46a1-b5cc-1241bf092cfa-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": true,
+        "end_time": "2024-05-22",
+        "product_collection": "fashion",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
         "sort_by": "title",
         "reverse_order": false,
         "product_layout": "1",
@@ -193,6 +236,7 @@
     "main",
     "26cccca4-b6b4-40c1-806d-95a98890f20a",
     "00ab6f59-69a7-4134-9807-1c0ddf46339b",
-    "2dfda938-fd1e-48f1-a821-d2eb0356929b"
+    "2dfda938-fd1e-48f1-a821-d2eb0356929b",
+    "aae6cd26-4fd6-46a1-b5cc-1241bf092cfa"
   ]
 }
