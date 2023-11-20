@@ -361,12 +361,30 @@
             "wscontent": "Within 10 days.",
             "ws_img": "shopify:\/\/shop_images\/service5.png"
           }
+        },
+        "ca4b6805-9c08-4235-8c31-061fa57e7273": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>24 Hour Return Policy<\/strong><\/p>",
+            "wscontent": "No question ask.",
+            "ws_img": "shopify:\/\/shop_images\/service1.png"
+          }
+        },
+        "f5e35f88-06b6-4ef6-ba3c-a4d00625a96a": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Pro Quality Support<\/p>",
+            "wscontent": "24\/7 Live support.",
+            "ws_img": "shopify:\/\/shop_images\/service4.png"
+          }
         }
       },
       "block_order": [
         "template--21507254386974__35dffd7a-4973-46ac-9819-0f98232c288d-whyus-1",
         "template--21507254386974__35dffd7a-4973-46ac-9819-0f98232c288d-section_padding-1",
-        "6549b8ed-c936-4b2f-b06d-49a851721adb"
+        "6549b8ed-c936-4b2f-b06d-49a851721adb",
+        "ca4b6805-9c08-4235-8c31-061fa57e7273",
+        "f5e35f88-06b6-4ef6-ba3c-a4d00625a96a"
       ],
       "settings": {
         "is_section_title": false,
