@@ -140,30 +140,6 @@
     },
     "2dfda938-fd1e-48f1-a821-d2eb0356929b": {
       "type": "section-rightstretch-product-carousel",
-      "blocks": {
-        "7197aa47-19e7-4020-bd48-6b53075c76ea": {
-          "type": "section_padding",
-          "settings": {
-            "section_padding_top": 34,
-            "section_padding_bottom": 30,
-            "section_padding_top_md": 46,
-            "section_padding_bottom_md": 46,
-            "section_padding_top_xs": 46,
-            "section_padding_bottom_xs": 46
-          }
-        },
-        "c8f9a6c8-f5a2-4e32-9aaa-50d9e1dafde2": {
-          "type": "section_background",
-          "settings": {
-            "section_bg_image": "shopify:\/\/shop_images\/20n.jpg",
-            "section_bg_color": "{{ shop.brand.colors.primary[0].background }}"
-          }
-        }
-      },
-      "block_order": [
-        "7197aa47-19e7-4020-bd48-6b53075c76ea",
-        "c8f9a6c8-f5a2-4e32-9aaa-50d9e1dafde2"
-      ],
       "settings": {
         "is_section_title": true,
         "title_layout": "style_1",
