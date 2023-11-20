@@ -168,22 +168,6 @@
     },
     "aae6cd26-4fd6-46a1-b5cc-1241bf092cfa": {
       "type": "section-product-carousel",
-      "blocks": {
-        "template--21507254386974__aae6cd26-4fd6-46a1-b5cc-1241bf092cfa-section_padding-1": {
-          "type": "section_padding",
-          "settings": {
-            "section_padding_top": 60,
-            "section_padding_bottom": 60,
-            "section_padding_top_md": 46,
-            "section_padding_bottom_md": 46,
-            "section_padding_top_xs": 46,
-            "section_padding_bottom_xs": 46
-          }
-        }
-      },
-      "block_order": [
-        "template--21507254386974__aae6cd26-4fd6-46a1-b5cc-1241bf092cfa-section_padding-1"
-      ],
       "settings": {
         "is_section_title": true,
         "title": "New Arrivals",
