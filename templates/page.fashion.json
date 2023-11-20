@@ -323,8 +323,26 @@
     },
     "93f5ea6d-9dd1-4211-b0a5-44d0a4fd628c": {
       "type": "newsletter",
+      "settings": {
+        "before_title_icon": "fas fa-envelope-open",
+        "before_title_text": "Newsletter",
+        "before_title_color": "#3577f0",
+        "title": "Get weekly update",
+        "bg_img": "shopify:\/\/shop_images\/bg-image-5.jpg",
+        "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
+      }
+    },
+    "35dffd7a-4973-46ac-9819-0f98232c288d": {
+      "type": "section-why-us",
       "blocks": {
-        "template--21507254386974__93f5ea6d-9dd1-4211-b0a5-44d0a4fd628c-section_padding-1": {
+        "template--21507254386974__35dffd7a-4973-46ac-9819-0f98232c288d-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": ""
+          }
+        },
+        "template--21507254386974__35dffd7a-4973-46ac-9819-0f98232c288d-section_padding-1": {
           "type": "section_padding",
           "settings": {
             "section_padding_top": 0,
@@ -337,15 +355,20 @@
         }
       },
       "block_order": [
-        "template--21507254386974__93f5ea6d-9dd1-4211-b0a5-44d0a4fd628c-section_padding-1"
+        "template--21507254386974__35dffd7a-4973-46ac-9819-0f98232c288d-whyus-1",
+        "template--21507254386974__35dffd7a-4973-46ac-9819-0f98232c288d-section_padding-1"
       ],
       "settings": {
-        "before_title_icon": "fas fa-envelope-open",
-        "before_title_text": "Newsletter",
-        "before_title_color": "#3577f0",
-        "title": "Get weekly update",
-        "bg_img": "shopify:\/\/shop_images\/bg-image-5.jpg",
-        "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout2",
+        "col_xl": "5",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
       }
     }
   },
@@ -359,6 +382,7 @@
     "7a132df3-4f11-4412-a3a4-5644644774ef",
     "dc3813e7-785a-40f8-9467-9ae0f6ddf0de",
     "a4a3a358-fbf7-43cf-809d-f4369b682ee3",
-    "93f5ea6d-9dd1-4211-b0a5-44d0a4fd628c"
+    "93f5ea6d-9dd1-4211-b0a5-44d0a4fd628c",
+    "35dffd7a-4973-46ac-9819-0f98232c288d"
   ]
 }
