@@ -170,7 +170,9 @@
       "type": "section-product-carousel",
       "settings": {
         "is_section_title": true,
+        "title_layout": "style_1",
         "title": "New Arrivals",
+        "title_icon": "shopify:\/\/shop_images\/title-icon.png",
         "sub_title": "",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "is_countdown": false,
