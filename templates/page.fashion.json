@@ -338,7 +338,7 @@
         "template--21507254386974__35dffd7a-4973-46ac-9819-0f98232c288d-whyus-1": {
           "type": "whyus",
           "settings": {
-            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wstitle": "<p><strong>Fast & Secure Delivery<\/strong><\/p>",
             "wscontent": "Tell about your service.",
             "ws_img": "shopify:\/\/shop_images\/service2.png"
           }
