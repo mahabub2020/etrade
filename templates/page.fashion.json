@@ -240,8 +240,8 @@
       "settings": {
         "is_section_title": true,
         "title_layout": "style_2",
-        "title": "New Arrivals",
-        "sub_title": "Recently Viewed",
+        "title": "Explore our Products",
+        "sub_title": "Our Products",
         "is_countdown": true,
         "end_time": "2024-05-22",
         "product_collection": "fashion",
