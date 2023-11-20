@@ -25871,3 +25871,13 @@ select.dokan-form-control, input.dokan-form-control {
   display: -ms-flexbox;
   display: flex;
 }
+
+.section-title-border.has-title-img .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}

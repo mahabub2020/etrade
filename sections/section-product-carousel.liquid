@@ -22,30 +22,51 @@
 
 <div id="section-{{ section.id }}" class="axil-new-arrivals-product-area axil-new-arrivals-activation bg-color-white axil-section-gap pb--50 pb_sm--30">
   <div class="container">
-    {% if section.settings.is_countdown == true %}
-      {% assign is_coutdown_start = '<div class="d-md-flex align-items-end flash-sale-section axilcoutdown2">' %}
-      {% assign is_coutdown_end = '</div>' %}
-    {% else %}
-      {% assign is_coutdown_start = '' %}
-      {% assign is_coutdown_end = '' %}
-    {% endif %}
+ 
 
-    {% if section.settings.is_section_title == true %} 
-      {{ is_coutdown_start }}
-        <div class="section-title-wrapper">
-          {% if section.settings.sub_title != blank %}  
-          <span class="title-highlighter highlighter-primary">{{ section.settings.sub_title_icon }} {{ section.settings.sub_title }} </span>
-        {% endif %} 
-        {% if section.settings.title != blank %}  
-            <h2 class="title">{{ section.settings.title }} </h2>
-          {% endif %} 
-        </div> 
+    {% if section.settings.is_section_title %} 
+       
+      {% if section.settings.title_layout == 'style_1' %}
+        <div class="section-title-border slider-section-title  {% if section.settings.title_icon %} has-title-img {% endif %}">
+          {% if section.settings.title != blank %}
+            <h2 class="title">{{ section.settings.title }} 
+            {% if section.settings.title_icon %}  
+            <img src="{{ section.settings.title_icon | img_url:  '60x60' }}"
+              alt="{{ section.settings.title_icon.alt | default: shop.name }}"  decoding="async"
+              loading="lazy">
+            {% endif %}  
+            </h2>
+          {% endif %}
+        </div>
+        
+        {% elsif section.settings.title_layout == 'style_2' %}
           {% if section.settings.is_countdown == true %}
-              <div data-time="{{ section.settings.end_time }}" class="sale-countdown countdown"></div>
-          {% endif %} 
-          {{ is_coutdown_end }}
+            {% assign is_coutdown_start = '<div class="d-md-flex align-items-end flash-sale-section axilcoutdown2">' %}
+            {% assign is_coutdown_end = '</div>' %}
+          {% else %}
+            {% assign is_coutdown_start = '' %}
+            {% assign is_coutdown_end = '' %}
+          {% endif %}
+    
+          {{ is_coutdown_start }}
+            <div class="section-title-wrapper">
+              {% if section.settings.sub_title != blank %}  
+                <span class="title-highlighter highlighter-primary"><i class="far fa-shopping-basket"></i> {{ section.settings.sub_title }} </span>
+              {% endif %}
+              {% if section.settings.title != blank %}  
+                <h2 class="title">{{ section.settings.title }} </h2>
+              {% endif %}
+            </div>
+    
+              {% if section.settings.is_countdown == true %}
+                  <div data-time="{{ section.settings.end_time }}" class="sale-countdown countdown"></div>
+              {% endif %}
+              
+              {{ is_coutdown_end }}
+        {% endif %}   
+      {% endif %}
 
-        {% endif %}
+      
       <div class="new-arrivals-product-activation axil-slick-slider slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>   
             {% if section.settings.reverse_order == true %}
               {% assign collection = section.settings.product_collection.products | sort: section.settings.sort_by | reverse %}
@@ -137,6 +158,22 @@
       "id": "is_section_title",
       "label": "Enable Section Title"
     },
+    {
+      "type": "select",
+      "id": "title_layout",
+      "label": "Title Layout",
+      "options": [
+        {
+          "label": "Layout 1",
+          "value": "style_1"
+        },
+        {
+          "label": "Layout 2",
+          "value": "style_2"
+        }
+       
+      ]
+    }, 
     {
       "type": "text",
       "id": "title",
