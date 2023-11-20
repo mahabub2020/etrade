@@ -346,8 +346,8 @@
         "template--21507254386974__35dffd7a-4973-46ac-9819-0f98232c288d-section_padding-1": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 0,
-            "section_padding_bottom": 100,
+            "section_padding_top": 65,
+            "section_padding_bottom": 70,
             "section_padding_top_md": 0,
             "section_padding_bottom_md": 80,
             "section_padding_top_xs": 0,
