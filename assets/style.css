@@ -25879,5 +25879,5 @@ select.dokan-form-control, input.dokan-form-control {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
