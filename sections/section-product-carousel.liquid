@@ -38,7 +38,7 @@
             </h2>
           {% endif %}
         </div>
-        
+
         {% elsif section.settings.title_layout == 'style_2' %}
           {% if section.settings.is_countdown == true %}
             {% assign is_coutdown_start = '<div class="d-md-flex align-items-end flash-sale-section axilcoutdown2">' %}
@@ -179,6 +179,13 @@
       "id": "title",
       "default": "New Arrivals",
       "label": "Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "title_icon",
+      "label": "Title Icon",
+      "info": "Recommended Size: 60 x 60px",
+      "info": "Ttile Layout 1"
     },
     {
       "type": "text",
