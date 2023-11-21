@@ -173,7 +173,7 @@
       "type": "dividar",
       "settings": {
         "container": "container-xxl",
-        "background-color": "#4e66c9",
+        "border_color": "#4b5eab",
         "padding_top": 10,
         "padding_bottom": 10
       }
