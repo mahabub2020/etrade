@@ -203,6 +203,57 @@
         "product_column_md": 4,
         "product_column_sm": 2
       }
+    },
+    "9898103c-9b9c-43d6-9f56-fb19203db783": {
+      "type": "section-testimonial-carousel",
+      "blocks": {
+        "template--21536393560350__9898103c-9b9c-43d6-9f56-fb19203db783-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "8765eaef-9366-40a9-9dee-497cd0593b1a": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "1a782552-c103-4d14-bbd7-71294ebe968b": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "c7fc7d20-f78c-45e7-9a68-b9bf0625c260": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--21536393560350__9898103c-9b9c-43d6-9f56-fb19203db783-review-1",
+        "8765eaef-9366-40a9-9dee-497cd0593b1a",
+        "1a782552-c103-4d14-bbd7-71294ebe968b",
+        "c7fc7d20-f78c-45e7-9a68-b9bf0625c260"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "section_title": "Our Users Feedback",
+        "section_sub_title": "Testimonials",
+        "autoplay_true": true,
+        "autoplay_speed": 5000
+      }
     }
   },
   "order": [
@@ -212,6 +263,7 @@
     "d56962db-af95-4d04-a95c-1d93e4b6d04b",
     "2c76530c-e159-4c14-ae5b-6017fe70deaf",
     "83ef8965-d0c8-483d-b292-5c3d9da34748",
-    "a95f8113-0318-4690-bc9e-317cb97f6d3d"
+    "a95f8113-0318-4690-bc9e-317cb97f6d3d",
+    "9898103c-9b9c-43d6-9f56-fb19203db783"
   ]
 }
