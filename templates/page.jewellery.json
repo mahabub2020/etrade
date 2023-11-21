@@ -284,6 +284,15 @@
         "btn_url": "shopify:\/\/collections"
       }
     },
+    "8f3d3696-6225-4947-b9a5-13e71e0edbe4": {
+      "type": "dividar",
+      "settings": {
+        "container": "container-xxl",
+        "border_color": "#F6F7FB",
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
+    },
     "f4546fcc-7e57-460e-b287-8ffff880070e": {
       "type": "section-product-carousel",
       "blocks": {
@@ -325,6 +334,32 @@
         "product_column_md": 3,
         "product_column_sm": 2
       }
+    },
+    "dd4c46a9-068e-42d8-a315-92e50626afbd": {
+      "type": "newsletter",
+      "blocks": {
+        "template--21536393560350__dd4c46a9-068e-42d8-a315-92e50626afbd-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21536393560350__dd4c46a9-068e-42d8-a315-92e50626afbd-section_padding-1"
+      ],
+      "settings": {
+        "before_title_icon": "fas fa-envelope-open",
+        "before_title_text": "Newsletter",
+        "before_title_color": "#3577f0",
+        "title": "Get weekly update",
+        "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
+      }
     }
   },
   "order": [
@@ -337,6 +372,8 @@
     "a95f8113-0318-4690-bc9e-317cb97f6d3d",
     "9898103c-9b9c-43d6-9f56-fb19203db783",
     "ddf75e43-26ce-4766-b373-bb3f513eb3c6",
-    "f4546fcc-7e57-460e-b287-8ffff880070e"
+    "8f3d3696-6225-4947-b9a5-13e71e0edbe4",
+    "f4546fcc-7e57-460e-b287-8ffff880070e",
+    "dd4c46a9-068e-42d8-a315-92e50626afbd"
   ]
 }
