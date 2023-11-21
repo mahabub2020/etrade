@@ -247,7 +247,7 @@
         "c7fc7d20-f78c-45e7-9a68-b9bf0625c260"
       ],
       "settings": {
-        "container": "container-full-width",
+        "container": "container",
         "is_section_title": true,
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "section_title": "Our Users Feedback",
