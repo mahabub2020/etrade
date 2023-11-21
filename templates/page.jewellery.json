@@ -255,6 +255,25 @@
         "autoplay_true": true,
         "autoplay_speed": 5000
       }
+    },
+    "ddf75e43-26ce-4766-b373-bb3f513eb3c6": {
+      "type": "section-product-grid",
+      "settings": {
+        "title": "Recently Viewed",
+        "section_btn_txt": "View All Deals",
+        "section_btn_url": "",
+        "product_collection": "fashion",
+        "excluded_products": [
+
+        ],
+        "number_of_products_to_show": 8,
+        "product_layout": "1",
+        "col_xl": "3",
+        "col_lg": "4",
+        "col_md": "2",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
     }
   },
   "order": [
@@ -265,6 +284,7 @@
     "2c76530c-e159-4c14-ae5b-6017fe70deaf",
     "83ef8965-d0c8-483d-b292-5c3d9da34748",
     "a95f8113-0318-4690-bc9e-317cb97f6d3d",
-    "9898103c-9b9c-43d6-9f56-fb19203db783"
+    "9898103c-9b9c-43d6-9f56-fb19203db783",
+    "ddf75e43-26ce-4766-b373-bb3f513eb3c6"
   ]
 }
