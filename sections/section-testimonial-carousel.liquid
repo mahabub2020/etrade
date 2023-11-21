@@ -18,9 +18,12 @@
           ]       
       }'
    {%- endcapture -%}
+   
+
 <div id="section-{{ section.id }}" class="axil-testimoial-area axil-section-gap bg-vista-white">
     <div class="container">
 
+      {% if section.settings.is_section_title %}  
         <div class="section-title-wrapper"> 
             {% if section.settings.section_sub_title != '' %}  
               <span class="title-highlighter highlighter-secondary"> {{ section.settings.sub_title_icon }}  {{ section.settings.section_sub_title | escape }}</span>
@@ -31,8 +34,7 @@
               </div>  
             {% endif %}  
         </div>
-
-        
+      {% endif %} 
         <!-- End .section-title -->
         <div class="testimonial-slick-activation axil-slick-slider  testimonial-style-one-wrapper slick-layout-wrapper--20 axil-slick-arrow arrow-top-slide" {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }} >
             
@@ -124,6 +126,30 @@
     {
       "type": "header",
       "content": "Section Title"
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Container type",
+      "options": [
+        {
+          "value": "container",
+          "label": "Default Container"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Fluid"
+        },
+        {
+          "value": "container-full-width",
+          "label": "Full width"
+        },
+        {
+          "value": "container-xxl",
+          "label": "Use container box"
+        }
+      ],
+      "default": "container-xxl"
     },
     {
       "type": "checkbox",
