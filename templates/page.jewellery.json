@@ -126,12 +126,55 @@
         "product_column_md": 3,
         "product_column_sm": 2
       }
+    },
+    "2c76530c-e159-4c14-ae5b-6017fe70deaf": {
+      "type": "section-product-carousel",
+      "blocks": {
+        "template--21536393560350__2c76530c-e159-4c14-ae5b-6017fe70deaf-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21536393560350__2c76530c-e159-4c14-ae5b-6017fe70deaf-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": true,
+        "end_time": "2024-05-22",
+        "product_collection": "fashion",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
     }
   },
   "order": [
     "main",
     "22e88192-3b5f-4f65-ba13-2057e13cb979",
     "ad5c9fc1-e834-4939-8fc6-d8409e90a8e9",
-    "d56962db-af95-4d04-a95c-1d93e4b6d04b"
+    "d56962db-af95-4d04-a95c-1d93e4b6d04b",
+    "2c76530c-e159-4c14-ae5b-6017fe70deaf"
   ]
 }
