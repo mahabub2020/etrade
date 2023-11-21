@@ -168,6 +168,32 @@
         "product_column_md": 3,
         "product_column_sm": 2
       }
+    },
+    "a95f8113-0318-4690-bc9e-317cb97f6d3d": {
+      "type": "collection-carousel",
+      "settings": {
+        "collection_style": "cat_style_1",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "sub_title": "Before Title",
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+          "accessories",
+          "arm-chair",
+          "baby-s",
+          "camera-photo",
+          "coats-sweater",
+          "computers",
+          "deals",
+          "desk-table",
+          "electronics"
+        ],
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 6,
+        "product_column_lg": 5,
+        "product_column_md": 4,
+        "product_column_sm": 2
+      }
     }
   },
   "order": [
@@ -175,6 +201,7 @@
     "22e88192-3b5f-4f65-ba13-2057e13cb979",
     "ad5c9fc1-e834-4939-8fc6-d8409e90a8e9",
     "d56962db-af95-4d04-a95c-1d93e4b6d04b",
-    "2c76530c-e159-4c14-ae5b-6017fe70deaf"
+    "2c76530c-e159-4c14-ae5b-6017fe70deaf",
+    "a95f8113-0318-4690-bc9e-317cb97f6d3d"
   ]
 }
