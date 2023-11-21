@@ -361,6 +361,69 @@
         "bg_img": "shopify:\/\/shop_images\/bg-image-11.jpg",
         "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
       }
+    },
+    "655bbebc-25e8-48c2-9481-5b10e37bb12c": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--21536393560350__655bbebc-25e8-48c2-9481-5b10e37bb12c-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": ""
+          }
+        },
+        "template--21536393560350__655bbebc-25e8-48c2-9481-5b10e37bb12c-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        },
+        "21fc1ceb-7ef8-42fb-8b6b-8b5d76839904": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": ""
+          }
+        },
+        "f17d05ae-3ebf-43ad-b1e5-52eaba98889d": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": ""
+          }
+        },
+        "541452eb-e7ff-4acd-8946-14fcaa86ddff": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21536393560350__655bbebc-25e8-48c2-9481-5b10e37bb12c-whyus-1",
+        "template--21536393560350__655bbebc-25e8-48c2-9481-5b10e37bb12c-section_padding-1",
+        "21fc1ceb-7ef8-42fb-8b6b-8b5d76839904",
+        "f17d05ae-3ebf-43ad-b1e5-52eaba98889d",
+        "541452eb-e7ff-4acd-8946-14fcaa86ddff"
+      ],
+      "settings": {
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout2",
+        "col_xl": "4",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
     }
   },
   "order": [
@@ -375,6 +438,7 @@
     "ddf75e43-26ce-4766-b373-bb3f513eb3c6",
     "8f3d3696-6225-4947-b9a5-13e71e0edbe4",
     "f4546fcc-7e57-460e-b287-8ffff880070e",
-    "dd4c46a9-068e-42d8-a315-92e50626afbd"
+    "dd4c46a9-068e-42d8-a315-92e50626afbd",
+    "655bbebc-25e8-48c2-9481-5b10e37bb12c"
   ]
 }
