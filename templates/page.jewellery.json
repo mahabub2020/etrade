@@ -169,11 +169,11 @@
         "product_column_sm": 2
       }
     },
-    "8fd71e0b-7a8d-4ee0-b697-ad1853c00fb9": {
+    "83ef8965-d0c8-483d-b292-5c3d9da34748": {
       "type": "dividar",
       "settings": {
         "container": "container-xxl",
-        "border_color": "#4b5eab",
+        "border_color": "#F6F7FB",
         "padding_top": 10,
         "padding_bottom": 10
       }
@@ -211,7 +211,7 @@
     "ad5c9fc1-e834-4939-8fc6-d8409e90a8e9",
     "d56962db-af95-4d04-a95c-1d93e4b6d04b",
     "2c76530c-e159-4c14-ae5b-6017fe70deaf",
-    "8fd71e0b-7a8d-4ee0-b697-ad1853c00fb9",
+    "83ef8965-d0c8-483d-b292-5c3d9da34748",
     "a95f8113-0318-4690-bc9e-317cb97f6d3d"
   ]
 }
