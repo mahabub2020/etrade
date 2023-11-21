@@ -26,6 +26,7 @@
       "settings": {
         "hero_title": "Exclusive Design Collection",
         "hero_sub_title": "Hot Deal In Diamond",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "hero_content": "Casual line with short design in 100% suede Diamond",
         "hero_btn_txt": "Check it Out!",
         "hero_btn_url": "shopify:\/\/products\/women-s-winter-mid-length-thick-warm-faux-lamb-wool",
@@ -38,10 +39,57 @@
         "hero_btn_color": "#292930",
         "hero_btn_bg_color": "#ffffff"
       }
+    },
+    "ad5c9fc1-e834-4939-8fc6-d8409e90a8e9": {
+      "type": "section-delivery",
+      "blocks": {
+        "template--21536393560350__ad5c9fc1-e834-4939-8fc6-d8409e90a8e9-cta-1": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "Rich sound, <br> for less.",
+            "badge_content": "",
+            "cta_url": "",
+            "cta_img": "shopify:\/\/shop_images\/poster-08.png",
+            "reverse_order": true
+          }
+        },
+        "18db54f7-6d04-42ec-8d25-c727a6ae329b": {
+          "type": "cta",
+          "settings": {
+            "badge": "Rich sound,  for less.",
+            "badge_title": "",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "",
+            "cta_img": "shopify:\/\/shop_images\/poster-09-1.png",
+            "reverse_order": false
+          }
+        },
+        "e7a55327-15ef-4f59-aac8-f4341d10b7ac": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 55,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21536393560350__ad5c9fc1-e834-4939-8fc6-d8409e90a8e9-cta-1",
+        "18db54f7-6d04-42ec-8d25-c727a6ae329b",
+        "e7a55327-15ef-4f59-aac8-f4341d10b7ac"
+      ],
+      "settings": {
+        "ctalayout": "cta2"
+      }
     }
   },
   "order": [
     "main",
-    "22e88192-3b5f-4f65-ba13-2057e13cb979"
+    "22e88192-3b5f-4f65-ba13-2057e13cb979",
+    "ad5c9fc1-e834-4939-8fc6-d8409e90a8e9"
   ]
 }
