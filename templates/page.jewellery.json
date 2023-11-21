@@ -4,9 +4,44 @@
       "type": "page-jewellery",
       "settings": {
       }
-    } 
+    },
+    "22e88192-3b5f-4f65-ba13-2057e13cb979": {
+      "type": "section-hero",
+      "blocks": {
+        "template--21536393560350__22e88192-3b5f-4f65-ba13-2057e13cb979-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21536393560350__22e88192-3b5f-4f65-ba13-2057e13cb979-section_padding-1"
+      ],
+      "settings": {
+        "hero_title": "Exclusive Design Collection",
+        "hero_sub_title": "Hot Deal In Diamond",
+        "hero_content": "Casual line with short design in 100% suede Diamond",
+        "hero_btn_txt": "Check it Out!",
+        "hero_btn_url": "",
+        "hero_img": "shopify:\/\/shop_images\/bg-image-8-600x244.jpg",
+        "hero_title_color": "#292930",
+        "hero_subtitle_color": "#8c71db",
+        "hero_subtitle_icon_color": "#8c71db",
+        "hero_subtitle_icon_bg_color": "#8c71db",
+        "hero_content_color": "#777777",
+        "hero_btn_color": "#292930",
+        "hero_btn_bg_color": "#ffffff"
+      }
+    }
   },
   "order": [
-    "main" 
+    "main",
+    "22e88192-3b5f-4f65-ba13-2057e13cb979"
   ]
 }
