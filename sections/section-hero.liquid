@@ -4,7 +4,9 @@
           <div class="col-sm-8">
               <div class="main-slider-content">
                 {% if section.settings.hero_sub_title != blank %}
-                  <span class="subtitle"><i class="fas fa-fire"></i>{{ section.settings.hero_sub_title }}</span>
+                  <span class="subtitle">
+                    {{ section.settings.sub_title_icon }}
+                    {{ section.settings.hero_sub_title }}</span>
                 {% endif %}
                 {% if section.settings.hero_title != blank %}
                   <h1 class="title">{{ section.settings.hero_title }}</h1>
@@ -80,6 +82,13 @@
       "id": "hero_sub_title",
       "default": "Hot Deal In Diamond",
       "label": "Sub Title"
+    },
+    {
+      "type": "html",
+      "id": "sub_title_icon",
+      "default": "<i class='fas fa-tags'></i>",
+      "label": "Before Icon",
+      "info": "Recommended Fontawesome Icon"
     },
     {
       "type": "textarea",
