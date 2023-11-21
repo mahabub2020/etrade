@@ -134,7 +134,7 @@
           "type": "section_padding",
           "settings": {
             "section_padding_top": 60,
-            "section_padding_bottom": 50,
+            "section_padding_bottom": 0,
             "section_padding_top_md": 46,
             "section_padding_bottom_md": 46,
             "section_padding_top_xs": 46,
@@ -198,7 +198,7 @@
         ],
         "autoplay_true": false,
         "autoplay_speed": 5000,
-        "product_column": 6,
+        "product_column": 7,
         "product_column_lg": 5,
         "product_column_md": 4,
         "product_column_sm": 2
