@@ -1,15 +1,24 @@
 <!-- Start Slider Area -->
-<div class="axil-main-slider-area main-slider-style-4">
-    <div class="container ">
-          
+<div id="section-{{ section.id }} class="dividar-wrp">
+    <div class="{{ section.settings.container }}">
+          <div class="dividar-class"></div>
     </div>
 </div>
 <!-- End Slider Area -->
 
+ 
+{%- style -%}
+  #section-{{ section.id }}{  
+    padding-top: {{ block.settings.padding_top }}px;
+    padding-bottom: {{ block.settings.padding_bottom }}px; 
+  }
+   
+#section-{{ section.id }}.dividar-wrp .dividar-class {
+    border: 1px solid {{ section.settings.border_color }}; 
+}
 
- {%- style -%} 
-  
-  {%- endstyle -%}
+{%- endstyle -%}
+
 
 {% schema %}
 {
@@ -41,7 +50,7 @@
         },
         {
           "type": "color",
-          "id": "background-color",
+          "id": "border_color",
           "label": "Border color",
           "default": "#F6F7FB"
         },
