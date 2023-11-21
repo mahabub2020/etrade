@@ -1,24 +1,20 @@
 <!-- Start Slider Area -->
-<div id="section-{{ section.id }} class="dividar-wrp">
+<div id="section-{{ section.id }}" class="dividar-wrp">
     <div class="{{ section.settings.container }}">
           <div class="dividar-class"></div>
     </div>
 </div>
 <!-- End Slider Area -->
 
- 
 {%- style -%}
   #section-{{ section.id }}{  
     padding-top: {{ block.settings.padding_top }}px;
     padding-bottom: {{ block.settings.padding_bottom }}px; 
   }
-   
 #section-{{ section.id }}.dividar-wrp .dividar-class {
     border: 1px solid {{ section.settings.border_color }}; 
 }
-
 {%- endstyle -%}
-
 
 {% schema %}
 {
