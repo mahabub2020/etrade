@@ -172,7 +172,7 @@
     "83ef8965-d0c8-483d-b292-5c3d9da34748": {
       "type": "dividar",
       "settings": {
-        "container": "container-xxl",
+        "container": "container-full-width",
         "border_color": "#F6F7FB",
         "padding_top": 10,
         "padding_bottom": 10
