@@ -1,0 +1,76 @@
+<!-- Start Slider Area -->
+<div class="axil-main-slider-area main-slider-style-4">
+    <div class="container ">
+          
+    </div>
+</div>
+<!-- End Slider Area -->
+
+
+ {%- style -%} 
+  
+  {%- endstyle -%}
+
+{% schema %}
+{
+    "name": "dividar",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Section Dividar"
+        },
+        {
+          "type": "select",
+          "id": "container",
+          "label": "Container type",
+          "options": [
+            {
+              "value": "container-fluid",
+              "label": "Default"
+            },
+            {
+              "value": "container-full-width",
+              "label": "Full width"
+            },
+            {
+              "value": "container-xxl",
+              "label": "Use container box"
+            }
+          ],
+          "default": "container-xxl"
+        },
+        {
+          "type": "color",
+          "id": "background-color",
+          "label": "Border color",
+          "default": "#F6F7FB"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Sections Padding Top",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Sections Padding bottom",
+          "default": 10
+        }
+      ], 
+      "presets": [
+          {
+            "category": "dividar",
+            "name": "Section Dividar"
+        }]
+}
+{% endschema %}
+ 

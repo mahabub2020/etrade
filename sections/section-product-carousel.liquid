@@ -21,11 +21,8 @@
    {%- endcapture -%}
 
 <div id="section-{{ section.id }}" class="axil-new-arrivals-product-area axil-new-arrivals-activation bg-color-white axil-section-gap pb--50 pb_sm--30">
-  <div class="container">
- 
-
-    {% if section.settings.is_section_title %} 
-       
+  <div class="container"> 
+    {% if section.settings.is_section_title %}  
       {% if section.settings.title_layout == 'style_1' %}
         <div class="section-title-border slider-section-title  {% if section.settings.title_icon %} has-title-img {% endif %}">
           {% if section.settings.title != blank %}
