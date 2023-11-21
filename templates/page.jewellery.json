@@ -259,8 +259,8 @@
     "ddf75e43-26ce-4766-b373-bb3f513eb3c6": {
       "type": "section-product-grid",
       "settings": {
-        "is_section_title": false,
-        "title_layout": "style_1",
+        "is_section_title": true,
+        "title_layout": "style_2",
         "title": "Recently Viewed",
         "sub_title": "Recently Viewed",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
