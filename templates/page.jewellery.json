@@ -259,7 +259,13 @@
     "ddf75e43-26ce-4766-b373-bb3f513eb3c6": {
       "type": "section-product-grid",
       "settings": {
+        "is_section_title": false,
+        "title_layout": "style_1",
         "title": "Recently Viewed",
+        "sub_title": "Recently Viewed",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
         "section_btn_txt": "View All Deals",
         "section_btn_url": "",
         "product_collection": "fashion",
@@ -272,7 +278,10 @@
         "col_lg": "4",
         "col_md": "2",
         "col_sm": "2",
-        "col_mobile": "1"
+        "col_mobile": "1",
+        "isbutton_true": true,
+        "btn_txt": "View All Deals",
+        "btn_url": "shopify:\/\/collections"
       }
     }
   },
