@@ -1,6 +1,5 @@
 
 {% if section.settings.ctalayout == 'cta1' %}
-
 <div id="section-{{ section.id }}" class="delivery-poster-area">
   <div class="container">
       <div class="row">
@@ -49,6 +48,9 @@
                               {% if block.settings.badge_title != '' %}   
                                 <h3 class="title">{{ block.settings.badge_title }}</h3> 
                               {% endif %}   
+                              {% if block.settings.badge_content != '' %}   
+                                <p>{{ block.settings.badge_content | escape }}</p> 
+                              {% endif %}   
                             {% if block.settings.badge != '' %}   
                               <span class="sub-title">{{ block.settings.badge | escape }} <i class="fal fa-long-arrow-right"></i></span>
                             {% endif %}    
@@ -63,24 +65,21 @@
                         <img src="{% if block.settings.cta_img %}{{ block.settings.cta_img | img_url: '630x246' }}{% else %}http:\/\/via.placeholder.com\/630x246{% endif %}" alt="{{ block.settings.cta_img.alt }}"> 
 
                           <div class="poster-content content-left">
-                              <div class="inner">
-                               
+                              <div class="inner"> 
                               {% if block.settings.badge != '' %}   
                                   <span class="sub-title">{{ block.settings.badge | escape }}</span>
-                              {% endif %}  
-                                 
+                              {% endif %}   
                             {% if block.settings.badge_title != '' %}   
                               <h3 class="title">{{ block.settings.badge_title }}</h3> 
+                            {% endif %}    
+                            {% if block.settings.badge_content != '' %}   
+                              <p>{{ block.settings.badge_content | escape }}</p> 
                             {% endif %}   
-
                               </div>
-                          </div>
-                          <!-- End .poster-content -->
+                          </div> 
                       </a>
-                  </div> 
-          
-              {% endif %}
- 
+                  </div>  
+              {% endif %} 
               <!-- End .single-poster -->
           </div>
         {% endcase %}
