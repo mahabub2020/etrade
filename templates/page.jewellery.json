@@ -283,6 +283,48 @@
         "btn_txt": "View All Deals",
         "btn_url": "shopify:\/\/collections"
       }
+    },
+    "f4546fcc-7e57-460e-b287-8ffff880070e": {
+      "type": "section-product-carousel",
+      "blocks": {
+        "template--21536393560350__f4546fcc-7e57-460e-b287-8ffff880070e-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21536393560350__f4546fcc-7e57-460e-b287-8ffff880070e-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
+        "product_collection": "fashion",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": true,
+        "product_layout": "2",
+        "autoplay_true": true,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
     }
   },
   "order": [
@@ -294,6 +336,7 @@
     "83ef8965-d0c8-483d-b292-5c3d9da34748",
     "a95f8113-0318-4690-bc9e-317cb97f6d3d",
     "9898103c-9b9c-43d6-9f56-fb19203db783",
-    "ddf75e43-26ce-4766-b373-bb3f513eb3c6"
+    "ddf75e43-26ce-4766-b373-bb3f513eb3c6",
+    "f4546fcc-7e57-460e-b287-8ffff880070e"
   ]
 }
