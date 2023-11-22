@@ -376,8 +376,9 @@
         "21fc1ceb-7ef8-42fb-8b6b-8b5d76839904": {
           "type": "whyus",
           "settings": {
-            "wstitle": "<p>Fast & Secure Delivery<\/p>",
-            "wscontent": ""
+            "wstitle": "<p>Money Back Guarantee<\/p>",
+            "wscontent": "Within 10 days.",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
           }
         },
         "f17d05ae-3ebf-43ad-b1e5-52eaba98889d": {
