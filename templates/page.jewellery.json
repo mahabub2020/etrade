@@ -384,15 +384,17 @@
         "f17d05ae-3ebf-43ad-b1e5-52eaba98889d": {
           "type": "whyus",
           "settings": {
-            "wstitle": "<p>Fast & Secure Delivery<\/p>",
-            "wscontent": ""
+            "wstitle": "<p>24 Hour Return Policy<\/p>",
+            "wscontent": "No question ask.",
+            "ws_img": "shopify:\/\/shop_images\/service5.png"
           }
         },
         "541452eb-e7ff-4acd-8946-14fcaa86ddff": {
           "type": "whyus",
           "settings": {
-            "wstitle": "<p>Fast & Secure Delivery<\/p>",
-            "wscontent": ""
+            "wstitle": "<p>Pro Quality Support<\/p>",
+            "wscontent": "24\/7 Live support.",
+            "ws_img": "shopify:\/\/shop_images\/service4.png"
           }
         },
         "template--21536393560350__655bbebc-25e8-48c2-9481-5b10e37bb12c-section_padding-1": {
