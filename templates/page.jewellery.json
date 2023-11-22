@@ -369,18 +369,8 @@
           "type": "whyus",
           "settings": {
             "wstitle": "<p>Fast & Secure Delivery<\/p>",
-            "wscontent": ""
-          }
-        },
-        "template--21536393560350__655bbebc-25e8-48c2-9481-5b10e37bb12c-section_padding-1": {
-          "type": "section_padding",
-          "settings": {
-            "section_padding_top": 0,
-            "section_padding_bottom": 100,
-            "section_padding_top_md": 0,
-            "section_padding_bottom_md": 80,
-            "section_padding_top_xs": 0,
-            "section_padding_bottom_xs": 60
+            "wscontent": "Tell about your service.",
+            "ws_img": "shopify:\/\/shop_images\/service1.png"
           }
         },
         "21fc1ceb-7ef8-42fb-8b6b-8b5d76839904": {
@@ -403,14 +393,25 @@
             "wstitle": "<p>Fast & Secure Delivery<\/p>",
             "wscontent": ""
           }
+        },
+        "template--21536393560350__655bbebc-25e8-48c2-9481-5b10e37bb12c-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
         }
       },
       "block_order": [
         "template--21536393560350__655bbebc-25e8-48c2-9481-5b10e37bb12c-whyus-1",
-        "template--21536393560350__655bbebc-25e8-48c2-9481-5b10e37bb12c-section_padding-1",
         "21fc1ceb-7ef8-42fb-8b6b-8b5d76839904",
         "f17d05ae-3ebf-43ad-b1e5-52eaba98889d",
-        "541452eb-e7ff-4acd-8946-14fcaa86ddff"
+        "541452eb-e7ff-4acd-8946-14fcaa86ddff",
+        "template--21536393560350__655bbebc-25e8-48c2-9481-5b10e37bb12c-section_padding-1"
       ],
       "settings": {
         "is_section_title": false,
