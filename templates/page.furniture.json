@@ -1,11 +1,43 @@
 {
   "sections": {
-      "main": {
-          "type": "page-furniture",
-          "settings": {}
+    "main": {
+      "type": "page-furniture",
+      "settings": {
       }
+    },
+    "fee67d54-5d2b-47fd-b9c7-73a913865081": {
+      "type": "furniture-banner-slider",
+      "blocks": {
+        "2b94fdba-c896-4dc9-9331-6a2f80471f36": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": "",
+            "banner_img": "shopify:\/\/shop_images\/product-48.png"
+          }
+        },
+        "33d3ac6e-0791-4af7-a8e1-330c45eb56d8": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "2b94fdba-c896-4dc9-9331-6a2f80471f36",
+        "33d3ac6e-0791-4af7-a8e1-330c45eb56d8"
+      ],
+      "settings": {
+      }
+    }
   },
   "order": [
-      "main"
+    "main",
+    "fee67d54-5d2b-47fd-b9c7-73a913865081"
   ]
 }
