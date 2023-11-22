@@ -1,12 +1,28 @@
+
+  {%- capture data_slick_activation_content -%}
+    data-slick='{   
+    {%- if section.settings.autoplay_true -%}
+    "autoplay": true,
+    "autoplaySpeed": {{ section.settings.autoplay_speed }},
+    {%- endif -%}   
+    "slidesToScroll": 1,
+    "slidesToShow": 1, 
+    "arrows": false,
+    "dots": true, 
+    "speed": 400,
+    "fade": true,
+    "infinite": true,   
+    }'
+  {%- endcapture -%}
   <!-- Start Slider Area -->
-  <div class="axil-main-slider-area main-slider-style-5">
+  <div id="section-{{ section.id }}" class="axil-main-slider-area main-slider-style-5">
     <div class="container">
         <div class="slider-box-wrap">
-            <div class="slider-activation-two axil-slick-dots">
+            <div class="axil-slick-slider slider-activation-two axil-slick-dots"   {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation_content }}>
               {% for block in section.blocks %}  
               {% case block.type %}
-                {% when 'banner' %}
-                  
+                {% when 'banner' %} 
+               
                 <div class="single-slide slick-slide">
                     <div class="main-slider-content">
                         {% if block.settings.subtitle != '' %}
@@ -21,10 +37,11 @@
                           </div>   
                         {% endif %}   
                     </div>
-
+                    {% if block.settings.banner_img != '' %}
                     <div class="main-slider-thumb">
                       <img src="{% if block.settings.banner_img %}{{ block.settings.banner_img | img_url: '530x460' }}{% else %}http:\/\/via.placeholder.com\/530x460{% endif %}" alt="{{ block.settings.banner_img.alt }}"> 
                     </div>
+                  {% endif %}  
 
                 </div>
               {% endcase %} 
@@ -82,6 +99,26 @@
             "type": "image_picker",
             "id": "banner_img",
             "label": "Banner Image"
+          },
+          {
+            "type": "header",
+            "content": "Options"
+          },
+          {
+            "type": "checkbox",
+            "id": "autoplay_true",
+            "label": "Autoplay Enable",
+            "default": false
+          },
+          {
+            "type": "range",
+            "id": "autoplay_speed",
+            "min": 1000,
+            "max": 9000,
+            "step": 1000,
+            "label": "Autoplay Speed",
+            "unit": "ms",
+            "default": 5000
           }
         ]
       }
