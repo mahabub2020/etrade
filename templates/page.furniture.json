@@ -314,10 +314,38 @@
             "wscontent": ""
           }
         },
+        "e8ac7d83-7e63-4c30-9bea-363c692e1432": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": ""
+          }
+        },
+        "92bc46d3-84cd-4b36-bb9c-c48ef984a1d5": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": ""
+          }
+        },
+        "ad29a223-3684-48bc-b0e4-0e25ce42ceee": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": ""
+          }
+        },
+        "c271e7cd-ae98-4256-b90d-8a14c2cd67e6": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": ""
+          }
+        },
         "template--21547775754526__359090f7-6f93-49e3-a936-de2399d03613-section_padding-1": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 45,
+            "section_padding_top": 20,
             "section_padding_bottom": 20,
             "section_padding_top_md": 45,
             "section_padding_bottom_md": 60,
@@ -328,6 +356,10 @@
       },
       "block_order": [
         "template--21547775754526__359090f7-6f93-49e3-a936-de2399d03613-whyus-1",
+        "e8ac7d83-7e63-4c30-9bea-363c692e1432",
+        "92bc46d3-84cd-4b36-bb9c-c48ef984a1d5",
+        "ad29a223-3684-48bc-b0e4-0e25ce42ceee",
+        "c271e7cd-ae98-4256-b90d-8a14c2cd67e6",
         "template--21547775754526__359090f7-6f93-49e3-a936-de2399d03613-section_padding-1"
       ],
       "settings": {
