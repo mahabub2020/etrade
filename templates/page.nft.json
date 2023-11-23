@@ -1,11 +1,32 @@
 {
-    "sections": {
-        "main": {
-            "type": "page-nft",
-            "settings": {}
-        }
+  "sections": {
+    "main": {
+      "type": "page-nft",
+      "settings": {
+      }
     },
-    "order": [
-        "main"
-    ]
+    "b3c26134-efa6-4ff8-bfe6-b57406b8c9b1": {
+      "type": "nft-product-banner-slider",
+      "settings": {
+        "subtitle": "Largest NFT marketplace",
+        "banner_title": "Discover, collect, and sell extraordinary NFTs",
+        "banner_btn_txt": "Explore",
+        "banner_btn_url": "",
+        "section_bg_color": "#ffffff",
+        "product_collection": "nft",
+        "number_of_products_to_show": 4,
+        "product_layout": "5",
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "hover_img": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b3c26134-efa6-4ff8-bfe6-b57406b8c9b1"
+  ]
 }
