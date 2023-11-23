@@ -5,6 +5,34 @@
       "settings": {
       }
     },
+    "9c94f89a-08b3-4f85-944c-b29531db27fc": {
+      "type": "collection-carousel",
+      "settings": {
+        "collection_style": "cat_style_3",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "sub_title": "Before Title",
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+          "arm-chair",
+          "desk-table",
+          "handbag",
+          "mirror-table",
+          "neon-sofa",
+          "round-table",
+          "accessories",
+          "baby-s",
+          "fashion",
+          "hoddie",
+          "long-chair"
+        ],
+        "autoplay_true": true,
+        "autoplay_speed": 5000,
+        "product_column": 6,
+        "product_column_lg": 5,
+        "product_column_md": 4,
+        "product_column_sm": 2
+      }
+    },
     "fee67d54-5d2b-47fd-b9c7-73a913865081": {
       "type": "furniture-banner-slider",
       "blocks": {
@@ -103,6 +131,7 @@
   },
   "order": [
     "main",
+    "9c94f89a-08b3-4f85-944c-b29531db27fc",
     "fee67d54-5d2b-47fd-b9c7-73a913865081",
     "9b211fec-f339-4346-aa40-866333f41efc",
     "813957b6-7340-4879-b5f7-0f912c37b780"
