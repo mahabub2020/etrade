@@ -33,17 +33,24 @@
         "2c701cd0-8e3f-4d54-92f7-3ef3caa9a720": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 135,
+            "section_padding_top": 65,
             "section_padding_bottom": 125,
             "section_padding_top_md": 0,
             "section_padding_bottom_md": 80,
             "section_padding_top_xs": 0,
             "section_padding_bottom_xs": 60
           }
+        },
+        "48f88467-3f51-4aaf-9472-8d4c79ecd01c": {
+          "type": "section_background",
+          "settings": {
+            "section_bg_color": "#a30808"
+          }
         }
       },
       "block_order": [
-        "2c701cd0-8e3f-4d54-92f7-3ef3caa9a720"
+        "2c701cd0-8e3f-4d54-92f7-3ef3caa9a720",
+        "48f88467-3f51-4aaf-9472-8d4c79ecd01c"
       ],
       "settings": {
         "collection_style": "cat_style_2",
