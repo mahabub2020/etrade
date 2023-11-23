@@ -12,7 +12,6 @@
         "banner_title": "Discover, collect, and sell extraordinary NFTs",
         "banner_btn_txt": "Explore",
         "banner_btn_url": "",
-        "banner_img": "shopify:\/\/shop_images\/about-02.png",
         "section_bg_color": "#703f3f",
         "product_collection": "nft",
         "number_of_products_to_show": 4,
@@ -23,7 +22,9 @@
         "offset_product": 1,
         "sort_by": "title",
         "reverse_order": true,
-        "hover_img": true
+        "hover_img": true,
+        "autoplay_true": false,
+        "autoplay_speed": 5000
       }
     }
   },
