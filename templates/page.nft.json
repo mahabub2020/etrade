@@ -29,6 +29,22 @@
     },
     "97366287-b518-4189-a954-da52687a999b": {
       "type": "collection-carousel",
+      "blocks": {
+        "2c701cd0-8e3f-4d54-92f7-3ef3caa9a720": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 135,
+            "section_padding_bottom": 125,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "2c701cd0-8e3f-4d54-92f7-3ef3caa9a720"
+      ],
       "settings": {
         "collection_style": "cat_style_2",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
