@@ -256,11 +256,11 @@
     "39ad8c93-71af-4629-b085-5d498ffeebb6": {
       "type": "section-countdown",
       "settings": {
-        "cd_title": "Enhance Your Music Experience",
+        "cd_title": "Decorate Your House with Us",
         "cd_sub_title": "Don't Miss!!",
         "end_time": "2024-05-22",
         "cd_btn_txt": "Check it Out!",
-        "cd_btn_url": "",
+        "cd_btn_url": "shopify:\/\/collections\/desk-table",
         "cd_img": "shopify:\/\/shop_images\/poster-07.png",
         "is_animations": false
       }
