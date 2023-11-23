@@ -30,7 +30,7 @@
     "97366287-b518-4189-a954-da52687a999b": {
       "type": "collection-carousel",
       "settings": {
-        "collection_style": "cat_style_1",
+        "collection_style": "cat_style_2",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "sub_title": "Before Title",
         "section_title": "Featured Categories",
@@ -39,11 +39,12 @@
           "toy",
           "wallets",
           "woman",
-          "smartwatches",
           "shoes",
-          "round-table",
           "nft",
-          "baby-s"
+          "baby-s",
+          "deals",
+          "fashion",
+          "handbag"
         ],
         "autoplay_true": false,
         "autoplay_speed": 5000,
