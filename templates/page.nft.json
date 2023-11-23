@@ -154,6 +154,69 @@
         "btn_txt": "View All Deals",
         "btn_url": ""
       }
+    },
+    "6ee71414-233d-45bf-bbce-59a06070d115": {
+      "type": "latest-blog",
+      "blocks": {
+        "template--21554335482142__6ee71414-233d-45bf-bbce-59a06070d115-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21554335482142__6ee71414-233d-45bf-bbce-59a06070d115-section_padding-1"
+      ],
+      "settings": {
+        "container_style": "style_1",
+        "section_sub_title": "Regular Post",
+        "section_title": "Latest News",
+        "blog_handle": "news",
+        "blog_limit_handle": 3,
+        "col_xl": "4",
+        "col_lg": "4",
+        "col_md": "2",
+        "col_sm": "2",
+        "col_mobile": "1",
+        "section_title_color": "#292930",
+        "section_icon_color": "#ffffff",
+        "section_icon_bg_color": "#8c71db",
+        "section_subtitle_color": "#8c71db",
+        "blog_title_color": "#292930",
+        "blog_title_hover_color": "#cf987e",
+        "blog_user_color": "#ffffff",
+        "blog_rm_color": "#292930",
+        "blog_rm_hover_color": "#3577f0",
+        "blog_post_border_color": "#f1f1f1"
+      }
+    },
+    "320ee3c6-dd0d-411d-aec1-2d0181e94c82": {
+      "type": "section-blog",
+      "blocks": {
+        "template--21554335482142__320ee3c6-dd0d-411d-aec1-2d0181e94c82-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21554335482142__320ee3c6-dd0d-411d-aec1-2d0181e94c82-section_padding-1"
+      ],
+      "settings": {
+        "bloglayout": "blog1"
+      }
     }
   },
   "order": [
@@ -161,6 +224,8 @@
     "b3c26134-efa6-4ff8-bfe6-b57406b8c9b1",
     "97366287-b518-4189-a954-da52687a999b",
     "fed6e484-3850-4859-9020-de7bab54104f",
-    "3ab5a12b-5ecd-4259-b9af-c06bba773041"
+    "3ab5a12b-5ecd-4259-b9af-c06bba773041",
+    "6ee71414-233d-45bf-bbce-59a06070d115",
+    "320ee3c6-dd0d-411d-aec1-2d0181e94c82"
   ]
 }
