@@ -15,9 +15,7 @@
             "banner_title": "Smart Digital Watch",
             "banner_btn_txt": "Shop Now",
             "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/product-48.png",
-            "autoplay_true": false,
-            "autoplay_speed": 5000
+            "banner_img": "shopify:\/\/shop_images\/product-48.png"
           }
         },
         "33d3ac6e-0791-4af7-a8e1-330c45eb56d8": {
@@ -27,9 +25,7 @@
             "banner_title": "Smart Digital Watch",
             "banner_btn_txt": "Shop Now",
             "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/product-49.png",
-            "autoplay_true": false,
-            "autoplay_speed": 5000
+            "banner_img": "shopify:\/\/shop_images\/product-49.png"
           }
         },
         "63b21639-b328-473a-9992-ecbc9b9666c8": {
@@ -39,9 +35,7 @@
             "banner_title": "Smart Digital Watch",
             "banner_btn_txt": "Shop Now",
             "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/product-47.png",
-            "autoplay_true": false,
-            "autoplay_speed": 5000
+            "banner_img": "shopify:\/\/shop_images\/product-47.png"
           }
         }
       },
@@ -52,10 +46,52 @@
       ],
       "settings": {
       }
+    },
+    "9b211fec-f339-4346-aa40-866333f41efc": {
+      "type": "section-rightstretch-product-carousel",
+      "blocks": {
+        "template--21547775754526__9b211fec-f339-4346-aa40-866333f41efc-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21547775754526__9b211fec-f339-4346-aa40-866333f41efc-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "is_countdown": true,
+        "end_time": "2024-05-22",
+        "product_collection": "desk-table",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
     }
   },
   "order": [
     "main",
-    "fee67d54-5d2b-47fd-b9c7-73a913865081"
+    "fee67d54-5d2b-47fd-b9c7-73a913865081",
+    "9b211fec-f339-4346-aa40-866333f41efc"
   ]
 }
