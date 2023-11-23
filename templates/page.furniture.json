@@ -71,11 +71,56 @@
         "product_column_md": 3,
         "product_column_sm": 2
       }
+    },
+    "813957b6-7340-4879-b5f7-0f912c37b780": {
+      "type": "section-product-grid",
+      "blocks": {
+        "template--21547775754526__813957b6-7340-4879-b5f7-0f912c37b780-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21547775754526__813957b6-7340-4879-b5f7-0f912c37b780-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": true,
+        "end_time": "2024-05-22",
+        "section_btn_txt": "View All Deals",
+        "section_btn_url": "shopify:\/\/collections",
+        "product_collection": "desk-table",
+        "excluded_products": [
+
+        ],
+        "number_of_products_to_show": 8,
+        "product_layout": "1",
+        "col_xl": "3",
+        "col_lg": "4",
+        "col_md": "2",
+        "col_sm": "2",
+        "col_mobile": "1",
+        "isbutton_true": false,
+        "btn_txt": "View All Deals",
+        "btn_url": ""
+      }
     }
   },
   "order": [
     "main",
     "fee67d54-5d2b-47fd-b9c7-73a913865081",
-    "9b211fec-f339-4346-aa40-866333f41efc"
+    "9b211fec-f339-4346-aa40-866333f41efc",
+    "813957b6-7340-4879-b5f7-0f912c37b780"
   ]
 }
