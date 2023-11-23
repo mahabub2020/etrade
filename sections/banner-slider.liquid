@@ -19,13 +19,11 @@
    {%- endcapture -%}
    
    {%- capture data_slick_activation -%}
-      data-slick='{ 
-          
+      data-slick='{  
         {%- if section.settings.autoplay_true -%}
           "autoplay": true,
           "autoplaySpeed": {{ section.settings.autoplay_speed }},
-          {%- endif -%}  
-          
+          {%- endif -%}    
           "slidesToScroll": 1,
           "slidesToShow": 2, 
           "arrows": false,
@@ -51,22 +49,18 @@
                     <div class="single-slide slick-slide" data-sal="slide-up" data-sal-delay="400" data-sal-duration="800"> 
                         {% if block.settings.subtitle != '' %}
                             <span class="subtitle"><i class="fas fa-fire"></i> {{ block.settings.subtitle }}</span>
-                        {% endif %} 
-
+                        {% endif %}  
                         {% if block.settings.banner_title != '' %}
                             <h1 class="title">{{ block.settings.banner_title }}</h1>
-                        {% endif %} 
-
+                        {% endif %}  
                         {% if block.settings.banner_btn_url %} 
                             <div class="slide-action">
                               <div class="shop-btn">
                                 <a href="{{ block.settings.banner_btn_url }}" class="axil-btn btn-bg-primary"><i class="far fa-shopping-cart"></i> {{ block.settings.banner_btn_txt }}</a>
                               </div>  
                             </div>  
-                        {% endif %}  
-
-                      </div>
-
+                        {% endif %}   
+                      </div> 
                     {% endcase %} 
                   {% endfor %}
                       
