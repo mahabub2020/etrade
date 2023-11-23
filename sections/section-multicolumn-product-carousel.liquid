@@ -67,27 +67,27 @@
            -%} 
               {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}                       
                 {% assign loopcount = loopcount | plus: 1 %} 
-                    {% if count == 1 %}
-                      <div class="slick-single-layout">
-                        <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
-                    {% endif %} 
-                      <div class="col">
-                        {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
-                        {% capture include_snippet %}
-                          {% include layout %}
-                        {% endcapture %}
-                        {{ include_snippet }}
-                    </div>  
-                    {% if count == totalitems %}
-                        </div></div> 
-                      {% assign count = 1 %}  
-                    {% elsif forloop.length  == loopcount %}
-                        </div></div>
-                      {% assign count = count | plus: 1 %} 
-                    {% else %}
-                        {% assign count = count | plus: 1 %}
-                    {% endif %} 
-                  {% endfor %} 
+                  {% if count == 1 %}
+                    <div class="slick-single-layout">
+                      <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
+                  {% endif %} 
+                    <div class="col">
+                      {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
+                      {% capture include_snippet %}
+                        {% include layout %}
+                      {% endcapture %}
+                      {{ include_snippet }}
+                  </div>  
+                  {% if count == totalitems %}
+                      </div></div> 
+                    {% assign count = 1 %}  
+                  {% elsif forloop.length  == loopcount %}
+                      </div></div>
+                    {% assign count = count | plus: 1 %} 
+                  {% else %}
+                      {% assign count = count | plus: 1 %}
+                  {% endif %} 
+                {% endfor %} 
       </div>
   </div>
   {% if section.settings.isbutton_true == true %}
@@ -158,11 +158,13 @@
     {
       "type": "checkbox",
       "id": "is_section_title",
+      "default": true,
       "label": "Enable Section Title"
     },
     {
       "type": "select",
       "id": "title_layout",
+      "default": "style_2",
       "label": "Title Layout",
       "options": [
         {
@@ -221,9 +223,9 @@
       "type": "range",
       "id": "list_per_slider",
       "min": 1,
-      "max": 10,
+      "max": 32,
       "step": 1,
-      "default":4,
+      "default": 8,
       "label": "Iteam Per Slider"
     }, 
 
@@ -231,7 +233,7 @@
       "type": "range",
       "id": "number_of_products_to_show",
       "min": 1,
-      "max": 12,
+      "max": 32,
       "step": 1,
       "default": 8,
       "label": "Number of products to show"
@@ -326,7 +328,7 @@
       "step": 1,
       "label": "Responsive Columns",
       "unit": "px",
-      "default": 2
+      "default": 4
     },
     {
       "type": "header",
