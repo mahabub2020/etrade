@@ -89,13 +89,13 @@
 
         ],
         "number_of_products_to_show": 8,
-        "product_layout": "1",
+        "product_layout": "7",
         "col_xl": "3",
         "col_lg": "4",
         "col_md": "2",
         "col_sm": "2",
         "col_mobile": "1",
-        "isbutton_true": false,
+        "isbutton_true": true,
         "btn_txt": "View All Deals",
         "btn_url": ""
       }
