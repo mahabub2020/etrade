@@ -304,6 +304,15 @@
         "col_sm": 2
       }
     },
+    "48af3f2e-6f67-4787-b96e-f61be1178d56": {
+      "type": "dividar",
+      "settings": {
+        "container": "container-xxl",
+        "border_color": "#F6F7FB",
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
+    },
     "359090f7-6f93-49e3-a936-de2399d03613": {
       "type": "section-why-us",
       "blocks": {
@@ -345,8 +354,8 @@
         "template--21547775754526__359090f7-6f93-49e3-a936-de2399d03613-section_padding-1": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 20,
-            "section_padding_bottom": 20,
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
             "section_padding_top_md": 45,
             "section_padding_bottom_md": 60,
             "section_padding_top_xs": 0,
@@ -374,6 +383,67 @@
         "col_sm": "2",
         "col_mobile": "1"
       }
+    },
+    "0c9b5926-731e-46e7-9e2f-a8146fbb5597": {
+      "type": "section-testimonial-carousel",
+      "blocks": {
+        "template--21547775754526__0c9b5926-731e-46e7-9e2f-a8146fbb5597-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "0597e644-c81c-4d9a-ad54-d923924cf601": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "74dae4a6-d94f-46e0-95ff-12914f370ff7": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "2d393d0d-a270-446c-97c8-2d1daf2b6083": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "74f34c94-aeaf-4ab8-8603-8e843d5e4a79": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--21547775754526__0c9b5926-731e-46e7-9e2f-a8146fbb5597-review-1",
+        "0597e644-c81c-4d9a-ad54-d923924cf601",
+        "74dae4a6-d94f-46e0-95ff-12914f370ff7",
+        "2d393d0d-a270-446c-97c8-2d1daf2b6083",
+        "74f34c94-aeaf-4ab8-8603-8e843d5e4a79"
+      ],
+      "settings": {
+        "container": "container",
+        "is_section_title": true,
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "section_title": "Our Users Feedback",
+        "section_sub_title": "Testimonials",
+        "autoplay_true": false,
+        "autoplay_speed": 5000
+      }
     }
   },
   "order": [
@@ -386,6 +456,8 @@
     "1a71d000-4bba-462b-a7a8-fa717c39bdec",
     "39ad8c93-71af-4629-b085-5d498ffeebb6",
     "8afe6eb8-387f-44bb-9bf9-374fef0ee582",
-    "359090f7-6f93-49e3-a936-de2399d03613"
+    "48af3f2e-6f67-4787-b96e-f61be1178d56",
+    "359090f7-6f93-49e3-a936-de2399d03613",
+    "0c9b5926-731e-46e7-9e2f-a8146fbb5597"
   ]
 }
