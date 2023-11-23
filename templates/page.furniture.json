@@ -303,6 +303,45 @@
         "col_md": 2,
         "col_sm": 2
       }
+    },
+    "359090f7-6f93-49e3-a936-de2399d03613": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--21547775754526__359090f7-6f93-49e3-a936-de2399d03613-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": ""
+          }
+        },
+        "template--21547775754526__359090f7-6f93-49e3-a936-de2399d03613-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 45,
+            "section_padding_bottom": 20,
+            "section_padding_top_md": 45,
+            "section_padding_bottom_md": 60,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21547775754526__359090f7-6f93-49e3-a936-de2399d03613-whyus-1",
+        "template--21547775754526__359090f7-6f93-49e3-a936-de2399d03613-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout1",
+        "col_xl": "5",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
     }
   },
   "order": [
@@ -314,6 +353,7 @@
     "ece2d16d-2e62-4bfa-b988-80a42dc5b0f2",
     "1a71d000-4bba-462b-a7a8-fa717c39bdec",
     "39ad8c93-71af-4629-b085-5d498ffeebb6",
-    "8afe6eb8-387f-44bb-9bf9-374fef0ee582"
+    "8afe6eb8-387f-44bb-9bf9-374fef0ee582",
+    "359090f7-6f93-49e3-a936-de2399d03613"
   ]
 }
