@@ -264,6 +264,45 @@
         "cd_img": "shopify:\/\/shop_images\/poster-07.png",
         "is_animations": false
       }
+    },
+    "8afe6eb8-387f-44bb-9bf9-374fef0ee582": {
+      "type": "section-multicolumn-product-carousel",
+      "blocks": {
+        "template--21547775754526__8afe6eb8-387f-44bb-9bf9-374fef0ee582-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21547775754526__8afe6eb8-387f-44bb-9bf9-374fef0ee582-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "is_countdown": true,
+        "end_time": "2024-05-22",
+        "product_collection": "desk-table",
+        "list_per_slider": 8,
+        "number_of_products_to_show": 8,
+        "product_layout": "1",
+        "isbutton_true": true,
+        "btn_txt": "View All Deals",
+        "btn_url": "shopify:\/\/collections\/all",
+        "autoplay_true": true,
+        "autoplay_speed": 5000,
+        "col_lg": 4,
+        "col_md": 2,
+        "col_sm": 2
+      }
     }
   },
   "order": [
@@ -274,6 +313,7 @@
     "813957b6-7340-4879-b5f7-0f912c37b780",
     "ece2d16d-2e62-4bfa-b988-80a42dc5b0f2",
     "1a71d000-4bba-462b-a7a8-fa717c39bdec",
-    "39ad8c93-71af-4629-b085-5d498ffeebb6"
+    "39ad8c93-71af-4629-b085-5d498ffeebb6",
+    "8afe6eb8-387f-44bb-9bf9-374fef0ee582"
   ]
 }
