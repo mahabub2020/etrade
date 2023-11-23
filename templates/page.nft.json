@@ -33,27 +33,20 @@
         "2c701cd0-8e3f-4d54-92f7-3ef3caa9a720": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 65,
-            "section_padding_bottom": 125,
+            "section_padding_top": 75,
+            "section_padding_bottom": 50,
             "section_padding_top_md": 0,
             "section_padding_bottom_md": 80,
             "section_padding_top_xs": 0,
             "section_padding_bottom_xs": 60
           }
-        },
-        "48f88467-3f51-4aaf-9472-8d4c79ecd01c": {
-          "type": "section_background",
-          "settings": {
-            "section_bg_color": "#a30808"
-          }
         }
       },
       "block_order": [
-        "2c701cd0-8e3f-4d54-92f7-3ef3caa9a720",
-        "48f88467-3f51-4aaf-9472-8d4c79ecd01c"
+        "2c701cd0-8e3f-4d54-92f7-3ef3caa9a720"
       ],
       "settings": {
-        "collection_style": "cat_style_2",
+        "collection_style": "cat_style_1",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "sub_title": "Before Title",
         "section_title": "Featured Categories",
@@ -76,11 +69,53 @@
         "product_column_md": 4,
         "product_column_sm": 2
       }
+    },
+    "fed6e484-3850-4859-9020-de7bab54104f": {
+      "type": "section-rightstretch-product-carousel",
+      "blocks": {
+        "template--21554335482142__fed6e484-3850-4859-9020-de7bab54104f-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21554335482142__fed6e484-3850-4859-9020-de7bab54104f-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
+        "product_collection": "nft",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
     }
   },
   "order": [
     "main",
     "b3c26134-efa6-4ff8-bfe6-b57406b8c9b1",
-    "97366287-b518-4189-a954-da52687a999b"
+    "97366287-b518-4189-a954-da52687a999b",
+    "fed6e484-3850-4859-9020-de7bab54104f"
   ]
 }
