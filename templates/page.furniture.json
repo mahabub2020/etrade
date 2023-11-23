@@ -127,6 +127,87 @@
         "btn_txt": "View All Deals",
         "btn_url": ""
       }
+    },
+    "ece2d16d-2e62-4bfa-b988-80a42dc5b0f2": {
+      "type": "section-about-us",
+      "blocks": {
+        "0632d512-d744-4076-808f-482292138bbf": {
+          "type": "about_features",
+          "settings": {
+            "box_number": "1.",
+            "box_title": "Who We Are",
+            "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
+            "features_number_color": "#C4C4C4",
+            "features_title_color": "#292930",
+            "features_content_color": "#777777"
+          }
+        },
+        "f548ba52-cdf4-422c-a108-bd52a9c95e49": {
+          "type": "about_features",
+          "settings": {
+            "box_number": "2.",
+            "box_title": "What Do We Do",
+            "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
+            "features_number_color": "#C4C4C4",
+            "features_title_color": "#292930",
+            "features_content_color": "#777777"
+          }
+        },
+        "template--21547775754526__ece2d16d-2e62-4bfa-b988-80a42dc5b0f2-about_features-1": {
+          "type": "about_features",
+          "settings": {
+            "box_number": "3.",
+            "box_title": "How Do We Help",
+            "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
+            "features_number_color": "#C4C4C4",
+            "features_title_color": "#292930",
+            "features_content_color": "#777777"
+          }
+        },
+        "c2161809-4ec0-45c1-83e7-feb1bbd19a94": {
+          "type": "about_features",
+          "settings": {
+            "box_number": "4.",
+            "box_title": "Create success story",
+            "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
+            "features_number_color": "#C4C4C4",
+            "features_title_color": "#292930",
+            "features_content_color": "#777777"
+          }
+        },
+        "template--21547775754526__ece2d16d-2e62-4bfa-b988-80a42dc5b0f2-about_img-1": {
+          "type": "about_img",
+          "settings": {
+            "box_img1": "shopify:\/\/shop_images\/about-04.png",
+            "img_size1": "250x238",
+            "box_img2": "shopify:\/\/shop_images\/about-06.png",
+            "img_size2": "250x238"
+          }
+        },
+        "b62c4807-7d34-4241-8fbc-9707de70dd6e": {
+          "type": "about_img",
+          "settings": {
+            "box_img1": "shopify:\/\/shop_images\/about-05.png",
+            "img_size1": "250x238",
+            "box_img2": "shopify:\/\/shop_images\/about-07.png",
+            "img_size2": "250x238"
+          }
+        }
+      },
+      "block_order": [
+        "0632d512-d744-4076-808f-482292138bbf",
+        "f548ba52-cdf4-422c-a108-bd52a9c95e49",
+        "template--21547775754526__ece2d16d-2e62-4bfa-b988-80a42dc5b0f2-about_features-1",
+        "c2161809-4ec0-45c1-83e7-feb1bbd19a94",
+        "template--21547775754526__ece2d16d-2e62-4bfa-b988-80a42dc5b0f2-about_img-1",
+        "b62c4807-7d34-4241-8fbc-9707de70dd6e"
+      ],
+      "settings": {
+        "section_title": "Who we are",
+        "section_sub_title": "About Us",
+        "section_title_color": "#292930",
+        "section_subtitle_color": "#3577f0"
+      }
     }
   },
   "order": [
@@ -134,6 +215,7 @@
     "9c94f89a-08b3-4f85-944c-b29531db27fc",
     "fee67d54-5d2b-47fd-b9c7-73a913865081",
     "9b211fec-f339-4346-aa40-866333f41efc",
-    "813957b6-7340-4879-b5f7-0f912c37b780"
+    "813957b6-7340-4879-b5f7-0f912c37b780",
+    "ece2d16d-2e62-4bfa-b988-80a42dc5b0f2"
   ]
 }
