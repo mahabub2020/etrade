@@ -20,6 +20,7 @@
         "excluded_products": [
 
         ],
+        "offset_product": 1,
         "sort_by": "title",
         "reverse_order": true,
         "hover_img": true
