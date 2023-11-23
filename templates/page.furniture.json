@@ -444,6 +444,48 @@
         "autoplay_true": false,
         "autoplay_speed": 5000
       }
+    },
+    "10a05b27-8e56-4af4-a750-d6483008d22a": {
+      "type": "section-product-carousel",
+      "blocks": {
+        "template--21547775754526__10a05b27-8e56-4af4-a750-d6483008d22a-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21547775754526__10a05b27-8e56-4af4-a750-d6483008d22a-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
+        "product_collection": "desk-table",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": true,
+        "product_layout": "2",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
     }
   },
   "order": [
@@ -458,6 +500,7 @@
     "8afe6eb8-387f-44bb-9bf9-374fef0ee582",
     "48af3f2e-6f67-4787-b96e-f61be1178d56",
     "359090f7-6f93-49e3-a936-de2399d03613",
-    "0c9b5926-731e-46e7-9e2f-a8146fbb5597"
+    "0c9b5926-731e-46e7-9e2f-a8146fbb5597",
+    "10a05b27-8e56-4af4-a750-d6483008d22a"
   ]
 }
