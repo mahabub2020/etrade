@@ -73,6 +73,8 @@
         "63b21639-b328-473a-9992-ecbc9b9666c8"
       ],
       "settings": {
+        "autoplay_true": false,
+        "autoplay_speed": 5000
       }
     },
     "9b211fec-f339-4346-aa40-866333f41efc": {
@@ -137,7 +139,7 @@
             "box_number": "1.",
             "box_title": "Who We Are",
             "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
-            "features_number_color": "#C4C4C4",
+            "features_number_color": "#c4c4c4",
             "features_title_color": "#292930",
             "features_content_color": "#777777"
           }
@@ -148,7 +150,7 @@
             "box_number": "2.",
             "box_title": "What Do We Do",
             "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
-            "features_number_color": "#C4C4C4",
+            "features_number_color": "#c4c4c4",
             "features_title_color": "#292930",
             "features_content_color": "#777777"
           }
@@ -159,7 +161,7 @@
             "box_number": "3.",
             "box_title": "How Do We Help",
             "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
-            "features_number_color": "#C4C4C4",
+            "features_number_color": "#c4c4c4",
             "features_title_color": "#292930",
             "features_content_color": "#777777"
           }
@@ -170,7 +172,7 @@
             "box_number": "4.",
             "box_title": "Create success story",
             "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
-            "features_number_color": "#C4C4C4",
+            "features_number_color": "#c4c4c4",
             "features_title_color": "#292930",
             "features_content_color": "#777777"
           }
@@ -208,6 +210,48 @@
         "section_title_color": "#292930",
         "section_subtitle_color": "#3577f0"
       }
+    },
+    "1a71d000-4bba-462b-a7a8-fa717c39bdec": {
+      "type": "section-product-carousel",
+      "blocks": {
+        "template--21547775754526__1a71d000-4bba-462b-a7a8-fa717c39bdec-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21547775754526__1a71d000-4bba-462b-a7a8-fa717c39bdec-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": true,
+        "end_time": "2024-05-22",
+        "product_collection": "desk-table",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
     }
   },
   "order": [
@@ -216,6 +260,7 @@
     "fee67d54-5d2b-47fd-b9c7-73a913865081",
     "9b211fec-f339-4346-aa40-866333f41efc",
     "813957b6-7340-4879-b5f7-0f912c37b780",
-    "ece2d16d-2e62-4bfa-b988-80a42dc5b0f2"
+    "ece2d16d-2e62-4bfa-b988-80a42dc5b0f2",
+    "1a71d000-4bba-462b-a7a8-fa717c39bdec"
   ]
 }
