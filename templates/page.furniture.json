@@ -252,6 +252,18 @@
         "product_column_md": 3,
         "product_column_sm": 2
       }
+    },
+    "39ad8c93-71af-4629-b085-5d498ffeebb6": {
+      "type": "section-countdown",
+      "settings": {
+        "cd_title": "Enhance Your Music Experience",
+        "cd_sub_title": "Don't Miss!!",
+        "end_time": "2024-05-22",
+        "cd_btn_txt": "Check it Out!",
+        "cd_btn_url": "",
+        "cd_img": "shopify:\/\/shop_images\/poster-07.png",
+        "is_animations": false
+      }
     }
   },
   "order": [
@@ -261,6 +273,7 @@
     "9b211fec-f339-4346-aa40-866333f41efc",
     "813957b6-7340-4879-b5f7-0f912c37b780",
     "ece2d16d-2e62-4bfa-b988-80a42dc5b0f2",
-    "1a71d000-4bba-462b-a7a8-fa717c39bdec"
+    "1a71d000-4bba-462b-a7a8-fa717c39bdec",
+    "39ad8c93-71af-4629-b085-5d498ffeebb6"
   ]
 }
