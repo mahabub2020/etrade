@@ -1,4 +1,26 @@
+
+
+
 <article class="py-8" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="axil-blog-area">
+   
+ 
+    {% if article.image != blank %}
+    <div class="axil-single-post post-formate post-standard">
+        <div class="container">
+            <div class="content-block">
+                <div class="inner">   
+                    <div itemprop="image" class="post-thumbnail">
+                        <img src="{{ article | img_url: 'master' }}" alt="{{ article.image.alt }}"> 
+                    </div>  
+                </div>
+            </div> 
+        </div>
+    </div>  
+    {% endif %}
+
+
+
     {% for block in section.blocks %}
         {% case block.type %}
             {% when 'article_title' %}
