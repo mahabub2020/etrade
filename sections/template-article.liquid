@@ -24,57 +24,61 @@
             </div>  
         {% endif %}
 
-        <div class="post-single-wrapper position-relative">
-            <div class="container">
-                <div class="row"> 
-                    <div class="col-lg-1">
-                        <div class="d-flex flex-wrap align-content-start h-100">
-                            <div class="position-sticky sticky-top">
-                                <div class="post-details__social-share">
-                                <span class="share-on-text">Share on:</span>
-                                    <div class="social-share">
-                                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://dev.axilthemes.com/themes/etrade/how-to-generate-blog-ideas-are-great-for-businesses-that-sell-both-b2b-and-d2c-2-2/" target="_blank" class="aw-facebook"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="https://twitter.com/share?https://dev.axilthemes.com/themes/etrade/how-to-generate-blog-ideas-are-great-for-businesses-that-sell-both-b2b-and-d2c-2-2/&amp;text=How%20to%20generate%20blog%20ideas%20are%20great%20for%20businesses%20that%20sell%20both%20B2B%20and%20D2D" target="_blank" class="aw-twitter"><i class="fab fa-twitter"></i></a>
-                                        <a href="http://www.linkedin.com/shareArticle?url=https://dev.axilthemes.com/themes/etrade/how-to-generate-blog-ideas-are-great-for-businesses-that-sell-both-b2b-and-d2c-2-2/&amp;title=How%20to%20generate%20blog%20ideas%20are%20great%20for%20businesses%20that%20sell%20both%20B2B%20and%20D2D" target="_blank" class="aw-linkdin"><i class="fab fa-linkedin-in"></i></a>
+            <div class="post-single-wrapper position-relative">
+                <div class="container">
+                    <div class="row"> 
+
+                        <div class="col-lg-1">
+                            <div class="d-flex flex-wrap align-content-start h-100">
+                                <div class="position-sticky sticky-top">
+                                    <div class="post-details__social-share">
+                                    <span class="share-on-text">Share on:</span>
+                                        <div class="social-share">
+                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://dev.axilthemes.com/themes/etrade/how-to-generate-blog-ideas-are-great-for-businesses-that-sell-both-b2b-and-d2c-2-2/" target="_blank" class="aw-facebook"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="https://twitter.com/share?https://dev.axilthemes.com/themes/etrade/how-to-generate-blog-ideas-are-great-for-businesses-that-sell-both-b2b-and-d2c-2-2/&amp;text=How%20to%20generate%20blog%20ideas%20are%20great%20for%20businesses%20that%20sell%20both%20B2B%20and%20D2D" target="_blank" class="aw-twitter"><i class="fab fa-twitter"></i></a>
+                                            <a href="http://www.linkedin.com/shareArticle?url=https://dev.axilthemes.com/themes/etrade/how-to-generate-blog-ideas-are-great-for-businesses-that-sell-both-b2b-and-d2c-2-2/&amp;title=How%20to%20generate%20blog%20ideas%20are%20great%20for%20businesses%20that%20sell%20both%20B2B%20and%20D2D" target="_blank" class="aw-linkdin"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>                            
-                    </div>  
-                    <div class=" col-lg-7 axil-post-wrapper"> 
-                        <div class="post-heading">   
-                        {%- if section.settings.blog_show_title -%}<h1 class="title blog-item-name" itemprop="headline">{{ article.title | escape }}</h1> {%- endif -%}
-                        {%- if section.settings.blog_show_author -%} 
+                            </div>                            
+                        </div> 
 
-                        <div class="axil-post-meta">
-                            <div class="post-author-avatar">
-                                <img src="{{ article.user.image | img_url: 'master' }}" alt="{{ article.author }}">
-                            <div class="post-meta-content">    
+                        <div class=" col-lg-7 axil-post-wrapper"> 
+                            <div class="post-heading">   
+                            {%- if section.settings.blog_show_title -%}<h1 class="title blog-item-name" itemprop="headline">{{ article.title | escape }}</h1> {%- endif -%}
+                            {%- if section.settings.blog_show_author -%} 
+
+                            <div class="axil-post-meta">
+                                <div class="post-author-avatar">
+                                    <img src="{{ article.user.image | img_url: 'master' }}" alt="{{ article.author }}">
+                                <div class="post-meta-content">    
+                                
                                 <h6 class="author-title post-author-name">
-                                     
-                                        <span class="hover-flip-item"> 
-                                            <span itemprop="name">{{ article.author }}</span>
-                                        </span>
-                                  
-                                </h6>
-                                <ul class="post-meta-list">                    
-                                    <li class="post-meta-date">{{ article.published_at | date: "%b, %d , %y" }}</li> 
-                                    <li>{{ article.bio }}</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> 
+                                        
+                                            <span class="hover-flip-item"> 
+                                                <span itemprop="name">{{ article.author }}</span>
+                                            </span>
+                                    
+                                    </h6>
+                                    <ul class="post-meta-list">                    
+                                        <li class="post-meta-date">{{ article.published_at | date: "%b, %d , %y" }}</li> 
+                                        <li>{{ article.bio }}</li>
+                                    </ul>
 
-                     {%- endif -%} 
+                                </div>
+                            </div>
+                        </div> 
+
+                        {%- endif -%} 
+                        </div> 
                     </div> 
                     <div class="col-lg-4">
                         Sidebar
-                    </div>
+                    </div> 
                 </div>
             </div>
         </div>
     </div>
-</div>
 </article>
 
 <script type="application/ld+json">
