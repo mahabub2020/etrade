@@ -9,8 +9,7 @@
                     <div class="content-block">
                         <div class="inner">   
                             <div itemprop="image" class="post-thumbnail">
-                                <div class="d-block {% if section.settings.image_height != 'orignal' %} ratio ratio-{{section.settings.image_height}}{% endif %}"
-                                    itemprop="image">
+                                 
                                    <img
                                            srcset="{% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
                {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
@@ -26,7 +25,7 @@
                                            width="{{ article.image.width }}"
                                            height="{{ article.image.height }}"
                                            alt="{{ article.image.alt | escape }}">
-                               </div>
+                               
                             </div>  
                         </div>
                     </div> 
