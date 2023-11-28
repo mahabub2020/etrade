@@ -8,18 +8,9 @@
                 <div class="container">
                     <div class="content-block">
                         <div class="inner">   
-                            <div itemprop="image" class="post-thumbnail">
-                                 
-                                   <img
-                                           srcset="{% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
-               {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
-               {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
-               {% if article.image.width >= 1500 %}{{ article.image | image_url: width: 1500 }} 1500w,{% endif %}
-               {% if article.image.width >= 2200 %}{{ article.image | image_url: width: 2200 }} 2200w,{% endif %}
-               {% if article.image.width >= 3000 %}{{ article.image | image_url: width: 3000 }} 3000w,{% endif %}
-               {{ article.image | image_url }} {{ article.image.width }}w"
-                                           sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
-                                           src="{{ article.image | image_url: width: 1100 }}"
+                            <div itemprop="image" class="post-thumbnail"> 
+                                   <img sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
+                                           src="{{ article.image | image_url: width: 1300 }}"
                                            loading="lazy"
                                            class="img-fluid d-block mx-auto"
                                            width="{{ article.image.width }}"
@@ -32,9 +23,61 @@
                 </div>
             </div>  
         {% endif %}
- 
-    </div>
-    </div>
+
+        <div class="post-single-wrapper position-relative">
+            <div class="container">
+                <div class="row"> 
+                    <div class="col-lg-9 col-xl-7 order-2 order-lg-1">
+                        <div class="d-flex flex-wrap align-content-start h-100">
+                            <div class="position-sticky sticky-top">
+                                <div class="post-details__social-share">
+                                <span class="share-on-text">Share on:</span>
+                                    <div class="social-share">
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://dev.axilthemes.com/themes/etrade/how-to-generate-blog-ideas-are-great-for-businesses-that-sell-both-b2b-and-d2c-2-2/" target="_blank" class="aw-facebook"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://twitter.com/share?https://dev.axilthemes.com/themes/etrade/how-to-generate-blog-ideas-are-great-for-businesses-that-sell-both-b2b-and-d2c-2-2/&amp;text=How%20to%20generate%20blog%20ideas%20are%20great%20for%20businesses%20that%20sell%20both%20B2B%20and%20D2D" target="_blank" class="aw-twitter"><i class="fab fa-twitter"></i></a>
+                                        <a href="http://www.linkedin.com/shareArticle?url=https://dev.axilthemes.com/themes/etrade/how-to-generate-blog-ideas-are-great-for-businesses-that-sell-both-b2b-and-d2c-2-2/&amp;title=How%20to%20generate%20blog%20ideas%20are%20great%20for%20businesses%20that%20sell%20both%20B2B%20and%20D2D" target="_blank" class="aw-linkdin"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                            
+                    </div>  
+                    <div class=" col-lg-7 axil-post-wrapper"> 
+                        <div class="post-heading">   
+                        {%- if section.settings.blog_show_title -%}<h1 class="title blog-item-name" itemprop="headline">{{ article.title | escape }}</h1> {%- endif -%}
+                        {%- if section.settings.blog_show_author -%} 
+                            
+                        <div class="axil-post-meta">
+                            <div class="post-author-avatar">
+                                <img src="{{ article.user.image | img_url: 'master' }}" alt="{{ article.author }}">
+                            <div class="post-meta-content">    
+                                <h6 class="author-title post-author-name">
+                                    <a class="hover-flip-item-wrapper" href="#">
+                                        <span class="hover-flip-item">
+                                            <span data-text="">
+                                                <span class="text-muted" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                                                    <span itemprop="name">{{ article.author }}</span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </a>
+                                </h6>
+                                <ul class="post-meta-list">                    
+                                    <li class="post-meta-date">{{ article.published_at | date: "%b, %d , %y" }}</li>
+                                    <li><a href="{{ article.url }}#comments">{{ 'blogs.comments.with_count' | t: count: article.comments_count }}</a></li>
+                                    <li>{{ article.bio }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        {%- endif -%}
+
+                        </div>  
+                    </div> 
+                    <div class="col-lg-4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
 <script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -66,6 +109,18 @@
 {
     "name": "Template Article",
     "settings": [
+        {
+            "type": "checkbox",
+            "id": "blog_show_author",
+            "label": "Is Author",
+            "default": true
+          },
+        {
+            "type": "checkbox",
+            "id": "blog_show_title",
+            "label": "Is Title",
+            "default": true
+          },
         {
             "type": "checkbox",
             "id": "enable_author",
