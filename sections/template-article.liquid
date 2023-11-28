@@ -45,7 +45,7 @@
                         <div class="post-heading">   
                         {%- if section.settings.blog_show_title -%}<h1 class="title blog-item-name" itemprop="headline">{{ article.title | escape }}</h1> {%- endif -%}
                         {%- if section.settings.blog_show_author -%} 
-                            
+
                         <div class="axil-post-meta">
                             <div class="post-author-avatar">
                                 <img src="{{ article.user.image | img_url: 'master' }}" alt="{{ article.author }}">
@@ -62,8 +62,7 @@
                                     </a>
                                 </h6>
                                 <ul class="post-meta-list">                    
-                                    <li class="post-meta-date">{{ article.published_at | date: "%b, %d , %y" }}</li>
-                                    <li><a href="{{ article.url }}#comments">{{ 'blogs.comments.with_count' | t: count: article.comments_count }}</a></li>
+                                    <li class="post-meta-date">{{ article.published_at | date: "%b, %d , %y" }}</li> 
                                     <li>{{ article.bio }}</li>
                                 </ul>
                             </div>
@@ -73,7 +72,7 @@
                         </div>  
                     </div> 
                     <div class="col-lg-4">
-
+                        Sidebar
                     </div>
                 </div>
             </div>
