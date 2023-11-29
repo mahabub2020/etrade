@@ -116,9 +116,9 @@
               {%- if comment and comment.created_at -%}
               <p class="note form-success">
                 {%- if blog.comments_modareted? -%}
-                {{ 'blogs.comments.success_moderated' }}            
+                {{ 'blogs.comments.success_moderated' | t }}            
                 {%- else -%}
-                {{ 'blogs.comments.success' }}
+                {{ 'blogs.comments.success' | t }}
                 {%- endif -%}
               </p>
               {%- endif -%}
