@@ -77,6 +77,29 @@
 								{%- endfor -%} 
                             </div> 
 						{%- endif -%}  
+
+                        {% if section.settings.display_prev_next %}
+                            <div class="blog-nextprev">
+                                {% if blog.previous_article %}
+                                    {% if blog.previous_article.title != blank %}
+                                    <a class="nextprev-link prev-link" href="{{ blog.next_article }}" rel="next">
+                                            <span class="h6">Previous</span>
+                                            <span class="h3">{{ blog.next_article.title }}</span>
+                                        </a>
+                                    {% endif %}
+                                {% endif %}
+                                {% if blog.next_article %}
+                                    {% if blog.next_article.title != blank %}
+                                        <a class="nextprev-link next-link" href="{{ blog.previous_article }}" rel="previous">
+                                            <span class="h6">Next</span>
+                                            <span class="h3">{{ blog.previous_article.title }}</span>
+                                        </a>
+                                    {% endif %}
+                                {% endif %}
+                            </div>
+                            {%- endif -%}
+
+                            
                     </div>
                     <div class="col-lg-4">
                         Sidebar
@@ -148,6 +171,12 @@
             "id": "show_tags",
             "label": "Show Tags",
             "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "display_prev_next",
+            "label": "Show Prev/Next Product",
+            "default": true
           }
     ],
     "blocks": [
@@ -177,6 +206,6 @@
             "limit": 1
         }
     ]
-    
+
 }
 {% endschema %}
