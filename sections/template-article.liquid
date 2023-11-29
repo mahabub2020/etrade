@@ -72,34 +72,76 @@
                         {%- if section.settings.show_tags -%}
                             <div class="tag entry-tags">
                                 <span>Tags:</span>  
-                                {% include 'tags-article' %}
-                                
-								{% for tag in blog.all_tags %}
-									<a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
-								{%- endfor -%} 
+                                {% render 'tags-article' %} 
                             </div> 
 						{%- endif -%}  
 
-                        {% if section.settings.display_prev_next %}
-                            <div class="blog-nextprev">
-                                {% if blog.previous_article %}
-                                    {% if blog.previous_article.title != blank %}
-                                    <a class="nextprev-link prev-link" href="{{ blog.next_article.url }}" rel="next">
-                                            <span class="h6">Previous</span>
-                                            <span class="h3">{{ blog.next_article.title }}</span>
-                                        </a>
-                                    {% endif %}
-                                {% endif %}
-                                {% if blog.next_article %}
-                                    {% if blog.next_article.title != blank %}
-                                        <a class="nextprev-link next-link" href="{{ blog.previous_article.url }}" rel="previous">
-                                            <span class="h6">Next</span>
-                                            <span class="h3">{{ blog.previous_article.title }}</span>
-                                        </a>
-                                    {% endif %}
-                                {% endif %}
-                            </div>
-                            {%- endif -%}
+                        {% if blog.next_article or blog.previous_article %}
+                            <!-- Post Navigation Start Here -->
+                            <nav class="post-navigation mb--40">
+                              <div class="d-flex justify-content-between">
+                  
+                                <div class="nav-prev">
+                  
+                                  {% if blog.previous_article %}
+                                  <span class="left">
+                                    &larr; {{ 'blogs.article.older_post' | t | link_to: blog.previous_article }}
+                                  </span>
+                                  {% endif %}
+                                </div>
+                  
+                                <div class="nav-next">
+                                  {% if blog.next_article %}
+                                  <span class="right">
+                                    {{ 'blogs.article.newer_post' | t | link_to: blog.next_article }} &rarr;
+                                  </span>
+                                  {% endif %}
+                                </div>
+                  
+                              </div>
+                            </nav>
+                            <!-- Post Navigation Start Here -->
+                            {% endif %}
+
+
+
+
+
+          {%- if article.comments_enabled? -%}
+            {%- assign comment_post_limit = section.settings.comment_post_limit_handle -%}
+            {%- paginate article.comments by comment_post_limit -%}
+            <!-- Comments Start Here -->
+            <div id="comments" class="comments-area">
+  
+              {%- if comment and comment.created_at -%}
+              <p class="note form-success">
+                {%- if blog.comments_modareted? -%}
+                {{ 'blogs.comments.success_moderated' | t }}            
+                {%- else -%}
+                {{ 'blogs.comments.success' | t }}
+                {%- endif -%}
+              </p>
+              {%- endif -%}
+  
+              {%- if article.comments.size > 0 -%}
+              {%- include 'blog-comments' -%}
+  
+              {%- endif -%}
+              {%- if paginate.pages > 1 -%}
+              <div class="pagination-wrap mb--40">
+                {% include 'pagination' %}
+              </div>
+              {%- endif -%}
+              {%- include 'blog-comment-form' -%}
+  
+  
+            </div>
+            <!-- Comments Start Here -->
+            {%- endpaginate -%}
+            {%- endif -%}
+
+            
+                            
                             
                     </div>
                     <div class="col-lg-4">
@@ -178,7 +220,64 @@
             "id": "display_prev_next",
             "label": "Show Prev/Next Product",
             "default": true
-          }
+          },
+          {
+			"type": "header",
+			"content": "Comment Box"
+		},
+		{
+			"type": "image_picker",
+			"id": "commentator_image",
+			"label": "Comment Thumb Image",
+			"info": "Recommended Size: 80 x 80px"
+		},
+		{
+            "type": "range",
+            "id": "comment_post_limit_handle",
+            "min": 1,
+            "max": 10,
+            "step": 1,
+            "label": "How Many Comment Post Show",
+            "default": 5
+        },
+		{
+			"type": "header",
+			"content": "Comment Form"
+		},
+        {
+          "type": "textarea",
+          "id": "comment_description",
+          "label": "Commend Description Bottom",
+          "default": "Your email address will not be published. Required fields are marked" 
+        },
+        {
+          "type": "text",
+          "id": "text_name_title",
+          "label": "Name Label",
+          "default": "Name" 
+        },
+        {
+          "type": "text",
+          "id": "text_email_title",
+          "label": "Email Label",
+          "default": "Email" 
+        },
+        {
+          "type": "text",
+          "id": "text_area_title",
+          "label": "Textarea Label",
+          "default": "Your Review" 
+        },
+		{
+          "type": "header",
+          "content": "Blog Social Area"
+	    },
+        {
+          "type": "checkbox",
+          "id": "social_enable",
+          "label": "Social Enable",
+          "default": true
+        }
     ],
     "blocks": [
         {

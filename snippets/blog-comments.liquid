@@ -1,0 +1,27 @@
+
+<div class="comment">
+  <ul class="comment-list">
+ {% for comment in article.comments %}
+    <li>
+      <div class="single-comment">
+        <div class="comment-avatar">
+           {% if section.settings.commentator_image %}
+        <img src="{{ section.settings.commentator_image | img_url: '80x80', crop: 'center' }}" alt="{{ section.settings.commentator_image.alt }}">
+        {% else %}
+        <img src="https://www.gravatar.com/avatar/{{ comment.email | remove: ' ' | strip_newlines | downcase | md5 }}" />
+        {% endif %}
+        </div>
+        <div class="comment-info">
+          <div class="comment-meta">
+            <h5 class="comment-author">{{ comment.author }}</h5>
+            <span class="comment-date">{{ comment.created_at | date: "%b %d, %Y at %H:%M" }}</span>
+          </div>
+          <div class="comment-content">
+            <p>{{ comment.content }}</p>
+          </div>
+        </div>
+      </div>
+    </li>
+{% endfor %}
+  </ul>
+</div>

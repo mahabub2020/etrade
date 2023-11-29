@@ -1,42 +1,48 @@
-{% if pagination.pages > 1 %}
-  {% if section.settings.loading_style == "load_more" %}
-    <input
-      type="hidden"
-      value="{{ pagination.next.url }}"
-      data-next-url>
-    <input
-      type="hidden"
-      value="{{ pagination.pages }}"
-      data-total-pages>
-    <input
-      type="hidden"
-      value="{{ pagination.current_page  }}"
-      data-current-page>
-    <div class="axiltheme-loadmore-btn-area text-center pt--30">
-      <button class="axiltheme-loadmore-btn axil-btn btn-bg-lighter btn-load-more">
-        <span class="axiltheme-loadmore-btn-text">Load More</span>
-        <span class="axiltheme-loadmore-btn-icon">
-          <i class="fa fa-spinner fa-spin"></i>
-        </span>
-      </button>
-    </div>
-  {% elsif section.settings.loading_style == "pagination" %}
-    <nav role="navigation" class="flex justify-center items-center my-8">
-      {% if pagination.previous %}
-        <a href="{{ pagination.previous.url }}">Previous</a>
-      {% endif %}
-
-      {% if pagination.next %}
-        <a href="{{ pagination.next.url }}">Next</a>
-      {% endif %}
-    </nav>
-  {% else %}
-    <ul class="list-unstyled flex justify-center items-center my-8">
-      <li class="infinite_next">
-        {% if pagination.next %}
-          <a href="{{ pagination.next.url }}" class="">Loading</a>
-        {% endif %}
+{% if paginate.pages > 1 %}
+<div class="theme-default-pagination">
+  <nav class="pagination">
+    <ul class="pagination">
+      {% if paginate.previous %}
+      <li>
+        <a href="{{ paginate.previous.url }}" aria-label="Previous" class="prev page-number">
+          <span aria-hidden="true">Prev</span>
+        </a>
       </li>
+      {% else %}
+      <li class="disabled prev">
+        <a href="#" class="prev page-number">
+          <span>Prev</span>
+        </a>
+      </li>
+      {% endif %}
+      {% for part in paginate.parts %}
+      {% if part.is_link %}
+      <li>
+        <a  class="page-number" href="{{ part.url }}" title="">{{ part.title }}</a>
+      </li>
+      {% else %}
+      {% if part.title == paginate.current_page %}
+      <li class="active"><a  class="page-number" href="">{{ part.title }}</a></li>
+      {% else %}
+      <li><a  class="page-number" href="#">{{ part.title }}</a></li>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+      {% if paginate.next %}
+      <li><a  class="next page-number" href="{{ paginate.next.url }}" title="{{ paginate.next.title }}"><span aria-hidden="true">Next</span></a></li>
+      {% else %}
+      <li class="disabled next">
+        <a href="#" class="next page-number">
+          <span>Next</span>
+        </a>
+      </li>
+      {% endif %}
     </ul>
-  {% endif %}
+  </nav>
+</div>
 {% endif %}
+
+<script>
+  $(".theme-default-pagination .disabled a"). removeAttr("href");
+  $(".theme-default-pagination li.active a"). removeAttr("href");
+</script>

@@ -25881,3 +25881,13 @@ select.dokan-form-control, input.dokan-form-control {
           align-items: center;
   gap: 10px;
 }
+
+.entry-tags {
+  color: #8c8c8c;
+  margin-top: 55px;
+  background-color: #f9f9f9;
+  padding: 30px;
+  margin-bottom: 6rem;
+  clear: both;
+  border-radius: 6px;
+}

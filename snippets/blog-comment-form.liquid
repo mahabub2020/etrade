@@ -1,0 +1,60 @@
+
+{% form 'new_comment', article %}
+
+{{ form.errors | default_errors }}
+
+
+
+<div class="comment-respond">
+  <h3 class="comment-reply-title">{{ 'blogs.comments.title' | t }}</h3>
+  {% if section.settings.comment_description != '' %}
+  <div class="form-notes mb--20">
+    <p>{{ section.settings.comment_description }}</p>
+  </div>
+  {% endif %}
+
+  <div class="form__group mb--30 mb-sm--20">
+    <div class="form-row">
+      <div class="col-md-6 mb-sm--20">
+        {% if section.settings.text_name_title != '' %}
+        <label class="form__label form__label--3" for="comment_name">{{ section.settings.text_name_title }}</label>
+        {% endif %}
+        <input type="text"  name="comment[author]" id="commentAuthor" value="{{ form.author }}" class="form__input {% if form.errors contains 'author' %}error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}">
+      </div>  
+      <div class="col-md-6 mb-sm--20">
+        {% if section.settings.text_email_title != '' %}
+        <label class="form__label form__label--3" for="comment_email">{{ section.settings.text_email_title }}</label>
+        {% endif %}
+        <input type="email" name="comment[email]" id="commentEmail" value="{{ form.email }}" class="form__input {% if form.errors contains 'email' %}error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}">
+      </div> 
+    </div>
+  </div>
+
+  <div class="form__group mb--30 mb-sm--20">
+    <div class="form-row">
+      <div class="col-12">
+        {% if section.settings.text_area_title != '' %}
+        <label class="form__label form__label--3" for="review">{{ section.settings.text_area_title }}</label>
+        {% endif %}
+
+        <textarea name="comment[body]" id="commentBody"  placeholder="{{ 'blogs.comments.message' | t }}" class="form__input form__input--textarea">{{ form.body }}</textarea>
+
+      </div>
+    </div>
+  </div>
+
+  {% if blog.moderated? %}
+  <p>{{ 'blogs.comments.moderated' | t }}</p>
+  {% endif %}
+
+  <div class="form__group">
+    <div class="form-row">
+      <div class="col-12">
+        <input type="submit" value="Submit" class="btn btn-style-1 btn-submit">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endform %}
