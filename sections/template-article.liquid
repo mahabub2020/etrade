@@ -116,23 +116,23 @@
               {%- if comment and comment.created_at -%}
               <p class="note form-success">
                 {%- if blog.comments_modareted? -%}
-                {{ 'blogs.comments.success_moderated' | t }}            
+                {{ 'blogs.comments.success_moderated' }}            
                 {%- else -%}
-                {{ 'blogs.comments.success' | t }}
+                {{ 'blogs.comments.success' }}
                 {%- endif -%}
               </p>
               {%- endif -%}
   
               {%- if article.comments.size > 0 -%}
-              {%- include 'blog-comments' -%}
+              {%- render 'blog-comments' -%}
   
               {%- endif -%}
               {%- if paginate.pages > 1 -%}
               <div class="pagination-wrap mb--40">
-                {% include 'pagination' %}
+                {% render 'pagination' %}
               </div>
               {%- endif -%}
-              {%- include 'blog-comment-form' -%}
+              {%- render 'blog-comment-form' -%}
   
   
             </div>
