@@ -142,7 +142,13 @@
             "id": "enable_published_date",
             "default": true,
             "label": "Display Published Date"
-        }
+        }, 
+        {
+            "type": "checkbox",
+            "id": "show_tags",
+            "label": "Show Tags",
+            "default": true
+          }
     ],
     "blocks": [
         {
@@ -169,13 +175,7 @@
             "type": "article_content",
             "name": "Content",
             "limit": 1
-        },
-        {
-            "type": "checkbox",
-            "id": "show_tags",
-            "label": "Show Tags",
-            "default": true
-          },
+        }
     ]
 }
 {% endschema %}
