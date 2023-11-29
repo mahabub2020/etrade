@@ -64,13 +64,24 @@
                             </div> 
                         {%- endif -%} 
                         </div> 
+
                         <div class="blog-item-details" itemprop="articleBody" {{ block.shopify_attributes }}>
                             <div class="blog-item-description">{{ article.content }}</div>
-                        </div>
-                    </div> 
+                        </div> 
+
+                        {%- if section.settings.show_tags -%}
+                            <div class="tag entry-tags">
+                                <span>Tags:</span>  
+								{% for tag in blog.all_tags %}
+									<a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+								{%- endfor -%} 
+                            </div> 
+						{%- endif -%}  
+                    </div>
                     <div class="col-lg-4">
                         Sidebar
                     </div> 
+
                 </div>
             </div>
         </div>
@@ -158,7 +169,13 @@
             "type": "article_content",
             "name": "Content",
             "limit": 1
-        }
+        },
+        {
+            "type": "checkbox",
+            "id": "show_tags",
+            "label": "Show Tags",
+            "default": true
+          },
     ]
 }
 {% endschema %}
