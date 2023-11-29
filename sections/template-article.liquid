@@ -10,12 +10,12 @@
                         <div class="inner">   
                             <div itemprop="image" class="post-thumbnail"> 
                                    <img sizes="(min-width: {{ settings.container_width }}px) {{ settings.container_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
-                                           src="{{ article.image | image_url: width: 1300 }}"
-                                           loading="lazy"
-                                           class="img-fluid d-block mx-auto"
-                                           width="{{ article.image.width }}"
-                                           height="{{ article.image.height }}"
-                                           alt="{{ article.image.alt | escape }}">
+                                        src="{{ article.image | image_url: width: 1300 }}"
+                                        loading="lazy"
+                                        class="img-fluid d-block mx-auto"
+                                        width="{{ article.image.width }}"
+                                        height="{{ article.image.height }}"
+                                        alt="{{ article.image.alt | escape }}">
                                
                             </div>  
                         </div>
@@ -26,8 +26,7 @@
 
             <div class="post-single-wrapper position-relative">
                 <div class="container">
-                    <div class="row"> 
-
+                    <div class="row">  
                         <div class="col-lg-1">
                             <div class="d-flex flex-wrap align-content-start h-100">
                                 <div class="position-sticky sticky-top">
@@ -46,31 +45,28 @@
                         <div class=" col-lg-7 axil-post-wrapper"> 
                             <div class="post-heading">   
                             {%- if section.settings.blog_show_title -%}<h1 class="title blog-item-name" itemprop="headline">{{ article.title | escape }}</h1> {%- endif -%}
-                            {%- if section.settings.blog_show_author -%} 
-
+                            {%- if section.settings.blog_show_author -%}  
                             <div class="axil-post-meta">
                                 <div class="post-author-avatar">
                                     <img src="{{ article.user.image | img_url: 'master' }}" alt="{{ article.author }}">
+                                </div>
                                 <div class="post-meta-content">    
-                                
-                                <h6 class="author-title post-author-name">
-                                        
-                                            <span class="hover-flip-item"> 
-                                                <span itemprop="name">{{ article.author }}</span>
-                                            </span>
-                                    
+                                    <h6 class="author-title post-author-name"> 
+                                        <span class="hover-flip-item"> 
+                                            <span itemprop="name">{{ article.author }}</span>
+                                        </span> 
                                     </h6>
                                     <ul class="post-meta-list">                    
                                         <li class="post-meta-date">{{ article.published_at | date: "%b, %d , %y" }}</li> 
                                         <li>{{ article.bio }}</li>
-                                    </ul>
-
+                                    </ul> 
                                 </div>
-                            </div>
-                        </div> 
-
+                            </div> 
                         {%- endif -%} 
                         </div> 
+                        <div class="blog-item-details" itemprop="articleBody" {{ block.shopify_attributes }}>
+                            <div class="blog-item-description">{{ article.content }}</div>
+                        </div>
                     </div> 
                     <div class="col-lg-4">
                         Sidebar
