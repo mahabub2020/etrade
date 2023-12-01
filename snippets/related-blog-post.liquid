@@ -12,8 +12,8 @@
            "slidesToShow": {{ section.settings.product_column }}, 
             "arrows": true,
             "dots": false,   
-            "nextArrow": "<button class=\"slide-arrow prev-arrow\"><i class=\"fal fa-long-arrow-right\"></i></button>", 
-            "prevArrow": "<button class=\"slide-arrow next-arrow\"><i class=\"fal fa-long-arrow-left\"></i></button>",
+            "nextArrow": "<button class=\"slide-arrow prev-arrow\"><i class=\"fal fa-long-arrow-left\"></i></button>", 
+            "prevArrow": "<button class=\"slide-arrow next-arrow\"><i class=\"fal fa-long-arrow-right\"></i></button>",
           
             "responsive":[
                 {"breakpoint":992, "settings": {"slidesToShow": {{ section.settings.product_column_md }}} },
@@ -35,40 +35,35 @@
             {% for tag in article.tags %}
   
                 {% assign counter = 0 %}
+                {% assign content_limit = related_post_content_limit_handle %}
                 {% assign skip_articles = article.handle | split: '.....' %}
                 {% for related_article in blog.articles %}
                   {% if related_article.tags contains tag and counter < 6 %}
                     {% unless skip_articles contains related_article.handle %}
                       {% assign counter = counter | plus: 1 %}
                       {% assign temp = related_article.handle | split: '.....' %}
-                      {% assign skip_articles = skip_articles | concat: temp %}
-
-
+                      {% assign skip_articles = skip_articles | concat: temp %} 
                       <div class="slick-single-layout">
                         <div class="content-blog">
                             <div class="inner">
-                                <div class="axil-gallery-activation axil-slick-arrow arrow-between-side">
-                                 
+                                <div class="axil-gallery-activation axil-slick-arrow arrow-between-side"> 
                                     <div class="thumbnail">
                                         <a href="{{ article.url }}">
-                                            <img src="{{ article | img_url : '368X208', crop: 'center' }}" alt="{{ article.alt }}">
+                                            <img src="{{ article | img_url : '640X360', crop: 'center' }}" alt="{{ article.alt }}">
                                           </a>
-                                    </div>
-                             
+                                    </div> 
                                 </div>
                                 <div class="content">
                                     <h5 class="title"><a href="{{ related_article.url }}">{{ related_article.title }}</a></h5>
-                                    <p>{{ related_article.content | truncatewords: 40 }}</p>
+                                    <p>{{ related_article.content | truncatewords: content_limit }}</p>
                                 </div>
                             </div>
                         </div>
                     </div> 
                     {% endunless %}
                   {% endif %}
-                {% endfor %}
-              
-                {% endfor %}
-                
+                {% endfor %} 
+                {% endfor %} 
         </div>
     </div>
 </div>

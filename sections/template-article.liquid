@@ -151,8 +151,9 @@
                 </div>
             </div>
         </div>
-        {%- render 'related-blog-post' -%}
+       
     </div>
+    {%- render 'related-blog-post' -%}
 </article>
 
 <script type="application/ld+json">
@@ -315,6 +316,15 @@
           "default": 6
         },
         {
+          "type": "range",
+          "id": "related_post_content_limit_handle",
+          "min": 1,
+          "max": 120,
+          "step": 1,
+          "label": "Post Content Limit",
+          "default": 10
+        },
+        {
           "type": "header",
           "content": "Options"
         },
@@ -345,7 +355,7 @@
           "max": 12,
           "step": 1,
           "label": "Desktop",
-          "default": 4
+          "default": 3
         },
         {
           "type": "range",
