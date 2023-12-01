@@ -22,53 +22,49 @@
               ]  
       }'
    {%- endcapture -%}
+
   <div class="related-blog-area bg-color-white pb--60 pb_sm--40">
     <div class="container">
-        <div class="section-title-wrapper mb--50 mb_sm--40 pr--110">
+        <div class="section-title-wrapper mb--50 mb_sm--40 pr--110"> 
             <span class="title-highlighter highlighter-primary mb--10">
-            <i class="fal fa-bell"></i>Hot News</span>
-            <h3 class="mb--25">Related Posts</h3>
+                <i class="far fa-bell"></i> {{ section.settings.section_before_title -}}
+            </span>
+            <h2 class="title">{{ section.settings.section_title }}</h2>  
         </div>
         <div class="axil-slick-slider slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
-
-
-            {% for tag in article.tags %}
-  
+              {% for tag in article.tags %}
                 {% assign counter = 0 %}
-                {% assign content_limit = section.settings.related_post_content_limit_handle %}
-                
+                {% assign content_limit = section.settings.related_post_content_limit_handle %} 
                 {% assign skip_articles = article.handle | split: '.....' %}
                 {% for related_article in blog.articles %}
                   {% if related_article.tags contains tag and counter < 6 %}
                     {% unless skip_articles contains related_article.handle %}
                       {% assign counter = counter | plus: 1 %}
                       {% assign temp = related_article.handle | split: '.....' %}
-                      {% assign skip_articles = skip_articles | concat: temp %} 
-                    
-                      <div class="slick-single-layout">
-                        <div class="content-blog">
-                            <div class="inner">
-                                <div class="axil-gallery-activation axil-slick-arrow arrow-between-side"> 
-                                    <div class="thumbnail">
-                                        <a href="{{ article.url }}">
-                                            <img src="{{ article | img_url : '640X360', crop: 'center' }}" alt="{{ article.alt }}">
-                                          </a>
-                                    </div> 
-                                </div>
-                                <div class="content">
-                                    <h5 class="title"><a href="{{ related_article.url }}">{{ related_article.title }}</a></h5>
-                                    {%- if section.settings.is_content_enable -%}
-                                        <p>{{ related_article.content | truncatewords: content_limit }}</p>
-                                    {%- endif -%}  
+                      {% assign skip_articles = skip_articles | concat: temp %}  
+                        <div class="slick-single-layout">
+                            <div class="content-blog">
+                                <div class="inner">
+                                    <div class="axil-gallery-activation axil-slick-arrow arrow-between-side"> 
+                                        <div class="thumbnail">
+                                            <a href="{{ article.url }}">
+                                                <img src="{{ article | img_url : '640X360', crop: 'center' }}" alt="{{ article.alt }}">
+                                            </a>
+                                        </div> 
+                                    </div>
+                                    <div class="content">
+                                        <h5 class="title"><a href="{{ related_article.url }}">{{ related_article.title }}</a></h5>
+                                        {%- if section.settings.is_content_enable -%}
+                                            <p>{{ related_article.content | truncatewords: content_limit }}</p>
+                                        {%- endif -%}  
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div> 
-
+                        </div>  
                     {% endunless %}
                   {% endif %}
                 {% endfor %} 
-                {% endfor %} 
+            {% endfor %} 
         </div>
     </div>
 </div>
