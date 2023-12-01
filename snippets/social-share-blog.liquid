@@ -3,7 +3,7 @@
     <div class="d-flex flex-wrap align-content-start h-100">
         <div class="position-sticky sticky-top">
             <div class="post-details__social-share">
-            <span class="share-on-text">Share on:</span>
+            <span class="share-on-text">{{ section.settings.social_share_title }}</span>
                 <div class="social-share">  
 
                     <a class="action" title="Facebook" rel="nofollow" onclick="PopupCenter('https://www.facebook.com/sharer/sharer.php?u={{ request.origin | append: article.url }}','MyWindow','450','450');" href="javascript:void(0);">

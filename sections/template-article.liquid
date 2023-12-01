@@ -27,8 +27,10 @@
             <div class="post-single-wrapper position-relative">
                 <div class="container">
                     <div class="row">  
-                       
-                    {% render 'social-share-blog' %} 
+                    
+                      {%- if section.settings.blog_show_social_share -%}
+                        {% render 'social-share-blog' %} 
+                      {% endif %}
 
                         <div class=" col-lg-7 axil-post-wrapper"> 
                             <div class="post-heading">   
@@ -135,7 +137,33 @@
                             
                     </div>
                     <div class="col-lg-4">
-                        Sidebar
+                    <div class="axil-sidebar-area">
+                       
+                      
+                      {%- for block in section.blocks -%}
+                        {%- case block.type -%}
+                        {%- when 'search' -%}
+
+                            <div class="axil-single-widget widget_product_search mt--40">
+                                <h6 class="widget-title">{{ block.settings.search-text }}</h6>
+                                <form class="blog-search" method="get" action="/search">
+                                    <input type="hidden" name="type" value="article"/>
+                                <div class="custom-search-input">
+                                    <div class="input-group">
+                                        <input class="search-query form-control" placeholder="Search products ..." type="text" name="q"/>
+                                    
+                                        <span class="input-group-btn"> 
+                                                <button class="btn" type="submit">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div> 
+                            </form>
+                        </div> 
+                          {%- endcase -%}
+                        {% endfor %}
+                    </div> 
                     </div> 
 
                 </div>
@@ -191,7 +219,19 @@
 {
     "name": "Template Article",
     "settings": [
-        {
+          {
+            "type": "checkbox",
+            "id": "blog_show_social_share",
+            "label": "Is Author",
+            "default": true
+          }, 
+          {
+            "type": "text",
+            "id": "social_share_title",
+            "label": "Social Label",
+            "default": "Share on" 
+          },
+          {
             "type": "checkbox",
             "id": "blog_show_author",
             "label": "Is Author",
@@ -396,35 +436,22 @@
             "id": "section_title_color",
             "label": "Section Title Color",
             "default": "#292930"
-          } 
-        
-    ],
+          }  
+      ],
     "blocks": [
-        {
-            "type": "article_title",
-            "name": "Title",
-            "limit": 1
-        },
-        {
-            "type": "article_author",
-            "name": "Author",
-            "limit": 1
-        },
-        {
-            "type": "article_published_date",
-            "name": "Published Date",
-            "limit": 1
-        },
-        {
-            "type": "featured_image",
-            "name": "Thumbnail",
-            "limit": 1
-        },
-        {
-            "type": "article_content",
-            "name": "Content",
-            "limit": 1
-        }
+      {
+        "type": "search",
+        "limit": 1,
+        "name": "t:sections.sidebar.sidebar-search.label",
+        "settings": [
+          {
+            "type": "text",
+            "id": "search-text",
+            "label": "t:sections.sidebar.sidebar-search.search-text",
+            "default": "Search"
+          }
+        ]
+      }
     ]
 
 }

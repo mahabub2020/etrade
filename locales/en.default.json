@@ -178,10 +178,18 @@
         }
     },
     "sidebar": {
+ 
         "recent_articles": "Recent Articles",
-        "categories": "Categories"
+        "categories": "Categories",
+        "sidebar-search":{
+          "label": "Search",
+          "search-text": "Search"
+
+        }
     }
 },
+
+
 
   
   "onboarding": {
