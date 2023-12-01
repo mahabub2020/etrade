@@ -44,6 +44,7 @@
                       {% assign counter = counter | plus: 1 %}
                       {% assign temp = related_article.handle | split: '.....' %}
                       {% assign skip_articles = skip_articles | concat: temp %} 
+                    
                       <div class="slick-single-layout">
                         <div class="content-blog">
                             <div class="inner">
@@ -56,11 +57,14 @@
                                 </div>
                                 <div class="content">
                                     <h5 class="title"><a href="{{ related_article.url }}">{{ related_article.title }}</a></h5>
-                                    <p>{{ related_article.content | truncatewords: content_limit }}</p>
+                                    {%- if section.settings.is_content_enable -%}
+                                        <p>{{ related_article.content | truncatewords: content_limit }}</p>
+                                    {%- endif -%}  
                                 </div>
                             </div>
                         </div>
                     </div> 
+
                     {% endunless %}
                   {% endif %}
                 {% endfor %} 
