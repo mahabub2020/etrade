@@ -27,20 +27,8 @@
             <div class="post-single-wrapper position-relative">
                 <div class="container">
                     <div class="row">  
-                        <div class="col-lg-1">
-                            <div class="d-flex flex-wrap align-content-start h-100">
-                                <div class="position-sticky sticky-top">
-                                    <div class="post-details__social-share">
-                                    <span class="share-on-text">Share on:</span>
-                                        <div class="social-share">
-                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://dev.axilthemes.com/themes/etrade/how-to-generate-blog-ideas-are-great-for-businesses-that-sell-both-b2b-and-d2c-2-2/" target="_blank" class="aw-facebook"><i class="fab fa-facebook-f"></i></a>
-                                            <a href="https://twitter.com/share?https://dev.axilthemes.com/themes/etrade/how-to-generate-blog-ideas-are-great-for-businesses-that-sell-both-b2b-and-d2c-2-2/&amp;text=How%20to%20generate%20blog%20ideas%20are%20great%20for%20businesses%20that%20sell%20both%20B2B%20and%20D2D" target="_blank" class="aw-twitter"><i class="fab fa-twitter"></i></a>
-                                            <a href="http://www.linkedin.com/shareArticle?url=https://dev.axilthemes.com/themes/etrade/how-to-generate-blog-ideas-are-great-for-businesses-that-sell-both-b2b-and-d2c-2-2/&amp;title=How%20to%20generate%20blog%20ideas%20are%20great%20for%20businesses%20that%20sell%20both%20B2B%20and%20D2D" target="_blank" class="aw-linkdin"><i class="fab fa-linkedin-in"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>                            
-                        </div> 
+                       
+                    {% render 'social-share-blog' %} 
 
                         <div class=" col-lg-7 axil-post-wrapper"> 
                             <div class="post-heading">   
@@ -107,38 +95,40 @@
 
 
 
-          {%- if article.comments_enabled? -%}
-            {%- assign comment_post_limit = section.settings.comment_post_limit_handle -%}
-            {%- paginate article.comments by comment_post_limit -%}
-            <!-- Comments Start Here -->
-            <div id="comments" class="comments-area">
-  
-              {%- if comment and comment.created_at -%}
-              <p class="note form-success">
-                {%- if blog.comments_modareted? -%}
-                {{ 'blogs.comments.success_moderated' | t }}            
-                {%- else -%}
-                {{ 'blogs.comments.success' | t }}
-                {%- endif -%}
-              </p>
-              {%- endif -%}
-  
-              {%- if article.comments.size > 0 -%}
-              {%- render 'blog-comments' -%}
-  
-              {%- endif -%}
-              {%- if paginate.pages > 1 -%}
-              <div class="pagination-wrap mb--40">
-                {% render 'pagination' %}
-              </div>
-              {%- endif -%}
-              {%- render 'blog-comment-form' -%}
-  
-  
-            </div>
-            <!-- Comments Start Here -->
-            {%- endpaginate -%}
-            {%- endif -%}
+                {%- if article.comments_enabled? -%}
+                  {%- assign comment_post_limit = section.settings.comment_post_limit_handle -%}
+                  {%- paginate article.comments by comment_post_limit -%}
+                  <!-- Comments Start Here -->
+                  <div class="axil-comment-area">
+                    <div id="comments" class="comments-area">
+          
+                      {%- if comment and comment.created_at -%}
+                      <p class="note form-success">
+                        {%- if blog.comments_modareted? -%}
+                        {{ 'blogs.comments.success_moderated' | t }}            
+                        {%- else -%}
+                        {{ 'blogs.comments.success' | t }}
+                        {%- endif -%}
+                      </p>
+                      {%- endif -%}
+          
+                      {%- if article.comments.size > 0 -%}
+                      {%- render 'blog-comments' -%}
+          
+                      {%- endif -%}
+                      {%- if paginate.pages > 1 -%}
+                      <div class="pagination-wrap mb--40">
+                        {% render 'pagination' %}
+                      </div>
+                      {%- endif -%}
+                      {%- render 'blog-comment-form' -%}
+          
+          
+                    </div>
+                  </div>
+                  <!-- Comments Start Here -->
+                  {%- endpaginate -%}
+                  {%- endif -%}
 
           
                    
@@ -181,6 +171,20 @@
         "name": {{ shop.name | json }}
     }
 }
+</script>
+<script type="text/javascript">
+  function PopupCenter(url, title, w, h) {
+      var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+      var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+      width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+      height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+      var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+      var top = ((height / 2) - (h / 2)) + dualScreenTop;
+      var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+      if (window.focus) {
+          newWindow.focus();
+      }
+  }
 </script>
 
 {% schema %}
@@ -268,7 +272,7 @@
           "type": "text",
           "id": "text_area_title",
           "label": "Textarea Label",
-          "default": "Your Review" 
+          "default": "Write your comment here…" 
         },
 		    {
           "type": "header",

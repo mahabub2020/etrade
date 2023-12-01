@@ -1,0 +1,26 @@
+  
+<div class="col-lg-1">
+    <div class="d-flex flex-wrap align-content-start h-100">
+        <div class="position-sticky sticky-top">
+            <div class="post-details__social-share">
+            <span class="share-on-text">Share on:</span>
+                <div class="social-share">  
+
+                    <a class="action" title="Facebook" rel="nofollow" onclick="PopupCenter('https://www.facebook.com/sharer/sharer.php?u={{ request.origin | append: article.url }}','MyWindow','450','450');" href="javascript:void(0);">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="action" title="Twitter" rel="nofollow" onclick="PopupCenter('//twitter.com/share?url={{ request.origin | append: article.url }}&text={{ article.title }}','MyWindow','450','450');" href="javascript:void(0);">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="action" title="Pinterest" rel="nofollow" onclick="PopupCenter('//pinterest.com/pin/create/button/?url={{ request.origin | append: article.url }}&media={{ featured_image.src | image_url: width: 1024, height: 1024 }}','MyWindow','450','450');" href="javascript:void(0);">
+                      
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+                    <a class="action" title="LinkedIn" rel="nofollow" onclick="PopupCenter('https://www.linkedin.com/sharing/share-offsite/?url={{ request.origin | append: article.url }}&text={{ article.title }}','MyWindow','450','450');" href="javascript:void(0);">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>                            
+</div> 
