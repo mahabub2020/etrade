@@ -48,7 +48,19 @@
         "text_name_title": "Name",
         "text_email_title": "Email",
         "text_area_title": "Your Review",
-        "social_enable": true
+        "social_enable": true,
+        "related_post_enable": true,
+        "section_before_title": "Your Recently",
+        "section_title": "Related Posts",
+        "related_post_limit_handle": 6,
+        "related_post_content_limit_handle": 14,
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 3,
+        "product_column_md": 2,
+        "product_column_sm": 1,
+        "section_title_before": "#8c71db",
+        "section_title_color": "#292930"
       }
     }
   },
