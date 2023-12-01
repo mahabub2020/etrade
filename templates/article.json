@@ -52,7 +52,7 @@
         "related_post_enable": true,
         "section_before_title": "Your Recently",
         "section_title": "Related Posts",
-        "related_post_limit_handle": 6,
+        "related_post_limit_handle": 1,
         "related_post_content_limit_handle": 14,
         "autoplay_true": false,
         "autoplay_speed": 5000,
