@@ -35,7 +35,8 @@
             {% for tag in article.tags %}
   
                 {% assign counter = 0 %}
-                {% assign content_limit = related_post_content_limit_handle %}
+                {% assign content_limit = section.settings.related_post_content_limit_handle %}
+                
                 {% assign skip_articles = article.handle | split: '.....' %}
                 {% for related_article in blog.articles %}
                   {% if related_article.tags contains tag and counter < 6 %}
