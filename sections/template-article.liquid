@@ -140,32 +140,8 @@
             {%- endpaginate -%}
             {%- endif -%}
 
-            <div class='relatedArticles'>
-                {% for tag in article.tags %}
-              
-                {% assign counter = 0 %}
-                {% assign skip_articles = article.handle | split: '.....' %}
-                {% for related_article in blog.articles %}
-                  {% if related_article.tags contains tag and counter < 6 %}
-                    {% unless skip_articles contains related_article.handle %}
-                      {% assign counter = counter | plus: 1 %}
-                      {% assign temp = related_article.handle | split: '.....' %}
-                      {% assign skip_articles = skip_articles | concat: temp %}
-                      <div class="well">
-                        <h3><a href="{{ related_article.url }}">{{ related_article.title }}</a></h3>
-                        {% if related_article.excerpt.size > 0 %}
-                          <p>{{ related_article.excerpt }}</p>
-                        {% else %}
-                          <p>{{ related_article.content | truncatewords: 40 }}</p>
-                        {% endif %}
-                      </div>
-                    {% endunless %}
-                  {% endif %}
-                {% endfor %}
-              
-                {% endfor %}
-              </div>
-                            
+            {%- render 'related-blog-post' -%}
+                   
                             
                     </div>
                     <div class="col-lg-4">
@@ -246,16 +222,16 @@
             "default": true
           },
           {
-			"type": "header",
-			"content": "Comment Box"
-		},
-		{
-			"type": "image_picker",
-			"id": "commentator_image",
-			"label": "Comment Thumb Image",
-			"info": "Recommended Size: 80 x 80px"
-		},
-		{
+          "type": "header",
+          "content": "Comment Box"
+          },
+          {
+            "type": "image_picker",
+            "id": "commentator_image",
+            "label": "Comment Thumb Image",
+            "info": "Recommended Size: 80 x 80px"
+          },
+          {
             "type": "range",
             "id": "comment_post_limit_handle",
             "min": 1,
@@ -264,10 +240,10 @@
             "label": "How Many Comment Post Show",
             "default": 5
         },
-		{
-			"type": "header",
-			"content": "Comment Form"
-		},
+        {
+          "type": "header",
+          "content": "Comment Form"
+        },
         {
           "type": "textarea",
           "id": "comment_description",
@@ -292,16 +268,52 @@
           "label": "Textarea Label",
           "default": "Your Review" 
         },
-		{
+		    {
           "type": "header",
           "content": "Blog Social Area"
-	    },
+	     },
         {
           "type": "checkbox",
           "id": "social_enable",
           "label": "Social Enable",
           "default": true
-        }
+        },
+        {
+          "type": "header",
+          "content": "Releted Blog Post"
+        },
+        {
+          "type": "checkbox",
+          "id": "related_post_enable",
+          "label": "Show Blog Post",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Section Heading"
+        }, 
+        {
+          "type": "text",
+          "id": "section_before_title",
+          "label": "Section Before Title",
+          "default": "Your Recently"
+        },
+        {
+          "type": "text",
+          "id": "section_title",
+          "label": "Section Title",
+          "default": "Related Posts"
+        },
+        {
+          "type": "range",
+          "id": "related_post_limit_handle",
+          "min": 1,
+          "max": 20,
+          "step": 1,
+          "label": "Post Limit",
+          "default": 6
+        } 
+        
     ],
     "blocks": [
         {
