@@ -312,7 +312,70 @@
           "step": 1,
           "label": "Post Limit",
           "default": 6
-        } 
+        },
+        {
+          "type": "header",
+          "content": "Options"
+        },
+        {
+          "type": "checkbox",
+          "id": "autoplay_true",
+          "label": "Autoplay Enable",
+          "default": false
+        },
+        {
+          "type": "range",
+          "id": "autoplay_speed",
+          "min": 1000,
+          "max": 9000,
+          "step": 1000,
+          "label": "Autoplay Speed",
+          "unit": "ms",
+          "default": 5000
+        },
+        {
+          "type": "header",
+          "content": "Post Carousel Column"
+        },
+        {
+          "type": "range",
+          "id": "product_column",
+          "min": 1,
+          "max": 12,
+          "step": 1,
+          "label": "Desktop",
+          "default": 4
+        },
+        {
+          "type": "range",
+          "id": "product_column_md",
+          "min": 1,
+          "max": 12,
+          "step": 1,
+          "label": "Tablet",
+          "default": 2
+        },
+        {
+          "type": "range",
+          "id": "product_column_sm",
+          "min": 1,
+          "max": 12,
+          "step": 1,
+          "label": "Mobile",
+          "default": 1
+        },  
+        {
+            "type": "color",
+            "id": "section_title_before",
+            "label": "Title before Color",
+            "default": "#8c71db"
+          },
+          {
+            "type": "color",
+            "id": "section_title_color",
+            "label": "Section Title Color",
+            "default": "#292930"
+          } 
         
     ],
     "blocks": [
