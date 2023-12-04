@@ -3,15 +3,16 @@
     "template": {
       "type": "template-blog",
       "blocks": {
-        "1e41bcc0-f33e-475c-8ce7-904da8538c2d": {
+        "1077f894-c9c0-4012-8304-f82074b6e5d9": {
           "type": "pagetitle",
           "settings": {
-            "page_title_txt": "Blog Posts"
+            "page_title_txt": "Blog Posts",
+            "banner_img": "shopify:\/\/shop_images\/product-24.jpg"
           }
         }
       },
       "block_order": [
-        "1e41bcc0-f33e-475c-8ce7-904da8538c2d"
+        "1077f894-c9c0-4012-8304-f82074b6e5d9"
       ],
       "settings": {
         "blog_read_more": "Read more",
