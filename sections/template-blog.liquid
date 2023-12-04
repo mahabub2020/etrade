@@ -43,6 +43,23 @@
             "label": "Blog posts per page",
             "default": 3
         }
-    ]
+    ],
+    "blocks": [
+        {
+          "type": "pagetitle",
+          "limit": 1,
+          "name": "pagetitle",
+
+          "settings": [
+            {
+              "type": "text",
+              "id": "pagetitle",
+              "label": "Page Title",
+              "default": "Blog Posts"
+            }
+          ]
+        } 
+        
+      ]
 }
 {% endschema %}
