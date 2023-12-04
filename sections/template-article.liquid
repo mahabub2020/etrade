@@ -182,6 +182,22 @@
                               
                           </ul>
                           </div>
+                          {% when 'tag' %}
+                            {% if blog.all_tags.size > 0 %}
+                            <div class="widget blog-widget widget-tag">
+                              {% if block.settings.blog_tags_title != blank %}
+                              <h3 class="widget-title">{{ block.settings.blog_tags_title }}</h3>
+                              {% endif %}
+                              <div class="tagcloud">
+                          
+                                {% assign tags_list_limit = block.settings.blog_tags_list_limit_handle %}
+                                {% for tag in blog.all_tags limit: tags_list_limit %}
+                                <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="{% if current_tags contains tag %}active{% endif %}">{{ tag }}</a>
+                                {% endfor %}
+                          
+                              </div>
+                            </div>
+                            {% endif %}
                           {%- endcase -%}
                         {% endfor %}
                         </div> 
@@ -494,7 +510,29 @@
             "default": 3
           }
         ]
-     }
+     },
+     {
+      "type": "tag",
+      "name": "Tag",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "blog_tags_title",
+          "label": "Tags Title",
+          "default": "Tags"
+        },
+        {
+          "type": "range",
+          "id": "blog_tags_list_limit_handle",
+          "min": 5,
+          "max": 20,
+          "step": 1,
+          "label": "Tag Limit",
+          "default": 10
+        }
+      ]
+   }
       
       
     ]
