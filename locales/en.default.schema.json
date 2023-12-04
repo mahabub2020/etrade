@@ -1,15 +1,17 @@
 {
     "settings_schema": {
-        "single_blog": { 
-            "sidebar": {
-                    "search": {
-                        "label": "Search",
-                        "mane": "Search",
-                        "title": "Search"
-                         
+        "global": {
+            "single_blog": { 
+                "sidebar": {
+                        "search": {
+                            "label": "Search",
+                            "name": "Search",
+                            "title": "Search"
+                            
+                        }
                     }
-        		}
 
-            } 
+                } 
+            }
         }
     }
