@@ -15,11 +15,19 @@
             "recent_post_title": "Recent Post",
             "recent_post_limit_handle": 3
           }
+        },
+        "1a52e70e-a667-4215-9d27-41048ee77ef7": {
+          "type": "tag",
+          "settings": {
+            "blog_tags_title": "Tags",
+            "blog_tags_list_limit_handle": 10
+          }
         }
       },
       "block_order": [
         "496d4f4d-b5f9-46f5-9d64-130e43516883",
-        "580f92c6-1444-4a41-974d-1be4d366563d"
+        "580f92c6-1444-4a41-974d-1be4d366563d",
+        "1a52e70e-a667-4215-9d27-41048ee77ef7"
       ],
       "settings": {
         "blog_show_social_share": true,
