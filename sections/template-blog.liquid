@@ -1,27 +1,35 @@
 
-
-<div class="axil-breadcrumb-area">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-8">
-                <div class="inner"> 
-                    <ul id="breadcrumbs" class="axil-breadcrumb liststyle d-flex">
-                    </ul>
-                    <h3 class="title">Blogs Post</h3>
-                         
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-4">
-                <div class="inner">
-                        <div class="bradcrumb-thumb">
-                           <img width="126" height="120" src="http://etrade.local/wp-content/uploads/2023/01/product-45.png" class="attachment-full size-full" alt=""> 
+{%- for block in section.blocks -%}
+    {%- case block.type -%}
+        {%- when 'search' -%} 
+            <div class="axil-breadcrumb-area">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-8">
+                            <div class="inner"> 
+                            <ul id="breadcrumbs" class="axil-breadcrumb liststyle d-flex">
+                                <li class="item-home"><a class="bread-link bread-home" href="http://etrade.local" title="Home">Home</a></li>
+                                <li class="separator separator-home"></li>
+                                <li class="item-current item-archive"><span class="bread-current bread-archive">  Shop</span></li>
+                            </ul>
+                                <h3 class="title">{{ block.settings.page_title_txt }}</h3>
+                                    
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-4">
+                            <div class="inner">
+                                    <div class="bradcrumb-thumb"> 
+                                    <img src="{{ block.settings.banner_img | img_url: '126x120' }}"
+                                        alt="{{ block.settings.banner_img.alt | default: shop.name }}">
+                                    </div>
+                                </div>
                         </div>
                     </div>
-             </div>
-        </div>
-    </div>
-</div>
-
+                </div>
+            </div>
+    
+    {%- endcase -%}
+{% endfor %}
  
 
 {% schema %}
@@ -48,18 +56,23 @@
         {
           "type": "pagetitle",
           "limit": 1,
-          "name": "Page Title",
+          "name": "Page Title Section",
 
           "settings": [
             {
               "type": "text",
-              "id": "pagetitle",
+              "id": "page_title_txt",
               "label": "Page Title",
               "default": "Blog Posts"
-            }
-          ]
-        } 
+            },
+            {
+                "type": "image_picker",
+                "id": "banner_img",
+                "label": "Banner Image"
         
+              }
+          ]
+        }  
       ]
 }
 {% endschema %}
