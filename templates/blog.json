@@ -2,6 +2,17 @@
   "sections": {
     "template": {
       "type": "template-blog",
+      "blocks": {
+        "1e41bcc0-f33e-475c-8ce7-904da8538c2d": {
+          "type": "pagetitle",
+          "settings": {
+            "page_title_txt": "Blog Posts"
+          }
+        }
+      },
+      "block_order": [
+        "1e41bcc0-f33e-475c-8ce7-904da8538c2d"
+      ],
       "settings": {
         "blog_read_more": "Read more",
         "number_of_blog_posts": 3
