@@ -157,29 +157,30 @@
                         </div> 
 
                         {% when 'recent_post' %}
-                          <div class="widget blog-widget widget-recent-posts mb--40 mb-md--30 mb-sm--20">
+                          <div class="axil-single-widget widget_products mt--40">
                             {% if block.settings.recent_post_title != blank %}
-                            <h3 class="widget-title">{{ block.settings.recent_post_title }}</h3>
+                            <h6 class="widget-title">{{ block.settings.recent_post_title }}</h6>
                             {% endif %}
-                            <div class="recent-post">
+                            <ul class="product_list_widget">
                               {% assign recent_post_limit = block.settings.recent_post_limit_handle %}
                               {% for article in blogs[blog.handle].articles limit: recent_post_limit %}
-                              <div class="recent-post__item">
-                                <div class="recent-post__thumb">
+                              <li>
+                                <div class="thumbnail">
                                   <a href="{{ article.url }}">
                                     <img src="{{ article | img_url: 'medium' }}" alt="{{ article.alt }}">
                                   </a>
                                 </div>
-                                <div class="recent-post__content">
-                                  <h3 class="recent-post__title text-truncate">
-                                    <a href="{{ article.url }}">{{ article.title | truncate: 20 }}</a>
-                                  </h3>
+                                <div class="content">
+                                  <h6 class="recent-post__title text-truncate">
+                                    <a class="product-title" href="{{ article.url }}">{{ article.title | truncate: 20 }}</a>
+                                  </h6>
                                   <span class="recent-post__meta">{{ article.published_at | date: "%b %d, %Y" }}</span>
                                 </div>
-                              </div>
+                                </ul>
+                              </li>
                             {% endfor %}
                               
-                            </div>
+                          </ul>
                           </div>
                           {%- endcase -%}
                         {% endfor %}
