@@ -6,7 +6,7 @@
         "1077f894-c9c0-4012-8304-f82074b6e5d9": {
           "type": "pagetitle",
           "settings": {
-            "page_title_txt": "Blog Posts",
+            "page_title_txt": "{{ blog.title }}",
             "banner_img": "shopify:\/\/shop_images\/product-24.jpg"
           }
         }
