@@ -1,17 +1,20 @@
+
+
 {% if paginate.pages > 1 %}
-<div class="theme-default-pagination">
-  <nav class="pagination">
-    <ul class="pagination">
+<div class="theme-default-pagination post-pagination">
+  <nav class="navigation pagination">
+    <div class="nav-links">
+    <ul class="pagination page-numbers">
       {% if paginate.previous %}
       <li>
         <a href="{{ paginate.previous.url }}" aria-label="Previous" class="prev page-number">
-          <span aria-hidden="true">Prev</span>
+         <i class="fal fa-arrow-left"></i> 
         </a>
       </li>
       {% else %}
       <li class="disabled prev">
         <a href="#" class="prev page-number">
-          <span>Prev</span>
+          <i class="fal fa-arrow-left"></i>
         </a>
       </li>
       {% endif %}
@@ -29,15 +32,17 @@
       {% endif %}
       {% endfor %}
       {% if paginate.next %}
-      <li><a  class="next page-number" href="{{ paginate.next.url }}" title="{{ paginate.next.title }}"><span aria-hidden="true">Next</span></a></li>
+      <li><a  class="next page-number" href="{{ paginate.next.url }}" title="{{ paginate.next.title }}"><i class="fal fa-arrow-right"></i></a></li>
       {% else %}
       <li class="disabled next">
         <a href="#" class="next page-number">
-          <span>Next</span>
+          <i class="fal fa-arrow-right"></i>
         </a>
       </li>
       {% endif %}
+      
     </ul>
+  </div>
   </nav>
 </div>
 {% endif %}
