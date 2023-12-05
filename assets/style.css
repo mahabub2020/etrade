@@ -25895,3 +25895,7 @@ select.dokan-form-control, input.dokan-form-control {
 .axil-breadcrumb-area .inner .bradcrumb-thumb img {
   display: inline-block;
 }
+
+.blog-item-actions svg {
+  width: 30px;
+}
