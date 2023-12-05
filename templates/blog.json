@@ -16,53 +16,13 @@
       ],
       "settings": {
         "blog_read_more": "Read more",
-        "number_of_blog_posts": 3
-      }
-    },
-    "03a9ae48-d6c7-486d-abb8-9fa1e78b75c2": {
-      "type": "latest-blog",
-      "blocks": {
-        "template--21159461716254__03a9ae48-d6c7-486d-abb8-9fa1e78b75c2-section_padding-1": {
-          "type": "section_padding",
-          "settings": {
-            "section_padding_top": 0,
-            "section_padding_bottom": 100,
-            "section_padding_top_md": 0,
-            "section_padding_bottom_md": 80,
-            "section_padding_top_xs": 0,
-            "section_padding_bottom_xs": 60
-          }
-        }
-      },
-      "block_order": [
-        "template--21159461716254__03a9ae48-d6c7-486d-abb8-9fa1e78b75c2-section_padding-1"
-      ],
-      "settings": {
-        "container_style": "style_1",
-        "section_sub_title": "Regular Post",
-        "section_title": "Latest News",
-        "blog_handle": "news",
-        "blog_limit_handle": 3,
-        "col_xl": "4",
-        "col_lg": "4",
-        "col_md": "2",
-        "col_sm": "2",
-        "col_mobile": "1",
-        "section_title_color": "#292930",
-        "section_icon_color": "#ffffff",
-        "section_icon_bg_color": "#8c71db",
-        "section_subtitle_color": "#8c71db",
-        "blog_title_color": "#292930",
-        "blog_title_hover_color": "#cf987e",
-        "blog_user_color": "#ffffff",
-        "blog_rm_color": "#292930",
-        "blog_rm_hover_color": "#3577f0",
-        "blog_post_border_color": "#f1f1f1"
+        "number_of_blog_posts": 3,
+        "blog_list": 6,
+        "show_image": true
       }
     }
   },
   "order": [
-    "template",
-    "03a9ae48-d6c7-486d-abb8-9fa1e78b75c2"
+    "template"
   ]
 }
