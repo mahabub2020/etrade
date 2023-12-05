@@ -3,7 +3,7 @@
 	<div class="blog-item-info">
 		{%- if show_image == true and article.image -%}
 			<div class="blog-item-img">
-				<a class="{% if settings.image_height != 'orignal' %} ratio ratio-{{ settings.image_height }} {% else %} ratio ratio-1x1 {% endif %}" href="{{ article.url }}">
+				<a class="blog-list-img" href="{{ article.url }}">
 					<img
 						srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
 								{%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
