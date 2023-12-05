@@ -91,10 +91,7 @@
                               </div>
                             </nav>
                             <!-- Post Navigation Start Here -->
-                            {% endif %}
-
-
-
+                            {% endif %} 
 
 
                 {%- if article.comments_enabled? -%}
@@ -102,105 +99,37 @@
                   {%- paginate article.comments by comment_post_limit -%}
                   <!-- Comments Start Here -->
                   <div class="axil-comment-area">
-                    <div id="comments" class="comments-area">
-          
-                      {%- if comment and comment.created_at -%}
-                      <p class="note form-success">
-                        {%- if blog.comments_modareted? -%}
-                        {{ 'blogs.comments.success_moderated' | t }}            
-                        {%- else -%}
-                        {{ 'blogs.comments.success' | t }}
+                    <div id="comments" class="comments-area"> 
+                        {%- if comment and comment.created_at -%}
+                        <p class="note form-success">
+                          {%- if blog.comments_modareted? -%}
+                          {{ 'blogs.comments.success_moderated' | t }}            
+                          {%- else -%}
+                          {{ 'blogs.comments.success' | t }}
+                          {%- endif -%}
+                        </p>
                         {%- endif -%}
-                      </p>
-                      {%- endif -%}
-          
-                      {%- if article.comments.size > 0 -%}
-                      {%- render 'blog-comments' -%}
-          
-                      {%- endif -%}
-                      {%- if paginate.pages > 1 -%}
-                      <div class="pagination-wrap mb--40">
-                        {% render 'pagination' %}
+            
+                        {%- if article.comments.size > 0 -%}
+                        {%- render 'blog-comments' -%}
+            
+                        {%- endif -%}
+                        {%- if paginate.pages > 1 -%}
+                        <div class="pagination-wrap mb--40">
+                          {% render 'pagination' %}
+                        </div>
+                        {%- endif -%}
+                        {%- render 'blog-comment-form' -%}
+            
+            
                       </div>
-                      {%- endif -%}
-                      {%- render 'blog-comment-form' -%}
-          
-          
                     </div>
-                  </div>
-                  <!-- Comments Start Here -->
-                  {%- endpaginate -%}
-                  {%- endif -%}
- 
-                            
+                    <!-- Comments Start Here -->
+                    {%- endpaginate -%}
+                    {%- endif -%}  
                     </div>
                     <div class="col-lg-4">
-                    <div class="axil-sidebar-area"> 
-                      {%- for block in section.blocks -%}
-                        {%- case block.type -%}
-                        {%- when 'search' -%} 
-                            <div class="axil-single-widget widget_product_search mt--40">
-                                <h6 class="widget-title">{{ block.settings.search_title }}</h6>
-                                <form class="blog-search" method="get" action="/search">
-                                    <input type="hidden" name="type" value="article"/>
-                                <div class="custom-search-input">
-                                    <div class="input-group">
-                                        <input class="search-query form-control" placeholder="Search products ..." type="text" name="q"/> 
-                                        <span class="input-group-btn"> 
-                                                <button class="btn" type="submit">
-                                                <i class="fas fa-search"></i>
-                                            </button>
-                                        </span>
-                                    </div>
-                                </div> 
-                            </form>
-                        </div> 
-
-                        {% when 'recent_post' %}
-                          <div class="axil-single-widget widget_products mt--40">
-                            {% if block.settings.recent_post_title != blank %}
-                            <h6 class="widget-title">{{ block.settings.recent_post_title }}</h6>
-                            {% endif %}
-                            <ul class="product_list_widget">
-                              {% assign recent_post_limit = block.settings.recent_post_limit_handle %}
-                              {% for article in blogs[blog.handle].articles limit: recent_post_limit %}
-                              <li>
-                                <div class="thumbnail">
-                                  <a href="{{ article.url }}">
-                                    <img src="{{ article | img_url: width: 150  }}" alt="{{ article.alt }}">
-                                  </a>
-                                </div>
-                                <div class="content">
-                                  <h6 class="recent-post__title text-truncate">
-                                    <a class="product-title" href="{{ article.url }}">{{ article.title | truncate: 20 }}</a>
-                                  </h6>
-                                  <span class="recent-post__meta">{{ article.published_at | date: "%b %d, %Y" }}</span>
-                                </div>
-                                </ul>
-                              </li>
-                            {% endfor %}
-                              
-                          </ul>
-                          </div>
-                          {% when 'tag' %}
-                            {% if blog.all_tags.size > 0 %}
-                            <div class="axil-single-widget widget_tag_cloud mt--40">
-                              {% if block.settings.blog_tags_title != blank %}
-                              <h6 class="widget-title">{{ block.settings.blog_tags_title }}</h6>
-                              {% endif %}
-                              <div class="tagcloud">
-                          
-                                {% assign tags_list_limit = block.settings.blog_tags_list_limit_handle %}
-                                {% for tag in blog.all_tags limit: tags_list_limit %}
-                                <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="{% if current_tags contains tag %}active{% endif %}">{{ tag }}</a>
-                                {% endfor %}
-                          
-                              </div>
-                            </div>
-                            {% endif %}
-                          {%- endcase -%}
-                        {% endfor %}
-                        </div> 
+                      {%- render 'blog-sidebar' -%}
                     </div> 
 
                 </div>
@@ -535,9 +464,7 @@
         }
       ]
    }
-      
-      
-    ]
+ ]
 
 }
 {% endschema %}

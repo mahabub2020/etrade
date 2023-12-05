@@ -106,7 +106,7 @@
                 <div class="row row--20">
                     <div class="col-lg-8 axil-post-wrapper">
                         {%- paginate blog.articles by section.settings.blog_list -%}
-                        
+
                         {%- for article in blog.articles -%}
 							<div class="item blog blog-item content-blog mt--60">
 								{%- render 'article-card',
@@ -131,8 +131,7 @@
                         
                     </div>
                     <div class="col-lg-4 col-xl-4">
-                        <aside class="axil-sidebar-area">
-                        </aside>
+                       {%- render 'related-blog-post' -%}
                     </div>
                 </div>
             </div>
