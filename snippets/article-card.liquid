@@ -28,6 +28,16 @@
 				</div>
 			{%- endif -%}
 		<div class="content"> 
+		{%- if tags -%}
+			{%- if article.tags.size > 0 -%}
+				<div class="blog-item-category">
+					{%- for tag in article.tags -%}
+						<a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+					{%- endfor -%}
+				</div>
+			{%- endif -%}
+		{%- endif -%}
+		
 			<h4 class="title">
 				<a href="{{ article.url }}" title="{{ article.title }}">{{ article.title | truncate: 100 | escape }}</a>
 			</h4>
