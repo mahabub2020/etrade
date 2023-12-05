@@ -10,9 +10,9 @@
 
                             {% unless template == 'index' %}
                                 <nav class="" role="navigation" aria-label="breadcrumbs">
-                                  <ul class="breadcrumb-list">
+                                  <ul class="breadcrumb-list axil-breadcrumb liststyle d-flex">
                                 
-                                    <li>
+                                    <li class="item-home">
                                       <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
                                     </li>
                                     <li>
@@ -71,16 +71,16 @@
                                     </li>
                                   </ul>
                                 </nav>
-                                {% endunless %}
-
-                                
-                            <ul id="breadcrumbs" class="axil-breadcrumb liststyle d-flex">
-                                <li class="item-home"><a class="bread-link bread-home" href="http://etrade.local" title="Home">Home</a></li>
-                                <li class="separator separator-home"></li>
-                                <li class="item-current item-archive"><span class="bread-current bread-archive">  Shop</span></li>
-                            </ul>
-                                <h3 class="title">{{ block.settings.page_title_txt }}</h3>
-                                    
+                                {% endunless %} 
+                                {% unless template == 'product' or template == 'article' %}
+                                    <h1 class="title page-title">
+                                        {% if block.settings.page_title_txt != '' %}
+                                            {{ page_title | split: '|' | first }}
+                                        {% else %}
+                                            {{ block.settings.page_title_txt }}
+                                        {% endif %}
+                                    </h1>
+                                  {% endunless %} 
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-4">

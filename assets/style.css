@@ -25891,3 +25891,7 @@ select.dokan-form-control, input.dokan-form-control {
   clear: both;
   border-radius: 6px;
 }
+
+.axil-breadcrumb-area .inner .bradcrumb-thumb img {
+  display: inline-block;
+}
