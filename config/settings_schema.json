@@ -1421,7 +1421,6 @@
         "label": "t:sections.main-blog.settings.show_tags.label",
         "default": true
       },
-   
       {
         "type": "checkbox",
         "id": "show_author",
