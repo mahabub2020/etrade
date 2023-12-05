@@ -16,8 +16,8 @@
       ],
       "settings": {
         "blog_read_more": "Read more",
-        "number_of_blog_posts": 3,
-        "blog_list": 2,
+        "number_of_blog_posts": 4,
+        "blog_list": 4,
         "show_image": true
       }
     }
