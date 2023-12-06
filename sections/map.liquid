@@ -1,6 +1,6 @@
 {% if settings.apikey != blank %}
     <div class="{{ section.settings.container }}{% if section.settings.container == 'w-full' %} p-0{% endif %}" style="margin-bottom: 100px;">
-        {% render 'section-heding' %}
+      
         <div class="row g-0">
             <div class="col-12">
                 <div class="location_map_{{ section.settings.map_height }}" id="map-{{ section.id }}"></div>
