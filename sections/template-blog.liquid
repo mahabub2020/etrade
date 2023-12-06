@@ -194,6 +194,67 @@
               }
           ]
         }  
-      ]
+      ],
+      "blocks": [
+        {
+          "type": "search",
+          "limit": 1,
+          "name": "Search",
+         
+          "settings": [
+            {
+              "type": "text",
+              "id": "search_title",
+              "label": "Search",
+              "default": "Search"
+            }
+          ]
+        },
+        {
+          "type": "recent_post",
+          "name": "Recent Post",
+          "limit": 1,
+          "settings": [
+            {
+              "type": "text",
+              "id": "recent_post_title",
+              "label": "Recent Post Title",
+              "default": "Recent Post"
+            },
+            {
+              "type": "range",
+              "id": "recent_post_limit_handle",
+              "min": 2,
+              "max": 10,
+              "step": 1,
+              "label": "Post Limit",
+              "default": 3
+            }
+          ]
+       },
+       {
+        "type": "tag",
+        "name": "Tag",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "blog_tags_title",
+            "label": "Tags Title",
+            "default": "Tags"
+          },
+          {
+            "type": "range",
+            "id": "blog_tags_list_limit_handle",
+            "min": 5,
+            "max": 20,
+            "step": 1,
+            "label": "Tag Limit",
+            "default": 10
+          }
+        ]
+     }
+   ]
+  
 }
 {% endschema %}
