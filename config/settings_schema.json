@@ -1443,6 +1443,37 @@
     ]
   },
   {
+    "name": "t:settings_schema.integration.name",
+    "settings": [
+      {
+        "type": "header",
+        "content": "t:settings_schema.integration.label"
+      },
+      {
+        "type": "text",
+        "id": "apikey",
+        "label": "t:settings_schema.integration.google.label",
+        "info": "t:settings_schema.integration.google.info"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.integration.instagram.name"
+      },
+      {
+        "type": "text",
+        "id": "accessToken",
+        "label": "t:settings_schema.integration.instagram.label",
+        "info": "t:settings_schema.integration.instagram.info"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Mapbox access token",
+        "info": "[Get Mapbox token](https://account.mapbox.com/)"
+      }
+    ]
+  },
+  {
     "name": "Wishlist",
     "settings": [
       {

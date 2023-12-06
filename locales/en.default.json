@@ -557,14 +557,6 @@
       "copy_code_success": "Code copied successfully",
       "print_gift_card": "Print"
     }
-  },
-  "block": {
-    "video": {
-      "load_video": "TODO"
-    }
-  },
-  "product": {
-    "out_of_stock": "TODO"
-  },
-  "from_price": "TODO"
+  }
+}
 }
