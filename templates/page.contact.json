@@ -1,11 +1,11 @@
-{
+ {
     "sections": {
-        "template": {
-            "type": "template-page"
-        },
-        "contact-form": {
-            "type": "contact-form"
+        "main": {
+            "type": "page-contact",
+            "settings": {}
         }
     },
-    "order": ["template", "contact-form"]
+    "order": [
+        "main"
+    ]
 }
