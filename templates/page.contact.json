@@ -10,7 +10,8 @@
       "settings": {
         "enable_breadcrumbs": true,
         "page_title_txt": "Blog Posts",
-        "enable_banner_img": true
+        "enable_banner_img": true,
+        "banner_img": "shopify:\/\/shop_images\/blog-02.png"
       }
     }
   },
