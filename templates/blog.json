@@ -3,10 +3,16 @@
     "template": {
       "type": "template-blog",
       "blocks": {
+        "338b8016-39dd-4262-bbb8-42f9a1cf325f": {
+          "type": "pagetitle",
+          "settings": {
+            "page_title_txt": "Blog Posts"
+          }
+        },
         "09a76fba-8d93-411b-9dbf-bdffd71de598": {
           "type": "search",
           "settings": {
-            "search_title": "Search"
+            "search_title": "Searchbnm"
           }
         },
         "3fbc58ad-7dff-4d82-825d-1a8989b92e4f": {
@@ -25,6 +31,7 @@
         }
       },
       "block_order": [
+        "338b8016-39dd-4262-bbb8-42f9a1cf325f",
         "09a76fba-8d93-411b-9dbf-bdffd71de598",
         "3fbc58ad-7dff-4d82-825d-1a8989b92e4f",
         "fe2e60ad-ed23-4ab4-a420-c49e6040dc1d"
