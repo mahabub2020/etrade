@@ -1421,7 +1421,6 @@
         "label": "t:sections.main-blog.settings.show_tags.label",
         "default": true
       },
-   
       {
         "type": "checkbox",
         "id": "show_author",
@@ -1469,7 +1468,7 @@
         "type": "text",
         "id": "heading",
         "label": "Mapbox access token",
-        "info": "[Get Mapbox token](https://account.mapbox.com/)"
+        "info": "[Get Mapbox token](https:\/\/account.mapbox.com\/)"
       }
     ]
   },
