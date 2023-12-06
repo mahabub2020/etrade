@@ -8,15 +8,38 @@
           "settings": {
             "page_title_txt": "Blog Posts"
           }
+        },
+        "122a7664-07dc-4692-957f-e5a9de57e1c9": {
+          "type": "search",
+          "settings": {
+            "search_title": "Search"
+          }
+        },
+        "7cac7688-265e-4ff3-a636-a3d451c44cdc": {
+          "type": "recent_post",
+          "settings": {
+            "recent_post_title": "Recent Post",
+            "recent_post_limit_handle": 3
+          }
+        },
+        "ee4411f5-a690-4a99-af3f-cc94031cc72d": {
+          "type": "tag",
+          "settings": {
+            "blog_tags_title": "Tags",
+            "blog_tags_list_limit_handle": 10
+          }
         }
       },
       "block_order": [
-        "338b8016-39dd-4262-bbb8-42f9a1cf325f"
+        "338b8016-39dd-4262-bbb8-42f9a1cf325f",
+        "122a7664-07dc-4692-957f-e5a9de57e1c9",
+        "7cac7688-265e-4ff3-a636-a3d451c44cdc",
+        "ee4411f5-a690-4a99-af3f-cc94031cc72d"
       ],
       "settings": {
         "blog_read_more": "Read more",
         "number_of_blog_posts": 4,
-        "blog_list": 3,
+        "blog_list": 2,
         "show_image": true
       }
     }
