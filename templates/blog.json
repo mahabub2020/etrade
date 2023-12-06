@@ -6,7 +6,8 @@
         "338b8016-39dd-4262-bbb8-42f9a1cf325f": {
           "type": "pagetitle",
           "settings": {
-            "page_title_txt": "Blog Posts"
+            "page_title_txt": "Blog Posts",
+            "banner_img": "shopify:\/\/shop_images\/product-24.jpg"
           }
         },
         "122a7664-07dc-4692-957f-e5a9de57e1c9": {
