@@ -1,11 +1,21 @@
- {
-    "sections": {
-        "main": {
-            "type": "page-contact",
-            "settings": {}
-        }
+{
+  "sections": {
+    "main": {
+      "type": "page-contact",
+      "settings": {
+      }
     },
-    "order": [
-        "main"
-    ]
+    "8fec1a3c-1a30-4d92-831e-7cc842c9e3d3": {
+      "type": "section-page-title",
+      "settings": {
+        "enable_breadcrumbs": true,
+        "page_title_txt": "Blog Posts",
+        "enable_banner_img": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "8fec1a3c-1a30-4d92-831e-7cc842c9e3d3"
+  ]
 }
