@@ -13,10 +13,26 @@
         "enable_banner_img": true,
         "banner_img": "shopify:\/\/shop_images\/blog-02.png"
       }
+    },
+    "e819671f-0951-40f0-a9d7-ddd6dcf802e4": {
+      "type": "map",
+      "settings": {
+        "heading": "httry",
+        "subheading": "tyutu",
+        "description": "tututu",
+        "header_alignment": "center",
+        "container": "container-fluid",
+        "map_height": "medium",
+        "textx": "51.508530",
+        "texty": "0.076132",
+        "zoom": "13",
+        "text2": "New York"
+      }
     }
   },
   "order": [
     "main",
-    "8fec1a3c-1a30-4d92-831e-7cc842c9e3d3"
+    "8fec1a3c-1a30-4d92-831e-7cc842c9e3d3",
+    "e819671f-0951-40f0-a9d7-ddd6dcf802e4"
   ]
 }
