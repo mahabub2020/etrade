@@ -9,7 +9,7 @@
     "show_author": true,
     "article_show_excerpt": true,
     "article_show_button": true,
-    "apikey": "callback",
+    "apikey": "&callback=initMap",
     "checkout_logo_image": "shopify:\/\/shop_images\/logo.svg",
     "sections": {
       "header": {
