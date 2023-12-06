@@ -3,16 +3,31 @@
     "template": {
       "type": "template-blog",
       "blocks": {
-        "1077f894-c9c0-4012-8304-f82074b6e5d9": {
-          "type": "pagetitle",
+        "09a76fba-8d93-411b-9dbf-bdffd71de598": {
+          "type": "search",
           "settings": {
-            "page_title_txt": "{{ blog.title }}",
-            "banner_img": "shopify:\/\/shop_images\/product-24.jpg"
+            "search_title": "Search"
+          }
+        },
+        "3fbc58ad-7dff-4d82-825d-1a8989b92e4f": {
+          "type": "recent_post",
+          "settings": {
+            "recent_post_title": "Recent Post",
+            "recent_post_limit_handle": 3
+          }
+        },
+        "fe2e60ad-ed23-4ab4-a420-c49e6040dc1d": {
+          "type": "tag",
+          "settings": {
+            "blog_tags_title": "Tags",
+            "blog_tags_list_limit_handle": 10
           }
         }
       },
       "block_order": [
-        "1077f894-c9c0-4012-8304-f82074b6e5d9"
+        "09a76fba-8d93-411b-9dbf-bdffd71de598",
+        "3fbc58ad-7dff-4d82-825d-1a8989b92e4f",
+        "fe2e60ad-ed23-4ab4-a420-c49e6040dc1d"
       ],
       "settings": {
         "blog_read_more": "Read more",
