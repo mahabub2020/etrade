@@ -23,8 +23,8 @@
         "header_alignment": "center",
         "container": "container-fluid",
         "map_height": "medium",
-        "textx": "51.508530",
-        "texty": "0.076132",
+        "textx": "",
+        "texty": "",
         "zoom": "13",
         "text2": "New York"
       }
