@@ -20,11 +20,52 @@
         "container": "container-xxl",
         "embed_code": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m12!1m3!1d14602.26601777838!2d90.40310325!3d23.798446300000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1701943555780!5m2!1sen!2sbd\" width=\"100%\" height=\"500\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>"
       }
+    },
+    "fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--21625542705438__fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "Tell about your service.",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
+          }
+        },
+        "template--21625542705438__fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 60,
+            "section_padding_bottom_md": 60,
+            "section_padding_top_xs": 40,
+            "section_padding_bottom_xs": 40
+          }
+        }
+      },
+      "block_order": [
+        "template--21625542705438__fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91-whyus-1",
+        "template--21625542705438__fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout2",
+        "col_xl": "4",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
     }
   },
   "order": [
     "main",
     "8fec1a3c-1a30-4d92-831e-7cc842c9e3d3",
-    "13b93baa-5fe7-4f78-b3df-2dee3b9de0c5"
+    "13b93baa-5fe7-4f78-b3df-2dee3b9de0c5",
+    "fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91"
   ]
 }
