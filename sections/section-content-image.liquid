@@ -1,14 +1,14 @@
 <div id="section-{{ section.id }}"  class="axil-about-area about-style-1 axil-section-gap ">
   <div class="container">
       <div class="row align-items-center">
-          <div class="col-xl-4 col-lg-6 {% if settings.content_order %} order-2 {% endif %}">
+          <div class="col-xl-4 col-lg-6 {% if section.settings.content_order != "" %} order-2 {% endif %}">
               <div class="about-thumbnail">
                   <div class="thumbnail">
                     <img src="{% if block.settings.box_img %}{{ block.settings.box_img | img_url: '420x501' }}{% else %}http:\/\/via.placeholder.com\/420x501{% endif %}" alt="{{ block.settings.box_img.alt }}"> 
                   </div>
               </div>
           </div>
-          <div class="col-xl-8 col-lg-6 {% if settings.content_order %} order-1 {% endif %} ">
+          <div class="col-xl-8 col-lg-6 {% if section.settings.content_order != "" %} order-1 {% endif %} ">
               <div class="about-content content-right"> 
                   {% if section.settings.before_title != blank %}
                     <span class="title-highlighter highlighter-primary2">
