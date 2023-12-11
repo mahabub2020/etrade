@@ -4,33 +4,27 @@
           <div class="col-xl-4 col-lg-6">
               <div class="about-thumbnail">
                   <div class="thumbnail">
-                    
                     <img src="{% if block.settings.box_img %}{{ block.settings.box_img | img_url: '420x501' }}{% else %}http:\/\/via.placeholder.com\/420x501{% endif %}" alt="{{ block.settings.box_img.alt }}"> 
                   </div>
               </div>
           </div>
-          <div class="col-xl-8 col-lg-6">
-              <div class="about-content content-right">
- 
+          <div class="col-xl-8 col-lg-6 order-1">
+              <div class="about-content content-right"> 
                   {% if section.settings.before_title != blank %}
                     <span class="title-highlighter highlighter-primary2">
                         {{ section.settings.before_title_icon }}  
                         {{ section.settings.before_title }}  
                     </span>
-                  {% endif %}      
-                  
+                  {% endif %}       
                   {% if section.settings.title != blank %}  
                   <h2 class="title">{{ section.settings.title }} </h2>
-                  {% endif %}  
-                  
+                  {% endif %}   
                   {% if section.settings.sub_title != blank %}  
                     <span class="text-heading">{{ section.settings.sub_title }} </span>
-                  {% endif %}  
-
+                  {% endif %}   
                   {% if section.settings.content != blank %}  
                     <p class="text-content">{{ section.settings.content }} </p>
-                  {% endif %}
-  
+                  {% endif %} 
               </div>
           </div>
       </div>
