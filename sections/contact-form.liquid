@@ -95,22 +95,19 @@
                     </div>
                     {% endform %} 
                     <div class="col-lg-4">
+                        {% for block in section.blocks %}  
+                        {% case block.type %}
+                          {% when 'content_box' %}    
                         <div class="contact-location mb--40">
                             <h4 class="title mb--20">Our Store</h4>
                             <span class="address mb--20">8212 E. Glen Creek Street Orchard Park, NY 14127, United States of America</span>
                             <span class="phone">Phone: +123 456 7890</span>
                             <span class="email">Email: Hello@etrade.com</span>
                         </div>
-                        <div class="contact-career mb--40">
-                            <h4 class="title mb--20">Careers</h4>
-                            <p>Instead of buying six things, one that you really like.</p>
-                        </div>
-                        <div class="opening-hour">
-                        <h4 class="title mb--20">Opening Hours:</h4>
-                        <p>Monday to Saturday: 9am - 10pm
-                            <br> Sundays: 10am - 6pm
-                        </p>
-                    </div>
+                        {% endcase %} 
+                    {% endfor %} 
+ 
+
                 </div>
             </div>
         </div>
@@ -140,7 +137,6 @@
 
     "blocks": [
         {
-            
             "type": "content_box",
             "name": "Content Box",
             "limit": 3,
