@@ -24,10 +24,19 @@
             "box_content1": "8212 E. Glen Creek Street Orchard Park, NY 14127, United States of America",
             "box_content2": "Phone: +123 456 7890<br>\nEmail: Hello@etrade.com"
           }
+        },
+        "9674b889-c0d4-45ca-b43c-2160c789c4e7": {
+          "type": "content_box",
+          "settings": {
+            "box_title": "Careers",
+            "box_content1": "Instead of buying six things, one that you really like.",
+            "box_content2": ""
+          }
         }
       },
       "block_order": [
-        "83c9b6ef-e912-4288-bfde-f325f0c80f3e"
+        "83c9b6ef-e912-4288-bfde-f325f0c80f3e",
+        "9674b889-c0d4-45ca-b43c-2160c789c4e7"
       ],
       "settings": {
         "title": "We would love to hear from you",
