@@ -134,11 +134,47 @@
             "id": "sub_title",
             "label": "Sub Title",
             "default": "If you’ve got great products your making or looking to work with us then drop us a line."
-        }
+        } 
+        
     ],
+
+    "blocks": [
+        {
+            
+            "type": "content_box",
+            "name": "Content Box",
+            "limit": 3,
+            "settings": [
+              
+              {
+                "type": "text",
+                "id": "box_title",
+                "default": "Our Store",
+                "label": "Title"
+              },
+              {
+                "type": "textarea",
+                "id": "box_content1",
+                "default": "Content 1",
+                "label": "Content 1"
+              } ,
+              {
+                "type": "textarea",
+                "id": "box_content2",
+                "default": "Content 2",
+                "label": "Content 2"
+              } 
+            ]
+          }
+        ],
     "presets": [
         {
-            "name": "Contact Form"
+        "name": "Contact Form",
+        "blocks": [
+                {
+                    "type": "content_box"
+                }
+            ]
         }
     ]
 }
