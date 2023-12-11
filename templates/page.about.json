@@ -1,11 +1,39 @@
 {
-    "sections": {
-        "main": {
-            "type": "page-about",
-            "settings": {}
-        }
+  "sections": {
+    "main": {
+      "type": "page-about",
+      "settings": {
+      }
     },
-    "order": [
-        "main"
-    ]
+    "cf568228-397e-4fc7-8c99-e8510a4a1750": {
+      "type": "section-content-image",
+      "blocks": {
+        "template--21651685966110__cf568228-397e-4fc7-8c99-e8510a4a1750-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 50,
+            "section_padding_bottom_md": 50,
+            "section_padding_top_xs": 40,
+            "section_padding_bottom_xs": 40
+          }
+        }
+      },
+      "block_order": [
+        "template--21651685966110__cf568228-397e-4fc7-8c99-e8510a4a1750-section_padding-1"
+      ],
+      "settings": {
+        "before_title": "About Store",
+        "before_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "title": "Online shopping includes both buying things online.",
+        "sub_title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
+        "content": "Publish your eCommerce site quickly with our easy-to-use store builder— no coding required. Migrate your items from your point of sale system or turn your Instagram feed into a shopping site and start selling fast. Square Online works for all kinds of businesses—retail, restaurants, services."
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cf568228-397e-4fc7-8c99-e8510a4a1750"
+  ]
 }
