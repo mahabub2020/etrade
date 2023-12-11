@@ -32,11 +32,20 @@
             "box_content1": "Instead of buying six things, one that you really like.",
             "box_content2": ""
           }
+        },
+        "ebd4e2fe-0721-43da-ad27-e51a67bdd742": {
+          "type": "content_box",
+          "settings": {
+            "box_title": "Opening Hours:",
+            "box_content1": "Monday to Saturday: 9am – 10pm <br>\nSundays: 10am – 6pm",
+            "box_content2": ""
+          }
         }
       },
       "block_order": [
         "83c9b6ef-e912-4288-bfde-f325f0c80f3e",
-        "9674b889-c0d4-45ca-b43c-2160c789c4e7"
+        "9674b889-c0d4-45ca-b43c-2160c789c4e7",
+        "ebd4e2fe-0721-43da-ad27-e51a67bdd742"
       ],
       "settings": {
         "title": "We would love to hear from you",
