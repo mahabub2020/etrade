@@ -24,6 +24,7 @@
         "template--21651685966110__cf568228-397e-4fc7-8c99-e8510a4a1750-section_padding-1"
       ],
       "settings": {
+        "content_order": true,
         "before_title": "About Store",
         "before_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "title": "Online shopping includes both buying things online.",
