@@ -4,7 +4,8 @@
           <div class="col-xl-4 col-lg-6">
               <div class="about-thumbnail">
                   <div class="thumbnail">
-                    <img src="{% if section.settings.box_img %}{{ section.settings.box_img | img_url: section.settings.img_size1 }}{% else %}http:\/\/via.placeholder.com\/{{  section.settings.img_size1 }}{% endif %}" alt="{{ section.settings.box_img.alt }}"> 
+                    
+                    <img src="{% if block.settings.box_img %}{{ block.settings.box_img | img_url: '420x501' }}{% else %}http:\/\/via.placeholder.com\/630x246{% endif %}" alt="{{ block.settings.box_img.alt }}"> 
                   </div>
               </div>
           </div>
