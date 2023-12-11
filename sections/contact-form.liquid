@@ -99,10 +99,20 @@
                         {% case block.type %}
                           {% when 'content_box' %}    
                         <div class="contact-location mb--40">
-                            <h4 class="title mb--20">Our Store</h4>
-                            <span class="address mb--20">8212 E. Glen Creek Street Orchard Park, NY 14127, United States of America</span>
-                            <span class="phone">Phone: +123 456 7890</span>
-                            <span class="email">Email: Hello@etrade.com</span>
+
+                            {% if block.settings.box_title != '' %}
+                            <h4 class="title mb--20">{{ block.settings.box_title | escape }}</h4>
+                            {% endif %}
+
+                            {% if block.settings.box_content1 != '' %}
+                            <p class="address mb--20">{{ block.settings.box_content1 | escape }}</p>
+                            {% endif %}
+
+                            {% if block.settings.box_content2 != '' %}
+                                <p class="address mb--20">{{ block.settings.box_content2 | escape }}</p>
+                            {% endif %}
+
+
                         </div>
                         {% endcase %} 
                     {% endfor %} 
