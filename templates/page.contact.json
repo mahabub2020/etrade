@@ -55,14 +55,6 @@
     "fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91": {
       "type": "section-why-us",
       "blocks": {
-        "template--21625542705438__fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91-whyus-1": {
-          "type": "whyus",
-          "settings": {
-            "wstitle": "<p>Fast & Secure Delivery<\/p>",
-            "wscontent": "Tell about your service.",
-            "ws_img": "shopify:\/\/shop_images\/service2.png"
-          }
-        },
         "template--21625542705438__fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91-section_padding-1": {
           "type": "section_padding",
           "settings": {
@@ -73,11 +65,46 @@
             "section_padding_top_xs": 40,
             "section_padding_bottom_xs": 40
           }
+        },
+        "template--21625542705438__fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "Tell about your service.",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
+          }
+        },
+        "14df0bff-9e39-40b4-83c5-8c66b67b5af5": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Money Back Guarantee<\/strong><\/p>",
+            "wscontent": "Within 10 days.",
+            "ws_img": "shopify:\/\/shop_images\/service3.png"
+          }
+        },
+        "e5ebaa56-7d63-4694-8c4f-11cbc808fe36": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>24 Hour Return Policy<\/strong><\/p>",
+            "wscontent": "No question ask.",
+            "ws_img": "shopify:\/\/shop_images\/service5.png"
+          }
+        },
+        "1b31f5dd-1b93-4875-a79c-54b7b9afa590": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Pro Quality Support<\/strong><\/p>",
+            "wscontent": "24\/7 Live support.",
+            "ws_img": "shopify:\/\/shop_images\/service4.png"
+          }
         }
       },
       "block_order": [
+        "template--21625542705438__fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91-section_padding-1",
         "template--21625542705438__fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91-whyus-1",
-        "template--21625542705438__fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91-section_padding-1"
+        "14df0bff-9e39-40b4-83c5-8c66b67b5af5",
+        "e5ebaa56-7d63-4694-8c4f-11cbc808fe36",
+        "1b31f5dd-1b93-4875-a79c-54b7b9afa590"
       ],
       "settings": {
         "is_section_title": false,
