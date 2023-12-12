@@ -24,13 +24,16 @@
         "template--21651685966110__cf568228-397e-4fc7-8c99-e8510a4a1750-section_padding-1"
       ],
       "settings": {
+        "layout": "layout2",
         "content_order": false,
         "before_title": "About Store",
         "before_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "title": "Online shopping includes both buying things online.",
         "sub_title": "Salesforce B2C Commerce can help you create unified, intelligent digital commerce experiences — both online and in the store.",
         "content": "Publish your eCommerce site quickly with our easy-to-use store builder— no coding required. Migrate your items from your point of sale system or turn your Instagram feed into a shopping site and start selling fast. Square Online works for all kinds of businesses—retail, restaurants, services.",
-        "box_img": "shopify:\/\/shop_images\/about-01.png"
+        "box_img": "shopify:\/\/shop_images\/about-01.png",
+        "btn_txt": "Get In Touch",
+        "btn_url": "shopify:\/\/blogs\/news"
       }
     }
   },
