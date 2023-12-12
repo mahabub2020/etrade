@@ -3,7 +3,7 @@
     "template": {
       "type": "collection",
       "settings": {
-        "shop_layout": "full",
+        "shop_layout": "left",
         "product_layout": "1",
         "product_per_page": 8,
         "loading_style": "load_more",
