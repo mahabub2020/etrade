@@ -68,6 +68,11 @@
           "settings": {
             "social_share_title": "Shared"
           }
+        },
+        "e736fce7-7332-4b6b-9fba-7690d7d71a22": {
+          "type": "shopify:\/\/apps\/swatch-king-variants-options\/blocks\/product-swatch-block\/0850b1e4-ba30-4a0d-a8f4-f9a939276d7d",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -79,7 +84,8 @@
         "e33fff6f-e923-44ac-b511-6e76980808a6",
         "f3997cc0-8cd5-4a47-9225-813fc30bd56d",
         "b849e72c-91af-4438-9b1a-36e3a726494e",
-        "8c175ad4-ed46-42fc-a621-500002e1e2a2"
+        "8c175ad4-ed46-42fc-a621-500002e1e2a2",
+        "e736fce7-7332-4b6b-9fba-7690d7d71a22"
       ],
       "settings": {
         "container_style": "style_1",
@@ -88,6 +94,21 @@
         "product_zoom_enable": false,
         "zoom_type": "lens",
         "product_popup_enable": false
+      }
+    },
+    "17023632748332c870": {
+      "type": "apps",
+      "blocks": {
+        "b2e0ebab-dbd1-4a6c-b4de-8af724632c67": {
+          "type": "shopify:\/\/apps\/swatch-king-variants-options\/blocks\/stock-alert-block\/0850b1e4-ba30-4a0d-a8f4-f9a939276d7d",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "b2e0ebab-dbd1-4a6c-b4de-8af724632c67"
+      ],
+      "settings": {
       }
     },
     "51429078-9b7a-40fa-99b0-c7e8baead472": {
@@ -151,6 +172,7 @@
   },
   "order": [
     "template",
+    "17023632748332c870",
     "51429078-9b7a-40fa-99b0-c7e8baead472",
     "16998596726eb8ee32",
     "16998597661a7bb969"
