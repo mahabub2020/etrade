@@ -39,52 +39,29 @@ data-slick='{
             </div>
           {% endif %}
   
-            <div class="team-slide-activation axil-slick-slider slick-layout-wrapper--20 axil-slick-arrow  arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
+          <div class="team-slide-activation axil-slick-slider slick-layout-wrapper--20 axil-slick-arrow  arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
+               
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'review' %}   
                 <div class="slick-single-layout">
                     <div class="axil-team-member">
-                        <div class="thumbnail"><img src="./assets/images/team/team-01.png" alt="Cody Fisher"></div>
-                        <div class="team-content">
-                            <span class="subtitle">Founder</span>
-                            <h5 class="title">Rosalina D. Willson</h5>
+                        <div class="thumbnail">
+                          <img src="{% if block.settings.team_img %}{{ block.settings.team_img | img_url: '330x380' }}{% else %}http:\/\/via.placeholder.com\/330x380{% endif %}" alt="{{ block.settings.team_img.alt }}"> 
+                        </div>
+                        <div class="team-content"> 
+                          {% if block.settings.section_title != '' %}   
+                            <span class="subtitle">{{ block.settings.section_title | escape }}</span>
+                          {% endif %}   
+                          {% if block.settings.subtitle != '' %}   
+                            <h5 class="title">{{ block.settings.subtitle | escape }}</h5>
+                          {% endif %}    
+                            
                         </div>
                     </div>
                 </div>
-                <div class="slick-single-layout">
-                    <div class="axil-team-member">
-                        <div class="thumbnail"><img src="./assets/images/team/team-02.png" alt="Cody Fisher"></div>
-                        <div class="team-content">
-                            <span class="subtitle">CEO</span>
-                            <h5 class="title">Ukolilix X. Xilanorix</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-single-layout">
-                    <div class="axil-team-member">
-                        <div class="thumbnail"><img src="./assets/images/team/team-03.png" alt="Cody Fisher"></div>
-                        <div class="team-content">
-                            <span class="subtitle">Designer</span>
-                            <h5 class="title">Alonso M. Miklonax</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-single-layout">
-                    <div class="axil-team-member">
-                        <div class="thumbnail"><img src="./assets/images/team/team-04.png" alt="Cody Fisher"></div>
-                        <div class="team-content">
-                            <span class="subtitle">Designer</span>
-                            <h5 class="title">Alonso M. Miklonax</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="slick-single-layout">
-                    <div class="axil-team-member">
-                        <div class="thumbnail"><img src="./assets/images/team/team-02.png" alt="Cody Fisher"></div>
-                        <div class="team-content">
-                            <span class="subtitle">Designer</span>
-                            <h5 class="title">Alonso M. Miklonax</h5>
-                        </div>
-                    </div>
-                </div>
+                {% endcase %}
+              {% endfor %}  
             </div>
         </div>
     </div>
@@ -147,31 +124,7 @@ data-slick='{
     {
       "type": "header",
       "content": "Section Title"
-    },
-    {
-      "type": "select",
-      "id": "container",
-      "label": "Container type",
-      "options": [
-        {
-          "value": "container",
-          "label": "Default Container"
-        },
-        {
-          "value": "container-fluid",
-          "label": "Fluid"
-        },
-        {
-          "value": "container-full-width",
-          "label": "Full width"
-        },
-        {
-          "value": "container-xxl",
-          "label": "Use container box"
-        }
-      ],
-      "default": "container"
-    },
+    }, 
     {
       "type": "checkbox",
       "id": "is_section_title",
@@ -264,30 +217,24 @@ data-slick='{
     {
       "type": "members",
       "name": "Team Content",
-      "settings": [
-        {
-          "type": "textarea",
-          "id": "review_content",
-          "default": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
-          "label": "Content"
-        },
+      "settings": [ 
         {
           "type": "image_picker",
-          "id": "tsm_img",
-          "label": "Testimoial Image",
-          "info": "Recommended Size: 60 x 60px"
+          "id": "team_img",
+          "label": "Image",
+          "info": "Recommended Size: 330 x 380px"
         }, 
         {
           "type": "text",
-          "id": "author_name",
-          "default": "Wade Warren",
-          "label": "Author Name"
+          "id": "member_name",
+          "default": "Rosalina D. Willson",
+          "label": "Name"
         },
         {
           "type": "text",
-          "id": "author_desg",
-          "default": "Head of Marketing",
-          "label": "Author Desg"
+          "id": "member_desg",
+          "default": "Founder",
+          "label": "Sub Title"
         } 
       ]
     },
