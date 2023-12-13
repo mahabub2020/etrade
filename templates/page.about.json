@@ -42,34 +42,47 @@
         "template--21651685966110__4678d3b3-6bd1-46e6-af9f-6cc07ba973b4-members-1": {
           "type": "members",
           "settings": {
+            "team_img": "shopify:\/\/shop_images\/product-14_faa7b4d9-5789-4886-b377-7c236b2e68e6.png",
             "member_name": "Rosalina D. Willson",
             "member_desg": "Founder"
           }
         },
-        "8b3f7104-f1e1-4923-bf7f-868135f0c2d1": {
+        "9711aad8-3ab8-4736-8b9e-07c630b85ef0": {
           "type": "members",
           "settings": {
+            "team_img": "shopify:\/\/shop_images\/product-14_faa7b4d9-5789-4886-b377-7c236b2e68e6.png",
             "member_name": "Rosalina D. Willson",
             "member_desg": "Founder"
           }
         },
-        "2bf5f470-0c43-4460-ab18-3e6b49fcf4e4": {
+        "3fa87e3c-217a-4b42-8598-d5fa355e9fa4": {
           "type": "members",
           "settings": {
+            "team_img": "shopify:\/\/shop_images\/product-14_faa7b4d9-5789-4886-b377-7c236b2e68e6.png",
             "member_name": "Rosalina D. Willson",
             "member_desg": "Founder"
           }
         },
-        "134dd6e2-8fee-464c-9daf-a99d2bda0de0": {
+        "3b976477-0b88-482e-8053-50569f874a8f": {
           "type": "members",
           "settings": {
+            "team_img": "shopify:\/\/shop_images\/product-14_faa7b4d9-5789-4886-b377-7c236b2e68e6.png",
             "member_name": "Rosalina D. Willson",
             "member_desg": "Founder"
           }
         },
-        "a9a5ec04-6d64-40ec-a650-aa418f0983b9": {
+        "39992742-b14c-4ab1-a31a-c37e1ff4f483": {
           "type": "members",
           "settings": {
+            "team_img": "shopify:\/\/shop_images\/product-14_faa7b4d9-5789-4886-b377-7c236b2e68e6.png",
+            "member_name": "Rosalina D. Willson",
+            "member_desg": "Founder"
+          }
+        },
+        "d0f13bd9-4528-48fd-b098-83ef9ad3a130": {
+          "type": "members",
+          "settings": {
+            "team_img": "shopify:\/\/shop_images\/product-14_faa7b4d9-5789-4886-b377-7c236b2e68e6.png",
             "member_name": "Rosalina D. Willson",
             "member_desg": "Founder"
           }
@@ -77,10 +90,11 @@
       },
       "block_order": [
         "template--21651685966110__4678d3b3-6bd1-46e6-af9f-6cc07ba973b4-members-1",
-        "8b3f7104-f1e1-4923-bf7f-868135f0c2d1",
-        "2bf5f470-0c43-4460-ab18-3e6b49fcf4e4",
-        "134dd6e2-8fee-464c-9daf-a99d2bda0de0",
-        "a9a5ec04-6d64-40ec-a650-aa418f0983b9"
+        "9711aad8-3ab8-4736-8b9e-07c630b85ef0",
+        "3fa87e3c-217a-4b42-8598-d5fa355e9fa4",
+        "3b976477-0b88-482e-8053-50569f874a8f",
+        "39992742-b14c-4ab1-a31a-c37e1ff4f483",
+        "d0f13bd9-4528-48fd-b098-83ef9ad3a130"
       ],
       "settings": {
         "is_section_title": true,
