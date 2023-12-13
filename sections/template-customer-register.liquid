@@ -1,77 +1,122 @@
-<div class="h-full flex items-center justify-center py-12 px-6 md:px-4 lg:px-8">
-    <div class="max-w-md w-full space-y-8">
-        <div>
-            <h1 class="text-center text-3xl font-bold mt-6">Register an account</h1>
-        </div>
-        <div class="mt-8">
-            {% form 'create_customer' %}
-                {% if form.errors %}
-                    <div class="relative border border-red-400 bg-red-100 text-red-700 px-4 py-3" role="alert">
-                        <strong class="font-bold">Error!</strong>
-                        <p class="block sm:inline">{{ form.errors | default_errors }}</p>
+<div class="page-title-wrapper text-center">
+    <h1 class="page-header-title">{{ page_title | split: '|' | first }}</h1>
+    {% comment %} {% render 'breadcrumb', title: page.title, display_breadcrumb: true, container: true %} {% endcomment %}
+</div>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-sm-10 col-md-8 col-lg-12 col-xl-12">
+            <div class="login-container container-register row">
+                <div class="block block-customer-login col-lg-12">
+                    <div class="block-title">
+                        <h1>{{ 'customer.register.title' | t }}</h1>
                     </div>
-                {% endif %}
-
-                <div class="my-2">
-                    <label for="first_name" class="sr-only">First name</label>
-                    <input type="text"
-                        name="customer[first_name]"
-                        id="first_name"
-                        autocomplete="given-name"
-                        class="relative block w-full px-3 py-2 border"
-                        placeholder="First name"
-                    >
+                    <div class="block-content">
+                        {%- form 'create_customer', class: 'form form-login needs-validation', novalidate: 'novalidate' -%}
+                            <div class="field">      
+                                <input
+                                class="form-control field__input"
+                                type="text"
+                                name="customer[first_name]"
+                                id="RegisterForm-FirstName"
+                                {% if form.first_name %}value="{{ form.first_name }}"{% endif %}
+                                autocomplete="given-name"
+                                placeholder="{{ 'customer.register.first_name' | t }}"
+                                required
+                                >
+                                <label for="RegisterForm-FirstName">
+                                    {{ 'customer.register.first_name' | t }}
+                                    <span class="text-danger">*</span></label>
+                                <div class="invalid-feedback">Please choose a First Name.</div>
+                            </div>
+                            <div class="field">
+                                <input
+                                class="form-control field__input"
+                                type="text"
+                                name="customer[last_name]"
+                                id="RegisterForm-LastName"
+                                {% if form.last_name %}value="{{ form.last_name }}"{% endif %}
+                                autocomplete="family-name"
+                                placeholder="{{ 'customer.register.last_name' | t }}"
+                                required
+                                >
+                                <label for="RegisterForm-LastName">
+                                    {{ 'customer.register.last_name' | t }}
+                                    <span class="text-danger">*</span>
+                                </label>
+                                <div class="invalid-feedback">Please choose a Last Name.</div>
+                            </div>
+                            <div class="field">      
+                                <input
+                                class="form-control field__input"
+                                type="email"
+                                name="customer[email]"
+                                id="RegisterForm-email"
+                                {% if form.email %} value="{{ form.email }}"{% endif %}
+                                spellcheck="false"
+                                autocapitalize="off"
+                                autocomplete="email"
+                                aria-required="true"
+                                {% if form.errors contains 'email' %}
+                                aria-invalid="true"
+                                aria-describedby="RegisterForm-email-error"
+                                {% endif %}
+                                placeholder="{{ 'customer.register.email' | t }}"
+                                required
+                                >
+                                <label for="RegisterForm-email">
+                                    {{ 'customer.register.email' | t }}
+                                    <span class="text-danger">*</span>
+                                </label>
+                                <div class="invalid-feedback">Please choose a email.</div>
+                            </div>
+                            {%- if form.errors contains 'email' -%}
+                            <span id="RegisterForm-email-error" class="form__message">
+                                <svg aria-hidden="true" focusable="false" role="presentation">
+                                    <use href="#icon-error" />
+                                </svg>
+                                {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.
+                            </span>
+                            {%- endif -%}
+                            <div class="field">     
+                                <input
+                                class="form-control field__input"
+                                type="password"
+                                name="customer[password]"
+                                id="RegisterForm-password"
+                                aria-required="true"
+                                {% if form.errors contains 'password' %}
+                                aria-invalid="true"
+                                aria-describedby="RegisterForm-password-error"
+                                {% endif %}
+                                placeholder="{{ 'customer.register.password' | t }}"
+                                required
+                                >
+                                <label for="RegisterForm-password">
+                                    {{ 'customer.register.password' | t }}
+                                    <span class="text-danger">*</span>
+                                </label>
+                                <div class="invalid-feedback">Please choose a Password.</div>
+                            </div>
+                            {%- if form.errors contains 'password' -%}
+                            <span id="RegisterForm-password-error" class="form__message">
+                                <svg aria-hidden="true" focusable="false" role="presentation">
+                                    <use href="#icon-error" />
+                                </svg>
+                                {{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.
+                            </span>
+                            {%- endif -%}
+                            <div class="actions-toolbar justify-content-center">
+                                <button class="btn btn-primary" type="submit">{{ 'customer.register.submit' | t }}</button>
+                            </div>
+                        {%- endform -%}
+                    </div>
                 </div>
-
-                <div class="my-2">
-                    <label for="last_name" class="sr-only">Last name</label>
-                    <input type="text"
-                        name="customer[last_name]"
-                        id="last_name"
-                        autocomplete="family-name"
-                        class="relative block w-full px-3 py-2 border"
-                        placeholder="Last name"
-                    >
-                </div>
-
-                <div class="my-2">
-                    <label for="birthday" class="sr-only">Birthday</label>
-                    <input type="date"
-                        name="customer[note][Birthday]"
-                        id="birthday"
-                        class="relative block w-full px-3 py-2 border"
-                    >
-                </div>
-
-                <div class="my-2">
-                    <label for="email_address" class="sr-only">Email address</label>
-                    <input type="email"
-                        name="customer[email]"
-                        id="email_address"
-                        autocomplete="email"
-                        class="relative block w-full px-3 py-2 border"
-                        placeholder="Email address"
-                    >
-                </div>
-
-                
-                <div class="my-2">
-                    <label for="password" class="sr-only">Password</label>
-                    <input type="password"
-                        name="customer[password]"
-                        id="password"
-                        autocomplete="new-password"
-                        class="relative block w-full px-3 py-2 border"
-                        placeholder="Password"
-                    >
-                </div>
-                
-                <div>
-                    <button type="submit" class="axil-btn btn-bg-primary submit-btn">
-                        Create account
-                    </button>
-                </div>
-            {% endform %}
+            </div>
         </div>
     </div>
 </div>
+{% style %}
+    .page-title-wrapper .breadcrumb {
+        justify-content: center;
+    }
+{% endstyle %}
