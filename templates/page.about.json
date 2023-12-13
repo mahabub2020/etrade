@@ -183,7 +183,7 @@
         "0bfe3909-d40e-40e6-b112-cde6ad7d86a2": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 60,
+            "section_padding_top": 0,
             "section_padding_bottom": 60,
             "section_padding_top_md": 50,
             "section_padding_bottom_md": 50,
@@ -207,6 +207,33 @@
         "btn_txt": "Get In Touch",
         "btn_url": "shopify:\/\/blogs\/news"
       }
+    },
+    "d47b1b70-b9f0-440f-898e-1cb524080a1b": {
+      "type": "newsletter",
+      "blocks": {
+        "template--21651685966110__d47b1b70-b9f0-440f-898e-1cb524080a1b-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21651685966110__d47b1b70-b9f0-440f-898e-1cb524080a1b-section_padding-1"
+      ],
+      "settings": {
+        "before_title_icon": "fas fa-envelope-open",
+        "before_title_text": "Newsletter",
+        "before_title_color": "#3577f0",
+        "title": "Get weekly update",
+        "bg_img": "shopify:\/\/shop_images\/bg-image-5.jpg",
+        "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
+      }
     }
   },
   "order": [
@@ -216,6 +243,7 @@
     "c4a0f1e4-9dfe-402a-94a1-e7a946ba9a57",
     "a1f9f288-1e9c-4e17-bc0f-3baa53d3743a",
     "a0514375-348a-4486-8aa5-ade6af521c0b",
-    "11d8dc36-b044-4836-b916-30966c8e7129"
+    "11d8dc36-b044-4836-b916-30966c8e7129",
+    "d47b1b70-b9f0-440f-898e-1cb524080a1b"
   ]
 }
