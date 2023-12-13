@@ -101,7 +101,7 @@
         "0f046924-8b98-491a-a5ea-05a2aad26053": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 60,
+            "section_padding_top": 80,
             "section_padding_bottom": 0,
             "section_padding_top_md": 50,
             "section_padding_bottom_md": 50,
@@ -133,7 +133,7 @@
           "type": "section_padding",
           "settings": {
             "section_padding_top": 0,
-            "section_padding_bottom": 60,
+            "section_padding_bottom": 0,
             "section_padding_top_md": 50,
             "section_padding_bottom_md": 50,
             "section_padding_top_xs": 40,
@@ -156,6 +156,32 @@
         "btn_txt": "Get In Touch",
         "btn_url": "shopify:\/\/blogs\/news"
       }
+    },
+    "4c09fdb7-d81f-4e16-9465-de8608611d63": {
+      "type": "newsletter",
+      "blocks": {
+        "template--21651685966110__4c09fdb7-d81f-4e16-9465-de8608611d63-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21651685966110__4c09fdb7-d81f-4e16-9465-de8608611d63-section_padding-1"
+      ],
+      "settings": {
+        "before_title_icon": "fas fa-envelope-open",
+        "before_title_text": "Newsletter",
+        "before_title_color": "#3577f0",
+        "title": "Get weekly update",
+        "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
+      }
     }
   },
   "order": [
@@ -163,6 +189,7 @@
     "cf568228-397e-4fc7-8c99-e8510a4a1750",
     "4678d3b3-6bd1-46e6-af9f-6cc07ba973b4",
     "a0514375-348a-4486-8aa5-ade6af521c0b",
-    "11d8dc36-b044-4836-b916-30966c8e7129"
+    "11d8dc36-b044-4836-b916-30966c8e7129",
+    "4c09fdb7-d81f-4e16-9465-de8608611d63"
   ]
 }
