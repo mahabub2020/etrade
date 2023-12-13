@@ -180,6 +180,7 @@
         "before_title_text": "Newsletter",
         "before_title_color": "#3577f0",
         "title": "Get weekly update",
+        "bg_img": "shopify:\/\/shop_images\/bg-image-5.jpg",
         "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
       }
     },
