@@ -18,15 +18,23 @@
                           {{ section.settings.before_title | escape }}  
                       </span>
                     {% endif %}       
+                   
                     {% if section.settings.title != blank %}  
                     <h2 class="title">{{ section.settings.title | escape }} </h2>
                     {% endif %}   
+                   
                     {% if section.settings.sub_title != blank %}  
                       <span class="text-heading">{{ section.settings.sub_title | escape }} </span>
                     {% endif %}   
+                    
                     {% if section.settings.content != blank %}  
                       <p class="text-content">{{ section.settings.content | escape }} </p>
                     {% endif %} 
+                    
+                    {% if section.settings.btn_url %}  
+                      <a href="{{ section.settings.btn_url }}" class="axil-btn btn-outline"> {{ section.settings.btn_txt | escape }}</a>
+                    {% endif %}   
+
                 </div>
             </div>
         </div>
@@ -49,11 +57,10 @@
                       {{ section.settings.before_title | escape }}  
                   </span>
                 {% endif %}    
-
-                {% if section.settings.title != blank %}  
-                  <h4 class="title">{{ section.settings.title | escape }} </h4>
-                {% endif %}   
-              
+                  {% if section.settings.title != blank %}  
+                    <h4 class="title">{{ section.settings.title | escape }} </h4>
+                  {% endif %}   
+                
                   {% if section.settings.sub_title != blank %}  
                     <span class="text-heading">{{ section.settings.sub_title | escape }} </span>
                   {% endif %}   
@@ -61,9 +68,9 @@
                     <p class="text-content">{{ section.settings.content | escape }} </p>
                   {% endif %} 
                     
-                    {% if section.settings.btn_url %}  
-                        <a href="{{ section.settings.btn_url }}" class="axil-btn btn-outline"> {{ section.settings.btn_txt | escape }}</a>
-                    {% endif %}   
+                  {% if section.settings.btn_url %}  
+                      <a href="{{ section.settings.btn_url }}" class="axil-btn btn-outline"> {{ section.settings.btn_txt | escape }}</a>
+                  {% endif %}   
  
               </div>
           </div>
