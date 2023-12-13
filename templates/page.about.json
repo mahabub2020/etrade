@@ -36,6 +36,43 @@
         "btn_url": "shopify:\/\/blogs\/news"
       }
     },
+    "82ab23ef-bdca-4249-a7bc-fd071dab8d35": {
+      "type": "about-info-box",
+      "blocks": {
+        "template--21651685966110__82ab23ef-bdca-4249-a7bc-fd071dab8d35-InfoBox-1": {
+          "type": "InfoBox",
+          "settings": {
+            "info_img": "shopify:\/\/shop_images\/shape-01_dc5d2ab1-e139-4ef5-aa23-8e0f0264170f.png",
+            "info_title": "40,000+ Happy Customer",
+            "info_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
+          }
+        },
+        "3cdfce4b-776f-4827-94bf-afbc4c4ed5a7": {
+          "type": "InfoBox",
+          "settings": {
+            "info_img": "shopify:\/\/shop_images\/shape-01_dc5d2ab1-e139-4ef5-aa23-8e0f0264170f.png",
+            "info_title": "40,000+ Happy Customer",
+            "info_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
+          }
+        },
+        "d71618b2-d8c8-46cf-81b6-31b315fed907": {
+          "type": "InfoBox",
+          "settings": {
+            "info_img": "shopify:\/\/shop_images\/shape-01_dc5d2ab1-e139-4ef5-aa23-8e0f0264170f.png",
+            "info_title": "40,000+ Happy Customer",
+            "info_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
+          }
+        }
+      },
+      "block_order": [
+        "template--21651685966110__82ab23ef-bdca-4249-a7bc-fd071dab8d35-InfoBox-1",
+        "3cdfce4b-776f-4827-94bf-afbc4c4ed5a7",
+        "d71618b2-d8c8-46cf-81b6-31b315fed907"
+      ],
+      "settings": {
+        "is_section_title": true
+      }
+    },
     "4678d3b3-6bd1-46e6-af9f-6cc07ba973b4": {
       "type": "team-slider",
       "blocks": {
@@ -267,6 +304,7 @@
   "order": [
     "main",
     "cf568228-397e-4fc7-8c99-e8510a4a1750",
+    "82ab23ef-bdca-4249-a7bc-fd071dab8d35",
     "4678d3b3-6bd1-46e6-af9f-6cc07ba973b4",
     "a0514375-348a-4486-8aa5-ade6af521c0b",
     "11d8dc36-b044-4836-b916-30966c8e7129",
