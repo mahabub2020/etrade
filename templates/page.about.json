@@ -45,6 +45,70 @@
         "btn_url": "shopify:\/\/blogs\/news"
       }
     },
+    "a1f9f288-1e9c-4e17-bc0f-3baa53d3743a": {
+      "type": "team-slider",
+      "blocks": {
+        "template--21651685966110__a1f9f288-1e9c-4e17-bc0f-3baa53d3743a-members-1": {
+          "type": "members",
+          "settings": {
+            "team_img": "shopify:\/\/shop_images\/team-01.png",
+            "member_name": "Rosalina D. Willson",
+            "member_desg": "Founder"
+          }
+        },
+        "1ac629d1-daa6-4c18-98ce-becf0365d8dd": {
+          "type": "members",
+          "settings": {
+            "team_img": "shopify:\/\/shop_images\/team-02.png",
+            "member_name": "Rosalina D. Willson",
+            "member_desg": "Founder"
+          }
+        },
+        "7a6a14e6-e5f1-442e-b9ab-c4953bab5a8d": {
+          "type": "members",
+          "settings": {
+            "team_img": "shopify:\/\/shop_images\/team-03.png",
+            "member_name": "Rosalina D. Willson",
+            "member_desg": "Founder"
+          }
+        },
+        "25617557-3e94-4228-b1da-7ef418452188": {
+          "type": "members",
+          "settings": {
+            "team_img": "shopify:\/\/shop_images\/team-05.png",
+            "member_name": "Rosalina D. Willson",
+            "member_desg": "Founder"
+          }
+        },
+        "3a16f7b1-a052-4d58-a4c2-18baaa91742f": {
+          "type": "members",
+          "settings": {
+            "team_img": "shopify:\/\/shop_images\/team-04.png",
+            "member_name": "Rosalina D. Willson",
+            "member_desg": "Founder"
+          }
+        }
+      },
+      "block_order": [
+        "template--21651685966110__a1f9f288-1e9c-4e17-bc0f-3baa53d3743a-members-1",
+        "1ac629d1-daa6-4c18-98ce-becf0365d8dd",
+        "7a6a14e6-e5f1-442e-b9ab-c4953bab5a8d",
+        "25617557-3e94-4228-b1da-7ef418452188",
+        "3a16f7b1-a052-4d58-a4c2-18baaa91742f"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "section_title": "Expart Management Team",
+        "subtitle": "Our Team",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 2,
+        "product_column_sm": 1
+      }
+    },
     "a0514375-348a-4486-8aa5-ade6af521c0b": {
       "type": "section-content-image",
       "blocks": {
@@ -112,6 +176,7 @@
     "main",
     "846645dc-b8c4-435e-b286-6d0083a5b1b3",
     "cf568228-397e-4fc7-8c99-e8510a4a1750",
+    "a1f9f288-1e9c-4e17-bc0f-3baa53d3743a",
     "a0514375-348a-4486-8aa5-ade6af521c0b",
     "11d8dc36-b044-4836-b916-30966c8e7129"
   ]
