@@ -45,6 +45,43 @@
         "btn_url": "shopify:\/\/blogs\/news"
       }
     },
+    "c4a0f1e4-9dfe-402a-94a1-e7a946ba9a57": {
+      "type": "about-info-box",
+      "blocks": {
+        "template--21651685966110__c4a0f1e4-9dfe-402a-94a1-e7a946ba9a57-InfoBox-1": {
+          "type": "InfoBox",
+          "settings": {
+            "info_img": "shopify:\/\/shop_images\/shape-02_df498789-fe30-49a3-8531-e76fbe79a598.png",
+            "info_title": "40,000+ Happy Customer",
+            "info_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
+          }
+        },
+        "84ff06e0-5639-4255-abbd-f06099017504": {
+          "type": "InfoBox",
+          "settings": {
+            "info_img": "shopify:\/\/shop_images\/shape-01_dc5d2ab1-e139-4ef5-aa23-8e0f0264170f.png",
+            "info_title": "40,000+ Happy Customer",
+            "info_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
+          }
+        },
+        "346d28b4-7e11-4f4b-a662-0d6737a16feb": {
+          "type": "InfoBox",
+          "settings": {
+            "info_img": "shopify:\/\/shop_images\/shape-03_79099fa9-8453-4eed-84da-228e0093c6c2.png",
+            "info_title": "40,000+ Happy Customer",
+            "info_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
+          }
+        }
+      },
+      "block_order": [
+        "template--21651685966110__c4a0f1e4-9dfe-402a-94a1-e7a946ba9a57-InfoBox-1",
+        "84ff06e0-5639-4255-abbd-f06099017504",
+        "346d28b4-7e11-4f4b-a662-0d6737a16feb"
+      ],
+      "settings": {
+        "is_section_title": true
+      }
+    },
     "a1f9f288-1e9c-4e17-bc0f-3baa53d3743a": {
       "type": "team-slider",
       "blocks": {
@@ -176,6 +213,7 @@
     "main",
     "846645dc-b8c4-435e-b286-6d0083a5b1b3",
     "cf568228-397e-4fc7-8c99-e8510a4a1750",
+    "c4a0f1e4-9dfe-402a-94a1-e7a946ba9a57",
     "a1f9f288-1e9c-4e17-bc0f-3baa53d3743a",
     "a0514375-348a-4486-8aa5-ade6af521c0b",
     "11d8dc36-b044-4836-b916-30966c8e7129"
