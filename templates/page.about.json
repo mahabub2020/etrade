@@ -102,7 +102,7 @@
           "type": "section_padding",
           "settings": {
             "section_padding_top": 60,
-            "section_padding_bottom": 60,
+            "section_padding_bottom": 0,
             "section_padding_top_md": 50,
             "section_padding_bottom_md": 50,
             "section_padding_top_xs": 40,
@@ -132,7 +132,7 @@
         "0bfe3909-d40e-40e6-b112-cde6ad7d86a2": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 60,
+            "section_padding_top": 0,
             "section_padding_bottom": 60,
             "section_padding_top_md": 50,
             "section_padding_bottom_md": 50,
