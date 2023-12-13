@@ -102,7 +102,7 @@
           "type": "section_padding",
           "settings": {
             "section_padding_top": 80,
-            "section_padding_bottom": 0,
+            "section_padding_bottom": 45,
             "section_padding_top_md": 50,
             "section_padding_bottom_md": 50,
             "section_padding_top_xs": 40,
@@ -133,7 +133,7 @@
           "type": "section_padding",
           "settings": {
             "section_padding_top": 0,
-            "section_padding_bottom": 0,
+            "section_padding_bottom": 45,
             "section_padding_top_md": 50,
             "section_padding_bottom_md": 50,
             "section_padding_top_xs": 40,
