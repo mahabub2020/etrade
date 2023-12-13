@@ -190,7 +190,8 @@
           "type": "whyus",
           "settings": {
             "wstitle": "<p>Fast & Secure Delivery<\/p>",
-            "wscontent": ""
+            "wscontent": "Tell about your service",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
           }
         },
         "template--21651685966110__7e604091-e29a-4db1-9dd8-412ddd5ac472-section_padding-1": {
