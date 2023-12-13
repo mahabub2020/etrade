@@ -50,11 +50,11 @@ data-slick='{
                           <img src="{% if block.settings.team_img %}{{ block.settings.team_img | img_url: '330x380' }}{% else %}http:\/\/via.placeholder.com\/330x380{% endif %}" alt="{{ block.settings.team_img.alt }}"> 
                         </div>
                         <div class="team-content"> 
-                          {% if block.settings.section_title != '' %}   
-                            <span class="subtitle">{{ block.settings.section_title | escape }}</span>
+                          {% if block.settings.member_name != '' %}   
+                            <span class="subtitle">{{ block.settings.member_name | escape }}</span>
                           {% endif %}   
-                          {% if block.settings.subtitle != '' %}   
-                            <h5 class="title">{{ block.settings.subtitle | escape }}</h5>
+                          {% if block.settings.member_desg != '' %}   
+                            <h5 class="title">{{ block.settings.member_desg | escape }}</h5>
                           {% endif %}    
                             
                         </div>
