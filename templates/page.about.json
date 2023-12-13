@@ -5,6 +5,15 @@
       "settings": {
       }
     },
+    "846645dc-b8c4-435e-b286-6d0083a5b1b3": {
+      "type": "section-page-title",
+      "settings": {
+        "enable_breadcrumbs": true,
+        "page_title_txt": "Blog Posts",
+        "enable_banner_img": true,
+        "banner_img": "shopify:\/\/shop_images\/product-45.png"
+      }
+    },
     "cf568228-397e-4fc7-8c99-e8510a4a1750": {
       "type": "section-content-image",
       "blocks": {
@@ -36,124 +45,14 @@
         "btn_url": "shopify:\/\/blogs\/news"
       }
     },
-    "82ab23ef-bdca-4249-a7bc-fd071dab8d35": {
-      "type": "about-info-box",
-      "blocks": {
-        "template--21651685966110__82ab23ef-bdca-4249-a7bc-fd071dab8d35-InfoBox-1": {
-          "type": "InfoBox",
-          "settings": {
-            "info_img": "shopify:\/\/shop_images\/shape-01_dc5d2ab1-e139-4ef5-aa23-8e0f0264170f.png",
-            "info_title": "40,000+ Happy Customer",
-            "info_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
-          }
-        },
-        "3cdfce4b-776f-4827-94bf-afbc4c4ed5a7": {
-          "type": "InfoBox",
-          "settings": {
-            "info_img": "shopify:\/\/shop_images\/shape-01_dc5d2ab1-e139-4ef5-aa23-8e0f0264170f.png",
-            "info_title": "40,000+ Happy Customer",
-            "info_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
-          }
-        },
-        "d71618b2-d8c8-46cf-81b6-31b315fed907": {
-          "type": "InfoBox",
-          "settings": {
-            "info_img": "shopify:\/\/shop_images\/shape-01_dc5d2ab1-e139-4ef5-aa23-8e0f0264170f.png",
-            "info_title": "40,000+ Happy Customer",
-            "info_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
-          }
-        }
-      },
-      "block_order": [
-        "template--21651685966110__82ab23ef-bdca-4249-a7bc-fd071dab8d35-InfoBox-1",
-        "3cdfce4b-776f-4827-94bf-afbc4c4ed5a7",
-        "d71618b2-d8c8-46cf-81b6-31b315fed907"
-      ],
-      "settings": {
-        "is_section_title": true
-      }
-    },
-    "4678d3b3-6bd1-46e6-af9f-6cc07ba973b4": {
-      "type": "team-slider",
-      "blocks": {
-        "template--21651685966110__4678d3b3-6bd1-46e6-af9f-6cc07ba973b4-members-1": {
-          "type": "members",
-          "settings": {
-            "team_img": "shopify:\/\/shop_images\/product-14_faa7b4d9-5789-4886-b377-7c236b2e68e6.png",
-            "member_name": "Rosalina D. Willson",
-            "member_desg": "Founder"
-          }
-        },
-        "9711aad8-3ab8-4736-8b9e-07c630b85ef0": {
-          "type": "members",
-          "settings": {
-            "team_img": "shopify:\/\/shop_images\/product-14_faa7b4d9-5789-4886-b377-7c236b2e68e6.png",
-            "member_name": "Rosalina D. Willson",
-            "member_desg": "Founder"
-          }
-        },
-        "3fa87e3c-217a-4b42-8598-d5fa355e9fa4": {
-          "type": "members",
-          "settings": {
-            "team_img": "shopify:\/\/shop_images\/product-14_faa7b4d9-5789-4886-b377-7c236b2e68e6.png",
-            "member_name": "Rosalina D. Willson",
-            "member_desg": "Founder"
-          }
-        },
-        "3b976477-0b88-482e-8053-50569f874a8f": {
-          "type": "members",
-          "settings": {
-            "team_img": "shopify:\/\/shop_images\/product-14_faa7b4d9-5789-4886-b377-7c236b2e68e6.png",
-            "member_name": "Rosalina D. Willson",
-            "member_desg": "Founder"
-          }
-        },
-        "39992742-b14c-4ab1-a31a-c37e1ff4f483": {
-          "type": "members",
-          "settings": {
-            "team_img": "shopify:\/\/shop_images\/product-14_faa7b4d9-5789-4886-b377-7c236b2e68e6.png",
-            "member_name": "Rosalina D. Willson",
-            "member_desg": "Founder"
-          }
-        },
-        "d0f13bd9-4528-48fd-b098-83ef9ad3a130": {
-          "type": "members",
-          "settings": {
-            "team_img": "shopify:\/\/shop_images\/product-14_faa7b4d9-5789-4886-b377-7c236b2e68e6.png",
-            "member_name": "Rosalina D. Willson",
-            "member_desg": "Founder"
-          }
-        }
-      },
-      "block_order": [
-        "template--21651685966110__4678d3b3-6bd1-46e6-af9f-6cc07ba973b4-members-1",
-        "9711aad8-3ab8-4736-8b9e-07c630b85ef0",
-        "3fa87e3c-217a-4b42-8598-d5fa355e9fa4",
-        "3b976477-0b88-482e-8053-50569f874a8f",
-        "39992742-b14c-4ab1-a31a-c37e1ff4f483",
-        "d0f13bd9-4528-48fd-b098-83ef9ad3a130"
-      ],
-      "settings": {
-        "is_section_title": true,
-        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
-        "section_title": "Our Users Feedback",
-        "subtitle": "Testimonials",
-        "autoplay_true": false,
-        "autoplay_speed": 5000,
-        "product_column": 4,
-        "product_column_lg": 3,
-        "product_column_md": 2,
-        "product_column_sm": 1
-      }
-    },
     "a0514375-348a-4486-8aa5-ade6af521c0b": {
       "type": "section-content-image",
       "blocks": {
         "0f046924-8b98-491a-a5ea-05a2aad26053": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 80,
-            "section_padding_bottom": 45,
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
             "section_padding_top_md": 50,
             "section_padding_bottom_md": 50,
             "section_padding_top_xs": 40,
@@ -183,8 +82,8 @@
         "0bfe3909-d40e-40e6-b112-cde6ad7d86a2": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 0,
-            "section_padding_bottom": 45,
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
             "section_padding_top_md": 50,
             "section_padding_bottom_md": 50,
             "section_padding_top_xs": 40,
@@ -207,108 +106,13 @@
         "btn_txt": "Get In Touch",
         "btn_url": "shopify:\/\/blogs\/news"
       }
-    },
-    "4c09fdb7-d81f-4e16-9465-de8608611d63": {
-      "type": "newsletter",
-      "blocks": {
-        "template--21651685966110__4c09fdb7-d81f-4e16-9465-de8608611d63-section_padding-1": {
-          "type": "section_padding",
-          "settings": {
-            "section_padding_top": 0,
-            "section_padding_bottom": 0,
-            "section_padding_top_md": 0,
-            "section_padding_bottom_md": 80,
-            "section_padding_top_xs": 0,
-            "section_padding_bottom_xs": 60
-          }
-        }
-      },
-      "block_order": [
-        "template--21651685966110__4c09fdb7-d81f-4e16-9465-de8608611d63-section_padding-1"
-      ],
-      "settings": {
-        "before_title_icon": "fas fa-envelope-open",
-        "before_title_text": "Newsletter",
-        "before_title_color": "#3577f0",
-        "title": "Get weekly update",
-        "bg_img": "shopify:\/\/shop_images\/bg-image-5.jpg",
-        "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
-      }
-    },
-    "7e604091-e29a-4db1-9dd8-412ddd5ac472": {
-      "type": "section-why-us",
-      "blocks": {
-        "template--21651685966110__7e604091-e29a-4db1-9dd8-412ddd5ac472-whyus-1": {
-          "type": "whyus",
-          "settings": {
-            "wstitle": "<p>Fast & Secure Delivery<\/p>",
-            "wscontent": "Tell about your service",
-            "ws_img": "shopify:\/\/shop_images\/service2.png"
-          }
-        },
-        "template--21651685966110__7e604091-e29a-4db1-9dd8-412ddd5ac472-section_padding-1": {
-          "type": "section_padding",
-          "settings": {
-            "section_padding_top": 60,
-            "section_padding_bottom": 60,
-            "section_padding_top_md": 60,
-            "section_padding_bottom_md": 60,
-            "section_padding_top_xs": 40,
-            "section_padding_bottom_xs": 40
-          }
-        },
-        "875d564d-59bd-4c97-bb34-0518fc78539d": {
-          "type": "whyus",
-          "settings": {
-            "wstitle": "<p>Fast & Secure Delivery<\/p>",
-            "wscontent": "Tell about your service",
-            "ws_img": "shopify:\/\/shop_images\/service5.png"
-          }
-        },
-        "a533f3c6-a99e-45e9-bf2b-6e987d63c7e8": {
-          "type": "whyus",
-          "settings": {
-            "wstitle": "<p>Fast & Secure Delivery<\/p>",
-            "wscontent": "Tell about your service"
-          }
-        },
-        "657e00f9-d93d-4a94-babd-10bde3723397": {
-          "type": "whyus",
-          "settings": {
-            "wstitle": "<p>Fast & Secure Delivery<\/p>",
-            "wscontent": "Tell about your service"
-          }
-        }
-      },
-      "block_order": [
-        "template--21651685966110__7e604091-e29a-4db1-9dd8-412ddd5ac472-whyus-1",
-        "template--21651685966110__7e604091-e29a-4db1-9dd8-412ddd5ac472-section_padding-1",
-        "875d564d-59bd-4c97-bb34-0518fc78539d",
-        "a533f3c6-a99e-45e9-bf2b-6e987d63c7e8",
-        "657e00f9-d93d-4a94-babd-10bde3723397"
-      ],
-      "settings": {
-        "is_section_title": false,
-        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
-        "section_title": "Why People Choose Us",
-        "section_sub_title": "Why Us",
-        "wulayout": "layout2",
-        "col_xl": "4",
-        "col_lg": "4",
-        "col_md": "3",
-        "col_sm": "2",
-        "col_mobile": "1"
-      }
     }
   },
   "order": [
     "main",
+    "846645dc-b8c4-435e-b286-6d0083a5b1b3",
     "cf568228-397e-4fc7-8c99-e8510a4a1750",
-    "82ab23ef-bdca-4249-a7bc-fd071dab8d35",
-    "4678d3b3-6bd1-46e6-af9f-6cc07ba973b4",
     "a0514375-348a-4486-8aa5-ade6af521c0b",
-    "11d8dc36-b044-4836-b916-30966c8e7129",
-    "4c09fdb7-d81f-4e16-9465-de8608611d63",
-    "7e604091-e29a-4db1-9dd8-412ddd5ac472"
+    "11d8dc36-b044-4836-b916-30966c8e7129"
   ]
 }
