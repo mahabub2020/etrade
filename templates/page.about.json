@@ -164,7 +164,7 @@
           "type": "section_padding",
           "settings": {
             "section_padding_top": 0,
-            "section_padding_bottom": 100,
+            "section_padding_bottom": 0,
             "section_padding_top_md": 0,
             "section_padding_bottom_md": 80,
             "section_padding_top_xs": 0,
@@ -182,6 +182,45 @@
         "title": "Get weekly update",
         "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
       }
+    },
+    "7e604091-e29a-4db1-9dd8-412ddd5ac472": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--21651685966110__7e604091-e29a-4db1-9dd8-412ddd5ac472-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": ""
+          }
+        },
+        "template--21651685966110__7e604091-e29a-4db1-9dd8-412ddd5ac472-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 60,
+            "section_padding_bottom_md": 60,
+            "section_padding_top_xs": 40,
+            "section_padding_bottom_xs": 40
+          }
+        }
+      },
+      "block_order": [
+        "template--21651685966110__7e604091-e29a-4db1-9dd8-412ddd5ac472-whyus-1",
+        "template--21651685966110__7e604091-e29a-4db1-9dd8-412ddd5ac472-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout2",
+        "col_xl": "5",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
     }
   },
   "order": [
@@ -190,6 +229,7 @@
     "4678d3b3-6bd1-46e6-af9f-6cc07ba973b4",
     "a0514375-348a-4486-8aa5-ade6af521c0b",
     "11d8dc36-b044-4836-b916-30966c8e7129",
-    "4c09fdb7-d81f-4e16-9465-de8608611d63"
+    "4c09fdb7-d81f-4e16-9465-de8608611d63",
+    "7e604091-e29a-4db1-9dd8-412ddd5ac472"
   ]
 }
