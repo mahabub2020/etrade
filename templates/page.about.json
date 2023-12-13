@@ -67,6 +67,44 @@
         "btn_url": "shopify:\/\/blogs\/news"
       }
     },
+    "4678d3b3-6bd1-46e6-af9f-6cc07ba973b4": {
+      "type": "team-slider",
+      "blocks": {
+        "template--21651685966110__4678d3b3-6bd1-46e6-af9f-6cc07ba973b4-members-1": {
+          "type": "members",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "8b3f7104-f1e1-4923-bf7f-868135f0c2d1": {
+          "type": "members",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--21651685966110__4678d3b3-6bd1-46e6-af9f-6cc07ba973b4-members-1",
+        "8b3f7104-f1e1-4923-bf7f-868135f0c2d1"
+      ],
+      "settings": {
+        "container": "container",
+        "is_section_title": true,
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "section_title": "Our Users Feedback",
+        "section_sub_title": "Testimonials",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 2,
+        "product_column_sm": 1
+      }
+    },
     "11d8dc36-b044-4836-b916-30966c8e7129": {
       "type": "section-content-image",
       "blocks": {
@@ -103,6 +141,7 @@
     "main",
     "cf568228-397e-4fc7-8c99-e8510a4a1750",
     "a0514375-348a-4486-8aa5-ade6af521c0b",
+    "4678d3b3-6bd1-46e6-af9f-6cc07ba973b4",
     "11d8dc36-b044-4836-b916-30966c8e7129"
   ]
 }
