@@ -215,11 +215,11 @@
           "type": "section_padding",
           "settings": {
             "section_padding_top": 0,
-            "section_padding_bottom": 100,
+            "section_padding_bottom": 0,
             "section_padding_top_md": 0,
-            "section_padding_bottom_md": 80,
+            "section_padding_bottom_md": 25,
             "section_padding_top_xs": 0,
-            "section_padding_bottom_xs": 60
+            "section_padding_bottom_xs": 20
           }
         }
       },
@@ -246,6 +246,30 @@
             "ws_img": "shopify:\/\/shop_images\/service2.png"
           }
         },
+        "d658903b-2a96-4c4b-ad80-4ebf9a303327": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "Tell about your service.",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
+          }
+        },
+        "8c86ff98-0ea6-4a73-b8a5-989b75dfe8f9": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "Tell about your service.",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
+          }
+        },
+        "c45c8bae-9c5a-4288-86a1-6f2b8d23a9f2": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "Tell about your service.",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
+          }
+        },
         "template--21651685966110__9ff7561e-c36e-4ebe-afc2-e4ffb80b1555-section_padding-1": {
           "type": "section_padding",
           "settings": {
@@ -260,6 +284,9 @@
       },
       "block_order": [
         "template--21651685966110__9ff7561e-c36e-4ebe-afc2-e4ffb80b1555-whyus-1",
+        "d658903b-2a96-4c4b-ad80-4ebf9a303327",
+        "8c86ff98-0ea6-4a73-b8a5-989b75dfe8f9",
+        "c45c8bae-9c5a-4288-86a1-6f2b8d23a9f2",
         "template--21651685966110__9ff7561e-c36e-4ebe-afc2-e4ffb80b1555-section_padding-1"
       ],
       "settings": {
