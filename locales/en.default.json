@@ -514,6 +514,7 @@
         "fulfillment_status": "Fulfillment status",
         "total": "Total",
         "none": "You haven't placed any orders yet.",
+        "vieworderCal": "Actions",
         "vieworder": "View"
       },
       "recover_password": {
