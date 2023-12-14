@@ -151,36 +151,37 @@
     "collapsible_content_title": "Collapsible content"
   },
   "blogs": {
-    "article": {
-      "author_on_date_html": "Posted by {{ author }} on {{ date }}",
-      "older_post": "Older Post",
-      "newer_post": "Newer Post",
-      "tags": "Tags",
-      "comment_meta_html": "{{ author }} on {{ date }}",
-      "read_more": "Read more",
-      "back_to_blog": "Back to blog",
-      "blog": "Blog",
-      "comment_form_title": "Leave a comment",
-      "comments": {
-        "title": "Leave a comment",
-        "name": "Name",
-        "email": "Email",
-        "message": "Message",
-        "post": "Post comment",
-        "moderated": "Please note, comments must be approved before they are published",
-        "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
-        "success": "Your comment was posted successfully! Thank you!",
-        "with_count": {
-          "one": "{{ count }} comment",
-          "other": "{{ count }} comments"
-        }
-      },
-      "sidebar": {
-        "recent_articles": "Recent Articles",
-        "categories": "Categories",
-        "sidebar-search": {
-          "label": "Search",
-          "search-text": "Search"
+      "article": {
+        "author_on_date_html": "Posted by {{ author }} on {{ date }}",
+        "older_post": "Older Post",
+        "newer_post": "Newer Post",
+        "tags": "Tags",
+        "comment_meta_html": "{{ author }} on {{ date }}",
+        "read_more": "Read more",
+        "back_to_blog": "Back to blog",
+        "blog": "Blog",
+        "comment_form_title": "Leave a comment",
+        "comments": {
+          "title": "Leave a comment",
+          "name": "Name",
+          "email": "Email",
+          "message": "Message",
+          "post": "Post comment",
+          "moderated": "Please note, comments must be approved before they are published",
+          "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+          "success": "Your comment was posted successfully! Thank you!",
+          "with_count": {
+            "one": "{{ count }} comment",
+            "other": "{{ count }} comments"
+          }
+        },
+        "sidebar": {
+          "recent_articles": "Recent Articles",
+          "categories": "Categories",
+          "sidebar-search": {
+            "label": "Search",
+            "search-text": "Search"
+          }
         }
       }
     },
@@ -552,4 +553,4 @@
       }
     }
   }
-}
+
