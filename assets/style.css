@@ -25899,3 +25899,7 @@ select.dokan-form-control, input.dokan-form-control {
 .blog-item-actions svg {
   width: 30px;
 }
+
+.axil-dashboard-order .table thead th {
+  font-size: 18px;
+}
