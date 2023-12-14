@@ -121,9 +121,6 @@
                         <div class="axil-dashboard-aside">
                         <h4>{{ 'customer.account.details' | t }}</h4> 
 
-                        {{ customer.default_address | format_address }} 
-
-                        <h4>{{ 'customer.account.details' | t }}</h4>
 
     <h5>{{ customer.name }}</h5>
 
@@ -157,7 +154,7 @@
       </p>
 
     {% endif %}
-    
+
 
                         <a class="axil-btn btn-outline" href="{{ routes.account_addresses_url }}">
                             {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
