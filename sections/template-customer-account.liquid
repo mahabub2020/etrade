@@ -45,8 +45,7 @@
                                                     id="RowOrder"
                                                     role="cell"
                                                     headers="ColumnOrder"
-                                                    data-label="{{ 'customer.orders.order_number' | t }}"
-                                                >
+                                                    data-label="{{ 'customer.orders.order_number' | t }}">
                                                     <a href="{{ order.customer_url }}" aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}">
                                                     {{ order.name }}
                                                     </a>
@@ -121,7 +120,44 @@
                     <div class="col-xl-3 col-md-3">
                         <div class="axil-dashboard-aside">
                         <h4>{{ 'customer.account.details' | t }}</h4> 
+
                         {{ customer.default_address | format_address }} 
+
+                        <h4>{{ 'customer.account.details' | t }}</h4>
+
+    <h5>{{ customer.name }}</h5>
+
+    {% if customer.default_address != nil %}
+      <p>
+      {{ customer.default_address.address1 }}<br>
+
+      {% if customer.default_address.address2 != "" %}
+        {{ customer.default_address.address2 }}<br>
+      {% endif %}
+
+      {% if customer.default_address.city != "" %}
+        {{ customer.default_address.city }}<br>
+      {% endif %}
+
+      {% if customer.default_address.province_code != "" %}
+        {{ customer.default_address.province_code | upcase }}<br>
+      {% endif %}
+
+      {% if customer.default_address.zip != "" %}
+        {{ customer.default_address.zip | upcase }}<br>
+      {% endif %}
+
+      {% if customer.default_address.country != "" %}
+        {{ customer.default_address.country }}<br>
+      {% endif %}
+
+      {% if customer.default_address.phone != "" %}
+        {{ customer.default_address.phone }}
+      {% endif %}
+      </p>
+
+    {% endif %}
+    
 
                         <a class="axil-btn btn-outline" href="{{ routes.account_addresses_url }}">
                             {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
