@@ -260,7 +260,10 @@
           </tfoot>
         </table>
       </div>
-      <div>
+
+      <div class="row">
+      <div class="col-xl-6 col-md-6">
+
         <div>
           <h2>{{ 'customer.order.billing_address' | t }}</h2>
           <p>
@@ -269,6 +272,9 @@
           </p>
           {{ order.billing_address | format_address }}
         </div>
+        </div>
+        <div class="col-xl-6 col-md-6">
+
         <div>
           <h2>{{ 'customer.order.shipping_address' | t }}</h2>
           <p>
@@ -278,6 +284,8 @@
           {{ order.shipping_address | format_address }}
         </div>
       </div>
+      </div>
+
     </div>
   </div>
   </div>
