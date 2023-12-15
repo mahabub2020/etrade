@@ -47,3 +47,38 @@
         </div>
     </div>
 </div>
+
+
+{%- style -%}
+  .bg_image--10{ 
+    background: {{ section.settings.bg_color }} 
+     url("{{ section.settings.login_image | img_url: 'master' }}") no-repeat scroll center center / cover;
+    
+  }
+ 
+{%- endstyle -%}
+
+{% schema %}
+{
+    "name": "register",
+    "settings": [
+        {
+            "type": "text",
+            "id": "side_title",
+            "default": "Why People Choose Us",
+            "label": "Banner Title"
+          },
+        {
+            "type": "image_picker",
+            "id": "login_image",
+            "label": "Login Image"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#ffffff"
+          }
+    ]
+}
+{% endschema %}
