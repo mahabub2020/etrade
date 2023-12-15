@@ -8,7 +8,7 @@
                     <div class="col-xl-6 col-md-6"> 
                         <h1>{{ 'customer.account.title' | t }}</h1>
                         {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
-                        <p><strong class="order-number">{{ 'customer.order.title' | t: name: order.name }} </strong> <strong class="order-date">{{ 'customer.order.date_html' | t: date: order_date }}</strong></p>
+                        <p><mark class="order-number">{{ 'customer.order.title' | t: name: order.name }} </mark> <strong class="order-date">{{ 'customer.order.date_html' | t: date: order_date }}</strong></p>
                     </div>
                     <div class="col-xl-6 col-md-6"> 
                         <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a> 
