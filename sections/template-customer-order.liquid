@@ -1,26 +1,19 @@
 
  
 <div class="axil-dashboard-area axil-section-gap">
-<div class="container">
-<div class="customer order">
-   
-
-    <div class="row">
-    <div class="col-xl-6 col-md-6"> 
-        <h1>{{ 'customer.account.title' | t }}</h1>
-        {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
-        <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>
-    </div>
-    <div class="col-xl-6 col-md-6">
-        <h2>{{ 'customer.order.title' | t: name: order.name }}</h2>
-        <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a>
-        
-    </div>
-    </div>
-
-    <div>
-      <div>
-        
+    <div class="container">
+        <div class="customer order">  
+            <div class="row">
+                <div class="col-xl-6 col-md-6"> 
+                    <h1>{{ 'customer.account.title' | t }}</h1>
+                    {%- assign order_date = order.created_at | time_tag: format: "date_at_time" -%}
+                    <p><mark class="order-number">{{ 'customer.order.title' | t: name: order.name }} </mark> <mark class="order-date">{{ 'customer.order.date_html' | t: date: order_date }}</mark></p>
+                </div>
+                <div class="col-xl-6 col-md-6"> 
+                    <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a> 
+                </div>
+            </div>
+ 
        
         {%- if order.cancelled -%}
           {%- assign cancelled_at = order.cancelled_at | time_tag: format: "date_at_time" -%}
@@ -267,7 +260,7 @@
             </tr>
           </tfoot>
         </table>
-      </div>
+    </div>
 
       <div class="row">
       <div class="col-xl-6 col-md-6">
@@ -296,6 +289,5 @@
 
     </div>
   </div>
-  </div>
-  </div>
+  
   
