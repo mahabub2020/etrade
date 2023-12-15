@@ -61,7 +61,6 @@
             "banner_title": "Smart Digital Watch",
             "banner_btn_txt": "Shop Now",
             "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/phone.jpg",
             "price_label": "From",
             "price": "$49.00",
             "plus_icon_active": true,
@@ -97,6 +96,8 @@
         "74e0d307-8719-4372-a7f4-b9f8cddf19e8"
       ],
       "settings": {
+        "autoplay_true": false,
+        "autoplay_speed": 5000
       }
     },
     "8fe79a74-fc1f-45a6-9d05-dfe3793191c3": {
@@ -117,10 +118,60 @@
         "product_column_sm": 2
       }
     },
+    "d095c48a-2568-4026-a83c-591953a4d496": {
+      "type": "section-product-grid",
+      "blocks": {
+        "template--21159461912862__d095c48a-2568-4026-a83c-591953a4d496-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21159461912862__d095c48a-2568-4026-a83c-591953a4d496-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
+        "section_btn_txt": "View All Deals",
+        "section_btn_url": "",
+        "product_collection": "fashion",
+        "excluded_products": [
+
+        ],
+        "number_of_products_to_show": 8,
+        "product_layout": "1",
+        "col_xl": "3",
+        "col_lg": "4",
+        "col_md": "2",
+        "col_sm": "2",
+        "col_mobile": "1",
+        "isbutton_true": false,
+        "btn_txt": "View All Deals",
+        "btn_url": ""
+      }
+    },
     "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd": {
       "type": "multi-column-collection",
       "settings": {
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+
+        ],
         "list_per_slider": 8,
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
         "col_xl": 4,
         "col_lg": 5,
         "col_md": 3,
@@ -158,6 +209,7 @@
   "order": [
     "3dd30f8a-44f5-4b4c-bbd9-186ea9950822",
     "8fe79a74-fc1f-45a6-9d05-dfe3793191c3",
+    "d095c48a-2568-4026-a83c-591953a4d496",
     "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3"
   ]
