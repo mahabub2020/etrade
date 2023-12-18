@@ -28,14 +28,13 @@
         </div>
         <div class="col-lg-6 offset-xl-2">
             <div class="axil-signin-form-wrap">
-                <div class="axil-signin-form">
-
+                <div class="axil-signin-form"> 
                     <div class="block-title">
-                        <h1>{{ 'customer.register.title' | t }}</h1>
+                        <h3>{{ 'customer.register.title' | t }}</h3>
                     </div>
                     <div class="block-content">
                         {%- form 'create_customer', class: 'form form-login needs-validation', novalidate: 'novalidate' -%}
-                            <div class="field">      
+                            <div class="form-group">      
                                 <input
                                 class="form-control field__input"
                                 type="text"
@@ -51,7 +50,7 @@
                                     <span class="text-danger">*</span></label>
                                 <div class="invalid-feedback">Please choose a First Name.</div>
                             </div>
-                            <div class="field">
+                            <div class="form-group">
                                 <input
                                 class="form-control field__input"
                                 type="text"
@@ -68,7 +67,7 @@
                                 </label>
                                 <div class="invalid-feedback">Please choose a Last Name.</div>
                             </div>
-                            <div class="field">      
+                            <div class="form-group">      
                                 <input
                                 class="form-control field__input"
                                 type="email"
@@ -100,7 +99,7 @@
                                 {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.
                             </span>
                             {%- endif -%}
-                            <div class="field">     
+                            <div class="form-group">     
                                 <input
                                 class="form-control field__input"
                                 type="password"
@@ -128,8 +127,8 @@
                                 {{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.
                             </span>
                             {%- endif -%}
-                            <div class="actions-toolbar justify-content-center">
-                                <button class="btn btn-primary" type="submit">{{ 'customer.register.submit' | t }}</button>
+                            <div class="form-group">
+                                <button class="axil-btn btn-bg-primary submit-btn" type="submit">{{ 'customer.register.submit' | t }}</button>
                             </div>
                         {%- endform -%}
                     </div>
