@@ -1,194 +1,183 @@
+
+<div class="axil-signin-area"> 
+    <!-- Start Header -->
+    <div class="signin-header">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                {% render 'header-logo' %}
+            </div>
+            <div class="col-md-6">
+                <div class="singin-header-btn">
+
+                    {% if section.settings.register_btn_info != '' %}  
+                        <p>{{ section.settings.register_btn_info }}</p>
+                    {% endif %}  
+                    {% if section.settings.register_btn_txt != '' %}  
+                        <a href="/account/register" class="axil-btn btn-bg-primary">{{ section.settings.register_btn_txt }}</a>
+                    {% endif %}  
  
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-4 col-lg-6">
+            <div class="axil-signin-banner bg_image bg_image--10">
+                <h3 class="title">We Offer the Best Products </h3>
+            </div>
+        </div>
+        <div class="col-lg-6 offset-xl-2">
+            <div class="axil-signin-form-wrap">
+                <div class="axil-signin-form">
+
+                    <div class="mt-8">
+                        {% form 'customer_login' %}
+                            {% if form.errors %}
+                                <div class="relative border border-red-400 bg-red-100 text-red-700 px-4 py-3" role="alert">
+                                    <strong class="font-bold">Error!</strong>
+                                    <p class="block sm:inline">{{ form.errors | default_errors }}</p>
+                                </div>
+                            {% endif %}
+            
+                            <div class="my-2">
+                                <label for="email_address" class="sr-only">Email address</label>
+                                <input type="email"
+                                    name="customer[email]"
+                                    id="email_address"
+                                    autocomplete="email"
+                                    class="relative block w-full px-3 py-2 border"
+                                    placeholder="Email address"
+                                >
+                            </div>
+            
+                            {% if form.password_needed %}
+                                <div class="my-2">
+                                    <label for="password" class="sr-only">Password</label>
+                                    <input type="password"
+                                        name="customer[password]"
+                                        id="password"
+                                        autocomplete="current-password"
+                                        class="relative block w-full px-3 py-2 border"
+                                        placeholder="Password"
+                                    >
+                                </div>
+                            {% endif %}
+            
+                            <div class="my-2 text-sm">
+                                <a x-on:click="loginForm = false; pwRecoverForm = true" href="#" class="underline text-gray-500 hover:text-gray-900">
+                                    Forgot your password?
+                                </a>
+                            </div>
+                            <div>
+                                <button type="submit" class="relative w-full py-2 px-4 text-sm font-medium text-white bg-gray-600 hover:bg-gray-900">
+                                    Sign in
+                                </button>
+                            </div>
+                        {% endform %}
+                    </div>
+            
+                    {% if shop.checkout.guest_login %}
+                        <hr class="my-12">
+            
+                        <div>
+                            <h1 class="mt-6 text-center text-3xl font-bold">Continue as a guest</h1>
+                        </div>
+            
+                        {% form 'guest_login' %}
+                            <div>
+                                <button type="submit" class="relative w-full py-2 px-4 text-sm font-medium text-white bg-gray-600 hover:bg-gray-900">
+                                    Continue
+                                </button>
+                            </div>
+                        {% endform %}
+                    {% endif %}
+                </div>
+                <div x-show="pwRecoverForm" class="max-w-md w-full space-y-8">
+                    <div>
+                        <h1 class="text-center text-3xl font-bold mt-6">Recover your password</h1>
+                    </div>
+                    <div class="mt-8">
+                        {% form 'recover_customer_password' %}
+                            {% if form.errors %}
+                                <div class="relative border border-red-400 bg-red-100 text-red 700 px-4 py-3" role="alert">
+                                    <strong class="font-bold">Error!</strong>
+                                    <p class="block sm:inline">{{ form.errors | default_errors }}</p>
+                                </div>
+                            {% endif %}
+            
+                            <div class="my-2">
+                                <label for="email" class="sr-only">Email address</label>
+                                <input type="email"
+                                    name="email"
+                                    id="email"
+                                    autocomplete="email"
+                                    class="relative block w-full px-3 py-2 border"
+                                    placeholder="Email address"
+                                >
+                            </div>
+            
+                            <div>
+                                <button type="submit" class="relative w-full py-2 px-4 text-sm font-medium text-white bg-gray-600 hover:bg-gray-900">
+                                    Recover password
+                                </button>
+                            </div>
+            
+                            <div class="mt-8 text-sm">
+                                <a x-on:click="loginForm = true; pwRecoverForm = false" href="#" class="underline text-gray-500 hover:text-gray-900">Back to login</a>
+                            </div>
+                        {% endform %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
+  .bg_image--10{ 
+    background: {{ section.settings.bg_color }} 
+     url("{{ section.settings.register_image | img_url: 'master' }}") no-repeat scroll center center / cover;  
+  } 
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
+#section-footer, header.header { display: none }
+
+ 
 {%- endstyle -%}
-
-<div class="customer login section-{{ section.id }}-padding">
-  <h1 id="recover" tabindex="-1">
-    {{ 'customer.recover_password.title' | t }}
-  </h1>
-  <div>
-    <p>
-      {{ 'customer.recover_password.subtext' | t }}
-    </p>
-
-    {%- form 'recover_customer_password' -%}
-      {% assign recover_success = form.posted_successfully? %}
-      <div class="field">
-        <input
-          type="email"
-          value=""
-          name="email"
-          id="RecoverEmail"
-          autocorrect="off"
-          autocapitalize="off"
-          autocomplete="email"
-          {% if form.errors %}
-            aria-invalid="true"
-            aria-describedby="RecoverEmail-email-error"
-            autofocus
-          {% endif %}
-          placeholder="{{ 'customer.login_page.email' | t }}"
-        >
-        <label for="RecoverEmail">
-          {{ 'customer.login_page.email' | t }}
-        </label>
-      </div>
-      {%- if form.errors -%}
-        <small id="RecoverEmail-email-error" class="form__message">
-          <svg aria-hidden="true" focusable="false" viewBox="0 0 13 13">
-            <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
-            <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
-            <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
-            <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
-          </svg>
-          {{ form.errors.messages.form }}
-        </small>
-      {%- endif -%}
-
-      <button>
-        {{ 'customer.login_page.submit' | t }}
-      </button>
-
-      <a href="#login">
-        {{ 'customer.login_page.cancel' | t }}
-      </a>
-    {%- endform -%}
-  </div>
-
-  <h1 id="login" tabindex="-1">
-    {{ 'customer.login_page.title' | t }}
-  </h1>
-  <div>
-    {%- if recover_success == true -%}
-      <h3 class="form__message" tabindex="-1" autofocus>
-        <svg aria-hidden="true" focusable="false" viewBox="0 0 13 13">
-          <path d="M6.5 12.35C9.73087 12.35 12.35 9.73086 12.35 6.5C12.35 3.26913 9.73087 0.65 6.5 0.65C3.26913 0.65 0.65 3.26913 0.65 6.5C0.65 9.73086 3.26913 12.35 6.5 12.35Z" fill="#428445" stroke="white" stroke-width="0.7"/>
-          <path d="M5.53271 8.66357L9.25213 4.68197" stroke="white"/>
-          <path d="M4.10645 6.7688L6.13766 8.62553" stroke="white">
-        </svg>
-        {{ 'customer.recover_password.success' | t }}
-      </h3>
-    {%- endif -%}
-    {%- form 'customer_login', novalidate: 'novalidate' -%}
-      {%- if form.errors -%}
-        <h2 class="form__message" tabindex="-1" autofocus>
-          <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>
-          <svg aria-hidden="true" focusable="false" viewBox="0 0 13 13">
-            <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
-            <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
-            <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
-            <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
-          </svg>
-          {{ 'templates.contact.form.error_heading' | t }}
-        </h2>
-        {{ form.errors | default_errors }}
-      {%- endif -%}
-
-      <div class="field">
-        <input
-          type="email"
-          name="customer[email]"
-          id="CustomerEmail"
-          autocomplete="email"
-          autocorrect="off"
-          autocapitalize="off"
-          {% if form.errors contains 'form' %}
-            aria-invalid="true"
-          {% endif %}
-          placeholder="{{ 'customer.login_page.email' | t }}"
-        >
-        <label for="CustomerEmail">
-          {{ 'customer.login_page.email' | t }}
-        </label>
-      </div>
-
-      {%- if form.password_needed -%}
-        <div class="field">
-          <input
-            type="password"
-            value=""
-            name="customer[password]"
-            id="CustomerPassword"
-            autocomplete="current-password"
-            {% if form.errors contains 'form' %}
-              aria-invalid="true"
-            {% endif %}
-            placeholder="{{ 'customer.login_page.password' | t }}"
-          >
-          <label for="CustomerPassword">
-            {{ 'customer.login_page.password' | t }}
-          </label>
-        </div>
-
-        <a href="#recover">
-          {{ 'customer.login_page.forgot_password' | t }}
-        </a>
-      {%- endif -%}
-
-      <button>
-        {{ 'customer.login_page.sign_in' | t }}
-      </button>
-
-      <a href="{{ routes.account_register_url }}">
-        {{ 'customer.login_page.create_account' | t }}
-      </a>
-    {%- endform -%}
-  </div>
-
-  {%- if shop.checkout.guest_login -%}
-    <div>
-      <hr>
-      <h2>{{ 'customer.login_page.guest_title' | t }}</h2>
-
-      {%- form 'guest_login' -%}
-        <button>
-          {{ 'customer.login_page.guest_continue' | t }}
-        </button>
-      {%- endform -%}
-    </div>
-  {%- endif -%}
-</div>
 
 {% schema %}
 {
-  "name": "t:sections.main-login.name",
-  "settings": [
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
-    }
-  ]
+    "name": "login",
+    "settings": [
+        {
+            "type": "text",
+            "id": "register_btn_info",
+            "default": "Not a member?",
+            "label": "SignIn Button Info"
+          }, 
+          {
+            "type": "text",
+            "id": "register_btn_txt",
+            "default": "Sign In",
+            "label": "SignIn Button Text"
+          },
+          {
+            "type": "text",
+            "id": "register_side_title",
+            "default": "Why People Choose Us",
+            "label": "Banner Title"
+          },
+        {
+            "type": "image_picker",
+            "id": "register_image",
+            "label": "Register Image"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#ffffff"
+          }
+    ]
 }
 {% endschema %}
