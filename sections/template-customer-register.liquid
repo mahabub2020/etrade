@@ -8,10 +8,12 @@
             </div>
             <div class="col-md-6">
                 <div class="singin-header-btn">
-                    <p>Already a member?</p>
-
-                    <a href="/account/login" class="axil-btn btn-bg-primary">{{ section.settings.login_btn_txt }}</a>
- 
+                     {% if section.settings.login_btn_info != '' %}  
+                        <p>{{ section.settings.login_btn_info }}</p>
+                     {% endif %}  
+                     {% if section.settings.login_btn_txt != '' %}  
+                        <a href="/account/login" class="axil-btn btn-bg-primary">{{ section.settings.login_btn_txt }}</a>
+                    {% endif %}  
                 </div>
             </div>
         </div>
@@ -175,6 +177,18 @@
     "name": "register",
     "settings": [
         {
+            "type": "text",
+            "id": "login_btn_info",
+            "default": "Already a member?",
+            "label": "SignIn Button Info"
+          }, 
+          {
+            "type": "text",
+            "id": "login_btn_txt",
+            "default": "Sign In",
+            "label": "SignIn Button Text"
+          },
+          {
             "type": "text",
             "id": "side_title",
             "default": "Why People Choose Us",

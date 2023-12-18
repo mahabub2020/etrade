@@ -8,9 +8,14 @@
             </div>
             <div class="col-md-6">
                 <div class="singin-header-btn">
-                    <p>Already a member?</p> 
-                    <a href="/account/register" class="axil-btn btn-bg-primary">Sign Up Now</a>
-                     
+
+                    {% if section.settings.register_btn_info != '' %}  
+                        <p>{{ section.settings.register_btn_info }}</p>
+                    {% endif %}  
+                    {% if section.settings.register_btn_txt != '' %}  
+                        <a href="/account/register" class="axil-btn btn-bg-primary">{{ section.settings.register_btn_txt }}</a>
+                    {% endif %}  
+ 
             </div>
         </div>
     </div>
@@ -126,13 +131,13 @@
         </div>
     </div>
 </div>
+</div>
 
 
 {%- style -%}
   .bg_image--10{ 
     background: {{ section.settings.bg_color }} 
-     url("{{ section.settings.login_image | img_url: 'master' }}") no-repeat scroll center center / cover;
-    
+     url("{{ section.settings.register_image | img_url: 'master' }}") no-repeat scroll center center / cover;  
   } 
 
 #section-footer, header.header { display: none }
@@ -142,18 +147,30 @@
 
 {% schema %}
 {
-    "name": "register",
+    "name": "login",
     "settings": [
         {
             "type": "text",
-            "id": "side_title",
+            "id": "register_btn_info",
+            "default": "Not a member?",
+            "label": "SignIn Button Info"
+          }, 
+          {
+            "type": "text",
+            "id": "register_btn_txt",
+            "default": "Sign In",
+            "label": "SignIn Button Text"
+          },
+          {
+            "type": "text",
+            "id": "register_side_title",
             "default": "Why People Choose Us",
             "label": "Banner Title"
           },
         {
             "type": "image_picker",
-            "id": "login_image",
-            "label": "Login Image"
+            "id": "register_image",
+            "label": "Register Image"
         },
         {
             "type": "color",
