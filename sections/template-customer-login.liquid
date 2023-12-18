@@ -1,24 +1,26 @@
 
 <div class="axil-signin-area"> 
     <!-- Start Header -->
+
     <div class="signin-header">
         <div class="row align-items-center">
-            <div class="col-md-6">
+            <div class="col-sm-4">
                 {% render 'header-logo' %}
             </div>
-            <div class="col-md-6">
+            <div class="col-sm-8">
                 <div class="singin-header-btn">
-
                     {% if section.settings.register_btn_info != '' %}  
-                        <p>{{ section.settings.register_btn_info }}</p>
-                    {% endif %}  
-                    {% if section.settings.register_btn_txt != '' %}  
-                        <a href="/account/register" class="axil-btn btn-bg-primary">{{ section.settings.register_btn_txt }}</a>
-                    {% endif %}  
- 
+                    <p>{{ section.settings.register_btn_info }}</p>
+                {% endif %}  
+                {% if section.settings.register_btn_txt != '' %}  
+                    <a href="/account/register" class="axil-btn btn-bg-primary">{{ section.settings.register_btn_txt }}</a>
+                {% endif %}  
+                </div>
             </div>
         </div>
     </div>
+ 
+ 
     <div class="row">
         <div class="col-xl-4 col-lg-6">
             <div class="axil-signin-banner bg_image bg_image--10">
@@ -131,7 +133,7 @@
         </div>
     </div>
 </div>
-</div>
+ 
 
 
 {%- style -%}
