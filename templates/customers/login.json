@@ -1,8 +1,17 @@
 {
-    "sections": {
-        "template": {
-            "type": "template-customer-login"
-        }
-    },
-    "order": ["template"]
+  "sections": {
+    "template": {
+      "type": "template-customer-login",
+      "settings": {
+        "register_btn_info": "Not a member?",
+        "register_btn_txt": "Sign In",
+        "register_side_title": "Why People Choose Us",
+        "register_image": "shopify:\/\/shop_images\/bg-image-13.jpg",
+        "bg_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "template"
+  ]
 }
