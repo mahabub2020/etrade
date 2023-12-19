@@ -1,5 +1,6 @@
 
 <script src="{{ 'customer.js' | asset_url }}" defer></script>
+{{ 'customer.css' | asset_url | stylesheet_tag }}
 {%- paginate customer.addresses by 5 -%}
 <div class="container-fluid">
   <div class="customer addresses" data-customer-addresses>
