@@ -6,11 +6,16 @@
 <div class="container">
   <div class="customer addresses" data-customer-addresses>
      <div data-address>
-        <div class="row row-cols-sm-6">  
+
+        <div class="row">  
+        <div class="col-md-6">  
+        
         <a class="btn btn-underline m-2" href="{{ routes.account_url }}">
             <i class="fal fa-sign-out"></i>
           {{ 'customer.account.return' | t }}
         </a>
+        </div>
+        <div class="col-md-6"> 
         <button
         class="btn btn-primary"
         type="button"
@@ -20,13 +25,14 @@
         {{ 'customer.addresses.add_new' | t }}
       </button>
     </div>
+    </div>
 
 
 
     <div id="AddAddress">
       <h2 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
       {%- form 'customer_address', customer.new_address, aria-labelledBy: 'AddressNewHeading' -%}
-      <div class="row row-cols-sm-6"> 
+      <div class="row row-cols-sm-2"> 
 
         <div><div class="field form-group">
           <input class="form-control" type="text" id="AddressFirstNameNew" name="address[first_name]" value="{{ form.first_name }}" autocomplete="given-name" placeholder="{{ 'customer.addresses.first_name' | t }}">
@@ -139,7 +145,7 @@
 <div class="mt-5" id="EditAddress_{{ address.id }}">
   <h2>{{ 'customer.addresses.edit_address' | t }}</h2>
   {%- form 'customer_address', address -%}
-  <div class="row row-cols-sm-6"> 
+  <div class="row row-cols-sm-2"> 
     <div><div class="field form-group">
       <input class="form-control" type="text" id="AddressFirstName_{{ form.id }}" name="address[first_name]" value="{{ form.first_name }}" autocomplete="given-name" placeholder="{{ 'customer.addresses.first_name' | t }}">
       <label for="AddressFirstName_{{ form.id }}">{{ 'customer.addresses.first_name' | t }}</label>
