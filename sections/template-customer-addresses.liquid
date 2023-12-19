@@ -197,7 +197,7 @@
             {{ address | format_address }}
            
             <button
-              class="axil-btn btn-primary submit-btn"
+              class="axil-btn btn-bg-primary submit-btn"
               type="button"
               id="EditFormButton_{{ address.id }}"
               aria-label="{{ 'customer.addresses.edit_address' | t }} {{ forloop.index }}"
@@ -209,7 +209,7 @@
             </button>
 
             <button
-              class="submit-btn  axil-btn btn-secondary"
+              class="submit-btn axil-btn btn-bg-secondary"
               type="button"
               aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
               data-target="{{ address.url }}"
