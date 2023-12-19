@@ -181,8 +181,8 @@
                 </div>
               </div>
               <div>
-                <button class="btn axil-btn btn-bg-primary submit-btn">{{ 'customer.addresses.add' | t }}</button>
-                <button class="btn axil-btn btn-bg-secondary submit-btn" type="reset">{{ 'customer.addresses.cancel' | t }}</button>
+                <button class="axil-btn btn-bg-primary submit-btn">{{ 'customer.addresses.add' | t }}</button>
+                <button class="axil-btn btn-bg-secondary submit-btn" type="reset">{{ 'customer.addresses.cancel' | t }}</button>
               </div>
             </div>
           {%- endform -%}
@@ -197,7 +197,7 @@
             {{ address | format_address }}
            
             <button
-              class="btn axil-btn btn-primary"
+              class="axil-btn btn-primary submit-btn"
               type="button"
               id="EditFormButton_{{ address.id }}"
               aria-label="{{ 'customer.addresses.edit_address' | t }} {{ forloop.index }}"
@@ -209,7 +209,7 @@
             </button>
 
             <button
-              class="btn axil-btn btn-secondary"
+              class="submit-btn  axil-btn btn-secondary"
               type="button"
               aria-label="{{ 'customer.addresses.delete' | t }} {{ forloop.index }}"
               data-target="{{ address.url }}"
@@ -382,8 +382,8 @@
                     </div>
                   </div>
                   <div class="d-flex flex-wrap">
-                    <button class="m-3 btn axil-btn btn-bg-primary submit-btn">{{ 'customer.addresses.update' | t }}</button>
-                    <button class="m-3 btn axil-btn btn-bg-secondary submit-btn" type="reset">{{ 'customer.addresses.cancel' | t }}</button>
+                    <button class="axil-btn btn-bg-primary submit-btn">{{ 'customer.addresses.update' | t }}</button>
+                    <button class="axil-btn btn-bg-secondary submit-btn" type="reset">{{ 'customer.addresses.cancel' | t }}</button>
                   </div>
                 </div>
               {%- endform -%}
