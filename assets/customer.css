@@ -325,20 +325,6 @@
   margin-bottom: 0;
 }
 
-.activate button[name='decline'],
-.addresses li > button,
-.addresses form button[type] {
-  background-color: rgba(var(--color-background), var(--alpha-button-background));
-  color: rgb(var(--color-link));
-}
-
-@media only screen and (min-width: 750px) {
-  .activate button[name='decline'] {
-    margin-top: inherit;
-    margin-left: 1rem;
-  }
-}
-
 /* Account/Order */
 :is(.account, .order) {
   max-width: var(--page-width);
