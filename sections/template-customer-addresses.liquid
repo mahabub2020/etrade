@@ -3,6 +3,7 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 {%- paginate customer.addresses by 5 -%}
 
+<div class="axil-checkout-area axil-section-gap">
 <div class="container">
   <div class="customer addresses" data-customer-addresses>
      <div data-address>
@@ -272,6 +273,7 @@
     {%- endif -%}
     {%- endif -%}
   </div>
+</div>
 </div>
 {%- endpaginate -%}
 
