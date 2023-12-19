@@ -395,7 +395,7 @@
       {%- if paginate.pages > 1 -%}
         {%- if paginate.parts.size > 0 -%}
  
-
+            <div class="post-pagination">
           <nav class="pagination navigation" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
             <ul role="list page-numbers">
               {%- if paginate.previous -%}
@@ -433,6 +433,7 @@
               {%- endif -%}
             </ul>
           </nav>
+        </div>
         {%- endif -%}
       {%- endif -%}
     </div>
