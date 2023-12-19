@@ -3,13 +3,10 @@
 {%- paginate customer.addresses by 5 -%}
 <div class="axil-checkout-area axil-section-gap">
   <div class="container">
-    <div class="customer addresses" data-customer-addresses>
-
-      <div data-address>
-      
-
+    <div class="customer addresses" data-customer-addresses> 
+      <div data-address> 
         <button
-          class="btn btn-primary"
+          class="btn axil-btn btn-primary"
           type="button"
           aria-expanded="false"
           aria-controls="AddAddress"
@@ -17,7 +14,7 @@
           {{ 'customer.addresses.add_new' | t }}
         </button>
 
-        <a class="btn btn-underline m-2" href="{{ routes.account_url }}">
+        <a class="btn btn-underline axil-btn" href="{{ routes.account_url }}">
           <i class="fal fa-sign-out"></i>
           {{ 'customer.account.return' | t }}
         </a>
