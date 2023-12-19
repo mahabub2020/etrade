@@ -23,7 +23,7 @@
 
 
         <div id="AddAddress">
-          <h2 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
+          <h3 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h3>
           {%- form 'customer_address', customer.new_address, aria-labelledBy: 'AddressNewHeading' -%}
             <div class="row row-cols-md-2">
               <div>
@@ -192,7 +192,7 @@
         {%- for address in customer.addresses -%}
           <li data-address>
             {%- if address == customer.default_address -%}
-              <h2>{{ 'customer.addresses.default' | t }}</h2>
+              <h3>{{ 'customer.addresses.default' | t }}</h3>
             {%- endif -%}
             {{ address | format_address }}
            
@@ -219,7 +219,7 @@
             </button>
 
             <div class="mt-5" id="EditAddress_{{ address.id }}">
-              <h2>{{ 'customer.addresses.edit_address' | t }}</h2>
+              <h3>{{ 'customer.addresses.edit_address' | t }}</h3>
               {%- form 'customer_address', address -%}
                 <div class="row row-cols-sm-6">
                   <div>
