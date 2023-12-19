@@ -22,7 +22,7 @@
     <div id="AddAddress">
       <h2 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
       {%- form 'customer_address', customer.new_address, aria-labelledBy: 'AddressNewHeading' -%}
-      <div class="row row-cols-sm-2"> 
+      <div class="row row-cols-sm-6"> 
 
         <div><div class="field form-group">
           <input class="form-control" type="text" id="AddressFirstNameNew" name="address[first_name]" value="{{ form.first_name }}" autocomplete="given-name" placeholder="{{ 'customer.addresses.first_name' | t }}">
@@ -132,7 +132,7 @@
 <div class="mt-5" id="EditAddress_{{ address.id }}">
   <h2>{{ 'customer.addresses.edit_address' | t }}</h2>
   {%- form 'customer_address', address -%}
-  <div class="row row-cols-sm-2"> 
+  <div class="row row-cols-sm-6"> 
     <div><div class="field form-group">
       <input class="form-control" type="text" id="AddressFirstName_{{ form.id }}" name="address[first_name]" value="{{ form.first_name }}" autocomplete="given-name" placeholder="{{ 'customer.addresses.first_name' | t }}">
       <label for="AddressFirstName_{{ form.id }}">{{ 'customer.addresses.first_name' | t }}</label>
