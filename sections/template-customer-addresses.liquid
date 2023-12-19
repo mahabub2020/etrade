@@ -4,27 +4,26 @@
 {%- paginate customer.addresses by 5 -%}
 
 <div class="container">
-  <div class="customer addresses" data-customer-addresses>
-      
-
-
+  <div class="customer addresses" data-customer-addresses> 
     <div data-address>
-        <a class="btn btn-underline m-2" href="{{ routes.account_url }}">
+     <div class="row">
+        <button
+            class="btn btn-primary"
+            type="button"
+            aria-expanded="false"
+            aria-controls="AddAddress"
+            >
+            {{ 'customer.addresses.add_new' | t }}
+          </button>
+       
+          <a class="btn btn-underline m-2" href="{{ routes.account_url }}">
             <i class="fal fa-sign-out"></i>
           {{ 'customer.account.return' | t }}
         </a>
-        <button
-        class="btn btn-primary"
-        type="button"
-        aria-expanded="false"
-        aria-controls="AddAddress"
-        >
-        {{ 'customer.addresses.add_new' | t }}
-      </button>
+      </div>
     
 
-
-
+ 
     <div id="AddAddress">
       <h2 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
       {%- form 'customer_address', customer.new_address, aria-labelledBy: 'AddressNewHeading' -%}
