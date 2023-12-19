@@ -5,20 +5,24 @@
 
 <div class="container">
   <div class="customer addresses" data-customer-addresses>
-      
-    <div data-address>
+     <div data-address>
+        <div class="row row-cols-sm-6">  
         <a class="btn btn-underline m-2" href="{{ routes.account_url }}">
+            <i class="fal fa-sign-out"></i>
           {{ 'customer.account.return' | t }}
         </a>
         <button
-        class="btn btn-primary m-2"
+        class="btn btn-primary"
         type="button"
         aria-expanded="false"
         aria-controls="AddAddress"
         >
         {{ 'customer.addresses.add_new' | t }}
       </button>
-    
+    </div>
+
+
+
     <div id="AddAddress">
       <h2 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
       {%- form 'customer_address', customer.new_address, aria-labelledBy: 'AddressNewHeading' -%}
@@ -102,6 +106,9 @@
   {%- endform -%}
 </div>
 </div>
+
+
+
 <ul class="list-unstyled mt-5" role="list">
   {%- for address in customer.addresses -%}
   <li data-address>
