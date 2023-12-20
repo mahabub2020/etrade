@@ -81,9 +81,9 @@
           "df9acf9a-08f3-493c-844c-5a4e384e0c53": {
             "type": "footer_menu",
             "settings": {
-              "footer_menu_coloum": "3",
+              "footer_menu_coloum": "2",
               "footer_menu_title": "Company",
-              "footer_menu_handle": "footer",
+              "footer_menu_handle": "main-menu",
               "title_color": "#ffffff",
               "title_border_color": "#cf987e",
               "menu_color": "#8a8a8a",
@@ -119,7 +119,7 @@
           "footer_bottom_enable": true,
           "copy_ritht_text": "<p>© 2023. All rights reserved by <a href=\"#\" target=\"_blank\">Your Company.<\/a><\/p>",
           "footer_social_enable": true,
-          "payment_title": "Accept For",
+          "payment_title": "Accept Fort",
           "social_icon_1": "twitter",
           "social_icon_1_url": "https:\/\/www.facebook.com\/",
           "social_icon_2": "google-plus",
