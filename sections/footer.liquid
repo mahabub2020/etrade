@@ -1,7 +1,21 @@
+
+{%- if  page.metafields.custom.footer_layout -%}
+  {%- assign footer_style =  page.metafields.custom.footer_layout.value -%}
+{% else %}
+  {%- assign footer_style =  section.settings.footer_layout -%} 
+{%- endif -%}
+
+{% if footer_style == 'footer_layout_1' %}
 <footer class="axil-footer-area footer-style-2" id="section-{{ section.id }}">
   {% render 'footer-top' %}
   {% render 'footer-bottom' %}
 </footer>
+{% elsif footer_style == 'footer_layout_2' %}
+<footer class="axil-footer-area footer-style-2" id="section-{{ section.id }}">
+  {% render 'footer-top' %}
+  {% render 'footer-bottom' %}
+</footer>
+{% endif %}  
 
 {% render 'quick-view-modal' %}
 
@@ -36,34 +50,21 @@
       },
       {
         "type": "radio",
-        "id": "footer_style",
+        "id": "footer_layout",
         "label": "Footer Style",
         "options": [
           {
-            "value": "footer_style_1",
+            "value": "footer_layout_1",
             "label": "Style 1"
           },
           {
             "value": "footer_style_2",
             "label": "Style 2"
-          },
-          {
-            "value": "footer_style_3",
-            "label": "Style 3"
-          },
-          {
-            "value": "footer_style_4",
-            "label": "Style 4"
-          }, {
-            "value": "footer_style_5",
-            "label": "Style 5"
-          }, {
-            "value": "footer_style_6",
-            "label": "Style 6"
           }
+           
         ],
 
-        "default": "footer_style_1"
+        "default": "footer_layout_1"
       },
       {
         "type": "header",
