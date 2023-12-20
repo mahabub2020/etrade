@@ -204,6 +204,45 @@
         "bg_img": "shopify:\/\/shop_images\/bg-image-5.jpg",
         "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&amp;id=e71e328c72&amp;f_id=0015dce6f0"
       }
+    },
+    "b3630834-02dd-429c-a50f-3d36ee6c302c": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--21159461912862__b3630834-02dd-429c-a50f-3d36ee6c302c-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": ""
+          }
+        },
+        "template--21159461912862__b3630834-02dd-429c-a50f-3d36ee6c302c-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 60,
+            "section_padding_bottom_md": 60,
+            "section_padding_top_xs": 40,
+            "section_padding_bottom_xs": 40
+          }
+        }
+      },
+      "block_order": [
+        "template--21159461912862__b3630834-02dd-429c-a50f-3d36ee6c302c-whyus-1",
+        "template--21159461912862__b3630834-02dd-429c-a50f-3d36ee6c302c-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout2",
+        "col_xl": "5",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
     }
   },
   "order": [
@@ -211,6 +250,7 @@
     "8fe79a74-fc1f-45a6-9d05-dfe3793191c3",
     "d095c48a-2568-4026-a83c-591953a4d496",
     "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd",
-    "006b98e5-f543-41c3-ac5e-4cd8bc26ade3"
+    "006b98e5-f543-41c3-ac5e-4cd8bc26ade3",
+    "b3630834-02dd-429c-a50f-3d36ee6c302c"
   ]
 }
