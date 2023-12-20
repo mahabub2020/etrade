@@ -43,54 +43,27 @@
             </div>
             <div class="footer-widget-warp">
                 <div class="row">
+                  {% for block in section.blocks %}
+                    {% case block.type %} 
+                    {% when 'footer_menu2' %}
                     <div class="col-lg-4 col-md-6">
                         <div class="axil-footer-widget widget-flex">
-                            <h6 class="widget-title">About</h6>
+                          {% if block.settings.footer_menu_title != '' %}
+                            <h6 class="widget-title">{{ block.settings.footer_menu_title }}</h6>
+                          {% endif %}
                             <div class="inner">
-                                <ul>
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="#">Delivery</a></li>
-                                    <li><a href="about-us.html">Information</a></li>
-                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                    <li><a href="terms-of-service.html">Terms & Conditions</a></li>
-                                    <li><a href="contact.html">Support Center</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                </ul>
-                            </div>
+                              <ul class="widget-menu">
+                                {% assign footer_menu = block.settings.footer_menu_handle %}
+                                {% for link in linklists[footer_menu].links %}
+                                  <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                {% endfor %}
+                              </ul>
+                          </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="axil-footer-widget widget-flex">
-                            <h6 class="widget-title">Deal</h6>
-                            <div class="inner">
-                                <ul>
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="#">Delivery</a></li>
-                                    <li><a href="about-us.html">Information</a></li>
-                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                    <li><a href="terms-of-service.html">Terms & Conditions</a></li>
-                                    <li><a href="contact.html">Support Center</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="axil-footer-widget widget-flex">
-                            <h6 class="widget-title">Deal</h6>
-                            <div class="inner">
-                                <ul>
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="#">Delivery</a></li>
-                                    <li><a href="about-us.html">Information</a></li>
-                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                                    <li><a href="terms-of-service.html">Terms & Conditions</a></li>
-                                    <li><a href="contact.html">Support Center</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    
+                  {% endcase %}
+                {% endfor %}
                 </div>
             </div>
         </div>
