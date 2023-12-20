@@ -1,216 +1,512 @@
 {
   "sections": {
-    "3dd30f8a-44f5-4b4c-bbd9-186ea9950822": {
-      "type": "banner-slider",
+    "template": {
+      "type": "template-multipurpose",
+      "settings": {
+      }
+    },
+    "96a34184-394f-421e-ac79-3f2660c2aa80": {
+      "type": "banner",
       "blocks": {
-        "9cdcb778-450d-40dd-aa0c-33398c6bd5b9": {
+        "a43197f4-7ecc-4387-915c-d58beca5a0e6": {
           "type": "banner",
           "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/product-38.png",
-            "price_label": "From",
-            "price": "$49.00",
+            "popup_product": "malrez®-spectrum™-6375",
             "plus_icon_active": true,
             "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
+            "pos_x": 104,
+            "pos_y_type": "bottom",
+            "pos_y": 244
           }
         },
-        "04eea2b2-b7fe-4ad5-9c93-925ab2d9368d": {
+        "f1ec8215-8343-48fc-af2a-abdd02f41757": {
           "type": "banner",
           "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/product-31.png",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
+            "popup_product": "kalrez®-spectrum™-6375",
+            "plus_icon_active": false,
+            "pos_x_type": "right",
+            "pos_x": 332,
             "pos_y_type": "top",
-            "pos_y": 4
+            "pos_y": 208
           }
         },
-        "5c4c0b1f-c70d-41e4-85fe-3203e7fd4107": {
+        "7387fe5a-5846-493c-a220-d38f5d0e2134": {
           "type": "banner",
           "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/21-1.jpg",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
-          }
-        },
-        "dba6f249-8662-4cb4-acec-69214417dfa2": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
-          }
-        },
-        "74e0d307-8719-4372-a7f4-b9f8cddf19e8": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/Ladies-Suit.png",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
+            "popup_product": "kalrez®-spectrum™-6376",
+            "plus_icon_active": false,
+            "pos_x_type": "right",
+            "pos_x": 192,
+            "pos_y_type": "bottom",
+            "pos_y": 172
           }
         }
       },
       "block_order": [
-        "9cdcb778-450d-40dd-aa0c-33398c6bd5b9",
-        "04eea2b2-b7fe-4ad5-9c93-925ab2d9368d",
-        "5c4c0b1f-c70d-41e4-85fe-3203e7fd4107",
-        "dba6f249-8662-4cb4-acec-69214417dfa2",
-        "74e0d307-8719-4372-a7f4-b9f8cddf19e8"
+        "a43197f4-7ecc-4387-915c-d58beca5a0e6",
+        "f1ec8215-8343-48fc-af2a-abdd02f41757",
+        "7387fe5a-5846-493c-a220-d38f5d0e2134"
       ],
       "settings": {
-        "autoplay_true": false,
-        "autoplay_speed": 5000
+        "header_style": "header_style_1",
+        "banner_title": "Life is More Than Sunglasses and Hit Movies.",
+        "banner_btn_txt": "View All Products",
+        "banner_btn_url": "shopify:\/\/collections",
+        "banner_img": "shopify:\/\/shop_images\/women_sunglass.png"
       }
     },
-    "8fe79a74-fc1f-45a6-9d05-dfe3793191c3": {
-      "type": "collection-carousel",
-      "settings": {
-        "collection_style": "cat_style_1",
-        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
-        "sub_title": "Before Title",
-        "section_title": "Featured Categories",
-        "featured_cat_collection": [
-
-        ],
-        "autoplay_true": false,
-        "autoplay_speed": 5000,
-        "product_column": 6,
-        "product_column_lg": 5,
-        "product_column_md": 4,
-        "product_column_sm": 2
-      }
-    },
-    "d095c48a-2568-4026-a83c-591953a4d496": {
-      "type": "section-product-grid",
-      "blocks": {
-        "template--21159461912862__d095c48a-2568-4026-a83c-591953a4d496-section_padding-1": {
-          "type": "section_padding",
-          "settings": {
-            "section_padding_top": 60,
-            "section_padding_bottom": 60,
-            "section_padding_top_md": 46,
-            "section_padding_bottom_md": 46,
-            "section_padding_top_xs": 46,
-            "section_padding_bottom_xs": 46
-          }
-        }
-      },
-      "block_order": [
-        "template--21159461912862__d095c48a-2568-4026-a83c-591953a4d496-section_padding-1"
-      ],
-      "settings": {
-        "is_section_title": true,
-        "title_layout": "style_2",
-        "title": "New Arrivals",
-        "sub_title": "Recently Viewed",
-        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
-        "is_countdown": false,
-        "end_time": "2024-05-22",
-        "section_btn_txt": "View All Deals",
-        "section_btn_url": "",
-        "product_collection": "fashion",
-        "excluded_products": [
-
-        ],
-        "number_of_products_to_show": 8,
-        "product_layout": "1",
-        "col_xl": "3",
-        "col_lg": "4",
-        "col_md": "2",
-        "col_sm": "2",
-        "col_mobile": "1",
-        "isbutton_true": false,
-        "btn_txt": "View All Deals",
-        "btn_url": ""
-      }
-    },
-    "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd": {
+    "073c0303-e328-46b3-89b6-4c497a5dca2d": {
       "type": "multi-column-collection",
       "settings": {
         "section_title": "Featured Categories",
         "featured_cat_collection": [
-
+          "baby",
+          "beauty",
+          "garden",
+          "kids",
+          "mens",
+          "womens",
+          "banner-popup",
+          "frontpage"
         ],
-        "list_per_slider": 8,
-        "autoplay_true": false,
-        "autoplay_speed": 5000,
-        "col_xl": 4,
+        "list_per_slider": 6,
+        "col_xl": 6,
         "col_lg": 5,
         "col_md": 3,
         "col_sm": 2
       }
     },
-    "006b98e5-f543-41c3-ac5e-4cd8bc26ade3": {
-      "type": "newsletter",
+    "d63e8306-d128-4c5b-8fe8-fe046e913d44": {
+      "type": "collection-carousel",
+      "settings": {
+        "collection_style": "cat_style_2",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "sub_title": "Before Titlerrr",
+        "section_title": "Featured Categoriesrrr",
+        "featured_cat_collection": [
+          "beauty",
+          "frontpage",
+          "kids",
+          "baby",
+          "garden",
+          "accessories",
+          "banner-popup",
+          "womens",
+          "mens"
+        ]
+      }
+    },
+    "7a04f983-4a56-49e2-adea-3dc12febc95d": {
+      "type": "product-collection",
+      "settings": {
+        "title": "Product Collection",
+        "btn-label": "",
+        "product_collection": "banner-popup",
+        "collection_list": [
+
+        ],
+        "number_of_products_to_show": 4,
+        "product_layout": "1",
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false
+      }
+    },
+    "857ac431-475d-46e9-b24a-9d2b752c9eae": {
+      "type": "section-best-deals",
       "blocks": {
-        "e03928ff-1869-4aeb-8cb6-e56daddd384c": {
-          "type": "section_padding",
+        "886b924e-74e1-4cdd-984d-42b5b4d4236f": {
+          "type": "dealslg",
           "settings": {
-            "section_padding_top": 0,
-            "section_padding_bottom": 100,
-            "section_padding_top_md": 0,
-            "section_padding_bottom_md": 80,
-            "section_padding_top_xs": 0,
-            "section_padding_bottom_xs": 60
+            "box_title": "Decorative Plant For Home",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "box_img": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
+            "block_btn_txt": "View All Dealsw",
+            "block_btn_url": "shopify:\/\/products\/kalrez®-spectrum™-6376",
+            "popup_product": "kalrez®-spectrum™-6376",
+            "plus_icon_active": true,
+            "pos_x_type": "right",
+            "pos_x": 348,
+            "pos_y_type": "bottom",
+            "pos_y": 172
+          }
+        },
+        "85bcf66d-14a9-4905-bf88-d435deec0c00": {
+          "type": "dealssm",
+          "settings": {
+            "box_title_sm": "Decorative Plant For Home",
+            "prices_label_sm": "Starting From",
+            "box_prices_sm": "$35.00",
+            "box_img_sm": "shopify:\/\/shop_images\/product-big-08.png",
+            "block_btn_url_sm": ""
+          }
+        },
+        "cf0d37af-b09e-4efd-8504-2d989d06ad67": {
+          "type": "dealssm",
+          "settings": {
+            "box_title_sm": "Decorative Plant For Home",
+            "prices_label_sm": "Starting From",
+            "box_prices_sm": "$35.00",
+            "box_img_sm": "shopify:\/\/shop_images\/collection_5.png",
+            "block_btn_url_sm": ""
+          }
+        },
+        "fcf69a64-35e3-492f-b36b-e949e0570609": {
+          "type": "dealssm",
+          "settings": {
+            "box_title_sm": "Decorativeddd Plant For Homedwddsa",
+            "prices_label_sm": "Starting From",
+            "box_prices_sm": "$35.00",
+            "box_img_sm": "shopify:\/\/shop_images\/collection_5.png",
+            "block_btn_url_sm": "shopify:\/\/products\/malrez®-spectrum™-6375"
+          }
+        },
+        "efde1dca-07fb-4082-9264-b368deb3cf7a": {
+          "type": "dealssm",
+          "settings": {
+            "box_title_sm": "Decorative Plant For Home",
+            "prices_label_sm": "Starting From",
+            "box_prices_sm": "$35.00",
+            "box_img_sm": "shopify:\/\/shop_images\/collection_5.png",
+            "block_btn_url_sm": ""
           }
         }
       },
       "block_order": [
-        "e03928ff-1869-4aeb-8cb6-e56daddd384c"
+        "886b924e-74e1-4cdd-984d-42b5b4d4236f",
+        "85bcf66d-14a9-4905-bf88-d435deec0c00",
+        "cf0d37af-b09e-4efd-8504-2d989d06ad67",
+        "fcf69a64-35e3-492f-b36b-e949e0570609",
+        "efde1dca-07fb-4082-9264-b368deb3cf7a"
       ],
       "settings": {
-        "before_title_icon": "fas fa-envelope-open",
-        "before_title_text": "Newsletter",
-        "before_title_color": "#3577f0",
-        "title": "Get weekly update",
-        "bg_img": "shopify:\/\/shop_images\/bg-image-5.jpg",
-        "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&amp;id=e71e328c72&amp;f_id=0015dce6f0"
+        "section_title": "Life is More Than Sunglasses and Hit Movies.",
+        "section_btn_txt": "View All Deals",
+        "section_btn_url": ""
+      }
+    },
+    "2070efc2-ee1d-4b43-9205-67934ac99e6f": {
+      "type": "section-testimonial",
+      "blocks": {
+        "template--20230999834939__2070efc2-ee1d-4b43-9205-67934ac99e6f-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "2e07288b-a90c-4cd8-af28-d83c3dd52be8": {
+          "type": "review",
+          "settings": {
+            "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "fdc00737-9a31-4b51-93c2-93610d214b8d": {
+          "type": "review",
+          "settings": {
+            "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.zcz",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--20230999834939__2070efc2-ee1d-4b43-9205-67934ac99e6f-review-1",
+        "2e07288b-a90c-4cd8-af28-d83c3dd52be8",
+        "fdc00737-9a31-4b51-93c2-93610d214b8d"
+      ],
+      "settings": {
+        "section_title": "Our Users Feedbackddd",
+        "video_img": "shopify:\/\/shop_images\/product-big-12.png",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=dfjie1Bg7X0"
+      }
+    },
+    "3c6c52bd-39ce-4a73-997d-f6a2b7a7feb3": {
+      "type": "section-mega-collections",
+      "blocks": {
+        "template--20230999834939__3c6c52bd-39ce-4a73-997d-f6a2b7a7feb3-megalg-1": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "box_img": "shopify:\/\/shop_images\/playful-father-and-daughter-having-fun-at-their-ne-2022-09-27-22-44-31-utc.jpg",
+            "img_size": "740x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "kalrez®-spectrum™-6376",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 7,
+            "col_lg": 7,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        },
+        "2ecff90d-0608-44ca-bc94-277f5ae730d6": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "box_img": "shopify:\/\/shop_images\/playful-father-and-daughter-having-fun-at-their-ne-2022-09-27-22-44-31-utc.jpg",
+            "img_size": "520x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 5,
+            "col_lg": 5,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        },
+        "4baeb52d-308c-4c34-ac15-8c84ed28f802": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "box_img": "shopify:\/\/shop_images\/product-big-10.png",
+            "img_size": "740x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 5,
+            "col_lg": 5,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        },
+        "81b45a6b-a224-4607-92b1-815e0b4da033": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "box_img": "shopify:\/\/shop_images\/product-big-11.png",
+            "img_size": "740x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "malrez®-spectrum™-6375",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 7,
+            "col_lg": 7,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        }
+      },
+      "block_order": [
+        "template--20230999834939__3c6c52bd-39ce-4a73-997d-f6a2b7a7feb3-megalg-1",
+        "2ecff90d-0608-44ca-bc94-277f5ae730d6",
+        "4baeb52d-308c-4c34-ac15-8c84ed28f802",
+        "81b45a6b-a224-4607-92b1-815e0b4da033"
+      ],
+      "settings": {
+        "section_title": "Today’s Best Deals 💥",
+        "section_btn_txt": "View All Deals",
+        "section_btn_url": ""
+      }
+    },
+    "412abb2d-3216-4e4d-b543-24816bf5cb82": {
+      "type": "section-testimonial",
+      "blocks": {
+        "template--20230999834939__412abb2d-3216-4e4d-b543-24816bf5cb82-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--20230999834939__412abb2d-3216-4e4d-b543-24816bf5cb82-review-1"
+      ],
+      "settings": {
+        "section_title": "Our Users Feedback",
+        "video_img": "shopify:\/\/shop_images\/image-4.png",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=Zlv2CS8LqG0&list=RDdfjie1Bg7X0"
+      }
+    },
+    "cc358753-68db-477d-ba77-5cea2aa2ece4": {
+      "type": "section-multicolumn-product-carousel",
+      "settings": {
+        "title": "Product Collectionjj",
+        "product_collection": "baby",
+        "list_per_slider": 4,
+        "number_of_products_to_show": 6,
+        "product_layout": "8",
+        "col_lg": 2,
+        "col_md": 2,
+        "col_sm": 2
+      }
+    },
+    "1eb621b1-05b1-4036-a688-c8c1d60cc96c": {
+      "type": "section-product-grid",
+      "settings": {
+        "title": "Recently Viewed",
+        "title_icon": "shopify:\/\/shop_images\/d9bf63ce7049903d00cc516d39b91639.jpg",
+        "section_btn_txt": "View All Deals",
+        "section_btn_url": "",
+        "product_collection": "womens",
+        "offset_product": 0,
+        "excluded_products": [
+
+        ],
+        "number_of_products_to_show": 10,
+        "product_layout": "1",
+        "col_xl": "2",
+        "col_lg": "6",
+        "col_md": "3",
+        "col_sm": "4",
+        "col_mobile": "1"
+      }
+    },
+    "6e0f6712-348c-4534-9e79-125ff410990e": {
+      "type": "section-testimonial-carousel",
+      "blocks": {
+        "template--20230999834939__6e0f6712-348c-4534-9e79-125ff410990e-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.nnn",
+            "tsm_img": "shopify:\/\/shop_images\/product-big-11_42af840a-5c08-4758-b2cc-7f60494ae80d.png",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "196025bd-59ce-494a-ad19-954a6925bb79": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "652d0430-3305-433e-a51e-e0337760db48": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "2be54709-04ce-4ac5-abe7-0d16dfa27ed4": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/product-big-08_9e8f0ff4-892f-46c4-9321-e713b99c46eb.png",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--20230999834939__6e0f6712-348c-4534-9e79-125ff410990e-review-1",
+        "196025bd-59ce-494a-ad19-954a6925bb79",
+        "652d0430-3305-433e-a51e-e0337760db48",
+        "2be54709-04ce-4ac5-abe7-0d16dfa27ed4"
+      ],
+      "settings": {
+        "section_title": "Our Users Feedbackbhbb",
+        "section_sub_title": "Testimonialsbbb"
+      }
+    },
+    "18745e10-f961-4068-a449-df1812f7e932": {
+      "type": "collection-carousel",
+      "settings": {
+        "collection_style": "cat_style_3",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "sub_title": "Before Title",
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+          "beauty",
+          "banner-popup",
+          "baby",
+          "accessories",
+          "garden",
+          "frontpage",
+          "kids",
+          "mens",
+          "womens"
+        ]
+      }
+    },
+    "a518ebc3-bb20-4899-a22d-1f93578396c7": {
+      "type": "section-delivery",
+      "blocks": {
+        "template--20230999834939__a518ebc3-bb20-4899-a22d-1f93578396c7-cta-1": {
+          "type": "cta",
+          "settings": {
+            "badge": "Collections",
+            "badge_title": "Rich sound,<br> for less.",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_img": "shopify:\/\/shop_images\/poster-01.png"
+          }
+        },
+        "c506554f-3a9c-4367-b2ac-036fc68df177": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "Order Pickup",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_img": "shopify:\/\/shop_images\/poster-02.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--20230999834939__a518ebc3-bb20-4899-a22d-1f93578396c7-cta-1",
+        "c506554f-3a9c-4367-b2ac-036fc68df177"
+      ],
+      "settings": {
       }
     }
   },
   "order": [
-    "3dd30f8a-44f5-4b4c-bbd9-186ea9950822",
-    "8fe79a74-fc1f-45a6-9d05-dfe3793191c3",
-    "d095c48a-2568-4026-a83c-591953a4d496",
-    "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd",
-    "006b98e5-f543-41c3-ac5e-4cd8bc26ade3"
+    "template",
+    "96a34184-394f-421e-ac79-3f2660c2aa80",
+    "073c0303-e328-46b3-89b6-4c497a5dca2d",
+    "d63e8306-d128-4c5b-8fe8-fe046e913d44",
+    "7a04f983-4a56-49e2-adea-3dc12febc95d",
+    "857ac431-475d-46e9-b24a-9d2b752c9eae",
+    "2070efc2-ee1d-4b43-9205-67934ac99e6f",
+    "3c6c52bd-39ce-4a73-997d-f6a2b7a7feb3",
+    "412abb2d-3216-4e4d-b543-24816bf5cb82",
+    "cc358753-68db-477d-ba77-5cea2aa2ece4",
+    "1eb621b1-05b1-4036-a688-c8c1d60cc96c",
+    "6e0f6712-348c-4534-9e79-125ff410990e",
+    "18745e10-f961-4068-a449-df1812f7e932",
+    "a518ebc3-bb20-4899-a22d-1f93578396c7"
   ]
 }
