@@ -1,97 +1,34 @@
-{% if section.settings.footer_bottom_enable %}
- <!-- Start Copyright Area  -->
- <div class="copyright-area copyright-default separator-top">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xl-4"> 
-            {% if section.settings.footer_social_enable %} 
-                <div class="social-share"> 
-                    {% if section.settings.social_icon_1 %}
-                        <a href="{{ section.settings.social_icon_1_url }}" class="social__link">
-                            <i class="fab fa-{{ section.settings.social_icon_1 }}"></i>
-                        </a>
-                    {% endif %}
-                    {% if section.settings.social_icon_2 %}
-                        <a href="{{ section.settings.social_icon_2_url }}" class="social__link">
-                            <i class="fab fa-{{ section.settings.social_icon_2 }}"></i>
-                        </a>
-                    {% endif %}
-                    {% if section.settings.social_icon_3 %}
-                        <a href="{{ section.settings.social_icon_3_url }}" class="social__link">
-                            <i class="fab fa-{{ section.settings.social_icon_3 }}"></i>
-                        </a>
-                    {% endif %}
-                    {% if section.settings.social_icon_4 %}
-                        <a href="{{ section.settings.social_icon_4_url }}" class="social__link">
-                            <i class="fab fa-{{ section.settings.social_icon_4 }}"></i>
-                        </a>
-                    {% endif %}
-                    {% if section.settings.social_icon_5 %}
-                        <a href="{{ section.settings.social_icon_5_url }}" class="social__link">
-                            <i class="fab fa-{{ section.settings.social_icon_5 }}"></i>
-                        </a>
-                    {% endif %}  
-                </div>  
-            {% endif %}
-            </div>
-            <div class="col-xl-4 col-lg-12">
-                {% if section.settings.copy_ritht_text != '' %}
-                <div class="copyright-left d-flex flex-wrap justify-content-center">
-                    <ul class="quick-link">
-                        <li>{{ section.settings.copy_ritht_text }}</li>
-                    </ul>
-                </div>
-            {% endif %}
-            </div>
-            <div class="col-xl-4 col-lg-12">
-                {%- if section.settings.payment_icon_img -%}  
-                <div class="copyright-right d-flex flex-wrap justify-content-xl-end justify-content-center align-items-center">
-                    {% if section.settings.copy_ritht_text != '' %}
-                        <span class="card-text">{{ section.settings.payment_title }}</span>
-                    {% endif %} 
-                    <ul class="payment-icons-bottom quick-link">
-                        <li> <img
-                            src="{{ section.settings.payment_icon_img | img_url: '320x50' }}"
-                            alt="{{ section.settings.payment_icon_img.alt | default: shop.name }}"
-                          ></li> 
-                    </ul>
-                </div> 
-            {%- endif -%}
-            </div>
+
+
+   <!-- End Footer Top Area  -->
+<div class="footer-middle">
+<div class="container">
+<div class="row">
+    <div class="col-lg-8">
+        <div class="payment-method">
+            <h6 class="title">Accept <br> For</h6>
+            <ul class="payment-icons">
+                <li><img src="assets/images/icons/cart/cart-1.png" alt="paypal cart"></li>
+                <li><img src="assets/images/icons/cart/cart-2.png" alt="paypal cart"></li>
+                <li><img src="assets/images/icons/cart/cart-3.png" alt="paypal cart"></li>
+                <li><img src="assets/images/icons/cart/cart-4.png" alt="paypal cart"></li>
+                <li><img src="assets/images/icons/cart/cart-5.png" alt="paypal cart"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="payment-method footer-social-link">
+            <h6 class="title">Social <br> Network</h6>
+            <ul class="social-link">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
         </div>
     </div>
 </div>
-{% endif %}
-
-   <!-- End Footer Top Area  -->
-   <div class="footer-middle">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="payment-method">
-                    <h6 class="title">Accept <br> For</h6>
-                    <ul class="payment-icons">
-                        <li><img src="assets/images/icons/cart/cart-1.png" alt="paypal cart"></li>
-                        <li><img src="assets/images/icons/cart/cart-2.png" alt="paypal cart"></li>
-                        <li><img src="assets/images/icons/cart/cart-3.png" alt="paypal cart"></li>
-                        <li><img src="assets/images/icons/cart/cart-4.png" alt="paypal cart"></li>
-                        <li><img src="assets/images/icons/cart/cart-5.png" alt="paypal cart"></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="payment-method footer-social-link">
-                    <h6 class="title">Social <br> Network</h6>
-                    <ul class="social-link">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
 </div>
 <!-- Start Copyright Area  -->
 <div class="copyright-area copyright-default">
