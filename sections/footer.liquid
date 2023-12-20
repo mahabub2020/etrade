@@ -7,22 +7,21 @@
 
 {% if footer_style == 'footer_layout_1' %} 
 
-  <footer class="axil-footer-area footer-style-3 footer-dark" id="section-{{ section.id }}">
-    <div class="footer-top">
+  <footer class="axil-footer-area footer-style-3 footer-dark" id="section-{{ section.id }}"> 
       {% render 'footer-top-1' %}
-      {% render 'footer-bottom-1' %}
-    </div>
+      {% render 'footer-bottom-1' %} 
 </footer>
 
 {% elsif footer_style == 'footer_layout_2' %}
+
 <footer class="axil-footer-area footer-style-2" id="section-{{ section.id }}">
   {% render 'footer-top' %}
   {% render 'footer-bottom' %}
 </footer>
+
 {% endif %}  
 
-{% render 'quick-view-modal' %}
-
+{% render 'quick-view-modal' %} 
 <script>
   $(".cart-plus-minus").prepend('<div class=" qtybtn quantity-btn quantity-minus dec qtybutton">-</div>');
   $(".cart-plus-minus").append('<div class="qtybtn quantity-btn quantity-plus inc qtybutton">+</div>');
