@@ -161,7 +161,7 @@
         ],
         "settings": {
           "footer_enable": true,
-          "footer_layout": "footer_layout_1",
+          "footer_layout": "footer_style_2",
           "footer_top_enable": true,
           "footer_bottom_enable": true,
           "copy_ritht_text": "<p>© 2023. All rights reserved by <a href=\"#\" target=\"_blank\">Your Company.<\/a><\/p>",
