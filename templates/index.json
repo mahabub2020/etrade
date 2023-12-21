@@ -162,22 +162,6 @@
         "btn_url": ""
       }
     },
-    "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd": {
-      "type": "multi-column-collection",
-      "settings": {
-        "section_title": "Featured Categories",
-        "featured_cat_collection": [
-
-        ],
-        "list_per_slider": 8,
-        "autoplay_true": false,
-        "autoplay_speed": 5000,
-        "col_xl": 4,
-        "col_lg": 5,
-        "col_md": 3,
-        "col_sm": 2
-      }
-    },
     "dc1e5a93-de3d-4c1a-9401-f272090f3fb7": {
       "type": "section-delivery",
       "blocks": {
@@ -299,7 +283,6 @@
     "3dd30f8a-44f5-4b4c-bbd9-186ea9950822",
     "8fe79a74-fc1f-45a6-9d05-dfe3793191c3",
     "d095c48a-2568-4026-a83c-591953a4d496",
-    "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd",
     "dc1e5a93-de3d-4c1a-9401-f272090f3fb7",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3",
     "b3630834-02dd-429c-a50f-3d36ee6c302c"
