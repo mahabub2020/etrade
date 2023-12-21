@@ -1905,6 +1905,11 @@
         "default": true
       },
       {
+        "type": "link_list",
+        "id": "footer_right_menu",
+        "label": "Footer Right Menu"
+      },   
+      {
         "type": "richtext",
         "id": "copy_ritht_text",
         "label": "CopyRight Text",
