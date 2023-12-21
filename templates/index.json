@@ -2,6 +2,34 @@
   "sections": {
     "11b06e4f-6388-47ee-a78f-9d4f2c350536": {
       "type": "banner",
+      "blocks": {
+        "ad20086f-b92b-4405-8e35-c9f62f3b841e": {
+          "type": "banner",
+          "settings": {
+            "popup_product": "",
+            "plus_icon_active": false,
+            "pos_x_type": "left",
+            "pos_x": 116,
+            "pos_y_type": "top",
+            "pos_y": 220
+          }
+        },
+        "fcca6902-7bcf-4dc4-a5db-aeb1745de2cd": {
+          "type": "banner",
+          "settings": {
+            "popup_product": "copy-of-stylish-hoddie",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 400,
+            "pos_y_type": "top",
+            "pos_y": 140
+          }
+        }
+      },
+      "block_order": [
+        "ad20086f-b92b-4405-8e35-c9f62f3b841e",
+        "fcca6902-7bcf-4dc4-a5db-aeb1745de2cd"
+      ],
       "settings": {
         "header_style": "header_style_1",
         "banner_title": "Life is More Than Sunglasses and Hit Movies.",
