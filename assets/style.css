@@ -25903,3 +25903,27 @@ select.dokan-form-control, input.dokan-form-control {
 .axil-dashboard-order .table thead th {
   font-size: 18px;
 }
+
+.footer-style-3 .payment-method ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-style-3 .payment-method ul li {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-style-3 .payment-method .title {
+  min-width: 97px;
+  max-width: 89px;
+}
