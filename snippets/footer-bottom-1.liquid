@@ -3,27 +3,84 @@
 <div class="footer-middle">
 <div class="container">
 <div class="row">
+    {%- if settings.is_payment_icon -%}  
     <div class="col-lg-8">
         <div class="payment-method">
             <h6 class="title">Accept <br> For</h6>
+            {% if settings.payment_title != '' %}
+                <h6 class="title">{{ settings.payment_title }}</h6>
+            {% endif %} 
+
             <ul class="payment-icons">
-                <li><img src="assets/images/icons/cart/cart-1.png" alt="paypal cart"></li>
-                <li><img src="assets/images/icons/cart/cart-2.png" alt="paypal cart"></li>
-                <li><img src="assets/images/icons/cart/cart-3.png" alt="paypal cart"></li>
-                <li><img src="assets/images/icons/cart/cart-4.png" alt="paypal cart"></li>
-                <li><img src="assets/images/icons/cart/cart-5.png" alt="paypal cart"></li>
-            </ul>
+                {%- if settings.payment_icon_img1 -%}  
+                <li> <img
+                    src="{{ settings.payment_icon_img1 | img_url: 'master' }}"
+                    alt="{{ settings.payment_icon_img1.alt | default: shop.name }}"
+                  ></li> 
+                {%- endif -%}
+                {%- if settings.payment_icon_img2 -%}  
+                <li> <img
+                    src="{{ settings.payment_icon_img2 | img_url: 'master' }}"
+                    alt="{{ settings.payment_icon_img2.alt | default: shop.name }}"
+                  ></li> 
+                {%- endif -%}
+                {%- if settings.payment_icon_img3 -%}  
+                <li> <img
+                    src="{{ settings.payment_icon_img3 | img_url: 'master' }}"
+                    alt="{{ settings.payment_icon_img3.alt | default: shop.name }}"
+                  ></li> 
+                {%- endif -%}
+                {%- if settings.payment_icon_img4 -%}  
+                <li> <img
+                    src="{{ settings.payment_icon_img4 | img_url: 'master' }}"
+                    alt="{{ settings.payment_icon_img4.alt | default: shop.name }}"
+                  ></li> 
+                {%- endif -%}
+                {%- if settings.payment_icon_img5 -%}  
+                <li> <img
+                    src="{{ settings.payment_icon_img5 | img_url: 'master' }}"
+                    alt="{{ settings.payment_icon_img5.alt | default: shop.name }}"
+                  ></li> 
+                {%- endif -%} 
+            </ul>  
         </div>
     </div>
+{% endif %} 
     <div class="col-lg-4">
         <div class="payment-method footer-social-link">
-            <h6 class="title">Social <br> Network</h6>
-            <ul class="social-link">
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-            </ul>
+             
+            {% if settings.social_title != '' %}
+                <h6 class="title">{{ settings.social_title }}</h6>
+            {% endif %} 
+            {% if settings.footer_social_enable %} 
+                <div class="social-link"> 
+                    {% if settings.social_icon_1 != '' %}
+                        <a href="{{ settings.social_icon_1_url }}" class="social__link">
+                            <i class="fab fa-{{ settings.social_icon_1 }}"></i>
+                        </a>
+                    {% endif %}
+                    {% if settings.social_icon_2 != '' %}
+                        <a href="{{ settings.social_icon_2_url }}" class="social__link">
+                            <i class="fab fa-{{ settings.social_icon_2 }}"></i>
+                        </a>
+                    {% endif %}
+                    {% if settings.social_icon_3 != '' %}
+                        <a href="{{ settings.social_icon_3_url }}" class="social__link">
+                            <i class="fab fa-{{ settings.social_icon_3 }}"></i>
+                        </a>
+                    {% endif %}
+                    {% if settings.social_icon_4 != '' %}
+                        <a href="{{ settings.social_icon_4_url }}" class="social__link">
+                            <i class="fab fa-{{ settings.social_icon_4 }}"></i>
+                        </a>
+                    {% endif %}
+                    {% if settings.social_icon_5 != '' %}
+                        <a href="{{ settings.social_icon_5_url }}" class="social__link">
+                            <i class="fab fa-{{ settings.social_icon_5 }}"></i>
+                        </a>
+                    {% endif %}  
+                </div>  
+            {% endif %} 
         </div>
     </div>
 </div>
