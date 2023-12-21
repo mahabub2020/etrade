@@ -117,7 +117,7 @@
             "settings": {
               "footer_menu_coloum": "3",
               "footer_menu_title": "Quick Link",
-              "footer_menu_handle": "main-menu",
+              "footer_menu_handle": "collections-menu",
               "title_color": "#ffffff",
               "title_border_color": "#cf987e",
               "menu_color": "#8a8a8a",
