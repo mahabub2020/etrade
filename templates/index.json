@@ -1,103 +1,13 @@
 {
   "sections": {
-    "3dd30f8a-44f5-4b4c-bbd9-186ea9950822": {
-      "type": "banner-slider",
-      "blocks": {
-        "9cdcb778-450d-40dd-aa0c-33398c6bd5b9": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/product-38.png",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
-          }
-        },
-        "04eea2b2-b7fe-4ad5-9c93-925ab2d9368d": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/product-31.png",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
-          }
-        },
-        "5c4c0b1f-c70d-41e4-85fe-3203e7fd4107": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/21-1.jpg",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
-          }
-        },
-        "dba6f249-8662-4cb4-acec-69214417dfa2": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
-          }
-        },
-        "74e0d307-8719-4372-a7f4-b9f8cddf19e8": {
-          "type": "banner",
-          "settings": {
-            "subtitle": "Hot Deal In This Week",
-            "banner_title": "Smart Digital Watch",
-            "banner_btn_txt": "Shop Now",
-            "banner_btn_url": "",
-            "banner_img": "shopify:\/\/shop_images\/Ladies-Suit.png",
-            "price_label": "From",
-            "price": "$49.00",
-            "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
-            "pos_y_type": "top",
-            "pos_y": 4
-          }
-        }
-      },
-      "block_order": [
-        "9cdcb778-450d-40dd-aa0c-33398c6bd5b9",
-        "04eea2b2-b7fe-4ad5-9c93-925ab2d9368d",
-        "5c4c0b1f-c70d-41e4-85fe-3203e7fd4107",
-        "dba6f249-8662-4cb4-acec-69214417dfa2",
-        "74e0d307-8719-4372-a7f4-b9f8cddf19e8"
-      ],
+    "11b06e4f-6388-47ee-a78f-9d4f2c350536": {
+      "type": "banner",
       "settings": {
-        "autoplay_true": false,
-        "autoplay_speed": 5000
+        "header_style": "header_style_1",
+        "banner_title": "Life is More Than Sunglasses and Hit Movies.",
+        "banner_btn_txt": "View All Products",
+        "banner_btn_url": "",
+        "banner_img": "shopify:\/\/shop_images\/women_sunglass.png"
       }
     },
     "8fe79a74-fc1f-45a6-9d05-dfe3793191c3": {
@@ -280,7 +190,7 @@
     }
   },
   "order": [
-    "3dd30f8a-44f5-4b4c-bbd9-186ea9950822",
+    "11b06e4f-6388-47ee-a78f-9d4f2c350536",
     "8fe79a74-fc1f-45a6-9d05-dfe3793191c3",
     "d095c48a-2568-4026-a83c-591953a4d496",
     "dc1e5a93-de3d-4c1a-9401-f272090f3fb7",
