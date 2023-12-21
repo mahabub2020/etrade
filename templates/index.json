@@ -211,8 +211,9 @@
         "template--21159461912862__b3630834-02dd-429c-a50f-3d36ee6c302c-whyus-1": {
           "type": "whyus",
           "settings": {
-            "wstitle": "<p>Fast & Secure Delivery<\/p>",
-            "wscontent": ""
+            "wstitle": "<p><strong>Fast & Secure Delivery<\/strong><\/p>",
+            "wscontent": "Tell about your service.",
+            "ws_img": "shopify:\/\/shop_images\/service1.png"
           }
         },
         "template--21159461912862__b3630834-02dd-429c-a50f-3d36ee6c302c-section_padding-1": {
@@ -225,11 +226,29 @@
             "section_padding_top_xs": 40,
             "section_padding_bottom_xs": 40
           }
+        },
+        "3c839720-8a5b-4326-9b64-cf2865cd1261": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Money Back Guarantee<\/strong><\/p>",
+            "wscontent": "Within 10 days.",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
+          }
+        },
+        "e7932a0d-df36-4951-bb6d-aef6d1880695": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>24 Hour Return Policy<\/strong><\/p>",
+            "wscontent": "No question ask.",
+            "ws_img": "shopify:\/\/shop_images\/service3.png"
+          }
         }
       },
       "block_order": [
         "template--21159461912862__b3630834-02dd-429c-a50f-3d36ee6c302c-whyus-1",
-        "template--21159461912862__b3630834-02dd-429c-a50f-3d36ee6c302c-section_padding-1"
+        "template--21159461912862__b3630834-02dd-429c-a50f-3d36ee6c302c-section_padding-1",
+        "3c839720-8a5b-4326-9b64-cf2865cd1261",
+        "e7932a0d-df36-4951-bb6d-aef6d1880695"
       ],
       "settings": {
         "is_section_title": false,
@@ -237,7 +256,7 @@
         "section_title": "Why People Choose Us",
         "section_sub_title": "Why Us",
         "wulayout": "layout2",
-        "col_xl": "5",
+        "col_xl": "4",
         "col_lg": "4",
         "col_md": "3",
         "col_sm": "2",
