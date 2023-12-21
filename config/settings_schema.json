@@ -1866,28 +1866,7 @@
   {
     "name": "Footer",
     "settings": [
-      {
-        "type": "checkbox",
-        "id": "footer_enable",
-        "label": "Footer Enable",
-        "default": true
-      },
-      {
-        "type": "radio",
-        "id": "footer_layout",
-        "label": "Footer Style",
-        "options": [
-          {
-            "value": "footer_layout_1",
-            "label": "Style 1"
-          },
-          {
-            "value": "footer_layout_2",
-            "label": "Style 2"
-          }
-        ],
-        "default": "footer_layout_1"
-      },
+      
       {
         "type": "header",
         "content": "Footer Top"
@@ -1897,7 +1876,7 @@
         "id": "footer_top_enable",
         "label": "Footer Top Enable",
         "default": true
-      },
+      }, 
       {
         "type": "header",
         "content": "Footer Bottom"
