@@ -1920,10 +1920,17 @@
         "label": "Footer Social Enable",
         "default": true
       },
-      
+
       {
         "type": "header",
         "content": "Payment Icons"
+      },
+
+      {
+        "type": "checkbox",
+        "id": "is_payment_icon",
+        "label": "Is Pament Enable",
+        "default": true
       },
       {
         "type": "text",
