@@ -1,58 +1,58 @@
-{% if section.settings.footer_bottom_enable %}
+{% if settings.footer_bottom_enable %}
  <!-- Start Copyright Area  -->
  <div class="copyright-area copyright-default separator-top">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-xl-4"> 
-            {% if section.settings.footer_social_enable %} 
+            {% if settings.footer_social_enable %} 
                 <div class="social-share"> 
-                    {% if section.settings.social_icon_1 %}
-                        <a href="{{ section.settings.social_icon_1_url }}" class="social__link">
-                            <i class="fab fa-{{ section.settings.social_icon_1 }}"></i>
+                    {% if settings.social_icon_1 %}
+                        <a href="{{ settings.social_icon_1_url }}" class="social__link">
+                            <i class="fab fa-{{ settings.social_icon_1 }}"></i>
                         </a>
                     {% endif %}
-                    {% if section.settings.social_icon_2 %}
-                        <a href="{{ section.settings.social_icon_2_url }}" class="social__link">
-                            <i class="fab fa-{{ section.settings.social_icon_2 }}"></i>
+                    {% if settings.social_icon_2 %}
+                        <a href="{{ settings.social_icon_2_url }}" class="social__link">
+                            <i class="fab fa-{{ settings.social_icon_2 }}"></i>
                         </a>
                     {% endif %}
-                    {% if section.settings.social_icon_3 %}
-                        <a href="{{ section.settings.social_icon_3_url }}" class="social__link">
-                            <i class="fab fa-{{ section.settings.social_icon_3 }}"></i>
+                    {% if settings.social_icon_3 %}
+                        <a href="{{ settings.social_icon_3_url }}" class="social__link">
+                            <i class="fab fa-{{ settings.social_icon_3 }}"></i>
                         </a>
                     {% endif %}
-                    {% if section.settings.social_icon_4 %}
-                        <a href="{{ section.settings.social_icon_4_url }}" class="social__link">
-                            <i class="fab fa-{{ section.settings.social_icon_4 }}"></i>
+                    {% if settings.social_icon_4 %}
+                        <a href="{{ settings.social_icon_4_url }}" class="social__link">
+                            <i class="fab fa-{{ settings.social_icon_4 }}"></i>
                         </a>
                     {% endif %}
-                    {% if section.settings.social_icon_5 %}
-                        <a href="{{ section.settings.social_icon_5_url }}" class="social__link">
-                            <i class="fab fa-{{ section.settings.social_icon_5 }}"></i>
+                    {% if settings.social_icon_5 %}
+                        <a href="{{ settings.social_icon_5_url }}" class="social__link">
+                            <i class="fab fa-{{ settings.social_icon_5 }}"></i>
                         </a>
                     {% endif %}  
                 </div>  
             {% endif %}
             </div>
             <div class="col-xl-4 col-lg-12">
-                {% if section.settings.copy_ritht_text != '' %}
+                {% if settings.copy_ritht_text != '' %}
                 <div class="copyright-left d-flex flex-wrap justify-content-center">
                     <ul class="quick-link">
-                        <li>{{ section.settings.copy_ritht_text }}</li>
+                        <li>{{ settings.copy_ritht_text }}</li>
                     </ul>
                 </div>
             {% endif %}
             </div>
             <div class="col-xl-4 col-lg-12">
-                {%- if section.settings.payment_icon_img -%}  
+                {%- if settings.payment_icon_img -%}  
                 <div class="copyright-right d-flex flex-wrap justify-content-xl-end justify-content-center align-items-center">
-                    {% if section.settings.copy_ritht_text != '' %}
-                        <span class="card-text">{{ section.settings.payment_title }}</span>
+                    {% if settings.copy_ritht_text != '' %}
+                        <span class="card-text">{{ settings.payment_title }}</span>
                     {% endif %} 
                     <ul class="payment-icons-bottom quick-link">
                         <li> <img
-                            src="{{ section.settings.payment_icon_img | img_url: '320x50' }}"
-                            alt="{{ section.settings.payment_icon_img.alt | default: shop.name }}"
+                            src="{{ settings.payment_icon_img | img_url: '320x50' }}"
+                            alt="{{ settings.payment_icon_img.alt | default: shop.name }}"
                           ></li> 
                     </ul>
                 </div> 

@@ -1884,13 +1884,10 @@
           {
             "value": "footer_layout_2",
             "label": "Style 2"
-          }
-          
-        ],
-
+          } 
+        ], 
         "default": "footer_layout_1"
       },
-      
       {
         "type": "checkbox",
         "id": "footer_top_enable",
