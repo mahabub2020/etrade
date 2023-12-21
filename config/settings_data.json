@@ -88,7 +88,7 @@
             "type": "footer_menu",
             "settings": {
               "footer_menu_coloum": "3",
-              "footer_menu_title": "Company",
+              "footer_menu_title": "Account",
               "footer_menu_handle": "account",
               "title_color": "#ffffff",
               "title_border_color": "#cf987e",
@@ -100,7 +100,7 @@
             "type": "footer_menu",
             "settings": {
               "footer_menu_coloum": "2",
-              "footer_menu_title": "Company",
+              "footer_menu_title": "Quick Link",
               "footer_menu_handle": "company",
               "title_color": "#ffffff",
               "title_border_color": "#cf987e",
@@ -142,7 +142,7 @@
             "type": "footer_menu2",
             "settings": {
               "footer_menu_coloum": "3",
-              "footer_menu_title": "Company",
+              "footer_menu_title": "Quick Link",
               "footer_menu_handle": "company",
               "title_color": "#ffffff",
               "title_border_color": "#cf987e",
