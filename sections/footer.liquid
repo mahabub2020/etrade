@@ -2,7 +2,7 @@
 {%- if  page.metafields.custom.footer_layout -%}
   {%- assign footer_style =  page.metafields.custom.footer_layout.value -%}
 {% else %}
-  {%- assign footer_style =  section.settings.footer_layout -%} 
+  {%- assign footer_style =  settings.footer_layout -%} 
 {%- endif -%}
 
 {% if footer_style == 'footer_layout_1' %} 
