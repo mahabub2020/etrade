@@ -1915,7 +1915,6 @@
         "label": "CopyRight Text",
         "default": "<p>© 2023. All rights reserved by <a href='#' target='_blank' rel='noopener'>Your Company.<\/a><\/p>"
       },
-      
       {
         "type": "header",
         "content": "Payment Icons"
@@ -1967,12 +1966,10 @@
         "label": "Footer Social Enable",
         "default": true
       },
-
       {
         "type": "header",
         "content": "Social Area"
       },
-
       {
         "type": "text",
         "id": "social_title",

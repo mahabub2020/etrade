@@ -178,6 +178,40 @@
         "col_sm": 2
       }
     },
+    "dc1e5a93-de3d-4c1a-9401-f272090f3fb7": {
+      "type": "section-delivery",
+      "blocks": {
+        "template--21159461912862__dc1e5a93-de3d-4c1a-9401-f272090f3fb7-cta-1": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "Order Pickup",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "shopify:\/\/collections\/accessories",
+            "cta_img": "shopify:\/\/shop_images\/delivery_1.png",
+            "reverse_order": false
+          }
+        },
+        "c7c737ff-37a5-46e9-926a-12925a18d01e": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "Order Pickup",
+            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "cta_url": "shopify:\/\/collections\/accessories",
+            "cta_img": "shopify:\/\/shop_images\/delivery_2.png",
+            "reverse_order": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21159461912862__dc1e5a93-de3d-4c1a-9401-f272090f3fb7-cta-1",
+        "c7c737ff-37a5-46e9-926a-12925a18d01e"
+      ],
+      "settings": {
+        "ctalayout": "cta1"
+      }
+    },
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3": {
       "type": "newsletter",
       "blocks": {
@@ -266,6 +300,7 @@
     "8fe79a74-fc1f-45a6-9d05-dfe3793191c3",
     "d095c48a-2568-4026-a83c-591953a4d496",
     "cbac4e7c-fdc7-4f04-a5b3-de9d83b01bbd",
+    "dc1e5a93-de3d-4c1a-9401-f272090f3fb7",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3",
     "b3630834-02dd-429c-a50f-3d36ee6c302c"
   ]
