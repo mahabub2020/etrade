@@ -69,8 +69,8 @@
           "8e9393a6-e78d-40d2-9c66-9cd867c9e7d8": {
             "type": "contact_about",
             "settings": {
-              "footer_about_title": "Company",
-              "address_descrption": "Integer ut ligula quis lectus fringilla elementum porttitor sed est. Duis fringilla efficitur ligula sed lobortis.",
+              "footer_about_title": "Support",
+              "address_descrption": "685 Market Street,<br>\nLas Vegas, LA 95820,<br>\nUnited States.",
               "footer_about_coloum": "3",
               "footer_about_coloum_mobile": "6",
               "about_phone": "(+01) 850-315-5862",
