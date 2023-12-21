@@ -1890,10 +1890,7 @@
 
         "default": "footer_layout_1"
       },
-      {
-        "type": "header",
-        "content": "Footer Top"
-      },
+      
       {
         "type": "checkbox",
         "id": "footer_top_enable",
