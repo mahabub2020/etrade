@@ -10,6 +10,11 @@
     "article_show_excerpt": true,
     "article_show_button": true,
     "apikey": "AIzaSyBtmXSwv4YmAKtcZyyad9W7D4AC08z0Rb4",
+    "footer_layout": "footer_layout_1",
+    "footer_top_enable": true,
+    "footer_bottom_enable": true,
+    "copy_ritht_text": "<p>© 2023. All rights reserved by <a href=\"#\" target=\"_blank\">Your Company.e<\/a><\/p>",
+    "payment_title": "Accept Ford",
     "checkout_logo_image": "shopify:\/\/shop_images\/logo.svg",
     "sections": {
       "header": {
@@ -160,23 +165,6 @@
           "f451c49a-f7b2-4532-9296-5a8e2c416ba3"
         ],
         "settings": {
-          "footer_enable": true,
-          "footer_layout": "footer_layout_1",
-          "footer_top_enable": true,
-          "footer_bottom_enable": true,
-          "copy_ritht_text": "<p>© 2023. All rights reserved by <a href=\"#\" target=\"_blank\">Your Company.<\/a><\/p>",
-          "footer_social_enable": true,
-          "payment_title": "Accept Fort",
-          "social_icon_1": "twitter",
-          "social_icon_1_url": "https:\/\/www.facebook.com\/",
-          "social_icon_2": "google-plus",
-          "social_icon_2_url": "",
-          "social_icon_3": "facebook",
-          "social_icon_3_url": "",
-          "social_icon_4": "youtube",
-          "social_icon_4_url": "",
-          "social_icon_5": "instagram",
-          "social_icon_5_url": "https:\/\/www.facebook.com\/"
         }
       }
     },
