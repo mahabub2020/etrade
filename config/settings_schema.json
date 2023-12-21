@@ -1920,6 +1920,7 @@
         "label": "Footer Social Enable",
         "default": true
       },
+      
       {
         "type": "header",
         "content": "Payment Icons"
@@ -1932,9 +1933,30 @@
       },
       {
         "type": "image_picker",
-        "id": "payment_icon_img",
+        "id": "payment_icon_img1",
+        "label": "Payment Image 1"
+      },
+      { 
+        "type": "image_picker",
+        "id": "payment_icon_img2",
+        "label": "Payment Image 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "payment_icon_img3",
         "label": "Payment Image"
       },
+      { 
+        "type": "image_picker",
+        "id": "payment_icon_img4",
+        "label": "Payment Image 4"
+      }, 
+      { 
+        "type": "image_picker",
+        "id": "payment_icon_img5",
+        "label": "Payment Image 5"
+      },
+
       {
         "type": "header",
         "content": "Social Area"

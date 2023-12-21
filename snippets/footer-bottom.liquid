@@ -50,10 +50,37 @@
                         <span class="card-text">{{ settings.payment_title }}</span>
                     {% endif %} 
                     <ul class="payment-icons-bottom quick-link">
+                        {%- if settings.payment_icon_img1 -%}  
                         <li> <img
-                            src="{{ settings.payment_icon_img | img_url: '320x50' }}"
-                            alt="{{ settings.payment_icon_img.alt | default: shop.name }}"
+                            src="{{ settings.payment_icon_img1 | img_url: 'master' }}"
+                            alt="{{ settings.payment_icon_img1.alt | default: shop.name }}"
                           ></li> 
+                        {%- endif -%}
+                        {%- if settings.payment_icon_img2 -%}  
+                        <li> <img
+                            src="{{ settings.payment_icon_img2 | img_url: 'master' }}"
+                            alt="{{ settings.payment_icon_img2.alt | default: shop.name }}"
+                          ></li> 
+                        {%- endif -%}
+                        {%- if settings.payment_icon_img3 -%}  
+                        <li> <img
+                            src="{{ settings.payment_icon_img3 | img_url: 'master' }}"
+                            alt="{{ settings.payment_icon_img3.alt | default: shop.name }}"
+                          ></li> 
+                        {%- endif -%}
+                        {%- if settings.payment_icon_img4 -%}  
+                        <li> <img
+                            src="{{ settings.payment_icon_img4 | img_url: 'master' }}"
+                            alt="{{ settings.payment_icon_img4.alt | default: shop.name }}"
+                          ></li> 
+                        {%- endif -%}
+                        {%- if settings.payment_icon_img5 -%}  
+                        <li> <img
+                            src="{{ settings.payment_icon_img5 | img_url: 'master' }}"
+                            alt="{{ settings.payment_icon_img5.alt | default: shop.name }}"
+                          ></li> 
+                        {%- endif -%}
+
                     </ul>
                 </div> 
             {%- endif -%}
