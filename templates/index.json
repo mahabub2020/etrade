@@ -242,13 +242,22 @@
             "wscontent": "No question ask.",
             "ws_img": "shopify:\/\/shop_images\/service3.png"
           }
+        },
+        "ab71ae3e-a8d4-4ccc-b097-aea9e18c69bd": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Pro Quality Support<\/strong><\/p>",
+            "wscontent": "24\/7 Live support.",
+            "ws_img": "shopify:\/\/shop_images\/service4.png"
+          }
         }
       },
       "block_order": [
         "template--21159461912862__b3630834-02dd-429c-a50f-3d36ee6c302c-whyus-1",
         "template--21159461912862__b3630834-02dd-429c-a50f-3d36ee6c302c-section_padding-1",
         "3c839720-8a5b-4326-9b64-cf2865cd1261",
-        "e7932a0d-df36-4951-bb6d-aef6d1880695"
+        "e7932a0d-df36-4951-bb6d-aef6d1880695",
+        "ab71ae3e-a8d4-4ccc-b097-aea9e18c69bd"
       ],
       "settings": {
         "is_section_title": false,
