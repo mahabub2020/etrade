@@ -1884,8 +1884,8 @@
           {
             "value": "footer_layout_2",
             "label": "Style 2"
-          } 
-        ], 
+          }
+        ],
         "default": "footer_layout_1"
       },
       {
@@ -1893,11 +1893,12 @@
         "id": "footer_top_enable",
         "label": "Footer Top Enable",
         "default": true
-      }, 
+      },
       {
         "type": "header",
         "content": "Footer Bottom"
-      }, {
+      },
+      {
         "type": "checkbox",
         "id": "footer_bottom_enable",
         "label": "Footer bottom Enable",
@@ -1907,92 +1908,113 @@
         "type": "richtext",
         "id": "copy_ritht_text",
         "label": "CopyRight Text",
-        "default": "<p>© 2023. All rights reserved by <a href='#' target='_blank' rel='noopener'>Your Company.</a></p>"
-      }, {
+        "default": "<p>© 2023. All rights reserved by <a href='#' target='_blank' rel='noopener'>Your Company.<\/a><\/p>"
+      },
+      {
         "type": "header",
         "content": "Footer Social"
-      }, {
+      },
+      {
         "type": "checkbox",
         "id": "footer_social_enable",
         "label": "Footer Social Enable",
         "default": true
-      }, {
+      },
+      {
         "type": "header",
         "content": "Payment Icons"
-      }, {
+      },
+      {
         "type": "text",
         "id": "payment_title",
         "label": "Title",
         "default": "Accept For"
-      }, {
+      },
+      {
         "type": "image_picker",
         "id": "payment_icon_img",
         "label": "Payment Image"
-      }, {
+      },
+      {
         "type": "header",
         "content": "Social Area"
-      }, {
+      },
+      {
         "type": "header",
         "content": "Social 1"
-      }, {
+      },
+      {
         "type": "text",
         "id": "social_icon_1",
         "label": "Icon",
         "default": "twitter",
         "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
-      }, {
+      },
+      {
         "type": "url",
         "id": "social_icon_1_url",
         "label": "URL"
-      }, {
+      },
+      {
         "type": "header",
         "content": "Social 2"
-      }, {
+      },
+      {
         "type": "text",
         "id": "social_icon_2",
         "label": "Icon",
         "default": "google-plus",
         "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
-      }, {
+      },
+      {
         "type": "url",
         "id": "social_icon_2_url",
         "label": "URL"
-      }, {
+      },
+      {
         "type": "header",
         "content": "Social 3"
-      }, {
+      },
+      {
         "type": "text",
         "id": "social_icon_3",
         "label": "Icon",
         "default": "facebook",
         "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
-      }, {
+      },
+      {
         "type": "url",
         "id": "social_icon_3_url",
         "label": "URL"
-      }, {
+      },
+      {
         "type": "header",
         "content": "Social 4"
-      }, {
+      },
+      {
         "type": "text",
         "id": "social_icon_4",
         "label": "Icon",
         "default": "youtube",
         "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
-      }, {
+      },
+      {
         "type": "url",
         "id": "social_icon_4_url",
         "label": "URL"
-      }, {
+      },
+      {
         "type": "header",
         "content": "Social 5"
-      }, {
+      },
+      {
         "type": "text",
         "id": "social_icon_5",
         "label": "Icon",
         "default": "instagram",
         "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
-      }, {
+      },
+      {
         "type": "url",
         "id": "social_icon_5_url",
         "label": "URL"
