@@ -13,6 +13,7 @@
     "footer_layout": "footer_layout_1",
     "footer_top_enable": true,
     "footer_bottom_enable": true,
+    "footer_right_menu": "footer",
     "copy_ritht_text": "<p>© 2023. All rights reserved by <a href=\"#\" target=\"_blank\">Your Company.<\/a><\/p>",
     "footer_social_enable": true,
     "is_payment_icon": true,
