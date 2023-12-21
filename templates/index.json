@@ -195,9 +195,9 @@
         "c7c737ff-37a5-46e9-926a-12925a18d01e": {
           "type": "cta",
           "settings": {
-            "badge": "Always free",
-            "badge_title": "Order Pickup",
-            "badge_content": "Choose Order Pickup & we’ll have it waiting for you inside the store.",
+            "badge": "FAST DELIVERY",
+            "badge_title": "Same Day Delivery",
+            "badge_content": "We will delivery your goods on the same day on your doorstep.",
             "cta_url": "shopify:\/\/collections\/accessories",
             "cta_img": "shopify:\/\/shop_images\/delivery_2.png",
             "reverse_order": false
