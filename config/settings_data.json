@@ -14,7 +14,13 @@
     "footer_top_enable": true,
     "footer_bottom_enable": true,
     "copy_ritht_text": "<p>© 2023. All rights reserved by <a href=\"#\" target=\"_blank\">Your Company.e<\/a><\/p>",
+    "is_payment_icon": true,
     "payment_title": "Accept Ford",
+    "payment_icon_img1": "shopify:\/\/shop_images\/cart-1.png",
+    "payment_icon_img2": "shopify:\/\/shop_images\/cart-2.png",
+    "payment_icon_img3": "shopify:\/\/shop_images\/cart-3.png",
+    "payment_icon_img4": "shopify:\/\/shop_images\/cart-5.png",
+    "payment_icon_img5": "shopify:\/\/shop_images\/cart-4.png",
     "checkout_logo_image": "shopify:\/\/shop_images\/logo.svg",
     "sections": {
       "header": {
