@@ -67,36 +67,6 @@
         "col_sm": 2
       }
     },
-    "8fe79a74-fc1f-45a6-9d05-dfe3793191c3": {
-      "type": "collection-carousel",
-      "settings": {
-        "collection_style": "cat_style_1",
-        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
-        "sub_title": "Before Title",
-        "section_title": "Featured Categories",
-        "featured_cat_collection": [
-          "arm-chair",
-          "baby-s",
-          "camera-photo",
-          "catoon",
-          "coats-sweater",
-          "computers",
-          "deals",
-          "accessories",
-          "animation",
-          "desk-table",
-          "electronics",
-          "fashion",
-          "handbag"
-        ],
-        "autoplay_true": false,
-        "autoplay_speed": 5000,
-        "product_column": 6,
-        "product_column_lg": 5,
-        "product_column_md": 4,
-        "product_column_sm": 2
-      }
-    },
     "d095c48a-2568-4026-a83c-591953a4d496": {
       "type": "section-product-grid",
       "blocks": {
@@ -261,7 +231,6 @@
   "order": [
     "11b06e4f-6388-47ee-a78f-9d4f2c350536",
     "61237d67-b00c-4667-b1d3-5d0b06c2d219",
-    "8fe79a74-fc1f-45a6-9d05-dfe3793191c3",
     "d095c48a-2568-4026-a83c-591953a4d496",
     "dc1e5a93-de3d-4c1a-9401-f272090f3fb7",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3",
