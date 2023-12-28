@@ -38,6 +38,36 @@
         "banner_img": "shopify:\/\/shop_images\/women_sunglass.png"
       }
     },
+    "61237d67-b00c-4667-b1d3-5d0b06c2d219": {
+      "type": "multi-column-collection",
+      "settings": {
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+          "accessories",
+          "animation",
+          "arm-chair",
+          "baby-s",
+          "camera-photo",
+          "catoon",
+          "coats-sweater",
+          "computers",
+          "deals",
+          "desk-table",
+          "fashion",
+          "electronics",
+          "handbag",
+          "headphones",
+          "hoddie"
+        ],
+        "list_per_slider": 10,
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "col_xl": 5,
+        "col_lg": 5,
+        "col_md": 3,
+        "col_sm": 2
+      }
+    },
     "8fe79a74-fc1f-45a6-9d05-dfe3793191c3": {
       "type": "collection-carousel",
       "settings": {
@@ -46,7 +76,19 @@
         "sub_title": "Before Title",
         "section_title": "Featured Categories",
         "featured_cat_collection": [
-
+          "arm-chair",
+          "baby-s",
+          "camera-photo",
+          "catoon",
+          "coats-sweater",
+          "computers",
+          "deals",
+          "accessories",
+          "animation",
+          "desk-table",
+          "electronics",
+          "fashion",
+          "handbag"
         ],
         "autoplay_true": false,
         "autoplay_speed": 5000,
@@ -219,6 +261,7 @@
   },
   "order": [
     "11b06e4f-6388-47ee-a78f-9d4f2c350536",
+    "61237d67-b00c-4667-b1d3-5d0b06c2d219",
     "8fe79a74-fc1f-45a6-9d05-dfe3793191c3",
     "d095c48a-2568-4026-a83c-591953a4d496",
     "dc1e5a93-de3d-4c1a-9401-f272090f3fb7",
