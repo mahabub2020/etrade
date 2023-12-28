@@ -43,21 +43,20 @@
       "settings": {
         "section_title": "Featured Categories",
         "featured_cat_collection": [
-          "accessories",
           "animation",
-          "arm-chair",
           "baby-s",
-          "camera-photo",
           "catoon",
           "coats-sweater",
-          "computers",
-          "deals",
           "desk-table",
           "fashion",
-          "electronics",
           "handbag",
-          "headphones",
-          "hoddie"
+          "hoddie",
+          "long-chair",
+          "mirror-table",
+          "reading",
+          "sunglasses",
+          "shoes",
+          "smartwatches"
         ],
         "list_per_slider": 10,
         "autoplay_true": false,
