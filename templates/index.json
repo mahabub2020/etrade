@@ -50,7 +50,7 @@
             "box_img": "shopify:\/\/shop_images\/collection_5.jpg",
             "block_btn_txt": "View All Deals",
             "block_btn_url": "",
-            "popup_product": "",
+            "popup_product": "wooden-table",
             "plus_icon_active": true,
             "pos_x_type": "left",
             "pos_x": 4,
@@ -64,7 +64,7 @@
             "box_title_sm": "Decorative Plant For Home",
             "prices_label_sm": "Starting From",
             "box_prices_sm": "$35.00",
-            "box_img_sm": "shopify:\/\/shop_images\/women_sunglass.png",
+            "box_img_sm": "shopify:\/\/shop_images\/collection_5.png",
             "block_btn_url_sm": "shopify:\/\/collections\/animation"
           }
         },
@@ -74,6 +74,7 @@
             "box_title_sm": "Decorative Plant For Home",
             "prices_label_sm": "Starting From",
             "box_prices_sm": "$35.00",
+            "box_img_sm": "shopify:\/\/shop_images\/collection_6.png",
             "block_btn_url_sm": ""
           }
         }
