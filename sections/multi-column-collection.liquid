@@ -24,7 +24,7 @@
             <div class="slider-section-title section-title-border">
                 <h2 class="title">{{ section.settings.section_title }}</h2>
             </div> 
-        {% endif%}  
+        {% endif %}  
 
         <div class="categrie-product-activation-4 axil-slick-slider slick-layout-wrapper--15 axil-slick-angle angle-top-slide" {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
             
@@ -42,6 +42,7 @@
 
                     <div class="col">
                         {% if collection.all_products_count > 0 %} 
+                        ddd
                             <div class="categrie-product categrie-product-4">
                                 <a href="{{ collection.url | escape }}" class="cate-thumb">
                                     {%- if collection.image -%}
@@ -51,6 +52,7 @@
                                       {%- else -%}
                                         {%- assign collection_image = blank -%}
                                       {%- endif -%}
+
                                     <img src="{{ collection_image | img_url: '190x304' }}" alt="{{ collection.title | escape }}">
                                     <h5 class="cat-title">{{ collection.title | escape }}</h5>
  

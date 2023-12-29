@@ -17,18 +17,21 @@
             <div class="col-xl-{{ block.settings.col_xl }} col-lg-{{ block.settings.col_lg }} col-sm-{{ block.settings.col_md }} col-{{ block.settings.col_sm }}">
               <div class="product-collection">
                 <div class="collection-content">
+                  
                   {% if block.settings.box_title != '' %}
                     <h3 class="title">{{ block.settings.box_title }}</h3>
                   {% endif %}
                   {% if block.settings.box_subtitle != '' %}
                     <p>{{ block.settings.box_subtitle }}</p>
                   {% endif %}
+
                   {% if block.settings.box_prices != '' %}
                     <div class="price-warp">
                       <span class="price-text">{{ block.settings.prices_label }}</span>
                       <span class="price">{{ block.settings.box_prices }}</span>
                     </div>
                   {% endif %}
+
                   {% if block.settings.section_btn_txt != '' %}
                     <div class="shop-btn">
                       <a href="{{ block.settings.block_btn_url | escape }}" class="axil-btn btn-bg-primary btn-size-md"
