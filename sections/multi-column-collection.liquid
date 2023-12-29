@@ -41,41 +41,40 @@
                 {% endif %}
 
                     <div class="col">
-                        {% comment %} {% if collection.all_products_count > 0 %}  {% endcomment %}
-                       
-                            <div class="categrie-product categrie-product-4">
-                                <a href="{{ collection.url | escape }}" class="cate-thumb">
-                                    {%- if collection.image -%}
-                                        {%- assign collection_image = collection.image -%}
-                                      {%- elsif collection.products.first and collection.products.first.images != empty -%}
-                                        {%- assign collection_image = collection.products.first.featured_image -%}
-                                      {%- else -%}
-                                        {%- assign collection_image = blank -%}
-                                      {%- endif -%}
+                      {% comment %} {% if collection.all_products_count > 0 %}  {% endcomment %}
+                      
+                          <div class="categrie-product categrie-product-4">
+                              <a href="{{ collection.url | escape }}" class="cate-thumb">
+                                  {%- if collection.image -%}
+                                      {%- assign collection_image = collection.image -%}
+                                    {%- elsif collection.products.first and collection.products.first.images != empty -%}
+                                      {%- assign collection_image = collection.products.first.featured_image -%}
+                                    {%- else -%}
+                                      {%- assign collection_image = blank -%}
+                                    {%- endif -%}
 
-                                    <img src="{{ collection_image | img_url: '190x304' }}" alt="{{ collection.title | escape }}">
-                                    <h5 class="cat-title">{{ collection.title | escape }}</h5>
- 
-                                </a>
-                            </div> 
-                        {% comment %} {% endif %} {% endcomment %}
-                    </div>
-                        {% if count == totalitems %}
-                            </div></div> 
-                            {% assign count = 1 %}  
-                        {% elsif forloop.length == loopcount %}
-                            </div></div>
-                            {% assign count = count | plus: 1 %} 
-                        {% else %}
-                            {% assign count = count | plus: 1 %}
-                        {% endif %}
+                                  <img src="{{ collection_image | img_url: '190x304' }}" width="{{ image.width }}"
+                                    height="{{ image.height }}" class="lazyload" alt="{{ collection.title | escape }}">
+                                  <h5 class="cat-title">{{ collection.title | escape }}</h5>
 
-                    {% endfor %}  
-          
+                              </a>
+                          </div> 
+                      {% comment %} {% endif %} {% endcomment %}
+                  </div>
+                      {% if count == totalitems %}
+                          </div></div> 
+                          {% assign count = 1 %}  
+                      {% elsif forloop.length == loopcount %}
+                          </div></div>
+                          {% assign count = count | plus: 1 %} 
+                      {% else %}
+                          {% assign count = count | plus: 1 %}
+                      {% endif %}
+
+                  {% endfor %}   
         </div>
     </div>
 </div>
-
 
 
 {% schema %}
