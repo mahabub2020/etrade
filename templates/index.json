@@ -38,6 +38,34 @@
         "banner_img": "shopify:\/\/shop_images\/women_sunglass.png"
       }
     },
+    "a36b2ffa-3a46-4a67-b64c-c298fa5cfc01": {
+      "type": "multi-column-collection",
+      "settings": {
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+          "animation",
+          "fashion",
+          "handbag",
+          "man",
+          "reading",
+          "shoes",
+          "sunglasses",
+          "toy",
+          "woman",
+          "wallets",
+          "t-shirts",
+          "long-chair",
+          "mirror-table"
+        ],
+        "list_per_slider": 10,
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "col_xl": 5,
+        "col_lg": 5,
+        "col_md": 4,
+        "col_sm": 2
+      }
+    },
     "ababec0c-f34a-4a4b-b102-a32ad25a7948": {
       "type": "section-best-deals",
       "blocks": {
@@ -271,43 +299,15 @@
         "col_sm": "2",
         "col_mobile": "1"
       }
-    },
-    "a36b2ffa-3a46-4a67-b64c-c298fa5cfc01": {
-      "type": "multi-column-collection",
-      "settings": {
-        "section_title": "Featured Categories",
-        "featured_cat_collection": [
-          "animation",
-          "fashion",
-          "handbag",
-          "man",
-          "reading",
-          "shoes",
-          "sunglasses",
-          "toy",
-          "woman",
-          "wallets",
-          "t-shirts",
-          "long-chair",
-          "mirror-table"
-        ],
-        "list_per_slider": 10,
-        "autoplay_true": false,
-        "autoplay_speed": 5000,
-        "col_xl": 5,
-        "col_lg": 5,
-        "col_md": 4,
-        "col_sm": 2
-      }
     }
   },
   "order": [
     "11b06e4f-6388-47ee-a78f-9d4f2c350536",
+    "a36b2ffa-3a46-4a67-b64c-c298fa5cfc01",
     "ababec0c-f34a-4a4b-b102-a32ad25a7948",
     "d095c48a-2568-4026-a83c-591953a4d496",
     "dc1e5a93-de3d-4c1a-9401-f272090f3fb7",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3",
-    "b3630834-02dd-429c-a50f-3d36ee6c302c",
-    "a36b2ffa-3a46-4a67-b64c-c298fa5cfc01"
+    "b3630834-02dd-429c-a50f-3d36ee6c302c"
   ]
 }
