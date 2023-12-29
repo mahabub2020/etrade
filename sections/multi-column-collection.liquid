@@ -41,7 +41,7 @@
                 {% endif %}
 
                     <div class="col">
-                      {% comment %} {% if collection.all_products_count > 0 %}  {% endcomment %}
+                      {% if collection.all_products_count > 0 %} 
                       
                           <div class="categrie-product categrie-product-4">
                               <a href="{{ collection.url | escape }}" class="cate-thumb">
@@ -59,7 +59,7 @@
 
                               </a>
                           </div> 
-                      {% comment %} {% endif %} {% endcomment %}
+                      {% endif %}
                   </div>
                       {% if count == totalitems %}
                           </div></div> 
