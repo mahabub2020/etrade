@@ -55,10 +55,14 @@
           "wallets",
           "t-shirts",
           "long-chair",
-          "mirror-table"
+          "mirror-table",
+          "baby-s",
+          "catoon",
+          "round-table",
+          "smartwatches"
         ],
         "list_per_slider": 10,
-        "autoplay_true": false,
+        "autoplay_true": true,
         "autoplay_speed": 5000,
         "col_xl": 5,
         "col_lg": 5,
