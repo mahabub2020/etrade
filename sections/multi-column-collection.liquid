@@ -41,8 +41,8 @@
                 {% endif %}
 
                     <div class="col">
-                        {% if collection.all_products_count > 0 %} 
-                        ddd
+                        {% comment %} {% if collection.all_products_count > 0 %}  {% endcomment %}
+                       
                             <div class="categrie-product categrie-product-4">
                                 <a href="{{ collection.url | escape }}" class="cate-thumb">
                                     {%- if collection.image -%}
@@ -58,7 +58,7 @@
  
                                 </a>
                             </div> 
-                        {% endif %}
+                        {% comment %} {% endif %} {% endcomment %}
                     </div>
                         {% if count == totalitems %}
                             </div></div> 
