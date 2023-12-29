@@ -38,33 +38,55 @@
         "banner_img": "shopify:\/\/shop_images\/women_sunglass.png"
       }
     },
-    "61237d67-b00c-4667-b1d3-5d0b06c2d219": {
-      "type": "multi-column-collection",
+    "ababec0c-f34a-4a4b-b102-a32ad25a7948": {
+      "type": "section-best-deals",
+      "blocks": {
+        "template--21159461912862__ababec0c-f34a-4a4b-b102-a32ad25a7948-dealslg-1": {
+          "type": "dealslg",
+          "settings": {
+            "box_title": "Decorative Plant For Home",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "box_img": "shopify:\/\/shop_images\/collection_5.jpg",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4
+          }
+        },
+        "template--21159461912862__ababec0c-f34a-4a4b-b102-a32ad25a7948-dealssm-1": {
+          "type": "dealssm",
+          "settings": {
+            "box_title_sm": "Decorative Plant For Home",
+            "prices_label_sm": "Starting From",
+            "box_prices_sm": "$35.00",
+            "box_img_sm": "shopify:\/\/shop_images\/women_sunglass.png",
+            "block_btn_url_sm": "shopify:\/\/collections\/animation"
+          }
+        },
+        "01749376-8e2f-4f20-a811-7fe344953a72": {
+          "type": "dealssm",
+          "settings": {
+            "box_title_sm": "Decorative Plant For Home",
+            "prices_label_sm": "Starting From",
+            "box_prices_sm": "$35.00",
+            "block_btn_url_sm": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21159461912862__ababec0c-f34a-4a4b-b102-a32ad25a7948-dealslg-1",
+        "template--21159461912862__ababec0c-f34a-4a4b-b102-a32ad25a7948-dealssm-1",
+        "01749376-8e2f-4f20-a811-7fe344953a72"
+      ],
       "settings": {
-        "section_title": "Featured Categories",
-        "featured_cat_collection": [
-          "animation",
-          "baby-s",
-          "catoon",
-          "coats-sweater",
-          "desk-table",
-          "fashion",
-          "handbag",
-          "hoddie",
-          "long-chair",
-          "mirror-table",
-          "reading",
-          "sunglasses",
-          "shoes",
-          "smartwatches"
-        ],
-        "list_per_slider": 10,
-        "autoplay_true": false,
-        "autoplay_speed": 5000,
-        "col_xl": 5,
-        "col_lg": 5,
-        "col_md": 3,
-        "col_sm": 2
+        "section_title": "Today’s Best Deals 💥",
+        "section_btn_txt": "View All Deals",
+        "section_btn_url": ""
       }
     },
     "d095c48a-2568-4026-a83c-591953a4d496": {
@@ -230,7 +252,7 @@
   },
   "order": [
     "11b06e4f-6388-47ee-a78f-9d4f2c350536",
-    "61237d67-b00c-4667-b1d3-5d0b06c2d219",
+    "ababec0c-f34a-4a4b-b102-a32ad25a7948",
     "d095c48a-2568-4026-a83c-591953a4d496",
     "dc1e5a93-de3d-4c1a-9401-f272090f3fb7",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3",
