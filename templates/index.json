@@ -53,15 +53,15 @@
             "popup_product": "copy-of-bored-ape-yacht-club-1",
             "plus_icon_active": true,
             "pos_x_type": "right",
-            "pos_x": 236,
+            "pos_x": 252,
             "pos_y_type": "top",
-            "pos_y": 4
+            "pos_y": 84
           }
         },
         "template--21159461912862__ababec0c-f34a-4a4b-b102-a32ad25a7948-dealssm-1": {
           "type": "dealssm",
           "settings": {
-            "box_title_sm": "Decorative Plant For Home",
+            "box_title_sm": "Large Pendant Light Ceiling",
             "prices_label_sm": "Starting From",
             "box_prices_sm": "$35.00",
             "box_img_sm": "shopify:\/\/shop_images\/collection_5.png",
