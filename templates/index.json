@@ -52,8 +52,8 @@
             "block_btn_url": "",
             "popup_product": "wooden-table",
             "plus_icon_active": true,
-            "pos_x_type": "left",
-            "pos_x": 4,
+            "pos_x_type": "right",
+            "pos_x": 236,
             "pos_y_type": "top",
             "pos_y": 4
           }
@@ -95,7 +95,7 @@
             "prices_label_sm": "Starting From",
             "box_prices_sm": "$35.00",
             "box_img_sm": "shopify:\/\/shop_images\/collection_8.png",
-            "block_btn_url_sm": ""
+            "block_btn_url_sm": "shopify:\/\/collections\/arm-chair"
           }
         }
       },
