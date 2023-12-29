@@ -77,12 +77,34 @@
             "box_img_sm": "shopify:\/\/shop_images\/collection_6.png",
             "block_btn_url_sm": ""
           }
+        },
+        "974221bb-0340-4aa4-ac1e-a034084f6b00": {
+          "type": "dealssm",
+          "settings": {
+            "box_title_sm": "Decorative Plant For Home",
+            "prices_label_sm": "Starting From",
+            "box_prices_sm": "$35.00",
+            "box_img_sm": "shopify:\/\/shop_images\/collection_7.png",
+            "block_btn_url_sm": ""
+          }
+        },
+        "f334817b-9df8-4cb2-af42-b0a98367da42": {
+          "type": "dealssm",
+          "settings": {
+            "box_title_sm": "Decorative Plant For Home",
+            "prices_label_sm": "Starting From",
+            "box_prices_sm": "$35.00",
+            "box_img_sm": "shopify:\/\/shop_images\/collection_8.png",
+            "block_btn_url_sm": ""
+          }
         }
       },
       "block_order": [
         "template--21159461912862__ababec0c-f34a-4a4b-b102-a32ad25a7948-dealslg-1",
         "template--21159461912862__ababec0c-f34a-4a4b-b102-a32ad25a7948-dealssm-1",
-        "01749376-8e2f-4f20-a811-7fe344953a72"
+        "01749376-8e2f-4f20-a811-7fe344953a72",
+        "974221bb-0340-4aa4-ac1e-a034084f6b00",
+        "f334817b-9df8-4cb2-af42-b0a98367da42"
       ],
       "settings": {
         "section_title": "Today’s Best Deals 💥",
