@@ -61,7 +61,7 @@
                           </div> 
                       {% endif %}
                   </div>
-                  
+
                       {% if count == totalitems %}
                           </div></div> 
                           {% assign count = 1 %}  
@@ -71,6 +71,7 @@
                       {% else %}
                           {% assign count = count | plus: 1 %}
                       {% endif %}
+                      
 
                   {% endfor %}   
         </div>
