@@ -69,7 +69,7 @@
           "jumpsuits"
         ],
         "list_per_slider": 10,
-        "autoplay_true": true,
+        "autoplay_true": false,
         "autoplay_speed": 5000,
         "col_xl": 5,
         "col_lg": 5,
