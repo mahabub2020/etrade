@@ -39,9 +39,9 @@
                     <div class="slick-single-layout">
                     <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
                 {% endif %}
- 
+                <div class="col">
                       {% if collection.all_products_count > 0 %} 
-                      <div class="col">
+                    
                           <div class="categrie-product categrie-product-4">
                               <a href="{{ collection.url | escape }}" class="cate-thumb">
                                   {%- if collection.image -%}
@@ -58,9 +58,9 @@
 
                               </a>
                           </div> 
-                        </div>
+                  
                       {% endif %}
-               
+                    </div>
                       {% if count == totalitems %}
                           </div></div> 
                           {% assign count = 1 %}  
