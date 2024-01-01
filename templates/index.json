@@ -43,23 +43,12 @@
       "settings": {
         "section_title": "Featured Categories",
         "featured_cat_collection": [
-          "animation",
-          "fashion",
-          "handbag",
-          "man",
-          "reading",
-          "shoes",
-          "sunglasses",
+          "kids",
+          "beauty",
+          "babys",
+          "sunglass",
           "toy",
-          "woman",
-          "wallets",
-          "t-shirts",
-          "long-chair",
-          "mirror-table",
-          "baby-s",
-          "catoon",
-          "round-table",
-          "smartwatches"
+          "mens"
         ],
         "list_per_slider": 10,
         "autoplay_true": true,
