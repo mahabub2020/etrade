@@ -42,6 +42,7 @@
       "type": "multi-column-collection",
       "settings": {
         "section_title": "Featured Categories",
+        "title_icon": "shopify:\/\/shop_images\/title-icon.png",
         "featured_cat_collection": [
           "kids",
           "beauty",
