@@ -183,6 +183,45 @@
         "btn_url": "shopify:\/\/collections"
       }
     },
+    "d0f9e84f-67cb-4f48-b7b4-5f4410982d16": {
+      "type": "section-testimonial",
+      "blocks": {
+        "template--21762357264670__d0f9e84f-67cb-4f48-b7b4-5f4410982d16-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "8d274ea4-0d5e-4e6a-85b8-16175de504ca": {
+          "type": "review",
+          "settings": {
+            "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "ea0e28e5-24ed-4192-87c4-7c43253850bb": {
+          "type": "review",
+          "settings": {
+            "review_content": "It`s no secret testimonials are the driving force behind purchasing decisions. They are such a great way to create immediate trust with prospective clients.",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--21762357264670__d0f9e84f-67cb-4f48-b7b4-5f4410982d16-review-1",
+        "8d274ea4-0d5e-4e6a-85b8-16175de504ca",
+        "ea0e28e5-24ed-4192-87c4-7c43253850bb"
+      ],
+      "settings": {
+        "section_title": "Our Users Feedback",
+        "video_img": "shopify:\/\/shop_images\/image-4.png",
+        "video_url": ""
+      }
+    },
     "dc1e5a93-de3d-4c1a-9401-f272090f3fb7": {
       "type": "section-delivery",
       "blocks": {
@@ -305,6 +344,7 @@
     "a36b2ffa-3a46-4a67-b64c-c298fa5cfc01",
     "ababec0c-f34a-4a4b-b102-a32ad25a7948",
     "d095c48a-2568-4026-a83c-591953a4d496",
+    "d0f9e84f-67cb-4f48-b7b4-5f4410982d16",
     "dc1e5a93-de3d-4c1a-9401-f272090f3fb7",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3",
     "b3630834-02dd-429c-a50f-3d36ee6c302c"
