@@ -543,7 +543,7 @@
         "is_countdown": false,
         "end_time": "2024-05-22",
         "product_collection": "accessories",
-        "list_per_slider": 8,
+        "list_per_slider": 4,
         "number_of_products_to_show": 8,
         "product_layout": "1",
         "isbutton_true": false,
