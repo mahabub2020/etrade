@@ -357,10 +357,11 @@
       "settings": {
         "is_section_title": true,
         "title_layout": "style_1",
-        "title": "New Arrivals",
+        "title": "Recently Viewed ",
         "sub_title": "Recently Viewed",
         "is_countdown": false,
         "end_time": "2024-05-22",
+        "title_icon": "shopify:\/\/shop_images\/title-icon.png",
         "product_collection": "electronics",
         "number_of_products_to_show": 8,
         "excluded_products": [
