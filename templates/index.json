@@ -540,7 +540,7 @@
         "title_layout": "style_2",
         "title": "New Arrivals",
         "sub_title": "Recently Viewed",
-        "is_countdown": false,
+        "is_countdown": true,
         "end_time": "2024-05-22",
         "product_collection": "accessories",
         "list_per_slider": 4,
