@@ -50,8 +50,10 @@
                               <div class="thumbnail">
                                 <a href="{{ product.url }}">
                                   <img
-                                    src="{{ product.featured_image | img_url: '150x150' }}"
+                                    src="{{ product.featured_image | image_url: width: 100, height: 100 }}"
                                     alt="{{ product.featured_image.alt }}"
+                                    width="{{ image.width }}"
+                                    height="{{ image.height }}"
                                     decoding="async"
                                     loading="lazy">
                                   </a>
@@ -65,9 +67,15 @@
                         {% endif %}
                       {% endif %}
                 </div> 
-                  <div class="collection-thumbnail">
-                    
-                    <img src="{% if section.settings.box_img %}{{ section.settings.box_img | img_url: block.settings.img_size }}{% else %}http:\/\/via.placeholder.com\/{{ block.settings.img_size }}{% endif %}" alt="{{ section.settings.box_img.alt }}"> 
+                  <div class="collection-thumbnail"> 
+                    <img 
+                      width="{{ block.settings.box_img.width }}"
+                      height="{{ block.settings.box_img.height }}" 
+                      decoding="async"
+                      loading="lazy" 
+                      src="{{ block.settings.box_img | image_url: width: block.settings.box_img.width, height: block.settings.box_img.height }}"
+                      alt="{{ block.settings.box_img.alt }}"> 
+
                       {% if block.settings.product_badget != '' %} 
                         <div class="label-block label-right">
                           <div class="product-badget">{{ block.settings.product_badget }}</div>
@@ -123,7 +131,7 @@
     {
       "type": "text",
       "id": "section_title",
-      "default": "Today’s Best Deals 💥 ",
+      "default": "Todays Best Deals 💥 ",
       "label": "Title"
     },
     {
