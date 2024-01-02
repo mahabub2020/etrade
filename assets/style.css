@@ -25934,3 +25934,8 @@ select.dokan-form-control, input.dokan-form-control {
   display: flex;
   gap: 10px;
 }
+
+.product-collection {
+  margin-bottom: 30px;
+  min-height: 400px;
+}
