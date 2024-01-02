@@ -336,6 +336,47 @@
         "section_btn_url": ""
       }
     },
+    "07ae3037-5f6d-4f74-a325-9b16c280892e": {
+      "type": "section-rightstretch-product-carousel",
+      "blocks": {
+        "template--21762357264670__07ae3037-5f6d-4f74-a325-9b16c280892e-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21762357264670__07ae3037-5f6d-4f74-a325-9b16c280892e-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_1",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
+        "product_collection": "electronics",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1",
+        "autoplay_true": true,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
+    },
     "dc1e5a93-de3d-4c1a-9401-f272090f3fb7": {
       "type": "section-delivery",
       "blocks": {
@@ -460,6 +501,7 @@
     "d095c48a-2568-4026-a83c-591953a4d496",
     "d0f9e84f-67cb-4f48-b7b4-5f4410982d16",
     "7b4ddcf0-b778-4817-9d2e-9734bd88e35c",
+    "07ae3037-5f6d-4f74-a325-9b16c280892e",
     "dc1e5a93-de3d-4c1a-9401-f272090f3fb7",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3",
     "b3630834-02dd-429c-a50f-3d36ee6c302c"
