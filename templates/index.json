@@ -537,7 +537,7 @@
       ],
       "settings": {
         "is_section_title": true,
-        "title_layout": "style_2",
+        "title_layout": "style_1",
         "title": "New Arrivals",
         "sub_title": "Recently Viewed",
         "is_countdown": true,
