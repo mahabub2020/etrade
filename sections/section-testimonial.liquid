@@ -9,16 +9,17 @@
           "arrows": true,
           {% if settings.rtl_enable %} "rtl": true,{% endif %} 
           "infinite": true,
-          "dots": false,   
-          "nextArrow": "<button class=\"slide-arrow prev-arrow\"><i class=\"fal fa-long-arrow-left\"></i></button>", 
-          "prevArrow": "<button class=\"slide-arrow next-arrow\"><i class=\"fal fa-long-arrow-right\"></i></button>",
+          "dots": false,    
+          "draggable": true,
+          "prevArrow": "$('.prev-custom-nav')",
+          "nextArrow": "$('.next-custom-nav')", 
           "responsive":[
             {"breakpoint":991, "settings": {"slidesToShow": 1 } }
              
           ]       
       }'
-   {%- endcapture -%}
- 
+   {%- endcapture -%} 
+   
 <div id="section-{{ section.id }}" class="axil-testimoial-area-two axil-section-gapBottom">
   <div class="container">
       <div class="testimonial-container-box">
