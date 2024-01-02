@@ -224,6 +224,114 @@
         "autoplay_speed": 5000
       }
     },
+    "7b4ddcf0-b778-4817-9d2e-9734bd88e35c": {
+      "type": "section-mega-collections",
+      "blocks": {
+        "template--21762357264670__7b4ddcf0-b778-4817-9d2e-9734bd88e35c-megalg-1": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "img_size": "740x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 7,
+            "col_lg": 7,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        },
+        "9e930783-d55f-4913-a99e-d0e368c45840": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "img_size": "740x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 5,
+            "col_lg": 5,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        },
+        "69b267c0-3b75-488f-8da5-6d4cf7a79eab": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "img_size": "740x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 5,
+            "col_lg": 7,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        },
+        "4b6d3b0d-4f67-4393-b287-6698cf32b4b2": {
+          "type": "megalg",
+          "settings": {
+            "box_title": "Explore The Sunglass",
+            "box_subtitle": "The Bouguessa FW21 collection is.",
+            "prices_label": "Starting From",
+            "box_prices": "$35.00",
+            "img_size": "740x400",
+            "block_btn_txt": "View All Deals",
+            "block_btn_url": "",
+            "popup_product": "",
+            "product_badget": "",
+            "plus_icon_active": true,
+            "pos_x_type": "left",
+            "pos_x": 4,
+            "pos_y_type": "top",
+            "pos_y": 4,
+            "col_xl": 7,
+            "col_lg": 7,
+            "col_md": 12,
+            "col_sm": 12
+          }
+        }
+      },
+      "block_order": [
+        "template--21762357264670__7b4ddcf0-b778-4817-9d2e-9734bd88e35c-megalg-1",
+        "9e930783-d55f-4913-a99e-d0e368c45840",
+        "69b267c0-3b75-488f-8da5-6d4cf7a79eab",
+        "4b6d3b0d-4f67-4393-b287-6698cf32b4b2"
+      ],
+      "settings": {
+        "section_title": "Today’s Best Deals 💥",
+        "section_btn_txt": "View All Deals",
+        "section_btn_url": ""
+      }
+    },
     "dc1e5a93-de3d-4c1a-9401-f272090f3fb7": {
       "type": "section-delivery",
       "blocks": {
@@ -347,6 +455,7 @@
     "ababec0c-f34a-4a4b-b102-a32ad25a7948",
     "d095c48a-2568-4026-a83c-591953a4d496",
     "d0f9e84f-67cb-4f48-b7b4-5f4410982d16",
+    "7b4ddcf0-b778-4817-9d2e-9734bd88e35c",
     "dc1e5a93-de3d-4c1a-9401-f272090f3fb7",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3",
     "b3630834-02dd-429c-a50f-3d36ee6c302c"
