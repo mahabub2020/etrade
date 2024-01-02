@@ -22,7 +22,14 @@
        
       {% if section.settings.banner_title != '' %}
             <div class="slider-section-title section-title-border">
-                <h2 class="title">{{ section.settings.section_title }}</h2>
+                <h2 class="title">{{ section.settings.section_title }}
+                {% if section.settings.title_icon %}  
+                <img width="{{ image.width }}"
+                  height="{{ image.height }}" src="{{ section.settings.title_icon | img_url:  '60x60' }}"
+                  alt="{{ section.settings.title_icon.alt | default: shop.name }}"  decoding="async"
+                  loading="lazy">
+                {% endif %} 
+               </h2>
             </div> 
         {% endif %}  
 
@@ -87,6 +94,13 @@
             "id": "section_title",
             "default": "Featured Categories",
             "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "title_icon",
+          "label": "Title Icon",
+          "info": "Recommended Size: 60 x 60px",
+          "info": "Ttile Icon"
         },
         {
             "type": "collection_list",
