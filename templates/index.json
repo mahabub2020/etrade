@@ -516,6 +516,45 @@
         "col_sm": "2",
         "col_mobile": "1"
       }
+    },
+    "2ac2dbda-e21b-48ee-9f71-f2279ae6c2a6": {
+      "type": "section-product-grid-slider",
+      "blocks": {
+        "template--21762357264670__2ac2dbda-e21b-48ee-9f71-f2279ae6c2a6-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21762357264670__2ac2dbda-e21b-48ee-9f71-f2279ae6c2a6-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
+        "product_collection": "accessories",
+        "list_per_slider": 8,
+        "number_of_products_to_show": 8,
+        "product_layout": "1",
+        "isbutton_true": false,
+        "btn_txt": "View All Deals",
+        "btn_url": "",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "col_lg": 2,
+        "col_md": 2,
+        "col_sm": 2
+      }
     }
   },
   "order": [
@@ -529,6 +568,7 @@
     "009ee406-239b-4327-91a1-5231ba6f9793",
     "dc1e5a93-de3d-4c1a-9401-f272090f3fb7",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3",
-    "b3630834-02dd-429c-a50f-3d36ee6c302c"
+    "b3630834-02dd-429c-a50f-3d36ee6c302c",
+    "2ac2dbda-e21b-48ee-9f71-f2279ae6c2a6"
   ]
 }
