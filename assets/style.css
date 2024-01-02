@@ -25939,3 +25939,7 @@ select.dokan-form-control, input.dokan-form-control {
   margin-bottom: 30px;
   min-height: 400px;
 }
+
+.advertisement-area .thumb {
+  border-radius: 8px 8px 8px 8px;
+}
