@@ -196,13 +196,13 @@
     "863a3ac1-45d6-4578-898d-a81ed96d24e1": {
       "type": "section-countdown",
       "settings": {
+        "is_animations": true,
         "cd_title": "Enhance Your Music Experience",
         "cd_sub_title": "Don't Miss!!",
         "end_time": "2024-05-22",
         "cd_btn_txt": "Check it Out!",
         "cd_btn_url": "shopify:\/\/products\/diamond-bracelet",
-        "cd_img": "shopify:\/\/shop_images\/poster-03.png",
-        "is_animations": true
+        "cd_img": "shopify:\/\/shop_images\/poster-03.png"
       }
     },
     "7a132df3-4f11-4412-a3a4-5644644774ef": {
@@ -271,6 +271,7 @@
         "33cf0a55-52e3-42b4-9e39-eb3aa677f134"
       ],
       "settings": {
+        "container": "container",
         "is_section_title": false,
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "section_title": "Our Users Feedback",
@@ -300,8 +301,8 @@
       "settings": {
         "is_section_title": true,
         "title_layout": "style_2",
-        "title": "New Arrivals",
-        "sub_title": "Recently Viewed",
+        "title": "Explore our Products",
+        "sub_title": "Our Products",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "is_countdown": false,
         "end_time": "2024-05-22",
