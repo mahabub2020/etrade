@@ -57,7 +57,7 @@
               {% if section.settings.title != blank %}  
                 <h2 class="title">{{ section.settings.title }} </h2>
               {% endif %}
-              
+
             </div>
               {% if section.settings.is_countdown == true %}
                   <div data-time="{{ section.settings.end_time }}" class="sale-countdown countdown"></div>
@@ -102,7 +102,11 @@
                           </div>
                           <div class="product-content">
                               <div class="inner">
-                                  <div class="product-cate"><a href="#">KIDS’ DOLLS</a></div>
+                                  <div class="product-cate"> 
+                                    {% for collection in product.collections %}
+                                      {{- collection.title | link_to: collection.url }}
+                                      {% endfor %}
+                                    </div>
                                   <div class="color-variant-wrapper">
                                       <ul class="color-variant">
                                           <li class="color-extra-01 active"><span><span class="color"></span></span>
