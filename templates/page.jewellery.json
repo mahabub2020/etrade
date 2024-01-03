@@ -257,7 +257,7 @@
         "container": "container",
         "is_section_title": true,
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
-        "section_title": "Our Users Feedback",
+        "section_title": "Users Feedback",
         "section_sub_title": "Testimonials",
         "autoplay_true": true,
         "autoplay_speed": 5000
