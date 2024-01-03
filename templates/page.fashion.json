@@ -202,7 +202,7 @@
         "end_time": "2024-05-22",
         "cd_btn_txt": "Check it Out!",
         "cd_btn_url": "shopify:\/\/products\/diamond-bracelet",
-        "cd_img": "shopify:\/\/shop_images\/poster-03.png"
+        "cd_img": "shopify:\/\/shop_images\/poster-05.png"
       }
     },
     "7a132df3-4f11-4412-a3a4-5644644774ef": {
@@ -216,7 +216,7 @@
         "end_time": "2024-05-22",
         "product_collection": "fashion",
         "list_per_slider": 8,
-        "number_of_products_to_show": 8,
+        "number_of_products_to_show": 16,
         "product_layout": "1",
         "isbutton_true": true,
         "btn_txt": "View All Deals",
