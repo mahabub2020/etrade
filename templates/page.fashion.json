@@ -235,14 +235,16 @@
           "type": "review",
           "settings": {
             "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
-            "author_name": "Wade Warren",
-            "author_desg": "Head of Marketing"
+            "tsm_img": "shopify:\/\/shop_images\/image-1.png",
+            "author_name": "James C. Anderson",
+            "author_desg": "Head Of Idea"
           }
         },
         "1bf3756d-6c95-48a3-86ee-ff33bd289e4c": {
           "type": "review",
           "settings": {
             "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/image-2.png",
             "author_name": "Wade Warren",
             "author_desg": "Head of Marketing"
           }
@@ -251,6 +253,7 @@
           "type": "review",
           "settings": {
             "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/image-3.png",
             "author_name": "Wade Warren",
             "author_desg": "Head of Marketing"
           }
@@ -259,6 +262,7 @@
           "type": "review",
           "settings": {
             "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/image-1.png",
             "author_name": "Wade Warren",
             "author_desg": "Head of Marketing"
           }
@@ -272,11 +276,11 @@
       ],
       "settings": {
         "container": "container",
-        "is_section_title": false,
+        "is_section_title": true,
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "section_title": "Our Users Feedback",
         "section_sub_title": "Testimonials",
-        "autoplay_true": false,
+        "autoplay_true": true,
         "autoplay_speed": 5000
       }
     },
