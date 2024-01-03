@@ -24,8 +24,17 @@
                 </div>
                 <div class="col-xl-7 col-lg-6">
                     <div class="poster-countdown-thumbnail">
-                      <img src="{% if section.settings.cd_img %}{{ section.settings.cd_img | img_url: '661x502' }}{% else %}http:\/\/via.placeholder.com\/661x502{% endif %}" alt="{{ section.settings.cd_img.alt }}"> 
+                      <img 
+                        width="{{ section.settings.cd_img.width }}"
+                        height="{{ section.settings.cd_img.height }}" 
+                        decoding="async"
+                        loading="lazy" 
+                        src="{{ section.settings.cd_img | image_url: width: section.settings.cd_img.width, height: section.settings.cd_img.height }}"
+                        alt="{{ block.settings.box_img.alt }}"> 
+ 
+                    
                       {% if section.settings.is_animations == true %}
+                      
                         <div class="music-singnal">
                             <div class="item-circle circle-1"></div>
                             <div class="item-circle circle-2"></div>
@@ -52,18 +61,13 @@
     {
       "type": "header",
       "content": "CountDown Content"
-    }, 
-    {
-      "type": "checkbox",
-      "id": "is_animations",
-      "label": "Enable Section Title"
     },
     {
       "type": "text",
       "id": "cd_title",
       "default": "Enhance Your Music Experience",
       "label": "Title"
-    }, 
+    },
     {
       "type": "text",
       "id": "cd_sub_title",
@@ -82,7 +86,7 @@
       "id": "cd_btn_txt",
       "default": "Check it Out!",
       "label": "Button Text"
-    }, 
+    },
     {
       "type": "url",
       "id": "cd_btn_url",
@@ -92,6 +96,11 @@
       "type": "image_picker",
       "id": "cd_img",
       "label": "Box Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_animations",
+      "label": "Enable Image Animations"
     }
   ],
   "presets": [
