@@ -188,7 +188,16 @@
         "sub_title": "collection",
         "section_title": "Browse by Category",
         "featured_cat_collection": [
-          "jewellery"
+          "jewellery",
+          "kalabubu",
+          "nawarat-ring",
+          "slave-bracelet",
+          "base-metals",
+          "barrette",
+          "anklet",
+          "foilbacks",
+          "medallion",
+          "pledge-pins"
         ],
         "autoplay_true": false,
         "autoplay_speed": 5000,
