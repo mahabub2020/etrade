@@ -103,9 +103,12 @@
                           <div class="product-content">
                               <div class="inner">
                                   <div class="product-cate"> 
+
                                     {% for collection in product.collections %}
-                                      {{- collection.title | link_to: collection.url }}
-                                      {% endfor %}
+                                    {% assign coll = '/collections/' | append: collection.title | replace: " ", "-" %}
+                                    {{ collection.title | capitalize | link_to: coll }}{% unless forloop.last %},{% endunless %}
+                                    {% endfor %}
+
                                     </div>
                                   <div class="color-variant-wrapper">
                                       <ul class="color-variant">
