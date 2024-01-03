@@ -32,7 +32,7 @@
                         <a href="{{ product.url }}">
                           {% if product.featured_image %}
                             <img
-                              src="{{ product.featured_image | img_url: '300x300' }}"
+                              src="{{ product.featured_image | image_url: width: 300, height: 300 }}"
                               class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                               alt="{{ item.title | escape }}"
                               loading="lazy">

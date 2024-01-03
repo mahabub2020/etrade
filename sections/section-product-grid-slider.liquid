@@ -28,21 +28,26 @@
           {% if section.settings.title != blank %}
             <h2 class="title">{{ section.settings.title }} 
             {% if section.settings.title_icon %}  
-            <img src="{{ section.settings.title_icon | img_url:  '60x60' }}"
-              alt="{{ section.settings.title_icon.alt | default: shop.name }}"  decoding="async"
+            <img src="{{ section.settings.title_icon | image_url: width: 60, height: 60 }}"
+              width="{{ image.width }}"
+              height="{{ image.height }}"
+              alt="{{ section.settings.title_icon.alt | default: shop.name }}" 
+              decoding="async"
               loading="lazy">
             {% endif %}  
             </h2>
           {% endif %}
         </div>
         {% elsif section.settings.title_layout == 'style_2' %}
-          {% if section.settings.is_countdown == true %}
-            {% assign is_coutdown_start = '<div class="d-md-flex align-items-end flash-sale-section axilcoutdown2">' %}
-            {% assign is_coutdown_end = '</div>' %}
-          {% else %}
-            {% assign is_coutdown_start = '' %}
-            {% assign is_coutdown_end = '' %}
-          {% endif %}
+
+        {%- liquid 
+          if section.settings.is_countdown != 0  
+              assign is_coutdown_start = '<div class="d-md-flex align-items-end flash-sale-section axilcoutdown2">' 
+              assign is_coutdown_end = '</div>' 
+            else  
+            assign is_coutdown_start = ''  
+            assign is_coutdown_end = '' 
+           endif %}
     
           {{ is_coutdown_start }}
             <div class="section-title-wrapper">
@@ -52,8 +57,8 @@
               {% if section.settings.title != blank %}  
                 <h2 class="title">{{ section.settings.title }} </h2>
               {% endif %}
+              
             </div>
-    
               {% if section.settings.is_countdown == true %}
                   <div data-time="{{ section.settings.end_time }}" class="sale-countdown countdown"></div>
               {% endif %}
@@ -75,55 +80,67 @@
                   <div class="slick-single-layout">
                     <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
                 {% endif %} 
-              
-                      <div class="col-md-6 col-12">
-                          <div class="axil-product product-style-eight product-list-style-3">
-                              <div class="thumbnail">
-                                  <a href="single-product-8.html">
-                                      <img class="main-img" src="assets/images/product/fashion/product-34.png" alt="Product Images">
-                                  </a>
-                              </div>
-                              <div class="product-content">
-                                  <div class="inner">
-                                      <div class="product-cate"><a href="#">KIDS’ DOLLS</a></div>
-                                      <div class="color-variant-wrapper">
-                                          <ul class="color-variant">
-                                              <li class="color-extra-01 active"><span><span class="color"></span></span>
-                                              </li>
-                                              <li class="color-extra-02"><span><span class="color"></span></span>
-                                              </li>
-                                              <li class="color-extra-03"><span><span class="color"></span></span>
-                                              </li>
-                                              <li class="color-extra-04"><span><span class="color"></span></span>
-                                              </li>
-                                              <li class="color-extra-04"><span><span class="color"></span></span>
-                                              </li>
-                                              <li class="color-extra-05"><span><span class="color"></span></span>
-                                              </li>
-                                          </ul>
-                                      </div>
-                                      <h5 class="title"><a href="single-product-8.html">Manhattan Toy Wee Baby Stella Peach 12" Soft Baby Doll</a></h5>
-                                      <div class="product-rating">
-                                          <span class="icon">
-                                      <i class="fas fa-star"></i>
-                                      <i class="fas fa-star"></i>
-                                      <i class="fas fa-star"></i>
-                                      <i class="fas fa-star"></i>
-                                      <i class="fas fa-star"></i>
-                                  </span>
-                                          <span class="rating-number">1540</span>
-                                      </div>
-                                      <div class="product-price-variant">
-                                          <span class="price-text">Price</span>
-                                          <span class="price current-price">$59.00</span>
-                                      </div>
+          
+                  <div class="col-md-6 col-12">
+                      <div class="axil-product product-style-eight product-list-style-3">
+                          <div class="thumbnail">
+
+                            <a href="{{ product.url }}">
+                              {% if product.featured_image %}
+                                <img
+                                  src="{{ product.featured_image | image_url: width: 300, height: 300 }}"
+                                  class="main-img"
+                                  alt="{{ product.title | escape }}"
+                                  width="{{ image.width }}"
+                                  height="{{ image.height }}"
+                                  loading="lazy">
+                              {% else %}
+                                {{ 'image' | placeholder_svg_tag }}
+                              {% endif %}
+                            </a> 
+                              
+                          </div>
+                          <div class="product-content">
+                              <div class="inner">
+                                  <div class="product-cate"><a href="#">KIDS’ DOLLS</a></div>
+                                  <div class="color-variant-wrapper">
+                                      <ul class="color-variant">
+                                          <li class="color-extra-01 active"><span><span class="color"></span></span>
+                                          </li>
+                                          <li class="color-extra-02"><span><span class="color"></span></span>
+                                          </li>
+                                          <li class="color-extra-03"><span><span class="color"></span></span>
+                                          </li>
+                                          <li class="color-extra-04"><span><span class="color"></span></span>
+                                          </li>
+                                          <li class="color-extra-04"><span><span class="color"></span></span>
+                                          </li>
+                                          <li class="color-extra-05"><span><span class="color"></span></span>
+                                          </li>
+                                      </ul>
+                                  </div>
+                                  <h5 class="title"><a href="{{ product.url }}">{{ product.title }}</a></h5>
+                                  <div class="product-rating">
+                                      <span class="icon">
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                                  <i class="fas fa-star"></i>
+                              </span>
+                                      <span class="rating-number">1540</span>
+                                  </div>
+                                  <div class="product-price-variant">
+                                      <span class="price-text">Price</span>
+                                      <span class="price current-price">{{ product.price | money }}</span>
                                   </div>
                               </div>
-                              <div class="label-block label-right">
-                                  <div class="product-badget sold-out">SOLD OUT</div>
-                              </div>
+                          </div>
+                          <div class="label-block label-right">
+                              <div class="product-badget sold-out">SOLD OUT</div>
                           </div>
                       </div>
+                  </div>
                   
                  
               {% if count == totalitems %}
