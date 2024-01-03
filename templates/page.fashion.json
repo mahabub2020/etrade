@@ -212,7 +212,7 @@
         "title_layout": "style_2",
         "title": "Explore our Products",
         "sub_title": "Our Products",
-        "is_countdown": true,
+        "is_countdown": false,
         "end_time": "2024-05-22",
         "product_collection": "fashion",
         "list_per_slider": 8,
