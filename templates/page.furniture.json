@@ -256,13 +256,13 @@
     "39ad8c93-71af-4629-b085-5d498ffeebb6": {
       "type": "section-countdown",
       "settings": {
+        "is_animations": false,
         "cd_title": "Decorate Your House with Us",
         "cd_sub_title": "Don't Miss!!",
         "end_time": "2024-05-22",
         "cd_btn_txt": "Check it Out!",
         "cd_btn_url": "shopify:\/\/collections\/desk-table",
-        "cd_img": "shopify:\/\/shop_images\/poster-07.png",
-        "is_animations": false
+        "cd_img": "shopify:\/\/shop_images\/poster-07.png"
       }
     },
     "8afe6eb8-387f-44bb-9bf9-374fef0ee582": {
@@ -308,7 +308,7 @@
       "type": "dividar",
       "settings": {
         "container": "container-xxl",
-        "border_color": "#F6F7FB",
+        "border_color": "#f6f7fb",
         "padding_top": 10,
         "padding_bottom": 10
       }
@@ -504,22 +504,25 @@
         "template--21547775754526__7785ed90-7d44-40cc-99c3-02a1340bb830-whyus-1": {
           "type": "whyus",
           "settings": {
-            "wstitle": "<p>Fast & Secure Delivery<\/p>",
-            "wscontent": ""
+            "wstitle": "<p><strong>Fast & Secure Delivery<\/strong><\/p>",
+            "wscontent": "Tell about your service.",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
           }
         },
         "7b449a9a-8ef9-47d6-b509-63abe9ff14a8": {
           "type": "whyus",
           "settings": {
-            "wstitle": "<p>Fast & Secure Delivery<\/p>",
-            "wscontent": ""
+            "wstitle": "<p><strong>Money Back Guarantee<\/strong><\/p>",
+            "wscontent": "Within 10 days.",
+            "ws_img": "shopify:\/\/shop_images\/service5.png"
           }
         },
         "21597afe-01e7-4f8d-9f8d-d9f98ec19230": {
           "type": "whyus",
           "settings": {
-            "wstitle": "<p>Fast & Secure Delivery<\/p>",
-            "wscontent": ""
+            "wstitle": "<p><strong>24 Hour Return Policy<\/strong><\/p>",
+            "wscontent": "No question ask.",
+            "ws_img": "shopify:\/\/shop_images\/service1.png"
           }
         },
         "d37c8bcd-5009-4379-baeb-a74408e35146": {
