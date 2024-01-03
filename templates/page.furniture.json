@@ -529,7 +529,8 @@
           "type": "whyus",
           "settings": {
             "wstitle": "<p><strong>Pro Quality Support<\/strong><\/p>",
-            "wscontent": "24\/7 Live support."
+            "wscontent": "24\/7 Live support.",
+            "ws_img": "shopify:\/\/shop_images\/service4.png"
           }
         },
         "69fdeb77-b11f-4ee4-af9d-23a3b4fee9a6": {
