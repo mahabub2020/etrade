@@ -274,12 +274,12 @@
         "is_countdown": false,
         "end_time": "2024-05-22",
         "section_btn_txt": "View All Deals",
-        "section_btn_url": "",
+        "section_btn_url": "shopify:\/\/collections",
         "product_collection": "jewellery",
         "excluded_products": [
 
         ],
-        "number_of_products_to_show": 8,
+        "number_of_products_to_show": 12,
         "product_layout": "1",
         "col_xl": "3",
         "col_lg": "4",
