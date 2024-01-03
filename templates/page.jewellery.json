@@ -149,10 +149,10 @@
       "settings": {
         "is_section_title": true,
         "title_layout": "style_2",
-        "title": "New Arrivals",
-        "sub_title": "Recently Viewed",
+        "title": "Best Sellers",
+        "sub_title": "This Month",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
-        "is_countdown": true,
+        "is_countdown": false,
         "end_time": "2024-05-22",
         "product_collection": "jewellery",
         "number_of_products_to_show": 12,
@@ -185,18 +185,10 @@
       "settings": {
         "collection_style": "cat_style_1",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
-        "sub_title": "Before Title",
-        "section_title": "Featured Categories",
+        "sub_title": "collection",
+        "section_title": "Browse by Category",
         "featured_cat_collection": [
-          "accessories",
-          "arm-chair",
-          "baby-s",
-          "camera-photo",
-          "coats-sweater",
-          "computers",
-          "deals",
-          "desk-table",
-          "electronics"
+          "jewellery"
         ],
         "autoplay_true": false,
         "autoplay_speed": 5000,
