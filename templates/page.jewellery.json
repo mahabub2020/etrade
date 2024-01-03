@@ -268,8 +268,8 @@
       "settings": {
         "is_section_title": true,
         "title_layout": "style_2",
-        "title": "Recently Viewed",
-        "sub_title": "Recently Viewed",
+        "title": "Explore our Products",
+        "sub_title": "Our Products",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "is_countdown": false,
         "end_time": "2024-05-22",
