@@ -1,8 +1,9 @@
 <ul class="action-list"> 
-    {% render 'header-search-box' %} 
-    {% render 'header-search-mobile' %} 
-    {% render 'header-cart-icon' %} 
-    {% render 'header-wishlist-icon' %}  
-    {% render 'header-account-icon' %} 
-    {% render 'header-mobile-nav-toggler' %}  
+{%- liquid render 'header-search-box'
+    render 'header-search-mobile'
+    render 'header-cart-icon'
+    render 'header-wishlist-icon' 
+    render 'header-account-icon'
+    render 'header-mobile-nav-toggler' 
+    -%} 
 </ul>

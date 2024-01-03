@@ -7,7 +7,14 @@
         {% if linklists[child_list_handle] and linklists[child_list_handle].links.size > 0 %}
         <li class="menu-item-has-children {% if link.active %} is-active {% endif %}">
             <a href="{{ link.url }}" title="{{ link.title }}"  class="nav-link">
-                {{ link.title }} 
+              {% if link.object_type == 'collection' %}
+                {% assign collection = link.object | collection %}
+                {% if collection.image %}
+                  <img src="{{ collection.image.src | image_url: width: 300 }}" alt="{{ collection.title }}" />
+                {% endif %}
+              {% endif %}
+              
+              {{ link.title }} 
               </a>  
         </li>
         {% else %}
@@ -20,3 +27,5 @@
         {% endfor %}
     </ul> 
 </nav>
+
+ 
