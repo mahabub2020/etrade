@@ -196,7 +196,7 @@
     "863a3ac1-45d6-4578-898d-a81ed96d24e1": {
       "type": "section-countdown",
       "settings": {
-        "is_animations": true,
+        "is_animations": false,
         "cd_title": "Enhance Your Music Experience",
         "cd_sub_title": "Don't Miss!!",
         "end_time": "2024-05-22",

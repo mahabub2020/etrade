@@ -26,9 +26,9 @@
       "settings": {
         "hero_title": "Exclusive Design Collection",
         "hero_sub_title": "Hot Deal In Diamond",
-        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
-        "hero_content": "Casual line with short design in 100% suede Diamond",
-        "hero_btn_txt": "Check it Out!",
+        "sub_title_icon": "<i class=\"fas fa-fire\"><\/i>",
+        "hero_content": "Casual line with short design in <br>100% suede Diamond",
+        "hero_btn_txt": "Shop Now",
         "hero_btn_url": "shopify:\/\/products\/women-s-winter-mid-length-thick-warm-faux-lamb-wool",
         "hero_img": "shopify:\/\/shop_images\/bg-image-8.jpg",
         "hero_title_color": "#292930",
