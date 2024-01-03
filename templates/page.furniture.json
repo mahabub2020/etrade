@@ -467,7 +467,7 @@
         "is_section_title": true,
         "title_layout": "style_2",
         "title": "New Arrivals",
-        "sub_title": "Recently Viewed",
+        "sub_title": "This Week’s",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "is_countdown": false,
         "end_time": "2024-05-22",
