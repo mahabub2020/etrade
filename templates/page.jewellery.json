@@ -321,12 +321,12 @@
       "settings": {
         "is_section_title": true,
         "title_layout": "style_2",
-        "title": "New Arrivals",
-        "sub_title": "Recently Viewed",
+        "title": "Featured Product",
+        "sub_title": "This Week’s",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "is_countdown": false,
         "end_time": "2024-05-22",
-        "product_collection": "fashion",
+        "product_collection": "jewellery",
         "number_of_products_to_show": 8,
         "excluded_products": [
 
