@@ -225,6 +225,7 @@
         "template--21762357559582__76bab7b5-46a2-4bbf-8411-f16f19b28166-section_padding-1"
       ],
       "settings": {
+        "list_layout": "style_2",
         "is_section_title": true,
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "title": "Recently Viewed",
@@ -234,7 +235,7 @@
 
         ],
         "number_of_products_to_show": 8,
-        "col_xl": "1",
+        "col_xl": "3",
         "col_lg": "2",
         "col_md": "2",
         "col_sm": "1",
