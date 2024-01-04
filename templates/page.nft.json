@@ -171,9 +171,9 @@
         "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
         "section_title": "Choose Your Favourite",
         "section_sub_title": "Why Us",
-        "wulayout": "layout1",
-        "col_xl": "5",
-        "col_lg": "4",
+        "wulayout": "layout3",
+        "col_xl": "4",
+        "col_lg": "3",
         "col_md": "3",
         "col_sm": "2",
         "col_mobile": "1"
