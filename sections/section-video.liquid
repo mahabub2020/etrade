@@ -12,7 +12,17 @@
           <div class="row justify-content-center">
               <div class="col-lg-8">
                   <div class="video-banner">
-                    <img src="{% if section.settings.video_img %}{{ section.settings.video_img | img_url: '850x500' }}{% else %}http:\/\/via.placeholder.com\/850x500{% endif %}" alt="{{ section.settings.video_img.alt }}"> 
+                    <img 
+                      width="{{ image.width }}"
+                      height="{{ image.height }}"
+                      loading="lazy"
+                      src="
+                      {% if section.settings.video_img %}
+                        {{ section.settings.video_img | image_url: width: 850, height: 500 }}
+                      {% else %}
+                        {{ '850x500.png' | image_url: width: 850, height: 500 }}
+                      {% endif %}" 
+                      alt="{{ section.settings.video_img.alt }}"> 
 
                       {% if section.settings.video_url %} 
                         <div class="popup-video-icon">
