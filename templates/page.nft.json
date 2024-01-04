@@ -139,6 +139,42 @@
         "btn_url": ""
       }
     },
+    "76bab7b5-46a2-4bbf-8411-f16f19b28166": {
+      "type": "section-product-list",
+      "blocks": {
+        "template--21762357559582__76bab7b5-46a2-4bbf-8411-f16f19b28166-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21762357559582__76bab7b5-46a2-4bbf-8411-f16f19b28166-section_padding-1"
+      ],
+      "settings": {
+        "list_layout": "style_2",
+        "is_section_title": true,
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "title": "Recently Viewed",
+        "subtitle": "Recently Viewed",
+        "product_collection": "nft",
+        "excluded_products": [
+
+        ],
+        "number_of_products_to_show": 8,
+        "col_xl": "3",
+        "col_lg": "2",
+        "col_md": "2",
+        "col_sm": "1",
+        "col_mobile": "1"
+      }
+    },
     "9eaac3cc-a60f-4a07-b885-da8107607793": {
       "type": "section-why-us",
       "blocks": {
@@ -203,42 +239,6 @@
         "col_lg": "3",
         "col_md": "3",
         "col_sm": "2",
-        "col_mobile": "1"
-      }
-    },
-    "76bab7b5-46a2-4bbf-8411-f16f19b28166": {
-      "type": "section-product-list",
-      "blocks": {
-        "template--21762357559582__76bab7b5-46a2-4bbf-8411-f16f19b28166-section_padding-1": {
-          "type": "section_padding",
-          "settings": {
-            "section_padding_top": 60,
-            "section_padding_bottom": 60,
-            "section_padding_top_md": 46,
-            "section_padding_bottom_md": 46,
-            "section_padding_top_xs": 46,
-            "section_padding_bottom_xs": 46
-          }
-        }
-      },
-      "block_order": [
-        "template--21762357559582__76bab7b5-46a2-4bbf-8411-f16f19b28166-section_padding-1"
-      ],
-      "settings": {
-        "list_layout": "style_2",
-        "is_section_title": true,
-        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
-        "title": "Recently Viewed",
-        "subtitle": "Recently Viewed",
-        "product_collection": "nft",
-        "excluded_products": [
-
-        ],
-        "number_of_products_to_show": 8,
-        "col_xl": "3",
-        "col_lg": "2",
-        "col_md": "2",
-        "col_sm": "1",
         "col_mobile": "1"
       }
     },
@@ -321,8 +321,8 @@
     "97366287-b518-4189-a954-da52687a999b",
     "fed6e484-3850-4859-9020-de7bab54104f",
     "3ab5a12b-5ecd-4259-b9af-c06bba773041",
-    "9eaac3cc-a60f-4a07-b885-da8107607793",
     "76bab7b5-46a2-4bbf-8411-f16f19b28166",
+    "9eaac3cc-a60f-4a07-b885-da8107607793",
     "e8fd1c45-b7f1-4012-9fb4-1a9f9dfb1533",
     "6ee71414-233d-45bf-bbce-59a06070d115",
     "320ee3c6-dd0d-411d-aec1-2d0181e94c82"
