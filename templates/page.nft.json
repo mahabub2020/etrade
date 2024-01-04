@@ -113,22 +113,6 @@
     },
     "3ab5a12b-5ecd-4259-b9af-c06bba773041": {
       "type": "section-product-grid",
-      "blocks": {
-        "template--21554335482142__3ab5a12b-5ecd-4259-b9af-c06bba773041-section_padding-1": {
-          "type": "section_padding",
-          "settings": {
-            "section_padding_top": 60,
-            "section_padding_bottom": 60,
-            "section_padding_top_md": 46,
-            "section_padding_bottom_md": 46,
-            "section_padding_top_xs": 46,
-            "section_padding_bottom_xs": 46
-          }
-        }
-      },
-      "block_order": [
-        "template--21554335482142__3ab5a12b-5ecd-4259-b9af-c06bba773041-section_padding-1"
-      ],
       "settings": {
         "is_section_title": true,
         "title_layout": "style_2",
@@ -155,24 +139,48 @@
         "btn_url": ""
       }
     },
-    "e8fd1c45-b7f1-4012-9fb4-1a9f9dfb1533": {
-      "type": "section-video",
+    "9eaac3cc-a60f-4a07-b885-da8107607793": {
+      "type": "section-why-us",
       "blocks": {
-        "template--21762357559582__e8fd1c45-b7f1-4012-9fb4-1a9f9dfb1533-section_padding-1": {
+        "template--21762357559582__9eaac3cc-a60f-4a07-b885-da8107607793-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Choose Your Favourite<\/strong><\/p>",
+            "wscontent": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quas expedita veritatis ipsum, culpa, asperiores.",
+            "ws_img": "shopify:\/\/shop_images\/choose.png"
+          }
+        },
+        "template--21762357559582__9eaac3cc-a60f-4a07-b885-da8107607793-section_padding-1": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 80,
-            "section_padding_bottom": 80,
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
             "section_padding_top_md": 60,
             "section_padding_bottom_md": 60,
-            "section_padding_top_xs": 60,
-            "section_padding_bottom_xs": 60
+            "section_padding_top_xs": 40,
+            "section_padding_bottom_xs": 40
           }
         }
       },
       "block_order": [
-        "template--21762357559582__e8fd1c45-b7f1-4012-9fb4-1a9f9dfb1533-section_padding-1"
+        "template--21762357559582__9eaac3cc-a60f-4a07-b885-da8107607793-whyus-1",
+        "template--21762357559582__9eaac3cc-a60f-4a07-b885-da8107607793-section_padding-1"
       ],
+      "settings": {
+        "is_section_title": true,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
+        "section_title": "Choose Your Favourite",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout1",
+        "col_xl": "5",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
+    },
+    "e8fd1c45-b7f1-4012-9fb4-1a9f9dfb1533": {
+      "type": "section-video",
       "settings": {
         "section_title": "Meet The Greater",
         "section_sub_title": "Video",
@@ -250,6 +258,7 @@
     "97366287-b518-4189-a954-da52687a999b",
     "fed6e484-3850-4859-9020-de7bab54104f",
     "3ab5a12b-5ecd-4259-b9af-c06bba773041",
+    "9eaac3cc-a60f-4a07-b885-da8107607793",
     "e8fd1c45-b7f1-4012-9fb4-1a9f9dfb1533",
     "6ee71414-233d-45bf-bbce-59a06070d115",
     "320ee3c6-dd0d-411d-aec1-2d0181e94c82"
