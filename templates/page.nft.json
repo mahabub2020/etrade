@@ -195,9 +195,9 @@
       ],
       "settings": {
         "is_section_title": true,
-        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
-        "section_title": "Choose Your Favourite",
-        "section_sub_title": "Why Us",
+        "sub_title_icon": "",
+        "section_title": "How to buy NFTs",
+        "section_sub_title": "",
         "wulayout": "layout3",
         "col_xl": "4",
         "col_lg": "3",
