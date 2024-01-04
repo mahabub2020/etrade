@@ -1,3 +1,4 @@
+{% assign img_thumb = '850x500.png' | asset_url %}
 <div id="section-{{ section.id }}" class="video-banner-area">
   <div class="container">
       <div class="product-area pb--80">
@@ -20,7 +21,7 @@
                       {% if section.settings.video_img %}
                         {{ section.settings.video_img | image_url: width: 850, height: 500 }}
                       {% else %}
-                        {{ '850x500.png' | image_url: width: 850, height: 500 }}
+                        {{ img_thumb | image_url: width: 850 }}
                       {% endif %}" 
                       alt="{{ section.settings.video_img.alt }}"> 
 
