@@ -16,7 +16,7 @@
                 {% endif %}    
             </div>
           {% endif %}
-          <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
+        <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
            
           {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show offset: section.settings.offset_product %}
              
@@ -28,6 +28,8 @@
                 {% endfor %} 
                 
                 {% if ex == 0 %}
+                  
+                {% if section.settings.title_layout == 'style_1' %}
                   
               <div class="col">
                   <div class="axil-product-list">
@@ -76,6 +78,46 @@
                       </div>
                   </div>
               </div>
+              {% elsif section.settings.title_layout == 'style_2' %}
+ 
+
+              <div class="axil-product-list product-list-style-2">
+				        <div class="thumbnail">
+                  <a href="{{ product.url }}">
+                    {% if product.featured_image %}
+                      <img
+                        width="300"
+                        height="300"
+                        src="{{ product.featured_image | image_url: width: 120, height: 120 }}"
+                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                        alt="{{ product.title | escape }}"
+                        loading="lazy">
+                    {% else %}
+                      {{ 'image' | placeholder_svg_tag }}
+                    {% endif %}
+                  </a>
+				        </div>
+				        <div class="product-content">
+                  <h6 class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></h6>
+
+                <div class="product-price-variant"> 
+                    <span class="woocommerce-Price-currencySymbol">
+                     {{ product.price | money }}
+                    </span>
+                </div>
+ 
+
+				            <div class="product-cart">
+				            	 <a title="Buy Product" href="#"  class="cart-btn button non-wooc-toltp product_type_external"><span>Buy Product</span>
+                      </a>	
+				              
+				            </div>
+				        </div>
+			    	</div>
+
+
+            {% endif %}
+
             {% endif %}
           {% endfor %} 
           </div>
@@ -83,6 +125,9 @@
   </div>
 </div>
 <!-- End Most Sold Product Area  -->
+
+
+
 
 {%- style -%}
 
@@ -137,6 +182,22 @@
 {
   "name": "Product List",
   "settings": [
+    {
+      "type": "select",
+      "id": "list_layout",
+      "default": "style_2",
+      "label": "List Layout",
+      "options": [
+        {
+          "label": "Layout 1",
+          "value": "style_1"
+        },
+        {
+          "label": "Layout 2",
+          "value": "style_2"
+        }
+      ]
+    },
     {
       "type": "checkbox",
       "id": "is_section_title",
