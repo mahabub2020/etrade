@@ -21,7 +21,7 @@
                       {% if section.settings.video_img %}
                         {{ section.settings.video_img | image_url: width: 850, height: 500 }}
                       {% else %}
-                        {{ img_thumb | image_url: width: 850 }}
+                        {{ img_thumb }}
                       {% endif %}" 
                       alt="{{ section.settings.video_img.alt }}"> 
 
