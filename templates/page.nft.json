@@ -155,6 +155,30 @@
         "btn_url": ""
       }
     },
+    "e8fd1c45-b7f1-4012-9fb4-1a9f9dfb1533": {
+      "type": "section-video",
+      "blocks": {
+        "template--21762357559582__e8fd1c45-b7f1-4012-9fb4-1a9f9dfb1533-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 80,
+            "section_padding_bottom": 80,
+            "section_padding_top_md": 60,
+            "section_padding_bottom_md": 60,
+            "section_padding_top_xs": 60,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21762357559582__e8fd1c45-b7f1-4012-9fb4-1a9f9dfb1533-section_padding-1"
+      ],
+      "settings": {
+        "section_title": "Meet The Greater",
+        "section_sub_title": "Video",
+        "video_url": ""
+      }
+    },
     "6ee71414-233d-45bf-bbce-59a06070d115": {
       "type": "latest-blog",
       "blocks": {
@@ -225,6 +249,7 @@
     "97366287-b518-4189-a954-da52687a999b",
     "fed6e484-3850-4859-9020-de7bab54104f",
     "3ab5a12b-5ecd-4259-b9af-c06bba773041",
+    "e8fd1c45-b7f1-4012-9fb4-1a9f9dfb1533",
     "6ee71414-233d-45bf-bbce-59a06070d115",
     "320ee3c6-dd0d-411d-aec1-2d0181e94c82"
   ]
