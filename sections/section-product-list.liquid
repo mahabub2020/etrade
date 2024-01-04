@@ -17,13 +17,16 @@
             </div>
           {% endif %}
           <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
-            {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show offset: section.settings.offset_product  %}
+           
+          {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show offset: section.settings.offset_product %}
+             
               {% assign ex = 0 %}
                 {% for ex_product in section.settings.excluded_products %}
                   {% if product.id == ex_product.id %}
                     {% assign ex = 1 %}
                   {% endif %}
                 {% endfor %} 
+                
                 {% if ex == 0 %}
                   
               <div class="col">
@@ -32,9 +35,11 @@
                         <a href="{{ product.url }}">
                           {% if product.featured_image %}
                             <img
+                              width="300"
+                              height="300"
                               src="{{ product.featured_image | image_url: width: 300, height: 300 }}"
                               class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                              alt="{{ item.title | escape }}"
+                              alt="{{ product.title | escape }}"
                               loading="lazy">
                           {% else %}
                             {{ 'image' | placeholder_svg_tag }}
@@ -92,7 +97,7 @@
     padding-bottom: {{ block.settings.section_padding_bottom }}px;
     {%- when 'section_background' -%}    
     background: {{ block.settings.section_bg_color }} 
-      {%- if block.settings.section_bg_image -%}url("{{ block.settings.section_bg_image | img_url: 'master' }}"){%- endif -%} no-repeat scroll center center / cover;
+      {%- if block.settings.section_bg_image -%}url("{{ block.settings.section_bg_image | image_url }}"){%- endif -%} no-repeat scroll center center / cover;
     {%- endcase -%}
     {%- endfor -%}
   }
@@ -135,7 +140,8 @@
     {
       "type": "checkbox",
       "id": "is_section_title",
-      "label": "Enable Section Title"
+      "label": "Enable Section Title",
+      "default": true
     },
     {
       "type": "html",
@@ -149,16 +155,16 @@
       "id": "title",
       "default": "Recently Viewed",
       "label": "Title"
-    },  
+    },
     {
       "type": "text",
       "id": "subtitle",
       "default": "Recently Viewed",
       "label": "Sub Title"
-    }, 
+    },
     {
       "type": "collection",
-      "id": "product_collection", 
+      "id": "product_collection",
       "label": "Collection"
     },
     {
@@ -179,7 +185,7 @@
       "step": 1,
       "default": 8,
       "label": "Number of products to show"
-    }, 
+    },
     {
       "type": "select",
       "id": "col_xl",
@@ -201,7 +207,7 @@
         {
           "label": "4 Col",
           "value": "4"
-        }, 
+        },
         {
           "label": "5 Col",
           "value": "5"
@@ -233,7 +239,7 @@
         {
           "label": "4 Col",
           "value": "4"
-        }, 
+        },
         {
           "label": "5 Col",
           "value": "5"
@@ -265,7 +271,7 @@
         {
           "label": "4 Col",
           "value": "4"
-        }, 
+        },
         {
           "label": "5 Col",
           "value": "5"
@@ -297,7 +303,7 @@
         {
           "label": "4 Col",
           "value": "4"
-        }, 
+        },
         {
           "label": "5 Col",
           "value": "5"
@@ -329,7 +335,7 @@
         {
           "label": "4 Col",
           "value": "4"
-        }, 
+        },
         {
           "label": "5 Col",
           "value": "5"
@@ -341,7 +347,7 @@
       ]
     }
   ],
-  "blocks": [ 
+  "blocks": [
     {
       "type": "section_padding",
       "name": "Section Padding",
@@ -519,7 +525,6 @@
       ]
     }
   ],
-
   "presets": [
     {
       "name": "Product List",
@@ -527,7 +532,7 @@
         {
           "type": "section_padding"
         }
-      ]  
+      ]
     }
   ]
 }
