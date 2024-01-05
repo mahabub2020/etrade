@@ -8,7 +8,7 @@
         "product_per_page": 8,
         "loading_style": "load_more",
         "enable_sorting": true,
-        "filter_style": "default"
+        "filter_style": "ajax"
       }
     }
   },
