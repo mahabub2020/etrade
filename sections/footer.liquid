@@ -1,9 +1,27 @@
-<footer class="axil-footer-area footer-style-2" id="section-{{ section.id }}">
-  {% include 'footer-top' %}
-  {% include 'footer-bottom' %}
+
+{%- if  page.metafields.custom.footer_layout -%}
+  {%- assign footer_style =  page.metafields.custom.footer_layout.value -%}
+{% else %}
+  {%- assign footer_style =  settings.footer_layout -%} 
+{%- endif -%}
+
+{% if footer_style == 'footer_layout_1' %} 
+
+  <footer class="axil-footer-area footer-style-3 footer-dark" id="section-{{ section.id }}"> 
+      {% render 'footer-top-1' %}
+      {% render 'footer-bottom-1' %} 
 </footer>
 
-{% render 'quick-view-modal' %}
+{% elsif footer_style == 'footer_layout_2' %}
+
+<footer class="axil-footer-area footer-style-2" id="section-{{ section.id }}">
+  {% render 'footer-top' %}
+  {% render 'footer-bottom' %}
+</footer>
+
+{% endif %}  
+
+{% render 'quick-view-modal' %} 
 
 <script>
   $(".cart-plus-minus").prepend('<div class=" qtybtn quantity-btn quantity-minus dec qtybutton">-</div>');
@@ -25,321 +43,253 @@
 
 
 {% schema %}
-  {
-    "name": "Footer",
-    "settings": [
-      {
-        "type": "checkbox",
-        "id": "footer_enable",
-        "label": "Footer Enable",
-        "default": true
-      },
-      {
-        "type": "radio",
-        "id": "footer_style",
-        "label": "Footer Style",
-        "options": [
-          {
-            "value": "footer_style_1",
-            "label": "Style 1"
-          },
-          {
-            "value": "footer_style_2",
-            "label": "Style 2"
-          },
-          {
-            "value": "footer_style_3",
-            "label": "Style 3"
-          },
-          {
-            "value": "footer_style_4",
-            "label": "Style 4"
-          }, {
-            "value": "footer_style_5",
-            "label": "Style 5"
-          }, {
-            "value": "footer_style_6",
-            "label": "Style 6"
-          }
-        ],
-
-        "default": "footer_style_1"
-      },
-      {
-        "type": "header",
-        "content": "Footer Top"
-      },
-      {
-        "type": "checkbox",
-        "id": "footer_top_enable",
-        "label": "Footer Top Enable",
-        "default": true
-      }, {
-        "type": "header",
-        "content": "Footer Bottom"
-      }, {
-        "type": "checkbox",
-        "id": "footer_bottom_enable",
-        "label": "Footer bottom Enable",
-        "default": true
-      }, {
-        "type": "richtext",
-        "id": "copy_ritht_text",
-        "label": "CopyRight Text",
-        "default": "<p>© 2023. All rights reserved by <a href='#' target='_blank' rel='noopener'>Your Company.</a></p>"
-      }, {
-        "type": "header",
-        "content": "Footer Social"
-      }, {
-        "type": "checkbox",
-        "id": "footer_social_enable",
-        "label": "Footer Social Enable",
-        "default": true
-      }, {
-        "type": "header",
-        "content": "Payment Icons"
-      }, {
-        "type": "text",
-        "id": "payment_title",
-        "label": "Title",
-        "default": "Accept For"
-      }, {
-        "type": "image_picker",
-        "id": "payment_icon_img",
-        "label": "Payment Image"
-      }, {
-        "type": "header",
-        "content": "Social Area"
-      }, {
-        "type": "header",
-        "content": "Social 1"
-      }, {
-        "type": "text",
-        "id": "social_icon_1",
-        "label": "Icon",
-        "default": "twitter",
-        "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
-      }, {
-        "type": "url",
-        "id": "social_icon_1_url",
-        "label": "URL"
-      }, {
-        "type": "header",
-        "content": "Social 2"
-      }, {
-        "type": "text",
-        "id": "social_icon_2",
-        "label": "Icon",
-        "default": "google-plus",
-        "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
-      }, {
-        "type": "url",
-        "id": "social_icon_2_url",
-        "label": "URL"
-      }, {
-        "type": "header",
-        "content": "Social 3"
-      }, {
-        "type": "text",
-        "id": "social_icon_3",
-        "label": "Icon",
-        "default": "facebook",
-        "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
-      }, {
-        "type": "url",
-        "id": "social_icon_3_url",
-        "label": "URL"
-      }, {
-        "type": "header",
-        "content": "Social 4"
-      }, {
-        "type": "text",
-        "id": "social_icon_4",
-        "label": "Icon",
-        "default": "youtube",
-        "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
-      }, {
-        "type": "url",
-        "id": "social_icon_4_url",
-        "label": "URL"
-      }, {
-        "type": "header",
-        "content": "Social 5"
-      }, {
-        "type": "text",
-        "id": "social_icon_5",
-        "label": "Icon",
-        "default": "instagram",
-        "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
-      }, {
-        "type": "url",
-        "id": "social_icon_5_url",
-        "label": "URL"
-      }
-    ],
-
-    "blocks": [
-      {
-        "type": "contact_about",
-        "name": "Contact About",
-        "settings": [
-          {
-            "type": "text",
-            "id": "footer_about_title",
-            "label": "About Title",
-            "default": "Company"
-          },
-          {
-            "type": "textarea",
-            "id": "address_descrption",
-            "label": "Address Description",
-            "default": "685 Market Street, Las Vegas, LA 95820, United States."
-          },
-          {
-            "type": "text",
-            "id": "footer_about_coloum",
-            "label": "Footer About Column Control",
-            "default": "3",
-            "info": "Follow Bootstrap Column"
-          },
-          {
-            "type": "text",
-            "id": "footer_about_coloum_mobile",
-            "label": "Footer About Column Contro Mobile",
-            "default": "6",
-            "info": "Follow Bootstrap Column"
-          }, {
-            "type": "text",
-            "id": "about_phone",
-            "label": "Phone",
-            "default": "(+01) 850-315-5862"
-          }, {
-            "type": "text",
-            "id": "about_email",
-            "label": "Email",
-            "default": "example@domain.com"
-          }
-        ]
-      }, {
-        "type": "footer_menu",
-        "name": "Menu",
-        "settings": [
-          {
-            "type": "text",
-            "id": "footer_menu_coloum",
-            "label": "Menu Column Control",
-            "default": "3",
-            "info": "Follow Bootstrap Column"
-          },
-
-          {
-            "type": "text",
-            "id": "footer_menu_title",
-            "label": "Menu Title",
-            "default": "Quick Link"
-          },
-          {
-            "type": "link_list",
-            "id": "footer_menu_handle",
-            "label": "Select Menu"
-          },
-          {
-            "type": "color",
-            "id": "title_color",
-            "label": "Title Color",
-            "default": "#ffffff"
-          }, {
-            "type": "color",
-            "id": "title_border_color",
-            "label": "Title Border Color",
-            "default": "#cf987e"
-          }, {
-            "type": "color",
-            "id": "menu_color",
-            "label": "Menu Color",
-            "default": "#8a8a8a"
-          }, {
-            "type": "color",
-            "id": "menu_hover_color",
-            "label": "Menu Hover Color",
-            "default": "#cf987e"
-          }
-        ]
-      }, {
-        "type": "download_app",
-        "name": "DownloadApp",
-        "settings": [
-          {
-            "type": "text",
-            "id": "app_title",
-            "label": "Download App Title",
-            "default": "Download App"
-          },
-          {
-            "type": "textarea",
-            "id": "app_descrption",
-            "label": "App Description",
-            "default": "Save $3 With App & New User only"
-          },
-          {
-            "type": "text",
-            "id": "footer_app_coloum",
-            "label": "Footer App Column Control",
-            "default": "3",
-            "info": "Follow Bootstrap Column"
-          },
-          {
-            "type": "text",
-            "id": "footer_app_coloum_mobile",
-            "label": "Footer App Column Contro Mobile",
-            "default": "6",
-            "info": "Follow Bootstrap Column"
-          }, {
-            "type": "header",
-            "content": "App Store"
-          }, {
-            "type": "image_picker",
-            "id": "qr_code_img",
-            "label": "QR Code"
-          }, {
-            "type": "image_picker",
-            "id": "app_store1",
-            "label": "App Store 1"
-          }, {
-            "type": "url",
-            "id": "app_url1",
-            "label": "App URL"
-          }, {
-            "type": "image_picker",
-            "id": "app_store2",
-            "label": "App Store 2"
-          }, {
-            "type": "url",
-            "id": "app_url2",
-            "label": "App URL"
-          }, {
-            "type": "color",
-            "id": "title_color",
-            "label": "Title Color",
-            "default": "#ffffff"
-          }, {
-            "type": "color",
-            "id": "title_border_color",
-            "label": "Title Border Color",
-            "default": "#cf987e"
-          }, {
-            "type": "color",
-            "id": "icon_2_color",
-            "label": "Content Icon Color",
-            "default": "#8a8a8a"
-          }, {
-            "type": "color",
-            "id": "content_2_color",
-            "label": "Content Text Color",
-            "default": "#8a8a8a"
-          }
-        ]
-      }
-    ]
-  }
+{
+  "name": "Footer",
+  "blocks": [
+    {
+      "type": "contact_about",
+      "name": "Contact About",
+      "settings": [
+        {
+          "type": "text",
+          "id": "footer_about_title",
+          "label": "About Title",
+          "default": "Company"
+        },
+        {
+          "type": "textarea",
+          "id": "address_descrption",
+          "label": "Address Description",
+          "default": "685 Market Street, Las Vegas, LA 95820, United States."
+        },
+        {
+          "type": "text",
+          "id": "footer_about_coloum",
+          "label": "Footer About Column Control",
+          "default": "3",
+          "info": "Follow Bootstrap Column"
+        },
+        {
+          "type": "text",
+          "id": "footer_about_coloum_mobile",
+          "label": "Footer About Column Contro Mobile",
+          "default": "6",
+          "info": "Follow Bootstrap Column"
+        },
+        {
+          "type": "text",
+          "id": "about_phone",
+          "label": "Phone",
+          "default": "(+01) 850-315-5862"
+        },
+        {
+          "type": "text",
+          "id": "about_email",
+          "label": "Email",
+          "default": "example@domain.com"
+        }
+      ]
+    },
+    {
+      "type": "footer_menu",
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "footer_menu_coloum",
+          "label": "Menu Column Control",
+          "default": "3",
+          "info": "Follow Bootstrap Column"
+        },
+        {
+          "type": "text",
+          "id": "footer_menu_title",
+          "label": "Menu Title",
+          "default": "Quick Link"
+        },
+        {
+          "type": "link_list",
+          "id": "footer_menu_handle",
+          "label": "Select Menu"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "title_border_color",
+          "label": "Title Border Color",
+          "default": "#cf987e"
+        },
+        {
+          "type": "color",
+          "id": "menu_color",
+          "label": "Menu Color",
+          "default": "#8a8a8a"
+        },
+        {
+          "type": "color",
+          "id": "menu_hover_color",
+          "label": "Menu Hover Color",
+          "default": "#cf987e"
+        }
+      ]
+    },
+    {
+      "type": "footer_menu2",
+      "name": "Footer Menu 2",
+      "settings": [
+        {
+          "type": "text",
+          "id": "footer_menu_coloum",
+          "label": "Menu Column Control",
+          "default": "3",
+          "info": "Follow Bootstrap Column"
+        },
+        {
+          "type": "text",
+          "id": "footer_menu_title",
+          "label": "Menu Title",
+          "default": "Quick Link"
+        },
+        {
+          "type": "link_list",
+          "id": "footer_menu_handle",
+          "label": "Select Menu"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "title_border_color",
+          "label": "Title Border Color",
+          "default": "#cf987e"
+        },
+        {
+          "type": "color",
+          "id": "menu_color",
+          "label": "Menu Color",
+          "default": "#8a8a8a"
+        },
+        {
+          "type": "color",
+          "id": "menu_hover_color",
+          "label": "Menu Hover Color",
+          "default": "#cf987e"
+        }
+      ]
+    },
+    {
+      "type": "download_app",
+      "name": "DownloadApp",
+      "settings": [
+        {
+          "type": "text",
+          "id": "app_title",
+          "label": "Download App Title",
+          "default": "Download App"
+        },
+        {
+          "type": "textarea",
+          "id": "app_descrption",
+          "label": "App Description",
+          "default": "Save $3 With App & New User only"
+        },
+        {
+          "type": "text",
+          "id": "footer_app_coloum",
+          "label": "Footer App Column Control",
+          "default": "3",
+          "info": "Follow Bootstrap Column"
+        },
+        {
+          "type": "text",
+          "id": "footer_app_coloum_mobile",
+          "label": "Footer App Column Contro Mobile",
+          "default": "6",
+          "info": "Follow Bootstrap Column"
+        },
+        {
+          "type": "header",
+          "content": "App Store"
+        },
+        {
+          "type": "image_picker",
+          "id": "qr_code_img",
+          "label": "QR Code"
+        },
+        {
+          "type": "image_picker",
+          "id": "app_store1",
+          "label": "App Store 1"
+        },
+        {
+          "type": "url",
+          "id": "app_url1",
+          "label": "App URL"
+        },
+        {
+          "type": "image_picker",
+          "id": "app_store2",
+          "label": "App Store 2"
+        },
+        {
+          "type": "url",
+          "id": "app_url2",
+          "label": "App URL"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "title_border_color",
+          "label": "Title Border Color",
+          "default": "#cf987e"
+        },
+        {
+          "type": "color",
+          "id": "icon_2_color",
+          "label": "Content Icon Color",
+          "default": "#8a8a8a"
+        },
+        {
+          "type": "color",
+          "id": "content_2_color",
+          "label": "Content Text Color",
+          "default": "#8a8a8a"
+        }
+      ]
+    },
+    {
+      "type": "newsletter",
+      "limit": 1,
+      "name": "Newsletter",
+      "settings": [
+        {
+          "type": "text",
+          "id": "newsletter_title",
+          "label": "Newsletter App Title",
+          "default": "Stay Up To Date"
+        },
+        {
+          "type": "textarea",
+          "id": "newsletter_descrption",
+          "label": "newsletter Description",
+          "default": "Subscribe to our newsletter and get 20% discount offer in your first order"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}

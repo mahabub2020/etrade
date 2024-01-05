@@ -1,0 +1,393 @@
+
+{% if section.settings.layout == 'layout1' %} 
+  <div id="section-{{ section.id }}"  class="axil-about-area about-style-1 axil-section-gap ">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-4 col-lg-6 {% if section.settings.content_order != blank %} order-2 {% endif %}">
+                <div class="about-thumbnail">
+                    <div class="thumbnail">
+                      <img src="{% if section.settings.box_img %}{{ section.settings.box_img | img_url: '420x501' }}{% else %}http:\/\/via.placeholder.com\/420x501{% endif %}" alt="{{ section.settings.box_img.alt }}"> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-6 {% if section.settings.content_order != blank %} order-1 {% endif %} ">
+                <div class="about-content content-right"> 
+                    {% if section.settings.before_title != blank %}
+                      <span class="title-highlighter highlighter-primary2">
+                          {{ section.settings.before_title_icon }}  
+                          {{ section.settings.before_title | escape }}  
+                      </span>
+                    {% endif %}       
+                   
+                    {% if section.settings.title != blank %}  
+                    <h2 class="title">{{ section.settings.title | escape }} </h2>
+                    {% endif %}   
+                   
+                    {% if section.settings.sub_title != blank %}  
+                      <span class="text-heading">{{ section.settings.sub_title | escape }} </span>
+                    {% endif %}   
+                    
+                    {% if section.settings.content != blank %}  
+                      <p class="text-content">{{ section.settings.content | escape }} </p>
+                    {% endif %} 
+                    
+                    {% if section.settings.btn_url %}  
+                      <a href="{{ section.settings.btn_url }}" class="axil-btn btn-outline"> {{ section.settings.btn_txt | escape }}</a>
+                    {% endif %}   
+
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+{% else %}
+<div id="section-{{ section.id }}" class="axil-about-area about-style-2">
+  <div class="container">
+      <div class="row align-items-center mb_sm--60">
+          <div class="col-lg-5 {% if section.settings.content_order != blank %} order-lg-2 {% endif %}">
+              <div class="about-thumbnail">
+                <img src="{% if section.settings.box_img %}{{ section.settings.box_img | img_url: '420x501' }}{% else %}http:\/\/via.placeholder.com\/420x501{% endif %}" alt="{{ section.settings.box_img.alt }}"> 
+              </div>
+          </div>
+          <div class="col-lg-7 {% if section.settings.content_order != blank %}  order-lg-1 {% endif %}">
+              <div class="about-content {% if section.settings.content_order != blank %}  content-left {% else %} content-right {% endif %} ">
+
+                {% if section.settings.before_title != blank %}
+                  <span class="subtitle"> 
+                      {{ section.settings.before_title | escape }}  
+                  </span>
+                {% endif %}    
+                  {% if section.settings.title != blank %}  
+                    <h4 class="title">{{ section.settings.title | escape }} </h4>
+                  {% endif %}   
+                
+                  {% if section.settings.sub_title != blank %}  
+                    <span class="text-heading">{{ section.settings.sub_title | escape }} </span>
+                  {% endif %}   
+                  {% if section.settings.content != blank %}  
+                    <p class="text-content">{{ section.settings.content | escape }} </p>
+                  {% endif %} 
+                    
+                  {% if section.settings.btn_url %}  
+                      <a href="{{ section.settings.btn_url }}" class="axil-btn btn-outline"> {{ section.settings.btn_txt | escape }}</a>
+                  {% endif %}   
+ 
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+{% endif %}
+
+{%- style -%}
+  #section-{{ section.id }}{
+    {%- for block in section.blocks -%}
+    {%- case block.type -%}
+    {%- when 'section_margin' -%}
+    margin-top: {{ block.settings.section_margin_top }}px;
+    margin-bottom: {{ block.settings.section_margin_bottom }}px;
+    {%- when 'section_padding' -%}
+    padding-top: {{ block.settings.section_padding_top }}px;
+    padding-bottom: {{ block.settings.section_padding_bottom }}px;
+    {%- when 'section_background' -%}    
+    background: {{ block.settings.section_bg_color }} 
+      {%- if block.settings.section_bg_image -%}url("{{ block.settings.section_bg_image | img_url: 'master' }}"){%- endif -%} no-repeat scroll center center / cover;
+    {%- endcase -%}
+    {%- endfor -%}
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {% case block.type %}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_md }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_md }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_md }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_md }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+
+  @media (max-width: 767px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {%- case block.type -%}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_xs }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_xs }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_xs }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_xs }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Section Image & Content",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },  
+
+    {
+      "type": "select",
+      "id": "layout",
+      "default": "layout1",
+      "label": "Layout",
+      "options": [
+        {
+          "label": "Layout 1",
+          "value": "layout1"
+        },
+        {
+          "label": "Layout 2",
+          "value": "layout2"
+        } 
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "content_order",
+      "label": "Content Order",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "before_title",
+      "default": "About Store",
+      "label": "Before Title"
+    }, 
+    {
+      "type": "html",
+      "id": "before_title_icon",
+      "default": "<i class='fas fa-tags'></i>",
+      "label": "Before Icon",
+      "info": "Recommended Fontawesome Icon"
+    }, 
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Online shopping includes both buying things online.",
+      "label": "Title"
+    },
+    {
+      "type": "textarea",
+      "id": "sub_title",
+      "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
+      "label": "Sub Title"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "default": "Publish your eCommerce site quickly with our easy-to-use store builder— no coding required. Migrate your items from your point of sale system or turn your Instagram feed into a shopping site and start selling fast. Square Online works for all kinds of businesses—retail, restaurants, services.",
+      "label": "Sub Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "box_img",
+      "label": "Select Image"
+    },
+    {
+      "type": "text",
+      "id": "btn_txt",
+      "label": "Button Text",
+      "default": "Get In Touch"
+      
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "URL"
+    }
+      
+  ],
+ 
+  "blocks": [ 
+    {
+      "type": "section_padding",
+      "name": "Section Padding",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Large/Desktop Device"
+        },
+        {
+          "type": "range",
+          "id": "section_padding_top",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Padding Top",
+          "unit": "px",
+          "default": 60
+        },
+        {
+          "type": "range",
+          "id": "section_padding_bottom",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Padding Bottom",
+          "unit": "px",
+          "default": 60
+        },
+        {
+          "type": "header",
+          "content": "Tablet Device"
+        }, {
+          "type": "range",
+          "id": "section_padding_top_md",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Padding Top",
+          "unit": "px",
+          "default": 50
+        }, {
+          "type": "range",
+          "id": "section_padding_bottom_md",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Padding Bottom",
+          "unit": "px",
+          "default": 50
+        }, 
+        {
+          "type": "header",
+          "content": "Mobile Device"
+        },
+        {
+          "type": "range",
+          "id": "section_padding_top_xs",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Padding Top",
+          "unit": "px",
+          "default": 40
+        }, 
+        {
+          "type": "range",
+          "id": "section_padding_bottom_xs",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Padding Bottom",
+          "unit": "px",
+          "default": 40
+        }
+      ]
+    }, 
+    {
+      "type": "section_margin",
+      "name": "Section Margin",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Large/Desktop Device"
+        },
+        {
+          "type": "range",
+          "id": "section_margin_top",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Margin Top",
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "section_margin_bottom",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Margin Bottom",
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Tablet Device"
+        }, {
+          "type": "range",
+          "id": "section_margin_top_md",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Margin Top",
+          "unit": "px",
+          "default": 0
+        }, {
+          "type": "range",
+          "id": "section_margin_bottom_md",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Margin Bottom",
+          "unit": "px",
+          "default": 0
+        }, {
+          "type": "header",
+          "content": "Mobile Device"
+        }, {
+          "type": "range",
+          "id": "section_margin_top_xs",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Margin Top",
+          "unit": "px",
+          "default": 0
+        }, {
+          "type": "range",
+          "id": "section_margin_bottom_xs",
+          "min": 0,
+          "max": 150,
+          "step": 5,
+          "label": "Margin Bottom",
+          "unit": "px",
+          "default": 0
+        }
+      ]
+    }, 
+    {
+      "type": "section_background",
+      "name": "Section Background",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "section_bg_image",
+          "label": "Background Image"
+        }, {
+          "type": "color",
+          "id": "section_bg_color",
+          "label": "Background Color",
+          "default": "#ffffff"
+        }
+      ]
+    }
+  ], 
+  "presets": [
+    {
+      "name": "Section Image & Content", 
+      "blocks": [ 
+        {
+          "type": "section_padding"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %} 

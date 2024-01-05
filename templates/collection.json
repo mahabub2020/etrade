@@ -10,42 +10,9 @@
         "enable_sorting": true,
         "filter_style": "ajax"
       }
-    },
-    "511eb42d-9eeb-4155-8b26-022f60595445": {
-      "type": "product-collection",
-      "blocks": {
-        "template--21007101460758__511eb42d-9eeb-4155-8b26-022f60595445-section_padding-1": {
-          "type": "section_padding",
-          "settings": {
-            "section_padding_top": 0,
-            "section_padding_bottom": 100,
-            "section_padding_top_md": 0,
-            "section_padding_bottom_md": 80,
-            "section_padding_top_xs": 0,
-            "section_padding_bottom_xs": 60
-          }
-        }
-      },
-      "block_order": [
-        "template--21007101460758__511eb42d-9eeb-4155-8b26-022f60595445-section_padding-1"
-      ],
-      "settings": {
-        "title": "Product Collection",
-        "btn-label": "",
-        "product_collection": "etrade-products",
-        "number_of_products_to_show": 4,
-        "product_layout": "1",
-        "excluded_products": [
-
-        ],
-        "sort_by": "title",
-        "reverse_order": false,
-        "hover_img": false
-      }
     }
   },
   "order": [
-    "template",
-    "511eb42d-9eeb-4155-8b26-022f60595445"
+    "template"
   ]
 }

@@ -1,0 +1,455 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-jewellery",
+      "settings": {
+      }
+    },
+    "22e88192-3b5f-4f65-ba13-2057e13cb979": {
+      "type": "section-hero",
+      "blocks": {
+        "template--21536393560350__22e88192-3b5f-4f65-ba13-2057e13cb979-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21536393560350__22e88192-3b5f-4f65-ba13-2057e13cb979-section_padding-1"
+      ],
+      "settings": {
+        "hero_title": "Exclusive Design Collection",
+        "hero_sub_title": "Hot Deal In Diamond",
+        "sub_title_icon": "<i class=\"fas fa-fire\"><\/i>",
+        "hero_content": "Casual line with short design in <br>100% suede Diamond",
+        "hero_btn_txt": "Shop Now",
+        "hero_btn_url": "shopify:\/\/products\/women-s-winter-mid-length-thick-warm-faux-lamb-wool",
+        "hero_img": "shopify:\/\/shop_images\/bg-image-8.jpg",
+        "hero_title_color": "#292930",
+        "hero_subtitle_color": "#8c71db",
+        "hero_subtitle_icon_color": "#ffffff",
+        "hero_subtitle_icon_bg_color": "#8c71db",
+        "hero_content_color": "#777777",
+        "hero_btn_color": "#292930",
+        "hero_btn_bg_color": "#ffffff"
+      }
+    },
+    "ad5c9fc1-e834-4939-8fc6-d8409e90a8e9": {
+      "type": "section-delivery",
+      "blocks": {
+        "template--21536393560350__ad5c9fc1-e834-4939-8fc6-d8409e90a8e9-cta-1": {
+          "type": "cta",
+          "settings": {
+            "badge": "Always free",
+            "badge_title": "Rich sound, <br> for less.",
+            "badge_content": "",
+            "cta_url": "",
+            "cta_img": "shopify:\/\/shop_images\/poster-08.png",
+            "reverse_order": true
+          }
+        },
+        "18db54f7-6d04-42ec-8d25-c727a6ae329b": {
+          "type": "cta",
+          "settings": {
+            "badge": "50% Offer In Winter",
+            "badge_title": "Get VR <br> Reality Glass",
+            "badge_content": "",
+            "cta_url": "shopify:\/\/collections",
+            "cta_img": "shopify:\/\/shop_images\/poster-09-1.png",
+            "reverse_order": false
+          }
+        },
+        "e7a55327-15ef-4f59-aac8-f4341d10b7ac": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 80,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21536393560350__ad5c9fc1-e834-4939-8fc6-d8409e90a8e9-cta-1",
+        "18db54f7-6d04-42ec-8d25-c727a6ae329b",
+        "e7a55327-15ef-4f59-aac8-f4341d10b7ac"
+      ],
+      "settings": {
+        "ctalayout": "cta2"
+      }
+    },
+    "d56962db-af95-4d04-a95c-1d93e4b6d04b": {
+      "type": "section-rightstretch-product-carousel",
+      "blocks": {
+        "template--21536393560350__d56962db-af95-4d04-a95c-1d93e4b6d04b-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21536393560350__d56962db-af95-4d04-a95c-1d93e4b6d04b-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "This Week’s",
+        "is_countdown": true,
+        "end_time": "2024-05-22",
+        "product_collection": "jewellery",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "offset_product": 0,
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1",
+        "autoplay_true": true,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
+    },
+    "2c76530c-e159-4c14-ae5b-6017fe70deaf": {
+      "type": "section-product-carousel",
+      "blocks": {
+        "template--21536393560350__2c76530c-e159-4c14-ae5b-6017fe70deaf-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 0,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21536393560350__2c76530c-e159-4c14-ae5b-6017fe70deaf-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "Best Sellers",
+        "sub_title": "This Month",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
+        "product_collection": "jewellery",
+        "number_of_products_to_show": 12,
+        "excluded_products": [
+
+        ],
+        "offset_product": 0,
+        "sort_by": "title",
+        "reverse_order": true,
+        "product_layout": "1",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
+    },
+    "83ef8965-d0c8-483d-b292-5c3d9da34748": {
+      "type": "dividar",
+      "settings": {
+        "container": "container-xxl",
+        "border_color": "#f6f7fb",
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
+    },
+    "a95f8113-0318-4690-bc9e-317cb97f6d3d": {
+      "type": "collection-carousel",
+      "settings": {
+        "collection_style": "cat_style_1",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "sub_title": "collection",
+        "section_title": "Browse by Category",
+        "featured_cat_collection": [
+          "jewellery",
+          "kalabubu",
+          "nawarat-ring",
+          "slave-bracelet",
+          "base-metals",
+          "barrette",
+          "anklet",
+          "foilbacks",
+          "medallion",
+          "pledge-pins"
+        ],
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 6,
+        "product_column_lg": 5,
+        "product_column_md": 4,
+        "product_column_sm": 2
+      }
+    },
+    "9898103c-9b9c-43d6-9f56-fb19203db783": {
+      "type": "section-testimonial-carousel",
+      "blocks": {
+        "template--21536393560350__9898103c-9b9c-43d6-9f56-fb19203db783-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/image-2.png",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "8765eaef-9366-40a9-9dee-497cd0593b1a": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/image-3.png",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "1a782552-c103-4d14-bbd7-71294ebe968b": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/image-1.png",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "c7fc7d20-f78c-45e7-9a68-b9bf0625c260": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/image-4_8c4f1082-6459-41ff-a681-8ecf44bf4906.png",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--21536393560350__9898103c-9b9c-43d6-9f56-fb19203db783-review-1",
+        "8765eaef-9366-40a9-9dee-497cd0593b1a",
+        "1a782552-c103-4d14-bbd7-71294ebe968b",
+        "c7fc7d20-f78c-45e7-9a68-b9bf0625c260"
+      ],
+      "settings": {
+        "container": "container",
+        "is_section_title": true,
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "section_title": "Users Feedback",
+        "section_sub_title": "Testimonials",
+        "autoplay_true": true,
+        "autoplay_speed": 5000
+      }
+    },
+    "ddf75e43-26ce-4766-b373-bb3f513eb3c6": {
+      "type": "section-product-grid",
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "Explore our Products",
+        "sub_title": "Our Products",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
+        "section_btn_txt": "View All Deals",
+        "section_btn_url": "shopify:\/\/collections",
+        "product_collection": "jewellery",
+        "excluded_products": [
+
+        ],
+        "number_of_products_to_show": 12,
+        "product_layout": "1",
+        "col_xl": "3",
+        "col_lg": "4",
+        "col_md": "2",
+        "col_sm": "2",
+        "col_mobile": "1",
+        "isbutton_true": true,
+        "btn_txt": "View All Deals",
+        "btn_url": "shopify:\/\/collections"
+      }
+    },
+    "8f3d3696-6225-4947-b9a5-13e71e0edbe4": {
+      "type": "dividar",
+      "settings": {
+        "container": "container-xxl",
+        "border_color": "#f6f7fb",
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
+    },
+    "f4546fcc-7e57-460e-b287-8ffff880070e": {
+      "type": "section-product-carousel",
+      "blocks": {
+        "template--21536393560350__f4546fcc-7e57-460e-b287-8ffff880070e-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21536393560350__f4546fcc-7e57-460e-b287-8ffff880070e-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "Featured Product",
+        "sub_title": "This Week’s",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
+        "product_collection": "jewellery",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": true,
+        "product_layout": "2",
+        "autoplay_true": true,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
+    },
+    "dd4c46a9-068e-42d8-a315-92e50626afbd": {
+      "type": "newsletter",
+      "blocks": {
+        "template--21536393560350__dd4c46a9-068e-42d8-a315-92e50626afbd-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21536393560350__dd4c46a9-068e-42d8-a315-92e50626afbd-section_padding-1"
+      ],
+      "settings": {
+        "before_title_icon": "fas fa-envelope-open",
+        "before_title_text": "Newsletter",
+        "before_title_color": "#3577f0",
+        "title": "Get weekly update",
+        "bg_img": "shopify:\/\/shop_images\/bg-image-11.jpg",
+        "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
+      }
+    },
+    "655bbebc-25e8-48c2-9481-5b10e37bb12c": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--21536393560350__655bbebc-25e8-48c2-9481-5b10e37bb12c-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "Tell about your service.",
+            "ws_img": "shopify:\/\/shop_images\/service1.png"
+          }
+        },
+        "21fc1ceb-7ef8-42fb-8b6b-8b5d76839904": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Money Back Guarantee<\/p>",
+            "wscontent": "Within 10 days.",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
+          }
+        },
+        "f17d05ae-3ebf-43ad-b1e5-52eaba98889d": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>24 Hour Return Policy<\/p>",
+            "wscontent": "No question ask.",
+            "ws_img": "shopify:\/\/shop_images\/service5.png"
+          }
+        },
+        "541452eb-e7ff-4acd-8946-14fcaa86ddff": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Pro Quality Support<\/p>",
+            "wscontent": "24\/7 Live support.",
+            "ws_img": "shopify:\/\/shop_images\/service4.png"
+          }
+        },
+        "template--21536393560350__655bbebc-25e8-48c2-9481-5b10e37bb12c-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 20,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 20,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 20
+          }
+        }
+      },
+      "block_order": [
+        "template--21536393560350__655bbebc-25e8-48c2-9481-5b10e37bb12c-whyus-1",
+        "21fc1ceb-7ef8-42fb-8b6b-8b5d76839904",
+        "f17d05ae-3ebf-43ad-b1e5-52eaba98889d",
+        "541452eb-e7ff-4acd-8946-14fcaa86ddff",
+        "template--21536393560350__655bbebc-25e8-48c2-9481-5b10e37bb12c-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout2",
+        "col_xl": "4",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "22e88192-3b5f-4f65-ba13-2057e13cb979",
+    "ad5c9fc1-e834-4939-8fc6-d8409e90a8e9",
+    "d56962db-af95-4d04-a95c-1d93e4b6d04b",
+    "2c76530c-e159-4c14-ae5b-6017fe70deaf",
+    "83ef8965-d0c8-483d-b292-5c3d9da34748",
+    "a95f8113-0318-4690-bc9e-317cb97f6d3d",
+    "9898103c-9b9c-43d6-9f56-fb19203db783",
+    "ddf75e43-26ce-4766-b373-bb3f513eb3c6",
+    "8f3d3696-6225-4947-b9a5-13e71e0edbe4",
+    "f4546fcc-7e57-460e-b287-8ffff880070e",
+    "dd4c46a9-068e-42d8-a315-92e50626afbd",
+    "655bbebc-25e8-48c2-9481-5b10e37bb12c"
+  ]
+}

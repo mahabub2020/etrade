@@ -1,49 +1,143 @@
-<div class="py-8">
-    {% paginate blog.articles by section.settings.number_of_blog_posts %}
 
-        <h1 class="text-center text-3xl">{{ blog.title }}</h1>
-        
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {% for article in blog.articles %}
-                    <div class="w-full py-6 px-3">
-                        <div class="bg-white shadow-xl rounded-lg overflow-hidden">
-                            {% if article.image %}
-                                <a href="{{ article.url }}">
-                                    <img class="w-full h-80 object-cover" src="{{ article.image | img_url: 'medium' }}" alt="{{ article.image.alt }}">
-                                </a>
-                            {% else %}
-                                {{ 'image' | placeholder_svg_tag: 'w-full h-80 object-cover bg-gray-100' }}
-                            {% endif %}
+{%- for block in section.blocks -%}
+    {%- case block.type -%}
+        {%- when 'pagetitle' -%} 
+            <div class="axil-breadcrumb-area">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-8">
+                            <div class="inner"> 
 
-                            <div class="p-4">
-                                <h1 class="text-xl font-medium my-4">{{ article.title }}</h1>
-
-                                {% if article.excerpt.size > 0 %}
-                                    <p>{{ article.excerpt | strip_html | truncatewords: 15 }}</p>
-                                {% else %}
-                                    <p>{{ article.content | strip_html | truncatewords: 15 }}</p>
-                                {% endif %}
-
-                                <a href="{{ article.url }}" class="font-medium text-blue-600 hover:text-blue-800 my-4 block">{{ section.settings.blog_read_more }}</a>
+                            {% unless template == 'index' %}
+                                <nav class="" role="navigation" aria-label="breadcrumbs">
+                                  <ul class="breadcrumb-list axil-breadcrumb liststyle d-flex">
+                                
+                                    <li class="item-home">
+                                      <a href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}">{{ 'general.breadcrumbs.home' | t }}</a>
+                                    </li>
+                                    <li>
+                                      {% if template contains 'product' %}
+                                
+                                      {% if collection %}
+                                      {% if collection.handle %}
+                                      {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+                                      {{ collection.title | link_to: url }}
+                                      {% endif %}
+                                      {% endif %}
+                                
+                                      <span>{{ product.title }}</span>
+                                
+                                      {% elsif template contains 'collection' and collection.handle %}
+                                
+                                
+                                      {% if current_tags %}
+                                      {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+                                      {{ collection.title | link_to: url }}
+                                
+                                      <span>{{ current_tags | join: " + " }}</span>
+                                      {% else %}
+                                      <span>{{ collection.title }}</span>
+                                      {% endif %}
+                                
+                                      {% elsif template == 'blog' %}
+                                
+                                
+                                      {% if current_tags %}
+                                      {{ blog.title | link_to: blog.url }}
+                                
+                                      <span>{{ current_tags | join: " + " }}</span>
+                                      {% else %}
+                                      <span>{{ blog.title }}</span>
+                                      {% endif %}
+                                
+                                      {% elsif template == 'article' %}
+                                
+                                
+                                      {{ blog.title | link_to: blog.url }}
+                                
+                                      <span>{{ article.title }}</span>
+                                
+                                      {% elsif template contains 'page' %}
+                                
+                                
+                                      <span>{{ page.title }}</span>
+                                
+                                      {% else %}
+                                
+                                
+                                      <span>{{ page_title }}</span>
+                                
+                                      {% endif %}
+                                    </li>
+                                  </ul>
+                                </nav>
+                                {% endunless %} 
+                                {% unless template == 'product' or template == 'article' %}
+                                    <h1 class="title page-title">
+                                        {% if block.settings.page_title_txt != '' %}
+                                            {{ page_title | split: '|' | first }}
+                                        {% else %}
+                                            {{ block.settings.page_title_txt }}
+                                        {% endif %}
+                                    </h1>
+                                  {% endunless %} 
                             </div>
-
-                            
                         </div>
+                        <div class="col-lg-6 col-md-4">
+                            <div class="inner">
+                                    <div class="bradcrumb-thumb"> 
+                                    <img src="{{ block.settings.banner_img | img_url: '126x120' }}"
+                                        alt="{{ block.settings.banner_img.alt | default: shop.name }}">
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    {%- endcase -%}
+{% endfor %}
+ 
+<div class="main-wrapper">
+    <div class="site-content-wrapper"> 
+        <!-- Start Blog Area  -->
+        <div class="axil-blog-area axil-section-gapTop  axil-section-gapBottom">
+            <div class="container">
+                <div class="row row--20">
+                    <div class="col-lg-8 axil-post-wrapper">
+                        {%- paginate blog.articles by section.settings.blog_list -%}
+
+                        {%- for article in blog.articles -%}
+							<div class="item blog blog-item content-blog mt--60">
+								{%- render 'article-card',
+										article: article,
+										tags: settings.show_tags,
+										image_height: section.settings.image_height,
+										show_image: section.settings.show_image,
+										show_date: settings.show_date,
+										excerpt: settings.article_show_excerpt,
+										show_author: settings.show_author,
+										blog_list: section.settings.blog_list,
+										read_more: settings.article_show_button,
+										show_excerpt: true
+								-%}
+							</div>
+						{%- endfor -%}
+
+                        {%- if paginate.pages > 1 -%}
+                            {% render 'pagination', paginate: paginate, anchor: '' %}
+                        {%- endif -%}
+                    {%- endpaginate -%}
                         
                     </div>
-                {% endfor %}
+                    <div class="col-lg-4 col-xl-4">
+                       {%- render 'blog-sidebar' -%}
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="max-w-6xl mx-auto">
-            {% render 'pagination', pagination: paginate %}
-        </div>
-    {% endpaginate %}
+    </div>
 </div>
-
-
-
 {% schema %}
 {
     "name": "Blog",
@@ -62,7 +156,102 @@
             "max": 6,
             "label": "Blog posts per page",
             "default": 3
-        }
-    ]
+        },
+        {
+            "type": "range",
+            "id": "blog_list",
+            "label": "Is blog List",
+            "min": 1,
+            "max": 24,
+            "step": 1,
+            "default": 6
+          },
+          {
+            "type": "checkbox",
+            "id": "show_image",
+            "label": "Is Show image",
+            "default": true
+          }
+    ],
+    "blocks": [
+        {
+          "type": "pagetitle",
+          "limit": 1,
+          "name": "Page Title Section",
+
+          "settings": [
+            {
+              "type": "text",
+              "id": "page_title_txt",
+              "label": "Page Title",
+              "default": "Blog Posts"
+            },
+            {
+                "type": "image_picker",
+                "id": "banner_img",
+                "label": "Banner Image"
+        
+              }
+          ]
+        },
+        {
+            "type": "search",
+            "limit": 1,
+            "name": "Search",
+           
+            "settings": [
+              {
+                "type": "text",
+                "id": "search_title",
+                "label": "Search",
+                "default": "Search"
+              }
+            ]
+          },
+          {
+            "type": "recent_post",
+            "name": "Recent Post",
+            "limit": 1,
+            "settings": [
+              {
+                "type": "text",
+                "id": "recent_post_title",
+                "label": "Recent Post Title",
+                "default": "Recent Post"
+              },
+              {
+                "type": "range",
+                "id": "recent_post_limit_handle",
+                "min": 2,
+                "max": 10,
+                "step": 1,
+                "label": "Post Limit",
+                "default": 3
+              }
+            ]
+         },
+         {
+          "type": "tag",
+          "name": "Tag",
+          "limit": 1,
+          "settings": [
+            {
+              "type": "text",
+              "id": "blog_tags_title",
+              "label": "Tags Title",
+              "default": "Tags"
+            },
+            {
+              "type": "range",
+              "id": "blog_tags_list_limit_handle",
+              "min": 5,
+              "max": 20,
+              "step": 1,
+              "label": "Tag Limit",
+              "default": 10
+            }
+          ]
+       }  
+      ]
 }
 {% endschema %}

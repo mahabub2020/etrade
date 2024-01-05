@@ -11,24 +11,28 @@
       {% endif %}
     </div>
     <div class="row">
+      
       {% for block in section.blocks %}
         {% case block.type %}
           {% when 'megalg' %}
             <div class="col-xl-{{ block.settings.col_xl }} col-lg-{{ block.settings.col_lg }} col-sm-{{ block.settings.col_md }} col-{{ block.settings.col_sm }}">
               <div class="product-collection">
                 <div class="collection-content">
+
                   {% if block.settings.box_title != '' %}
                     <h3 class="title">{{ block.settings.box_title }}</h3>
                   {% endif %}
                   {% if block.settings.box_subtitle != '' %}
                     <p>{{ block.settings.box_subtitle }}</p>
                   {% endif %}
+
                   {% if block.settings.box_prices != '' %}
                     <div class="price-warp">
                       <span class="price-text">{{ block.settings.prices_label }}</span>
                       <span class="price">{{ block.settings.box_prices }}</span>
                     </div>
                   {% endif %}
+
                   {% if block.settings.section_btn_txt != '' %}
                     <div class="shop-btn">
                       <a href="{{ block.settings.block_btn_url | escape }}" class="axil-btn btn-bg-primary btn-size-md"
@@ -46,8 +50,10 @@
                               <div class="thumbnail">
                                 <a href="{{ product.url }}">
                                   <img
-                                    src="{{ product.featured_image | img_url: '150x150' }}"
+                                    src="{{ product.featured_image | image_url: width: 100, height: 100 }}"
                                     alt="{{ product.featured_image.alt }}"
+                                    width="{{ image.width }}"
+                                    height="{{ image.height }}"
                                     decoding="async"
                                     loading="lazy">
                                   </a>
@@ -61,9 +67,15 @@
                         {% endif %}
                       {% endif %}
                 </div> 
-                  <div class="collection-thumbnail">
-                    
-                    <img src="{% if section.settings.box_img %}{{ section.settings.box_img | img_url: block.settings.img_size }}{% else %}http:\/\/via.placeholder.com\/{{ block.settings.img_size }}{% endif %}" alt="{{ section.settings.box_img.alt }}"> 
+                  <div class="collection-thumbnail"> 
+                    <img 
+                      width="{{ block.settings.box_img.width }}"
+                      height="{{ block.settings.box_img.height }}" 
+                      decoding="async"
+                      loading="lazy" 
+                      src="{{ block.settings.box_img | image_url: width: block.settings.box_img.width, height: block.settings.box_img.height }}"
+                      alt="{{ block.settings.box_img.alt }}"> 
+
                       {% if block.settings.product_badget != '' %} 
                         <div class="label-block label-right">
                           <div class="product-badget">{{ block.settings.product_badget }}</div>
@@ -119,7 +131,7 @@
     {
       "type": "text",
       "id": "section_title",
-      "default": "Today’s Best Deals 💥 ",
+      "default": "Todays Best Deals 💥 ",
       "label": "Title"
     },
     {

@@ -1,4 +1,4 @@
-{% if section.settings.footer_top_enable %}
+{% if settings.footer_top_enable %}
   <!-- Start Footer Top Area -->
   <div class="footer-top separator-top">
     <div class="container">
@@ -43,9 +43,9 @@
               <!-- Start Single Widget -->
 
               <div class="col-lg-{{ block.settings.footer_menu_coloum }} col-sm-6" id="block-{{ block.id }}">
-                <div class="footer-widget">
+                <div class="footer-widget axil-footer-widget">
                   {% if block.settings.footer_menu_title != '' %}
-                    <h5 class="widget-title">{{ block.settings.footer_menu_title }}</h3>
+                    <h5 class="widget-title">{{ block.settings.footer_menu_title }}</h5>
                   {% endif %}
                     <div class="inner">
                       <ul class="widget-menu">
@@ -76,8 +76,7 @@
                             alt="{{ block.settings.qr_code_img.alt | default: shop.name }}"
                           >
                         </div>
-                      {%- endif -%}
-
+                      {%- endif -%} 
                       <div class="app-link">
                         {%- if block.settings.app_store1 -%}
                           <a href="{{ block.settings.app_descrption }}">

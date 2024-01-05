@@ -1,0 +1,47 @@
+
+<div class="{{ section.settings.container }}{% if section.settings.container == 'w-full' %} p-0{% endif %}"> 
+<div class="row g-0">
+    <div class="col-12">
+        <div class="map-class">{{ section.settings.embed_code }}</div>
+    </div>
+</div>
+</div>
+
+{% schema %}
+  {
+  "name": "Google Embed Map",
+
+"settings": [  
+  {
+    "type": "select",
+    "id": "container",
+    "label": "t:sections.all.container.name",
+    "options": [
+      {
+        "value": "container-fluid",
+        "label": "t:sections.all.container.option1"
+      },
+      {
+        "value": "container-full-width",
+        "label": "t:sections.all.container.option2"
+      },
+      {
+        "value": "container-xxl",
+        "label": "t:sections.all.container.option3"
+      }
+    ],
+    "default": "container-fluid"
+  },
+  {
+  "type": "textarea",
+  "id": "embed_code",
+  "label": "Embed Code" 
+  }
+],
+  "presets": [
+    {
+    "name": "Google Embed Map"
+    }
+  ]
+}
+{% endschema %}

@@ -1,77 +1,189 @@
-<div class="h-full flex items-center justify-center py-12 px-6 md:px-4 lg:px-8">
-    <div class="max-w-md w-full space-y-8">
-        <div>
-            <h1 class="text-center text-3xl font-bold mt-6">Register an account</h1>
+
+<div class="axil-signin-area"> 
+    <!-- Start Header -->
+    <div class="signin-header">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                {% render 'header-logo' %}
+            </div>
+            <div class="col-md-6">
+                <div class="singin-header-btn">
+                     {% if section.settings.login_btn_info != '' %}  
+                        <p>{{ section.settings.login_btn_info }}</p>
+                     {% endif %}  
+                     {% if section.settings.login_btn_txt != '' %}  
+                        <a href="/account/login" class="axil-btn btn-bg-primary sign-up-btn">{{ section.settings.login_btn_txt }}</a>
+                    {% endif %}  
+                </div>
+            </div>
         </div>
-        <div class="mt-8">
-            {% form 'create_customer' %}
-                {% if form.errors %}
-                    <div class="relative border border-red-400 bg-red-100 text-red-700 px-4 py-3" role="alert">
-                        <strong class="font-bold">Error!</strong>
-                        <p class="block sm:inline">{{ form.errors | default_errors }}</p>
+    </div>
+    <div class="row">
+        <div class="col-xl-4 col-lg-6">
+            <div class="axil-signin-banner bg_image bg_image--10">
+                {% if section.settings.side_title != '' %}  
+                    <h3 class="title">{{ section.settings.side_title }}</h3>
+                {% endif %}  
+            </div>
+        </div>
+        <div class="col-lg-6 offset-xl-2">
+            <div class="axil-signin-form-wrap">
+                <div class="axil-signin-form"> 
+                    <div class="block-title">
+                        <h3>{{ 'customer.register.title' | t }}</h3>
                     </div>
-                {% endif %}
-
-                <div class="my-2">
-                    <label for="first_name" class="sr-only">First name</label>
-                    <input type="text"
-                        name="customer[first_name]"
-                        id="first_name"
-                        autocomplete="given-name"
-                        class="relative block w-full px-3 py-2 border"
-                        placeholder="First name"
-                    >
+                    <div class="block-content">
+                        {%- form 'create_customer', class: 'form form-login needs-validation', novalidate: 'novalidate' -%}
+                            <div class="form-group">      
+                                <input
+                                class="form-control field__input"
+                                type="text"
+                                name="customer[first_name]"
+                                id="RegisterForm-FirstName"
+                                {% if form.first_name %}value="{{ form.first_name }}"{% endif %}
+                                autocomplete="given-name"
+                                placeholder="{{ 'customer.register.first_name' | t }}"
+                                required
+                                >
+                                <label for="RegisterForm-FirstName">
+                                    {{ 'customer.register.first_name' | t }}
+                                    <span class="text-danger">*</span></label>
+                                <div class="invalid-feedback">Please choose a First Name.</div>
+                            </div>
+                            <div class="form-group">
+                                <input
+                                class="form-control field__input"
+                                type="text"
+                                name="customer[last_name]"
+                                id="RegisterForm-LastName"
+                                {% if form.last_name %}value="{{ form.last_name }}"{% endif %}
+                                autocomplete="family-name"
+                                placeholder="{{ 'customer.register.last_name' | t }}"
+                                required
+                                >
+                                <label for="RegisterForm-LastName">
+                                    {{ 'customer.register.last_name' | t }}
+                                    <span class="text-danger">*</span>
+                                </label>
+                                <div class="invalid-feedback">Please choose a Last Name.</div>
+                            </div>
+                            <div class="form-group">      
+                                <input
+                                class="form-control field__input"
+                                type="email"
+                                name="customer[email]"
+                                id="RegisterForm-email"
+                                {% if form.email %} value="{{ form.email }}"{% endif %}
+                                spellcheck="false"
+                                autocapitalize="off"
+                                autocomplete="email"
+                                aria-required="true"
+                                {% if form.errors contains 'email' %}
+                                aria-invalid="true"
+                                aria-describedby="RegisterForm-email-error"
+                                {% endif %}
+                                placeholder="{{ 'customer.register.email' | t }}"
+                                required
+                                >
+                                <label for="RegisterForm-email">
+                                    {{ 'customer.register.email' | t }}
+                                    <span class="text-danger">*</span>
+                                </label>
+                                <div class="invalid-feedback">Please choose a email.</div>
+                            </div>
+                            {%- if form.errors contains 'email' -%}
+                            <span id="RegisterForm-email-error" class="form__message">
+                                <svg aria-hidden="true" focusable="false" role="presentation">
+                                    <use href="#icon-error" />
+                                </svg>
+                                {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.
+                            </span>
+                            {%- endif -%}
+                            <div class="form-group">     
+                                <input
+                                class="form-control field__input"
+                                type="password"
+                                name="customer[password]"
+                                id="RegisterForm-password"
+                                aria-required="true"
+                                {% if form.errors contains 'password' %}
+                                aria-invalid="true"
+                                aria-describedby="RegisterForm-password-error"
+                                {% endif %}
+                                placeholder="{{ 'customer.register.password' | t }}"
+                                required
+                                >
+                                <label for="RegisterForm-password">
+                                    {{ 'customer.register.password' | t }}
+                                    <span class="text-danger">*</span>
+                                </label>
+                                <div class="invalid-feedback">Please choose a Password.</div>
+                            </div>
+                            {%- if form.errors contains 'password' -%}
+                            <span id="RegisterForm-password-error" class="form__message">
+                                <svg aria-hidden="true" focusable="false" role="presentation">
+                                    <use href="#icon-error" />
+                                </svg>
+                                {{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.
+                            </span>
+                            {%- endif -%}
+                            <div class="form-group">
+                                <button class="axil-btn btn-bg-primary submit-btn" type="submit">{{ 'customer.register.submit' | t }}</button>
+                            </div>
+                        {%- endform -%}
+                    </div>
                 </div>
-
-                <div class="my-2">
-                    <label for="last_name" class="sr-only">Last name</label>
-                    <input type="text"
-                        name="customer[last_name]"
-                        id="last_name"
-                        autocomplete="family-name"
-                        class="relative block w-full px-3 py-2 border"
-                        placeholder="Last name"
-                    >
-                </div>
-
-                <div class="my-2">
-                    <label for="birthday" class="sr-only">Birthday</label>
-                    <input type="date"
-                        name="customer[note][Birthday]"
-                        id="birthday"
-                        class="relative block w-full px-3 py-2 border"
-                    >
-                </div>
-
-                <div class="my-2">
-                    <label for="email_address" class="sr-only">Email address</label>
-                    <input type="email"
-                        name="customer[email]"
-                        id="email_address"
-                        autocomplete="email"
-                        class="relative block w-full px-3 py-2 border"
-                        placeholder="Email address"
-                    >
-                </div>
-
-                
-                <div class="my-2">
-                    <label for="password" class="sr-only">Password</label>
-                    <input type="password"
-                        name="customer[password]"
-                        id="password"
-                        autocomplete="new-password"
-                        class="relative block w-full px-3 py-2 border"
-                        placeholder="Password"
-                    >
-                </div>
-                
-                <div>
-                    <button type="submit" class="relative w-full py-2 px-4 text-sm font-medium text-white bg-gray-600 hover:bg-gray-900">
-                        Create account
-                    </button>
-                </div>
-            {% endform %}
+            </div>
         </div>
     </div>
 </div>
+
+
+{%- style -%}
+  .bg_image--10{ 
+    background: {{ section.settings.bg_color }} 
+     url("{{ section.settings.login_image | img_url: 'master' }}") no-repeat scroll center center / cover;
+    
+  } 
+
+#section-footer, header.header { display: none }
+
+ 
+{%- endstyle -%}
+
+{% schema %}
+{
+    "name": "register",
+    "settings": [
+        {
+            "type": "text",
+            "id": "login_btn_info",
+            "default": "Already a member?",
+            "label": "SignIn Button Info"
+          }, 
+          {
+            "type": "text",
+            "id": "login_btn_txt",
+            "default": "Sign In",
+            "label": "SignIn Button Text"
+          },
+          {
+            "type": "text",
+            "id": "side_title",
+            "default": "Why People Choose Us",
+            "label": "Banner Title"
+          },
+        {
+            "type": "image_picker",
+            "id": "login_image",
+            "label": "Login Image"
+        },
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#ffffff"
+          }
+    ]
+}
+{% endschema %}

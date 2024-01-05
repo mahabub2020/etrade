@@ -1,3 +1,25 @@
+{%- capture data_slick_activation -%}
+      data-slick='{
+          {%- if section.settings.autoplay_true -%}
+          "autoplay": true,
+          "autoplaySpeed": {{ section.settings.autoplay_speed }},
+          {%- endif -%} 
+          "slidesToScroll": 1,
+          "slidesToShow": 1, 
+          "arrows": true,
+          {% if settings.rtl_enable %} "rtl": true,{% endif %} 
+          "infinite": true,
+          "dots": false,    
+          "draggable": true,
+          "prevArrow": "$('.prev-custom-nav')",
+          "nextArrow": "$('.next-custom-nav')", 
+          "responsive":[
+            {"breakpoint":991, "settings": {"slidesToShow": 1 } }
+             
+          ]       
+      }'
+   {%- endcapture -%} 
+   
 <div id="section-{{ section.id }}" class="axil-testimoial-area-two axil-section-gapBottom">
   <div class="container">
       <div class="testimonial-container-box">
@@ -5,7 +27,7 @@
               <div class="col-lg-7"> 
                   <div class="testimonial-video-box"> 
                       <div class="thumbnail">
-                        <img src="{% if section.settings.video_img %}{{ section.settings.video_img | img_url: '718x650' }}{% else %}http:\/\/via.placeholder.com\/718x650{% endif %}" alt="{{ section.settings.video_img.alt }}"> 
+                        <img loading="lazy" width="{{ image.width }}" height="{{ image.height }}" src="{% if section.settings.video_img %}{{ section.settings.video_img | img_url: '718x650' }}{% else %}http:\/\/via.placeholder.com\/718x650{% endif %}" alt="{{ section.settings.video_img.alt }}"> 
                        
                       </div> 
                     {% if section.settings.video_url %} 
@@ -25,7 +47,7 @@
                       </div>
                       {% endif %}
                     
-                      <div class="testimonial-slick-activation-three">
+                      <div class="testimonial-slick-activation-three axil-slick-slider"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
                          {% for block in section.blocks %}
                           {% case block.type %}
                             {% when 'review' %}  
@@ -94,15 +116,33 @@
       "type": "url",
       "id": "video_url",
       "label": "Video URL"
-    }
-  ],
-
+    },
+    {
+      "type": "header",
+      "content": "Options"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_true",
+      "label": "Autoplay Enable",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 1000,
+      "max": 9000,
+      "step": 1000,
+      "label": "Autoplay Speed",
+      "unit": "ms",
+      "default": 5000
+    } 
+  ], 
   "blocks": [
     {
       "type": "review",
       "name": "Review Content",
-      "settings": [
-        
+      "settings": [ 
         {
           "type": "textarea",
           "id": "review_content",
@@ -135,4 +175,4 @@
     }
   ]
 }
-{% endschema %}
+{% endschema %} 

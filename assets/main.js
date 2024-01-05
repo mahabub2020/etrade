@@ -2,17 +2,11 @@
  
     'use strict';
 
-        $(document).ready(function(){
-            slider_slick_activation_two();
-            slider_slick_activation_one();
-             
-            readyActivation();
-          
+        $(document).ready(function(){ 
+            readyActivation();  
             testimonialActivation();
-            countdown(); 
-            slider_thumb_activation_two();
+            countdown();
             headerIconToggle();
-           // searchClick();
             headerCampaignRemove(); 
             axilslickactivation2();
             magnificPopupActivationProductDetails();
@@ -305,42 +299,7 @@ function headerIconToggle() {
     })
 }
 
-function slider_thumb_activation_two() {
-
-    var SlickCarousel = $('.main-slider-style-3');
-    if (SlickCarousel.length) {
-        try {
-            if (SlickCarousel.find('.slider-thumb-activation-two').hasClass('slick-initialized')) {
-                SlickCarousel.find('.slider-thumb-activation-two').slick('unslick');
-            }
-        } catch (e) { }
-
-        SlickCarousel.find('.slider-thumb-activation-two').slick({
-
-            infinite: true,
-            slidesToShow: 3,
-            centerPadding: '0',
-            arrows: false,
-            dots: true,
-            speed: 1500,
-            autoplay: false,
-            centerMode: true,
-                
-            responsive: [
-                {
-                    breakpoint: 575,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                    }
-                },
-            ]
-        });
-    }
-
-}
-
-
+ 
 
 function countdown() {
     if (typeof $.fn.countdown == 'function') {
@@ -373,35 +332,6 @@ function countdown() {
             console.log('Countdown : ' + err.message);
         }
     }
-}
-
-
-function slider_slick_activation_two() {
-
-var SlickCarousel = $('.main-slider-style-5');
-if (SlickCarousel.length) {
-    try {
-        if (SlickCarousel.find('.slider-activation-two').hasClass('slick-initialized')) {
-            SlickCarousel.find('.slider-activation-two').slick('unslick');
-        }
-    } catch (e) { }
-
-    SlickCarousel.find('.slider-activation-two').slick({
-        infinite: true,
-        autoplay: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        fade: true,
-            
-        adaptiveHeight: true,
-        cssEase: 'linear',
-        speed: 400
-
-    });
-}
-
 }
 
 
@@ -456,38 +386,7 @@ function readyActivation() {
         ]
     });
  
-
-    $('.recently-viwed-activation').slick({
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        arrows: true,
-        dots: false,
-        prevArrow: '<button class="slide-arrow prev-arrow"><i class="fal fa-angle-left"></i></button>',
-        nextArrow: '<button class="slide-arrow next-arrow"><i class="fal fa-angle-right"></i></button>',
-        responsive: [{
-                breakpoint: 1199,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
-            },
-            {
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
+ 
 
     $('.popular-product-activation').slick({
         infinite: true,
@@ -511,26 +410,8 @@ function testimonialActivation() {
     $('.testimonial-slick-activation-three').on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
     var i = (currentSlide ? currentSlide : 0) + 1;
     $slideStatus.text(i + '/' + slick.slideCount);
-    });
-
-    $('.testimonial-slick-activation-three').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: false,
-    speed: 500,
-    draggable: true,
-    prevArrow: $('.prev-custom-nav'),
-    nextArrow: $('.next-custom-nav'),
-    responsive: [{
-            breakpoint: 991,
-            settings: {
-                slidesToShow: 1,
-            }
-        }
-    ]
-    });
+    }); 
+  
 }
       
 })(jQuery)

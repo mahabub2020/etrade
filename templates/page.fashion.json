@@ -1,0 +1,421 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-fashion",
+      "settings": {
+      }
+    },
+    "26cccca4-b6b4-40c1-806d-95a98890f20a": {
+      "type": "fashion-banner-slider",
+      "blocks": {
+        "37c956d7-23ad-494a-bc8c-5241224e8288": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": "",
+            "banner_img": "shopify:\/\/shop_images\/product-20.png"
+          }
+        },
+        "a9a75ad5-32fa-4333-9918-ba3cd345126c": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": ""
+          }
+        },
+        "436c1ece-80f5-48c8-af22-79ba91277953": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "37c956d7-23ad-494a-bc8c-5241224e8288",
+        "a9a75ad5-32fa-4333-9918-ba3cd345126c",
+        "436c1ece-80f5-48c8-af22-79ba91277953"
+      ],
+      "settings": {
+        "left_offset": 275,
+        "product_title": "Yantiti Leather Bags",
+        "product_prices": "$29.99",
+        "product_url": "",
+        "product_img": "shopify:\/\/shop_images\/product-41.png"
+      }
+    },
+    "00ab6f59-69a7-4134-9807-1c0ddf46339b": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--21507254386974__00ab6f59-69a7-4134-9807-1c0ddf46339b-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service1.png"
+          }
+        },
+        "6a307e67-3426-4955-83a0-dcc3735691bc": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>100% Guarantee On Product<\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
+          }
+        },
+        "fcb08c27-68d1-48f5-99be-616cad04214d": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>24 Hour Return Policy<\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service3.png"
+          }
+        },
+        "7891d32e-3fbc-4d97-844b-c56a10f3095d": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>24 Hour Return Policy<\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service4.png"
+          }
+        },
+        "13a264c8-3ba3-4577-a38e-212f4076ec17": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service5.png"
+          }
+        },
+        "d7ceaef3-c145-4923-883d-79f4da3ad7e5": {
+          "type": "section_margin",
+          "settings": {
+            "section_margin_top": 40,
+            "section_margin_bottom": 0,
+            "section_margin_top_md": 0,
+            "section_margin_bottom_md": 0,
+            "section_margin_top_xs": 0,
+            "section_margin_bottom_xs": 0
+          }
+        },
+        "cb9b20e4-303d-4597-a503-41bed654d4c4": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 0,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 0,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--21507254386974__00ab6f59-69a7-4134-9807-1c0ddf46339b-whyus-1",
+        "6a307e67-3426-4955-83a0-dcc3735691bc",
+        "fcb08c27-68d1-48f5-99be-616cad04214d",
+        "7891d32e-3fbc-4d97-844b-c56a10f3095d",
+        "13a264c8-3ba3-4577-a38e-212f4076ec17",
+        "d7ceaef3-c145-4923-883d-79f4da3ad7e5",
+        "cb9b20e4-303d-4597-a503-41bed654d4c4"
+      ],
+      "settings": {
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout1",
+        "col_xl": "5",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
+    },
+    "2dfda938-fd1e-48f1-a821-d2eb0356929b": {
+      "type": "section-rightstretch-product-carousel",
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "Recently Viewed",
+        "sub_title": "Recently Viewed",
+        "is_countdown": true,
+        "end_time": "2024-05-22",
+        "title_icon": "shopify:\/\/shop_images\/service10.png",
+        "product_collection": "fashion",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+          "copy-of-men-s-suit-separates-with-performance-stretch-fabric",
+          "women-s-winter-mid-length-thick-warm-faux-lamb-wool"
+        ],
+        "offset_product": 0,
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1",
+        "autoplay_true": true,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
+    },
+    "aae6cd26-4fd6-46a1-b5cc-1241bf092cfa": {
+      "type": "section-product-carousel",
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "title_icon": "shopify:\/\/shop_images\/title-icon.png",
+        "sub_title": "New Arrivals",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": true,
+        "end_time": "2024-05-22",
+        "product_collection": "fashion",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": true,
+        "product_layout": "1",
+        "autoplay_true": true,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
+    },
+    "863a3ac1-45d6-4578-898d-a81ed96d24e1": {
+      "type": "section-countdown",
+      "settings": {
+        "is_animations": false,
+        "cd_title": "Enhance Your Music Experience",
+        "cd_sub_title": "Don't Miss!!",
+        "end_time": "2024-05-22",
+        "cd_btn_txt": "Check it Out!",
+        "cd_btn_url": "shopify:\/\/collections",
+        "cd_img": "shopify:\/\/shop_images\/poster-05.png"
+      }
+    },
+    "7a132df3-4f11-4412-a3a4-5644644774ef": {
+      "type": "section-multicolumn-product-carousel",
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "Explore our Products",
+        "sub_title": "Our Products",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
+        "product_collection": "fashion",
+        "list_per_slider": 8,
+        "number_of_products_to_show": 16,
+        "product_layout": "1",
+        "isbutton_true": true,
+        "btn_txt": "View All Deals",
+        "btn_url": "",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "col_lg": 4,
+        "col_md": 2,
+        "col_sm": 2
+      }
+    },
+    "dc3813e7-785a-40f8-9467-9ae0f6ddf0de": {
+      "type": "section-testimonial-carousel",
+      "blocks": {
+        "template--21507254386974__dc3813e7-785a-40f8-9467-9ae0f6ddf0de-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/image-1.png",
+            "author_name": "James C. Anderson",
+            "author_desg": "Head Of Idea"
+          }
+        },
+        "1bf3756d-6c95-48a3-86ee-ff33bd289e4c": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/image-2.png",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "106251cb-0b0d-46b2-b4c9-5fbfb9d46ca4": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/image-3.png",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "33cf0a55-52e3-42b4-9e39-eb3aa677f134": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/image-1.png",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--21507254386974__dc3813e7-785a-40f8-9467-9ae0f6ddf0de-review-1",
+        "1bf3756d-6c95-48a3-86ee-ff33bd289e4c",
+        "106251cb-0b0d-46b2-b4c9-5fbfb9d46ca4",
+        "33cf0a55-52e3-42b4-9e39-eb3aa677f134"
+      ],
+      "settings": {
+        "container": "container",
+        "is_section_title": true,
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "section_title": "Our Users Feedback",
+        "section_sub_title": "Testimonials",
+        "autoplay_true": true,
+        "autoplay_speed": 5000
+      }
+    },
+    "a4a3a358-fbf7-43cf-809d-f4369b682ee3": {
+      "type": "section-product-carousel",
+      "blocks": {
+        "template--21507254386974__a4a3a358-fbf7-43cf-809d-f4369b682ee3-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21507254386974__a4a3a358-fbf7-43cf-809d-f4369b682ee3-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "Explore our Products",
+        "sub_title": "Our Products",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
+        "product_collection": "fashion",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": true,
+        "product_layout": "2",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
+    },
+    "93f5ea6d-9dd1-4211-b0a5-44d0a4fd628c": {
+      "type": "newsletter",
+      "settings": {
+        "before_title_icon": "fas fa-envelope-open",
+        "before_title_text": "Newsletter",
+        "before_title_color": "#3577f0",
+        "title": "Get weekly update",
+        "bg_img": "shopify:\/\/shop_images\/bg-image-5.jpg",
+        "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
+      }
+    },
+    "35dffd7a-4973-46ac-9819-0f98232c288d": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--21507254386974__35dffd7a-4973-46ac-9819-0f98232c288d-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Fast & Secure Delivery<\/strong><\/p>",
+            "wscontent": "Tell about your service.",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
+          }
+        },
+        "6549b8ed-c936-4b2f-b06d-49a851721adb": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Money Back Guarantee<\/strong><\/p>",
+            "wscontent": "Within 10 days.",
+            "ws_img": "shopify:\/\/shop_images\/service5.png"
+          }
+        },
+        "ca4b6805-9c08-4235-8c31-061fa57e7273": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>24 Hour Return Policy<\/strong><\/p>",
+            "wscontent": "No question ask.",
+            "ws_img": "shopify:\/\/shop_images\/service1.png"
+          }
+        },
+        "f5e35f88-06b6-4ef6-ba3c-a4d00625a96a": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Pro Quality Support<\/p>",
+            "wscontent": "24\/7 Live support.",
+            "ws_img": "shopify:\/\/shop_images\/service4.png"
+          }
+        },
+        "template--21507254386974__35dffd7a-4973-46ac-9819-0f98232c288d-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 0,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21507254386974__35dffd7a-4973-46ac-9819-0f98232c288d-whyus-1",
+        "6549b8ed-c936-4b2f-b06d-49a851721adb",
+        "ca4b6805-9c08-4235-8c31-061fa57e7273",
+        "f5e35f88-06b6-4ef6-ba3c-a4d00625a96a",
+        "template--21507254386974__35dffd7a-4973-46ac-9819-0f98232c288d-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout2",
+        "col_xl": "4",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "26cccca4-b6b4-40c1-806d-95a98890f20a",
+    "00ab6f59-69a7-4134-9807-1c0ddf46339b",
+    "2dfda938-fd1e-48f1-a821-d2eb0356929b",
+    "aae6cd26-4fd6-46a1-b5cc-1241bf092cfa",
+    "863a3ac1-45d6-4578-898d-a81ed96d24e1",
+    "7a132df3-4f11-4412-a3a4-5644644774ef",
+    "dc3813e7-785a-40f8-9467-9ae0f6ddf0de",
+    "a4a3a358-fbf7-43cf-809d-f4369b682ee3",
+    "93f5ea6d-9dd1-4211-b0a5-44d0a4fd628c",
+    "35dffd7a-4973-46ac-9819-0f98232c288d"
+  ]
+}

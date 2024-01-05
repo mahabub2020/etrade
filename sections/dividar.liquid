@@ -1,0 +1,81 @@
+<!-- Start Slider Area -->
+<div id="section-{{ section.id }}" class="dividar-wrp">
+    <div class="{{ section.settings.container }}">
+          <div class="dividar-class"></div>
+    </div>
+</div>
+<!-- End Slider Area -->
+
+{%- style -%}
+  #section-{{ section.id }}{  
+    padding-top: {{ block.settings.padding_top }}px;
+    padding-bottom: {{ block.settings.padding_bottom }}px; 
+  }
+#section-{{ section.id }}.dividar-wrp .dividar-class {
+    border: 1px solid {{ section.settings.border_color }}; 
+}
+{%- endstyle -%}
+
+{% schema %}
+{
+    "name": "dividar",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Section Dividar"
+        },
+        {
+          "type": "select",
+          "id": "container",
+          "label": "Container type",
+          "options": [
+            {
+              "value": "container-fluid",
+              "label": "Default"
+            },
+            {
+              "value": "container-full-width",
+              "label": "Full width"
+            },
+            {
+              "value": "container-xxl",
+              "label": "Use container box"
+            }
+          ],
+          "default": "container-xxl"
+        },
+        {
+          "type": "color",
+          "id": "border_color",
+          "label": "Border color",
+          "default": "#F6F7FB"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Sections Padding Top",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Sections Padding bottom",
+          "default": 10
+        }
+      ], 
+      "presets": [
+          {
+            "category": "Dividar",
+            "name": "Section Dividar"
+        }]
+}
+{% endschema %}
+ 

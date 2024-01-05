@@ -1,0 +1,120 @@
+
+   <!-- End Footer Top Area  -->
+<div class="footer-middle">
+    <div class="container">
+        <div class="row">
+            {%- if settings.is_payment_icon -%}  
+            <div class="col-lg-8">
+                <div class="payment-method">
+                    
+                    {% if settings.payment_title != '' %}
+                        <h6 class="title">{{ settings.payment_title }}</h6>
+                    {% endif %} 
+
+                    <ul class="payment-icons">
+                        {%- if settings.payment_icon_img1 -%}  
+                        <li> <img
+                            src="{{ settings.payment_icon_img1 | img_url: 'master' }}"
+                            alt="{{ settings.payment_icon_img1.alt | default: shop.name }}"
+                        ></li> 
+                        {%- endif -%}
+                        {%- if settings.payment_icon_img2 -%}  
+                        <li> <img
+                            src="{{ settings.payment_icon_img2 | img_url: 'master' }}"
+                            alt="{{ settings.payment_icon_img2.alt | default: shop.name }}"
+                        ></li> 
+                        {%- endif -%}
+                        {%- if settings.payment_icon_img3 -%}  
+                        <li> <img
+                            src="{{ settings.payment_icon_img3 | img_url: 'master' }}"
+                            alt="{{ settings.payment_icon_img3.alt | default: shop.name }}"
+                        ></li> 
+                        {%- endif -%}
+                        {%- if settings.payment_icon_img4 -%}  
+                        <li> <img
+                            src="{{ settings.payment_icon_img4 | img_url: 'master' }}"
+                            alt="{{ settings.payment_icon_img4.alt | default: shop.name }}"
+                        ></li> 
+                        {%- endif -%}
+                        {%- if settings.payment_icon_img5 -%}  
+                        <li> <img
+                            src="{{ settings.payment_icon_img5 | img_url: 'master' }}"
+                            alt="{{ settings.payment_icon_img5.alt | default: shop.name }}"
+                        ></li> 
+                        {%- endif -%} 
+                    </ul>  
+                </div>
+            </div>
+        {% endif %} 
+            <div class="col-lg-4">
+                <div class="payment-method footer-social-link">
+                    
+                    {% if settings.social_title != '' %}
+                        <h6 class="title">{{ settings.social_title }}</h6>
+                    {% endif %} 
+                    {% if settings.footer_social_enable %} 
+                        <ul class="social-link"> 
+                            {% if settings.social_icon_1 != '' %}
+                                <li>
+                                    <a href="{{ settings.social_icon_1_url }}" class="social__link">
+                                        <i class="fab fa-{{ settings.social_icon_1 }}"></i>
+                                    </a>
+                                </li>
+                            {% endif %}
+                            {% if settings.social_icon_2 != '' %}
+                            <li> 
+                                <a href="{{ settings.social_icon_2_url }}" class="social__link">
+                                    <i class="fab fa-{{ settings.social_icon_2 }}"></i>
+                                </a> 
+                            </li>
+                            {% endif %}
+                            {% if settings.social_icon_3 != '' %}
+                                <li> 
+                                    <a href="{{ settings.social_icon_3_url }}" class="social__link">
+                                        <i class="fab fa-{{ settings.social_icon_3 }}"></i>
+                                    </a> 
+                                </li>
+                            {% endif %}
+                            {% if settings.social_icon_4 != '' %}
+                            <li> 
+                                <a href="{{ settings.social_icon_4_url }}" class="social__link">
+                                <i class="fab fa-{{ settings.social_icon_4 }}"></i>
+                                </a> 
+                            </li>
+                            {% endif %}
+                            {% if settings.social_icon_5 != '' %}
+                            <li> 
+                                <a href="{{ settings.social_icon_5_url }}" class="social__link">
+                                <i class="fab fa-{{ settings.social_icon_5 }}"></i>
+                                </a> 
+                            </li>
+                        {% endif %}  
+                        </ul>  
+                    {% endif %} 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Start Copyright Area  -->
+<div class="copyright-area copyright-default">
+    <div class="container">
+        <div class="copyright-left d-flex flex-wrap justify-content-center">
+            <ul class="quick-link"> 
+                {% assign linklist = settings.footer_right_menu %} 
+                    {% for link in linklists[linklist].links %}
+                        <li>
+                            <a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>
+                            {{ link.title }}</a>
+                        </li>  
+                    {%- endfor -%}  
+                </ul> 
+                {% if settings.copy_ritht_text != '' %} 
+                    <ul class="quick-link">
+                        <li>{{ settings.copy_ritht_text }}</li>
+                    </ul> 
+                {% endif %} 
+        </div>
+    </div>
+</div>
+<!-- End Copyright Area  -->

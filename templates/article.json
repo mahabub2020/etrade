@@ -1,26 +1,66 @@
 {
-    "sections": {
-        "template": {
-            "type": "template-article",
-            "blocks": {
-                "title": {
-                    "type": "article_title"
-                },
-                "author": {
-                    "type": "article_author"
-                },
-                "published_date": {
-                    "type": "article_published_date"
-                },
-                "thumbnail": {
-                    "type": "featured_image"
-                },
-                "content": {
-                    "type": "article_content"
-                }
-            },
-            "block_order": ["thumbnail","title","published_date","author","content"]
+  "sections": {
+    "template": {
+      "type": "template-article",
+      "blocks": {
+        "496d4f4d-b5f9-46f5-9d64-130e43516883": {
+          "type": "search",
+          "settings": {
+            "search_title": "Search"
+          }
+        },
+        "580f92c6-1444-4a41-974d-1be4d366563d": {
+          "type": "recent_post",
+          "settings": {
+            "recent_post_title": "Recent Post",
+            "recent_post_limit_handle": 3
+          }
+        },
+        "1a52e70e-a667-4215-9d27-41048ee77ef7": {
+          "type": "tag",
+          "settings": {
+            "blog_tags_title": "Tags",
+            "blog_tags_list_limit_handle": 10
+          }
         }
-    },
-    "order": ["template"]
+      },
+      "block_order": [
+        "496d4f4d-b5f9-46f5-9d64-130e43516883",
+        "580f92c6-1444-4a41-974d-1be4d366563d",
+        "1a52e70e-a667-4215-9d27-41048ee77ef7"
+      ],
+      "settings": {
+        "blog_show_social_share": true,
+        "social_share_title": "Share on",
+        "blog_show_author": true,
+        "blog_show_title": true,
+        "enable_author": true,
+        "enable_published_date": true,
+        "show_tags": true,
+        "display_prev_next": true,
+        "comment_post_limit_handle": 5,
+        "comment_description": "Your email address will not be published. Requ cired fields are marked",
+        "text_name_title": "Name",
+        "text_email_title": "Email",
+        "text_area_title": "Your Review",
+        "social_enable": true,
+        "related_post_enable": true,
+        "section_before_title": "Your Recently",
+        "section_title": "Related Posts",
+        "related_post_limit_handle": 1,
+        "is_content_enable": true,
+        "related_post_content_limit_handle": 14,
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 3,
+        "product_column_md": 2,
+        "product_column_sm": 1,
+        "section_title_before": "#8c71db",
+        "section_title_color": "#292930"
+      }
+    }
+  },
+  "order": [
+    "template"
+  ]
 }

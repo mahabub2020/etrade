@@ -1,0 +1,317 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-about",
+      "settings": {
+      }
+    },
+    "846645dc-b8c4-435e-b286-6d0083a5b1b3": {
+      "type": "section-page-title",
+      "settings": {
+        "enable_breadcrumbs": true,
+        "page_title_txt": "Blog Posts",
+        "enable_banner_img": true,
+        "banner_img": "shopify:\/\/shop_images\/product-45.png"
+      }
+    },
+    "cf568228-397e-4fc7-8c99-e8510a4a1750": {
+      "type": "section-content-image",
+      "blocks": {
+        "template--21651685966110__cf568228-397e-4fc7-8c99-e8510a4a1750-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 50,
+            "section_padding_bottom_md": 50,
+            "section_padding_top_xs": 40,
+            "section_padding_bottom_xs": 40
+          }
+        }
+      },
+      "block_order": [
+        "template--21651685966110__cf568228-397e-4fc7-8c99-e8510a4a1750-section_padding-1"
+      ],
+      "settings": {
+        "layout": "layout1",
+        "content_order": false,
+        "before_title": "About Store",
+        "before_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "title": "Online shopping includes both buying things online.",
+        "sub_title": "Salesforce B2C Commerce can help you create unified, intelligent digital commerce experiences — both online and in the store.",
+        "content": "Publish your eCommerce site quickly with our easy-to-use store builder— no coding required. Migrate your items from your point of sale system or turn your Instagram feed into a shopping site and start selling fast. Square Online works for all kinds of businesses—retail, restaurants, services.",
+        "box_img": "shopify:\/\/shop_images\/about-01.png",
+        "btn_txt": "Get In Touch",
+        "btn_url": "shopify:\/\/blogs\/news"
+      }
+    },
+    "c4a0f1e4-9dfe-402a-94a1-e7a946ba9a57": {
+      "type": "about-info-box",
+      "blocks": {
+        "template--21651685966110__c4a0f1e4-9dfe-402a-94a1-e7a946ba9a57-InfoBox-1": {
+          "type": "InfoBox",
+          "settings": {
+            "info_img": "shopify:\/\/shop_images\/shape-02_df498789-fe30-49a3-8531-e76fbe79a598.png",
+            "info_title": "40,000+ Happy Customer",
+            "info_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
+          }
+        },
+        "84ff06e0-5639-4255-abbd-f06099017504": {
+          "type": "InfoBox",
+          "settings": {
+            "info_img": "shopify:\/\/shop_images\/shape-01_dc5d2ab1-e139-4ef5-aa23-8e0f0264170f.png",
+            "info_title": "40,000+ Happy Customer",
+            "info_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
+          }
+        },
+        "346d28b4-7e11-4f4b-a662-0d6737a16feb": {
+          "type": "InfoBox",
+          "settings": {
+            "info_img": "shopify:\/\/shop_images\/shape-03_79099fa9-8453-4eed-84da-228e0093c6c2.png",
+            "info_title": "40,000+ Happy Customer",
+            "info_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe."
+          }
+        }
+      },
+      "block_order": [
+        "template--21651685966110__c4a0f1e4-9dfe-402a-94a1-e7a946ba9a57-InfoBox-1",
+        "84ff06e0-5639-4255-abbd-f06099017504",
+        "346d28b4-7e11-4f4b-a662-0d6737a16feb"
+      ],
+      "settings": {
+        "is_section_title": true
+      }
+    },
+    "a1f9f288-1e9c-4e17-bc0f-3baa53d3743a": {
+      "type": "team-slider",
+      "blocks": {
+        "template--21651685966110__a1f9f288-1e9c-4e17-bc0f-3baa53d3743a-members-1": {
+          "type": "members",
+          "settings": {
+            "team_img": "shopify:\/\/shop_images\/team-01.png",
+            "member_name": "Rosalina D. Willson",
+            "member_desg": "Founder"
+          }
+        },
+        "1ac629d1-daa6-4c18-98ce-becf0365d8dd": {
+          "type": "members",
+          "settings": {
+            "team_img": "shopify:\/\/shop_images\/team-02.png",
+            "member_name": "Rosalina D. Willson",
+            "member_desg": "Founder"
+          }
+        },
+        "7a6a14e6-e5f1-442e-b9ab-c4953bab5a8d": {
+          "type": "members",
+          "settings": {
+            "team_img": "shopify:\/\/shop_images\/team-03.png",
+            "member_name": "Rosalina D. Willson",
+            "member_desg": "Founder"
+          }
+        },
+        "25617557-3e94-4228-b1da-7ef418452188": {
+          "type": "members",
+          "settings": {
+            "team_img": "shopify:\/\/shop_images\/team-05.png",
+            "member_name": "Rosalina D. Willson",
+            "member_desg": "Founder"
+          }
+        },
+        "3a16f7b1-a052-4d58-a4c2-18baaa91742f": {
+          "type": "members",
+          "settings": {
+            "team_img": "shopify:\/\/shop_images\/team-04.png",
+            "member_name": "Rosalina D. Willson",
+            "member_desg": "Founder"
+          }
+        }
+      },
+      "block_order": [
+        "template--21651685966110__a1f9f288-1e9c-4e17-bc0f-3baa53d3743a-members-1",
+        "1ac629d1-daa6-4c18-98ce-becf0365d8dd",
+        "7a6a14e6-e5f1-442e-b9ab-c4953bab5a8d",
+        "25617557-3e94-4228-b1da-7ef418452188",
+        "3a16f7b1-a052-4d58-a4c2-18baaa91742f"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "section_title": "Expart Management Team",
+        "subtitle": "Our Team",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 2,
+        "product_column_sm": 1
+      }
+    },
+    "a0514375-348a-4486-8aa5-ade6af521c0b": {
+      "type": "section-content-image",
+      "blocks": {
+        "0f046924-8b98-491a-a5ea-05a2aad26053": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 50,
+            "section_padding_bottom_md": 50,
+            "section_padding_top_xs": 40,
+            "section_padding_bottom_xs": 40
+          }
+        }
+      },
+      "block_order": [
+        "0f046924-8b98-491a-a5ea-05a2aad26053"
+      ],
+      "settings": {
+        "layout": "layout2",
+        "content_order": false,
+        "before_title": "About Store",
+        "before_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "title": "Online shopping includes both buying things online.",
+        "sub_title": "",
+        "content": "Publish your eCommerce site quickly with our easy-to-use store builder— no coding required. Migrate your items from your point of sale system or turn your Instagram feed into a shopping site and start selling fast. Square Online works for all kinds of businesses—retail, restaurants, services.",
+        "box_img": "shopify:\/\/shop_images\/about-02.png",
+        "btn_txt": "Get In Touch",
+        "btn_url": "shopify:\/\/blogs\/news"
+      }
+    },
+    "11d8dc36-b044-4836-b916-30966c8e7129": {
+      "type": "section-content-image",
+      "blocks": {
+        "0bfe3909-d40e-40e6-b112-cde6ad7d86a2": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 50,
+            "section_padding_bottom_md": 50,
+            "section_padding_top_xs": 40,
+            "section_padding_bottom_xs": 40
+          }
+        }
+      },
+      "block_order": [
+        "0bfe3909-d40e-40e6-b112-cde6ad7d86a2"
+      ],
+      "settings": {
+        "layout": "layout2",
+        "content_order": true,
+        "before_title": "About Store",
+        "before_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "title": "Online shopping includes both buying things online.",
+        "sub_title": "",
+        "content": "Publish your eCommerce site quickly with our easy-to-use store builder— no coding required. Migrate your items from your point of sale system or turn your Instagram feed into a shopping site and start selling fast. Square Online works for all kinds of businesses—retail, restaurants, services.",
+        "box_img": "shopify:\/\/shop_images\/about-03.png",
+        "btn_txt": "Get In Touch",
+        "btn_url": "shopify:\/\/blogs\/news"
+      }
+    },
+    "d47b1b70-b9f0-440f-898e-1cb524080a1b": {
+      "type": "newsletter",
+      "blocks": {
+        "template--21651685966110__d47b1b70-b9f0-440f-898e-1cb524080a1b-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 0,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 25,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 20
+          }
+        }
+      },
+      "block_order": [
+        "template--21651685966110__d47b1b70-b9f0-440f-898e-1cb524080a1b-section_padding-1"
+      ],
+      "settings": {
+        "before_title_icon": "fas fa-envelope-open",
+        "before_title_text": "Newsletter",
+        "before_title_color": "#3577f0",
+        "title": "Get weekly update",
+        "bg_img": "shopify:\/\/shop_images\/bg-image-5.jpg",
+        "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
+      }
+    },
+    "9ff7561e-c36e-4ebe-afc2-e4ffb80b1555": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--21651685966110__9ff7561e-c36e-4ebe-afc2-e4ffb80b1555-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "Tell about your service.",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
+          }
+        },
+        "d658903b-2a96-4c4b-ad80-4ebf9a303327": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "Tell about your service.",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
+          }
+        },
+        "8c86ff98-0ea6-4a73-b8a5-989b75dfe8f9": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "Tell about your service.",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
+          }
+        },
+        "c45c8bae-9c5a-4288-86a1-6f2b8d23a9f2": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "Tell about your service.",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
+          }
+        },
+        "template--21651685966110__9ff7561e-c36e-4ebe-afc2-e4ffb80b1555-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 60,
+            "section_padding_bottom_md": 60,
+            "section_padding_top_xs": 40,
+            "section_padding_bottom_xs": 40
+          }
+        }
+      },
+      "block_order": [
+        "template--21651685966110__9ff7561e-c36e-4ebe-afc2-e4ffb80b1555-whyus-1",
+        "d658903b-2a96-4c4b-ad80-4ebf9a303327",
+        "8c86ff98-0ea6-4a73-b8a5-989b75dfe8f9",
+        "c45c8bae-9c5a-4288-86a1-6f2b8d23a9f2",
+        "template--21651685966110__9ff7561e-c36e-4ebe-afc2-e4ffb80b1555-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout2",
+        "col_xl": "4",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "846645dc-b8c4-435e-b286-6d0083a5b1b3",
+    "cf568228-397e-4fc7-8c99-e8510a4a1750",
+    "c4a0f1e4-9dfe-402a-94a1-e7a946ba9a57",
+    "a1f9f288-1e9c-4e17-bc0f-3baa53d3743a",
+    "a0514375-348a-4486-8aa5-ade6af521c0b",
+    "11d8dc36-b044-4836-b916-30966c8e7129",
+    "d47b1b70-b9f0-440f-898e-1cb524080a1b",
+    "9ff7561e-c36e-4ebe-afc2-e4ffb80b1555"
+  ]
+}

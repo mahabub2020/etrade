@@ -1,0 +1,299 @@
+      <!-- Start About Area  -->
+    <div id="section-{{ section.id }}" class="about-info-area">
+      <div class="container">
+          <div class="row row--20">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'InfoBox' %}   
+                  <div class="col-lg-4">
+                      <div class="about-info-box">
+                          <div class="thumb">
+                            <img src="{% if block.settings.info_img %}{{ block.settings.info_img | img_url: '60x60' }}{% else %}http:\/\/via.placeholder.com\/60x60{% endif %}" alt="{{ block.settings.info_img.alt }}"> 
+                          </div>
+                          <div class="content"> 
+                            {% if block.settings.info_title != '' %}   
+                              <h6 class="title">{{ block.settings.info_title | escape }}</h6>
+                            {% endif %}   
+                            {% if block.settings.info_content != '' %}   
+                              <p>{{ block.settings.info_content | escape }}<p>
+                            {% endif %}   
+                          </div>
+                      </div>
+                  </div>
+                {% endcase %}
+            {% endfor %}  
+          </div>
+      </div>
+  </div>
+ 
+{%- style -%}
+
+  #section-{{ section.id }}{
+    {%- for block in section.blocks -%}
+    {%- case block.type -%}
+    {%- when 'section_margin' -%}
+    margin-top: {{ block.settings.section_margin_top }}px;
+    margin-bottom: {{ block.settings.section_margin_bottom }}px;
+    {%- when 'section_padding' -%}
+    padding-top: {{ block.settings.section_padding_top }}px;
+    padding-bottom: {{ block.settings.section_padding_bottom }}px;
+    {%- when 'section_background' -%}    
+    background: {{ block.settings.section_bg_color }} 
+      {%- if block.settings.section_bg_image -%}url("{{ block.settings.section_bg_image | img_url: 'master' }}"){%- endif -%} no-repeat scroll center center / cover;
+    {%- endcase -%}
+    {%- endfor -%}
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {% case block.type %}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_md }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_md }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_md }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_md }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+
+  @media (max-width: 767px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {%- case block.type -%}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_xs }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_xs }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_xs }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_xs }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+ 
+{%- endstyle -%}
+{% schema %}
+{
+  "name": "About Info Box",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Title"
+    }, 
+    {
+      "type": "checkbox",
+      "id": "is_section_title",
+      "default": true,
+      "label": "Enable Section Title"
+    }
+     
+  ],
+
+  "blocks": [
+    {
+      "type": "InfoBox",
+      "name": "Info Box Content",
+      "limit": 3,
+      "settings": [ 
+        {
+          "type": "image_picker",
+          "id": "info_img",
+          "label": "Image",
+          "info": "Recommended Size: 60 x 60px"
+        }, 
+        {
+          "type": "text",
+          "id": "info_title",
+          "default": "40,000+ Happy Customer",
+          "label": "Name"
+        },
+        {
+          "type": "textarea",
+          "id": "info_content",
+          "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
+          "label": "Info Content"
+        }
+      ]
+    },
+    {
+      "type": "section_padding",
+      "name": "Section Padding",
+      "limit": 1,
+
+      "settings": [
+        {
+        "type": "header",
+        "content": "Large/Desktop Device"
+        },
+      {
+        "type": "range",
+        "id": "section_padding_top",
+        "min": 0,
+        "max": 150,
+        "step": 5,
+        "label": "Padding Top",
+        "unit": "px",
+        "default": 60
+      },
+      {
+        "type": "range",
+        "id": "section_padding_bottom",
+        "min": 0,
+        "max": 150,
+        "step": 5,
+        "label": "Padding Bottom",
+        "unit": "px",
+        "default": 60
+      },
+      {
+        "type": "header",
+        "content": "Tablet Device"
+      },
+      {
+        "type": "range",
+        "id": "section_padding_top_md",
+        "min": 0,
+        "max": 150,
+        "step": 5,
+        "label": "Padding Top",
+        "unit": "px",
+        "default": 45
+      },
+      {
+        "type": "range",
+        "id": "section_padding_bottom_md",
+        "min": 0,
+        "max": 150,
+        "step": 5,
+        "label": "Padding Bottom",
+        "unit": "px",
+        "default": 45
+      },
+      {
+        "type": "header",
+        "content": "Mobile Device"
+      },
+      {
+        "type": "range",
+        "id": "section_padding_top_xs",
+        "min": 0,
+        "max": 150,
+        "step": 5,
+        "label": "Padding Top",
+        "unit": "px",
+        "default": 45
+      },
+      {
+        "type": "range",
+        "id": "section_padding_bottom_xs",
+        "min": 0,
+        "max": 150,
+        "step": 5,
+        "label": "Padding Bottom",
+        "unit": "px",
+        "default": 45
+      }
+      ]
+   },
+   {
+    "type": "section_margin",
+    "name": "Section Margin",
+  "limit": 1,
+  "settings": [
+      {
+    "type": "header",
+    "content": "Large/Desktop Device"
+  },
+  {
+    "type": "range",
+    "id": "section_margin_top",
+    "min": 0,
+    "max": 150,
+    "step": 5,
+    "label": "Margin Top",
+    "unit": "px",
+    "default": 0
+  },
+  {
+    "type": "range",
+    "id": "section_margin_bottom",
+    "min": 0,
+    "max": 150,
+    "step": 5,
+    "label": "Margin Bottom",
+    "unit": "px",
+    "default": 0
+  },
+  {
+    "type": "header",
+    "content": "Tablet Device"
+  },
+  {
+    "type": "range",
+    "id": "section_margin_top_md",
+    "min": 0,
+    "max": 150,
+    "step": 5,
+    "label": "Margin Top",
+    "unit": "px",
+    "default": 0
+  },
+  {
+    "type": "range",
+    "id": "section_margin_bottom_md",
+    "min": 0,
+    "max": 150,
+    "step": 5,
+    "label": "Margin Bottom",
+    "unit": "px",
+    "default": 0
+  },
+  {
+    "type": "header",
+    "content": "Mobile Device"
+  },
+  {
+    "type": "range",
+    "id": "section_margin_top_xs",
+    "min": 0,
+    "max": 150,
+    "step": 5,
+    "label": "Margin Top",
+    "unit": "px",
+    "default": 0
+  },
+  {
+    "type": "range",
+    "id": "section_margin_bottom_xs",
+    "min": 0,
+    "max": 150,
+    "step": 5,
+    "label": "Margin Bottom",
+    "unit": "px",
+    "default": 0
+  }
+ ]
+}
+ 
+  ],
+  "presets": [
+    {
+      "name": "About Info Box",
+      "blocks": [
+        {
+          "type": "InfoBox"
+        },
+        {
+          "type": "InfoBox"
+        },
+        {
+          "type": "InfoBox"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,23 +1,20 @@
+{% assign random_number = "now" | date: "%N" | modulo: 1000 | plus: 0 %}
 <script>
-  {% assign random_number = "now" | date: "%N" | modulo: 1000 | plus: 0 %}
+    var sectionConfig=  (typeof sectionConfig == "undefined" || sectionConfig == null) ? {
+  } : sectionConfig;
+    var scmCustomData=  (typeof scmCustomData == "undefined" || scmCustomData == null) ? {
+  } : scmCustomData;
     var scmCustomDataWigetAll= (typeof scmCustomDataWigetAll == "undefined" || scmCustomDataWigetAll == null) ? [] : scmCustomDataWigetAll;
-  scmCustomDataWigetAll[{{ random_number }}] ={
-    "productId" : '',
+    scmCustomDataWigetAll['{{ random_number }}'] ={
+    "id_iframe" : "{{ random_number }}",
+    "productId" : "",
     "typePage" : 'happyPage',
-    'reviewsInFo' : {
-      'rate1' : '',
-      'rate2' : '',
-      'rate3' : '',
-      'rate4' : '',
-      'rate5' : '',
-      'total' : '',
-      'average' : '',
-      'product_shopify_id' : ''
-    },
-    "product_group_id": '',
-    "order_current_product" : "",
-    "blockReviewFirst" : "{{ shop.metafields.scm_review_importer.reviews_happyPage }}"
+    "sectionConfig" : JSON.stringify(sectionConfig),
+    "scmCustomData" : JSON.stringify(scmCustomData),
+    'dataProduct' : []
   };
+    sectionConfig= null;
+    scmCustomData= null;
 </script>
 <div class="scm-container" style="display: none;">
   <div class="scm-reviews-importer">

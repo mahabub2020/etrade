@@ -1,0 +1,596 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-furniture",
+      "settings": {
+      }
+    },
+    "9c94f89a-08b3-4f85-944c-b29531db27fc": {
+      "type": "collection-carousel",
+      "settings": {
+        "collection_style": "cat_style_3",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "sub_title": "Before Title",
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+          "arm-chair",
+          "desk-table",
+          "handbag",
+          "mirror-table",
+          "neon-sofa",
+          "round-table",
+          "accessories",
+          "baby-s",
+          "fashion",
+          "hoddie",
+          "long-chair"
+        ],
+        "autoplay_true": true,
+        "autoplay_speed": 5000,
+        "product_column": 6,
+        "product_column_lg": 5,
+        "product_column_md": 4,
+        "product_column_sm": 2
+      }
+    },
+    "fee67d54-5d2b-47fd-b9c7-73a913865081": {
+      "type": "furniture-banner-slider",
+      "blocks": {
+        "2b94fdba-c896-4dc9-9331-6a2f80471f36": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": "",
+            "banner_img": "shopify:\/\/shop_images\/product-48.png"
+          }
+        },
+        "33d3ac6e-0791-4af7-a8e1-330c45eb56d8": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": "",
+            "banner_img": "shopify:\/\/shop_images\/product-49.png"
+          }
+        },
+        "63b21639-b328-473a-9992-ecbc9b9666c8": {
+          "type": "banner",
+          "settings": {
+            "subtitle": "Hot Deal In This Week",
+            "banner_title": "Smart Digital Watch",
+            "banner_btn_txt": "Shop Now",
+            "banner_btn_url": "",
+            "banner_img": "shopify:\/\/shop_images\/product-47.png"
+          }
+        }
+      },
+      "block_order": [
+        "2b94fdba-c896-4dc9-9331-6a2f80471f36",
+        "33d3ac6e-0791-4af7-a8e1-330c45eb56d8",
+        "63b21639-b328-473a-9992-ecbc9b9666c8"
+      ],
+      "settings": {
+        "autoplay_true": false,
+        "autoplay_speed": 5000
+      }
+    },
+    "9b211fec-f339-4346-aa40-866333f41efc": {
+      "type": "section-rightstretch-product-carousel",
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "is_countdown": true,
+        "end_time": "2024-05-22",
+        "product_collection": "desk-table",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
+    },
+    "813957b6-7340-4879-b5f7-0f912c37b780": {
+      "type": "section-product-grid",
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": true,
+        "end_time": "2024-05-22",
+        "section_btn_txt": "View All Deals",
+        "section_btn_url": "shopify:\/\/collections",
+        "product_collection": "desk-table",
+        "excluded_products": [
+
+        ],
+        "number_of_products_to_show": 8,
+        "product_layout": "7",
+        "col_xl": "3",
+        "col_lg": "4",
+        "col_md": "2",
+        "col_sm": "2",
+        "col_mobile": "1",
+        "isbutton_true": true,
+        "btn_txt": "View All Deals",
+        "btn_url": ""
+      }
+    },
+    "ece2d16d-2e62-4bfa-b988-80a42dc5b0f2": {
+      "type": "section-about-us",
+      "blocks": {
+        "0632d512-d744-4076-808f-482292138bbf": {
+          "type": "about_features",
+          "settings": {
+            "box_number": "1.",
+            "box_title": "Who We Are",
+            "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
+            "features_number_color": "#c4c4c4",
+            "features_title_color": "#292930",
+            "features_content_color": "#777777"
+          }
+        },
+        "f548ba52-cdf4-422c-a108-bd52a9c95e49": {
+          "type": "about_features",
+          "settings": {
+            "box_number": "2.",
+            "box_title": "What Do We Do",
+            "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
+            "features_number_color": "#c4c4c4",
+            "features_title_color": "#292930",
+            "features_content_color": "#777777"
+          }
+        },
+        "template--21547775754526__ece2d16d-2e62-4bfa-b988-80a42dc5b0f2-about_features-1": {
+          "type": "about_features",
+          "settings": {
+            "box_number": "3.",
+            "box_title": "How Do We Help",
+            "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
+            "features_number_color": "#c4c4c4",
+            "features_title_color": "#292930",
+            "features_content_color": "#777777"
+          }
+        },
+        "c2161809-4ec0-45c1-83e7-feb1bbd19a94": {
+          "type": "about_features",
+          "settings": {
+            "box_number": "4.",
+            "box_title": "Create success story",
+            "box_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, saepe.",
+            "features_number_color": "#c4c4c4",
+            "features_title_color": "#292930",
+            "features_content_color": "#777777"
+          }
+        },
+        "template--21547775754526__ece2d16d-2e62-4bfa-b988-80a42dc5b0f2-about_img-1": {
+          "type": "about_img",
+          "settings": {
+            "box_img1": "shopify:\/\/shop_images\/about-04.png",
+            "img_size1": "250x238",
+            "box_img2": "shopify:\/\/shop_images\/about-06.png",
+            "img_size2": "250x238"
+          }
+        },
+        "b62c4807-7d34-4241-8fbc-9707de70dd6e": {
+          "type": "about_img",
+          "settings": {
+            "box_img1": "shopify:\/\/shop_images\/about-05.png",
+            "img_size1": "250x238",
+            "box_img2": "shopify:\/\/shop_images\/about-07.png",
+            "img_size2": "250x238"
+          }
+        }
+      },
+      "block_order": [
+        "0632d512-d744-4076-808f-482292138bbf",
+        "f548ba52-cdf4-422c-a108-bd52a9c95e49",
+        "template--21547775754526__ece2d16d-2e62-4bfa-b988-80a42dc5b0f2-about_features-1",
+        "c2161809-4ec0-45c1-83e7-feb1bbd19a94",
+        "template--21547775754526__ece2d16d-2e62-4bfa-b988-80a42dc5b0f2-about_img-1",
+        "b62c4807-7d34-4241-8fbc-9707de70dd6e"
+      ],
+      "settings": {
+        "section_title": "Who we are",
+        "section_sub_title": "About Us",
+        "section_title_color": "#292930",
+        "section_subtitle_color": "#3577f0"
+      }
+    },
+    "1a71d000-4bba-462b-a7a8-fa717c39bdec": {
+      "type": "section-product-carousel",
+      "blocks": {
+        "template--21547775754526__1a71d000-4bba-462b-a7a8-fa717c39bdec-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21547775754526__1a71d000-4bba-462b-a7a8-fa717c39bdec-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": true,
+        "end_time": "2024-05-22",
+        "product_collection": "desk-table",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
+    },
+    "39ad8c93-71af-4629-b085-5d498ffeebb6": {
+      "type": "section-countdown",
+      "settings": {
+        "is_animations": false,
+        "cd_title": "Decorate Your House with Us",
+        "cd_sub_title": "Don't Miss!!",
+        "end_time": "2024-05-22",
+        "cd_btn_txt": "Check it Out!",
+        "cd_btn_url": "shopify:\/\/collections\/desk-table",
+        "cd_img": "shopify:\/\/shop_images\/poster-07.png"
+      }
+    },
+    "8afe6eb8-387f-44bb-9bf9-374fef0ee582": {
+      "type": "section-multicolumn-product-carousel",
+      "blocks": {
+        "template--21547775754526__8afe6eb8-387f-44bb-9bf9-374fef0ee582-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21547775754526__8afe6eb8-387f-44bb-9bf9-374fef0ee582-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "is_countdown": true,
+        "end_time": "2024-05-22",
+        "product_collection": "desk-table",
+        "list_per_slider": 8,
+        "number_of_products_to_show": 8,
+        "product_layout": "1",
+        "isbutton_true": true,
+        "btn_txt": "View All Deals",
+        "btn_url": "shopify:\/\/collections\/all",
+        "autoplay_true": true,
+        "autoplay_speed": 5000,
+        "col_lg": 4,
+        "col_md": 2,
+        "col_sm": 2
+      }
+    },
+    "48af3f2e-6f67-4787-b96e-f61be1178d56": {
+      "type": "dividar",
+      "settings": {
+        "container": "container-xxl",
+        "border_color": "#f6f7fb",
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
+    },
+    "359090f7-6f93-49e3-a936-de2399d03613": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--21547775754526__359090f7-6f93-49e3-a936-de2399d03613-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service9.png"
+          }
+        },
+        "e8ac7d83-7e63-4c30-9bea-363c692e1432": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service10.png"
+          }
+        },
+        "92bc46d3-84cd-4b36-bb9c-c48ef984a1d5": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service6.png"
+          }
+        },
+        "ad29a223-3684-48bc-b0e4-0e25ce42ceee": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service8.png"
+          }
+        },
+        "c271e7cd-ae98-4256-b90d-8a14c2cd67e6": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "",
+            "ws_img": "shopify:\/\/shop_images\/service7.png"
+          }
+        },
+        "template--21547775754526__359090f7-6f93-49e3-a936-de2399d03613-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 45,
+            "section_padding_bottom_md": 60,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21547775754526__359090f7-6f93-49e3-a936-de2399d03613-whyus-1",
+        "e8ac7d83-7e63-4c30-9bea-363c692e1432",
+        "92bc46d3-84cd-4b36-bb9c-c48ef984a1d5",
+        "ad29a223-3684-48bc-b0e4-0e25ce42ceee",
+        "c271e7cd-ae98-4256-b90d-8a14c2cd67e6",
+        "template--21547775754526__359090f7-6f93-49e3-a936-de2399d03613-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout1",
+        "col_xl": "5",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
+    },
+    "0c9b5926-731e-46e7-9e2f-a8146fbb5597": {
+      "type": "section-testimonial-carousel",
+      "blocks": {
+        "template--21547775754526__0c9b5926-731e-46e7-9e2f-a8146fbb5597-review-1": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/image-4_8c4f1082-6459-41ff-a681-8ecf44bf4906.png",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "0597e644-c81c-4d9a-ad54-d923924cf601": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/image-2.png",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "74dae4a6-d94f-46e0-95ff-12914f370ff7": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/image-3.png",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "2d393d0d-a270-446c-97c8-2d1daf2b6083": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/image-1.png",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        },
+        "74f34c94-aeaf-4ab8-8603-8e843d5e4a79": {
+          "type": "review",
+          "settings": {
+            "review_content": "It's amazing how much easier it has been to meet new people and create instantly non connections. I have the exact same personal the only thing that has changed is my mind set and a few behaviors.",
+            "tsm_img": "shopify:\/\/shop_images\/image-1.png",
+            "author_name": "Wade Warren",
+            "author_desg": "Head of Marketing"
+          }
+        }
+      },
+      "block_order": [
+        "template--21547775754526__0c9b5926-731e-46e7-9e2f-a8146fbb5597-review-1",
+        "0597e644-c81c-4d9a-ad54-d923924cf601",
+        "74dae4a6-d94f-46e0-95ff-12914f370ff7",
+        "2d393d0d-a270-446c-97c8-2d1daf2b6083",
+        "74f34c94-aeaf-4ab8-8603-8e843d5e4a79"
+      ],
+      "settings": {
+        "container": "container",
+        "is_section_title": true,
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "section_title": "Our Users Feedback",
+        "section_sub_title": "Testimonials",
+        "autoplay_true": false,
+        "autoplay_speed": 5000
+      }
+    },
+    "10a05b27-8e56-4af4-a750-d6483008d22a": {
+      "type": "section-product-carousel",
+      "blocks": {
+        "template--21547775754526__10a05b27-8e56-4af4-a750-d6483008d22a-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21547775754526__10a05b27-8e56-4af4-a750-d6483008d22a-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "This Week’s",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
+        "product_collection": "desk-table",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": true,
+        "product_layout": "2",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
+    },
+    "93cafe2b-e48e-46b5-808b-835076312782": {
+      "type": "newsletter",
+      "settings": {
+        "before_title_icon": "fas fa-envelope-open",
+        "before_title_text": "Newsletter",
+        "before_title_color": "#3577f0",
+        "title": "Get weekly update",
+        "bg_img": "shopify:\/\/shop_images\/bg-image-6.jpg",
+        "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
+      }
+    },
+    "7785ed90-7d44-40cc-99c3-02a1340bb830": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--21547775754526__7785ed90-7d44-40cc-99c3-02a1340bb830-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Fast & Secure Delivery<\/strong><\/p>",
+            "wscontent": "Tell about your service.",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
+          }
+        },
+        "7b449a9a-8ef9-47d6-b509-63abe9ff14a8": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Money Back Guarantee<\/strong><\/p>",
+            "wscontent": "Within 10 days.",
+            "ws_img": "shopify:\/\/shop_images\/service5.png"
+          }
+        },
+        "21597afe-01e7-4f8d-9f8d-d9f98ec19230": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>24 Hour Return Policy<\/strong><\/p>",
+            "wscontent": "No question ask.",
+            "ws_img": "shopify:\/\/shop_images\/service1.png"
+          }
+        },
+        "d37c8bcd-5009-4379-baeb-a74408e35146": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Pro Quality Support<\/strong><\/p>",
+            "wscontent": "24\/7 Live support.",
+            "ws_img": "shopify:\/\/shop_images\/service4.png"
+          }
+        },
+        "69fdeb77-b11f-4ee4-af9d-23a3b4fee9a6": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 40,
+            "section_padding_bottom": 0,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21547775754526__7785ed90-7d44-40cc-99c3-02a1340bb830-whyus-1",
+        "7b449a9a-8ef9-47d6-b509-63abe9ff14a8",
+        "21597afe-01e7-4f8d-9f8d-d9f98ec19230",
+        "d37c8bcd-5009-4379-baeb-a74408e35146",
+        "69fdeb77-b11f-4ee4-af9d-23a3b4fee9a6"
+      ],
+      "settings": {
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout2",
+        "col_xl": "4",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "9c94f89a-08b3-4f85-944c-b29531db27fc",
+    "fee67d54-5d2b-47fd-b9c7-73a913865081",
+    "9b211fec-f339-4346-aa40-866333f41efc",
+    "813957b6-7340-4879-b5f7-0f912c37b780",
+    "ece2d16d-2e62-4bfa-b988-80a42dc5b0f2",
+    "1a71d000-4bba-462b-a7a8-fa717c39bdec",
+    "39ad8c93-71af-4629-b085-5d498ffeebb6",
+    "8afe6eb8-387f-44bb-9bf9-374fef0ee582",
+    "48af3f2e-6f67-4787-b96e-f61be1178d56",
+    "359090f7-6f93-49e3-a936-de2399d03613",
+    "0c9b5926-731e-46e7-9e2f-a8146fbb5597",
+    "10a05b27-8e56-4af4-a750-d6483008d22a",
+    "93cafe2b-e48e-46b5-808b-835076312782",
+    "7785ed90-7d44-40cc-99c3-02a1340bb830"
+  ]
+}

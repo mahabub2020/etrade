@@ -1,0 +1,330 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-nft",
+      "settings": {
+      }
+    },
+    "b3c26134-efa6-4ff8-bfe6-b57406b8c9b1": {
+      "type": "nft-product-banner-slider",
+      "settings": {
+        "subtitle": "Largest NFT marketplace",
+        "banner_title": "Discover, collect, and sell extraordinary NFTs",
+        "banner_btn_txt": "Explore",
+        "banner_btn_url": "",
+        "section_bg_color": "#703f3f",
+        "product_collection": "nft",
+        "number_of_products_to_show": 8,
+        "product_layout": "5",
+        "excluded_products": [
+
+        ],
+        "offset_product": 0,
+        "sort_by": "title",
+        "reverse_order": true,
+        "hover_img": true,
+        "autoplay_true": false,
+        "autoplay_speed": 5000
+      }
+    },
+    "97366287-b518-4189-a954-da52687a999b": {
+      "type": "collection-carousel",
+      "blocks": {
+        "2c701cd0-8e3f-4d54-92f7-3ef3caa9a720": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 75,
+            "section_padding_bottom": 50,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "2c701cd0-8e3f-4d54-92f7-3ef3caa9a720"
+      ],
+      "settings": {
+        "collection_style": "cat_style_1",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "sub_title": "Before Title",
+        "section_title": "Featured Categories",
+        "featured_cat_collection": [
+          "reading",
+          "toy",
+          "wallets",
+          "woman",
+          "shoes",
+          "nft",
+          "baby-s",
+          "deals",
+          "fashion",
+          "handbag"
+        ],
+        "autoplay_true": true,
+        "autoplay_speed": 5000,
+        "product_column": 6,
+        "product_column_lg": 5,
+        "product_column_md": 4,
+        "product_column_sm": 2
+      }
+    },
+    "fed6e484-3850-4859-9020-de7bab54104f": {
+      "type": "section-rightstretch-product-carousel",
+      "blocks": {
+        "template--21554335482142__fed6e484-3850-4859-9020-de7bab54104f-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21554335482142__fed6e484-3850-4859-9020-de7bab54104f-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
+        "product_collection": "nft",
+        "number_of_products_to_show": 8,
+        "excluded_products": [
+
+        ],
+        "sort_by": "title",
+        "reverse_order": false,
+        "product_layout": "1",
+        "autoplay_true": false,
+        "autoplay_speed": 5000,
+        "product_column": 4,
+        "product_column_lg": 3,
+        "product_column_md": 3,
+        "product_column_sm": 2
+      }
+    },
+    "3ab5a12b-5ecd-4259-b9af-c06bba773041": {
+      "type": "section-product-grid",
+      "settings": {
+        "is_section_title": true,
+        "title_layout": "style_2",
+        "title": "New Arrivals",
+        "sub_title": "Recently Viewed",
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "is_countdown": false,
+        "end_time": "2024-05-22",
+        "section_btn_txt": "View All Deals",
+        "section_btn_url": "",
+        "product_collection": "nft",
+        "excluded_products": [
+
+        ],
+        "number_of_products_to_show": 8,
+        "product_layout": "1",
+        "col_xl": "3",
+        "col_lg": "4",
+        "col_md": "2",
+        "col_sm": "2",
+        "col_mobile": "1",
+        "isbutton_true": true,
+        "btn_txt": "View All Deals",
+        "btn_url": ""
+      }
+    },
+    "76bab7b5-46a2-4bbf-8411-f16f19b28166": {
+      "type": "section-product-list",
+      "blocks": {
+        "template--21762357559582__76bab7b5-46a2-4bbf-8411-f16f19b28166-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "template--21762357559582__76bab7b5-46a2-4bbf-8411-f16f19b28166-section_padding-1"
+      ],
+      "settings": {
+        "list_layout": "style_2",
+        "is_section_title": true,
+        "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
+        "title": "Recently Viewed",
+        "subtitle": "Recently Viewed",
+        "product_collection": "nft",
+        "excluded_products": [
+
+        ],
+        "number_of_products_to_show": 8,
+        "col_xl": "3",
+        "col_lg": "2",
+        "col_md": "2",
+        "col_sm": "1",
+        "col_mobile": "1"
+      }
+    },
+    "9eaac3cc-a60f-4a07-b885-da8107607793": {
+      "type": "section-why-us",
+      "blocks": {
+        "eac0f028-7a89-4b4e-b284-63538245d897": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Choose Your Favourite<\/strong><\/p>",
+            "wscontent": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quas expedita veritatis ipsum, culpa, asperiores.",
+            "ws_img": "shopify:\/\/shop_images\/choose.png"
+          }
+        },
+        "template--21762357559582__9eaac3cc-a60f-4a07-b885-da8107607793-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Verify NFTs<\/strong><\/p>",
+            "wscontent": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quas expedita veritatis ipsum, culpa, asperiores.",
+            "ws_img": "shopify:\/\/shop_images\/protection.png"
+          }
+        },
+        "7adc29e6-e283-4d2a-a8a5-29501bee4b26": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<h6>Purchase NFTS<\/h6>",
+            "wscontent": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quas expedita veritatis ipsum, culpa, asperiores.",
+            "ws_img": "shopify:\/\/shop_images\/purchasing.png"
+          }
+        },
+        "c161a097-457f-4ca5-819f-0bd3cc9bba5f": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<h6>Enjoy!<\/h6>",
+            "wscontent": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quas expedita veritatis ipsum, culpa, asperiores.",
+            "ws_img": "shopify:\/\/shop_images\/dancing.png"
+          }
+        },
+        "template--21762357559582__9eaac3cc-a60f-4a07-b885-da8107607793-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 60,
+            "section_padding_bottom_md": 60,
+            "section_padding_top_xs": 40,
+            "section_padding_bottom_xs": 40
+          }
+        }
+      },
+      "block_order": [
+        "eac0f028-7a89-4b4e-b284-63538245d897",
+        "template--21762357559582__9eaac3cc-a60f-4a07-b885-da8107607793-whyus-1",
+        "7adc29e6-e283-4d2a-a8a5-29501bee4b26",
+        "c161a097-457f-4ca5-819f-0bd3cc9bba5f",
+        "template--21762357559582__9eaac3cc-a60f-4a07-b885-da8107607793-section_padding-1"
+      ],
+      "settings": {
+        "is_section_title": true,
+        "sub_title_icon": "",
+        "section_title": "How to buy NFTs",
+        "section_sub_title": "",
+        "wulayout": "layout3",
+        "col_xl": "4",
+        "col_lg": "3",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
+    },
+    "e8fd1c45-b7f1-4012-9fb4-1a9f9dfb1533": {
+      "type": "section-video",
+      "settings": {
+        "section_title": "Meet The Greater",
+        "section_sub_title": "Video",
+        "video_img": "shopify:\/\/shop_images\/bg-image-7.jpg",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=FkUn86bH34M"
+      }
+    },
+    "6ee71414-233d-45bf-bbce-59a06070d115": {
+      "type": "latest-blog",
+      "blocks": {
+        "template--21554335482142__6ee71414-233d-45bf-bbce-59a06070d115-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21554335482142__6ee71414-233d-45bf-bbce-59a06070d115-section_padding-1"
+      ],
+      "settings": {
+        "container_style": "style_1",
+        "section_sub_title": "Regular Post",
+        "section_title": "Latest News",
+        "blog_handle": "news",
+        "blog_limit_handle": 3,
+        "col_xl": "4",
+        "col_lg": "4",
+        "col_md": "2",
+        "col_sm": "2",
+        "col_mobile": "1",
+        "section_title_color": "#292930",
+        "section_icon_color": "#ffffff",
+        "section_icon_bg_color": "#8c71db",
+        "section_subtitle_color": "#8c71db",
+        "blog_title_color": "#292930",
+        "blog_title_hover_color": "#cf987e",
+        "blog_user_color": "#ffffff",
+        "blog_rm_color": "#292930",
+        "blog_rm_hover_color": "#3577f0",
+        "blog_post_border_color": "#f1f1f1"
+      }
+    },
+    "320ee3c6-dd0d-411d-aec1-2d0181e94c82": {
+      "type": "section-blog",
+      "blocks": {
+        "template--21554335482142__320ee3c6-dd0d-411d-aec1-2d0181e94c82-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21554335482142__320ee3c6-dd0d-411d-aec1-2d0181e94c82-section_padding-1"
+      ],
+      "settings": {
+        "bloglayout": "blog1"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b3c26134-efa6-4ff8-bfe6-b57406b8c9b1",
+    "97366287-b518-4189-a954-da52687a999b",
+    "fed6e484-3850-4859-9020-de7bab54104f",
+    "3ab5a12b-5ecd-4259-b9af-c06bba773041",
+    "76bab7b5-46a2-4bbf-8411-f16f19b28166",
+    "9eaac3cc-a60f-4a07-b885-da8107607793",
+    "e8fd1c45-b7f1-4012-9fb4-1a9f9dfb1533",
+    "6ee71414-233d-45bf-bbce-59a06070d115",
+    "320ee3c6-dd0d-411d-aec1-2d0181e94c82"
+  ]
+}

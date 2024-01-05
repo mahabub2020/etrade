@@ -1,0 +1,108 @@
+
+{%- if article and article != empty -%}
+	<div class="blog-item-info">
+		<div class="inner">
+			{%- if show_image == true and article.image -%}
+				<div class="post-thumbnail thumbnail">
+					<a class="blog-list-img" href="{{ article.url }}">
+						<img
+							srcset="{%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+									{%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+									{%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+									{%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+									{%- if article.image.src.width >= 940 -%}{{ article.image.src | image_url: width: 940 }} 940w,{%- endif -%}
+									{%- if article.image.src.width >= 1066 -%}{{ article.image.src | image_url: width: 1066 }} 1066w,{%- endif -%}
+									{%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+									{%- if article.image.src.width >= 1780 -%}{{ article.image.src | image_url: width: 1780 }} 1780w,{%- endif -%}
+									{%- if article.image.src.width >= 2000 -%}{{ article.image.src | image_url: width: 2000 }} 2000w,{%- endif -%}
+									{{ article.image.src | image_url }} {{ article.image.src.width }}w"
+							src="{{ article.image.src | image_url: width: 360 }}"
+							sizes="sizes"
+							alt="{{ article.image.src.alt | escape }}"
+							class="img-fluid"
+							loading="lazy"
+							width="{{ article.image.width }}"
+							height="{{ article.image.height }}"
+						>
+					</a>
+				</div>
+			{%- endif -%}
+		<div class="content"> 
+		{%- if tags -%}
+			{%- if article.tags.size > 0 -%}
+				<div class="blog-item-category">
+					{%- for tag in article.tags -%}
+						<a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+					{%- endfor -%}
+				</div>
+			{%- endif -%}
+		{%- endif -%}
+		
+			<h4 class="title">
+				<a href="{{ article.url }}" title="{{ article.title }}">{{ article.title | truncate: 100 | escape }}</a>
+			</h4>
+			
+			{%- if show_author -%}
+			<div class="axil-post-meta">
+				<div class="post-author-avatar">
+					<img src="{{ article.user.image | img_url: 'master' }}" alt="{{ article.author }}">
+				</div>
+				<div class="post-meta-content">    
+					<h6 class="author-title post-author-name"> 
+						<span class="hover-flip-item"> 
+							<span itemprop="name">{{ article.author }}</span>
+						</span> 
+					</h6>
+					<ul class="post-meta-list">                    
+						<li class="post-meta-date">{{ article.published_at | date: "%b, %d , %y" }}</li> 
+						<li>{{ article.bio }}</li>
+					</ul> 
+				</div>
+			</div> 
+		{%- endif -%}
+
+	
+
+			{%- if settings.article_show_excerpt -%}
+				{%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+					<div class="blog-item-description">
+						<p>
+							{%- if article.excerpt.size > 0 -%}
+								{{ article.excerpt | strip_html | truncatewords: 30 }}
+							{%- else -%}
+								{{ article.content | strip_html | truncatewords: 30 }}
+							{%- endif -%}
+						</p>
+					</div>
+				{%- endif -%}
+			{%- endif -%}
+			
+			<div class="blog-item-actions">
+				{% assign featured_image = article.image | default: article.image %}
+				{% if  settings.article_show_button %}
+				<div class="read-more-btn">
+                    <a class="axil-btn btn-bg-primary" href="{{ article.url }}">Read More</a>
+                </div>
+				{%- endif -%}
+
+				{%- if article.comments_count > 0 and blog.comments_enabled? -%}
+					{% comment %} <a class="action" href="{{ article.url }}/#comments">{{ 'blogs.article.comments' | t: count: article.comments_count }}</a> {% endcomment %}
+				{%- endif -%}
+				
+				{% comment %} <a class="action" title="Facebook" rel="nofollow" onclick="PopupCenter('https://www.facebook.com/sharer/sharer.php?u={{ request.origin | append: article.url }}','MyWindow','450','450');" href="javascript:void(0);">
+					{% render 'icon', name: 'facebook-icon', class: 'w-14 h-14', size: 'custom' %}
+				</a>
+				<a class="action" title="Twitter" rel="nofollow" onclick="PopupCenter('//twitter.com/share?url={{ request.origin | append: article.url }}&text={{ article.title }}','MyWindow','450','450');" href="javascript:void(0);">
+					{% render 'icon', name: 'twitter-icon', class: 'w-14 h-14', size: 'custom' %}
+				</a>
+				<a class="action" title="Pinterest" rel="nofollow" onclick="PopupCenter('//pinterest.com/pin/create/button/?url={{ request.origin | append: article.url }}&media={{ featured_image.src | image_url: width: 1024, height: 1024 }}','MyWindow','450','450');" href="javascript:void(0);">
+					{% render 'icon', name: 'pinterest-icon', class: 'w-14 h-14', size: 'custom' %}
+				</a>
+				<a class="action" title="LinkedIn" rel="nofollow" onclick="PopupCenter('https://www.linkedin.com/sharing/share-offsite/?url={{ request.origin | append: article.url }}&text={{ article.title }}','MyWindow','450','450');" href="javascript:void(0);">
+					{% render 'icon', name: 'linkedin-icon', class: 'w-14 h-14', size: 'custom' %}
+				</a> {% endcomment %}
+			</div>
+		</div>
+	</div>
+</div>
+{%- endif -%}

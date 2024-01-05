@@ -1,5 +1,6 @@
  
 {% if section.settings.wulayout == 'layout1' %}
+
  <div  id="section-{{ section.id }}" class="axil-why-choose-area axil-section-gap pb--50 pb_sm--30">
   <div class="container"> 
     {% if section.settings.is_section_title == true %} 
@@ -47,11 +48,20 @@
           {% case block.type %}
             {% when 'whyus' %}   
             <div class="col">
-              <div class="service-box">
+              <div class="service-box service-style-2">  
+              {% if block.settings.ws_img != '' %}  
                   <div class="icon">
                     <img decoding="async" loading="lazy" src="{% if block.settings.ws_img %}{{ block.settings.ws_img | img_url: '60x60' }}{% else %}http:\/\/via.placeholder.com\/60x60{% endif %}" alt="{{ block.settings.ws_img.alt }}"> 
-                   </div>
-                  <h6 class="title">{{ block.settings.wstitle }}</h6> 
+                   </div> 
+                  {% endif %}
+                  <div class="content">
+                    {% if block.settings.wstitle != '' %}  
+                      <h6 class="title">{{ block.settings.wstitle }}</h6>
+                    {% endif %}
+                    {% if block.settings.wscontent != '' %}  
+                      <p>{{ block.settings.wscontent }}</p>
+                    {% endif %}
+                </div>
               </div>
             </div>
           {% endcase %}
@@ -403,7 +413,7 @@
           "step": 5,
           "label": "Padding Top",
           "unit": "px",
-          "default": 0
+          "default": 60
         },
         {
           "type": "range",
@@ -413,7 +423,7 @@
           "step": 5,
           "label": "Padding Bottom",
           "unit": "px",
-          "default": 100
+          "default": 60
         },
         {
           "type": "header",
@@ -426,7 +436,7 @@
           "step": 5,
           "label": "Padding Top",
           "unit": "px",
-          "default": 0
+          "default": 60
         }, {
           "type": "range",
           "id": "section_padding_bottom_md",
@@ -435,7 +445,7 @@
           "step": 5,
           "label": "Padding Bottom",
           "unit": "px",
-          "default": 80
+          "default": 60
         }, 
         {
           "type": "header",
@@ -449,7 +459,7 @@
           "step": 5,
           "label": "Padding Top",
           "unit": "px",
-          "default": 0
+          "default": 40
         }, 
         {
           "type": "range",
@@ -459,7 +469,7 @@
           "step": 5,
           "label": "Padding Bottom",
           "unit": "px",
-          "default": 60
+          "default": 40
         }
       ]
     }, 

@@ -112,12 +112,12 @@
     "11e2be9b-7c69-4850-8ba6-558de5014330": {
       "type": "section-multicolumn-product-carousel",
       "settings": {
-        "is_section_title": false,
-        "title_layout": "style_1",
+        "is_section_title": true,
+        "title_layout": "style_2",
         "title": "Product Collectioncdas",
         "sub_title": "Recently Viewed",
-        "is_countdown": false,
-        "end_time": "2024-05-22",
+        "is_countdown": true,
+        "end_time": "2024-07-23",
         "title_icon": "shopify:\/\/shop_images\/service5.png",
         "product_collection": "accessories",
         "list_per_slider": 2,
@@ -168,13 +168,25 @@
             "author_name": "Wade Warren",
             "author_desg": "Head of Marketing"
           }
+        },
+        "77add60a-203c-4074-8574-6b29766cf1a4": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 110,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 45,
+            "section_padding_bottom_md": 45,
+            "section_padding_top_xs": 45,
+            "section_padding_bottom_xs": 45
+          }
         }
       },
       "block_order": [
         "template--21159461093662__24129658-3442-4d48-850d-ff7a81e17b4c-review-1",
         "9eea9190-ad01-4212-9d1e-430a70ee0742",
         "c5379b69-f634-4093-aef6-8a82a53f930d",
-        "2e8df00d-ca6a-4631-b17e-5a8c3f818ef5"
+        "2e8df00d-ca6a-4631-b17e-5a8c3f818ef5",
+        "77add60a-203c-4074-8574-6b29766cf1a4"
       ],
       "settings": {
         "is_section_title": false,
@@ -188,7 +200,7 @@
     "bec99a32-f605-45e5-80ce-51c3e4f8c951": {
       "type": "section-product-carousel",
       "settings": {
-        "is_section_title": false,
+        "is_section_title": true,
         "title": "gvsfvsf",
         "sub_title": "fsfsfdgv",
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
@@ -213,8 +225,24 @@
     },
     "b025eb70-0468-4bce-80b7-a2cbcab34d1e": {
       "type": "section-product-list",
+      "blocks": {
+        "c447e89f-9999-4bb3-a652-a8e91e842f5c": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 8,
+            "section_padding_bottom": 6,
+            "section_padding_top_md": 46,
+            "section_padding_bottom_md": 46,
+            "section_padding_top_xs": 46,
+            "section_padding_bottom_xs": 46
+          }
+        }
+      },
+      "block_order": [
+        "c447e89f-9999-4bb3-a652-a8e91e842f5c"
+      ],
       "settings": {
-        "is_section_title": false,
+        "is_section_title": true,
         "sub_title_icon": "<i class=\"fas fa-tags\"><\/i>",
         "title": "Recently Viewedb",
         "subtitle": "Recently Viewedv",
@@ -277,8 +305,8 @@
         "306e3e8f-bc80-4014-b424-6209fde4fdf7": {
           "type": "section_padding",
           "settings": {
-            "section_padding_top": 100,
-            "section_padding_bottom": 100,
+            "section_padding_top": 0,
+            "section_padding_bottom": 65,
             "section_padding_top_md": 0,
             "section_padding_bottom_md": 0,
             "section_padding_top_xs": 0,
@@ -295,7 +323,7 @@
         "306e3e8f-bc80-4014-b424-6209fde4fdf7"
       ],
       "settings": {
-        "is_section_title": false,
+        "is_section_title": true,
         "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
         "section_title": "Why People Choose Us",
         "section_sub_title": "Why Us",
@@ -331,14 +359,53 @@
             "cta_img": "shopify:\/\/shop_images\/poster-02.png",
             "reverse_order": false
           }
+        },
+        "65be104c-3cfd-4f1e-9a4a-5b6dcca4b485": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 45,
+            "section_padding_bottom": 100,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
         }
       },
       "block_order": [
         "template--21159461093662__a711bca3-775a-4e86-8cf9-27dc24a9bca0-cta-1",
-        "2ce7b226-8920-450c-8607-ccdd39ac6afa"
+        "2ce7b226-8920-450c-8607-ccdd39ac6afa",
+        "65be104c-3cfd-4f1e-9a4a-5b6dcca4b485"
       ],
       "settings": {
         "ctalayout": "cta2"
+      }
+    },
+    "83f376aa-a062-44a7-b925-ff72570961d8": {
+      "type": "newsletter",
+      "blocks": {
+        "template--21159461093662__83f376aa-a062-44a7-b925-ff72570961d8-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 0,
+            "section_padding_bottom": 35,
+            "section_padding_top_md": 0,
+            "section_padding_bottom_md": 80,
+            "section_padding_top_xs": 0,
+            "section_padding_bottom_xs": 60
+          }
+        }
+      },
+      "block_order": [
+        "template--21159461093662__83f376aa-a062-44a7-b925-ff72570961d8-section_padding-1"
+      ],
+      "settings": {
+        "before_title_icon": "fas fa-envelope-open",
+        "before_title_text": "Newsletter",
+        "before_title_color": "#899fc9",
+        "title": "Get weekly update",
+        "bg_img": "shopify:\/\/shop_images\/bg-image-5.jpg",
+        "form_action_url": "https:\/\/axilweb.us21.list-manage.com\/subscribe\/post?u=d2a79986af90d180038dc91c6&id=e71e328c72&f_id=0015dce6f0"
       }
     }
   },
@@ -352,6 +419,7 @@
     "bec99a32-f605-45e5-80ce-51c3e4f8c951",
     "b025eb70-0468-4bce-80b7-a2cbcab34d1e",
     "389b4ea9-86d6-4b2d-8671-b0850fa435dd",
-    "a711bca3-775a-4e86-8cf9-27dc24a9bca0"
+    "a711bca3-775a-4e86-8cf9-27dc24a9bca0",
+    "83f376aa-a062-44a7-b925-ff72570961d8"
   ]
 }

@@ -22,9 +22,16 @@
        
       {% if section.settings.banner_title != '' %}
             <div class="slider-section-title section-title-border">
-                <h2 class="title">{{ section.settings.section_title }}</h2>
+                <h2 class="title">{{ section.settings.section_title }}
+                {% if section.settings.title_icon %}  
+                <img width="{{ image.width }}"
+                  height="{{ image.height }}" src="{{ section.settings.title_icon | img_url:  '60x60' }}"
+                  alt="{{ section.settings.title_icon.alt | default: shop.name }}"  decoding="async"
+                  loading="lazy">
+                {% endif %} 
+               </h2>
             </div> 
-        {% endif%}  
+        {% endif %}  
 
         <div class="categrie-product-activation-4 axil-slick-slider slick-layout-wrapper--15 axil-slick-angle angle-top-slide" {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
             
@@ -39,41 +46,43 @@
                     <div class="slick-single-layout">
                     <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
                 {% endif %}
-
-                    <div class="col">
-                        {% if collection.all_products_count > 0 %} 
-                            <div class="categrie-product categrie-product-4">
-                                <a href="{{ collection.url | escape }}" class="cate-thumb">
-                                    {%- if collection.image -%}
-                                        {%- assign collection_image = collection.image -%}
-                                      {%- elsif collection.products.first and collection.products.first.images != empty -%}
-                                        {%- assign collection_image = collection.products.first.featured_image -%}
-                                      {%- else -%}
-                                        {%- assign collection_image = blank -%}
-                                      {%- endif -%}
-                                    <img src="{{ collection_image | img_url: '190x304' }}" alt="{{ collection.title | escape }}">
-                                    <h5 class="cat-title">{{ collection.title | escape }}</h5>
- 
-                                </a>
-                            </div> 
-                        {% endif %}
-                    </div>
-                        {% if count == totalitems %}
-                            </div></div> 
-                            {% assign count = 1 %}  
-                        {% elsif forloop.length == loopcount %}
-                            </div></div>
-                            {% assign count = count | plus: 1 %} 
-                        {% else %}
-                            {% assign count = count | plus: 1 %}
-                        {% endif %}
-
-                    {% endfor %}  
           
+                      {% if collection.all_products_count > 0 %} 
+                      <div class="col">
+                          <div class="categrie-product categrie-product-4">
+                              <a href="{{ collection.url | escape }}" class="cate-thumb">
+                                  {%- if collection.image -%}
+                                      {%- assign collection_image = collection.image -%}
+                                    {%- elsif collection.products.first and collection.products.first.images != empty -%}
+                                      {%- assign collection_image = collection.products.first.featured_image -%}
+                                    {%- else -%}
+                                      {%- assign collection_image = blank -%}
+                                    {%- endif -%}
+
+                                  <img src="{{ collection_image | img_url: '190x304' }}" width="{{ image.width }}"
+                                    height="{{ image.height }}" class="lazyload" alt="{{ collection.title | escape }}">
+                                  <h5 class="cat-title">{{ collection.title | escape }}</h5>
+
+                              </a>
+                          </div> 
+                        </div>
+                      {% endif %}
+                   
+                      {% if count == totalitems %}
+                          </div></div> 
+                          {% assign count = 1 %}  
+                      {% elsif forloop.length == loopcount %}
+                          </div></div>
+                          {% assign count = count | plus: 1 %} 
+                      {% else %}
+                          {% assign count = count | plus: 1 %}
+                      {% endif %}
+                      
+
+                  {% endfor %}   
         </div>
     </div>
 </div>
-
 
 
 {% schema %}
@@ -85,6 +94,13 @@
             "id": "section_title",
             "default": "Featured Categories",
             "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "title_icon",
+          "label": "Title Icon",
+          "info": "Recommended Size: 60 x 60px",
+          "info": "Ttile Icon"
         },
         {
             "type": "collection_list",

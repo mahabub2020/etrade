@@ -1,0 +1,48 @@
+<div class="page-title-wrapper text-{{ section.settings.text_alignment }}">
+    <div class="{{ section.settings.container }}">
+      {% unless template == 'product' or template == 'article' %}
+        <h1 class="page-title">{{ page_title | split: '|' | first }}</h1>
+      {% endunless %}
+      {% unless template == 'index' %}
+        <nav class="mt-2" aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-{{ section.settings.text_alignment }} mb-0">
+            <li class="breadcrumb-item">
+              <a href="{{ routes.cart_url | split: 'cart' | first }}">{{ 'general.breadcrumbs.home' | t }}</a>
+            </li>
+            {% if template contains 'product' %}
+              {% if collection %}
+                {% if collection.handle %}
+                  {% capture url %}
+                    {{ collection.url }}{% endcapture %}
+                  <li class="breadcrumb-item">{{ collection.title | split: '|' | first | link_to: url }}</li>
+                {% endif %}
+              {% endif %}
+              <li class="breadcrumb-item">{{ product.title | split: '|' | first }}</li>
+            {% elsif template contains 'collection' and collection.handle %}
+              {% if current_tags %}
+                {% capture url %}
+                  {{ collection.url }}{% endcapture %}
+                <li class="breadcrumb-item">{{ collection.title | split: '|' | first | link_to: url }}</li>
+                {% assign bd_tags = current_tags | join: " + " %}
+                <li class="breadcrumb-item active">{{ bd_tags | split: '|' | first }}
+                </li>
+              {% else %}
+                <li class="breadcrumb-item active">
+                  {{ collection.title | split: '|' | first }}
+                </li>
+              {% endif %}
+            {% elsif template == 'cart' %}
+              <span {% if settings.enable_multilang %}data-translate="general.breadcrumbs.cart"{% endif %}>{{ 'general.breadcrumbs.cart' | t }}</span>
+            {% elsif template == 'article' %}
+              <li class="breadcrumb-item">{{ blog.title | split: '|' | first | link_to: blog.url }}</li>
+              <li class="breadcrumb-item active">{{ article.title | split: '|' | first }}</li>
+            {% elsif template contains 'page' %}
+              <li class="breadcrumb-item active" aria-current="page">{{ page.title | split: '|' | first }}</li>
+            {% else %}
+              <li class="breadcrumb-item active" aria-current="page">{{ page_title | split: '|' | first }}</li>
+            {% endif %}
+          </ol>
+        </nav>
+      {% endunless %}
+    </div>
+  </div>

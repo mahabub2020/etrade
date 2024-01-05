@@ -2,14 +2,32 @@
   "current": {
     "favicon": "shopify:\/\/shop_images\/logo.png",
     "currency_enable": true,
+    "transparent_header_style": "transparent_style_2",
     "review_app": "lai_reviews",
     "content_sidebar_handle": "content_sidebar_in_left",
+    "show_tags": true,
+    "show_author": true,
+    "article_show_excerpt": true,
+    "article_show_button": true,
+    "apikey": "AIzaSyBtmXSwv4YmAKtcZyyad9W7D4AC08z0Rb4",
+    "footer_layout": "footer_layout_2",
+    "footer_top_enable": true,
+    "footer_bottom_enable": true,
+    "footer_right_menu": "footer",
+    "copy_ritht_text": "<p>© 2023. All rights reserved by <a href=\"#\" target=\"_blank\">Your Company.<\/a><\/p>",
+    "is_payment_icon": true,
+    "payment_title": "Accept Ford",
+    "payment_icon_img1": "shopify:\/\/shop_images\/cart-1.png",
+    "payment_icon_img2": "shopify:\/\/shop_images\/cart-2.png",
+    "payment_icon_img3": "shopify:\/\/shop_images\/cart-3.png",
+    "payment_icon_img4": "shopify:\/\/shop_images\/cart-5.png",
+    "footer_social_enable": true,
     "checkout_logo_image": "shopify:\/\/shop_images\/logo.svg",
     "sections": {
       "header": {
         "type": "header",
         "settings": {
-          "header_style": "header_style_2",
+          "header_style": "header_style_5",
           "header_top_enable": true,
           "header_languages_enable": true,
           "header_currency_enable": true,
@@ -17,9 +35,12 @@
           "header_top_left": "Free Shipping on Orders Over $150",
           "header_top_menu_enable": true,
           "header_top_right_menu": "main-menu",
+          "logo": "shopify:\/\/shop_images\/logo.png",
+          "logo_sticky": "shopify:\/\/shop_images\/logo.png",
+          "mobile_logo": "shopify:\/\/shop_images\/logo.png",
           "logo_width": 150,
           "header_primary_menu": "main-menu",
-          "header_cat_menu": "",
+          "header_cat_menu": "collections-menu",
           "search_enable": true,
           "search_placeholder": "What are you looking for?",
           "search_title": "Start typing and press Enter to search",
@@ -49,20 +70,27 @@
           "8e9393a6-e78d-40d2-9c66-9cd867c9e7d8": {
             "type": "contact_about",
             "settings": {
-              "footer_about_title": "Company",
-              "address_descrption": "Integer ut ligula quis lectus fringilla elementum porttitor sed est. Duis fringilla efficitur ligula sed lobortis.",
+              "footer_about_title": "Support",
+              "address_descrption": "685 Market Street,<br>\nLas Vegas, LA 95820,<br>\nUnited States.",
               "footer_about_coloum": "3",
               "footer_about_coloum_mobile": "6",
               "about_phone": "(+01) 850-315-5862",
               "about_email": "example@domain.com"
             }
           },
+          "c4e22e19-9a78-4573-aa2f-37344d8e1578": {
+            "type": "newsletter",
+            "settings": {
+              "newsletter_title": "Stay Up To Date",
+              "newsletter_descrption": "Subscribe to our newsletter and get 20% discount offer in your first order"
+            }
+          },
           "010b0fdb-a0e7-4f6a-9bf9-a54f7d8bac93": {
             "type": "footer_menu",
             "settings": {
               "footer_menu_coloum": "3",
-              "footer_menu_title": "Company",
-              "footer_menu_handle": "main-menu",
+              "footer_menu_title": "Account",
+              "footer_menu_handle": "account",
               "title_color": "#ffffff",
               "title_border_color": "#cf987e",
               "menu_color": "#8a8a8a",
@@ -72,9 +100,9 @@
           "df9acf9a-08f3-493c-844c-5a4e384e0c53": {
             "type": "footer_menu",
             "settings": {
-              "footer_menu_coloum": "3",
-              "footer_menu_title": "Company",
-              "footer_menu_handle": "footer",
+              "footer_menu_coloum": "2",
+              "footer_menu_title": "Quick Link",
+              "footer_menu_handle": "company",
               "title_color": "#ffffff",
               "title_border_color": "#cf987e",
               "menu_color": "#8a8a8a",
@@ -88,7 +116,10 @@
               "app_descrption": "Save $3 With App & New User only",
               "footer_app_coloum": "3",
               "footer_app_coloum_mobile": "6",
+              "qr_code_img": "shopify:\/\/shop_images\/qr.png",
+              "app_store1": "shopify:\/\/shop_images\/play-store.png",
               "app_url1": "#",
+              "app_store2": "shopify:\/\/shop_images\/app-store.png",
               "app_url2": "",
               "title_color": "#ffffff",
               "title_border_color": "#cf987e",
@@ -96,43 +127,54 @@
               "content_2_color": "#8a8a8a"
             }
           },
-          "a6d65a9e-42a0-4cb3-b5f7-65ee684ad4f6": {
-            "type": "contact_about",
+          "6343fb25-85da-4b67-8d22-8fe0261e7e88": {
+            "type": "footer_menu2",
             "settings": {
-              "footer_about_title": "Company",
-              "address_descrption": "685 Market Street, Las Vegas, LA 95820, United States.",
-              "footer_about_coloum": "3",
-              "footer_about_coloum_mobile": "6",
-              "about_phone": "(+01) 850-315-5862",
-              "about_email": "example@domain.com"
+              "footer_menu_coloum": "3",
+              "footer_menu_title": "Collections",
+              "footer_menu_handle": "collections-menu",
+              "title_color": "#ffffff",
+              "title_border_color": "#cf987e",
+              "menu_color": "#8a8a8a",
+              "menu_hover_color": "#cf987e"
+            }
+          },
+          "5183c2ef-a3b8-476a-93b6-bc70a9409524": {
+            "type": "footer_menu2",
+            "settings": {
+              "footer_menu_coloum": "3",
+              "footer_menu_title": "Quick Link",
+              "footer_menu_handle": "company",
+              "title_color": "#ffffff",
+              "title_border_color": "#cf987e",
+              "menu_color": "#8a8a8a",
+              "menu_hover_color": "#cf987e"
+            }
+          },
+          "f451c49a-f7b2-4532-9296-5a8e2c416ba3": {
+            "type": "footer_menu2",
+            "settings": {
+              "footer_menu_coloum": "3",
+              "footer_menu_title": "Account",
+              "footer_menu_handle": "account",
+              "title_color": "#ffffff",
+              "title_border_color": "#cf987e",
+              "menu_color": "#8a8a8a",
+              "menu_hover_color": "#cf987e"
             }
           }
         },
         "block_order": [
           "8e9393a6-e78d-40d2-9c66-9cd867c9e7d8",
+          "c4e22e19-9a78-4573-aa2f-37344d8e1578",
           "010b0fdb-a0e7-4f6a-9bf9-a54f7d8bac93",
           "df9acf9a-08f3-493c-844c-5a4e384e0c53",
           "5b052ad1-8bad-496c-9f5c-20611ccac34d",
-          "a6d65a9e-42a0-4cb3-b5f7-65ee684ad4f6"
+          "6343fb25-85da-4b67-8d22-8fe0261e7e88",
+          "5183c2ef-a3b8-476a-93b6-bc70a9409524",
+          "f451c49a-f7b2-4532-9296-5a8e2c416ba3"
         ],
         "settings": {
-          "footer_enable": true,
-          "footer_style": "footer_style_1",
-          "footer_top_enable": true,
-          "footer_bottom_enable": true,
-          "copy_ritht_text": "<p>© 2023. All rights reserved by <a href=\"#\" target=\"_blank\">Your Company.<\/a><\/p>",
-          "footer_social_enable": true,
-          "payment_title": "Accept For",
-          "social_icon_1": "twitter",
-          "social_icon_1_url": "https:\/\/www.facebook.com\/",
-          "social_icon_2": "google-plus",
-          "social_icon_2_url": "",
-          "social_icon_3": "facebook",
-          "social_icon_3_url": "",
-          "social_icon_4": "youtube",
-          "social_icon_4_url": "",
-          "social_icon_5": "instagram",
-          "social_icon_5_url": "https:\/\/www.facebook.com\/"
         }
       }
     },

@@ -1,11 +1,137 @@
 {
-    "sections": {
-        "template": {
-            "type": "template-page"
-        },
-        "contact-form": {
-            "type": "contact-form"
-        }
+  "sections": {
+    "main": {
+      "type": "page-contact",
+      "settings": {
+      }
     },
-    "order": ["template", "contact-form"]
+    "8fec1a3c-1a30-4d92-831e-7cc842c9e3d3": {
+      "type": "section-page-title",
+      "settings": {
+        "enable_breadcrumbs": true,
+        "page_title_txt": "Blog Posts",
+        "enable_banner_img": true,
+        "banner_img": "shopify:\/\/shop_images\/blog-02.png"
+      }
+    },
+    "62fd7fbe-2fc9-4fba-813a-14e985430b68": {
+      "type": "contact-form",
+      "blocks": {
+        "83c9b6ef-e912-4288-bfde-f325f0c80f3e": {
+          "type": "content_box",
+          "settings": {
+            "box_title": "Our Store",
+            "box_content1": "8212 E. Glen Creek Street Orchard Park, NY 14127, United States of America",
+            "box_content2": "Phone: +123 456 7890<br>\nEmail: Hello@etrade.com"
+          }
+        },
+        "9674b889-c0d4-45ca-b43c-2160c789c4e7": {
+          "type": "content_box",
+          "settings": {
+            "box_title": "Careers",
+            "box_content1": "Instead of buying six things, one that you really like.",
+            "box_content2": ""
+          }
+        },
+        "ebd4e2fe-0721-43da-ad27-e51a67bdd742": {
+          "type": "content_box",
+          "settings": {
+            "box_title": "Opening Hours:",
+            "box_content1": "Monday to Saturday: 9am – 10pm <br>\nSundays: 10am – 6pm",
+            "box_content2": ""
+          }
+        }
+      },
+      "block_order": [
+        "83c9b6ef-e912-4288-bfde-f325f0c80f3e",
+        "9674b889-c0d4-45ca-b43c-2160c789c4e7",
+        "ebd4e2fe-0721-43da-ad27-e51a67bdd742"
+      ],
+      "settings": {
+        "title": "We would love to hear from you",
+        "sub_title": "If you’ve got great products your making or looking to work with us then drop us a line."
+      }
+    },
+    "fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91": {
+      "type": "section-why-us",
+      "blocks": {
+        "template--21625542705438__fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91-section_padding-1": {
+          "type": "section_padding",
+          "settings": {
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "section_padding_top_md": 60,
+            "section_padding_bottom_md": 60,
+            "section_padding_top_xs": 40,
+            "section_padding_bottom_xs": 40
+          }
+        },
+        "template--21625542705438__fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91-whyus-1": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p>Fast & Secure Delivery<\/p>",
+            "wscontent": "Tell about your service.",
+            "ws_img": "shopify:\/\/shop_images\/service2.png"
+          }
+        },
+        "14df0bff-9e39-40b4-83c5-8c66b67b5af5": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Money Back Guarantee<\/strong><\/p>",
+            "wscontent": "Within 10 days.",
+            "ws_img": "shopify:\/\/shop_images\/service3.png"
+          }
+        },
+        "e5ebaa56-7d63-4694-8c4f-11cbc808fe36": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>24 Hour Return Policy<\/strong><\/p>",
+            "wscontent": "No question ask.",
+            "ws_img": "shopify:\/\/shop_images\/service5.png"
+          }
+        },
+        "1b31f5dd-1b93-4875-a79c-54b7b9afa590": {
+          "type": "whyus",
+          "settings": {
+            "wstitle": "<p><strong>Pro Quality Support<\/strong><\/p>",
+            "wscontent": "24\/7 Live support.",
+            "ws_img": "shopify:\/\/shop_images\/service4.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--21625542705438__fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91-section_padding-1",
+        "template--21625542705438__fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91-whyus-1",
+        "14df0bff-9e39-40b4-83c5-8c66b67b5af5",
+        "e5ebaa56-7d63-4694-8c4f-11cbc808fe36",
+        "1b31f5dd-1b93-4875-a79c-54b7b9afa590"
+      ],
+      "settings": {
+        "is_section_title": false,
+        "sub_title_icon": "<i class=\"fal fa-thumbs-up\"><\/i>",
+        "section_title": "Why People Choose Us",
+        "section_sub_title": "Why Us",
+        "wulayout": "layout2",
+        "col_xl": "4",
+        "col_lg": "4",
+        "col_md": "3",
+        "col_sm": "2",
+        "col_mobile": "1"
+      }
+    },
+    "13b93baa-5fe7-4f78-b3df-2dee3b9de0c5": {
+      "type": "map-embed",
+      "settings": {
+        "container": "container-xxl",
+        "embed_code": "<iframe width=\"100%\" height=\"500\" id=\"gmap_canvas\" src=\"https:\/\/maps.google.com\/maps?q=melbourne&t=&z=13&ie=UTF8&iwloc=&output=embed\"><\/iframe>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "8fec1a3c-1a30-4d92-831e-7cc842c9e3d3",
+    "62fd7fbe-2fc9-4fba-813a-14e985430b68",
+    "fb8a53ea-4b67-48b9-a6c5-bf3bf7bacc91",
+    "13b93baa-5fe7-4f78-b3df-2dee3b9de0c5"
+  ]
 }

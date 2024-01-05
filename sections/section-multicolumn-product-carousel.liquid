@@ -16,7 +16,7 @@
       }'
    {%- endcapture -%}
  
-<div class="axil-product-area bg-color-white axil-section-gapcommon">
+<div  id="section-{{ section.id }}"  class="axil-product-area bg-color-white axil-section-gapcommon">
   <div class="container">
     {% if section.settings.is_section_title %} 
 
@@ -67,27 +67,27 @@
            -%} 
               {% for product in section.settings.product_collection.products limit: section.settings.number_of_products_to_show %}                       
                 {% assign loopcount = loopcount | plus: 1 %} 
-                    {% if count == 1 %}
-                      <div class="slick-single-layout">
-                        <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
-                    {% endif %} 
-                      <div class="col">
-                        {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
-                        {% capture include_snippet %}
-                          {% include layout %}
-                        {% endcapture %}
-                        {{ include_snippet }}
-                    </div>  
-                    {% if count == totalitems %}
-                        </div></div> 
-                      {% assign count = 1 %}  
-                    {% elsif forloop.length  == loopcount %}
-                        </div></div>
-                      {% assign count = count | plus: 1 %} 
-                    {% else %}
-                        {% assign count = count | plus: 1 %}
-                    {% endif %} 
-                  {% endfor %} 
+                  {% if count == 1 %}
+                    <div class="slick-single-layout">
+                      <div class="row row-cols-xl-{{ section.settings.col_xl }} row-cols-lg-{{ section.settings.col_lg }} row-cols-sm-{{ section.settings.col_md }} row-cols-{{ section.settings.col_sm }}">  
+                  {% endif %} 
+                    <div class="col">
+                      {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
+                      {% capture include_snippet %}
+                        {% include layout %}
+                      {% endcapture %}
+                      {{ include_snippet }}
+                  </div>  
+                  {% if count == totalitems %}
+                      </div></div> 
+                    {% assign count = 1 %}  
+                  {% elsif forloop.length  == loopcount %}
+                      </div></div>
+                    {% assign count = count | plus: 1 %} 
+                  {% else %}
+                      {% assign count = count | plus: 1 %}
+                  {% endif %} 
+                {% endfor %} 
       </div>
   </div>
   {% if section.settings.isbutton_true == true %}
@@ -101,6 +101,56 @@
 </div>
 <!-- End Expolre Product Area  -->
 
+{%- style -%}
+
+  #section-{{ section.id }}{
+    {%- for block in section.blocks -%}
+    {%- case block.type -%}
+    {%- when 'section_margin' -%}
+    margin-top: {{ block.settings.section_margin_top }}px;
+    margin-bottom: {{ block.settings.section_margin_bottom }}px;
+    {%- when 'section_padding' -%}
+    padding-top: {{ block.settings.section_padding_top }}px;
+    padding-bottom: {{ block.settings.section_padding_bottom }}px;
+    {%- when 'section_background' -%}    
+    background: {{ block.settings.section_bg_color }} 
+      {%- if block.settings.section_bg_image -%}url("{{ block.settings.section_bg_image | img_url: 'master' }}"){%- endif -%} no-repeat scroll center center / cover;
+    {%- endcase -%}
+    {%- endfor -%}
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {% case block.type %}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_md }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_md }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_md }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_md }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+
+  @media (max-width: 767px) {
+    #section-{{ section.id }}{
+      {%- for block in section.blocks -%}
+      {%- case block.type -%}
+      {%- when 'section_margin' -%}
+      margin-top: {{ block.settings.section_margin_top_xs }}px;
+      margin-bottom: {{ block.settings.section_margin_bottom_xs }}px;
+      {%- when 'section_padding' -%}
+      padding-top: {{ block.settings.section_padding_top_xs }}px;
+      padding-bottom: {{ block.settings.section_padding_bottom_xs }}px;
+      {%- endcase -%}
+      {%- endfor -%}
+    }
+  }
+ 
+{%- endstyle -%}
+
 {% schema %}
 {
   "name": "MC Product Carousel",
@@ -108,11 +158,13 @@
     {
       "type": "checkbox",
       "id": "is_section_title",
+      "default": true,
       "label": "Enable Section Title"
     },
     {
       "type": "select",
       "id": "title_layout",
+      "default": "style_2",
       "label": "Title Layout",
       "options": [
         {
@@ -171,9 +223,9 @@
       "type": "range",
       "id": "list_per_slider",
       "min": 1,
-      "max": 10,
+      "max": 32,
       "step": 1,
-      "default":4,
+      "default": 8,
       "label": "Iteam Per Slider"
     }, 
 
@@ -181,7 +233,7 @@
       "type": "range",
       "id": "number_of_products_to_show",
       "min": 1,
-      "max": 12,
+      "max": 32,
       "step": 1,
       "default": 8,
       "label": "Number of products to show"
@@ -276,7 +328,7 @@
       "step": 1,
       "label": "Responsive Columns",
       "unit": "px",
-      "default": 2
+      "default": 4
     },
     {
       "type": "header",
@@ -307,9 +359,192 @@
       "default": 2
     }
   ],
+  "blocks": [ 
+    {
+      "type": "section_padding",
+      "name": "Section Padding",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Large/Desktop Device"
+        },
+        {
+          "type": "range",
+          "id": "section_padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Padding Top",
+          "unit": "px",
+          "default": 60
+        },
+        {
+          "type": "range",
+          "id": "section_padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Padding Bottom",
+          "unit": "px",
+          "default": 60
+        },
+        {
+          "type": "header",
+          "content": "Tablet Device"
+        },
+        {
+          "type": "range",
+          "id": "section_padding_top_md",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Padding Top",
+          "unit": "px",
+          "default": 46
+        },
+        {
+          "type": "range",
+          "id": "section_padding_bottom_md",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Padding Bottom",
+          "unit": "px",
+          "default": 46
+        },
+        {
+          "type": "header",
+          "content": "Mobile Device"
+        },
+        {
+          "type": "range",
+          "id": "section_padding_top_xs",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Padding Top",
+          "unit": "px",
+          "default": 46
+        },
+        {
+          "type": "range",
+          "id": "section_padding_bottom_xs",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Padding Bottom",
+          "unit": "px",
+          "default": 46
+        }
+      ]
+    },
+    {
+      "type": "section_margin",
+      "name": "Section Margin",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Large/Desktop Device"
+        },
+        {
+          "type": "range",
+          "id": "section_margin_top",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Margin Top",
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "section_margin_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Margin Bottom",
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Tablet Device"
+        },
+        {
+          "type": "range",
+          "id": "section_margin_top_md",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Margin Top",
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "section_margin_bottom_md",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Margin Bottom",
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "header",
+          "content": "Mobile Device"
+        },
+        {
+          "type": "range",
+          "id": "section_margin_top_xs",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Margin Top",
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "section_margin_bottom_xs",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "label": "Margin Bottom",
+          "unit": "px",
+          "default": 0
+        }
+      ]
+    },
+    {
+      "type": "section_background",
+      "name": "Section Background",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "section_bg_image",
+          "label": "BG Image"
+        },
+        {
+          "type": "color",
+          "id": "section_bg_color",
+          "label": "BG Color",
+          "default": "#ffffff"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "MC Product Carousel"
+      "name": "MC Product Carousel",
+      "blocks": [
+        {
+          "type": "section_padding"
+        }
+      ]
     }
   ]
 }
