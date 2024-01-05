@@ -38,7 +38,7 @@
       }'
    {%- endcapture -%}
 
-      <div class="slick-slider slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
+      <div class="axil-slick-slider slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
         
         {% assign collection = collections[section.settings.collection] %}
         {% for product in collection.products limit: upsell_product_limit %}
@@ -48,7 +48,7 @@
             {% unless current_product_count == true and forloop.last %}
               {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
               {% capture include_snippet %}
-            {% include layout %}
+            {% render layout %}
           {% endcapture %}
               {{ include_snippet }}
             {% endunless %}

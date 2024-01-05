@@ -59,7 +59,7 @@
             {% unless current_product_count == true and forloop.last %}
               {% assign layout = 'product-layout-' | append: section.settings.product_layout %}
               {% capture include_snippet %}
-            {% include layout %}
+            {% render layout %}
           {% endcapture %}
               {{ include_snippet }}
             {% endunless %}
