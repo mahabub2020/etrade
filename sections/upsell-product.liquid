@@ -41,7 +41,7 @@
       <div class="axil-slick-slider slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation }}>
         
         {% assign collection = collections[section.settings.collection] %}
-        {% for product in collection.products limit: upsell_product_limit %}
+        {% for product in collection.products limit: section.settings.upsell_product_limit_handle %}
           {% if product.handle == current_product.handle %}
             {% assign current_product_count = false %}
           {% else %}
@@ -146,7 +146,6 @@
           "label": "Container Fluid"
         }
       ],
-
       "default": "style_2"
     },
     {
@@ -159,7 +158,6 @@
       "type": "header",
       "content": "Section Heading"
     },
-
     {
       "type": "text",
       "id": "section_before_title",
@@ -172,7 +170,6 @@
       "label": "Section Title",
       "default": "Upsell Products"
     },
-
     {
       "type": "header",
       "content": "Product Options"
@@ -296,9 +293,8 @@
       "id": "section_title_color",
       "label": "Section Title Color",
       "default": "#292930"
-    } 
+    }
   ],
-
   "blocks": [
     {
       "type": "section_margin",
