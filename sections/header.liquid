@@ -87,6 +87,7 @@
  -%}
  
 {% render 'search-modal' %}
+
 {% if header_style == 'header_style_1' %}
 <header class="header axil-header header-style-1">
   {% comment %} {% render 'header-top' %} {% endcomment %}
@@ -192,7 +193,6 @@
   </div>
   <!-- End Mainmenu Area  -->
 </header>
-
 {% elsif header_style == 'header_style_4' %}
 <header class="header axil-header header-style-4">
  {% render 'header-top4' %} 
@@ -228,7 +228,6 @@
   {% render 'main-menu4' %} 
 </header>
 {% elsif header_style == 'header_style_5' %}
-
 <header class="header axil-header header-style-7">
   {% render 'header-top5' %}
   <!-- Start Mainmenu Area  -->
@@ -253,7 +252,6 @@
 </header>
 {% endif %}  
 
-
 {%- style -%}
 .header-top-campaign
 {
@@ -266,7 +264,6 @@
 .header-top-campaign .campaign-content p{
   color: {{ section.settings.header_top_txt_color }};
 }
-
 {%- endstyle -%}
 
 

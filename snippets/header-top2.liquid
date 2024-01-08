@@ -1,4 +1,4 @@
-{% if section.settings.header_top_enable %} 
+{% if settings.header_top_enable %} 
     <div class="axil-header-top">
         <div class="container">
             <div class="row align-items-center">
@@ -13,17 +13,17 @@
                     </div>
                 </div>
                 {% if section.settings.header_top_menu_enable %} 
-                <div class="col-lg-6 col-sm-6 col-12">
-                    <div class="header-top-link">
-                        <ul class="quick-link">
-                            {% assign top_menu_handle = section.settings.header_top_right_menu %}
-                            {% for link in linklists[top_menu_handle].links %}
-                                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                            {% endfor %}
-                        </ul>
+                    <div class="col-lg-6 col-sm-6 col-12">
+                        <div class="header-top-link">
+                            <ul class="quick-link">
+                                {% assign top_menu_handle = section.settings.header_top_right_menu %}
+                                {% for link in linklists[top_menu_handle].links %}
+                                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            {% endif %}
+                {% endif %}
             </div>
         </div>
     </div>
