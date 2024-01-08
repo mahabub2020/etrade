@@ -335,7 +335,6 @@
       }
     ]
   },
-
   {
     "name": "Header",
     "settings": [
@@ -363,12 +362,12 @@
           {
             "value": "header_style_4",
             "label": "Style 4"
-          }, {
+          },
+          {
             "value": "header_style_5",
             "label": "Style 5"
           }
         ],
-
         "default": "header_style_1"
       },
       {

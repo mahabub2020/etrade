@@ -2,6 +2,7 @@
   "current": {
     "favicon": "shopify:\/\/shop_images\/logo.png",
     "currency_enable": true,
+    "header_style": "header_style_5",
     "transparent_header_style": "transparent_style_2",
     "review_app": "lai_reviews",
     "content_sidebar_handle": "content_sidebar_in_left",
@@ -27,7 +28,6 @@
       "header": {
         "type": "header",
         "settings": {
-          "header_style": "header_style_5",
           "header_top_enable": true,
           "header_languages_enable": true,
           "header_currency_enable": true,
