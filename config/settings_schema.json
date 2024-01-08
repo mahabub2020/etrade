@@ -371,6 +371,16 @@
         "default": "header_style_1"
       },
       {
+        "type": "header",
+        "content": "Header Top Enable"
+      },
+      {
+        "type": "checkbox",
+        "id": "header_top_enable",
+        "label": "Header Top Enable",
+        "default": true
+      },
+      {
         "type": "checkbox",
         "id": "stickey_header_enable",
         "label": "Stickey Header Enable",
