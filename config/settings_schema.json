@@ -335,12 +335,41 @@
       }
     ]
   },
+
   {
     "name": "Header",
     "settings": [
       {
         "type": "header",
         "content": "Header Stickey"
+      },
+      {
+        "type": "radio",
+        "id": "header_style",
+        "label": "Header Style",
+        "options": [
+          {
+            "value": "header_style_1",
+            "label": "Style 1"
+          },
+          {
+            "value": "header_style_2",
+            "label": "Style 2"
+          },
+          {
+            "value": "header_style_3",
+            "label": "Style 3"
+          },
+          {
+            "value": "header_style_4",
+            "label": "Style 4"
+          }, {
+            "value": "header_style_5",
+            "label": "Style 5"
+          }
+        ],
+
+        "default": "header_style_1"
       },
       {
         "type": "checkbox",

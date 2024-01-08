@@ -78,11 +78,13 @@
 </div>
 <div class="wooc-overlay-cart"></div>
 
-{%- if  page.metafields.custom.header_layout -%}
-  {%- assign header_style =  page.metafields.custom.header_layout.value -%}
-{% else %}
-  {%- assign header_style =  section.settings.header_style -%} 
-{%- endif -%}
+{%- liquid
+      if page.metafields.custom.header_layout 
+      assign header_style =  page.metafields.custom.header_layout.value 
+    else 
+      assign header_style =  settings.header_style  
+    endif 
+ -%}
  
 {% render 'search-modal' %}
 {% if header_style == 'header_style_1' %}
@@ -102,18 +104,14 @@
         </div>
         <div class="header-action">
           {% render 'header-right1' %}
-          
         </div>
       </div>
     </div>
   </div>
-
-  <!-- End Mainmenu Area -->
 </header>
 {% elsif header_style == 'header_style_2' %}
 <header class="header axil-header header-style-5">
   {% render 'header-top2' %} 
-  <!-- Start Mainmenu Area  -->
   <div id="axil-sticky-placeholder"></div>
     <div class="axil-mainmenu">
       <div class="container">
@@ -122,9 +120,7 @@
                 {% render 'header-logo' %}
               </div>
               <div class="header-main-nav">
-                  <!-- Start Mainmanu Nav -->
                   {% render 'main-menu2' %}
-                  <!-- End Mainmanu Nav -->
               </div>
               <div class="header-action">
                 {% render 'header-right2' %}
@@ -132,9 +128,7 @@
           </div>
       </div>
   </div>
-  <!-- End Mainmenu Area -->
 </header>
-<!-- End Header -->
 {% elsif header_style == 'header_style_3' %}
 <header class="header axil-header header-style-2">
   {% render 'header-top3' %} 
@@ -149,14 +143,17 @@
               </div>
               <div class="col-lg-10 col-sm-9 col-7">
                   <div class="header-top-dropdown dropdown-box-style">   
-                      {% render 'header-search-box2' %}  
+                    
+                  {%- liquid
+                       render 'header-search-box2'   
+                       if section.settings.header_languages_enable  
+                         render 'languages' 
+                       endif 
+                       if section.settings.header_currency_enable  
+                         render 'currency' 
+                       endif 
+                  -%} 
 
-                      {% if section.settings.header_languages_enable %} 
-                        {% render 'languages' %}
-                      {% endif %}
-                      {% if section.settings.header_currency_enable %} 
-                        {% render 'currency' %}
-                      {% endif %}
                   </div>
               </div>
           </div>
@@ -205,12 +202,14 @@
           <div class="row align-items-center">
               <div class="col-md-4 col-12">
                   <div class="header-top-dropdown dropdown-box-style">
-                    {% if section.settings.header_languages_enable %} 
-                      {% render 'languages' %}
-                    {% endif %}
-                    {% if section.settings.header_currency_enable %} 
-                        {% render 'currency' %}
-                    {% endif %}
+                    {%- liquid
+                       if section.settings.header_languages_enable 
+                       render 'languages'
+                     endif
+                     if section.settings.header_currency_enable 
+                         render 'currency'
+                     endif
+                    -%}
                   </div>
               </div>
               <div class="col-md-4 col-5">
@@ -225,11 +224,8 @@
               </div>
           </div>
       </div>
-  </div>
-  <!-- End Header Top Area  -->
-  <!-- Start Mainmenu Area  -->
-  {% render 'main-menu4' %}
-  <!-- End Mainmenu Area  -->
+  </div> 
+  {% render 'main-menu4' %} 
 </header>
 {% elsif header_style == 'header_style_5' %}
 
@@ -259,11 +255,10 @@
 
 
 {%- style -%}
- 
 .header-top-campaign
 {
 {% if section.settings.top_campaign_bg %}
-  background-image: url( {{ section.settings.top_campaign_bg | img_url: '1920x40' }} );
+  background-image: url( {{ section.settings.top_campaign_bg | image_url: width: 1920, height: 40 }} );
 {% else %}
   background-image: url( {{ "campaign-bg2.png" | asset_url }} );
 {% endif %}
@@ -272,303 +267,258 @@
   color: {{ section.settings.header_top_txt_color }};
 }
 
-
 {%- endstyle -%}
 
 
-
-
 {% schema %}
-  {
-    "name": "Header",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Header Style"
-      },
-      {
-        "type": "radio",
-        "id": "header_style",
-        "label": "Header Style",
-        "options": [
-          {
-            "value": "header_style_1",
-            "label": "Style 1"
-          },
-          {
-            "value": "header_style_2",
-            "label": "Style 2"
-          },
-          {
-            "value": "header_style_3",
-            "label": "Style 3"
-          },
-          {
-            "value": "header_style_4",
-            "label": "Style 4"
-          }, {
-            "value": "header_style_5",
-            "label": "Style 5"
-          }
-        ],
-
-        "default": "header_style_1"
-      },
-
-     
-      {
-        "type": "header",
-        "content": "Header Top Enable"
-      },
-      {
-        "type": "checkbox",
-        "id": "header_top_enable",
-        "label": "Header Top Enable",
-        "default": true
-      },
-      {
-        "type": "header",
-        "content": "Header Top Options"
-      },
-          {
-            "type": "checkbox",
-            "id": "header_languages_enable",
-            "label": "Languages Enable",
-            "default": true
-          },
-          {
-            "type": "checkbox",
-            "id": "header_currency_enable",
-            "label": "Currency Enable",
-            "default": true
-          },    
-          {
-            "type": "text",
-            "id": "header_top_center",
-            "label": "Header Top Cente ",
-            "default": "CHRISTMAS SALE - 25% OFF <span>added at the checkout</span>"
-          },  
-          {
-            "type": "text",
-            "id": "header_top_left",
-            "label": "Header Top Left ",
-            "default": "Free Shipping on Orders Over $150"
-          }, 
-          {
-            "type": "checkbox",
-            "id": "header_top_menu_enable",
-            "label": "Top Menu Enable",
-            "default": true
-          }, 
-          {
-            "type": "link_list",
-            "id": "header_top_right_menu",
-            "label": "Header Top Right Menu"
-          },   
-          {
-            "type": "image_picker",
-            "id": "top_campaign_bg",
-            "label": "Top Background Image"
-          }, 
-
-      
-      {
-        "type": "header",
-        "content": "Header Logo"
-      }, {
-        "type": "image_picker",
-        "id": "logo",
-        "label": "Logo"
-      },
-       {
-        "type": "header",
-        "content": "Sticky Logo"
-      },
-       {
-        "type": "image_picker",
-        "id": "logo_sticky",
-        "label": "Logo"
-      },   
-      {
-        "type": "header",
-        "content": "Mobile Logo"
-      },
-       {
-        "type": "image_picker",
-        "id": "mobile_logo",
-        "label": "Mobile Logo"
-      }, 
-      
-      {
-        "type": "range",
-        "id": "logo_width",
-        "label": "Custom logo width",
-        "min": 50,
-        "max": 300,
-        "step": 5,
-        "unit": "px",
-        "default": 150
-      }, 
-      {
-        "type": "link_list",
-        "id": "header_primary_menu",
-        "label": "Select Primary Menu"
-      }, 
-      {
-        "type": "link_list",
-        "id": "header_cat_menu",
-        "label": "Categories Menu"
-      }, 
-      
-      {
-        "type": "header",
-        "content": "Search"
-      }, {
-        "type": "checkbox",
-        "id": "search_enable",
-        "label": "Search Enable",
-        "default": true
-      }, 
-      {
-        "type": "text",
-        "id": "search_placeholder",
-        "label": "Search Placeholder",
-        "default": "What are you looking for?"
-      }, 
-      {
-        "type": "text",
-        "id": "search_title",
-        "label": "Search Title",
-        "default": "Recent Product"
-      }, 
-      {
-        "type": "text",
-        "id": "btn_txt",
-        "label": "Button Text",
-        "default": "View All"
-      },
-      {
-        "type": "url",
-        "id": "btn_url",
-        "label": "URL"
-      },
-       
-     
-      {
-        "type": "header",
-        "content": "Wishlist"
-      }, 
-      {
-        "type": "checkbox",
-        "id": "wishlist_enable",
-        "label": "Wishlist Icon Enable",
-        "default": true
-      }, 
-      {
-        "type": "header",
-        "content": "Mini Cart"
-      }, {
-        "type": "checkbox",
-        "id": "mini_cart_enable",
-        "label": "Mini Cart Enable",
-        "default": true
-      },
-       {
-        "type": "text",
-        "id": "cart_title",
-        "label": "Cart Title",
-        "default": "Cart review."
-      },
-       {
-        "type": "text",
-        "id": "cart_notification",
-        "label": "Cart Notification",
-        "default": "No products in the cart."
-      },
-       {
-        "type": "text",
-        "id": "return_btn_txt",
-        "label": "Return Button Text",
-        "default": "Return to shop"
-      },
-      
-      
-      {
-        "type": "text",
-        "id": "view_cart_title",
-        "label": "View Cart Title",
-        "default": "View Cart"
-      }, {
-        "type": "text",
-        "id": "checkout_title",
-        "label": "Checkout Title",
-        "default": "Checkout"
-      },
-      
-      {
-        "type": "header",
-        "content": "Acount Icon"
-      }, 
-      {
-        "type": "checkbox",
-        "id": "acount_enable",
-        "label": "Acount Enable",
-        "default": true
-      }, 
-      {
-        "type": "text",
-        "id": "acount_title",
-        "label": "Acount Title",
-        "default": "QUICKLINKS"
-      }, 
-      {
-        "type": "link_list",
-        "id": "acount_menu",
-        "label": "Acount Menu"
-      }, 
-      {
-        "type": "text",
-        "id": "login_btn_txt",
-        "label": "Login Text",
-        "default": "Login"
-      },    
-      {
-        "type": "text",
-        "id": "loginout_btn_txt",
-        "label": "Login Out Text",
-        "default": "Login Out"
-      }, 
-      
-      {
-        "type": "text",
-        "id": "register_info_txt",
-        "label": "Register Info Text",
-        "default": "No account yet?"
-      }, 
-      {
-        "type": "text",
-        "id": "register_btn_txt",
-        "label": "Register Text",
-        "default": "REGISTER HERE."
-      }, 
-
-      {
-        "type": "header",
-        "content": "Color"
-      },
-       {
-        "type": "color",
-        "id": "header_top_txt_color",
-        "label": "Header Top Text Color",
-        "default": "#eeb2ff"
-      }, 
-      
-      {
-        "type": "color",
-        "id": "header_bg_color_2",
-        "label": "Header Sticky BG Color",
-        "default": "#fff"
-      }
-    ]
-  }
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header Top Enable"
+    },
+    {
+      "type": "checkbox",
+      "id": "header_top_enable",
+      "label": "Header Top Enable",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Header Top Options"
+    },
+    {
+      "type": "checkbox",
+      "id": "header_languages_enable",
+      "label": "Languages Enable",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "header_currency_enable",
+      "label": "Currency Enable",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "header_top_center",
+      "label": "Header Top Cente ",
+      "default": "CHRISTMAS SALE - 25% OFF <span>added at the checkout</span>"
+    },
+    {
+      "type": "text",
+      "id": "header_top_left",
+      "label": "Header Top Left ",
+      "default": "Free Shipping on Orders Over $150"
+    },
+    {
+      "type": "checkbox",
+      "id": "header_top_menu_enable",
+      "label": "Top Menu Enable",
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "header_top_right_menu",
+      "label": "Header Top Right Menu"
+    },
+    {
+      "type": "image_picker",
+      "id": "top_campaign_bg",
+      "label": "Top Background Image"
+    },
+    {
+      "type": "header",
+      "content": "Header Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "header",
+      "content": "Sticky Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_sticky",
+      "label": "Logo"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_logo",
+      "label": "Mobile Logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Custom logo width",
+      "min": 50,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "default": 150
+    },
+    {
+      "type": "link_list",
+      "id": "header_primary_menu",
+      "label": "Select Primary Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "header_cat_menu",
+      "label": "Categories Menu"
+    },
+    {
+      "type": "header",
+      "content": "Search"
+    },
+    {
+      "type": "checkbox",
+      "id": "search_enable",
+      "label": "Search Enable",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "search_placeholder",
+      "label": "Search Placeholder",
+      "default": "What are you looking for?"
+    },
+    {
+      "type": "text",
+      "id": "search_title",
+      "label": "Search Title",
+      "default": "Recent Product"
+    },
+    {
+      "type": "text",
+      "id": "btn_txt",
+      "label": "Button Text",
+      "default": "View All"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "URL"
+    },
+    {
+      "type": "header",
+      "content": "Wishlist"
+    },
+    {
+      "type": "checkbox",
+      "id": "wishlist_enable",
+      "label": "Wishlist Icon Enable",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Mini Cart"
+    },
+    {
+      "type": "checkbox",
+      "id": "mini_cart_enable",
+      "label": "Mini Cart Enable",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "cart_title",
+      "label": "Cart Title",
+      "default": "Cart review."
+    },
+    {
+      "type": "text",
+      "id": "cart_notification",
+      "label": "Cart Notification",
+      "default": "No products in the cart."
+    },
+    {
+      "type": "text",
+      "id": "return_btn_txt",
+      "label": "Return Button Text",
+      "default": "Return to shop"
+    },
+    {
+      "type": "text",
+      "id": "view_cart_title",
+      "label": "View Cart Title",
+      "default": "View Cart"
+    },
+    {
+      "type": "text",
+      "id": "checkout_title",
+      "label": "Checkout Title",
+      "default": "Checkout"
+    },
+    {
+      "type": "header",
+      "content": "Acount Icon"
+    },
+    {
+      "type": "checkbox",
+      "id": "acount_enable",
+      "label": "Acount Enable",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "acount_title",
+      "label": "Acount Title",
+      "default": "QUICKLINKS"
+    },
+    {
+      "type": "link_list",
+      "id": "acount_menu",
+      "label": "Acount Menu"
+    },
+    {
+      "type": "text",
+      "id": "login_btn_txt",
+      "label": "Login Text",
+      "default": "Login"
+    },
+    {
+      "type": "text",
+      "id": "loginout_btn_txt",
+      "label": "Login Out Text",
+      "default": "Login Out"
+    },
+    {
+      "type": "text",
+      "id": "register_info_txt",
+      "label": "Register Info Text",
+      "default": "No account yet?"
+    },
+    {
+      "type": "text",
+      "id": "register_btn_txt",
+      "label": "Register Text",
+      "default": "REGISTER HERE."
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color",
+      "id": "header_top_txt_color",
+      "label": "Header Top Text Color",
+      "default": "#eeb2ff"
+    },
+    {
+      "type": "color",
+      "id": "header_bg_color_2",
+      "label": "Header Sticky BG Color",
+      "default": "#fff"
+    }
+  ]
+}
 {% endschema %}
