@@ -1,20 +1,22 @@
-{%- assign on_sale = false -%}
-{%- if product.compare_at_price > product.price -%}
-{%- assign on_sale = true -%}
-{%- endif -%}
+{%- liquid
+   assign on_sale = false 
+ if product.compare_at_price > product.price 
+  assign on_sale = true 
+ endif 
 
-{%- assign sold_out = true -%}
-{%- if product.available -%}
-{%- assign sold_out = false -%}
-{%- endif -%}
-{%- assign current_variant = product.selected_or_first_available_variant -%}
+ assign sold_out = true 
+ if product.available 
+  assign sold_out = false 
+ endif 
+  assign current_variant = product.selected_or_first_available_variant 
+
+ if  section.settings.product_thumbnail_style 
+   assign single_product_layout =  section.settings.product_thumbnail_style 
+else 
+   assign single_product_layout =  product.metafields.custom.single_product_layout.value  
+ endif 
  
-
-{%- if  section.settings.product_thumbnail_style -%}
-  {%- assign single_product_layout =  section.settings.product_thumbnail_style -%}
-{% else %}
-  {%- assign single_product_layout =  product.metafields.custom.single_product_layout.value -%} 
-{%- endif -%}
+ -%}
 
 
 <div class="woocommerce" id="section-{{ section.id }}">
