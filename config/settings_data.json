@@ -3,6 +3,7 @@
     "favicon": "shopify:\/\/shop_images\/logo.png",
     "currency_enable": true,
     "header_style": "header_style_5",
+    "header_top_right_menu": "header-top-menu",
     "review_app": "lai_reviews",
     "content_sidebar_handle": "content_sidebar_in_left",
     "show_tags": true,
@@ -56,7 +57,7 @@
           "loginout_btn_txt": "Login Out",
           "register_info_txt": "No account yet?",
           "register_btn_txt": "REGISTER HERE.",
-          "header_top_txt_color": "#3b1c1c",
+          "header_top_txt_color": "#FF7F00",
           "header_bg_color_2": "#705151"
         }
       },
