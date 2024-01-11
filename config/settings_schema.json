@@ -1,14 +1,14 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Themekit template theme",
+    "theme_name": "etrade",
     "theme_version": "1.0.0",
-    "theme_author": "Shopify",
-    "theme_documentation_url": "https:\/\/github.com\/Shopify\/ddddd",
-    "theme_support_url": "https:\/\/github.com\/Shopify\/themekit\/issues"
+    "theme_author": "AxilThemes",
+    "theme_documentation_url": "https:\/\/github.com\/AxilThemes\/etrade",
+    "theme_support_url": "https:\/\/github.com\/Shopify\/AxilThemes\/issues"
   },
   {
-    "name": "General Settings",
+    "name": "t:settings_schema.general_settings.name",
     "settings": [
       {
         "type": "header",

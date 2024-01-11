@@ -1,5 +1,18 @@
 {
   "settings_schema": {
+    "general_settings": {
+      "name": "General Settings",
+      "general": {
+         
+        "shipping_calculator_success_one_rate": "There is one shipping rate available for",
+        "shipping_calculator_success_no_rate": "There is no shipping rate available for this order and destination.",
+        "shipping_calculator_success_at": "at",
+        "cart_countdown": "Please, hurry! Someone has placed an order on one of the items you have in the cart. We'll keep it for you for",
+        "cart_countdown_minutes": "minutes.",
+        "note_placeholder": "Special instruction for seller..."
+      }
+  
+    }, 
     "cart": {
       "name": "Cart",
       "general": {
