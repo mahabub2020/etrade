@@ -335,49 +335,15 @@
       }
     ]
   },
+
   {
-    "name": "Header",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Header Stickey"
-      },
-      {
-        "type": "radio",
-        "id": "header_style",
-        "label": "Header Style",
-        "options": [
-          {
-            "value": "header_style_1",
-            "label": "Style 1"
-          },
-          {
-            "value": "header_style_2",
-            "label": "Style 2"
-          },
-          {
-            "value": "header_style_3",
-            "label": "Style 3"
-          },
-          {
-            "value": "header_style_4",
-            "label": "Style 4"
-          },
-          {
-            "value": "header_style_5",
-            "label": "Style 5"
-          }
-        ],
-        "default": "header_style_1"
-      },
-      {
-        "type": "header",
-        "content": "Header Top Enable"
-      },
+    "name": "Header Top Bar",
+    "settings": [ 
+      
       {
         "type": "checkbox",
         "id": "header_top_enable",
-        "label": "Header Top Enable",
+        "label": "Show Header Top Bar",
         "default": true
       },
       {
@@ -402,110 +368,25 @@
         "type": "link_list",
         "id": "header_top_right_menu",
         "label": "Header Top Right Menu"
-      }
-       
-    ]
-  },
-  {
-    "name": "Body",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Body"
       },
       {
-        "type": "checkbox",
-        "id": "background_bg_enable",
-        "label": "Background Image Enable",
-        "default": false
+        "type": "text",
+        "id": "header_top_center",
+        "label": "Header Top Cente ",
+        "default": "CHRISTMAS SALE - 25% OFF <span>added at the checkout</span>"
       },
+      {
+        "type": "text",
+        "id": "header_top_left",
+        "label": "Header Top Left ",
+        "default": "Free Shipping on Orders Over $150"
+      },
+      
       {
         "type": "image_picker",
-        "id": "section_bg_image",
-        "label": "BG Image"
+        "id": "top_campaign_bg",
+        "label": "Top Background Image"
       },
-      {
-        "type": "color",
-        "id": "section_bg_color",
-        "label": "BG Color",
-        "default": "#ffffff"
-      }
-    ]
-  },
-  {
-    "name": "integrated Apps",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Product reviews"
-      },
-      {
-        "type": "select",
-        "id": "review_app",
-        "label": "Product reviews app",
-        "default": "shopify",
-        "info": "Select your preferred app. If you are using another app, please put the snippet code of the app to file: snippets\/other-review-app-snippet.liquid or contact us for help.",
-        "options": [
-          {
-            "value": "shopify",
-            "label": "Product reviews by Shopify"
-          },
-          {
-            "value": "lai_reviews",
-            "label": "LAI Product Reviews"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Single Product",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Container Style"
-      },
-      {
-        "type": "radio",
-        "id": "container_style_sidebar",
-        "label": "Container Style",
-        "options": [
-          {
-            "value": "sidebar_style_1",
-            "label": "Container"
-          },
-          {
-            "value": "sidebar_style_2",
-            "label": "Container Fulied"
-          }
-        ],
-        "default": "sidebar_style_2"
-      },
-      {
-        "type": "header",
-        "content": "Product Style"
-      },
-      {
-        "type": "radio",
-        "id": "content_sidebar_handle",
-        "label": "Content Position -",
-        "options": [
-          {
-            "label": "Left",
-            "value": "content_sidebar_in_left"
-          },
-          {
-            "label": "Right",
-            "value": "content_sidebar_in_right"
-          }
-        ],
-        "default": "content_sidebar_in_right"
-      }
-    ]
-  },
-  {
-    "name": "Header Top Bar",
-    "settings": [
       {
         "type": "checkbox",
         "id": "topbar_notification_enable",
@@ -661,6 +542,142 @@
         "id": "notificaction_close_button_hover_color",
         "label": "Hover Color",
         "default": "#232323"
+      }
+    ]
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header Stickey"
+      },
+      {
+        "type": "radio",
+        "id": "header_style",
+        "label": "Header Style",
+        "options": [
+          {
+            "value": "header_style_1",
+            "label": "Style 1"
+          },
+          {
+            "value": "header_style_2",
+            "label": "Style 2"
+          },
+          {
+            "value": "header_style_3",
+            "label": "Style 3"
+          },
+          {
+            "value": "header_style_4",
+            "label": "Style 4"
+          },
+          {
+            "value": "header_style_5",
+            "label": "Style 5"
+          }
+        ],
+        "default": "header_style_1"
+      }
+      
+       
+    ]
+  },
+  {
+    "name": "Body",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Body"
+      },
+      {
+        "type": "checkbox",
+        "id": "background_bg_enable",
+        "label": "Background Image Enable",
+        "default": false
+      },
+      {
+        "type": "image_picker",
+        "id": "section_bg_image",
+        "label": "BG Image"
+      },
+      {
+        "type": "color",
+        "id": "section_bg_color",
+        "label": "BG Color",
+        "default": "#ffffff"
+      }
+    ]
+  },
+  {
+    "name": "integrated Apps",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Product reviews"
+      },
+      {
+        "type": "select",
+        "id": "review_app",
+        "label": "Product reviews app",
+        "default": "shopify",
+        "info": "Select your preferred app. If you are using another app, please put the snippet code of the app to file: snippets\/other-review-app-snippet.liquid or contact us for help.",
+        "options": [
+          {
+            "value": "shopify",
+            "label": "Product reviews by Shopify"
+          },
+          {
+            "value": "lai_reviews",
+            "label": "LAI Product Reviews"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Single Product",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Container Style"
+      },
+      {
+        "type": "radio",
+        "id": "container_style_sidebar",
+        "label": "Container Style",
+        "options": [
+          {
+            "value": "sidebar_style_1",
+            "label": "Container"
+          },
+          {
+            "value": "sidebar_style_2",
+            "label": "Container Fulied"
+          }
+        ],
+        "default": "sidebar_style_2"
+      },
+      {
+        "type": "header",
+        "content": "Product Style"
+      },
+      {
+        "type": "radio",
+        "id": "content_sidebar_handle",
+        "label": "Content Position -",
+        "options": [
+          {
+            "label": "Left",
+            "value": "content_sidebar_in_left"
+          },
+          {
+            "label": "Right",
+            "value": "content_sidebar_in_right"
+          }
+        ],
+        "default": "content_sidebar_in_right"
       }
     ]
   },
