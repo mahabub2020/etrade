@@ -1,7 +1,7 @@
 {
   "settings_schema": {
     "general_settings": {
-      "name": "General Settings",
+      "name": "General Settings top",
       "general": {
          
         "shipping_calculator_success_one_rate": "There is one shipping rate available for",
