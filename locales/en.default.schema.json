@@ -2,13 +2,16 @@
   "settings_schema": {
     "general_settings": {
       "name": "General Settings",
-      "settings": { 
-        "content": "Favicon",
-        "favicon": {
+      "settings": {  
+        "header": {
+           "content": "Favicon"
+         },
+         "favicon": {
            "label": "Favicon Image",
            "info": "Will be scaled down to 32 x 32px" 
          } 
       }
+  
     }, 
     "cart": {
       "name": "Cart",
