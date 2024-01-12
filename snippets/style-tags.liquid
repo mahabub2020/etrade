@@ -1,0 +1,112 @@
+<script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{% comment %} Swiper CSS {% endcomment %}
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag: preload: true }}
+{% comment %} Bootstrap CSS {% endcomment %}
+{{ 'bootstrap.min.css' | asset_url | stylesheet_tag: preload: true }}
+{% if settings.enable_rtl %}
+{{ 'bootstrap.rtl.min.css' | asset_url | stylesheet_tag: preload: true }}
+{% endif %}
+{% comment %} App CSS{% endcomment %}
+{{ 'app.min.css' | asset_url | stylesheet_tag: preload: true }}
+{% comment %} Custom CSS {% endcomment %}
+{{ 'custom.scss.css' | asset_url | stylesheet_tag: preload: true }}
+<link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
+
+{% style %}
+:root {
+    --color-bg: {{ settings.color_main_bg }};
+    --bs-body-font-size: {{ settings.type_base_size }}px;
+    --bs-body-line-height: {{ settings.type_base_line_height }}px;
+    --bs-body-font-weight: {{ settings.custom_body_weight }};
+    {%- comment -%}
+    {%- if settings.custom_body_font == blank -%}
+    --bs-font-sans-serif:
+    {{ settings.type_base_font.family }},
+    {{ settings.type_base_font.fallback_families }};
+    {%- else -%}
+    {%- if settings.use_custom_font_body == 'google-font' -%}
+    --bs-font-sans-serif: {{ settings.custom_body_font-family }};
+    {%- else -%}
+    --bs-font-sans-serif: {{ body_font-family}};
+    {%- endif -%}
+    {%- endif -%}
+    {%- endcomment -%}
+    {% if settings.use_custom_font_body %}
+        --font-stack-body: BT-Body-font;
+    {% endif %}
+    {% if settings.type_base_font == blank %}
+        --bs-font-sans-serif: {{ settings.type_base_font.family }}, {{ settings.type_base_font.fallback_families }};
+    {% endif %}
+    --spacing-sections-desktop: {{ settings.spacing_sections }}px;
+    --spacing-sections-tablet: {% if settings.spacing_sections < 50 %}{{ settings.spacing_sections }}{% else %}{{ settings.spacing_sections | times: 0.75 | round | at_least: 40 }}{% endif %}px;
+    --spacing-sections-mobile: {% if settings.spacing_sections < 30 %}{{ settings.spacing_sections }}{% else %}{{ settings.spacing_sections | times: 0.5 | round | at_least: 20 }}{% endif %}px;
+}
+{% if settings.type_header_font %}
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-stack-header);
+        font-weight: var(--font-weight-header);
+        font-style: var(--font-style-header);
+    }
+{% endif %}
+
+.quick-add-modal__content-info {
+    background-color: {{ settings.color_main_bg }};
+}
+
+.tooltip {
+    --bs-tooltip-color: {{ settings.tooltip_text_color }};
+    --bs-tooltip-bg: {{ settings.tooltip_background_color }};
+}
+.btn {
+    {% if settings.btn_uppercase_text %}
+    text-transform: uppercase;
+    {% endif %}
+    {% if settings.btn_base_size != blank %}
+    font-size: {{ settings.btn_base_size }}px;
+    {% endif %}
+    {% if settings.buttons_border_thickness != blank %}
+    border-width: {{ settings.buttons_border_thickness }}px;
+    {% endif %}
+    {% if settings.buttons_radius != blank %}
+    border-radius: {{ settings.buttons_radius }}px;
+    {% endif %}
+    line-height: {{ settings.btn_line_height }}px;
+    font-weight: {{ settings.btn_weight }};
+}
+{%- assign container_width = settings.container_width -%}
+{%- assign container_fluid_offset = settings.container_fluid_offset -%}
+{%- assign container_fluid_width = settings.container_fluid_width -%}
+{%- assign custom_css = settings.custom_css -%}
+body {
+    --container-width: {{ container_width }};
+    --fluid-container-width: {{ container_fluid_width }}px;
+    --fluid-container-offset: {{ container_fluid_offset }}px;
+    background-color: {{ settings.color_main_bg }};
+    font-family: var(--font-stack-body);
+}
+@media screen and (min-width:1400px) {
+    .container-xxl {
+        max-width: {{ container_width }}px;
+    }
+    .shopify-policy__container {
+        max-width: {{ container_width }}px !important;
+    }
+}
+{{ style | strip_newlines }}
+{%- if custom_css != blank -%}
+    {{ custom_css | strip_newlines }}
+{%- endif -%}
+{% endstyle %}
+
+<script src="{{ 'jquery-3.6.0.min.js' | asset_url }}"></script>
+<script src="{{ 'jquery-cookie.min.js' | asset_url }}" defer="defer"></script>
+
+{% comment %}
+<script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+    }
+</script>
+{% endcomment %}

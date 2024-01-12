@@ -1,19 +1,35 @@
-<!doctype html>
-<html>
-  <head>
-    <title>{{ page_title }}</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <meta name="theme-color" content="{{ settings.color_primary }}">
-    <link rel="canonical" href="{{ canonical_url }}">
 
-    {%- if settings.favicon != blank -%}
-      <link
-        rel="shortcut icon"
-        href="{{ settings.favicon | img_url: '32x32' }}"
-        type="image/png" />
-    {%- endif -%}
+{% liquid
+  assign enable_rtl = settings.enable_rtl
+  assign language_support_rtl = settings.language_support_rtl
+  if enable_rtl and language_support_rtl != blank
+    assign shop_locale = localization.language.iso_code
+    assign language_support_rtl_list = language_support_rtl | split: ','
+    assign is_rtl = language_support_rtl_list | where: shop_locale
+    if is_rtl.size > 0
+      assign enable_rtl = true
+    else
+      assign enable_rtl = false
+    endif
+  endif
+%}
+
+<!doctype html>
+  <html
+    class="no-js supports-no-cookies p-0"
+    lang="{{ request.locale.iso_code }}"
+    data-template="{{ template.name }}"
+    {% if enable_rtl %}dir="rtl"{% endif %}>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="{{ settings.color_primary }}">
+
+    {%- liquid
+      render 'SEO' 
+  -%}
+
 
     <!-- Title and description -->
     {% capture seo_title %}
@@ -62,7 +78,10 @@
     {% if template contains 'collection' %}
       {{ 'https://cdn.shopify.com/s/files/1/0382/4185/files/ajaxinate.js?937' | script_tag }}{% endif %}
   </head>
-  <body>
+  <body
+    id="bt-theme"
+    class="{{ body_classes }} position-relative min-h-screen {% if customer %} customer-logged-in {% endif %}"
+    {% if template.name == 'product' %}data-product-id="{{ product.id }}"{% endif %}>
 
     {% section 'header' %}
 
