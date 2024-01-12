@@ -7,7 +7,7 @@
     "theme_documentation_url": "https:\/\/github.com\/AxilThemes\/etrade",
     "theme_support_url": "https:\/\/github.com\/Shopify\/AxilThemes\/issues"
   },
-  
+
   {
     "name": "General Settings",
     "settings": [
@@ -49,50 +49,7 @@
       }
     ]
   },  
-  {
-    "name": "t:settings_schema.layout-settings.name",
-    "settings": [
-      {
-        "type": "header",
-        "content": "t:settings_schema.layout-settings.settings.fixed-container"
-      },
-      {
-        "type": "range",
-        "id": "container_width",
-        "label": "t:settings_schema.layout-settings.settings.container-width",
-        "default": 1330,
-        "min": 1100,
-        "max": 1900,
-        "step": 10,
-        "unit": "px"
-      },
-      {
-        "type": "header",
-        "content": "t:settings_schema.layout-settings.settings.fluid-container",
-        "info": "t:settings_schema.layout-settings.settings.info"
-      },
-      {
-        "type": "range",
-        "id": "container_fluid_width",
-        "label": "t:settings_schema.layout-settings.settings.c-max",
-        "default": 1620,
-        "min": 1280,
-        "max": 2560,
-        "step": 20,
-        "unit": "px"
-      },
-      {
-        "type": "range",
-        "id": "container_fluid_offset",
-        "label": "t:settings_schema.layout-settings.settings.ml-mr",
-        "default": 65,
-        "min": 0,
-        "max": 150,
-        "step": 5,
-        "unit": "px"
-      }
-    ]
-  },
+ 
  
   {
     "name": "Header Top Bar",

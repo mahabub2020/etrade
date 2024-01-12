@@ -1,16 +1,6 @@
 {
   "settings_schema": {
-    "layout-settings": {
-      "name": "Layout Settings",
-      "settings": {
-        "fixed-container": "Fixed width container",
-        "container-width": "Container width",
-        "fluid-container": "Fluid container",
-        "info": "A section with \"Fluid container\" will take-up the complete width of the viewport and will expand or shrink when ever the viewport is resized.",
-        "c-max": "Container max-width",
-        "ml-mr": " Margin left & right"
-      }
-    },
+    
     "scroll-top": {
       "name": "Scroll to top button",
       "settings": {
