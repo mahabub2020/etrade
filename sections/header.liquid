@@ -255,15 +255,19 @@
 {%- style -%}
 .header-top-campaign
 {
-{% if section.settings.top_campaign_bg %}
-  background-image: url( {{ section.settings.top_campaign_bg | image_url: width: 1920, height: 40 }} );
+{% if settings.top_campaign_bg %}
+  background-image: url( {{ settings.top_campaign_bg | image_url: width: 1920, height: 40 }} );
 {% else %}
   background-image: url( {{ "campaign-bg2.png" | asset_url }} );
 {% endif %}
 }
 .header-top-campaign .campaign-content p{
-  color: {{ section.settings.header_top_txt_color }};
+  color: {{ settings.header_top_txt_color }};
 }
+.header-style-5 .axil-header-top {
+    background-color: {{ settings.top_bar_bg_color }};
+}
+
 {%- endstyle -%}
 
 
