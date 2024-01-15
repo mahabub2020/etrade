@@ -49,7 +49,48 @@
       }
     ]
   },  
- 
+  {
+    "name":"Logo",
+    "settings":[
+      {
+        "type": "header",
+        "content": "t:settings_schema.logos.settings.header_logo.label"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "t:settings_schema.logos.settings.logo_img.label"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.logos.settings.sticky_logo.label"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo_sticky",
+        "label": "t:settings_schema.logos.settings.sticky_logo_img.label"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.logos.settings.mobile_logo.label"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_logo",
+        "label": "t:settings_schema.logos.settings.mobile_logo_img.label"
+      },
+      {
+        "type": "range",
+        "id": "logo_width",
+        "label": "t:settings_schema.logos.settings.logo_width.label",
+        "min": 50,
+        "max": 300,
+        "step": 5,
+        "unit": "px",
+        "default": 150
+      }
+    ]
+  },
  
   {
     "name": "Header Top Bar",
