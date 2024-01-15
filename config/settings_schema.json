@@ -7,7 +7,6 @@
     "theme_documentation_url": "https:\/\/github.com\/AxilThemes\/etrade",
     "theme_support_url": "https:\/\/github.com\/Shopify\/AxilThemes\/issues"
   },
-
   {
     "name": "General Settings",
     "settings": [
@@ -48,10 +47,10 @@
         "default": false
       }
     ]
-  },  
+  },
   {
-    "name":"Logo",
-    "settings":[
+    "name": "Logo",
+    "settings": [
       {
         "type": "header",
         "content": "t:settings_schema.logos.settings.header_logo.label"
@@ -91,11 +90,9 @@
       }
     ]
   },
- 
   {
     "name": "Header Top Bar",
-    "settings": [ 
-      
+    "settings": [
       {
         "type": "checkbox",
         "id": "header_top_enable",
@@ -129,7 +126,7 @@
         "type": "text",
         "id": "header_top_center",
         "label": "Header Top Cente ",
-        "default": "CHRISTMAS SALE - 25% OFF <span>added at the checkout</span>"
+        "default": "CHRISTMAS SALE - 25% OFF <span>added at the checkout<\/span>"
       },
       {
         "type": "text",
@@ -137,7 +134,6 @@
         "label": "Header Top Left ",
         "default": "Free Shipping on Orders Over $150"
       },
-      
       {
         "type": "image_picker",
         "id": "top_campaign_bg",
@@ -336,10 +332,8 @@
         ],
         "default": "header_style_1"
       }
-      
-       
     ]
-  }, 
+  },
   {
     "name": "Footer",
     "settings": [
