@@ -144,6 +144,18 @@
         "id": "top_bar_bg_color",
         "label": "Top Background Color",
         "default": "#292930"
+      },
+      {
+        "type": "color",
+        "id": "header_top_txt_color",
+        "label": "Top Text Color",
+        "default": "#c2c2cc"
+      },
+      {
+        "type": "color",
+        "id": "header_top_txt_hover_color",
+        "label": "Top Link Hover Color",
+        "default": "#3577f0"
       }
     ]
   },
