@@ -1,10 +1,12 @@
-{% if section.settings.logo %}
-  <a href="/" class="logo logo-dark">
-
+{% if settings.logo %}
+  <a href="/" class="logo logo-dark"> 
     <figure class="logo--transparency">
-      <img src="{{ section.settings.logo | img_url: '300x300' }}" alt="{{ section.settings.logo.alt | default: shop.name }}">
-    </figure>
-
+      <img   width="{{ image.width }}"
+      loading="lazy"
+      height="{{ image.height }}" 
+      src="{{ settings.logo | image_url: width: 300, height: 300 }}"
+      alt="{{ settings.logo.alt | default: shop.name }}">
+    </figure> 
   </a>
 {% else %}
   <a href="/" class="logo-text logo-dark">
