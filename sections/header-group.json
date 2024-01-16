@@ -5,15 +5,10 @@
       "header": {
         "type": "header",
         "settings": {}
-      },
-      "campaign": {
-        "type": "campaign",
-        "settings": {}
       }
     },
     "order": [
-        "header",
-        "campaign"
+      "header"
     ]
-   }
+  }
    
