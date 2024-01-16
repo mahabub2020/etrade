@@ -1,5 +1,25 @@
 {
   "sections": {
+    "campaign_BYYbmj": {
+      "type": "campaign",
+      "blocks": {
+        "campaign_jLrbta": {
+          "type": "campaign",
+          "settings": {
+            "campaign_title": "",
+            "campaign_link_txt": "GET OFFER",
+            "campaign_link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "campaign_jLrbta"
+      ],
+      "settings": {
+        "autoplay_true": false,
+        "autoplay_speed": 5000
+      }
+    },
     "11b06e4f-6388-47ee-a78f-9d4f2c350536": {
       "type": "banner",
       "blocks": {
@@ -555,16 +575,10 @@
         "col_sm": "2",
         "col_mobile": "1"
       }
-    },
-    "campaign_BYYbmj": {
-      "type": "campaign",
-      "settings": {
-        "autoplay_true": false,
-        "autoplay_speed": 5000
-      }
     }
   },
   "order": [
+    "campaign_BYYbmj",
     "11b06e4f-6388-47ee-a78f-9d4f2c350536",
     "a36b2ffa-3a46-4a67-b64c-c298fa5cfc01",
     "ababec0c-f34a-4a4b-b102-a32ad25a7948",
@@ -576,7 +590,6 @@
     "2ac2dbda-e21b-48ee-9f71-f2279ae6c2a6",
     "dc1e5a93-de3d-4c1a-9401-f272090f3fb7",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3",
-    "b3630834-02dd-429c-a50f-3d36ee6c302c",
-    "campaign_BYYbmj"
+    "b3630834-02dd-429c-a50f-3d36ee6c302c"
   ]
 }
