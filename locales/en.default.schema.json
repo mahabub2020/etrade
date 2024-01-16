@@ -97,5 +97,37 @@
         }
       }
     }
+  },
+   "sections": {
+     "campaign": {
+          "name": "Campaign",
+          "settings": {
+            "autoplay_true": {
+                "label": "Autoplay Enable" 
+            } ,
+            "autoplay_speed": {
+                "label": "Autoplay Speed" 
+            }
+          },
+           "blocks": { 
+              "campaign": {
+                  "name": "Campaign",
+                  "settings": {
+                      "title": {
+                          "label": "Campaign Text"
+                      },
+                      "link_txt": {
+                          "label": "Campaign Link Text"
+                      },
+                      "link_url": {
+                          "label": "URL"
+                      }
+                  }
+              }
+          },
+        "presets": {
+            "name": "Campaign"
+        }
+    }
   }
 }
