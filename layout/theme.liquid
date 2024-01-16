@@ -81,7 +81,7 @@
     class="{{ body_classes }} position-relative min-h-screen {% if customer %} customer-logged-in {% endif %}"
     {% if template.name == 'product' %}data-product-id="{{ product.id }}"{% endif %}>
 
-    {% section 'header-group' %}
+    {% sections 'header-group' %}
 
     <main class="main-content" role="main">
       {{ content_for_layout }}
