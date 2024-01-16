@@ -555,6 +555,13 @@
         "col_sm": "2",
         "col_mobile": "1"
       }
+    },
+    "campaign_BYYbmj": {
+      "type": "campaign",
+      "settings": {
+        "autoplay_true": false,
+        "autoplay_speed": 5000
+      }
     }
   },
   "order": [
@@ -569,6 +576,7 @@
     "2ac2dbda-e21b-48ee-9f71-f2279ae6c2a6",
     "dc1e5a93-de3d-4c1a-9401-f272090f3fb7",
     "006b98e5-f543-41c3-ac5e-4cd8bc26ade3",
-    "b3630834-02dd-429c-a50f-3d36ee6c302c"
+    "b3630834-02dd-429c-a50f-3d36ee6c302c",
+    "campaign_BYYbmj"
   ]
 }
