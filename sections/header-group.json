@@ -1,0 +1,19 @@
+{
+    "type": "header",
+    "name": "Header Group",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {}
+      },
+      "campaign": {
+        "type": "campaign",
+        "settings": {}
+      }
+    },
+    "order": [
+        "header",
+        "campaign"
+    ]
+   }
+   
