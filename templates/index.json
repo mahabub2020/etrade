@@ -1,25 +1,5 @@
 {
   "sections": {
-    "campaign_BYYbmj": {
-      "type": "campaign",
-      "blocks": {
-        "campaign_jLrbta": {
-          "type": "campaign",
-          "settings": {
-            "campaign_title": "fsdfsfsdg",
-            "campaign_link_txt": "GET OFFERvssf",
-            "campaign_link_url": "shopify:\/\/collections\/accessories"
-          }
-        }
-      },
-      "block_order": [
-        "campaign_jLrbta"
-      ],
-      "settings": {
-        "autoplay_true": false,
-        "autoplay_speed": 5000
-      }
-    },
     "11b06e4f-6388-47ee-a78f-9d4f2c350536": {
       "type": "banner",
       "blocks": {
@@ -578,7 +558,6 @@
     }
   },
   "order": [
-    "campaign_BYYbmj",
     "11b06e4f-6388-47ee-a78f-9d4f2c350536",
     "a36b2ffa-3a46-4a67-b64c-c298fa5cfc01",
     "ababec0c-f34a-4a4b-b102-a32ad25a7948",

@@ -27,13 +27,44 @@
         "register_info_txt": "No account yet?",
         "register_btn_txt": "REGISTER HERE.",
         "header_top_txt_color": "#eeb2ff",
-        "header_bg_color_2": "#fff"
+        "header_bg_color_2": "#ffffff"
       }
     },
     "campaign": {
       "type": "campaign",
+      "blocks": {
+        "campaign_3gjRPx": {
+          "type": "campaign",
+          "settings": {
+            "campaign_title": "STUDENT NOW GET 10% OFF :",
+            "campaign_link_txt": "GET OFFER",
+            "campaign_link_url": ""
+          }
+        },
+        "campaign_kpYhUW": {
+          "type": "campaign",
+          "settings": {
+            "campaign_title": "STUDENT NOW GET 10% OFF :",
+            "campaign_link_txt": "GET OFFER",
+            "campaign_link_url": ""
+          }
+        },
+        "campaign_fjUnEr": {
+          "type": "campaign",
+          "settings": {
+            "campaign_title": "STUDENT NOW GET 10% OFF :",
+            "campaign_link_txt": "GET OFFER",
+            "campaign_link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "campaign_3gjRPx",
+        "campaign_kpYhUW",
+        "campaign_fjUnEr"
+      ],
       "settings": {
-        "autoplay_true": false,
+        "autoplay_true": true,
         "autoplay_speed": 5000
       }
     }
