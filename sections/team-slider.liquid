@@ -47,7 +47,7 @@ data-slick='{
                 <div class="slick-single-layout">
                     <div class="axil-team-member">
                         <div class="thumbnail">
-                          <img src="{% if block.settings.team_img %}{{ block.settings.team_img | img_url: '330x380' }}{% else %}http:\/\/via.placeholder.com\/330x380{% endif %}" alt="{{ block.settings.team_img.alt }}"> 
+                          <img src="{% if block.settings.team_img %}{{ block.settings.team_img | image_url: width: 330, height: 380 }}{% else %}http:\/\/via.placeholder.com\/330x380{% endif %}" alt="{{ block.settings.team_img.alt }}"> 
                         </div>
                         <div class="team-content"> 
                           {% if block.settings.member_name != '' %}   
@@ -79,7 +79,7 @@ data-slick='{
     padding-bottom: {{ block.settings.section_padding_bottom }}px;
     {%- when 'section_background' -%}    
     background: {{ block.settings.section_bg_color }} 
-      {%- if block.settings.section_bg_image -%}url("{{ block.settings.section_bg_image | img_url: 'master' }}"){%- endif -%} no-repeat scroll center center / cover;
+      {%- if block.settings.section_bg_image -%}url("{{ block.settings.section_bg_image | image_url }}"){%- endif -%} no-repeat scroll center center / cover;
     {%- endcase -%}
     {%- endfor -%}
   }
