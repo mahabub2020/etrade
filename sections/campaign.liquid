@@ -39,6 +39,17 @@
 </div>
 
 
+{%- style -%}
+#section-{{ section.id }}
+{
+  {% if settings.top_campaign_bg %}
+    background-image: url( {{ section.settings.campaign_bg | image_url: width: 1920, height: 40 }} );
+  {% else %}
+    background-image: url( {{ "campaign-bg3.png" | asset_url }} );
+  {% endif %}
+} 
+{%- endstyle -%}
+
 {% schema %}
 {
   "settings": [
@@ -61,6 +72,11 @@
       "label": "t:sections.campaign.settings.autoplay_speed.label",
       "unit": "ms",
       "default": 5000
+    },
+    {
+      "type": "image_picker",
+      "id": "campaign_bg",
+      "label": "t:sections.campaign.settings.campaign_bg.label"
     }
   ],
   "blocks": [
@@ -71,7 +87,8 @@
         {
           "type": "text",
           "id": "campaign_title",
-          "label": "t:sections.campaign.blocks.campaign.settings.title.label"
+          "label": "t:sections.campaign.blocks.campaign.settings.title.label",
+          "default": "STUDENT NOW GET 10% OFF :"
         },
         {
           "type": "text",

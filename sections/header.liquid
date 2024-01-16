@@ -255,7 +255,7 @@
 {%- style -%}
 .header-top-campaign
 {
-{% if settings.top_campaign_bg %}
+{% if settings.top_campaign_bg2 %}
   background-image: url( {{ settings.top_campaign_bg | image_url: width: 1920, height: 40 }} );
 {% else %}
   background-image: url( {{ "campaign-bg2.png" | asset_url }} );

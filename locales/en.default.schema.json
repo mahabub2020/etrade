@@ -104,6 +104,9 @@
         },
         "autoplay_speed": {
           "label": "Autoplay Speed"
+        },
+        "campaign_bg": {
+          "label": "Background Image"
         }
       },
       "blocks": {
