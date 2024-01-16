@@ -247,8 +247,8 @@
           </div>
       </div>
   </div>
-  <!-- End Mainmenu Area -->
-  {% render 'header-top-campaign' %}
+  <!-- End Mainmenu Area --> 
+  {% render 'header-top-campaign', header: section %}
 </header>
 {% endif %}  
 
@@ -278,6 +278,7 @@
   color: {{ settings.header_top_txt_hover_color }};
 }
 
+
 {%- endstyle -%}
 
 
@@ -286,159 +287,61 @@
   "name": "Header",
   "settings": [
     {
-      "type": "link_list",
-      "id": "header_primary_menu",
-      "label": "Select Primary Menu"
-    },
-    {
-      "type": "link_list",
-      "id": "header_cat_menu",
-      "label": "Categories Menu"
-    },
-    {
       "type": "header",
-      "content": "Search"
+      "content": "t:sections.campaign.name"
     },
     {
       "type": "checkbox",
-      "id": "search_enable",
-      "label": "Search Enable",
-      "default": true
+      "id": "autoplay_true",
+      "label": "t:sections.campaign.settings.autoplay_true.label",
+      "default": false
     },
     {
-      "type": "text",
-      "id": "search_placeholder",
-      "label": "Search Placeholder",
-      "default": "What are you looking for?"
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 1000,
+      "max": 9000,
+      "step": 1000,
+      "label": "t:sections.campaign.settings.autoplay_speed.label",
+      "unit": "ms",
+      "default": 5000
     },
     {
-      "type": "text",
-      "id": "search_title",
-      "label": "Search Title",
-      "default": "Recent Product"
-    },
+      "type": "image_picker",
+      "id": "campaign_bg",
+      "label": "t:sections.campaign.settings.campaign_bg.label"
+    }
+  ],
+  "blocks": [
     {
-      "type": "text",
-      "id": "btn_txt",
-      "label": "Button Text",
-      "default": "View All"
-    },
+      "type": "campaign",
+      "name": "t:sections.campaign.blocks.campaign.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "campaign_title",
+          "label": "t:sections.campaign.blocks.campaign.settings.title.label",
+          "default": "STUDENT NOW GET 10% OFF :"
+        },
+        {
+          "type": "text",
+          "id": "campaign_link_txt",
+          "label": "t:sections.campaign.blocks.campaign.settings.link_txt.label",
+          "default": "GET OFFER"
+        },
+        {
+          "type": "url",
+          "id": "campaign_link_url",
+          "label": "t:sections.campaign.blocks.campaign.settings.link_url.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
     {
-      "type": "url",
-      "id": "btn_url",
-      "label": "URL"
-    },
-    {
-      "type": "header",
-      "content": "Wishlist"
-    },
-    {
-      "type": "checkbox",
-      "id": "wishlist_enable",
-      "label": "Wishlist Icon Enable",
-      "default": true
-    },
-    {
-      "type": "header",
-      "content": "Mini Cart"
-    },
-    {
-      "type": "checkbox",
-      "id": "mini_cart_enable",
-      "label": "Mini Cart Enable",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "cart_title",
-      "label": "Cart Title",
-      "default": "Cart review."
-    },
-    {
-      "type": "text",
-      "id": "cart_notification",
-      "label": "Cart Notification",
-      "default": "No products in the cart."
-    },
-    {
-      "type": "text",
-      "id": "return_btn_txt",
-      "label": "Return Button Text",
-      "default": "Return to shop"
-    },
-    {
-      "type": "text",
-      "id": "view_cart_title",
-      "label": "View Cart Title",
-      "default": "View Cart"
-    },
-    {
-      "type": "text",
-      "id": "checkout_title",
-      "label": "Checkout Title",
-      "default": "Checkout"
-    },
-    {
-      "type": "header",
-      "content": "Acount Icon"
-    },
-    {
-      "type": "checkbox",
-      "id": "acount_enable",
-      "label": "Acount Enable",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "acount_title",
-      "label": "Acount Title",
-      "default": "QUICKLINKS"
-    },
-    {
-      "type": "link_list",
-      "id": "acount_menu",
-      "label": "Acount Menu"
-    },
-    {
-      "type": "text",
-      "id": "login_btn_txt",
-      "label": "Login Text",
-      "default": "Login"
-    },
-    {
-      "type": "text",
-      "id": "loginout_btn_txt",
-      "label": "Login Out Text",
-      "default": "Login Out"
-    },
-    {
-      "type": "text",
-      "id": "register_info_txt",
-      "label": "Register Info Text",
-      "default": "No account yet?"
-    },
-    {
-      "type": "text",
-      "id": "register_btn_txt",
-      "label": "Register Text",
-      "default": "REGISTER HERE."
-    },
-    {
-      "type": "header",
-      "content": "Color"
-    },
-    {
-      "type": "color",
-      "id": "header_top_txt_color",
-      "label": "Header Top Text Color",
-      "default": "#eeb2ff"
-    },
-    {
-      "type": "color",
-      "id": "header_bg_color_2",
-      "label": "Header Sticky BG Color",
-      "default": "#fff"
+      "name": "t:sections.campaign.presets.name"
     }
   ]
 }
 {% endschema %}
+
