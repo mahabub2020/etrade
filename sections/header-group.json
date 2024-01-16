@@ -1,19 +1,45 @@
 {
-    "type": "header",
-    "name": "Header Group",
-    "sections": {
-      "header": {
-        "type": "header",
-        "settings": {}
-      },
-      "campaign": {
-        "type": "campaign",
-        "settings": {}
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+        "header_primary_menu": "main-menu",
+        "header_cat_menu": "",
+        "search_enable": true,
+        "search_placeholder": "What are you looking for?",
+        "search_title": "Recent Product",
+        "btn_txt": "View All",
+        "btn_url": "",
+        "wishlist_enable": true,
+        "mini_cart_enable": true,
+        "cart_title": "Cart review.",
+        "cart_notification": "No products in the cart.",
+        "return_btn_txt": "Return to shop",
+        "view_cart_title": "View Cart",
+        "checkout_title": "Checkout",
+        "acount_enable": true,
+        "acount_title": "QUICKLINKS",
+        "acount_menu": "",
+        "login_btn_txt": "Login",
+        "loginout_btn_txt": "Login Out",
+        "register_info_txt": "No account yet?",
+        "register_btn_txt": "REGISTER HERE.",
+        "header_top_txt_color": "#eeb2ff",
+        "header_bg_color_2": "#fff"
       }
     },
-    "order": [
-        "header",
-        "campaign"
-    ]
-   }
-   
+    "campaign": {
+      "type": "campaign",
+      "settings": {
+        "autoplay_true": false,
+        "autoplay_speed": 5000
+      }
+    }
+  },
+  "order": [
+    "header",
+    "campaign"
+  ]
+}
