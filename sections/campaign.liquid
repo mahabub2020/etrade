@@ -44,12 +44,12 @@
   "settings": [
     {
       "type": "header",
-      "content": "t:settings_schema.sections.campaign.name"
+      "content": "t:sections.campaign.name"
     },
     {
       "type": "checkbox",
       "id": "autoplay_true",
-      "label": "t:settings_schema.sections.campaign.settings.autoplay_true.label",
+      "label": "t:sections.campaign.settings.autoplay_true.label",
       "default": false
     },
     {
@@ -58,7 +58,7 @@
       "min": 1000,
       "max": 9000,
       "step": 1000,
-      "label": "t:settings_schema.sections.campaign.settings.autoplay_speed.label",
+      "label": "t:sections.campaign.settings.autoplay_speed.label",
       "unit": "ms",
       "default": 5000
     }
@@ -66,30 +66,30 @@
   "blocks": [
     {
       "type": "campaign",
-      "name": "t:settings_schema.sections.blocks.campaign.name",
+      "name": "t:sections.blocks.campaign.name",
       "settings": [
         {
           "type": "text",
           "id": "campaign_title",
-          "label": "t:settings_schema.sections.blocks.campaign.settings.title.label"
+          "label": "t:sections.blocks.campaign.settings.title.label"
         },
         {
           "type": "text",
           "id": "campaign_link_txt",
-          "label": "t:settings_schema.sections.blocks.campaign.settings.link_txt.label",
+          "label": "t:sections.blocks.campaign.settings.link_txt.label",
           "default": "GET OFFER"
         },
         {
           "type": "url",
           "id": "campaign_link_url",
-          "label": "t:settings_schema.sections.blocks.campaign.settings.link_url.label"
+          "label": "t:sections.blocks.campaign.settings.link_url.label"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "t:settings_schema.sections.presets.name"
+      "name": "t:sections.presets.name"
     }
   ]
 }
