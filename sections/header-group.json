@@ -59,7 +59,8 @@
       ],
       "settings": {
         "autoplay_true": false,
-        "autoplay_speed": 5000
+        "autoplay_speed": 5000,
+        "campaign_bg": "shopify:\/\/shop_images\/product-big-15.png"
       }
     }
   },
