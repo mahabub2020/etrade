@@ -166,36 +166,32 @@
     ]
   },
   {
-    "name": "Header",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Header Stickey"
-      },
+    "name": "t:settings_schema.header.name",
+    "settings": [ 
       {
         "type": "radio",
         "id": "header_style",
-        "label": "Header Style",
+        "label": "t:settings_schema.header.settings.layout.label",
         "options": [
           {
             "value": "header_style_1",
-            "label": "Style 1"
+            "label": "t:settings_schema.header.settings.layout.option_1.label"
           },
           {
             "value": "header_style_2",
-            "label": "Style 2"
+            "label": "t:settings_schema.header.settings.layout.option_2.label"
           },
           {
             "value": "header_style_3",
-            "label": "Style 3"
+            "label": "t:settings_schema.header.settings.layout.option_3.label"
           },
           {
             "value": "header_style_4",
-            "label": "Style 4"
+            "label": "t:settings_schema.header.settings.layout.option_4.label"
           },
           {
             "value": "header_style_5",
-            "label": "Style 5"
+            "label": "t:settings_schema.header.settings.layout.option_5.label"
           }
         ],
         "default": "header_style_1"
@@ -203,12 +199,12 @@
       {
         "type": "link_list",
         "id": "header_primary_menu",
-        "label": "Select Primary Menu"
+        "label": "t:settings_schema.header.settings.primary_menu.label"
       },
       {
         "type": "link_list",
         "id": "header_cat_menu",
-        "label": "Categories Menu"
+        "label": "t:settings_schema.header.settings.cat_menu.label"
       }
     ]
   },
