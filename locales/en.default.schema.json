@@ -120,6 +120,99 @@
         },
         "cat_menu": {
           "label": "Categories Menu"
+        },
+        "search": {
+          "label": "Search"
+        },
+        "search_enable": {
+          "label": "Search Enable"
+        },
+        "search_placeholder": {
+          "label": "Search Enable",
+          "default": "What are you looking for?"
+        },
+        "search_title": {
+          "label": "Search Title",
+          "default": "Recent Product"
+        },
+        "btn_txt": {
+          "label": "Button Text",
+          "default": "View All"
+        },
+        "btn_url": {
+          "label": "URL" 
+        },
+        "wishlist": {
+          "label": "Wishlist" 
+        },
+        "wishlist_enable": {
+          "label": "Wishlist Icon Enable" 
+        },
+        "cart": {
+          "label": "Mini Cart" 
+        },
+        "cart_enable": {
+          "label": "Mini Cart" 
+        },
+        "cart_title": {
+          "label": "Button Text",
+          "default": "Cart review"
+        },
+        "cart_notification": {
+          "label": "Cart Notification",
+          "default": "No products in the cart."
+        },
+        "return_btn_txt": {
+          "label": "Return Button Text",
+          "default": "Return to shop"
+        },
+        "view_cart_title": {
+          "label": "View Cart Title",
+          "default": "View Cart"
+        },
+        "checkout_title": {
+          "label": "Checkout Title",
+          "default": "Checkout"
+        },
+        "acount": {
+          "label": "Acount Icon" 
+        },
+        "acount_enable": {
+          "label": "Acount Enable" 
+        },
+        "acount_title": {
+          "label": "Acount Title",
+          "default": "QUICKLINKS"
+        },
+        "acount_menu": {
+          "label": "Acount Title"
+        },
+        "login_btn_txt": {
+          "label": "Login Text",
+          "default": "Login"
+        },
+        "register_info_txt": {
+          "label": "Register Info Text",
+          "default": "No Account yet?"
+        },
+        "register_btn_txt": {
+          "label": "Register Text",
+          "default": "REGISTER HERE."
+        },
+        "campaign": {
+          "label": "Campaign" 
+        },
+        "campaign_enable": {
+          "label": "Campaign Enable" 
+        },
+        "campaign_text1": {
+          "label": "Campaign Text 1" 
+        },
+        "campaign_text2": {
+          "label": "Campaign Text 2" 
+        },
+        "campaign_text3": {
+          "label": "Campaign Text 3" 
         }
       }
     }
