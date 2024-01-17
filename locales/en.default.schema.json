@@ -96,32 +96,31 @@
     },
     "header": {
       "name": "Header",
-      "settings": { 
-         "layout": {
-              "label": "Header Layout", 
-                "option_1": {
-                    "label": "Layout 1"
-                },
-                "option_2": {
-                    "label": "Layout 2"
-                },
-                "option_3": {
-                    "label": "Layout 3"
-                },
-                "option_4": {
-                    "label": "Layout 4"
-                },
-                "option_5": {
-                    "label": "Layout 5"
-                }
-            },
-       
+      "settings": {
+        "layout": {
+          "label": "Header Layout",
+          "option_1": {
+            "label": "Layout 1"
+          },
+          "option_2": {
+            "label": "Layout 2"
+          },
+          "option_3": {
+            "label": "Layout 3"
+          },
+          "option_4": {
+            "label": "Layout 4"
+          },
+          "option_5": {
+            "label": "Layout 5"
+          }
+        },
         "primary_menu": {
           "label": "Select Primary Menu"
         },
         "cat_menu": {
           "label": "Categories Menu"
-        } 
+        }
       }
     }
   },

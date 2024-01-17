@@ -167,7 +167,7 @@
   },
   {
     "name": "t:settings_schema.header.name",
-    "settings": [ 
+    "settings": [
       {
         "type": "radio",
         "id": "header_style",

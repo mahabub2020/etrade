@@ -8,6 +8,7 @@
     "header_top_txt_color": "#fff",
     "header_top_txt_hover_color": "#dd1d1d",
     "header_style": "header_style_5",
+    "header_primary_menu": "main-menu",
     "footer_layout": "footer_layout_2",
     "footer_top_enable": true,
     "footer_bottom_enable": true,
@@ -34,8 +35,6 @@
       "header": {
         "type": "header",
         "settings": {
-          "header_primary_menu": "main-menu",
-          "header_cat_menu": "collections-menu",
           "search_enable": true,
           "search_placeholder": "What are you looking for?",
           "search_title": "Start typing and press Enter to search",
