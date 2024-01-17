@@ -17,7 +17,7 @@
    {%- endcapture -%}
  
 
-   <div id="section-{{ section.id }}"  class="header-top-campaign">
+   <div id="section-{{ section.id }}"  class="header-top-campaign header-top-campaignbg ">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-5 col-lg-6 col-md-10">
@@ -50,9 +50,9 @@
 </div>
 
 {%- style -%}
-#section-{{ section.id }}
+.header-top-campaignbg
 {
-  {% if section.settings.top_campaign_bg5 %}
+  {% if section.settings.campaign_bg5 %}
     background-image: url( {{ section.settings.campaign_bg5 | image_url: width: 1920, height: 40 }} );
   {% else %}
     background-image: url( {{ "campaign-bg3.png" | asset_url }} );
