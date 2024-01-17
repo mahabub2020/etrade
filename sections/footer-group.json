@@ -1,13 +1,75 @@
 {
-    "type": "footer",
-    "name": "Footer group",
-    "sections": {
-      "footer": {
-        "type": "footer",
-        "settings": {}
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "contact_about_8AU6nr": {
+          "type": "contact_about",
+          "settings": {
+            "footer_about_title": "Company",
+            "address_descrption": "685 Market Street, Las Vegas, LA 95820, United States.",
+            "footer_about_coloum": "3",
+            "footer_about_coloum_mobile": "6",
+            "about_phone": "(+01) 850-315-5862",
+            "about_email": "example@domain.com"
+          }
+        },
+        "footer_menu_anyFcz": {
+          "type": "footer_menu",
+          "settings": {
+            "footer_menu_coloum": "3",
+            "footer_menu_title": "Quick Link",
+            "footer_menu_handle": "shop-menu",
+            "title_color": "#ffffff",
+            "title_border_color": "#cf987e",
+            "menu_color": "#8a8a8a",
+            "menu_hover_color": "#cf987e"
+          }
+        },
+        "footer_menu_mh6mYL": {
+          "type": "footer_menu",
+          "settings": {
+            "footer_menu_coloum": "3",
+            "footer_menu_title": "Quick Link",
+            "footer_menu_handle": "company",
+            "title_color": "#ffffff",
+            "title_border_color": "#cf987e",
+            "menu_color": "#8a8a8a",
+            "menu_hover_color": "#cf987e"
+          }
+        },
+        "download_app_Y9mixg": {
+          "type": "download_app",
+          "settings": {
+            "app_title": "Download App",
+            "app_descrption": "Save $3 With App & New User only",
+            "footer_app_coloum": "3",
+            "footer_app_coloum_mobile": "6",
+            "qr_code_img": "shopify:\/\/shop_images\/qr.png",
+            "app_store1": "shopify:\/\/shop_images\/play-store.png",
+            "app_url1": "",
+            "app_store2": "shopify:\/\/shop_images\/app-store.png",
+            "app_url2": "",
+            "title_color": "#ffffff",
+            "title_border_color": "#cf987e",
+            "icon_2_color": "#8a8a8a",
+            "content_2_color": "#8a8a8a"
+          }
+        }
+      },
+      "block_order": [
+        "contact_about_8AU6nr",
+        "footer_menu_anyFcz",
+        "footer_menu_mh6mYL",
+        "download_app_Y9mixg"
+      ],
+      "settings": {
       }
-    },
-    "order": [
-      "footer" 
-    ]
-  }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

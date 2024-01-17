@@ -140,19 +140,19 @@
           "default": "View All"
         },
         "btn_url": {
-          "label": "URL" 
+          "label": "URL"
         },
         "wishlist": {
-          "label": "Wishlist" 
+          "label": "Wishlist"
         },
         "wishlist_enable": {
-          "label": "Wishlist Icon Enable" 
+          "label": "Wishlist Icon Enable"
         },
         "cart": {
-          "label": "Mini Cart" 
+          "label": "Mini Cart"
         },
         "cart_enable": {
-          "label": "Mini Cart" 
+          "label": "Mini Cart"
         },
         "cart_title": {
           "label": "Button Text",
@@ -175,10 +175,10 @@
           "default": "Checkout"
         },
         "acount": {
-          "label": "Acount Icon" 
+          "label": "Acount Icon"
         },
         "acount_enable": {
-          "label": "Acount Enable" 
+          "label": "Acount Enable"
         },
         "acount_title": {
           "label": "Acount Title",
@@ -200,19 +200,19 @@
           "default": "REGISTER HERE."
         },
         "campaign": {
-          "label": "Campaign" 
+          "label": "Campaign"
         },
         "campaign_enable": {
-          "label": "Campaign Enable" 
+          "label": "Campaign Enable"
         },
         "campaign_text1": {
-          "label": "Campaign Text 1" 
+          "label": "Campaign Text 1"
         },
         "campaign_text2": {
-          "label": "Campaign Text 2" 
+          "label": "Campaign Text 2"
         },
         "campaign_text3": {
-          "label": "Campaign Text 3" 
+          "label": "Campaign Text 3"
         }
       }
     }
