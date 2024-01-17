@@ -69,7 +69,7 @@
       }
     },
     "logos": {
-      "namer": "Logo",
+      "name": "Logo",
       "settings": {
         "header_logo": {
           "label": "Header Logo"
