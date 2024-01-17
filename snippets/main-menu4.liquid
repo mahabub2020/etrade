@@ -9,7 +9,7 @@
                     <div class="mobile-nav-brand">
                       {% render 'header-logo' %}
                     </div>
-                    {% assign linklist = section.settings.header_primary_menu %}
+                    {% assign linklist = settings.header_primary_menu %}
                     <ul class="mainmenu">
                         {% for link in linklists[linklist].links %}
                         {% assign child_list_handle = link.title | handle %}

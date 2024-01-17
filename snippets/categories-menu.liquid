@@ -1,6 +1,6 @@
  <nav class="department-nav-menu">
     <button class="sidebar-close"><i class="fas fa-times"></i></button>
-    {% assign linklist = section.settings.header_cat_menu %}
+    {% assign linklist = settings.header_cat_menu %}
     <ul class="nav-menu-list">
         {% for link in linklists[linklist].links %}
         {% assign child_list_handle = link.title | handle %}

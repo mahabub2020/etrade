@@ -93,6 +93,32 @@
           "label": "Custom Logo width"
         }
       }
+    },
+    "logos": {
+      "namer": "Logo",
+      "settings": {
+        "header_logo": {
+          "label": "Header Logo"
+        },
+        "logo_img": {
+          "label": "Logo"
+        },
+        "sticky_logo": {
+          "label": "Sticky Logo"
+        },
+        "sticky_logo_img": {
+          "label": "Logo"
+        },
+        "mobile_logo": {
+          "label": "Mobile Logo"
+        },
+        "mobile_logo_img": {
+          "label": "Mobile Logo"
+        },
+        "logo_width": {
+          "label": "Custom Logo width"
+        }
+      }
     }
   },
   "sections": {

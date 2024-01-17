@@ -147,10 +147,10 @@
                     
                   {%- liquid
                        render 'header-search-box2'   
-                       if section.settings.header_languages_enable  
+                       if settings.header_languages_enable  
                          render 'languages' 
                        endif 
-                       if section.settings.header_currency_enable  
+                       if settings.header_currency_enable  
                          render 'currency' 
                        endif 
                   -%} 
@@ -166,7 +166,7 @@
   <div class="axil-mainmenu aside-category-menu">
       <div class="container">
           <div class="header-navbar">
-            {% if section.settings.header_cat_menu != "" %}  
+            {% if settings.header_cat_menu != "" %}  
             <div class="header-nav-department">
                   <aside class="header-department">
                       <button class="header-department-text department-title">
@@ -203,10 +203,10 @@
               <div class="col-md-4 col-12">
                   <div class="header-top-dropdown dropdown-box-style">
                     {%- liquid
-                       if section.settings.header_languages_enable 
+                       if settings.header_languages_enable 
                        render 'languages'
                      endif
-                     if section.settings.header_currency_enable 
+                     if settings.header_currency_enable 
                          render 'currency'
                      endif
                     -%}
@@ -285,16 +285,7 @@
 {
   "name": "Header",
   "settings": [
-    {
-      "type": "link_list",
-      "id": "header_primary_menu",
-      "label": "Select Primary Menu"
-    },
-    {
-      "type": "link_list",
-      "id": "header_cat_menu",
-      "label": "Categories Menu"
-    },
+    
     {
       "type": "header",
       "content": "Search"

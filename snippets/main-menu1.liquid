@@ -1,10 +1,10 @@
 <nav class="mainmenu-nav">
   <button class="mobile-close-btn mobile-nav-toggler"><i class="fas fa-times"></i></button>
       <div class="mobile-nav-brand"> 
-      {% if section.settings.mobile_logo %}
+      {% if settings.mobile_logo %}
           <a href="/" class="logo"> 
           <figure class="logo--transparency">
-              <img src="{{ section.settings.mobile_logo | img_url: '300x300' }}" alt="{{ section.settings.mobile_logo.alt | default: shop.name }}">
+              <img src="{{ settings.mobile_logo | img_url: '300x300' }}" alt="{{ settings.mobile_logo.alt | default: shop.name }}">
           </figure> 
           </a>
       {% else %}
@@ -13,7 +13,7 @@
           </a>
       {% endif %} 
   </div>  
-  {% assign linklist = section.settings.header_primary_menu %}
+  {% assign linklist = settings.header_primary_menu %}
   <ul class="mainmenu nav-menu-list">
       {% for link in linklists[linklist].links %}
       {% assign child_list_handle = link.title | handle %}
