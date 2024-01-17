@@ -285,7 +285,6 @@
 {
   "name": "Header",
   "settings": [
-    
     {
       "type": "header",
       "content": "Search"
@@ -416,20 +415,55 @@
     },
     {
       "type": "header",
-      "content": "Color"
+      "content": "Campaign"
     },
     {
-      "type": "color",
-      "id": "header_top_txt_color",
-      "label": "Header Top Text Color",
-      "default": "#eeb2ff"
+      "type": "checkbox",
+      "id": "campaign_enable",
+      "label": "Campaign Enable",
+      "default": true
     },
     {
-      "type": "color",
-      "id": "header_bg_color_2",
-      "label": "Header Sticky BG Color",
-      "default": "#fff"
+      "type": "richtext",
+      "id": "campaign_text1",
+      "label": "Campaign Text 1", 
+      "default": "<p>STUDENT NOW GET 15% OFF: <a href='#'> GET OFFER<\/a><\/p>"
+    },
+    {
+      "type": "richtext",
+      "id": "campaign_text2",
+      "label": "Campaign Text 2", 
+      "default": "<p>STUDENT NOW GET 20% OFF: <a href='#'> GET OFFER<\/a><\/p>"
+    },
+    {
+      "type": "richtext",
+      "id": "campaign_text3",
+      "label": "Campaign Text 3", 
+      "default": "<p>STUDENT NOW GET 40% OFF: <a href='#'> GET OFFER<\/a><\/p>"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_true5",
+      "label": "t:sections.campaign.settings.autoplay_true.label",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed5",
+      "min": 1000,
+      "max": 9000,
+      "step": 1000,
+      "label": "t:sections.campaign.settings.autoplay_speed.label",
+      "unit": "ms",
+      "default": 5000
+    },
+    {
+      "type": "image_picker",
+      "id": "campaign_bg5",
+      "label": "t:sections.campaign.settings.campaign_bg.label"
     }
+     
+     
   ]
 }
 {% endschema %}

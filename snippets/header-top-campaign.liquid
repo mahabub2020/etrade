@@ -1,9 +1,9 @@
 
 {%- capture data_slick_activation_content -%}
       data-slick='{
-          {%- if section.settings.autoplay_true -%}
+          {%- if section.settings.autoplay_true5 -%}
           "autoplay": true,
-          "autoplaySpeed": {{ section.settings.autoplay_speed }},
+          "autoplaySpeed": {{ section.settings.autoplay_speed5 }},
           {%- endif -%} 
           "slidesToScroll": 1,
           "slidesToShow": 1, 
@@ -22,16 +22,27 @@
         <div class="row justify-content-center">
             <div class="col-xl-5 col-lg-6 col-md-10">
                 <div class="axil-slick-slider header-campaign-activation axil-slick-arrow arrow-both-side header-campaign-arrow"  {% if settings.rtl_enable %} dir="rtl"{% endif %} {{ data_slick_activation_content }}>
-                  {% for block in section.blocks %}
-                    {% case block.type %}
-                      {% when 'campaign' %}   
+                    {% if section.settings.campaign_text1 != '' %}
                       <div class="slick-slide">
                         <div class="campaign-content">
-                            <p>{{ block.settings.campaign_title | escape }} <a href="{{ block.settings.campaign_link_url | escape }} ">{{ block.settings.campaign_link_txt | escape }} </a></p>
+                           {{ section.settings.campaign_text1 | escape }}
                         </div>
                       </div>
-                        {% endcase %}
-                      {% endfor %}    
+                    {% endif %}
+                    {% if section.settings.campaign_text2 != '' %}
+                      <div class="slick-slide">
+                        <div class="campaign-content">
+                           {{ section.settings.campaign_text2 | escape }}
+                        </div>
+                      </div>
+                    {% endif %}
+                    {% if section.settings.campaign_text3 != '' %}
+                      <div class="slick-slide">
+                        <div class="campaign-content">
+                           {{ section.settings.campaign_text3 | escape }}
+                        </div>
+                      </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -41,8 +52,8 @@
 {%- style -%}
 #section-{{ section.id }}
 {
-  {% if settings.top_campaign_bg %}
-    background-image: url( {{ section.settings.campaign_bg | image_url: width: 1920, height: 40 }} );
+  {% if section.settings.top_campaign_bg5 %}
+    background-image: url( {{ section.settings.campaign_bg5 | image_url: width: 1920, height: 40 }} );
   {% else %}
     background-image: url( {{ "campaign-bg3.png" | asset_url }} );
   {% endif %}
