@@ -29,7 +29,8 @@
         "campaign_text2": "<p>STUDENT NOW GET 20% OFF: <a href=\"#\"> GET OFFER<\/a><\/p>",
         "campaign_text3": "<p>STUDENT NOW GET 40% OFF: <a href=\"#\"> GET OFFER<\/a><\/p>",
         "autoplay_true5": false,
-        "autoplay_speed5": 5000
+        "autoplay_speed5": 5000,
+        "campaign_bg5": "shopify:\/\/shop_images\/blog-single-5.png"
       }
     }
   },
