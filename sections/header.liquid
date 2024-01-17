@@ -248,12 +248,17 @@
       </div>
   </div>
   <!-- End Mainmenu Area -->
-  {% render 'header-top-campaign' %} 
+  {%- liquid
+    if section.settings.campaign_enable 
+    render 'header-top-campaign' 
+  endif
+ -%} 
+
 </header>
 {% endif %}  
 
 {%- style -%}
-.header-top-campaign
+.header-top-campaign-bg
 {
 {% if settings.top_campaign_bg2 %}
   background-image: url( {{ settings.top_campaign_bg | image_url: width: 1920, height: 40 }} );
