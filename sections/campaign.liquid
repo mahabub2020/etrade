@@ -41,7 +41,7 @@
 {%- style -%}
 #section-{{ section.id }}
 {
-  {% if section.settings.top_campaign_bg %}
+  {% if section.settings.campaign_bg %}
     background-image: url( {{ section.settings.campaign_bg | image_url: width: 1920, height: 40 }} );
   {% else %}
     background-image: url( {{ "campaign-bg3.png" | asset_url }} );
