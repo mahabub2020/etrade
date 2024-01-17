@@ -2,10 +2,6 @@
   "type": "header",
   "name": "Header Group",
   "sections": {
-    "header-top": {
-        "type": "header-top",
-        "settings": {}
-    },
     "header": {
       "type": "header",
       "settings": {
@@ -75,7 +71,6 @@
   },
   "order": [
     "header",
-    "campaign",
-    "header-top"
+    "campaign" 
   ]
 }
