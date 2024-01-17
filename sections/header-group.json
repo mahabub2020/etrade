@@ -5,8 +5,6 @@
     "header": {
       "type": "header",
       "settings": {
-        "header_primary_menu": "main-menu",
-        "header_cat_menu": "",
         "search_enable": true,
         "search_placeholder": "What are you looking for?",
         "search_title": "Recent Product",
@@ -26,51 +24,16 @@
         "loginout_btn_txt": "Login Out",
         "register_info_txt": "No account yet?",
         "register_btn_txt": "REGISTER HERE.",
-        "header_top_txt_color": "#eeb2ff",
-        "header_bg_color_2": "#ffffff"
-      }
-    },
-    "campaign": {
-      "type": "campaign",
-      "blocks": {
-        "campaign_3gjRPx": {
-          "type": "campaign",
-          "settings": {
-            "campaign_title": "STUDENT NOW GET 10% OFF :",
-            "campaign_link_txt": "GET OFFER",
-            "campaign_link_url": ""
-          }
-        },
-        "campaign_kpYhUW": {
-          "type": "campaign",
-          "settings": {
-            "campaign_title": "STUDENT NOW GET 10% OFF :",
-            "campaign_link_txt": "GET OFFER",
-            "campaign_link_url": ""
-          }
-        },
-        "campaign_fjUnEr": {
-          "type": "campaign",
-          "settings": {
-            "campaign_title": "STUDENT NOW GET 10% OFF :",
-            "campaign_link_txt": "GET OFFER",
-            "campaign_link_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "campaign_3gjRPx",
-        "campaign_kpYhUW",
-        "campaign_fjUnEr"
-      ],
-      "settings": {
-        "autoplay_true": true,
-        "autoplay_speed": 5000
+        "campaign_enable": true,
+        "campaign_text1": "<p>STUDENT NOW GET 15% OFF: <a href=\"#\"> GET OFFER<\/a><\/p>",
+        "campaign_text2": "<p>STUDENT NOW GET 20% OFF: <a href=\"#\"> GET OFFER<\/a><\/p>",
+        "campaign_text3": "<p>STUDENT NOW GET 40% OFF: <a href=\"#\"> GET OFFER<\/a><\/p>",
+        "autoplay_true5": false,
+        "autoplay_speed5": 5000
       }
     }
   },
   "order": [
-    "header",
-    "campaign" 
+    "header"
   ]
 }

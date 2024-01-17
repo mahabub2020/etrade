@@ -53,9 +53,7 @@
           "login_btn_txt": "Login",
           "loginout_btn_txt": "Login Out",
           "register_info_txt": "No account yet?",
-          "register_btn_txt": "REGISTER HERE.",
-          "header_top_txt_color": "#ff7f00",
-          "header_bg_color_2": "#705151"
+          "register_btn_txt": "REGISTER HERE."
         }
       },
       "footer": {
