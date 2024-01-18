@@ -5,6 +5,13 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "newsletter_hffemb": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_title": "Stay Up To Date",
+            "newsletter_descrption": "Subscribe to our newsletter and get 20% discount offer in your first order"
+          }
+        },
         "contact_about_8AU6nr": {
           "type": "contact_about",
           "settings": {
@@ -40,13 +47,37 @@
             "menu_hover_color": "#cf987e"
           }
         },
+        "footer_menu2_mxeRLN": {
+          "type": "footer_menu2",
+          "settings": {
+            "footer_menu_coloum": "3",
+            "footer_menu_title": "Quick Link",
+            "footer_menu_handle": "collections-menu",
+            "title_color": "#ffffff",
+            "title_border_color": "#cf987e",
+            "menu_color": "#8a8a8a",
+            "menu_hover_color": "#cf987e"
+          }
+        },
+        "footer_menu2_4tKGdk": {
+          "type": "footer_menu2",
+          "settings": {
+            "footer_menu_coloum": "3",
+            "footer_menu_title": "Quick Link",
+            "footer_menu_handle": "collections-menu",
+            "title_color": "#ffffff",
+            "title_border_color": "#cf987e",
+            "menu_color": "#8a8a8a",
+            "menu_hover_color": "#cf987e"
+          }
+        },
         "download_app_Y9mixg": {
           "type": "download_app",
           "settings": {
-            "app_title": "Download App",
+            "app_title": "Download Appgv",
             "app_descrption": "Save $3 With App & New User only",
-            "footer_app_coloum": "3",
-            "footer_app_coloum_mobile": "6",
+            "footer_app_coloum": "4",
+            "footer_app_coloum_mobile": "3",
             "qr_code_img": "shopify:\/\/shop_images\/qr.png",
             "app_store1": "shopify:\/\/shop_images\/play-store.png",
             "app_url1": "",
@@ -60,9 +91,12 @@
         }
       },
       "block_order": [
+        "newsletter_hffemb",
         "contact_about_8AU6nr",
         "footer_menu_anyFcz",
         "footer_menu_mh6mYL",
+        "footer_menu2_mxeRLN",
+        "footer_menu2_4tKGdk",
         "download_app_Y9mixg"
       ],
       "settings": {
