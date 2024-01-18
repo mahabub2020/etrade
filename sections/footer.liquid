@@ -1,24 +1,24 @@
 
-{%- if  page.metafields.custom.footer_layout -%}
-  {%- assign footer_style =  page.metafields.custom.footer_layout.value -%}
-{% else %}
-  {%- assign footer_style =  settings.footer_layout -%} 
-{%- endif -%}
+{%- liquid 
+  if  page.metafields.custom.footer_layout  
+    assign footer_style =  page.metafields.custom.footer_layout.value
+  else
+    assign footer_style =  settings.footer_layout 
+  endif 
+-%}
 
-{% if footer_style == 'footer_layout_1' %} 
-
-  <footer class="axil-footer-area footer-style-3 footer-dark" id="section-{{ section.id }}"> 
-      {% render 'footer-top-1' %}
-      {% render 'footer-bottom-1' %} 
-</footer>
-
-{% elsif footer_style == 'footer_layout_2' %}
-
-<footer class="axil-footer-area footer-style-2" id="section-{{ section.id }}">
-  {% render 'footer-top' %}
-  {% render 'footer-bottom' %}
-</footer>
-
+{% if settings.footer_enable != blank %} 
+  {% if footer_style == 'footer_layout_1' %} 
+    <footer class="axil-footer-area footer-style-3 footer-dark" id="section-{{ section.id }}"> 
+        {% render 'footer-top-1' %}
+        {% render 'footer-bottom-1' %} 
+  </footer> 
+  {% elsif footer_style == 'footer_layout_2' %} 
+  <footer class="axil-footer-area footer-style-2" id="section-{{ section.id }}">
+    {% render 'footer-top' %}
+    {% render 'footer-bottom' %}
+  </footer> 
+  {% endif %}  
 {% endif %}  
 
 {% render 'quick-view-modal' %} 
