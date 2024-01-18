@@ -74,7 +74,7 @@
         "download_app_Y9mixg": {
           "type": "download_app",
           "settings": {
-            "app_title": "Download Appgv",
+            "app_title": "Download App",
             "app_descrption": "Save $3 With App & New User only",
             "footer_app_coloum": "3",
             "footer_app_coloum_mobile": "3",
@@ -88,18 +88,6 @@
             "icon_2_color": "#8a8a8a",
             "content_2_color": "#8a8a8a"
           }
-        },
-        "footer_menu2_XzmBef": {
-          "type": "footer_menu2",
-          "settings": {
-            "footer_menu_coloum": "3",
-            "footer_menu_title": "Quick Link",
-            "footer_menu_handle": "collections-menu",
-            "title_color": "#ffffff",
-            "title_border_color": "#cf987e",
-            "menu_color": "#8a8a8a",
-            "menu_hover_color": "#cf987e"
-          }
         }
       },
       "block_order": [
@@ -109,8 +97,7 @@
         "footer_menu_mh6mYL",
         "footer_menu2_mxeRLN",
         "footer_menu2_4tKGdk",
-        "download_app_Y9mixg",
-        "footer_menu2_XzmBef"
+        "download_app_Y9mixg"
       ],
       "settings": {
       }
