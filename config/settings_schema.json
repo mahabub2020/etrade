@@ -225,11 +225,11 @@
         "options": [
           {
             "value": "footer_layout_1",
-            "label": "t:settings_schema.footer.settings.option_1.label"
+            "label": "t:settings_schema.footer.settings.layout.option_1.label"
           },
           {
             "value": "footer_layout_2",
-            "label": "t:settings_schema.footer.settings.option_2.label"
+            "label": "t:settings_schema.footer.settings.layout.option_2.label"
           }
         ],
         "default": "footer_layout_1"
