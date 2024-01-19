@@ -321,7 +321,7 @@
       {
         "type": "text",
         "id": "social_title",
-        "label": "t:settings_schema.footer.settings.social_title.label",
+        "label": "t:settings_schema.footer.settings.social_title.txt",
         "default": "t:settings_schema.footer.settings.social_title.txt"
       },
       {
@@ -331,7 +331,7 @@
       {
         "type": "text",
         "id": "social_icon_1",
-        "label": "t:settings_schema.footer.settings.social_icon_1.label",
+        "label": "t:settings_schema.footer.settings.social_icon_1.txt",
         "default": "t:settings_schema.footer.settings.social_icon_1.txt",
         "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
       },
