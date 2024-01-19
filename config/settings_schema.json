@@ -165,6 +165,7 @@
       }
     ]
   },
+
   {
     "name": "t:settings_schema.header.name",
     "settings": [
@@ -209,26 +210,26 @@
     ]
   },
   {
-    "name": "Footer",
+    "name": "t:settings_schema.footer.name",
     "settings": [
       {
         "type": "checkbox",
         "id": "footer_enable",
-        "label": "Footer Enable",
+        "label": "t:settings_schema.footer.settings.footer_enable.label",
         "default": true
       },
       {
         "type": "radio",
         "id": "footer_layout",
-        "label": "Footer Style",
+        "label": "t:settings_schema.footer.settings.layout.label",
         "options": [
           {
             "value": "footer_layout_1",
-            "label": "Style 1"
+            "label": "t:settings_schema.footer.settings.option_1.label"
           },
           {
             "value": "footer_layout_2",
-            "label": "Style 2"
+            "label": "t:settings_schema.footer.settings.option_2.label"
           }
         ],
         "default": "footer_layout_1"
@@ -236,171 +237,159 @@
       {
         "type": "checkbox",
         "id": "footer_top_enable",
-        "label": "Footer Top Enable",
+        "label": "t:settings_schema.footer.settings.footer_top_enable.label",
         "default": true
-      },
+      }, 
       {
         "type": "header",
-        "content": "Footer Bottom"
+        "content": "t:settings_schema.footer.settings.footer_bottom.label"
       },
+
       {
         "type": "checkbox",
         "id": "footer_bottom_enable",
-        "label": "Footer bottom Enable",
+        "label": "t:settings_schema.footer.settings.footer_bottom_enable.label",
         "default": true
       },
       {
         "type": "link_list",
         "id": "footer_right_menu",
-        "label": "Footer Right Menu"
+        "label": "t:settings_schema.footer.settings.footer_right_menu.label"
       },
       {
         "type": "richtext",
         "id": "copy_ritht_text",
-        "label": "CopyRight Text",
+        "label": "t:settings_schema.footer.settings.copy_ritht_text.label",
         "default": "<p>© 2023. All rights reserved by <a href='#' target='_blank' rel='noopener'>Your Company.<\/a><\/p>"
       },
+
       {
         "type": "header",
-        "content": "Payment Icons"
+        "content": "t:settings_schema.footer.settings.payment.label"
       },
       {
         "type": "checkbox",
         "id": "is_payment_icon",
-        "label": "Is Pament Enable",
+        "label": "t:settings_schema.footer.settings.is_payment_icon.label",
         "default": true
       },
       {
         "type": "text",
         "id": "payment_title",
-        "label": "Title",
-        "default": "Accept For"
+        "label": "t:settings_schema.footer.settings.payment_title.label",
+        "default": "t:settings_schema.footer.settings.payment_title.default"
       },
       {
         "type": "image_picker",
         "id": "payment_icon_img1",
-        "label": "Payment Image 1"
+        "label": "t:settings_schema.footer.settings.payment_icon_img1.label"
       },
       {
         "type": "image_picker",
         "id": "payment_icon_img2",
-        "label": "Payment Image 2"
+        "label": "t:settings_schema.footer.settings.payment_icon_img2.label"
       },
       {
         "type": "image_picker",
         "id": "payment_icon_img3",
-        "label": "Payment Image"
+        "label": "t:settings_schema.footer.settings.payment_icon_img3.label"
       },
       {
         "type": "image_picker",
         "id": "payment_icon_img4",
-        "label": "Payment Image 4"
+        "label": "t:settings_schema.footer.settings.payment_icon_img4.label"
       },
       {
         "type": "image_picker",
         "id": "payment_icon_img5",
-        "label": "Payment Image 5"
-      },
+        "label": "t:settings_schema.footer.settings.payment_icon_img5.label"
+      }, 
       {
         "type": "header",
-        "content": "Footer Social"
+        "content": "t:settings_schema.footer.settings.footer_social.label"
       },
       {
         "type": "checkbox",
         "id": "footer_social_enable",
-        "label": "Footer Social Enable",
+        "label": "t:settings_schema.footer.settings.footer_social_enable.label",
         "default": true
       },
       {
         "type": "header",
-        "content": "Social Area"
+        "content": "t:settings_schema.footer.settings.social_area.label"
       },
       {
         "type": "text",
         "id": "social_title",
-        "label": "Social Title",
-        "default": "Social Network"
+        "label": "t:settings_schema.footer.settings.social_title.label",
+        "default": "t:settings_schema.footer.settings.social_title.default"
       },
       {
         "type": "header",
-        "content": "Social 1"
+        "content": "t:settings_schema.footer.settings.twitter.label"
       },
       {
         "type": "text",
         "id": "social_icon_1",
-        "label": "Icon",
-        "default": "twitter",
+        "label": "t:settings_schema.footer.settings.social_icon_1.label",
+        "default": "t:settings_schema.footer.settings.social_icon_1.default",
         "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
       },
       {
         "type": "url",
         "id": "social_icon_1_url",
-        "label": "URL"
-      },
+        "label": "t:settings_schema.footer.settings.social_icon_1.label"
+      }, 
+
       {
         "type": "header",
-        "content": "Social 2"
+        "content": "t:settings_schema.footer.settings.facebook.label"
       },
       {
         "type": "text",
         "id": "social_icon_2",
-        "label": "Icon",
-        "default": "google-plus",
+        "label": "t:settings_schema.footer.settings.social_icon_2.label",
+        "default": "t:settings_schema.footer.settings.social_icon_2.default",
         "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
       },
       {
         "type": "url",
         "id": "social_icon_2_url",
-        "label": "URL"
+        "label": "t:settings_schema.footer.settings.social_icon_2_url.label"
       },
       {
         "type": "header",
-        "content": "Social 3"
+        "content": "t:settings_schema.footer.settings.youtube.label"
       },
       {
         "type": "text",
         "id": "social_icon_3",
-        "label": "Icon",
-        "default": "facebook",
+        "label": "t:settings_schema.footer.settings.social_icon_3.label",
+        "default": "t:settings_schema.footer.settings.social_icon_3.default",
         "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
       },
       {
         "type": "url",
         "id": "social_icon_3_url",
-        "label": "URL"
+        "label": "t:settings_schema.footer.settings.social_icon_3_url.label"
       },
       {
         "type": "header",
-        "content": "Social 4"
+        "content": "t:settings_schema.footer.settings.instagram.label"
       },
       {
         "type": "text",
         "id": "social_icon_4",
-        "label": "Icon",
-        "default": "youtube",
+        "label": "t:settings_schema.footer.settings.social_icon_4.label",
+        "default": "t:settings_schema.footer.settings.social_icon_4.default",
         "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
       },
       {
         "type": "url",
         "id": "social_icon_4_url",
-        "label": "URL"
-      },
-      {
-        "type": "header",
-        "content": "Social 5"
-      },
-      {
-        "type": "text",
-        "id": "social_icon_5",
-        "label": "Icon",
-        "default": "instagram",
-        "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
-      },
-      {
-        "type": "url",
-        "id": "social_icon_5_url",
-        "label": "URL"
+        "label": "t:settings_schema.footer.settings.social_icon_4_url.label"
       }
     ]
   }
 ]
+

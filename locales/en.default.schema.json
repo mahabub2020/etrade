@@ -94,6 +94,117 @@
         }
       }
     },
+    "footer": {
+      "name": "Footer",
+      "settings": {
+         "footer_enable": {
+          "label": "Footer Enable"
+        },
+        "layout": {
+          "label": "Footer Layout",
+          "option_1": {
+            "label": "Layout 1"
+          },
+          "option_2": {
+            "label": "Layout 2"
+          } 
+        }, 
+        "footer_top_enable": {
+          "label": "Footer Top Enable"
+        },  
+        "footer_bottom": {
+          "label": "Footer Bottom"
+        }, 
+        "footer_bottom_enable": {
+          "label": "Footer bottom Enable"
+        }, 
+        "footer_right_menu": {
+          "label": "Footer Right Menu"
+        }, 
+        "copy_ritht_text": {
+          "label": "CopyRight Text"
+        }, 
+        "payment": {
+          "label": "Payment Icons"
+        }, 
+        "is_payment_icon": {
+          "label": "Pament Icon Enable"
+        },
+       "payment_title": {
+          "label": "Title",
+          "default": "Accept For"
+        },       
+        "payment_icon_img1": {
+          "label": "Payment Image 1"
+        },       
+        "payment_icon_img2": {
+          "label": "Payment Image 2"
+        },       
+        "payment_icon_img3": {
+          "label": "Payment Image 3"
+        },       
+        "payment_icon_img4": {
+          "label": "Payment Image 4"
+        },       
+        "payment_icon_img5": {
+          "label": "Payment Image 5"
+        },       
+        "footer_social": {
+          "label": "Footer Social"
+        },       
+        "footer_social_enable": {
+          "label": "Footer Social Enable"
+        },       
+        "social_area": {
+          "label": "Footer Social Enable"
+        },       
+        "social_title": {
+          "label": "Social Title",
+          "default": "Social Network"
+        },       
+        "twitter": {
+          "label": "Twitter"
+        },       
+        "social_icon_1": {
+         "label": "Icon",
+          "default": "twitter"
+        },
+        "social_icon_1_url": {
+          "label": "URL"
+        },  
+        "facebook": {
+          "label": "Facebook Social"
+        },       
+        "social_icon_2": {
+         "label": "Icon",
+          "default": "facebook"
+        },
+        "social_icon_2_url": {
+          "label": "URL"
+        },  
+        "youtube": {
+          "label": "Youtube Social"
+        },       
+        "social_icon_3": {
+         "label": "Icon",
+          "default": "youtube"
+        },
+        "social_icon_3_url": {
+          "label": "URL"
+        },  
+        "instagram": {
+          "label": "Instagram Social"
+        },       
+        "social_icon_4": {
+         "label": "Icon",
+          "default": "instagram"
+        },
+        "social_icon_4_url": {
+          "label": "URL"
+        }  
+
+      }
+    },
     "header": {
       "name": "Header",
       "settings": {
