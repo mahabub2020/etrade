@@ -322,7 +322,7 @@
         "type": "text",
         "id": "social_title",
         "label": "t:settings_schema.footer.settings.social_title.label",
-        "default": "t:settings_schema.footer.settings.social_title.default"
+        "default": "t:settings_schema.footer.settings.social_title.txt"
       },
       {
         "type": "header",
@@ -332,7 +332,7 @@
         "type": "text",
         "id": "social_icon_1",
         "label": "t:settings_schema.footer.settings.social_icon_1.label",
-        "default": "t:settings_schema.footer.settings.social_icon_1.default",
+        "default": "t:settings_schema.footer.settings.social_icon_1.txt",
         "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
       },
       {
@@ -349,7 +349,7 @@
         "type": "text",
         "id": "social_icon_2",
         "label": "t:settings_schema.footer.settings.social_icon_2.label",
-        "default": "t:settings_schema.footer.settings.social_icon_2.default",
+        "default": "t:settings_schema.footer.settings.social_icon_2.txt",
         "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
       },
       {
@@ -365,7 +365,7 @@
         "type": "text",
         "id": "social_icon_3",
         "label": "t:settings_schema.footer.settings.social_icon_3.label",
-        "default": "t:settings_schema.footer.settings.social_icon_3.default",
+        "default": "t:settings_schema.footer.settings.social_icon_3.txt",
         "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
       },
       {
@@ -381,7 +381,7 @@
         "type": "text",
         "id": "social_icon_4",
         "label": "t:settings_schema.footer.settings.social_icon_4.label",
-        "default": "t:settings_schema.footer.settings.social_icon_4.default",
+        "default": "t:settings_schema.footer.settings.social_icon_4.txt",
         "info": "[See More Icon](https:\/\/fontawesome.com\/icons)"
       },
       {

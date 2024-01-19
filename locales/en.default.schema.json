@@ -94,7 +94,7 @@
         }
       }
     },
-    
+
     "footer": {
       "name": "Footer",
       "settings": {
@@ -157,18 +157,18 @@
           "label": "Footer Social Enable"
         },       
         "social_area": {
-          "label": "Footer Social Enable"
+          "label": "Footer Social"
         },       
         "social_title": {
           "label": "Social Title",
-          "default": "Social Network"
+          "txt": "Social Network"
         },       
         "twitter": {
           "label": "Twitter"
         },       
         "social_icon_1": {
          "label": "Icon",
-          "default": "twitter"
+          "txt": "twitter"
         },
         "social_icon_1_url": {
           "label": "URL"
@@ -178,7 +178,7 @@
         },       
         "social_icon_2": {
          "label": "Icon",
-          "default": "facebook"
+          "txt": "facebook"
         },
         "social_icon_2_url": {
           "label": "URL"
@@ -188,7 +188,7 @@
         },       
         "social_icon_3": {
          "label": "Icon",
-          "default": "youtube"
+          "txt": "youtube"
         },
         "social_icon_3_url": {
           "label": "URL"
@@ -198,7 +198,7 @@
         },       
         "social_icon_4": {
          "label": "Icon",
-          "default": "instagram"
+          "txt": "instagram"
         },
         "social_icon_4_url": {
           "label": "URL"
