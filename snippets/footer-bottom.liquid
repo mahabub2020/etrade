@@ -52,34 +52,49 @@
                     <ul class="payment-icons-bottom quick-link">
                         {%- if settings.payment_icon_img1 -%}  
                         <li> <img
-                            src="{{ settings.payment_icon_img1 | img_url: 'master' }}"
+                            loading="lazy"
+                            width="{{ settings.payment_icon_img1.width }}"
+                            height="{{ settings.payment_icon_img1.height }}"
+                            src="{{ settings.payment_icon_img1 | image_url }}"
                             alt="{{ settings.payment_icon_img1.alt | default: shop.name }}"
-                          ></li> 
+                        ></li> 
                         {%- endif -%}
                         {%- if settings.payment_icon_img2 -%}  
                         <li> <img
-                            src="{{ settings.payment_icon_img2 | img_url: 'master' }}"
+                            loading="lazy"
+                            width="{{ settings.payment_icon_img1.width }}"
+                            height="{{ settings.payment_icon_img1.height }}"
+                            src="{{ settings.payment_icon_img2 | image_url }}"
                             alt="{{ settings.payment_icon_img2.alt | default: shop.name }}"
-                          ></li> 
+                        ></li> 
                         {%- endif -%}
                         {%- if settings.payment_icon_img3 -%}  
                         <li> <img
-                            src="{{ settings.payment_icon_img3 | img_url: 'master' }}"
+                            loading="lazy"
+                            width="{{ settings.payment_icon_img3.width }}"
+                            height="{{ settings.payment_icon_img3.height }}"
+                            src="{{ settings.payment_icon_img3 | image_url }}"
                             alt="{{ settings.payment_icon_img3.alt | default: shop.name }}"
-                          ></li> 
+                        ></li> 
                         {%- endif -%}
                         {%- if settings.payment_icon_img4 -%}  
                         <li> <img
-                            src="{{ settings.payment_icon_img4 | img_url: 'master' }}"
+                            loading="lazy"
+                            width="{{ settings.payment_icon_img4.width }}"
+                            height="{{ settings.payment_icon_img4.height }}"
+                            src="{{ settings.payment_icon_img4 | image_url }}"
                             alt="{{ settings.payment_icon_img4.alt | default: shop.name }}"
-                          ></li> 
+                        ></li> 
                         {%- endif -%}
                         {%- if settings.payment_icon_img5 -%}  
                         <li> <img
-                            src="{{ settings.payment_icon_img5 | img_url: 'master' }}"
+                            loading="lazy"
+                            width="{{ settings.payment_icon_img4.width }}"
+                            height="{{ settings.payment_icon_img4.height }}" 
+                            src="{{ settings.payment_icon_img5 | image_url }}"
                             alt="{{ settings.payment_icon_img5.alt | default: shop.name }}"
-                          ></li> 
-                        {%- endif -%}
+                        ></li> 
+                        {%- endif -%} 
 
                     </ul>
                 </div> 
