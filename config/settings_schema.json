@@ -165,7 +165,6 @@
       }
     ]
   },
-
   {
     "name": "t:settings_schema.header.name",
     "settings": [
@@ -239,12 +238,11 @@
         "id": "footer_top_enable",
         "label": "t:settings_schema.footer.settings.footer_top_enable.label",
         "default": true
-      }, 
+      },
       {
         "type": "header",
         "content": "t:settings_schema.footer.settings.footer_bottom.label"
       },
-
       {
         "type": "checkbox",
         "id": "footer_bottom_enable",
@@ -262,7 +260,6 @@
         "label": "t:settings_schema.footer.settings.copy_ritht_text.label",
         "default": "<p>© 2023. All rights reserved by <a href='#' target='_blank' rel='noopener'>Your Company.<\/a><\/p>"
       },
-
       {
         "type": "header",
         "content": "t:settings_schema.footer.settings.payment.label"
@@ -303,7 +300,7 @@
         "type": "image_picker",
         "id": "payment_icon_img5",
         "label": "t:settings_schema.footer.settings.payment_icon_img5.label"
-      }, 
+      },
       {
         "type": "header",
         "content": "t:settings_schema.footer.settings.footer_social.label"
@@ -339,8 +336,7 @@
         "type": "url",
         "id": "social_icon_1_url",
         "label": "t:settings_schema.footer.settings.social_icon_1.label"
-      }, 
-
+      },
       {
         "type": "header",
         "content": "t:settings_schema.footer.settings.facebook.label"
@@ -392,4 +388,3 @@
     ]
   }
 ]
-
