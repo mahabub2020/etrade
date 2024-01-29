@@ -1,16 +1,15 @@
  
 {% if section.settings.wulayout == 'layout1' %}
-
  <div  id="section-{{ section.id }}" class="axil-why-choose-area axil-section-gap pb--50 pb_sm--30">
   <div class="container"> 
     {% if section.settings.is_section_title == true %} 
         <div class="section-title-wrapper section-title-center"> 
-          {% if section.settings.section_sub_title != '' %}  
+          {% if section.settings.section_sub_title != blank %}  
           <span class="title-highlighter highlighter-secondary">
                {{ section.settings.sub_title_icon }} 
              {{ section.settings.section_sub_title | escape }}</span>
           {% endif %} 
-          {% if section.settings.section_title != '' %}  
+          {% if section.settings.section_title != blank %}  
             <div class="heading-title">
               <h2 class="title">{{ section.settings.section_title | escape }}</h2>
             </div>  
@@ -157,87 +156,86 @@
 
 
 
-
 {% schema %}
 {
-  "name": "Section Why Us",
+  "name": "t:sections.whyus.name",
   "settings": [
     {
       "type": "header",
-      "content": "Why Us"
-    },
-    {
-      "type": "checkbox",
-      "id": "is_section_title",
-      "label": "Enable Section Title"
-    },
-    {
-      "type": "html",
-      "id": "sub_title_icon",
-      "default": "<i class='fal fa-thumbs-up'></i>",
-      "label": "Before Icon",
-      "info": "Recommended Fontawesome Icon"
-    },
-    {
-      "type": "text",
-      "id": "section_title",
-      "default": "Why People Choose Us",
-      "label": "Section Title"
-    }, 
-    {
-      "type": "text",
-      "id": "section_sub_title",
-      "default": "Why Us",
-      "label": "Sub Title"
+      "content": "t:sections.whyus.settings.header.label"
     },
     {
       "type": "select",
       "id": "wulayout",
       "default": "layout1",
-      "label": "CTA Layout",
+      "label": "t:sections.whyus.settings.layout.label",
       "options": [
         {
-          "label": "Layout 1",
+          "label": "t:sections.whyus.settings.layout.label",
           "value": "layout1"
         },
         {
-          "label": "Layout 2",
+          "label": "t:sections.whyus.settings.layout.label",
           "value": "layout2"
         },
         {
-          "label": "Layout 3",
+          "label": "t:sections.whyus.settings.layout.label",
           "value": "layout3"
         }
       ]
     },
     {
+      "type": "checkbox",
+      "id": "is_section_title",
+      "label": "t:sections.whyus.settings.is_title.label"
+    },
+    {
+      "type": "html",
+      "id": "sub_title_icon",
+      "default": "<i class='fal fa-thumbs-up'></i>",
+      "label": "t:sections.whyus.settings.sub_title_icon.label",
+      "info": "t:sections.whyus.settings.sub_title_icon.info"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "default": "Why People Choose Us",
+      "label": "t:sections.whyus.settings.section_title.label"
+    },
+    {
+      "type": "text",
+      "id": "section_sub_title",
+      "default": "Why Us",
+      "label": "t:sections.whyus.settings.section_sub_title.label"
+    },
+    {
       "type": "select",
       "id": "col_xl",
-      "label": "Desktops: > 1199px",
+      "label": "t:sections.whyus.settings.col_xl.label",
       "default": "5",
       "options": [
         {
-          "label": "1 Col",
+          "label": "t:sections.whyus.settings.col_xl.option_1.label",
           "value": "1"
         },
         {
-          "label": "2 Col",
+          "label": "t:sections.whyus.settings.col_xl.option_2.label",
           "value": "2"
         },
         {
-          "label": "3 Col",
+          "label": "t:sections.whyus.settings.col_xl.option_3.label",
           "value": "3"
         },
         {
-          "label": "4 Col",
+          "label": "t:sections.whyus.settings.col_xl.option_4.label",
           "value": "4"
-        }, 
+        },
         {
-          "label": "5 Col",
+          "label": "t:sections.whyus.settings.col_xl.option_5.label",
           "value": "5"
         },
         {
-          "label": "6 Col",
+          "label": "t:sections.whyus.settings.col_xl.option_6.label",
           "value": "6"
         }
       ]
@@ -246,30 +244,30 @@
       "type": "select",
       "id": "col_lg",
       "default": "4",
-      "label": "Desktops: > 991px",
+      "label": "t:sections.whyus.settings.col_lg.label",
       "options": [
         {
-          "label": "1 Col",
+          "label": "t:sections.whyus.settings.col_lg.option_6.label",
           "value": "1"
         },
         {
-          "label": "2 Col",
+          "label": "t:sections.whyus.settings.col_lg.option_6.label",
           "value": "2"
         },
         {
-          "label": "3 Col",
+          "label": "t:sections.whyus.settings.col_lg.option_6.label",
           "value": "3"
         },
         {
-          "label": "4 Col",
+          "label": "t:sections.whyus.settings.col_lg.option_6.label",
           "value": "4"
-        }, 
+        },
         {
-          "label": "5 Col",
+          "label": "t:sections.whyus.settings.col_lg.option_6.label",
           "value": "5"
         },
         {
-          "label": "6 Col",
+          "label": "t:sections.whyus.settings.col_lg.option_6.label",
           "value": "6"
         }
       ]
@@ -278,30 +276,30 @@
       "type": "select",
       "id": "col_md",
       "default": "3",
-      "label": "Desktops: > 767px",
+      "label": "t:sections.whyus.settings.col_md.label",
       "options": [
         {
-          "label": "1 Col",
+          "label": "t:sections.whyus.settings.col_md.option_6.label",
           "value": "1"
         },
         {
-          "label": "2 Col",
+          "label": "t:sections.whyus.settings.col_md.option_6.label",
           "value": "2"
         },
         {
-          "label": "3 Col",
+          "label": "t:sections.whyus.settings.col_md.option_6.label",
           "value": "3"
         },
         {
-          "label": "4 Col",
+          "label": "t:sections.whyus.settings.col_md.option_6.label",
           "value": "4"
-        }, 
+        },
         {
-          "label": "5 Col",
+          "label": "t:sections.whyus.settings.col_md.option_6.label",
           "value": "5"
         },
         {
-          "label": "6 Col",
+          "label": "t:sections.whyus.settings.col_md.option_6.label",
           "value": "6"
         }
       ]
@@ -310,30 +308,30 @@
       "type": "select",
       "id": "col_sm",
       "default": "2",
-      "label": "Phones: >575px",
+      "label": "t:sections.whyus.settings.col_sm.label",
       "options": [
         {
-          "label": "1 Col",
+          "label": "t:sections.whyus.settings.col_sm.option_6.label",
           "value": "1"
         },
         {
-          "label": "2 Col",
+          "label": "t:sections.whyus.settings.col_sm.option_6.label",
           "value": "2"
         },
         {
-          "label": "3 Col",
+          "label": "t:sections.whyus.settings.col_sm.option_6.label",
           "value": "3"
         },
         {
-          "label": "4 Col",
+          "label": "t:sections.whyus.settings.col_sm.option_6.label",
           "value": "4"
-        }, 
+        },
         {
-          "label": "5 Col",
+          "label": "t:sections.whyus.settings.col_sm.option_6.label",
           "value": "5"
         },
         {
-          "label": "6 Col",
+          "label": "t:sections.whyus.settings.col_sm.option_6.label",
           "value": "6"
         }
       ]
@@ -342,50 +340,49 @@
       "type": "select",
       "id": "col_mobile",
       "default": "1",
-      "label": "Small Phones: <576px",
+      "label": "t:sections.whyus.settings.col_mobile.label",
       "options": [
         {
-          "label": "1 Col",
+          "label": "t:sections.whyus.settings.col_mobile.option_6.label",
           "value": "1"
         },
         {
-          "label": "2 Col",
+          "label": "t:sections.whyus.settings.col_mobile.option_6.label",
           "value": "2"
         },
         {
-          "label": "3 Col",
+          "label": "t:sections.whyus.settings.col_mobile.option_6.label",
           "value": "3"
         },
         {
-          "label": "4 Col",
+          "label": "t:sections.whyus.settings.col_mobile.option_6.label",
           "value": "4"
-        }, 
+        },
         {
-          "label": "5 Col",
+          "label": "t:sections.whyus.settings.col_mobile.option_6.label",
           "value": "5"
         },
         {
-          "label": "6 Col",
+          "label": "t:sections.whyus.settings.col_mobile.option_6.label",
           "value": "6"
         }
       ]
     }
   ],
-
   "blocks": [
     {
       "type": "whyus",
-      "name": "Why Us Block",
-      "settings": [ 
+      "name": "t:sections.whyus.blocks.whyus.name",
+      "settings": [
         {
           "type": "richtext",
-          "id": "wstitle", 
+          "id": "wstitle",
           "default": "<p>Fast & Secure Delivery</p>",
-          "label": "Title"
+          "label": "t:sections.whyus.blocks.whyus.settings.wstitle.label"
         },
         {
           "type": "textarea",
-          "id": "wscontent", 
+          "id": "wscontent",
           "label": "Content"
         },
         {
@@ -428,7 +425,8 @@
         {
           "type": "header",
           "content": "Tablet Device"
-        }, {
+        },
+        {
           "type": "range",
           "id": "section_padding_top_md",
           "min": 0,
@@ -437,7 +435,8 @@
           "label": "Padding Top",
           "unit": "px",
           "default": 60
-        }, {
+        },
+        {
           "type": "range",
           "id": "section_padding_bottom_md",
           "min": 0,
@@ -446,7 +445,7 @@
           "label": "Padding Bottom",
           "unit": "px",
           "default": 60
-        }, 
+        },
         {
           "type": "header",
           "content": "Mobile Device"
@@ -460,7 +459,7 @@
           "label": "Padding Top",
           "unit": "px",
           "default": 40
-        }, 
+        },
         {
           "type": "range",
           "id": "section_padding_bottom_xs",
@@ -472,7 +471,7 @@
           "default": 40
         }
       ]
-    }, 
+    },
     {
       "type": "section_margin",
       "name": "Section Margin",
@@ -505,7 +504,8 @@
         {
           "type": "header",
           "content": "Tablet Device"
-        }, {
+        },
+        {
           "type": "range",
           "id": "section_margin_top_md",
           "min": 0,
@@ -514,7 +514,8 @@
           "label": "Margin Top",
           "unit": "px",
           "default": 0
-        }, {
+        },
+        {
           "type": "range",
           "id": "section_margin_bottom_md",
           "min": 0,
@@ -523,10 +524,12 @@
           "label": "Margin Bottom",
           "unit": "px",
           "default": 0
-        }, {
+        },
+        {
           "type": "header",
           "content": "Mobile Device"
-        }, {
+        },
+        {
           "type": "range",
           "id": "section_margin_top_xs",
           "min": 0,
@@ -535,7 +538,8 @@
           "label": "Margin Top",
           "unit": "px",
           "default": 0
-        }, {
+        },
+        {
           "type": "range",
           "id": "section_margin_bottom_xs",
           "min": 0,
@@ -546,7 +550,7 @@
           "default": 0
         }
       ]
-    }, 
+    },
     {
       "type": "section_background",
       "name": "Section Background",
@@ -555,11 +559,12 @@
         {
           "type": "image_picker",
           "id": "section_bg_image",
-          "label": "BG Image"
-        }, {
+          "label": "Background Image"
+        },
+        {
           "type": "color",
           "id": "section_bg_color",
-          "label": "BG Color",
+          "label": "Background Color",
           "default": "#ffffff"
         }
       ]

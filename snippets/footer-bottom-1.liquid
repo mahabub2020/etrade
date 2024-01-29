@@ -5,14 +5,12 @@
         <div class="row">
             {%- if settings.is_payment_icon -%}  
             <div class="col-lg-8">
-                <div class="payment-method">
-                    
-                    {% if settings.payment_title != '' %}
+                <div class="payment-method"> 
+                    {% if settings.payment_title != blank %}
                         <h6 class="title">{{ settings.payment_title }}</h6>
-                    {% endif %} 
-
+                    {% endif %}  
                     <ul class="payment-icons">
-                        {%- if settings.payment_icon_img1 -%}  
+                        {%- if settings.payment_icon_img1 != blank -%}  
                         <li> <img
                             loading="lazy"
                             width="{{ settings.payment_icon_img1.width }}"
@@ -21,7 +19,7 @@
                             alt="{{ settings.payment_icon_img1.alt | default: shop.name }}"
                         ></li> 
                         {%- endif -%}
-                        {%- if settings.payment_icon_img2 -%}  
+                        {%- if settings.payment_icon_img2 != blank -%}  
                         <li> <img
                             loading="lazy"
                             width="{{ settings.payment_icon_img1.width }}"
@@ -30,7 +28,7 @@
                             alt="{{ settings.payment_icon_img2.alt | default: shop.name }}"
                         ></li> 
                         {%- endif -%}
-                        {%- if settings.payment_icon_img3 -%}  
+                        {%- if settings.payment_icon_img3 != blank -%}  
                         <li> <img
                             loading="lazy"
                             width="{{ settings.payment_icon_img3.width }}"
@@ -39,7 +37,7 @@
                             alt="{{ settings.payment_icon_img3.alt | default: shop.name }}"
                         ></li> 
                         {%- endif -%}
-                        {%- if settings.payment_icon_img4 -%}  
+                        {%- if settings.payment_icon_img4 != blank -%}  
                         <li> <img
                             loading="lazy"
                             width="{{ settings.payment_icon_img4.width }}"
@@ -48,7 +46,7 @@
                             alt="{{ settings.payment_icon_img4.alt | default: shop.name }}"
                         ></li> 
                         {%- endif -%}
-                        {%- if settings.payment_icon_img5 -%}  
+                        {%- if settings.payment_icon_img5 != blank -%}  
                         <li> <img
                             loading="lazy"
                             width="{{ settings.payment_icon_img4.width }}"
@@ -62,42 +60,40 @@
             </div>
         {% endif %} 
             <div class="col-lg-4">
-                <div class="payment-method footer-social-link">
-                    
-                    {% if settings.social_title != '' %}
+                <div class="payment-method footer-social-link"> 
+                    {% if settings.social_title != blank %}
                         <h6 class="title">{{ settings.social_title }}</h6>
                     {% endif %} 
                     {% if settings.footer_social_enable %} 
                         <ul class="social-link"> 
-                            {% if settings.social_icon_1 != '' %}
+                            {% if settings.social_icon_1 != blank %}
                                 <li>
                                     <a href="{{ settings.social_icon_1_url }}" class="social__link">
                                         <i class="fab fa-{{ settings.social_icon_1 }}"></i>
                                     </a>
                                 </li>
                             {% endif %}
-                            {% if settings.social_icon_2 != '' %}
+                            {% if settings.social_icon_2 != blank %}
                             <li> 
                                 <a href="{{ settings.social_icon_2_url }}" class="social__link">
                                     <i class="fab fa-{{ settings.social_icon_2 }}"></i>
                                 </a> 
                             </li>
                             {% endif %}
-                            {% if settings.social_icon_3 != '' %}
+                            {% if settings.social_icon_3 != blank %}
                                 <li> 
                                     <a href="{{ settings.social_icon_3_url }}" class="social__link">
                                         <i class="fab fa-{{ settings.social_icon_3 }}"></i>
                                     </a> 
                                 </li>
                             {% endif %}
-                            {% if settings.social_icon_4 != '' %}
+                            {% if settings.social_icon_4 != blank %}
                             <li> 
                                 <a href="{{ settings.social_icon_4_url }}" class="social__link">
                                 <i class="fab fa-{{ settings.social_icon_4 }}"></i>
                                 </a> 
                             </li>
-                            {% endif %}
-                            
+                            {% endif %} 
                         </ul>  
                     {% endif %} 
                 </div>
@@ -118,7 +114,7 @@
                         </li>  
                     {%- endfor -%}  
                 </ul> 
-                {% if settings.copy_ritht_text != '' %} 
+                {% if settings.copy_ritht_text != blank %} 
                     <ul class="quick-link">
                         <li>{{ settings.copy_ritht_text }}</li>
                     </ul> 

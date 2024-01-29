@@ -12,22 +12,22 @@
                 id="block-{{ block.id }}"
               >
                 <div class="axil-footer-widget">
-                  {% if block.settings.footer_about_title != '' %}
+                  {% if block.settings.footer_about_title != blank %}
                     <h3 class="widget-title">{{ block.settings.footer_about_title }}</h3>
                   {% endif %}
                   <div class="inner">
-                    {% if block.settings.footer_about_title != '' %}
+                    {% if block.settings.footer_about_title != blank %}
                       <p>{{ block.settings.address_descrption }}</p>
                     {% endif %}
                     <ul class="support-list-item">
-                      {% if block.settings.about_email != '' %}
+                      {% if block.settings.about_email != blank %}
                         <li>
                           <a href="mailto:{{ block.settings.about_email }}"
                             ><i class="fal fa-envelope-open"></i>{{ block.settings.about_email -}}
                           </a>
                         </li>
                       {% endif %}
-                      {% if block.settings.about_phone != '' %}
+                      {% if block.settings.about_phone != blank %}
                         <li>
                           <a href="tel:{{ block.settings.about_phone }}"
                             ><i class="fal fa-phone-alt"></i>{{ block.settings.about_phone -}}
@@ -61,31 +61,44 @@
               <!-- Start Single Widget -->
               <div class="col-lg-{{ block.settings.footer_app_coloum }} col-sm-{{ block.settings.footer_app_coloum }}">
                 <div class="axil-footer-widget">
-                  {% if block.settings.app_title != '' %}
+                  {% if block.settings.app_title != blank %}
                     <h3 class="widget-title">{{ block.settings.app_title }}</h3>
                   {% endif %}
                   <div class="inner">
-                    {% if block.settings.app_descrption != '' %}
+                    {% if block.settings.app_descrption != blank %}
                       <span>{{ block.settings.app_descrption }}</span>
                     {% endif %}
                     <div class="download-btn-group">
-                      {%- if block.settings.qr_code_img -%}
+                      {%- if block.settings.qr_code_img != blank -%}
                         <div class="qr-code">
                           <img
-                            src="{{ block.settings.qr_code_img | img_url: '98x98' }}"
+                            loading="lazy"
+                            width="{{ block.settings.qr_code_img.width }}"
+                            height="{{ block.settings.qr_code_img.height }}"
+                            src="{{ block.settings.qr_code_img | image_url: width: 98, height: 98 }}"
                             alt="{{ block.settings.qr_code_img.alt | default: shop.name }}"
                           >
                         </div>
                       {%- endif -%} 
                       <div class="app-link">
-                        {%- if block.settings.app_store1 -%}
+                        {%- if block.settings.app_store1 != blank -%}
                           <a href="{{ block.settings.app_descrption }}">
-                            <img loading="eager" src="{{ block.settings.app_store1 | img_url: '140x42' }}" alt="{{ block.settings.app_store1.alt | default: shop.name }}">
+                            <img 
+                              loading="lazy"
+                              width="{{ block.settings.qr_code_img.width }}"
+                              height="{{ block.settings.qr_code_img.height }}"
+                              src="{{ block.settings.app_store1 | image_url: width: 140, height: 42 }}"
+                              alt="{{ block.settings.app_store1.alt | default: shop.name }}">
                           </a>
                         {%- endif -%}
-                        {%- if block.settings.app_store2 -%}
+                        {%- if block.settings.app_store2 != blank -%}
                           <a href="{{ block.settings.app_descrption }}">
-                            <img src="{{ block.settings.app_store2 | img_url: '140x42' }}" alt="{{ block.settings.app_store2.alt | default: shop.name }}">
+                            <img 
+                              loading="lazy"
+                              width="{{ block.settings.qr_code_img.width }}"
+                              height="{{ block.settings.qr_code_img.height }}"
+                              src="{{ block.settings.app_store2 | image_url: width: 140, height: 42 }}"
+                              alt="{{ block.settings.app_store2.alt | default: shop.name }}">
                           </a>
                         {%- endif -%}
                       </div>

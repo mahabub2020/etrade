@@ -330,6 +330,242 @@
     }
   },
   "sections": {
+     "whyus": {
+      "name": "Section Why Us",
+      "settings": {
+        "header": {
+          "label": "Why Us"
+        },  
+        "layout": {
+          "label": "CTA Layouts",
+
+          "option_1": {
+            "label": "Layout 1"
+          },
+          "option_2": {
+            "label": "Layout 2"
+          },
+          "option_3": {
+            "label": "Layout 3"
+          } 
+        }, 
+        "is_title": {
+          "label": "Enable Section Title"
+        },
+        "sub_title_icon": {
+          "label": "Before Icon",
+          "info": "Recommended Fontawesome Icon"
+        },
+        "section_title": {
+          "label": "Section Title"
+        },
+        "section_sub_title": {
+          "label": "Sub Title"
+        },
+        "col_xl": {
+          "label": "Desktops: > 1199px",
+          "option_1": {
+            "label": "1 Col"
+          },
+          "option_2": {
+            "label": "2 Col"
+          },
+          "option_3": {
+            "label": "3 Col"
+          },
+          "option_4": {
+            "label": "4 Col"
+          },
+          "option_5": {
+            "label": "5 Col"
+          },
+          "option_6": {
+            "label": "6 Col"
+          } 
+        },
+        "col_lg": {
+          "label": "Desktops: > 991px",
+          "option_1": {
+            "label": "1 Col"
+          },
+          "option_2": {
+            "label": "2 Col"
+          },
+          "option_3": {
+            "label": "3 Col"
+          },
+          "option_4": {
+            "label": "4 Col"
+          },
+          "option_5": {
+            "label": "5 Col"
+          },
+          "option_6": {
+            "label": "6 Col"
+          } 
+        },
+        "col_md": {
+          "label": "Small Phones: <576px",
+          "option_1": {
+            "label": "1 Col"
+          },
+          "option_2": {
+            "label": "2 Col"
+          },
+          "option_3": {
+            "label": "3 Col"
+          },
+          "option_4": {
+            "label": "4 Col"
+          },
+          "option_5": {
+            "label": "5 Col"
+          },
+          "option_6": {
+            "label": "6 Col"
+          } 
+        },
+        "col_sm": {
+          "label": "Phones: >575px",
+          "option_1": {
+            "label": "1 Col"
+          },
+          "option_2": {
+            "label": "2 Col"
+          },
+          "option_3": {
+            "label": "3 Col"
+          },
+          "option_4": {
+            "label": "4 Col"
+          },
+          "option_5": {
+            "label": "5 Col"
+          },
+          "option_6": {
+            "label": "6 Col"
+          } 
+        },
+        "col_mobile": {
+          "label": "Small Phones: <576px",
+          "option_1": {
+            "label": "1 Col"
+          },
+          "option_2": {
+            "label": "2 Col"
+          },
+          "option_3": {
+            "label": "3 Col"
+          },
+          "option_4": {
+            "label": "4 Col"
+          },
+          "option_5": {
+            "label": "5 Col"
+          },
+          "option_6": {
+            "label": "6 Col"
+          } 
+        }
+      },
+
+      "blocks": {
+        "whyus": {
+          "name": "Why Us Block",
+          "settings": {
+            "wstitle": {
+              "label": "Title"
+            },
+            "wscontent": {
+              "label": "Content"
+            },
+            "ws_img": {
+              "label": "Image",
+              "label": "Recommended Size: 60px X 60px"
+            }
+          }
+        },       
+        "section_padding": {
+          "name": "Section Padding",
+          "settings": {  
+            "ldd": {
+              "label": "Large/Desktop Device",
+              "padding_top": {
+                "label": "Padding Top"
+              },
+              "padding_bottom": {
+                "label": "Padding Bottom"
+              }
+            },
+            "td": {
+            "label": "Tablet Device",
+            "padding_top": {
+              "label": "Padding Top"
+            },
+            "padding_bottom": {
+              "label": "Padding Bottom"
+            }
+          },
+          "md": {
+            "label": "Mobile Device",
+            "padding_top": {
+              "label": "Padding Top"
+            },
+            "padding_bottom": {
+              "label": "Padding Bottom"
+              }
+            }  
+          }
+        }, 
+        "section_margin": {
+          "name": "Section Margin",
+          "settings": {  
+            "ldd": {
+              "label": "Large/Desktop Device",
+              "margin_top": {
+                "label": "Margin Top"
+              },
+              "margin_bottom": {
+                "label": "Margin Bottom"
+              }
+            }, 
+            "td": {
+              "label": "Tablet Device", 
+              "margin_top": {
+                "label": "Margin Top"
+              },
+              "margin_bottom": {
+                "label": "Margin Bottom"
+              }
+            }, 
+            "md": {
+              "label": "Mobile Device", 
+              "margin_top": {
+                "label": "Margin Top"
+              },
+              "margin_bottom": {
+                "label": "Margin Bottom"
+              }
+            }
+          }
+        }, 
+        "section_background": {
+          "name": "Section Background",
+          "settings": {  
+            "bg_image": {
+              "label": "Background Image"  
+            },
+            "bg_color": {
+              "label": "Background Color"  
+            }
+          }
+        } 
+      },
+      "presets": {
+        "name": "whyus"
+      }
+    },
+
     "campaign": {
       "name": "Campaign",
       "settings": {

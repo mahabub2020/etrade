@@ -6,27 +6,27 @@
             <div class="col-xl-4"> 
             {% if settings.footer_social_enable %} 
                 <div class="social-share"> 
-                    {% if settings.social_icon_1 != '' %}
+                    {% if settings.social_icon_1 != blank %}
                         <a href="{{ settings.social_icon_1_url }}" class="social__link">
                             <i class="fab fa-{{ settings.social_icon_1 }}"></i>
                         </a>
                     {% endif %}
-                    {% if settings.social_icon_2 != '' %}
+                    {% if settings.social_icon_2 != blank %}
                         <a href="{{ settings.social_icon_2_url }}" class="social__link">
                             <i class="fab fa-{{ settings.social_icon_2 }}"></i>
                         </a>
                     {% endif %}
-                    {% if settings.social_icon_3 != '' %}
+                    {% if settings.social_icon_3 != blank %}
                         <a href="{{ settings.social_icon_3_url }}" class="social__link">
                             <i class="fab fa-{{ settings.social_icon_3 }}"></i>
                         </a>
                     {% endif %}
-                    {% if settings.social_icon_4 != '' %}
+                    {% if settings.social_icon_4 != blank %}
                         <a href="{{ settings.social_icon_4_url }}" class="social__link">
                             <i class="fab fa-{{ settings.social_icon_4 }}"></i>
                         </a>
                     {% endif %}
-                    {% if settings.social_icon_5 != '' %}
+                    {% if settings.social_icon_5 != blank %}
                         <a href="{{ settings.social_icon_5_url }}" class="social__link">
                             <i class="fab fa-{{ settings.social_icon_5 }}"></i>
                         </a>
@@ -46,11 +46,11 @@
             <div class="col-xl-4 col-lg-12">
                 {%- if settings.is_payment_icon -%}  
                 <div class="copyright-right d-flex flex-wrap justify-content-xl-end justify-content-center align-items-center">
-                    {% if settings.payment_title != '' %}
+                    {% if settings.payment_title != blank %}
                         <span class="card-text">{{ settings.payment_title }}</span>
                     {% endif %} 
                     <ul class="payment-icons-bottom quick-link">
-                        {%- if settings.payment_icon_img1 -%}  
+                        {%- if settings.payment_icon_img1 != blank -%}  
                         <li> <img
                             loading="lazy"
                             width="{{ settings.payment_icon_img1.width }}"
@@ -59,7 +59,7 @@
                             alt="{{ settings.payment_icon_img1.alt | default: shop.name }}"
                         ></li> 
                         {%- endif -%}
-                        {%- if settings.payment_icon_img2 -%}  
+                        {%- if settings.payment_icon_img2 != blank -%}  
                         <li> <img
                             loading="lazy"
                             width="{{ settings.payment_icon_img1.width }}"
@@ -68,7 +68,7 @@
                             alt="{{ settings.payment_icon_img2.alt | default: shop.name }}"
                         ></li> 
                         {%- endif -%}
-                        {%- if settings.payment_icon_img3 -%}  
+                        {%- if settings.payment_icon_img3 != blank -%}  
                         <li> <img
                             loading="lazy"
                             width="{{ settings.payment_icon_img3.width }}"
@@ -77,7 +77,7 @@
                             alt="{{ settings.payment_icon_img3.alt | default: shop.name }}"
                         ></li> 
                         {%- endif -%}
-                        {%- if settings.payment_icon_img4 -%}  
+                        {%- if settings.payment_icon_img4 != blank -%}  
                         <li> <img
                             loading="lazy"
                             width="{{ settings.payment_icon_img4.width }}"
@@ -86,7 +86,7 @@
                             alt="{{ settings.payment_icon_img4.alt | default: shop.name }}"
                         ></li> 
                         {%- endif -%}
-                        {%- if settings.payment_icon_img5 -%}  
+                        {%- if settings.payment_icon_img5 != blank -%}  
                         <li> <img
                             loading="lazy"
                             width="{{ settings.payment_icon_img4.width }}"
