@@ -14,6 +14,7 @@
             axilslickactivation3();
             axilSlickActivation();
             axilBackToTop();
+            onLoadClassAdd();
 
         });
 
@@ -418,9 +419,6 @@ function readyActivation() {
         
     });
 
-
-
-
 }
 function testimonialActivation() {
 
@@ -432,5 +430,12 @@ function testimonialActivation() {
     }); 
   
 }
-      
+ function onLoadClassAdd() {
+    this._window.on( "load", function() {
+        setTimeout(function() {
+            $('.main-slider-style-4').addClass('animation-init');
+        }, 500);
+    }); 
+}
+
 })(jQuery)
