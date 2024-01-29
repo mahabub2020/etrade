@@ -32,40 +32,9 @@
         "autoplay_speed5": 5000,
         "campaign_bg5": "shopify:\/\/shop_images\/blog-single-5.png"
       }
-    },
-    "campaign_HfYUL7": {
-      "type": "campaign",
-      "blocks": {
-        "campaign_hPMVby": {
-          "type": "campaign",
-          "settings": {
-            "campaign_title": "STUDENT NOW GET 10% OFF :",
-            "campaign_link_txt": "GET OFFER",
-            "campaign_link_url": ""
-          }
-        },
-        "campaign_gYyL3j": {
-          "type": "campaign",
-          "settings": {
-            "campaign_title": "STUDENT NOW GET 10% OFF :",
-            "campaign_link_txt": "GET OFFER",
-            "campaign_link_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "campaign_hPMVby",
-        "campaign_gYyL3j"
-      ],
-      "settings": {
-        "autoplay_true": false,
-        "autoplay_speed": 5000,
-        "campaign_bg": "shopify:\/\/shop_images\/product-big-15.png"
-      }
     }
   },
   "order": [
-    "header",
-    "campaign_HfYUL7"
+    "header"
   ]
 }
