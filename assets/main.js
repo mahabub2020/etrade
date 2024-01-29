@@ -431,7 +431,7 @@ function testimonialActivation() {
   
 }
  function onLoadClassAdd() {
-    this._window.on( "load", function() {
+    $(window).on( "load", function() {
         setTimeout(function() {
             $('.main-slider-style-4').addClass('animation-init');
         }, 500);
