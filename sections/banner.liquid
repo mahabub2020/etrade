@@ -1,152 +1,127 @@
-        <!-- Start Slider Area -->
-<div class="axil-main-slider-area main-slider-style-4">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <div class="main-slider-content">
-                    {% if section.settings.banner_title != '' %}
-                        <h1 class="title">{{ section.settings.banner_title }}</h1>
-                    {% endif %}
-                    {% if section.settings.banner_btn_url %} 
-                        <div class="shop-btn">
-                            <a href="{{ section.settings.banner_btn_url }}" class="axil-btn btn-bg-primary"><i class="far fa-shopping-cart"></i> {{ section.settings.banner_btn_txt }}</a>
-                        </div>  
-                    {% endif %} 
-                </div>
+<!-- Start Slider Area -->
+<div id="section-{{ section.id }}" class="axil-main-slider-area main-slider-style-4">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <div class="main-slider-content">
+          {% if section.settings.banner_title != blank %}
+            <h1 class="title">{{ section.settings.banner_title }}</h1>
+          {% endif %}
+          {% if section.settings.banner_btn_url != blank %}
+            <div class="shop-btn">
+              <a href="{{ section.settings.banner_btn_url }}" class="axil-btn btn-bg-primary"
+                ><i class="far fa-shopping-cart"></i> {{ section.settings.banner_btn_txt -}}
+              </a>
             </div>
-            <div class="col-md-6">
-                {%- if section.settings.banner_img -%}   
-
-                <div class="slide-thumb-area">
-                    <div class="main-thumb">
-                        <img
-                        loading="lazy"
-                        width="{{ section.settings.banner_img.width }}"
-                        height="{{ section.settings.banner_img.height }}"
-                        src="{{ section.settings.banner_img | image_url: width: 830, height: 550 }}"
-                        alt="{{ section.settings.banner_img.alt | default: shop.name }}"
-                    >
-                    </div>
-
-                  {% for block in section.blocks %}  
-                  {% case block.type %}
-                  {% when 'banner' %}
-                  {%- assign product = all_products[block.settings.popup_product] -%} 
-                      <div class="banner-product plus-hover-items block-repeater-item-{{ block.id }} {% if block.settings.plus_icon_active %}icon-active{% endif %} axil-pos-{{ block.settings.pos_x_type }} axil-pos-{{ block.settings.pos_y_type }}"> 
-                  
-                          <div class="product-details">
-                              <h4 class="title"><a href="{{ product.url }}">{{ product.title }}</a></h4>
-                              <div class="price">{{ product.price }}</div>
-                              <div class="product-rating">
-                                  <span class="icon">
-                                      <i class="fas fa-star"></i>
-                                      <i class="fas fa-star"></i>
-                                      <i class="fas fa-star"></i>
-                                      <i class="fas fa-star"></i>
-                                      <i class="fas fa-star"></i>
-                                  </span>
-                                  <span class="rating-number">6,400</span>
-                              </div>
-                          </div>
-                          <div class="plus-icon">
-                              <i class="far fa-plus"></i>
-                          </div>
-                      </div>
-              
-                {% endcase %} 
-              {% endfor %}
-
-                    <ul class="shape-group">
-                        <li class="shape-1">
-                            <svg width="717" height="569" viewBox="0 0 717 569" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M700.635 568.176C593.701 653.555 569.268 645.843 418.418 256.006C229.855 -231.289 -105.017 93.7591 62.1304 620.614" stroke="url(#paint0_linear_3774_13416)" stroke-width="32" stroke-linecap="round" />
-                                <defs>
-                                    <linearGradient id="paint0_linear_3774_13416" x1="359.308" y1="-263.741" x2="-235.553" y2="631.772" gradientUnits="userSpaceOnUse">
-                                        <stop offset="0.258739" stop-color="#FAF1EE" />
-                                        <stop offset="1" stop-color="#FEEAE9" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </li>
-                        <li class="shape-2">
-                            <svg width="806" height="605" viewBox="0 0 806 605" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_1478_3882)">
-                                    <path d="M786.673 3C806.703 135.413 745.738 384.513 341.63 321.606C-163.504 242.971 -51.9045 685.856 476.273 802" stroke="url(#paint0_linear_1478_3882)" stroke-width="32" stroke-linecap="round" />
-                                </g>
-                                <defs>
-                                    <linearGradient id="paint0_linear_1478_3882" x1="-232.181" y1="-67.0641" x2="659.844" y2="1032.81" gradientUnits="userSpaceOnUse">
-                                        <stop offset="0.525282" stop-color="#FBE9E3" />
-                                        <stop offset="1" stop-color="#FFD3C5" />
-                                    </linearGradient>
-                                    <clipPath id="clip0_1478_3882">
-                                        <rect width="806" height="605" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </li>
-                    </ul>
-                  {%- endif -%}
-                </div>
-            </div>
+          {% endif %}
         </div>
+      </div>
+      <div class="col-md-6">
+        {%- if section.settings.banner_img != blank -%}
+          <div class="slide-thumb-area">
+            <div class="main-thumb">
+              <img
+                loading="lazy"
+                width="{{ section.settings.banner_img.width }}"
+                height="{{ section.settings.banner_img.height }}"
+                src="{{ section.settings.banner_img | image_url: width: 830, height: 550 }}"
+                alt="{{ section.settings.banner_img.alt | default: shop.name }}"
+              >
+            </div> 
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'banner' %}
+                  {%- assign product = all_products[block.settings.popup_product] -%}
+                  <div class="banner-product plus-hover-items block-repeater-item-{{ block.id }} {% if block.settings.plus_icon_active %}icon-active{% endif %} axil-pos-{{ block.settings.pos_x_type }} axil-pos-{{ block.settings.pos_y_type }}">
+                    <div class="product-details">
+                      <h4 class="title">
+                        <a href="{{ product.url }}">{{ product.title }}</a>
+                      </h4>
+                      <div class="price">{{ product.price }}</div>
+                      <div class="product-rating">
+                        <span class="icon">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </span>
+                        <span class="rating-number">6,400</span>
+                      </div>
+                    </div>
+                    <div class="plus-icon">
+                      <i class="far fa-plus"></i>
+                    </div>
+                  </div>
+              {% endcase %}
+            {% endfor %}
+            {%- if section.settings.is_banner_shape != blank -%}
+              <ul class="shape-group">
+                <li class="shape-1">
+                  <svg width="717" height="569" viewBox="0 0 717 569" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M700.635 568.176C593.701 653.555 569.268 645.843 418.418 256.006C229.855 -231.289 -105.017 93.7591 62.1304 620.614" stroke="url(#paint0_linear_3774_13416)" stroke-width="32" stroke-linecap="round" />
+                    <defs>
+                        <linearGradient id="paint0_linear_3774_13416" x1="359.308" y1="-263.741" x2="-235.553" y2="631.772" gradientUnits="userSpaceOnUse">
+                            <stop offset="0.258739" stop-color="#FAF1EE" />
+                            <stop offset="1" stop-color="#FEEAE9" />
+                        </linearGradient>
+                    </defs>
+                  </svg>
+                </li>
+                <li class="shape-2">
+                  <svg width="806" height="605" viewBox="0 0 806 605" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1478_3882)">
+                        <path d="M786.673 3C806.703 135.413 745.738 384.513 341.63 321.606C-163.504 242.971 -51.9045 685.856 476.273 802" stroke="url(#paint0_linear_1478_3882)" stroke-width="32" stroke-linecap="round" />
+                    </g>
+                    <defs>
+                        <linearGradient id="paint0_linear_1478_3882" x1="-232.181" y1="-67.0641" x2="659.844" y2="1032.81" gradientUnits="userSpaceOnUse">
+                            <stop offset="0.525282" stop-color="#FBE9E3" />
+                            <stop offset="1" stop-color="#FFD3C5" />
+                        </linearGradient>
+                        <clipPath id="clip0_1478_3882">
+                            <rect width="806" height="605" fill="white" />
+                        </clipPath>
+                    </defs>
+                  </svg>
+                </li>
+              </ul>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
     </div>
+  </div>
 </div>
-<!-- End Slider Area -->
- {%- style -%} 
-    {% for block in section.blocks %}
-    {% case block.type %}
-      {% when 'banner' %} 
-        .block-repeater-item-{{ block.id }}.banner-product.axil-pos-left{
-          left: {{ block.settings.pos_x }}px;
-          right: inherit;
-        }     
-        .block-repeater-item-{{ block.id }}.banner-product.axil-pos-right{
-          right: {{ block.settings.pos_x }}px;
-          left: inherit;
-        }
 
-        .block-repeater-item-{{ block.id }}.banner-product.axil-pos-top{
-          top: {{ block.settings.pos_y }}px;
-          bottom: inherit;
-        }     
-        .block-repeater-item-{{ block.id }}.banner-product.axil-pos-bottom{
-          bottom: {{ block.settings.pos_y }}px;
-          top: inherit;
-        }
- 
-      {% endcase %}
-    {% endfor %} 
-    
-  {%- endstyle -%}
+{%- style -%}
+  {% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'banner' %}
+      .block-repeater-item-{{ block.id }}.banner-product.axil-pos-left{
+        left: {{ block.settings.pos_x }}px;
+        right: inherit;
+      }
+      .block-repeater-item-{{ block.id }}.banner-product.axil-pos-right{
+        right: {{ block.settings.pos_x }}px;
+        left: inherit;
+      }
+
+      .block-repeater-item-{{ block.id }}.banner-product.axil-pos-top{
+        top: {{ block.settings.pos_y }}px;
+        bottom: inherit;
+      }
+      .block-repeater-item-{{ block.id }}.banner-product.axil-pos-bottom{
+        bottom: {{ block.settings.pos_y }}px;
+        top: inherit;
+      } 
+    {% endcase %}
+  {% endfor %}
+{%- endstyle -%}
 
 {% schema %}
 {
-  "name": "Banner Collection",
+  "name": "Products Banner",
   "settings": [
-    {
-      "type": "header",
-      "content": "Header Style"
-    },
-    {
-      "type": "radio",
-      "id": "header_style",
-      "label": "Header Style",
-      "options": [
-        {
-          "value": "header_style_1",
-          "label": "Style 1"
-        },
-        {
-          "value": "header_style_2",
-          "label": "Style 2"
-        },
-        {
-          "value": "header_style_3",
-          "label": "Style 3"
-        }
-      ],
-      "default": "header_style_1"
-    },
     {
       "type": "text",
       "id": "banner_title",
@@ -168,6 +143,12 @@
       "type": "image_picker",
       "id": "banner_img",
       "label": "Banner Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_banner_shape",
+      "default": true,
+      "label": "Enable Banner Shape"
     }
   ],
   "blocks": [
@@ -249,4 +230,3 @@
   ]
 }
 {% endschema %}
- 

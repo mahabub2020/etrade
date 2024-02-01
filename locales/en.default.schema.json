@@ -329,7 +329,15 @@
       }
     }
   },
-  "sections": {
+  "sections": { 
+
+     "products_banner": {
+       "name": "Products Banner",
+        "settings": {
+        
+        }
+     },
+
      "whyus": {
       "name": "Section Why Us",
       "settings": {
